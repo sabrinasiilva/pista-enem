@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --color-pista: #d97706;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-stone-50 text-stone-900 antialiased;
+}
+
+/* Texto em Markdown (enunciados e mensagens do tutor) */
+.texto-rico > * + * {
+  margin-top: 0.75rem;
+}
+.texto-rico table {
+  @apply my-3 w-full border-collapse text-sm;
+}
+.texto-rico th,
+.texto-rico td {
+  @apply border border-stone-300 px-2 py-1 text-center;
+}
+.texto-rico th {
+  @apply bg-stone-100 font-semibold;
+}
+.texto-rico ul {
+  @apply list-disc pl-5;
+}
+.texto-rico ol {
+  @apply list-decimal pl-5;
+}
+.texto-rico .katex {
+  font-size: 1.05em;
+}
+.texto-rico .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+/* tabelas largas rolam no celular em vez de estourar a tela */
+.texto-rico .tabela-rolavel {
+  overflow-x: auto;
+}
