@@ -39,9 +39,10 @@ stateDiagram-v2
     pista_1 --> concluida: acertou
     pista_1 --> pista_2: errou
     pista_2 --> concluida: acertou
-    pista_2 --> explicacao: errou ou pediu
+    pista_2 --> explicacao: errou
     pista_1 --> explicacao: pediu e confirmou
-    explicacao --> concluida
+    pista_2 --> explicacao: pediu e confirmou
+    explicacao --> [*]
     concluida --> [*]
 ```
 
@@ -84,7 +85,7 @@ erDiagram
         vector embedding
     }
     SESSAO {
-        uuid id "anônimo, gerado no navegador"
+        uuid id "anônimo, gerado pelo servidor"
         uuid questao_id
         string estado
         string versao_prompt
@@ -123,15 +124,18 @@ O gabarito nunca sai da API antes do estado `explicacao`, nem mesmo dentro do JS
 ## Prompts e guardrails
 
 - **Prompts versionados:** `prompts/tutor_v1.md`, `prompts/tutor_v2.md` e assim por diante. Cada interação guarda a versão usada, e a avaliação compara versões antes de trocar.
-- **Contexto mínimo:** o modelo recebe o enunciado, a alternativa marcada, o engano provável e as habilidades relacionadas. O gabarito vai junto para que a pista seja correta, e por isso existe o guardrail de saída.
-- **Guardrail de saída:** procura a letra e o texto da alternativa correta (e variações) na resposta. Se encontrar antes do nível 3, gera outra resposta. Se falhar duas vezes, envia uma pista padrão escrita à mão para aquela questão.
+- **Contexto mínimo:** o modelo recebe o enunciado, as alternativas, as alternativas já marcadas com o engano provável de cada uma e a habilidade da matriz. O gabarito e a resolução revisada vão junto para que a pista seja correta, e por isso existe o guardrail de saída.
+- **Guardrail de saída:** procura a letra da alternativa correta ("alternativa C", "(C)") e o conteúdo dela (o valor ou o texto, inclusive com outra formatação, como "960" para "R\$ 960,00") na resposta. Valores que já aparecem no enunciado não contam. Se encontrar antes da explicação, pede outra resposta com um reforço na instrução. Se vazar duas vezes, envia uma pista escrita à mão; na pista 2, ela usa o engano anotado da alternativa marcada.
+- **Verificar antes de enviar:** com a resposta protegida, a mensagem da IA é gerada inteira, verificada e só depois enviada em trechos. Não dá para fazer streaming direto e verificar ao mesmo tempo. Depois que a resposta é revelada, o streaming vem direto da IA.
+- **Plano B:** se a IA falhar (ou não houver chave configurada), o tutor continua funcionando com mensagens escritas à mão e com a resolução revisada da questão na explicação.
+- **Pedidos da resposta** ("qual é a letra certa?") são respondidos com uma mensagem fixa, sem chamar a IA.
 - **Guardrail de entrada:** mensagens acima de 1.000 caracteres são recusadas. Padrões de manipulação ("ignore as instruções", "você agora é...") são registrados e respondidos com uma mensagem padrão.
 
 ## Decisões técnicas
 
 | Decisão | Alternativas consideradas | Motivo |
 |---|---|---|
-| **Google Gemini** como modelo | OpenAI, Claude, modelos abertos | Plano gratuito, bom em português e já usado no CO2Bank. O cliente fica isolado num módulo para facilitar a troca. |
+| **Google Gemini** como modelo | OpenAI, Claude, modelos abertos | Plano gratuito, bom em português e já usado no CO2Bank. Principal: `gemini-3.8-flash` com raciocínio `low`, para responder rápido. Reserva: `gemini-3.5-flash-lite`. Os dois são configuráveis por variável de ambiente, e o cliente fica isolado em `api/app/tutor/ia.py` para facilitar a troca. |
 | **FastAPI** na API | Flask | Validação com Pydantic nativa, streaming e documentação automática. Já uso Pydantic no CO2Bank. |
 | **PostgreSQL + pgvector** | Banco vetorial dedicado (Pinecone, Chroma) | Um banco só para dados e vetores. O volume de questões é pequeno, e o pgvector dá conta. |
 | **Neon** como banco | Supabase, Render | PostgreSQL gerenciado com pgvector em plano gratuito. |

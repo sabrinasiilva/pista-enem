@@ -73,17 +73,17 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** o coração do projeto: conduzir o raciocínio sem entregar a resposta.
 
-- [ ] Máquina de estados da sessão: `respondendo` → `pista_1` → `pista_2` → `explicacao` → `concluida`
-- [ ] Verificação da resposta feita no código, comparando com o gabarito (a IA não decide se o aluno acertou)
-- [ ] Prompts versionados em `prompts/` (ex.: `tutor_v1.md`), com regras para cada nível
-- [ ] Diagnóstico do engano a partir da alternativa marcada e da anotação da Fase 1
-- [ ] Guardrail de saída: antes do nível 3, detectar se a resposta revela a alternativa correta e, se revelar, gerar outra
-- [ ] Guardrail de entrada: limite de tamanho e detecção de tentativas de manipulação ("ignore as instruções")
-- [ ] Integração com o Gemini com tempo limite, novas tentativas e mensagem padrão quando a IA falhar (o plano B que já usei no CO2Bank)
-- [ ] Testes unitários com a IA simulada (mock): transições de estado, guardrails e plano B
+- [x] Máquina de estados da sessão: `respondendo` → `pista_1` → `pista_2` → `explicacao` → `concluida`
+- [x] Verificação da resposta feita no código, comparando com o gabarito (a IA não decide se o aluno acertou)
+- [x] Prompts versionados em `prompts/` (ex.: `tutor_v1.md`), com regras para cada nível
+- [x] Diagnóstico do engano a partir da alternativa marcada e da anotação da Fase 1
+- [x] Guardrail de saída: antes do nível 3, detectar se a resposta revela a alternativa correta e, se revelar, gerar outra
+- [x] Guardrail de entrada: limite de tamanho e detecção de tentativas de manipulação ("ignore as instruções")
+- [x] Integração com o Gemini com tempo limite, novas tentativas e mensagem padrão quando a IA falhar (o plano B que já usei no CO2Bank)
+- [x] Testes unitários com a IA simulada (mock): transições de estado, guardrails e plano B
 
 **Entregável:** módulo `api/app/tutor` funcionando no terminal com uma questão real.
-**Pronto quando:** os testes passam e nenhuma das 60 questões vaza a resposta antes do nível 3 numa rodada manual.
+**Pronto quando:** os testes passam e nenhuma das 60 questões vaza a resposta antes do nível 3 numa rodada manual (`evals/vazamento.py`, com a IA de verdade).
 
 ## Fase 3 · API mínima
 **Período:** 28 a 29/11/2026 · **Horas:** 6
