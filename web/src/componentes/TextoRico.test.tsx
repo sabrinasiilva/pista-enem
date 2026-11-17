@@ -14,6 +14,14 @@ describe('TextoRico', () => {
     expect(container.querySelectorAll('.katex')).toHaveLength(1)
   })
 
+  it('a pontuação logo depois da fórmula não vai sozinha para a linha de baixo', () => {
+    const { container } = render(<TextoRico texto="As magnitudes $M_1$ e $M_2$, medidos." />)
+    const juntos = container.querySelector('[data-sem-quebra]')
+    expect(juntos).not.toBeNull()
+    expect(juntos?.textContent?.endsWith(',')).toBe(true)
+    expect(container.textContent).toContain(' medidos.')
+  })
+
   it('quebra de linha simples vira quebra de linha (um passo por linha)', () => {
     const { container } = render(<TextoRico texto={'Passo 1.\nPasso 2.'} />)
     expect(container.querySelector('br')).not.toBeNull()

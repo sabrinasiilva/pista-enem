@@ -5,29 +5,40 @@ import { servidorFalso } from '../testes/servidorFalso'
 import { PaginaInicial } from './PaginaInicial'
 
 describe('PaginaInicial', () => {
-  it('explica o Pista e lista as questões agrupadas por ano', async () => {
+  it('explica o Pista com um exemplo de pista', async () => {
     servidorFalso()
     render(<PaginaInicial />)
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Aprenda com o seu erro')
-    expect(await screen.findByRole('heading', { name: 'ENEM 2022' })).toBeInTheDocument()
-    expect(screen.getByRole('heading', { name: 'ENEM 2023' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Questão 141 do ENEM 2022' })).toHaveAttribute('href', '#/questao/2022-141')
+    expect(screen.getByRole('figure', { name: /Exemplo de como o tutor responde/ })).toBeInTheDocument()
+    expect(screen.getAllByRole('listitem').length).toBeGreaterThanOrEqual(3)
+  })
+
+  it('mostra as questões em abas por ano, começando pelo mais recente', async () => {
+    servidorFalso()
+    const usuario = userEvent.setup()
+    render(<PaginaInicial />)
+    const aba2023 = await screen.findByRole('tab', { name: '2023' })
+    expect(aba2023).toHaveAttribute('aria-selected', 'true')
+    expect(screen.getByRole('link', { name: 'Questão 150 do ENEM 2023' })).toHaveAttribute('href', '#/questao/2023-150')
+    expect(screen.queryByRole('link', { name: 'Questão 141 do ENEM 2022' })).not.toBeInTheDocument()
+
+    await usuario.click(screen.getByRole('tab', { name: '2022' }))
+    expect(screen.getByRole('link', { name: 'Questão 141 do ENEM 2022' })).toBeInTheDocument()
   })
 
   it('o botão de começar leva a uma questão', async () => {
     servidorFalso()
     const usuario = userEvent.setup()
     render(<PaginaInicial />)
-    const botao = await screen.findByRole('button', { name: /questão aleatória/ })
-    await screen.findByRole('heading', { name: 'ENEM 2022' })
-    await usuario.click(botao)
+    await screen.findByRole('tab', { name: '2022' })
+    await usuario.click(screen.getByRole('button', { name: /questão aleatória/ }))
     expect(window.location.hash).toMatch(/^#\/questao\/20\d\d-\d+$/)
   })
 
   it('avisa quando o tutor está no modo básico', async () => {
     servidorFalso({ iaDesativada: true })
     render(<PaginaInicial />)
-    expect(await screen.findByText(/modo básico/)).toBeInTheDocument()
+    expect(await screen.findByText(/modo básico/i)).toBeInTheDocument()
   })
 
   it('mostra erro com opção de tentar de novo', async () => {

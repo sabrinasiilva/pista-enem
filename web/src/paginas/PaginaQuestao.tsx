@@ -1,5 +1,5 @@
-import { ArrowLeft, BookOpen, ExternalLink, Lightbulb, Shuffle } from 'lucide-react'
-import { useCallback, useEffect, useState } from 'react'
+import { ArrowLeft, BookOpen, ExternalLink, Lightbulb, PartyPopper, Shuffle } from 'lucide-react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { api, ErroDaApi } from '../api'
 import { Alternativas } from '../componentes/Alternativas'
 import { AvisoModoBasico, CaixaDeErro, Carregando } from '../componentes/Avisos'
@@ -58,6 +58,8 @@ export function PaginaQuestao({ id }: { id: string }) {
   const [selecionada, setSelecionada] = useState<Letra | null>(null)
   const [confirmando, setConfirmando] = useState(false)
   const [emAndamento, setEmAndamento] = useState<{ aluno: string; tutor: string } | null>(null)
+  const destaque = useRef<HTMLElement>(null)
+  const rolarParaPista = useRef(false)
 
   const carregar = useCallback(async () => {
     setErro(null)
@@ -105,6 +107,7 @@ export function PaginaQuestao({ id }: { id: string }) {
   const responder = () =>
     selecionada &&
     executar('resposta', async (sessaoId) => {
+      rolarParaPista.current = true
       await api.responder(sessaoId, selecionada)
       setSelecionada(null)
     })
@@ -112,6 +115,7 @@ export function PaginaQuestao({ id }: { id: string }) {
   const explicar = () =>
     executar('explicacao', async (sessaoId) => {
       setConfirmando(false)
+      rolarParaPista.current = true
       await api.explicar(sessaoId)
     })
 
@@ -136,9 +140,19 @@ export function PaginaQuestao({ id }: { id: string }) {
     }
   }
 
+  // a última fala do tutor fica em destaque perto das alternativas, onde o aluno vai tentar de novo
+  const ultimaDoTutor = sessao && !emAndamento ? sessao.mensagens.findLast((m) => m.papel === 'tutor') : undefined
+
+  // depois de responder ou pedir a explicação, rola até a pista (no celular ela fica fora da tela)
+  useEffect(() => {
+    if (!rolarParaPista.current || !ultimaDoTutor) return
+    rolarParaPista.current = false
+    destaque.current?.scrollIntoView?.({ behavior: 'smooth', block: 'center' })
+  }, [ultimaDoTutor])
+
   if (erro) {
     return (
-      <main className="mx-auto max-w-3xl px-4 py-8">
+      <main className="mx-auto max-w-5xl space-y-4 px-4 py-8">
         <CaixaDeErro mensagem={erro} aoTentarDeNovo={carregar} />
         <VoltarParaInicio />
       </main>
@@ -148,137 +162,156 @@ export function PaginaQuestao({ id }: { id: string }) {
 
   const encerrada = ESTADOS_FINAIS.includes(sessao.estado)
   const podeExplicar = sessao.estado === 'pista_1' || sessao.estado === 'pista_2'
-  // a última fala do tutor fica em destaque perto das alternativas, onde o aluno vai tentar de novo
-  const ultimaDoTutor = emAndamento ? null : sessao.mensagens.findLast((m) => m.papel === 'tutor')
 
   return (
-    <main className="mx-auto max-w-3xl space-y-6 px-4 py-6">
-      <VoltarParaInicio />
+    <main className="mx-auto max-w-5xl px-4 py-6">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <VoltarParaInicio />
+        {modoBasico && <AvisoModoBasico compacto />}
+      </div>
 
-      <article className="rounded-2xl border border-stone-200 bg-white p-4 sm:p-6">
-        <header className="mb-4 flex flex-wrap items-center gap-2 text-sm text-stone-500">
-          <span className="font-semibold text-stone-900">
-            ENEM {questao.ano} · Questão {questao.numero}
-          </span>
-          <span
-            className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-600"
-            title={questao.habilidade.descricao}
-          >
-            Habilidade {questao.habilidade.codigo}
-          </span>
-        </header>
-        <TextoRico texto={questao.enunciado} className="leading-relaxed" />
-        <p className="mt-4 text-xs text-stone-500">
-          Fonte: Inep, {questao.fonte.prova}.{' '}
-          <a href={questao.fonte.url} target="_blank" rel="noreferrer noopener" className="inline-flex items-center gap-0.5 underline">
-            Prova oficial
-            <ExternalLink className="size-3" aria-hidden />
-          </a>
-        </p>
-      </article>
-
-      <section aria-labelledby="titulo-resposta" className="space-y-4">
-        <h2 id="titulo-resposta" className="sr-only">
-          Sua resposta
-        </h2>
-        <Progresso estado={sessao.estado} />
-        {ultimaDoTutor && (
-          <aside
-            aria-label="Última mensagem do tutor"
-            className="flex gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-stone-900"
-          >
-            <Lightbulb className="mt-0.5 size-5 shrink-0 text-amber-600" aria-hidden />
-            <TextoRico texto={ultimaDoTutor.texto} className="flex-1" />
-          </aside>
-        )}
-        <Alternativas
-          alternativas={questao.alternativas}
-          tentativas={sessao.tentativas}
-          gabarito={sessao.gabarito}
-          selecionada={selecionada}
-          bloqueadas={ocupado !== null || encerrada}
-          aoSelecionar={setSelecionada}
-        />
-
-        {erroDaAcao && <CaixaDeErro mensagem={erroDaAcao} />}
-
-        {!encerrada && (
-          <div className="flex flex-wrap items-center gap-3">
-            <button
-              type="button"
-              onClick={responder}
-              disabled={!selecionada || ocupado !== null}
-              className="rounded-xl bg-stone-900 px-5 py-3 font-semibold text-white hover:bg-stone-800 disabled:opacity-40"
-            >
-              {ocupado === 'resposta' ? 'Conferindo…' : 'Responder'}
-            </button>
-            {podeExplicar && !confirmando && (
-              <button
-                type="button"
-                onClick={() => setConfirmando(true)}
-                disabled={ocupado !== null}
-                className="inline-flex items-center gap-1.5 rounded-xl px-3 py-3 text-sm font-medium text-stone-600 underline-offset-4 hover:underline disabled:opacity-40"
+      <div className="mt-4 grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
+        <div className="min-w-0 space-y-6">
+          <article className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-6">
+            <header className="mb-4 flex flex-wrap items-center gap-2 text-sm text-stone-500">
+              <span className="font-semibold text-stone-900">
+                ENEM {questao.ano} · Questão {questao.numero}
+              </span>
+              <span
+                className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-600"
+                title={questao.habilidade.descricao}
               >
-                <BookOpen className="size-4" aria-hidden />
-                Quero a explicação completa
-              </button>
+                Habilidade {questao.habilidade.codigo}
+              </span>
+            </header>
+            <TextoRico texto={questao.enunciado} className="text-[1.05rem] leading-relaxed" />
+            <p className="mt-5 border-t border-stone-100 pt-3 text-xs text-stone-500">
+              Fonte: Inep, {questao.fonte.prova}.{' '}
+              <a
+                href={questao.fonte.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-0.5 underline"
+              >
+                Prova oficial
+                <ExternalLink className="size-3" aria-hidden />
+              </a>
+            </p>
+          </article>
+
+          <section aria-labelledby="titulo-resposta" className="space-y-4">
+            <h2 id="titulo-resposta" className="sr-only">
+              Sua resposta
+            </h2>
+            <Progresso estado={sessao.estado} />
+            {ultimaDoTutor && (
+              <aside
+                ref={destaque}
+                aria-label="Última mensagem do tutor"
+                className={`flex scroll-mt-20 gap-3 rounded-2xl border p-4 text-stone-900 ${
+                  sessao.estado === 'concluida' ? 'border-emerald-200 bg-emerald-50' : 'border-amber-200 bg-amber-50'
+                }`}
+              >
+                {sessao.estado === 'concluida' ? (
+                  <PartyPopper className="mt-0.5 size-5 shrink-0 text-emerald-600" aria-hidden />
+                ) : (
+                  <Lightbulb className="mt-0.5 size-5 shrink-0 text-amber-600" aria-hidden />
+                )}
+                <TextoRico texto={ultimaDoTutor.texto} className="min-w-0 flex-1" />
+              </aside>
             )}
-          </div>
-        )}
+            <Alternativas
+              alternativas={questao.alternativas}
+              tentativas={sessao.tentativas}
+              gabarito={sessao.gabarito}
+              selecionada={selecionada}
+              bloqueadas={ocupado !== null || encerrada}
+              aoSelecionar={setSelecionada}
+            />
 
-        {confirmando && (
-          <div role="alertdialog" aria-labelledby="titulo-confirmacao" className="rounded-xl border border-amber-300 bg-amber-50 p-4">
-            <p id="titulo-confirmacao" className="font-medium text-amber-900">
-              Você vai ver a resposta e a resolução completa. Prefere tentar mais uma vez?
-            </p>
-            <div className="mt-3 flex flex-wrap gap-2">
-              <button
-                type="button"
-                onClick={explicar}
-                className="rounded-lg bg-amber-900 px-3 py-2 text-sm font-medium text-white hover:bg-amber-800"
+            {erroDaAcao && <CaixaDeErro mensagem={erroDaAcao} />}
+
+            {!encerrada && (
+              <div className="flex flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={responder}
+                  disabled={!selecionada || ocupado !== null}
+                  className="rounded-xl bg-stone-900 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-stone-700 disabled:bg-stone-300 disabled:shadow-none"
+                >
+                  {ocupado === 'resposta' ? 'Conferindo…' : 'Responder'}
+                </button>
+                {podeExplicar && !confirmando && (
+                  <button
+                    type="button"
+                    onClick={() => setConfirmando(true)}
+                    disabled={ocupado !== null}
+                    className="inline-flex items-center gap-1.5 rounded-xl px-3 py-3 text-sm font-medium text-stone-600 underline-offset-4 hover:underline disabled:opacity-40"
+                  >
+                    <BookOpen className="size-4" aria-hidden />
+                    Quero a explicação completa
+                  </button>
+                )}
+              </div>
+            )}
+
+            {confirmando && (
+              <div
+                role="alertdialog"
+                aria-labelledby="titulo-confirmacao"
+                className="rounded-2xl border border-amber-300 bg-amber-50 p-4"
               >
-                Ver a explicação
-              </button>
-              <button
-                type="button"
-                onClick={() => setConfirmando(false)}
-                className="rounded-lg border border-amber-300 px-3 py-2 text-sm font-medium text-amber-900 hover:bg-amber-100"
-              >
-                Vou tentar mais uma vez
-              </button>
-            </div>
-          </div>
-        )}
+                <p id="titulo-confirmacao" className="font-medium text-amber-900">
+                  Você vai ver a resposta e a resolução completa. Prefere tentar mais uma vez?
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    onClick={explicar}
+                    className="rounded-lg bg-amber-900 px-3 py-2 text-sm font-medium text-white hover:bg-amber-800"
+                  >
+                    Ver a explicação
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setConfirmando(false)}
+                    className="rounded-lg border border-amber-300 bg-white px-3 py-2 text-sm font-medium text-amber-900 hover:bg-amber-100"
+                  >
+                    Vou tentar mais uma vez
+                  </button>
+                </div>
+              </div>
+            )}
 
-        {encerrada && (
-          <div
-            className={`rounded-xl p-4 ${sessao.estado === 'concluida' ? 'bg-emerald-50 text-emerald-900' : 'bg-stone-100 text-stone-800'}`}
-          >
-            <p className="font-semibold">
-              {sessao.estado === 'concluida'
-                ? `Você acertou! A resposta é a alternativa ${sessao.gabarito}.`
-                : `A resposta é a alternativa ${sessao.gabarito}.`}
-            </p>
-            <button
-              type="button"
-              onClick={outraQuestao}
-              className="mt-3 inline-flex items-center gap-2 rounded-lg bg-stone-900 px-3 py-2 text-sm font-medium text-white hover:bg-stone-800"
-            >
-              <Shuffle className="size-4" aria-hidden />
-              Outra questão
-            </button>
-          </div>
-        )}
-      </section>
+            {encerrada && (
+              <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-stone-200 bg-white p-4">
+                <p className="font-semibold">
+                  {sessao.estado === 'concluida'
+                    ? `Você acertou! A resposta é a alternativa ${sessao.gabarito}.`
+                    : `A resposta é a alternativa ${sessao.gabarito}.`}
+                </p>
+                <button
+                  type="button"
+                  onClick={outraQuestao}
+                  className="inline-flex items-center gap-2 rounded-xl bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-stone-700"
+                >
+                  <Shuffle className="size-4" aria-hidden />
+                  Outra questão
+                </button>
+              </div>
+            )}
+          </section>
+        </div>
 
-      {modoBasico && <AvisoModoBasico />}
-
-      <Conversa
-        mensagens={sessao.mensagens}
-        emAndamento={emAndamento}
-        ocupado={ocupado !== null}
-        aoEnviar={conversar}
-      />
+        <div className="lg:sticky lg:top-20">
+          <Conversa
+            mensagens={sessao.mensagens}
+            emAndamento={emAndamento}
+            ocupado={ocupado !== null}
+            aoEnviar={conversar}
+          />
+        </div>
+      </div>
     </main>
   )
 }

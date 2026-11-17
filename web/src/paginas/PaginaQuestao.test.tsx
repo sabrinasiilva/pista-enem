@@ -132,6 +132,6 @@ describe('PaginaQuestao', () => {
   it('mostra o aviso de modo básico quando a IA está desativada', async () => {
     servidorFalso({ iaDesativada: true })
     await abrir()
-    await waitFor(() => expect(screen.getByText(/modo básico/)).toBeInTheDocument())
+    await waitFor(() => expect(screen.getByText(/modo básico/i)).toBeInTheDocument())
   })
 })

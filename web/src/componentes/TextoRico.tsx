@@ -4,6 +4,7 @@ import rehypeKatex from 'rehype-katex'
 import remarkBreaks from 'remark-breaks'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
+import { rehypeSemQuebra } from './rehypeSemQuebra'
 
 /**
  * Markdown com tabelas e fórmulas em LaTeX ($...$). Cifrão literal vem escapado: R\$.
@@ -14,7 +15,7 @@ export function TextoRico({ texto, className = '' }: { texto: string; className?
     <div className={`texto-rico ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath, remarkBreaks]}
-        rehypePlugins={[rehypeKatex]}
+        rehypePlugins={[rehypeKatex, rehypeSemQuebra]}
         components={{
           table: ({ children }) => (
             <div className="tabela-rolavel">
