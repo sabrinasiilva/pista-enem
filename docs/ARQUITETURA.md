@@ -110,16 +110,21 @@ erDiagram
 
 | Método | Rota | O que faz |
 |---|---|---|
-| GET | `/health` | Verifica se a API e o banco estão de pé |
+| GET | `/health` | Verifica se a API está de pé, quantas questões carregou e se a IA está ativa |
 | GET | `/questoes?area=&ano=` | Lista questões com filtros |
 | GET | `/questoes/{id}` | Enunciado e alternativas, **sem o gabarito** |
 | POST | `/sessoes` | Abre uma sessão anônima para uma questão |
-| POST | `/sessoes/{id}/respostas` | Envia a alternativa marcada e devolve o próximo estado |
-| POST | `/sessoes/{id}/mensagens` | Conversa com o tutor (streaming) |
-| POST | `/sessoes/{id}/explicacao` | Pede a explicação completa (exige confirmação) |
-| GET | `/questoes/{id}/parecidas` | Sugere questões para praticar (RAG) |
+| GET | `/sessoes/{id}` | Estado, tentativas e mensagens da sessão (para retomar depois de recarregar a página) |
+| POST | `/sessoes/{id}/respostas` | Envia a alternativa marcada e devolve o próximo estado e a mensagem do tutor |
+| POST | `/sessoes/{id}/mensagens` | Conversa com o tutor em streaming (Server-Sent Events: eventos `trecho` e `fim`) |
+| POST | `/sessoes/{id}/explicacao` | Pede a explicação completa (exige `confirmar: true` e pelo menos uma tentativa) |
+| GET | `/questoes/{id}/parecidas` | Sugere questões para praticar (RAG, Fase 7) |
 
-O gabarito nunca sai da API antes do estado `explicacao`, nem mesmo dentro do JSON.
+- O gabarito nunca sai da API antes de a resposta ser revelada (`explicacao` ou `concluida`), nem mesmo dentro do JSON.
+- Erros sempre vêm como `{"erro": {"codigo": "...", "mensagem": "..."}}`: 404 para questão ou sessão inexistente, 409 para ação não permitida no estado atual (por exemplo, `alternativa_repetida`), 422 para dados inválidos e 500 sem detalhes internos.
+- Campos desconhecidos no corpo são recusados (422).
+- Até a Fase 5, as sessões ficam em memória, expiram em 24 horas e são limitadas a 10 000. Cada sessão tem um lock, para que duas requisições simultâneas não mudem o estado dela em paralelo.
+- A documentação interativa (Swagger) fica em `/docs`.
 
 ## Prompts e guardrails
 

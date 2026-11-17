@@ -20,3 +20,6 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - Guardrail de saída contra vazamento da resposta e guardrail de entrada contra manipulação do prompt
 - Integração com o Gemini com tempo limite, novas tentativas, modelo reserva e plano B
 - Tutor no terminal (`python -m app.tutor.terminal`) e script da rodada contra vazamento (`evals/vazamento.py`)
+- API FastAPI: questões sem o gabarito, sessões anônimas, respostas, conversa em streaming (SSE) e explicação
+- Erros padronizados, validação com Pydantic, CORS configurável e documentação no Swagger
+- Imagem Docker sem privilégios, construída e testada no CI

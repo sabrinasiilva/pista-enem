@@ -150,6 +150,8 @@ pista-enem/
 
 Em construção: as instruções completas chegam com a v0.1.0. Já dá para usar o tutor pelo terminal.
 
+**API (Python 3.12+):**
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate              # no Windows: .venv\Scripts\activate
@@ -157,8 +159,18 @@ pip install -r api/requirements-dev.txt
 
 cp api/.env.example api/.env           # e coloque a sua GEMINI_API_KEY
 cd api
-python -m app.tutor.terminal 2022-141  # sem a chave, funciona só com o plano B
+uvicorn app.main:app --reload          # documentação em http://localhost:8000/docs
+python -m app.tutor.terminal 2022-141  # ou o tutor direto no terminal
 python -m pytest
+```
+
+Sem a chave do Gemini, tudo funciona com o plano B (mensagens fixas e a resolução revisada).
+
+**Com Docker:**
+
+```bash
+docker build -f api/Dockerfile -t pista-api .
+docker run --rm -p 8000:8000 --env-file api/.env pista-api
 ```
 
 ## Autora
