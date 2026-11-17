@@ -56,5 +56,8 @@ jobs:
           curl -fs localhost:8000/questoes/2022-141 | python3 -c 'import json,sys; q=json.load(sys.stdin); assert "gabarito" not in q and all(set(a)=={"letra","texto"} for a in q["alternativas"]), "a rota de questão expôs o gabarito"'
           sessao=$(curl -fs -X POST localhost:8000/sessoes -H 'Content-Type: application/json' -d '{"questao_id":"2022-141"}' | python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])')
           curl -fs -X POST "localhost:8000/sessoes/$sessao/respostas" -H 'Content-Type: application/json' -d '{"alternativa":"D"}' | grep -q '"estado":"pista_1"'
+          # as migrações rodaram dentro do container: dá para criar uma conta
+          token=$(curl -fs -X POST localhost:8000/contas -H 'Content-Type: application/json' -d '{"apelido":"teste_ci","senha":"senha-do-ci-123"}' | python3 -c 'import json,sys; print(json.load(sys.stdin)["token"])')
+          curl -fs localhost:8000/eu/progresso -H "Authorization: Bearer $token" | grep -q '"total_de_questoes":0'
       - name: Confere que roda sem privilégios
         run: test "$(docker exec pista id -u)" = "1000"

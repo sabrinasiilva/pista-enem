@@ -17,7 +17,7 @@ PISTA = "Que operação junta valores iguais repetidos?"
 
 
 @pytest.fixture
-def montar(prompts):
+def montar(prompts, motor):
     """Cria um cliente HTTP com a questão de exemplo e as respostas simuladas da IA."""
 
     abertos: list[TestClient] = []
@@ -25,7 +25,7 @@ def montar(prompts):
     def _montar(*respostas, banco=None) -> tuple[TestClient, IAFalsa]:
         ia = IAFalsa(*respostas)
         tutor = Tutor(banco or BancoDeQuestoes([questao_exemplo()]), prompts, ia)
-        cliente = TestClient(criar_app(Configuracoes(), tutor), raise_server_exceptions=False)
+        cliente = TestClient(criar_app(Configuracoes(), tutor, motor), raise_server_exceptions=False)
         cliente.__enter__()  # roda o ciclo de vida (lifespan)
         abertos.append(cliente)
         return cliente, ia

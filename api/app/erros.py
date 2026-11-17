@@ -9,6 +9,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
+from .contas import ErroDeConta
 from .sessoes import SessaoNaoEncontrada
 from .tutor.estados import TransicaoInvalida
 from .tutor.questoes import QuestaoNaoEncontrada
@@ -31,6 +32,13 @@ def registrar_tratadores(app: FastAPI) -> None:
     @app.exception_handler(SessaoNaoEncontrada)
     async def sessao_nao_encontrada(_: Request, __: SessaoNaoEncontrada) -> JSONResponse:
         return resposta_de_erro(404, "sessao_nao_encontrada", "Sessão não encontrada ou expirada.")
+
+    @app.exception_handler(ErroDeConta)
+    async def erro_de_conta(_: Request, erro: ErroDeConta) -> JSONResponse:
+        resposta = resposta_de_erro(erro.status, erro.codigo, erro.mensagem)
+        if erro.status == 401:
+            resposta.headers["WWW-Authenticate"] = "Bearer"
+        return resposta
 
     @app.exception_handler(TransicaoInvalida)
     async def transicao_invalida(_: Request, erro: TransicaoInvalida) -> JSONResponse:

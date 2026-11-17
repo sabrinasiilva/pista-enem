@@ -5,9 +5,13 @@ from collections.abc import AsyncIterator
 from typing import Annotated
 
 from fastapi import APIRouter, Depends
+from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import StreamingResponse
+from sqlalchemy.orm import Session
 
 from .. import dependencias
+from ..banco import Usuario
+from ..dependencias import BancoDep, UsuarioOpcional
 from ..esquemas import (
     Erro,
     ExplicacaoEntrada,
@@ -19,8 +23,10 @@ from ..esquemas import (
     RespostaSaida,
     SessaoSaida,
 )
-from ..sessoes import RepositorioDeSessoes
+from ..progresso import registrar_resultado
+from ..sessoes import RepositorioDeSessoes, SessaoNaoEncontrada
 from ..tutor.motor import Tutor
+from ..tutor.sessao import Sessao
 
 rotas = APIRouter(prefix="/sessoes", tags=["Sessões"])
 
@@ -31,15 +37,33 @@ NAO_ENCONTRADA = {404: {"model": Erro, "description": "Sessão não encontrada o
 CONFLITO = {409: {"model": Erro, "description": "Ação não permitida no estado atual da sessão"}}
 
 
+def _obter(sessoes: RepositorioDeSessoes, sessao_id: str, usuario: Usuario | None):
+    """A sessão de uma conta só é acessível pela própria conta; para os outros, ela não existe."""
+    sessao, trava = sessoes.obter(sessao_id)
+    if sessao.usuario_id is not None and (usuario is None or usuario.id != sessao.usuario_id):
+        raise SessaoNaoEncontrada(sessao_id)
+    return sessao, trava
+
+
+def _gravar_se_terminou(sessao: Sessao, tutor: Tutor, banco: Session) -> None:
+    """Quando a resposta é revelada, grava o resultado no histórico da conta (uma única vez)."""
+    if sessao.usuario_id is None or sessao.resultado_gravado or not sessao.resposta_revelada:
+        return
+    registrar_resultado(banco, sessao, tutor.banco.obter(sessao.questao_id))
+    sessao.resultado_gravado = True
+
+
 @rotas.post(
     "",
     status_code=201,
-    summary="Abre uma sessão anônima para uma questão",
+    summary="Abre uma sessão para uma questão",
+    description="Com o token de uma conta, o resultado entra no histórico do aluno. Sem token, a sessão é anônima.",
     response_model=SessaoSaida,
     responses={404: {"model": Erro, "description": "Questão não encontrada"}},
 )
-def criar(dados: NovaSessao, tutor: TutorDep, sessoes: SessoesDep) -> SessaoSaida:
+def criar(dados: NovaSessao, tutor: TutorDep, sessoes: SessoesDep, usuario: UsuarioOpcional) -> SessaoSaida:
     sessao = tutor.nova_sessao(dados.questao_id)
+    sessao.usuario_id = usuario.id if usuario else None
     sessoes.guardar(sessao)
     return SessaoSaida.de(sessao, tutor.banco.obter(sessao.questao_id).gabarito)
 
@@ -50,8 +74,8 @@ def criar(dados: NovaSessao, tutor: TutorDep, sessoes: SessoesDep) -> SessaoSaid
     response_model=SessaoSaida,
     responses=NAO_ENCONTRADA,
 )
-def obter(sessao_id: str, tutor: TutorDep, sessoes: SessoesDep) -> SessaoSaida:
-    sessao, _ = sessoes.obter(sessao_id)
+def obter(sessao_id: str, tutor: TutorDep, sessoes: SessoesDep, usuario: UsuarioOpcional) -> SessaoSaida:
+    sessao, _ = _obter(sessoes, sessao_id, usuario)
     return SessaoSaida.de(sessao, tutor.banco.obter(sessao.questao_id).gabarito)
 
 
@@ -66,10 +90,18 @@ def obter(sessao_id: str, tutor: TutorDep, sessoes: SessoesDep) -> SessaoSaida:
     response_model=RespostaSaida,
     responses={**NAO_ENCONTRADA, **CONFLITO},
 )
-async def responder(sessao_id: str, dados: RespostaEntrada, tutor: TutorDep, sessoes: SessoesDep) -> RespostaSaida:
-    sessao, trava = sessoes.obter(sessao_id)
+async def responder(
+    sessao_id: str,
+    dados: RespostaEntrada,
+    tutor: TutorDep,
+    sessoes: SessoesDep,
+    usuario: UsuarioOpcional,
+    banco: BancoDep,
+) -> RespostaSaida:
+    sessao, trava = _obter(sessoes, sessao_id, usuario)
     async with trava:
         resultado = await tutor.responder(sessao, dados.alternativa)
+        await run_in_threadpool(_gravar_se_terminou, sessao, tutor, banco)
     gabarito = tutor.banco.obter(sessao.questao_id).gabarito
     return RespostaSaida(
         acertou=resultado.acertou,
@@ -91,8 +123,10 @@ async def responder(sessao_id: str, dados: RespostaEntrada, tutor: TutorDep, ses
     response_class=StreamingResponse,
     responses={200: {"content": {"text/event-stream": {}}}, **NAO_ENCONTRADA},
 )
-async def conversar(sessao_id: str, dados: MensagemEntrada, tutor: TutorDep, sessoes: SessoesDep) -> StreamingResponse:
-    sessao, trava = sessoes.obter(sessao_id)  # 404 antes de abrir o streaming
+async def conversar(
+    sessao_id: str, dados: MensagemEntrada, tutor: TutorDep, sessoes: SessoesDep, usuario: UsuarioOpcional
+) -> StreamingResponse:
+    sessao, trava = _obter(sessoes, sessao_id, usuario)  # 404 antes de abrir o streaming
 
     async def eventos() -> AsyncIterator[str]:
         async with trava:
@@ -114,10 +148,18 @@ async def conversar(sessao_id: str, dados: MensagemEntrada, tutor: TutorDep, ses
     response_model=ExplicacaoSaida,
     responses={**NAO_ENCONTRADA, **CONFLITO},
 )
-async def explicar(sessao_id: str, dados: ExplicacaoEntrada, tutor: TutorDep, sessoes: SessoesDep) -> ExplicacaoSaida:
-    sessao, trava = sessoes.obter(sessao_id)
+async def explicar(
+    sessao_id: str,
+    dados: ExplicacaoEntrada,
+    tutor: TutorDep,
+    sessoes: SessoesDep,
+    usuario: UsuarioOpcional,
+    banco: BancoDep,
+) -> ExplicacaoSaida:
+    sessao, trava = _obter(sessoes, sessao_id, usuario)
     async with trava:
         mensagem = await tutor.explicar(sessao, dados.confirmar)
+        await run_in_threadpool(_gravar_se_terminou, sessao, tutor, banco)
     return ExplicacaoSaida(
         estado=sessao.estado,
         gabarito=tutor.banco.obter(sessao.questao_id).gabarito,

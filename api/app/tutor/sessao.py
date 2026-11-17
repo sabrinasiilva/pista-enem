@@ -39,6 +39,9 @@ class Sessao:
     tentativas: list[str] = field(default_factory=list)
     mensagens: list[Mensagem] = field(default_factory=list)
     criada_em: datetime = field(default_factory=agora)
+    # conta do aluno, se ele entrou; sem conta, a sessão é anônima e nada é gravado
+    usuario_id: str | None = None
+    resultado_gravado: bool = False
 
     @property
     def resposta_revelada(self) -> bool:

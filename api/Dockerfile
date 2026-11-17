@@ -4,6 +4,8 @@
 #
 # Roda como usuário sem privilégios (uid 1000, o mesmo que o Hugging Face Spaces usa).
 # A porta vem da variável PORT (8000 por padrão; o Hugging Face Spaces usa 7860).
+# As migrações do banco rodam ao iniciar. Sem DATABASE_URL própria, usa SQLite na pasta do
+# usuário, que some quando o container é recriado; o banco de verdade é o PostgreSQL da Fase 5.
 
 FROM python:3.12-slim
 
@@ -13,7 +15,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PORT=8000 \
     ARQUIVO_QUESTOES=/app/data/questoes-mvp.json \
-    PASTA_PROMPTS=/app/prompts
+    PASTA_PROMPTS=/app/prompts \
+    DATABASE_URL=sqlite:////home/pista/pista.db
 
 WORKDIR /app
 
@@ -23,6 +26,8 @@ COPY api/requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY api/app ./app
+COPY api/alembic.ini ./alembic.ini
+COPY api/migrations ./migrations
 COPY prompts ./prompts
 COPY data/questoes-mvp.json ./data/questoes-mvp.json
 
