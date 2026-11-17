@@ -166,6 +166,15 @@ python -m pytest
 
 Sem a chave do Gemini, tudo funciona com o plano B (mensagens fixas e a resolução revisada).
 
+**Front-end (Node.js 22+), com a API rodando:**
+
+```bash
+cd web
+npm install
+npm run dev                            # http://localhost:5173
+npm test
+```
+
 **Com Docker:**
 
 ```bash

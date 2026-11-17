@@ -23,3 +23,5 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - API FastAPI: questões sem o gabarito, sessões anônimas, respostas, conversa em streaming (SSE) e explicação
 - Erros padronizados, validação com Pydantic, CORS configurável e documentação no Swagger
 - Imagem Docker sem privilégios, construída e testada no CI
+- Front-end em React, TypeScript e Tailwind: página inicial, página da questão com fórmulas em KaTeX, níveis de pista, conversa em streaming e explicação com confirmação
+- Testes de componentes com Vitest e Testing Library, e CI do front-end com checagem de dependências
