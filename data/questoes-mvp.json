@@ -1,0 +1,3345 @@
+[
+  {
+    "id": "2022-138",
+    "ano": 2022,
+    "numero": 138,
+    "area": "matematica",
+    "enunciado": "Ao escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R\\$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos.\n\nO número escrito pelo estudante foi",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "135 000,00.",
+        "engano_provavel": "Tratou 1,35 bilhão como 1,35 × 100 000 (ou confundiu com cerca de 135 mil), deslocando a vírgula só 5 casas."
+      },
+      {
+        "letra": "B",
+        "texto": "1 350 000,00.",
+        "engano_provavel": "Confundiu bilhão com milhão: 1,35 × 1 000 000 = 1 350 000."
+      },
+      {
+        "letra": "C",
+        "texto": "13 500 000,00.",
+        "engano_provavel": "Deslocou a vírgula 7 casas em vez de 9: 1,35 × 10 000 000 = 13 500 000."
+      },
+      {
+        "letra": "D",
+        "texto": "135 000 000,00.",
+        "engano_provavel": "Deslocou a vírgula 8 casas em vez de 9 (contou 1 bilhão como 100 000 000): 1,35 × 100 000 000 = 135 000 000."
+      },
+      {
+        "letra": "E",
+        "texto": "1 350 000 000,00.",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "1 bilhão = 1 000 000 000.\n1,35 bilhão $= 1,35 \\times 1\\,000\\,000\\,000$.\nMultiplicar por $10^9$ desloca a vírgula 9 casas para a direita: 1 350 000 000.\nCom os centavos: 1 350 000 000,00. Alternativa E.",
+    "habilidade": {
+      "codigo": "H1",
+      "descricao": "Reconhecer, no contexto social, diferentes significados e representações dos números e operações — naturais, inteiros, racionais ou reais."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "sistema de numeração decimal",
+      "potências de 10",
+      "ordens e classes"
+    ],
+    "dificuldade_tri": -0.02398,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 138",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "60441"
+    }
+  },
+  {
+    "id": "2022-140",
+    "ano": 2022,
+    "numero": 140,
+    "area": "matematica",
+    "enunciado": "Uma pessoa precisa contratar um operário para fazer um serviço em sua casa. Para isso, ela postou um anúncio em uma rede social.\n\nCinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte e tempo necessário para conclusão do serviço, conforme valores apresentados no quadro.\n\n| Operário | Preço por hora (real) | Preço do transporte (real) | Tempo até conclusão (hora) |\n|:---:|:---:|:---:|:---:|\n| I | 120 | 0,00 | 8 |\n| II | 180 | 0,00 | 6 |\n| III | 170 | 20,00 | 6 |\n| IV | 110 | 10,00 | 9 |\n| V | 110 | 0,00 | 10 |\n\nSe a pessoa pretende gastar o mínimo possível com essa contratação, irá contratar o operário",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "I.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "II.",
+        "engano_provavel": "Escolheu o operário que termina mais rápido (6 h) e não cobra transporte, sem calcular o custo total: II custa $180 \\times 6 = 1080$, mais que I."
+      },
+      {
+        "letra": "C",
+        "texto": "III.",
+        "engano_provavel": "Olhou só o menor tempo de conclusão (6 h) sem multiplicar o preço por hora pelas horas: III custa $170 \\times 6 + 20 = 1040$."
+      },
+      {
+        "letra": "D",
+        "texto": "IV.",
+        "engano_provavel": "Combinou o menor preço por hora (110) com transporte baixo sem fazer a conta completa: IV custa $110 \\times 9 + 10 = 1000$, acima de 960."
+      },
+      {
+        "letra": "E",
+        "texto": "V.",
+        "engano_provavel": "Somou as colunas em vez de multiplicar preço por horas ($110 + 0 + 10 = 120$ é a menor soma) ou escolheu só pelo menor preço por hora sem transporte."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Custo de cada operário = (preço por hora) $\\times$ (horas) + transporte.\nI: $120 \\times 8 + 0 = 960$.\nII: $180 \\times 6 + 0 = 1080$.\nIII: $170 \\times 6 + 20 = 1040$.\nIV: $110 \\times 9 + 10 = 1000$ (mesmo contando dois dias de transporte, 1 010).\nV: $110 \\times 10 + 0 = 1100$.\nO menor custo é o do operário I, 960 reais. Alternativa A.",
+    "habilidade": {
+      "codigo": "H26",
+      "descricao": "Analisar informações expressas em gráficos ou tabelas como recurso para a construção de argumentos."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "multiplicação",
+      "comparação de custos",
+      "leitura de tabela"
+    ],
+    "dificuldade_tri": 0.64802,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 140",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "95676"
+    }
+  },
+  {
+    "id": "2022-141",
+    "ano": 2022,
+    "numero": 141,
+    "area": "matematica",
+    "enunciado": "Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda.\n\nQuantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "2",
+        "engano_provavel": "Considerou só a razão entre os diâmetros ($4 \\div 2 = 2$), ignorando a quantidade de docinhos e o fato de o volume crescer com o cubo."
+      },
+      {
+        "letra": "B",
+        "texto": "3",
+        "engano_provavel": "Considerou só a quantidade de docinhos ($150 \\div 50 = 3$), sem levar em conta que cada docinho maior usa mais massa."
+      },
+      {
+        "letra": "C",
+        "texto": "6",
+        "engano_provavel": "Supôs que a massa cresce na mesma proporção do diâmetro: $3 \\times 2 = 6$."
+      },
+      {
+        "letra": "D",
+        "texto": "12",
+        "engano_provavel": "Supôs que a massa cresce com o quadrado do diâmetro, como se fosse área: $3 \\times 2^2 = 12$."
+      },
+      {
+        "letra": "E",
+        "texto": "24",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "O volume da esfera é proporcional ao cubo do raio ($V = \\frac{4}{3}\\pi r^3$), logo ao cubo do diâmetro.\nDobrar o diâmetro (de 2 cm para 4 cm) multiplica o volume por $2^3 = 8$.\nCada docinho grande usa a massa de 8 docinhos pequenos.\n150 docinhos grandes equivalem a $150 \\times 8 = 1200$ docinhos pequenos.\nComo uma porção rende 50 docinhos pequenos: $1200 \\div 50 = 24$ porções.\nAlternativa E.",
+    "habilidade": {
+      "codigo": "H12",
+      "descricao": "Resolver situação-problema que envolva medidas de grandezas."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "volume da esfera",
+      "razão entre volumes de sólidos semelhantes",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 2.56697,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 141",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "19807"
+    }
+  },
+  {
+    "id": "2022-142",
+    "ano": 2022,
+    "numero": 142,
+    "area": "matematica",
+    "enunciado": "Nos cinco jogos finais da última temporada, com uma média de 18 pontos por jogo, um jogador foi eleito o melhor do campeonato de basquete. Na atual temporada, cinco jogadores têm a chance de igualar ou melhorar essa média. No quadro estão registradas as pontuações desses cinco jogadores nos quatro primeiros jogos das finais deste ano.\n\n| Jogadores | Jogo 1 | Jogo 2 | Jogo 3 | Jogo 4 |\n|:---:|:---:|:---:|:---:|:---:|\n| I | 12 | 25 | 20 | 20 |\n| II | 12 | 12 | 27 | 20 |\n| III | 14 | 14 | 17 | 26 |\n| IV | 15 | 18 | 21 | 21 |\n| V | 22 | 15 | 23 | 15 |\n\nO quinto e último jogo será realizado para decidir a equipe campeã e qual o melhor jogador da temporada.\n\nO jogador que precisa fazer a menor quantidade de pontos no quinto jogo, para igualar a média de pontos do melhor jogador da temporada passada, é o",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "I.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "II.",
+        "engano_provavel": "Escolheu o jogador com a maior pontuação isolada (27 no jogo 3), confundindo um bom jogo com a maior soma; II ainda precisa de 90 − 71 = 19 pontos."
+      },
+      {
+        "letra": "C",
+        "texto": "III.",
+        "engano_provavel": "Escolheu o jogador com a melhor pontuação no último jogo (26), achando que a 'tendência de alta' basta, mas III soma só 71 e precisa de 19 pontos."
+      },
+      {
+        "letra": "D",
+        "texto": "IV.",
+        "engano_provavel": "Errou a soma do jogador I (ou de IV) e concluiu que IV, que precisa de 90 − 75 = 15, era o que menos precisava."
+      },
+      {
+        "letra": "E",
+        "texto": "V.",
+        "engano_provavel": "Errou a soma do jogador I e ficou com V, que também precisa de 90 − 75 = 15 pontos, empatado com IV e acima dos 13 de I."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Para ter média 18 em 5 jogos, o total precisa ser $18 \\times 5 = 90$ pontos.\nSomas dos 4 primeiros jogos: I = 77; II = 71; III = 71; IV = 75; V = 75.\nPontos necessários no 5º jogo = 90 − soma: I = 13; II = 19; III = 19; IV = 15; V = 15.\nO menor valor necessário é 13, do jogador I.\nAlternativa A.",
+    "habilidade": {
+      "codigo": "H29",
+      "descricao": "Utilizar conhecimentos de estatística e probabilidade como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "média aritmética",
+      "leitura de tabela"
+    ],
+    "dificuldade_tri": 0.87454,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 142",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "96315"
+    }
+  },
+  {
+    "id": "2022-143",
+    "ano": 2022,
+    "numero": 143,
+    "area": "matematica",
+    "enunciado": "Um casal planeja construir em sua chácara uma piscina com o formato de um paralelepípedo reto retângulo com capacidade para 90 000 L de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com uma mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento.\n\nAs dimensões internas de profundidade, largura e comprimento, respectivamente, para cada um dos projetos, são:\n\n• projeto I: 1,8 m, 2,0 m e 25,0 m;\n• projeto II: 2,0 m, 5,0 m e 9,0 m;\n• projeto III: 1,0 m, 6,0 m e 15,0 m;\n• projeto IV: 1,5 m, 15,0 m e 4,0 m;\n• projeto V: 2,5 m, 3,0 m e 12,0 m.\n\nO projeto que o casal deverá escolher será o",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "I.",
+        "engano_provavel": "Não há um erro de cálculo claro que leve ao projeto I (ele tem a maior área, 147,2 m²); provável escolha por intuição, por ser o projeto mais estreito (largura 2,0 m)."
+      },
+      {
+        "letra": "B",
+        "texto": "II.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "III.",
+        "engano_provavel": "Considerou só as paredes e esqueceu o fundo: paredes de III = $2 \\cdot 1 \\cdot (6 + 15) = 42$ m², a menor entre os projetos."
+      },
+      {
+        "letra": "D",
+        "texto": "IV.",
+        "engano_provavel": "Não há um erro de cálculo claro que leve ao projeto IV; provável erro aritmético ao comparar áreas próximas (IV tem 117 m², a terceira menor)."
+      },
+      {
+        "letra": "E",
+        "texto": "V.",
+        "engano_provavel": "Considerou só a área do fundo e esqueceu as paredes: fundo de V = $3 \\cdot 12 = 36$ m², o menor fundo entre os projetos."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "A área a revestir é o fundo mais as 4 paredes (sem tampa): $A = L \\cdot C + 2P(L + C)$, com $P$ profundidade, $L$ largura e $C$ comprimento.\nI: $2 \\cdot 25 + 2 \\cdot 1,8 \\cdot 27 = 50 + 97,2 = 147,2$ m².\nII: $5 \\cdot 9 + 2 \\cdot 2 \\cdot 14 = 45 + 56 = 101$ m².\nIII: $6 \\cdot 15 + 2 \\cdot 1 \\cdot 21 = 90 + 42 = 132$ m².\nIV: $15 \\cdot 4 + 2 \\cdot 1,5 \\cdot 19 = 60 + 57 = 117$ m².\nV: $3 \\cdot 12 + 2 \\cdot 2,5 \\cdot 15 = 36 + 75 = 111$ m².\nA menor área é a do projeto II (101 m²). Alternativa B.",
+    "habilidade": {
+      "codigo": "H13",
+      "descricao": "Avaliar o resultado de uma medição na construção de um argumento consistente."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "área de superfície",
+      "paralelepípedo",
+      "comparação de grandezas"
+    ],
+    "dificuldade_tri": 2.58862,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 143",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "117742"
+    }
+  },
+  {
+    "id": "2022-144",
+    "ano": 2022,
+    "numero": 144,
+    "area": "matematica",
+    "enunciado": "Uma instituição de ensino superior ofereceu vagas em um processo seletivo de acesso a seus cursos. Finalizadas as inscrições, foi divulgada a relação do número de candidatos por vaga em cada um dos cursos oferecidos. Esses dados são apresentados no quadro.\n\n| Curso | Número de vagas oferecidas | Número de candidatos por vaga |\n|:---|:---:|:---:|\n| Administração | 30 | 6 |\n| Ciências Contábeis | 40 | 6 |\n| Engenharia Elétrica | 50 | 7 |\n| História | 30 | 8 |\n| Letras | 25 | 4 |\n| Pedagogia | 25 | 5 |\n\nQual foi o número total de candidatos inscritos nesse processo seletivo?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "200",
+        "engano_provavel": "Somou apenas o número de vagas ($30 + 40 + 50 + 30 + 25 + 25 = 200$), sem multiplicar pelos candidatos por vaga."
+      },
+      {
+        "letra": "B",
+        "texto": "400",
+        "engano_provavel": "Não há uma conta clara que leve a 400; provavelmente dobrou o total de vagas (200) por estimativa."
+      },
+      {
+        "letra": "C",
+        "texto": "1 200",
+        "engano_provavel": "Usou 6 candidatos por vaga para todos os cursos (a relação mais comum no quadro): $200 \\times 6 = 1200$."
+      },
+      {
+        "letra": "D",
+        "texto": "1 235",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "7 200",
+        "engano_provavel": "Multiplicou o total de vagas pela soma das relações candidato/vaga: $200 \\times 36 = 7200$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Candidatos de cada curso = vagas $\\times$ candidatos por vaga.\nAdministração: $30 \\times 6 = 180$; Ciências Contábeis: $40 \\times 6 = 240$.\nEngenharia Elétrica: $50 \\times 7 = 350$; História: $30 \\times 8 = 240$.\nLetras: $25 \\times 4 = 100$; Pedagogia: $25 \\times 5 = 125$.\nTotal: $180 + 240 + 350 + 240 + 100 + 125 = 1235$. Alternativa D.",
+    "habilidade": {
+      "codigo": "H25",
+      "descricao": "Resolver problema com dados apresentados em tabelas ou gráficos."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "multiplicação",
+      "razão",
+      "leitura de tabela"
+    ],
+    "dificuldade_tri": 0.63977,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 144",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "30327"
+    }
+  },
+  {
+    "id": "2022-145",
+    "ano": 2022,
+    "numero": 145,
+    "area": "matematica",
+    "enunciado": "Peças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 cm e a da altura igual a 50 cm. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento.\n\nQuantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "800",
+        "engano_provavel": "Usou a área da superfície da esfera no lugar do volume: $4\\pi (0{,}5)^2 = \\pi$, e $800\\pi \\div \\pi = 800$."
+      },
+      {
+        "letra": "B",
+        "texto": "1 200",
+        "engano_provavel": "Esqueceu o expoente do raio no volume da esfera: $\\frac{4}{3}\\pi \\cdot 0{,}5 = \\frac{2\\pi}{3}$, e $800\\pi \\div \\frac{2\\pi}{3} = 1200$."
+      },
+      {
+        "letra": "C",
+        "texto": "2 400",
+        "engano_provavel": "Elevou o raio ao quadrado em vez de ao cubo: $\\frac{4}{3}\\pi (0{,}5)^2 = \\frac{\\pi}{3}$, e $800\\pi \\div \\frac{\\pi}{3} = 2400$."
+      },
+      {
+        "letra": "D",
+        "texto": "4 800",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "6 400",
+        "engano_provavel": "Esqueceu o fator $\\frac{4}{3}$ no volume da esfera: $\\pi (0{,}5)^3 = \\frac{\\pi}{8}$, e $800\\pi \\div \\frac{\\pi}{8} = 6400$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Volume do cilindro: $V_c = \\pi r^2 h = \\pi \\cdot 4^2 \\cdot 50 = 800\\pi$ cm³.\nA esfera tem diâmetro 1 cm, logo raio $0{,}5$ cm.\nVolume de cada esfera: $V_e = \\frac{4}{3}\\pi (0{,}5)^3 = \\frac{4}{3}\\pi \\cdot \\frac{1}{8} = \\frac{\\pi}{6}$ cm³.\nNúmero de esferas: $800\\pi \\div \\frac{\\pi}{6} = 800 \\times 6 = 4800$.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H8",
+      "descricao": "Resolver situação-problema que envolva conhecimentos geométricos de espaço e forma."
+    },
+    "competencia": {
+      "codigo": "C2",
+      "descricao": "Utilizar o conhecimento geométrico para realizar a leitura e a representação da realidade e agir sobre ela."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "volume da esfera",
+      "conservação de volume"
+    ],
+    "dificuldade_tri": 2.57768,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 145",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "14797"
+    }
+  },
+  {
+    "id": "2022-147",
+    "ano": 2022,
+    "numero": 147,
+    "area": "matematica",
+    "enunciado": "Uma loja comercializa cinco modelos de caixas-d’água (I, II, III, IV e V), todos em formato de cilindro reto de base circular. Os modelos II, III, IV e V têm as especificações de suas dimensões dadas em relação às dimensões do modelo I, cuja profundidade é $P$ e área da base é $A_b$, como segue:\n\n- modelo II: o dobro da profundidade e a metade da área da base do modelo I;\n- modelo III: o dobro da profundidade e a metade do raio da base do modelo I;\n- modelo IV: a metade da profundidade e o dobro da área da base do modelo I;\n- modelo V: a metade da profundidade e o dobro do raio da base do modelo I.\n\nUma pessoa pretende comprar nessa loja o modelo de caixa-d’água que ofereça a maior capacidade volumétrica.\n\nO modelo escolhido deve ser o",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "I.",
+        "engano_provavel": "Achou que dobrar uma dimensão e reduzir outra à metade sempre 'se compensa', concluindo que nenhum supera o modelo I de referência."
+      },
+      {
+        "letra": "B",
+        "texto": "II.",
+        "engano_provavel": "Valorizou o dobro da profundidade sem considerar a base reduzida: $2P \\cdot \\frac{A_b}{2} = A_b P$, que só iguala o modelo I."
+      },
+      {
+        "letra": "C",
+        "texto": "III.",
+        "engano_provavel": "Tratou a metade do raio como metade da área, obtendo $2P \\cdot \\frac{A_b}{2} = A_b P$, e escolheu pelo dobro da profundidade; na verdade a área cai para $\\frac{A_b}{4}$."
+      },
+      {
+        "letra": "D",
+        "texto": "IV.",
+        "engano_provavel": "Tratou o dobro do raio como dobro da área (ou o contrário), achando IV e V equivalentes, e ficou com IV, que dá $\\frac{P}{2} \\cdot 2A_b = A_b P$."
+      },
+      {
+        "letra": "E",
+        "texto": "V.",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "Volume do cilindro: $V = A_b \\cdot P$; modelo I: $V_I = A_b P$.\nModelo II: $2P \\cdot \\frac{A_b}{2} = A_b P$. Modelo IV: $\\frac{P}{2} \\cdot 2A_b = A_b P$.\nA área da base é proporcional a $r^2$: metade do raio dá $\\frac{A_b}{4}$; dobro do raio dá $4A_b$.\nModelo III: $2P \\cdot \\frac{A_b}{4} = \\frac{A_b P}{2}$. Modelo V: $\\frac{P}{2} \\cdot 4A_b = 2A_b P$.\nO maior volume é o do modelo V. Alternativa E.",
+    "habilidade": {
+      "codigo": "H9",
+      "descricao": "Utilizar conhecimentos geométricos de espaço e forma na seleção de argumentos propostos como solução de problemas do cotidiano."
+    },
+    "competencia": {
+      "codigo": "C2",
+      "descricao": "Utilizar o conhecimento geométrico para realizar a leitura e a representação da realidade e agir sobre ela."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "área do círculo",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 1.88956,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 147",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "63204"
+    }
+  },
+  {
+    "id": "2022-149",
+    "ano": 2022,
+    "numero": 149,
+    "area": "matematica",
+    "enunciado": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R\\$ 8 000,00 e R\\$ 12 000,00.\n\nA diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R\\$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\n\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "14,4.",
+        "engano_provavel": "Trocou as quantidades de mestres e doutores (40 mestres e 60 doutores): $\\frac{1\\,224\\,000 - 40 \\times 10\\,000}{60} \\approx 13\\,733$, aumento de cerca de 14,4%."
+      },
+      {
+        "letra": "B",
+        "texto": "20,7.",
+        "engano_provavel": "Usou a média simples dos dois salários, sem ponderar pelo número de professores: $\\frac{10\\,000 + 12\\,000(1 + x)}{2} = 12\\,240$ dá $x \\approx 20,7\\%$."
+      },
+      {
+        "letra": "C",
+        "texto": "22,0.",
+        "engano_provavel": "Calculou o aumento da média atual ($12\\,240 - 9\\,600 = 2\\,640$) e aplicou esse valor ao salário dos doutores: $\\frac{2\\,640}{12\\,000} = 22\\%$."
+      },
+      {
+        "letra": "D",
+        "texto": "30,0.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "37,5.",
+        "engano_provavel": "Achou que o aumento dos doutores seria o dos mestres corrigido pela razão entre as quantidades: $25\\% \\times \\frac{60}{40} = 37,5\\%$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Folha máxima permitida: $100 \\times 12\\,240 = 1\\,224\\,000$.\nNovo salário dos mestres: $8\\,000 \\times 1,25 = 10\\,000$; folha dos mestres: $60 \\times 10\\,000 = 600\\,000$.\nSobra para os doutores: $1\\,224\\,000 - 600\\,000 = 624\\,000$, ou seja, $\\frac{624\\,000}{40} = 15\\,600$ por doutor.\nAumento dos doutores: $\\frac{15\\,600 - 12\\,000}{12\\,000} = \\frac{3\\,600}{12\\,000} = 0,30$.\nO aumento máximo é de 30%. Alternativa D.",
+    "habilidade": {
+      "codigo": "H30",
+      "descricao": "Avaliar propostas de intervenção na realidade utilizando conhecimentos de estatística e probabilidade."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "média ponderada",
+      "porcentagem",
+      "aumento percentual"
+    ],
+    "dificuldade_tri": 2.40384,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 149",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "32369"
+    }
+  },
+  {
+    "id": "2022-150",
+    "ano": 2022,
+    "numero": 150,
+    "area": "matematica",
+    "enunciado": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.\n\nA quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "0,125.",
+        "engano_provavel": "Dividiu 360 por $60 \\times 48 = 2880$, misturando dias com minutos: $360 \\div 2880 = 0{,}125$."
+      },
+      {
+        "letra": "B",
+        "texto": "0,200.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "4,800.",
+        "engano_provavel": "Tratou os 60 dias como 60 horas: $3600 \\div 48 = 75$ acionamentos e $360 \\div 75 = 4{,}8$."
+      },
+      {
+        "letra": "D",
+        "texto": "6,000.",
+        "engano_provavel": "Calculou o consumo por dia, e não por acionamento: $360 \\div 60 = 6$."
+      },
+      {
+        "letra": "E",
+        "texto": "12,000.",
+        "engano_provavel": "Contou só os acionamentos de um dia ($1440 \\div 48 = 30$) e dividiu o total por eles: $360 \\div 30 = 12$."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Minutos em 60 dias: $60 \\times 24 \\times 60 = 86400$ minutos.\nNúmero de acionamentos: $86400 \\div 48 = 1800$.\nQuantidade por acionamento: $360 \\div 1800 = 0{,}2$ mL. Alternativa B.",
+    "habilidade": {
+      "codigo": "H12",
+      "descricao": "Resolver situação-problema que envolva medidas de grandezas."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "conversão de unidades de tempo",
+      "divisão",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 1.6446,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 150",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "117877"
+    }
+  },
+  {
+    "id": "2022-151",
+    "ano": 2022,
+    "numero": 151,
+    "area": "matematica",
+    "enunciado": "Definem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol.\n\nSuponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e que 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.\n\nNo planeta Z, seu ano corresponderia a quantos de seus dias?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "2,5",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "10,0",
+        "engano_provavel": "Inverteu a relação entre os anos (1 ano de Z = 2 anos terrestres) e depois converteu: $730 \\div 73 = 10$."
+      },
+      {
+        "letra": "C",
+        "texto": "730,0",
+        "engano_provavel": "Inverteu a relação entre os anos e não converteu para dias de Z: $365 \\times 2 = 730$."
+      },
+      {
+        "letra": "D",
+        "texto": "13 322,5",
+        "engano_provavel": "Multiplicou pela duração do dia de Z em vez de dividir: $182{,}5 \\times 73 = 13\\,322{,}5$."
+      },
+      {
+        "letra": "E",
+        "texto": "53 290,0",
+        "engano_provavel": "Inverteu a relação entre os anos e ainda multiplicou pela duração do dia: $730 \\times 73 = 53\\,290$."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "2 anos de Z equivalem a 1 ano terrestre, então 1 ano de Z dura $365 \\div 2 = 182{,}5$ dias terrestres.\n1 dia de Z dura 73 dias terrestres.\nAno de Z medido em dias de Z: $182{,}5 \\div 73 = 2{,}5$.\nAlternativa A.",
+    "habilidade": {
+      "codigo": "H10",
+      "descricao": "Identificar relações entre grandezas e unidades de medida."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "conversão de unidades",
+      "razão",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 2.301,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 151",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "82581"
+    }
+  },
+  {
+    "id": "2022-153",
+    "ano": 2022,
+    "numero": 153,
+    "area": "matematica",
+    "enunciado": "Em uma loja, o preço promocional de uma geladeira é de R\\$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2% sobre o preço normal.\n\nUma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado.\n\nO valor apresentado pela loja, comparado ao valor calculado pela cliente, foi",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "R\\$ 2,00 menor.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "R\\$ 100,00 menor.",
+        "engano_provavel": "Aplicou o desconto de 2% sobre o preço promocional: $1\\,000 \\times 0{,}98 = 980$, e comparou com 1 080, obtendo 100 reais a menos."
+      },
+      {
+        "letra": "C",
+        "texto": "R\\$ 200,00 menor.",
+        "engano_provavel": "Leu o desconto como 20%: $1\\,100 \\times 0{,}80 = 880$, e comparou com 1 080, obtendo 200 reais a menos."
+      },
+      {
+        "letra": "D",
+        "texto": "R\\$ 42,00 maior.",
+        "engano_provavel": "Somou os 2% em vez de descontar: $1\\,100 \\times 1{,}02 = 1\\,122$, e fez $1\\,122 - 1\\,080 = 42$ a mais."
+      },
+      {
+        "letra": "E",
+        "texto": "R\\$ 80,00 maior.",
+        "engano_provavel": "Tomou como diferença o próprio acréscimo calculado pela cliente: $1\\,080 - 1\\,000 = 80$, como se a loja cobrasse a mais."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Preço normal: $1\\,000 \\times 1{,}10 = 1\\,100$ reais.\nValor da loja no cartão: $1\\,100 \\times 0{,}98 = 1\\,078$ reais.\nCálculo da cliente: $1\\,000 \\times 1{,}08 = 1\\,080$ reais.\nDiferença: $1\\,078 - 1\\,080 = -2$, ou seja, o valor da loja é 2 reais menor.\nAlternativa A.",
+    "habilidade": {
+      "codigo": "H4",
+      "descricao": "Avaliar a razoabilidade de um resultado numérico na construção de argumentos sobre afirmações quantitativas."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "porcentagem",
+      "acréscimos e descontos sucessivos"
+    ],
+    "dificuldade_tri": 1.58603,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 153",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "68369"
+    }
+  },
+  {
+    "id": "2022-158",
+    "ano": 2022,
+    "numero": 158,
+    "area": "matematica",
+    "enunciado": "Ao analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por $p(t) = -t^2 + 10t + 24$, sendo $t$ um número natural, variando de 1 a 12, que representa os meses do ano, e $p(t)$ a quantidade de pessoas infectadas no mês $t$ do ano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar a propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (I, II, III, IV e V), com diferentes períodos de intensificação das propagandas:\n\n• I: $1 \\leq t \\leq 2$;\n• II: $3 \\leq t \\leq 4$;\n• III: $5 \\leq t \\leq 6$;\n• IV: $7 \\leq t \\leq 9$;\n• V: $10 \\leq t \\leq 12$.\n\nA sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o mês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita.\n\nA proposta escolhida foi a",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "I.",
+        "engano_provavel": "Não há um erro de cálculo claro que leve à proposta I; provável escolha por achar que a propaganda deve ser feita logo no início do ano."
+      },
+      {
+        "letra": "B",
+        "texto": "II.",
+        "engano_provavel": "Testou alguns meses e parou cedo demais: viu $p(4) = 48$ maior que $p(3) = 45$ e não conferiu que $p(5) = 49$ é ainda maior."
+      },
+      {
+        "letra": "C",
+        "texto": "III.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "IV.",
+        "engano_provavel": "Errou o sinal das raízes, usando 2 e 12 em vez de $-2$ e 12, e tomou o ponto médio como vértice: $\\frac{2 + 12}{2} = 7$."
+      },
+      {
+        "letra": "E",
+        "texto": "V.",
+        "engano_provavel": "Confundiu o máximo com uma raiz da função: $-t^2 + 10t + 24 = 0$ dá $t = 12$ (ou ignorou o sinal negativo de $t^2$ e achou que $p$ cresce até $t = 12$)."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "$p(t) = -t^2 + 10t + 24$ é uma parábola com concavidade para baixo ($a = -1 < 0$), então tem valor máximo no vértice.\n$t_v = -\\frac{b}{2a} = -\\frac{10}{2 \\cdot (-1)} = 5$.\nConferindo: $p(5) = -25 + 50 + 24 = 49$, maior que $p(4) = p(6) = 48$.\nO mês 5 está no período $5 \\leq t \\leq 6$, da proposta III. Alternativa C.",
+    "habilidade": {
+      "codigo": "H23",
+      "descricao": "Avaliar propostas de intervenção na realidade utilizando conhecimentos algébricos."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "função quadrática",
+      "vértice da parábola",
+      "valor máximo"
+    ],
+    "dificuldade_tri": 2.3731,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 158",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "53461"
+    }
+  },
+  {
+    "id": "2022-159",
+    "ano": 2022,
+    "numero": 159,
+    "area": "matematica",
+    "enunciado": "Um atleta iniciou seu treinamento visando as competições de fim de ano. Seu treinamento consiste em cinco tipos diferentes de treinos: treino $T_1$, treino $T_2$, treino $T_3$, treino $T_4$ e treino $T_5$. A sequência dos treinamentos deve seguir esta ordem:\n\n| Dia | 1º | 2º | 3º | 4º | 5º | 6º | 7º | 8º | 9º | 10º | 11º | 12º | 13º |\n|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| Treino | $T_1$ | R | R | $T_2$ | R | R | $T_3$ | R | $T_4$ | R | R | $T_5$ | R |\n\nA letra R significa repouso. Após completar a sequência de treinamentos, o atleta começa novamente a sequência a partir do treino $T_1$ e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o início das competições.\n\nA sequência de treinamentos que o atleta realizará na 24ª semana de treinos é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$T_3$ R $T_4$ R R $T_5$ R.",
+        "engano_provavel": "Errou o início da semana por um dia (começou no dia 163, posição 7 do ciclo) e listou as posições 7 a 13."
+      },
+      {
+        "letra": "B",
+        "texto": "R $T_3$ R $T_4$ R R $T_5$.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "R $T_4$ R R $T_5$ R $T_1$.",
+        "engano_provavel": "Deslocou a semana em dois dias (começou na posição 8 do ciclo), provavelmente contando mal o resto da divisão por 13."
+      },
+      {
+        "letra": "D",
+        "texto": "R R $T_5$ R $T_1$ R R.",
+        "engano_provavel": "Não há uma conta clara; a sequência corresponde às posições 10 a 13 e 1 a 3, um deslocamento de quatro dias ao localizar o resto."
+      },
+      {
+        "letra": "E",
+        "texto": "R $T_5$ R $T_1$ R R $T_2$.",
+        "engano_provavel": "Não há uma conta única clara; a sequência corresponde às posições 11 a 13 e 1 a 4, possivelmente por tomar um dia próximo de 168 como início da semana."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "A sequência se repete a cada 13 dias.\nA 24ª semana vai do dia $23 \\times 7 + 1 = 162$ ao dia $24 \\times 7 = 168$.\n$162 = 12 \\times 13 + 6$, então o dia 162 é a 6ª posição do ciclo (R).\nAs posições 6 a 12 são: R, $T_3$, R, $T_4$, R, R, $T_5$.\nConferência: $168 = 12 \\times 13 + 12$, posição 12, que é $T_5$. Alternativa B.",
+    "habilidade": {
+      "codigo": "H2",
+      "descricao": "Identificar padrões numéricos ou princípios de contagem."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "sequências periódicas",
+      "divisão com resto",
+      "contagem"
+    ],
+    "dificuldade_tri": 2.5423,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 159",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "85013"
+    }
+  },
+  {
+    "id": "2022-161",
+    "ano": 2022,
+    "numero": 161,
+    "area": "matematica",
+    "enunciado": "Uma empresa produz e vende um tipo de chocolate, maciço, em formato de cone circular reto com as medidas do diâmetro da base e da altura iguais a 8 cm e 10 cm, respectivamente, como apresenta a figura.\n\nDevido a um aumento de preço dos ingredientes utilizados na produção desse chocolate, a empresa decide produzir esse mesmo tipo de chocolate com um volume 19% menor, no mesmo formato de cone circular reto com altura de 10 cm.\n\nPara isso, a empresa produzirá esses novos chocolates com medida do raio da base, em centímetro, igual a",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1,52.",
+        "engano_provavel": "Calculou 19% do diâmetro ($0{,}19 \\times 8 = 1{,}52$), confundindo a redução com a nova medida."
+      },
+      {
+        "letra": "B",
+        "texto": "3,24.",
+        "engano_provavel": "Aplicou o fator do volume direto no raio, sem tirar a raiz: $0{,}81 \\times 4 = 3{,}24$."
+      },
+      {
+        "letra": "C",
+        "texto": "3,60.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "6,48.",
+        "engano_provavel": "Aplicou o fator do volume direto no diâmetro: $0{,}81 \\times 8 = 6{,}48$."
+      },
+      {
+        "letra": "E",
+        "texto": "7,20.",
+        "engano_provavel": "Tirou a raiz corretamente, mas aplicou o fator no diâmetro em vez do raio: $0{,}9 \\times 8 = 7{,}2$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Volume do cone: $V = \\frac{1}{3}\\pi r^2 h$; com $h$ fixo, o volume é proporcional a $r^2$.\nNovo volume: $0{,}81V$, logo $r_{novo}^2 = 0{,}81 \\cdot r^2$.\nRaio original: $r = 8 \\div 2 = 4$ cm.\n$r_{novo} = \\sqrt{0{,}81} \\cdot 4 = 0{,}9 \\cdot 4 = 3{,}6$ cm.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H14",
+      "descricao": "Avaliar proposta de intervenção na realidade utilizando conhecimentos geométricos relacionados a grandezas e medidas."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "volume do cone",
+      "porcentagem",
+      "raiz quadrada"
+    ],
+    "dificuldade_tri": 2.44795,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 161",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "86466"
+    }
+  },
+  {
+    "id": "2022-162",
+    "ano": 2022,
+    "numero": 162,
+    "area": "matematica",
+    "enunciado": "Em janeiro de 2013, foram declaradas 1 794 272 admissões e 1 765 372 desligamentos no Brasil, ou seja, foram criadas 28 900 vagas de emprego, segundo dados do Cadastro Geral de Empregados e Desempregados (Caged), divulgados pelo Ministério do Trabalho e Emprego (MTE). Segundo o Caged, o número de vagas criadas em janeiro de 2013 sofreu uma queda de 75%, quando comparado com o mesmo período de 2012.\n\nDisponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).\n\nDe acordo com as informações dadas, o número de vagas criadas em janeiro de 2012 foi",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "16 514.",
+        "engano_provavel": "Dividiu por 1,75 como se 2012 fosse 75% menor que 2013: $\\frac{28\\,900}{1{,}75} \\approx 16\\,514$."
+      },
+      {
+        "letra": "B",
+        "texto": "86 700.",
+        "engano_provavel": "Calculou só os 75% que 'sumiram': $28\\,900 \\times 3 = 86\\,700$, esquecendo de somar as 28 900 vagas que restaram."
+      },
+      {
+        "letra": "C",
+        "texto": "115 600.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "441 343.",
+        "engano_provavel": "Usou o número de desligamentos em vez das vagas criadas: $\\frac{1\\,765\\,372}{4} = 441\\,343$."
+      },
+      {
+        "letra": "E",
+        "texto": "448 568.",
+        "engano_provavel": "Usou o número de admissões em vez das vagas criadas: $\\frac{1\\,794\\,272}{4} = 448\\,568$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Seja $x$ o número de vagas de janeiro de 2012.\nQueda de 75% significa que 2013 ficou com 25% de 2012: $0{,}25x = 28\\,900$.\n$x = \\frac{28\\,900}{0{,}25} = 28\\,900 \\times 4 = 115\\,600$.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H3",
+      "descricao": "Resolver situação-problema envolvendo conhecimentos numéricos."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "porcentagem",
+      "variação percentual"
+    ],
+    "dificuldade_tri": 1.56693,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 162",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "43182"
+    }
+  },
+  {
+    "id": "2022-163",
+    "ano": 2022,
+    "numero": 163,
+    "area": "matematica",
+    "enunciado": "Um prédio, com 9 andares e 8 apartamentos de 2 quartos por andar, está com todos os seus apartamentos à venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, um algarismo de 1 a 8, que diferencia os apartamentos de um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de identificação:\n\n• naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã;\n• naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã;\n• naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde.\n\nUma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã.\n\nDe quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$9 \\times \\frac{6!}{(6-2)!}$",
+        "engano_provavel": "Usou arranjo em vez de combinação, contando a mesma dupla de apartamentos duas vezes: $A_{6,2} = \\frac{6!}{(6-2)!} = 30$ por andar."
+      },
+      {
+        "letra": "B",
+        "texto": "$9 \\times \\frac{6!}{(6-2)! \\times 2!}$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "$9 \\times \\frac{4!}{(4-2)! \\times 2!}$",
+        "engano_provavel": "Considerou apenas os apartamentos com final 3, 4, 5 ou 6 (os que têm 'um quarto com sol pela manhã'), esquecendo os finais 1 e 2: $C_{4,2}$."
+      },
+      {
+        "letra": "D",
+        "texto": "$9 \\times \\frac{2!}{(2-2)! \\times 2!}$",
+        "engano_provavel": "Considerou apenas os apartamentos com final 1 ou 2 (ambos os quartos com sol pela manhã): $C_{2,2}$."
+      },
+      {
+        "letra": "E",
+        "texto": "$9 \\times \\left(\\frac{8!}{(8-2)! \\times 2!} - 1\\right)$",
+        "engano_provavel": "Partiu do total de duplas por andar, $C_{8,2}$, e subtraiu só a dupla {7, 8}, esquecendo as duplas em que apenas um dos apartamentos termina em 7 ou 8."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Têm pelo menos um quarto com sol pela manhã os apartamentos com final 1, 2, 3, 4, 5 ou 6: são 6 por andar.\nOs dois apartamentos devem ser do mesmo andar e a ordem da escolha não importa, então é combinação: $C_{6,2} = \\frac{6!}{(6-2)! \\times 2!} = 15$ por andar.\nHá 9 andares possíveis (princípio multiplicativo): $9 \\times \\frac{6!}{(6-2)! \\times 2!}$.\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H2",
+      "descricao": "Identificar padrões numéricos ou princípios de contagem."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "análise combinatória",
+      "combinação simples",
+      "princípio multiplicativo"
+    ],
+    "dificuldade_tri": 2.16924,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 163",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "47309"
+    }
+  },
+  {
+    "id": "2022-164",
+    "ano": 2022,
+    "numero": 164,
+    "area": "matematica",
+    "enunciado": "Um médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. Ele observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 kg. Sabendo que a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, para evitar desidratação.\n\nSeguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após terminar seus exercícios físicos.\n\nPara que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "30 minutos ou menos.",
+        "engano_provavel": "Tomou só 40% de 1,7 L como água perdida: $0{,}4 \\times 1{,}7 = 0{,}68$ L e $0{,}68 \\div 1{,}5 \\approx 0{,}45$ h, cerca de 27 min."
+      },
+      {
+        "letra": "B",
+        "texto": "mais de 35 e menos de 45 minutos.",
+        "engano_provavel": "Descontou 40% de 1,7 L em vez de dividir por 1,4: $0{,}6 \\times 1{,}7 = 1{,}02$ L e $1{,}02 \\div 1{,}5 = 0{,}68$ h, cerca de 41 min."
+      },
+      {
+        "letra": "C",
+        "texto": "mais de 45 e menos de 55 minutos.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "mais de 60 e menos de 70 minutos.",
+        "engano_provavel": "Ignorou os 40% a mais: $1{,}7 \\div 1{,}5 \\approx 1{,}13$ h, cerca de 68 min."
+      },
+      {
+        "letra": "E",
+        "texto": "70 minutos ou mais.",
+        "engano_provavel": "Multiplicou por 1,4 em vez de dividir: $1{,}7 \\times 1{,}4 \\div 1{,}5 \\approx 1{,}59$ h, cerca de 95 min."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Em $t$ horas de atividade, a massa perdida é $1{,}5t$ kg, o que equivale a $1{,}5t$ L de água.\nA recomendação é ingerir 40% a mais: $1{,}4 \\times 1{,}5t = 2{,}1t$ litros.\n$2{,}1t = 1{,}7 \\Rightarrow t = \\frac{1{,}7}{2{,}1} \\approx 0{,}81$ h.\nEm minutos: $0{,}81 \\times 60 \\approx 48{,}6$ min.\nEsse valor está entre 45 e 55 minutos. Alternativa C.",
+    "habilidade": {
+      "codigo": "H17",
+      "descricao": "Analisar informações envolvendo a variação de grandezas como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "porcentagem",
+      "proporcionalidade",
+      "conversão de unidades de tempo"
+    ],
+    "dificuldade_tri": 2.02109,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 164",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "30053"
+    }
+  },
+  {
+    "id": "2022-166",
+    "ano": 2022,
+    "numero": 166,
+    "area": "matematica",
+    "enunciado": "A luminosidade L de uma estrela está relacionada com o raio R e com a temperatura T dessa estrela segundo a Lei de Stefan-Boltzmann: $L = c \\cdot R^2 \\cdot T^4$, em que c é uma constante igual para todas as estrelas.\n\nDisponível em: http://ciencia.hsw.uol.com.br. Acesso em: 22 nov. 2013 (adaptado).\n\nConsidere duas estrelas E e F, sendo que a estrela E tem metade do raio da estrela F e o dobro da temperatura de F.\n\nIndique por $L_E$ e $L_F$ suas respectivas luminosidades.\n\nA relação entre as luminosidades dessas duas estrelas é dada por",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$L_E = \\frac{L_F}{2}$",
+        "engano_provavel": "Elevou o raio ao quadrado, mas não elevou a temperatura à quarta: $\\frac{1}{4} \\cdot 2 = \\frac{1}{2}$."
+      },
+      {
+        "letra": "B",
+        "texto": "$L_E = \\frac{L_F}{4}$",
+        "engano_provavel": "Considerou só o efeito do raio, $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$, e esqueceu que a temperatura dobrou."
+      },
+      {
+        "letra": "C",
+        "texto": "$L_E = L_F$",
+        "engano_provavel": "Ignorou os expoentes e achou que metade e dobro se cancelam: $\\frac{1}{2} \\cdot 2 = 1$."
+      },
+      {
+        "letra": "D",
+        "texto": "$L_E = 4L_F$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "$L_E = 8L_F$",
+        "engano_provavel": "Elevou a temperatura à quarta, mas esqueceu de elevar o raio ao quadrado: $\\frac{1}{2} \\cdot 16 = 8$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Para F: $L_F = c \\cdot R^2 \\cdot T^4$.\nPara E: raio $\\frac{R}{2}$ e temperatura $2T$.\n$L_E = c \\cdot \\left(\\frac{R}{2}\\right)^2 \\cdot (2T)^4 = c \\cdot \\frac{R^2}{4} \\cdot 16T^4$.\n$L_E = 4 \\cdot c R^2 T^4 = 4L_F$.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H15",
+      "descricao": "Identificar a relação de dependência entre grandezas."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "potenciação",
+      "substituição em fórmulas",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 2.2515,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 166",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "61248"
+    }
+  },
+  {
+    "id": "2022-167",
+    "ano": 2022,
+    "numero": 167,
+    "area": "matematica",
+    "enunciado": "Uma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\n| Número de crianças por família | Frequência |\n|:---:|:---:|\n| 0 | 100 |\n| 1 | 400 |\n| 2 | 200 |\n| 3 | 150 |\n| 4 | 100 |\n| 5 | 50 |\n\nO número que representa a mediana da quantidade de crianças por família nessa região é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1,0.",
+        "engano_provavel": "Tomou só o 500º valor (ou a moda, que é 1, com frequência 400) em vez da média entre o 500º e o 501º."
+      },
+      {
+        "letra": "B",
+        "texto": "1,5.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "1,9.",
+        "engano_provavel": "Calculou a média aritmética em vez da mediana: $\\frac{0 + 400 + 400 + 450 + 400 + 250}{1\\,000} = 1{,}9$."
+      },
+      {
+        "letra": "D",
+        "texto": "2,1.",
+        "engano_provavel": "Calculou a média ignorando as famílias sem crianças: $\\frac{1\\,900}{900} \\approx 2{,}1$."
+      },
+      {
+        "letra": "E",
+        "texto": "2,5.",
+        "engano_provavel": "Tirou a mediana dos valores 0 a 5 da coluna, sem considerar as frequências: $\\frac{2 + 3}{2} = 2{,}5$."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Total de famílias: 100 + 400 + 200 + 150 + 100 + 50 = 1 000 (número par).\nA mediana é a média do 500º e do 501º valores ordenados.\nFrequências acumuladas: até 0 crianças, 100; até 1, 500; até 2, 700.\nO 500º valor é 1 e o 501º é 2, logo a mediana é $\\frac{1 + 2}{2} = 1{,}5$.\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H27",
+      "descricao": "Calcular medidas de tendência central ou de dispersão de um conjunto de dados expressos em uma tabela de frequências de dados agrupados (não em classes) ou em gráficos."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "mediana",
+      "distribuição de frequências"
+    ],
+    "dificuldade_tri": 2.2135,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 167",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "111738"
+    }
+  },
+  {
+    "id": "2022-170",
+    "ano": 2022,
+    "numero": 170,
+    "area": "matematica",
+    "enunciado": "Um parque tem dois circuitos de tamanhos diferentes para corridas. Um corredor treina nesse parque e, no primeiro dia, inicia seu treino percorrendo 3 voltas em torno do circuito maior e 2 voltas em torno do menor, perfazendo um total de 1 800 m. Em seguida, dando continuidade a seu treino, corre mais 2 voltas em torno do circuito maior e 1 volta em torno do menor, percorrendo mais 1 100 m.\n\nNo segundo dia, ele pretende percorrer 5 000 m nos circuitos do parque, fazendo um número inteiro de voltas em torno deles e de modo que o número de voltas seja o maior possível.\n\nA soma do número de voltas em torno dos dois circuitos, no segundo dia, será",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "10.",
+        "engano_provavel": "Não há uma conta clara que leve a 10; provável erro ao resolver o sistema (por exemplo, achar circuito maior de 500 m e fazer $5000 \\div 500 = 10$)."
+      },
+      {
+        "letra": "B",
+        "texto": "13.",
+        "engano_provavel": "Priorizou o circuito maior: $11 \\times 400 + 2 \\times 300 = 5000$, total de 13 voltas (o menor número possível, não o maior)."
+      },
+      {
+        "letra": "C",
+        "texto": "14.",
+        "engano_provavel": "Parou em uma solução intermediária, $8 \\times 400 + 6 \\times 300 = 5000$, com 14 voltas, sem testar as demais."
+      },
+      {
+        "letra": "D",
+        "texto": "15.",
+        "engano_provavel": "Parou em $5 \\times 400 + 10 \\times 300 = 5000$, com 15 voltas, sem testar a combinação com 14 voltas no circuito menor."
+      },
+      {
+        "letra": "E",
+        "texto": "16.",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "Sejam $x$ e $y$ os comprimentos dos circuitos maior e menor: $3x + 2y = 1800$ e $2x + y = 1100$.\nDa segunda, $y = 1100 - 2x$; substituindo: $3x + 2200 - 4x = 1800 \\Rightarrow x = 400$ e $y = 300$.\nNo segundo dia: $400a + 300b = 5000$, ou seja, $4a + 3b = 50$, com $a$ e $b$ inteiros não negativos.\nSoluções: $(a, b) = (11, 2), (8, 6), (5, 10), (2, 14)$, com somas 13, 14, 15 e 16.\nPara ter mais voltas, usa-se mais o circuito menor: $a + b = 2 + 14 = 16$. Alternativa E.",
+    "habilidade": {
+      "codigo": "H21",
+      "descricao": "Resolver situação-problema cuja modelagem envolva conhecimentos algébricos."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "sistema de equações lineares",
+      "números inteiros",
+      "otimização"
+    ],
+    "dificuldade_tri": 2.41531,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 170",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "95509"
+    }
+  },
+  {
+    "id": "2022-171",
+    "ano": 2022,
+    "numero": 171,
+    "area": "matematica",
+    "enunciado": "Uma equipe de marketing digital foi contratada para aumentar as vendas de um produto ofertado em um site de comércio eletrônico. Para isso, elaborou um anúncio que, quando o cliente clica sobre ele, é direcionado para a página de vendas do produto. Esse anúncio foi divulgado em duas redes sociais, A e B, e foram obtidos os seguintes resultados:\n\n- rede social A: o anúncio foi visualizado por 3 000 pessoas; 10% delas clicaram sobre o anúncio e foram redirecionadas para o site; 3% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R\\$ 100,00;\n- rede social B: o anúncio foi visualizado por 1 000 pessoas; 30% delas clicaram sobre o anúncio e foram redirecionadas para o site; 2% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R\\$ 200,00.\n\nPor experiência, o pessoal da equipe de marketing considera que a quantidade de novas pessoas que verão o anúncio é diretamente proporcional ao investimento realizado, e que a quantidade de pessoas que comprarão o produto também se manterá proporcional à quantidade de pessoas que clicarão sobre o anúncio.\n\nO responsável pelo produto decidiu, então, investir mais R\\$ 300,00 em cada uma das duas redes sociais para a divulgação desse anúncio e obteve, de fato, o aumento proporcional esperado na quantidade de clientes que compraram esse produto. Para classificar o aumento obtido na quantidade (Q) de compradores desse produto, em consequência dessa segunda divulgação, em relação aos resultados observados na primeira divulgação, o responsável pelo produto adotou o seguinte critério:\n\n- $Q \\leq 60\\%$: não satisfatório;\n- $60\\% < Q \\leq 100\\%$: regular;\n- $100\\% < Q \\leq 150\\%$: bom;\n- $150\\% < Q \\leq 190\\%$: muito bom;\n- $190\\% < Q \\leq 200\\%$: excelente.\n\nO aumento na quantidade de compradores, em consequência dessa segunda divulgação, em relação ao que foi registrado com a primeira divulgação, foi classificado como",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "não satisfatório.",
+        "engano_provavel": "Considerou só os compradores novos da rede B em relação ao total inicial: $\\frac{9}{15} = 60\\%$."
+      },
+      {
+        "letra": "B",
+        "texto": "regular.",
+        "engano_provavel": "Achou que, como o investimento total dobrou (de 300 para 600 reais), os compradores também dobrariam, um aumento de 100%, sem considerar que cada rede rende de um jeito."
+      },
+      {
+        "letra": "C",
+        "texto": "bom.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "muito bom.",
+        "engano_provavel": "Calculou o aumento pelas visualizações, sem aplicar as taxas de clique e de compra de cada rede: $\\frac{10\\,500 - 4\\,000}{4\\,000} = 162{,}5\\%$."
+      },
+      {
+        "letra": "E",
+        "texto": "excelente.",
+        "engano_provavel": "Confundiu a razão entre os investimentos com o aumento percentual: $\\frac{600}{300} = 2$, lido como 200%."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Primeira divulgação: A teve $3000 \\times 0{,}10 = 300$ cliques e $300 \\times 0{,}03 = 9$ compradores; B teve $1000 \\times 0{,}30 = 300$ cliques e $300 \\times 0{,}02 = 6$ compradores; total de 15.\nEm A, 100 reais renderam 3 000 visualizações; mais 300 reais rendem 9 000 novas visualizações, 900 cliques e 27 compradores.\nEm B, 200 reais renderam 1 000 visualizações; mais 300 reais rendem 1 500 novas visualizações, 450 cliques e 9 compradores.\nSegunda divulgação: $27 + 9 = 36$ compradores.\nAumento em relação à primeira: $\\frac{36 - 15}{15} = \\frac{21}{15} = 1{,}4 = 140\\%$.\nComo $100\\% < 140\\% \\leq 150\\%$, a classificação é bom.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H17",
+      "descricao": "Analisar informações envolvendo a variação de grandezas como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "porcentagem",
+      "proporcionalidade",
+      "variação percentual"
+    ],
+    "dificuldade_tri": 4.48651,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 171",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "117820"
+    }
+  },
+  {
+    "id": "2022-172",
+    "ano": 2022,
+    "numero": 172,
+    "area": "matematica",
+    "enunciado": "Uma montadora de automóveis divulgou que oferta a seus clientes mais de 1 000 configurações diferentes de carro, variando o modelo, a motorização, os opcionais e a cor do veículo. Atualmente, ela oferece 7 modelos de carros com 2 tipos de motores: 1.0 e 1.6. Já em relação aos opcionais, existem 3 escolhas possíveis: central multimídia, rodas de liga leve e bancos de couro, podendo o cliente optar por incluir um, dois, três ou nenhum dos opcionais disponíveis.\n\nPara ser fiel à divulgação feita, a quantidade mínima de cores que a montadora deverá disponibilizar a seus clientes é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "8.",
+        "engano_provavel": "Arredondou $\\frac{1\\,000}{112} \\approx 8{,}93$ para baixo; com 8 cores são só $112 \\times 8 = 896$ configurações."
+      },
+      {
+        "letra": "B",
+        "texto": "9.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "11.",
+        "engano_provavel": "Esqueceu a opção 'nenhum opcional': $2^3 - 1 = 7$, então $7 \\times 2 \\times 7 = 98$ e $\\frac{1\\,000}{98} \\approx 10{,}2$, arredondando para 11."
+      },
+      {
+        "letra": "D",
+        "texto": "18.",
+        "engano_provavel": "Contou os opcionais como 4 escolhas (nenhum, um, dois ou três): $7 \\times 2 \\times 4 = 56$ e $\\frac{1\\,000}{56} \\approx 17{,}9$, arredondando para 18."
+      },
+      {
+        "letra": "E",
+        "texto": "24.",
+        "engano_provavel": "Contou os opcionais como apenas 3 escolhas: $7 \\times 2 \\times 3 = 42$ e $\\frac{1\\,000}{42} \\approx 23{,}8$, arredondando para 24."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Opcionais: cada um dos 3 pode ser incluído ou não, o que dá $2^3 = 8$ possibilidades (incluindo nenhum).\nSem a cor, há $7 \\times 2 \\times 8 = 112$ configurações.\nCom $c$ cores: $112c > 1\\,000 \\Rightarrow c > 8{,}93$.\nO menor inteiro é $c = 9$ ($112 \\times 9 = 1\\,008$).\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H5",
+      "descricao": "Avaliar propostas de intervenção na realidade utilizando conhecimentos numéricos."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "princípio multiplicativo",
+      "subconjuntos",
+      "inequação"
+    ],
+    "dificuldade_tri": 3.33565,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 172",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "86499"
+    }
+  },
+  {
+    "id": "2022-174",
+    "ano": 2022,
+    "numero": 174,
+    "area": "matematica",
+    "enunciado": "Cada número que identifica uma agência bancária tem quatro dígitos: $N_1$, $N_2$, $N_3$, $N_4$ mais um dígito verificador $N_5$.\n\n| $N_1$ | $N_2$ | $N_3$ | $N_4$ | - | $N_5$ |\n|---|---|---|---|---|---|\n\nTodos esses dígitos são números naturais pertencentes ao conjunto $\\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$. Para a determinação de $N_5$, primeiramente multiplica-se ordenadamente os quatro primeiros dígitos do número da agência por 5, 4, 3 e 2, respectivamente, somam-se os resultados e obtém-se $S = 5N_1 + 4N_2 + 3N_3 + 2N_4$.\n\nPosteriormente, encontra-se o resto da divisão de $S$ por 11, denotando por $R$ esse resto. Dessa forma, $N_5$ é a diferença $11 - R$.\n\nConsidere o número de uma agência bancária cujos quatro primeiros dígitos são 0100.\n\nQual é o dígito verificador $N_5$ dessa agência bancária?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "0",
+        "engano_provavel": "Não há um erro de cálculo claro; provavelmente achou que, como 4 é menor que 11, a divisão 'não dá' e tomou o quociente 0 como o dígito verificador."
+      },
+      {
+        "letra": "B",
+        "texto": "6",
+        "engano_provavel": "Colocou o algarismo 1 na posição errada (como se o número fosse 1000), multiplicando-o por 5: $S = 5$, $R = 5$, $N_5 = 11 - 5 = 6$."
+      },
+      {
+        "letra": "C",
+        "texto": "7",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "8",
+        "engano_provavel": "Colocou o algarismo 1 na terceira posição (ou inverteu a ordem dos pesos), multiplicando-o por 3: $S = 3$, $N_5 = 11 - 3 = 8$."
+      },
+      {
+        "letra": "E",
+        "texto": "9",
+        "engano_provavel": "Colocou o algarismo 1 na última posição (como se o número fosse 0001), multiplicando-o por 2: $S = 2$, $N_5 = 11 - 2 = 9$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Os dígitos são $N_1 = 0$, $N_2 = 1$, $N_3 = 0$, $N_4 = 0$.\n$S = 5 \\cdot 0 + 4 \\cdot 1 + 3 \\cdot 0 + 2 \\cdot 0 = 4$.\nO resto da divisão de 4 por 11 é $R = 4$ (o quociente é 0).\n$N_5 = 11 - 4 = 7$. Alternativa C.",
+    "habilidade": {
+      "codigo": "H1",
+      "descricao": "Reconhecer, no contexto social, diferentes significados e representações dos números e operações — naturais, inteiros, racionais ou reais."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "divisão euclidiana",
+      "resto da divisão",
+      "expressões numéricas"
+    ],
+    "dificuldade_tri": 1.92189,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 174",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "75829"
+    }
+  },
+  {
+    "id": "2022-175",
+    "ano": 2022,
+    "numero": 175,
+    "area": "matematica",
+    "enunciado": "Um casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1 : 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esses eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outros móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante.\n\nEsse refrigerador tem altura e largura máximas, em metro, respectivamente, iguais a",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1,80 e 0,60.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "1,80 e 0,70.",
+        "engano_provavel": "Descontou a folga de apenas uma lateral: $80 - 10 = 70$ cm."
+      },
+      {
+        "letra": "C",
+        "texto": "1,90 e 0,80.",
+        "engano_provavel": "Aplicou a escala, mas esqueceu de descontar as folgas: 190 cm e 80 cm."
+      },
+      {
+        "letra": "D",
+        "texto": "2,00 e 0,90.",
+        "engano_provavel": "Somou as folgas em vez de subtrair, e só uma vez na largura: $190 + 10 = 200$ cm e $80 + 10 = 90$ cm."
+      },
+      {
+        "letra": "E",
+        "texto": "2,00 e 1,00.",
+        "engano_provavel": "Somou as folgas em vez de subtrair: $190 + 10 = 200$ cm e $80 + 2 \\times 10 = 100$ cm."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Na escala 1 : 50, cada 1 cm da planta corresponde a 50 cm reais.\nAltura do espaço: $3{,}8 \\times 50 = 190$ cm; largura: $1{,}6 \\times 50 = 80$ cm.\nNa altura, a folga de 10 cm é só na parte superior: $190 - 10 = 180$ cm.\nNa largura, a folga é de 10 cm em cada lateral: $80 - 2 \\times 10 = 60$ cm.\nAltura e largura máximas: 1,80 m e 0,60 m. Alternativa A.",
+    "habilidade": {
+      "codigo": "H11",
+      "descricao": "Utilizar a noção de escalas na leitura de representação de situação do cotidiano."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "escala",
+      "conversão de unidades de comprimento"
+    ],
+    "dificuldade_tri": 2.86025,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 175",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "117973"
+    }
+  },
+  {
+    "id": "2022-176",
+    "ano": 2022,
+    "numero": 176,
+    "area": "matematica",
+    "enunciado": "Foram convidadas 32 equipes para um torneio de futebol, que foram divididas em 8 grupos com 4 equipes, sendo que, dentro de um grupo, cada equipe disputa uma única partida contra cada uma das demais equipes de seu grupo. A primeira e a segunda colocadas de cada grupo seguem para realizar as 8 partidas da próxima fase do torneio, chamada oitavas de final. Os vencedores das partidas das oitavas de final seguem para jogar as 4 partidas das quartas de final. Os vencedores das quartas de final disputam as 2 partidas das semifinais, e os vencedores avançam para a grande final, que define a campeã do torneio.\n\nPelas regras do torneio, cada equipe deve ter um período de descanso de, no mínimo, 3 dias entre dois jogos por ela disputados, ou seja, se um time disputar uma partida, por exemplo, num domingo, só poderá disputar a partida seguinte a partir da quinta-feira da mesma semana.\n\nO número mínimo de dias necessários para a realização desse torneio é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "22.",
+        "engano_provavel": "Contou só 5 intervalos de descanso entre as 7 partidas, em vez de 6: $7 + 5 \\times 3 = 22$."
+      },
+      {
+        "letra": "B",
+        "texto": "25.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "28.",
+        "engano_provavel": "Reservou 4 dias para cada uma das 7 rodadas, incluindo um descanso desnecessário depois da final: $7 \\times 4 = 28$."
+      },
+      {
+        "letra": "D",
+        "texto": "48.",
+        "engano_provavel": "Supôs uma partida por dia e contou só os jogos da fase de grupos: $8 \\times 6 = 48$ dias."
+      },
+      {
+        "letra": "E",
+        "texto": "64.",
+        "engano_provavel": "Provavelmente supôs uma partida por dia no torneio todo ($48 + 8 + 4 + 2 + 1 = 63$ partidas) e chegou perto de 64; não há uma conta exata clara que dê 64."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Na fase de grupos, cada equipe joga 3 partidas; todos os jogos de uma mesma rodada podem acontecer no mesmo dia.\nDepois vêm 4 fases eliminatórias: oitavas, quartas, semifinais e final.\nOs finalistas jogam $3 + 4 = 7$ partidas, em 7 datas diferentes.\nCom 3 dias de descanso, dois jogos seguidos de uma equipe ficam a 4 dias de distância: dias 1, 5, 9, 13, 17, 21 e 25.\nSão 7 dias de jogos e $6 \\times 3 = 18$ dias de descanso: $7 + 18 = 25$ dias.\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H3",
+      "descricao": "Resolver situação-problema envolvendo conhecimentos numéricos."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "raciocínio lógico",
+      "contagem",
+      "sequências"
+    ],
+    "dificuldade_tri": 3.30111,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 176",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "10500"
+    }
+  },
+  {
+    "id": "2022-179",
+    "ano": 2022,
+    "numero": 179,
+    "area": "matematica",
+    "enunciado": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\n\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre $\\frac{1}{2}$.\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$\\frac{35}{64}$",
+        "engano_provavel": "Usou $\\binom{7}{3} = 35$, contando as partidas como se fossem 7 restantes em vez de 6, sobre 64."
+      },
+      {
+        "letra": "B",
+        "texto": "$\\frac{40}{64}$",
+        "engano_provavel": "Não há um erro de cálculo claro que leve a 40; provável estimativa ou erro ao somar as parcelas (por exemplo, trocando 12 por 10 em uma das parcelas 8 + 12 + 12 + 10)."
+      },
+      {
+        "letra": "C",
+        "texto": "$\\frac{42}{64}$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "$\\frac{44}{64}$",
+        "engano_provavel": "Fez o complementar de forma errada, subtraindo só o caso de exatamente 3 vitórias: $1 - \\frac{\\binom{6}{3}}{64} = \\frac{44}{64}$."
+      },
+      {
+        "letra": "E",
+        "texto": "$\\frac{52}{64}$",
+        "engano_provavel": "Somou as probabilidades de fechar em 4, 5, 6 e 7 jogos sem fixar a última vitória no 7º jogo: $\\frac{8 + 12 + 12 + 20}{64} = \\frac{52}{64}$, usando $\\binom{6}{3}$ no lugar de $\\binom{5}{2}$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Supor que as 7 partidas sejam sempre jogadas não muda quem é campeão (quem chega a 4 vitórias primeiro tem a maioria das 7).\nDado que o time A venceu a 1ª partida, restam 6 partidas com $2^6 = 64$ resultados igualmente prováveis.\nA é campeão se vencer pelo menos 3 dessas 6 partidas.\nCasos favoráveis: $\\binom{6}{3} + \\binom{6}{4} + \\binom{6}{5} + \\binom{6}{6} = 20 + 15 + 6 + 1 = 42$.\nProbabilidade: $\\frac{42}{64}$. Alternativa C.",
+    "habilidade": {
+      "codigo": "H28",
+      "descricao": "Resolver situação-problema que envolva conhecimentos de estatística e probabilidade."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "probabilidade",
+      "combinação",
+      "distribuição binomial"
+    ],
+    "dificuldade_tri": 4.65334,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 179",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "86840"
+    }
+  },
+  {
+    "id": "2023-137",
+    "ano": 2023,
+    "numero": 137,
+    "area": "matematica",
+    "enunciado": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R\\$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "4,68",
+        "engano_provavel": "Leu 'cinco centavos' como R\\$ 0,50: $a = 2v + 0,50$, então $5v + 1 = 3,60$, $v = 0,52$ e a cartela custa $9 \\times 0,52 = 4,68$."
+      },
+      {
+        "letra": "B",
+        "texto": "6,30",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "9,30",
+        "engano_provavel": "Considerou uma cartela de cada cor ($a + v = 3,60$) e leu cinco centavos como R\\$ 0,50: $3v + 0,50 = 3,60$, $v \\approx 1,033$, cartela $= 9,30$."
+      },
+      {
+        "letra": "D",
+        "texto": "10,50",
+        "engano_provavel": "Esqueceu o 'preço de um tíquete vermelho' na segunda condição e usou $a - v = 0,05$: $3v + 0,10 = 3,60$, $v \\approx 1,167$, cartela $= 10,50$."
+      },
+      {
+        "letra": "E",
+        "texto": "10,65",
+        "engano_provavel": "Considerou uma cartela de cada cor, $a + v = 3,60$, em vez de duas azuis e uma vermelha: $3v + 0,05 = 3,60$, $v \\approx 1,183$, cartela $= 10,65$."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Sejam $a$ e $v$ os preços de um tíquete azul e de um vermelho. Cada cartela tem 9 tíquetes.\nDuas cartelas azuis e uma vermelha: $18a + 9v = 32,40$, ou seja, $2a + v = 3,60$.\n$a - v = v + 0,05 \\Rightarrow a = 2v + 0,05$.\nSubstituindo: $2(2v + 0,05) + v = 3,60 \\Rightarrow 5v = 3,50 \\Rightarrow v = 0,70$.\nCartela vermelha: $9 \\times 0,70 = 6,30$. Alternativa B.",
+    "habilidade": {
+      "codigo": "H21",
+      "descricao": "Resolver situação-problema cuja modelagem envolva conhecimentos algébricos."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "sistema de equações do 1º grau",
+      "equação do 1º grau"
+    ],
+    "dificuldade_tri": 1.82985,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 137",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "85504"
+    }
+  },
+  {
+    "id": "2023-140",
+    "ano": 2023,
+    "numero": 140,
+    "area": "matematica",
+    "enunciado": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar o atendimento de cada cliente, e o número de pessoas presentes na fila de cada caixa em tempo real. Um cliente, na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquele momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam as informações a seguir.\n\n- Caixa I: atendimento 12 minutos, 5 pessoas na fila.\n- Caixa II: atendimento 6 minutos, 9 pessoas na fila.\n- Caixa III: atendimento 5 minutos, 6 pessoas na fila.\n- Caixa IV: atendimento 15 minutos, 2 pessoas na fila.\n- Caixa V: atendimento 9 minutos, 3 pessoas na fila.\n\nPara alcançar seu objetivo, o cliente deverá escolher o caixa",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "I.",
+        "engano_provavel": "Não há uma conta clara que leve ao caixa I, que tem a maior espera (60 min); provável escolha sem cálculo."
+      },
+      {
+        "letra": "B",
+        "texto": "II.",
+        "engano_provavel": "Dividiu o tempo de atendimento pelo número de pessoas em vez de multiplicar: $6 \\div 9 \\approx 0{,}67$ é o menor quociente."
+      },
+      {
+        "letra": "C",
+        "texto": "III.",
+        "engano_provavel": "Incluiu o próprio atendimento na espera, multiplicando por pessoas + 1 (III: $5 \\times 7 = 35$ contra V: $9 \\times 4 = 36$), ou escolheu só pelo menor tempo de atendimento (5 min)."
+      },
+      {
+        "letra": "D",
+        "texto": "IV.",
+        "engano_provavel": "Escolheu a fila com menos pessoas (2), sem considerar o tempo de cada atendimento: $15 \\times 2 = 30$ min."
+      },
+      {
+        "letra": "E",
+        "texto": "V.",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "Como cada caixa começa um novo atendimento agora, o cliente espera o atendimento de todas as pessoas que estão na fila à frente dele.\nEspera = tempo de atendimento $\\times$ pessoas na fila.\nI: $12 \\times 5 = 60$; II: $6 \\times 9 = 54$; III: $5 \\times 6 = 30$.\nIV: $15 \\times 2 = 30$; V: $9 \\times 3 = 27$ minutos.\nA menor espera é no caixa V (27 min). Alternativa E.",
+    "habilidade": {
+      "codigo": "H17",
+      "descricao": "Analisar informações envolvendo a variação de grandezas como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "multiplicação",
+      "comparação de grandezas"
+    ],
+    "dificuldade_tri": 0.13877,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 140",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "125935"
+    }
+  },
+  {
+    "id": "2023-145",
+    "ano": 2023,
+    "numero": 145,
+    "area": "matematica",
+    "enunciado": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento, e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa R\\$ 500,00 e que o metro cúbico do concreto bombeado é de R\\$ 250,00.\n\nA expressão que representa o preço y em função do volume x, em metro cúbico, é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$y = 250x$",
+        "engano_provavel": "Considerou só a parte variável e esqueceu a taxa fixa de bombeamento."
+      },
+      {
+        "letra": "B",
+        "texto": "$y = 500x$",
+        "engano_provavel": "Usou a taxa de bombeamento como se fosse o preço por metro cúbico e esqueceu a parte fixa."
+      },
+      {
+        "letra": "C",
+        "texto": "$y = 750x$",
+        "engano_provavel": "Somou a taxa fixa com o preço do metro cúbico ($500 + 250 = 750$) e multiplicou tudo pelo volume."
+      },
+      {
+        "letra": "D",
+        "texto": "$y = 250x + 500$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "$y = 500x + 250$",
+        "engano_provavel": "Trocou os papéis: multiplicou a taxa fixa pelo volume e somou o preço do metro cúbico como valor fixo."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "A parte variável é o preço do metro cúbico vezes o volume: $250x$.\nA parte fixa é a taxa de bombeamento: 500.\nPreço total: $y = 250x + 500$.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H19",
+      "descricao": "Identificar representações algébricas que expressem a relação entre grandezas."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "função afim",
+      "modelagem algébrica"
+    ],
+    "dificuldade_tri": 0.86032,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 145",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "27119"
+    }
+  },
+  {
+    "id": "2023-149",
+    "ano": 2023,
+    "numero": 149,
+    "area": "matematica",
+    "enunciado": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020-2021, ele obteve os seguintes dados:\n\n- outubro/2020: ImPC = 250 mm;\n- novembro/2020: ImPC = 150 mm;\n- dezembro/2020: ImPC = 200 mm;\n- janeiro/2021: ImPC = 450 mm;\n- fevereiro/2021: ImPC = 100 mm;\n- março/2021: ImPC = 200 mm.\n\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível.\n\nNo início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "Outubro.",
+        "engano_provavel": "Escolheu o mês de maior chuva antes de janeiro (250 mm) ou o primeiro par, sem comparar as médias: out–nov dá só (250 + 150)/2 = 200."
+      },
+      {
+        "letra": "B",
+        "texto": "Novembro.",
+        "engano_provavel": "Entendeu que os dois meses chuvosos devem vir depois do mês do plantio e plantou em novembro para pegar dezembro e janeiro."
+      },
+      {
+        "letra": "C",
+        "texto": "Dezembro.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "Janeiro.",
+        "engano_provavel": "Escolheu o mês de maior ImPC isolado (450 mm), mas janeiro e fevereiro têm média (450 + 100)/2 = 275, menor que 325."
+      },
+      {
+        "letra": "E",
+        "texto": "Fevereiro.",
+        "engano_provavel": "Não há um erro de cálculo claro que leve a fevereiro; provável escolha do mês logo após o pico de janeiro, como se a chuva acumulada contasse."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Calcular a média de cada par de meses consecutivos.\nOut–Nov: (250 + 150)/2 = 200; Nov–Dez: (150 + 200)/2 = 175; Dez–Jan: (200 + 450)/2 = 325.\nJan–Fev: (450 + 100)/2 = 275; Fev–Mar: (100 + 200)/2 = 150.\nA maior média é a de dezembro e janeiro, então o plantio deve ser no início de dezembro.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H30",
+      "descricao": "Avaliar propostas de intervenção na realidade utilizando conhecimentos de estatística e probabilidade."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "média aritmética",
+      "comparação de dados"
+    ],
+    "dificuldade_tri": 0.74313,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 149",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "125969"
+    }
+  },
+  {
+    "id": "2023-151",
+    "ano": 2023,
+    "numero": 151,
+    "area": "matematica",
+    "enunciado": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\n| Setor | Quantidade de funcionários | Salário (em real) |\n|---|---|---|\n| Produção | 75 | 2 000,00 |\n| Administração | 25 | 7 000,00 |\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "2 000,00.",
+        "engano_provavel": "Tomou a moda (o salário da maioria, da Produção) como se fosse a média: 2 000,00."
+      },
+      {
+        "letra": "B",
+        "texto": "2 500,00.",
+        "engano_provavel": "Não há um caminho de média que leve a 2 500,00; provavelmente calculou metade da diferença entre os salários, $\\frac{7\\,000 - 2\\,000}{2} = 2\\,500$."
+      },
+      {
+        "letra": "C",
+        "texto": "3 250,00.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "4 500,00.",
+        "engano_provavel": "Fez a média simples dos dois salários, sem ponderar pelo número de funcionários: $\\frac{2\\,000 + 7\\,000}{2} = 4\\,500$."
+      },
+      {
+        "letra": "E",
+        "texto": "9 000,00.",
+        "engano_provavel": "Somou os dois salários e esqueceu de dividir: $2\\,000 + 7\\,000 = 9\\,000$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "A média deve ser ponderada pela quantidade de funcionários de cada setor.\nSoma dos salários: $75 \\times 2\\,000 + 25 \\times 7\\,000 = 150\\,000 + 175\\,000 = 325\\,000$.\nMédia: $\\frac{325\\,000}{100} = 3\\,250$.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H27",
+      "descricao": "Calcular medidas de tendência central ou de dispersão de um conjunto de dados expressos em uma tabela de frequências de dados agrupados (não em classes) ou em gráficos."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "média ponderada",
+      "média aritmética"
+    ],
+    "dificuldade_tri": 1.08025,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 151",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "31650"
+    }
+  },
+  {
+    "id": "2023-153",
+    "ano": 2023,
+    "numero": 153,
+    "area": "matematica",
+    "enunciado": "Dirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas.\n\nDisponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\n\nNessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$C = 0{,}9q$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "$C = 0{,}1q$",
+        "engano_provavel": "Usou os 10% que faltam para 100% em vez dos 90%: $C = 0{,}1q$."
+      },
+      {
+        "letra": "C",
+        "texto": "$C = 1 - 0{,}1q$",
+        "engano_provavel": "Pensou em retirar 10% e escreveu o todo como o número 1, sem multiplicar por q: $1 - 0{,}1q$."
+      },
+      {
+        "letra": "D",
+        "texto": "$C = 1 - 0{,}9q$",
+        "engano_provavel": "Tratou os 90% como a parte eliminada e subtraiu do todo, escrito como 1 em vez de q: $1 - 0{,}9q$."
+      },
+      {
+        "letra": "E",
+        "texto": "$C = q - 10$",
+        "engano_provavel": "Tratou a diferença de 10% como subtrair 10 unidades: $q - 10$."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "90% de q significa $\\frac{90}{100} \\cdot q = 0{,}9q$.\nO texto diz que a concentração C corresponde a 90% de q.\nLogo, $C = 0{,}9q$.\nAlternativa A.",
+    "habilidade": {
+      "codigo": "H19",
+      "descricao": "Identificar representações algébricas que expressem a relação entre grandezas."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "porcentagem",
+      "expressão algébrica"
+    ],
+    "dificuldade_tri": 1.45121,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 153",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117706"
+    }
+  },
+  {
+    "id": "2023-156",
+    "ano": 2023,
+    "numero": 156,
+    "area": "matematica",
+    "enunciado": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.\n\nAs probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$\\frac{1}{50}$ e $\\frac{1}{60}$.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "$\\frac{1}{50}$ e $\\frac{1}{50}$.",
+        "engano_provavel": "Supôs 5 dezenas possíveis para qualquer unidade, esquecendo a dezena 0 no caso do 02: $\\frac{1}{10} \\cdot \\frac{1}{5} = \\frac{1}{50}$."
+      },
+      {
+        "letra": "C",
+        "texto": "$\\frac{1}{50}$ e $\\frac{1}{10}$.",
+        "engano_provavel": "Achou que, sorteada a unidade 2, a dezena 0 viria automaticamente, ficando só com $\\frac{1}{10}$ para o 02."
+      },
+      {
+        "letra": "D",
+        "texto": "$\\frac{1}{55}$ e $\\frac{1}{54}$.",
+        "engano_provavel": "Ignorou o processo das urnas e tratou como sorteio direto entre 55 números, e depois sem reposição: $\\frac{1}{55}$ e $\\frac{1}{54}$."
+      },
+      {
+        "letra": "E",
+        "texto": "$\\frac{1}{100}$ e $\\frac{1}{100}$.",
+        "engano_provavel": "Considerou as duas urnas sempre com 10 bolas: $\\frac{1}{10} \\cdot \\frac{1}{10} = \\frac{1}{100}$ para ambos."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Inscrição 50: a unidade 0 sai com probabilidade $\\frac{1}{10}$.\nCom unidade 0, as dezenas possíveis formam 10, 20, 30, 40 e 50 (00 não vale): 5 bolas, logo $\\frac{1}{5}$. Assim, $P(50) = \\frac{1}{10} \\cdot \\frac{1}{5} = \\frac{1}{50}$.\nInscrição 02: a unidade 2 sai com probabilidade $\\frac{1}{10}$.\nCom unidade 2, as dezenas possíveis formam 02, 12, 22, 32, 42 e 52: 6 bolas, logo $\\frac{1}{6}$. Assim, $P(02) = \\frac{1}{10} \\cdot \\frac{1}{6} = \\frac{1}{60}$.\nAlternativa A.",
+    "habilidade": {
+      "codigo": "H28",
+      "descricao": "Resolver situação-problema que envolva conhecimentos de estatística e probabilidade."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "probabilidade",
+      "probabilidade condicional",
+      "princípio multiplicativo"
+    ],
+    "dificuldade_tri": 2.50464,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 156",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "24523"
+    }
+  },
+  {
+    "id": "2023-158",
+    "ano": 2023,
+    "numero": 158,
+    "area": "matematica",
+    "enunciado": "Analisando as vendas de uma empresa, o gerente concluiu que o montante diário arrecadado, em milhar de real, poderia ser calculado pela expressão $V(x) = \\frac{x^2}{4} - 10x + 105$, em que os valores de $x$ representam os dias do mês, variando de 1 a 30.\n\nUm dos fatores para avaliar o desempenho mensal da empresa é verificar qual é o menor montante diário $V_0$ arrecadado ao longo do mês e classificar o desempenho conforme as categorias apresentadas a seguir, em que as quantidades estão expressas em milhar de real.\n\n• Ótimo: $V_0 \\geq 24$\n• Bom: $20 \\leq V_0 < 24$\n• Normal: $10 \\leq V_0 < 20$\n• Ruim: $4 \\leq V_0 < 10$\n• Péssimo: $V_0 < 4$\n\nNo caso analisado, qual seria a classificação do desempenho da empresa?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "Ótimo.",
+        "engano_provavel": "Ignorou o denominador 4 e usou $a = 1$: $x_v = 5$ e $V(5) = 6,25 - 50 + 105 = 61,25$ (ou avaliou só um extremo, como $V(30) = 30$), caindo em Ótimo."
+      },
+      {
+        "letra": "B",
+        "texto": "Bom.",
+        "engano_provavel": "Achou o vértice $x_v = 20$ e usou esse valor (o dia) como se fosse o montante mínimo: $20 \\leq 20 < 24$, Bom."
+      },
+      {
+        "letra": "C",
+        "texto": "Normal.",
+        "engano_provavel": "Não há um erro de cálculo claro; provavelmente avaliou um dia qualquer em vez do vértice, como $V(15) = 56,25 - 150 + 105 = 11,25$."
+      },
+      {
+        "letra": "D",
+        "texto": "Ruim.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "Péssimo.",
+        "engano_provavel": "Calculou o valor mínimo por $\\frac{\\Delta}{4a}$ trocando o sinal: $\\Delta = 100 - 105 = -5$ e obteve $-5$ em vez de $5$, caindo em Péssimo."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "$V(x)$ é quadrática com $a = \\frac{1}{4} > 0$, então o menor valor ocorre no vértice.\n$x_v = -\\frac{b}{2a} = \\frac{10}{2 \\cdot \\frac{1}{4}} = 20$, que está entre 1 e 30.\n$V_0 = V(20) = \\frac{400}{4} - 200 + 105 = 100 - 200 + 105 = 5$.\nComo $4 \\leq 5 < 10$, o desempenho é Ruim. Alternativa D.",
+    "habilidade": {
+      "codigo": "H22",
+      "descricao": "Utilizar conhecimentos algébricos/geométricos como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "função quadrática",
+      "vértice da parábola",
+      "valor mínimo"
+    ],
+    "dificuldade_tri": 2.67185,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 158",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "37441"
+    }
+  },
+  {
+    "id": "2023-160",
+    "ano": 2023,
+    "numero": 160,
+    "area": "matematica",
+    "enunciado": "Um pescador tem um custo fixo diário de R\\$ 900,00 com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por R\\$ 5,00. Sua meta é obter um lucro mínimo de R\\$ 800,00 por dia. Sozinho, ele consegue, ao final de um dia de trabalho, pescar 180 kg de peixe, o que é suficiente apenas para cobrir o custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um R\\$ 250,00 por dia de trabalho. Além desse valor, 4% da receita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 kg e que, a partir do segundo ajudante contratado, aumenta-se em 100 kg a quantidade de peixe pescada por ajudante em um dia de trabalho.\n\nA quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1.",
+        "engano_provavel": "Comparou só a receita com a meta: com 1 ajudante a receita é $5 \\times 300 = 1500$, maior que 800, ignorando os custos."
+      },
+      {
+        "letra": "B",
+        "texto": "2.",
+        "engano_provavel": "Esqueceu as diárias dos ajudantes: com 2 ajudantes, $0{,}96 \\times 2000 - 900 = 1020 \\geq 800$."
+      },
+      {
+        "letra": "C",
+        "texto": "3.",
+        "engano_provavel": "Esqueceu os 4% da receita repartidos entre os ajudantes: com 3 ajudantes, $2500 - 900 - 750 = 850 \\geq 800$."
+      },
+      {
+        "letra": "D",
+        "texto": "4.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "5.",
+        "engano_provavel": "Não há uma conta clara que leve a 5; provável escolha do máximo permitido pelo barco, por insegurança, sem testar 4 ajudantes."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Lucro = receita - custo fixo - diárias - 4% da receita = $0{,}96R - 900 - 250n$, com $R = 5 \\times$ (kg pescados).\nPesca: 300 kg com 1 ajudante e mais 100 kg a cada ajudante a partir do segundo (400, 500, 600, 700 kg).\n$n = 1$: $R = 1500$, lucro $= 1440 - 900 - 250 = 290$.\n$n = 2$: $R = 2000$, lucro $= 1920 - 900 - 500 = 520$.\n$n = 3$: $R = 2500$, lucro $= 2400 - 900 - 750 = 750 < 800$.\n$n = 4$: $R = 3000$, lucro $= 2880 - 900 - 1000 = 980 \\geq 800$.\nSão necessários, no mínimo, 4 ajudantes. Alternativa D.",
+    "habilidade": {
+      "codigo": "H5",
+      "descricao": "Avaliar propostas de intervenção na realidade utilizando conhecimentos numéricos."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "porcentagem",
+      "lucro",
+      "função afim"
+    ],
+    "dificuldade_tri": 2.55621,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 160",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117633"
+    }
+  },
+  {
+    "id": "2023-161",
+    "ano": 2023,
+    "numero": 161,
+    "area": "matematica",
+    "enunciado": "Um agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez.\n\nQuantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "2",
+        "engano_provavel": "Usou o expoente de $10^6$ e dividiu pelo período: $6 \\div 3 = 2$."
+      },
+      {
+        "letra": "B",
+        "texto": "4",
+        "engano_provavel": "Achou o número de multiplicações por 10 ($n = 4$), mas esqueceu que cada uma leva 3 dias."
+      },
+      {
+        "letra": "C",
+        "texto": "6",
+        "engano_provavel": "Tomou o expoente de $10^6$ como número de dias, ignorando as 100 larvas iniciais e o período de 3 dias."
+      },
+      {
+        "letra": "D",
+        "texto": "12",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "18",
+        "engano_provavel": "Ignorou as 100 larvas iniciais e contou 6 multiplicações por 10 a partir de 1 larva: $6 \\times 3 = 18$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "5 litros, a 1 litro para cada 200 000 larvas, servem para exatamente $5 \\times 200\\,000 = 1\\,000\\,000 = 10^6$ larvas.\nPopulação após n períodos de 3 dias: $100 \\cdot 10^n = 10^{2+n}$.\n$10^{2+n} = 10^6 \\Rightarrow n = 4$ períodos.\nTempo: $4 \\times 3 = 12$ dias.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H23",
+      "descricao": "Avaliar propostas de intervenção na realidade utilizando conhecimentos algébricos."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "função exponencial",
+      "potências de 10",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 1.27709,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 161",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "125977"
+    }
+  },
+  {
+    "id": "2023-162",
+    "ano": 2023,
+    "numero": 162,
+    "area": "matematica",
+    "enunciado": "Ao realizar o cadastro em um aplicativo de investimentos, foi solicitado ao usuário que criasse uma senha, sendo permitido o uso somente dos seguintes caracteres:\n\n- algarismos de 0 a 9;\n- 26 letras minúsculas do alfabeto;\n- 26 letras maiúsculas do alfabeto;\n- 6 caracteres especiais !, @, #, \\$, *, &.\n\nTrês tipos de estruturas para senha foram apresentadas ao usuário:\n\n- tipo I: formada por quaisquer quatro caracteres distintos, escolhidos dentre os permitidos;\n- tipo II: formada por cinco caracteres distintos, iniciando por três letras, seguidas por um algarismo e, ao final, um caractere especial;\n- tipo III: formada por seis caracteres distintos, iniciando por duas letras, seguidas por dois algarismos e, ao final, dois caracteres especiais.\n\nConsidere $p_1$, $p_2$ e $p_3$ as probabilidades de se descobrirem ao acaso, na primeira tentativa, as senhas dos tipos I, II e III, respectivamente.\n\nNessas condições, o tipo de senha que apresenta a menor probabilidade de ser descoberta ao acaso, na primeira tentativa, é o",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "tipo I, pois $p_1 < p_2 < p_3$.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "tipo I, pois tem menor quantidade de caracteres.",
+        "engano_provavel": "Acertou o tipo, mas pela razão errada: ter menos caracteres não torna a senha mais difícil; o que importa é o total de senhas, 19 545 240 no tipo I."
+      },
+      {
+        "letra": "C",
+        "texto": "tipo II, pois tem maior quantidade de letras.",
+        "engano_provavel": "Achou que mais letras bastam, sem calcular: o tipo II tem $7\\,956\\,000$ senhas, menos que as $19\\,545\\,240$ do tipo I."
+      },
+      {
+        "letra": "D",
+        "texto": "tipo III, pois $p_3 < p_2 < p_1$.",
+        "engano_provavel": "Supôs que mais caracteres sempre geram mais senhas, sem perceber que as restrições de posição reduzem o tipo III a $7\\,160\\,400$ senhas."
+      },
+      {
+        "letra": "E",
+        "texto": "tipo III, pois tem maior quantidade de caracteres.",
+        "engano_provavel": "Julgou só pelo tamanho da senha (6 caracteres), ignorando que as restrições por posição deixam o tipo III com o menor número de senhas."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Caracteres permitidos: $10 + 26 + 26 + 6 = 68$ (52 letras, 10 algarismos, 6 especiais).\nTipo I: $68 \\cdot 67 \\cdot 66 \\cdot 65 = 19\\,545\\,240$ senhas.\nTipo II: $52 \\cdot 51 \\cdot 50 \\cdot 10 \\cdot 6 = 7\\,956\\,000$ senhas.\nTipo III: $52 \\cdot 51 \\cdot 10 \\cdot 9 \\cdot 6 \\cdot 5 = 7\\,160\\,400$ senhas.\nComo $p = \\frac{1}{N}$, quanto mais senhas, menor a probabilidade: $p_1 < p_2 < p_3$.\nA menor probabilidade é a do tipo I. Alternativa A.",
+    "habilidade": {
+      "codigo": "H29",
+      "descricao": "Utilizar conhecimentos de estatística e probabilidade como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "princípio multiplicativo",
+      "arranjo",
+      "probabilidade"
+    ],
+    "dificuldade_tri": 2.38012,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 162",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "141540"
+    }
+  },
+  {
+    "id": "2023-166",
+    "ano": 2023,
+    "numero": 166,
+    "area": "matematica",
+    "enunciado": "A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador desse vilarejo consome, em média, 200 litros de água por dia.\n\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água durante os 10 dias seguintes. Considere 3 como aproximação para $\\pi$.\n\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "50",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "60",
+        "engano_provavel": "Usou a área lateral em vez da área da base: $2\\pi r h = 2 \\times 3 \\times 5 \\times 1{,}5 = 45$ m³, o que dá $45000 \\div 750 = 60$ L, e respondeu esse consumo como economia."
+      },
+      {
+        "letra": "C",
+        "texto": "80",
+        "engano_provavel": "Não há uma conta clara que leve a 80; provável escolha por estimativa."
+      },
+      {
+        "letra": "D",
+        "texto": "140",
+        "engano_provavel": "Com o erro da área lateral (60 L por dia disponíveis), calculou a economia como $200 - 60 = 140$."
+      },
+      {
+        "letra": "E",
+        "texto": "150",
+        "engano_provavel": "Calculou corretamente o consumo permitido (150 L por dia), mas respondeu esse valor em vez da economia."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Volume de água restante: $V = \\pi r^2 h = 3 \\times 5^2 \\times 1{,}5 = 112{,}5$ m³, ou seja, 112 500 L.\nEsse volume precisa durar 10 dias para 75 moradores: $112500 \\div (75 \\times 10) = 150$ L por morador por dia.\nO consumo normal é de 200 L por dia, então cada morador deve economizar $200 - 150 = 50$ L por dia. Alternativa A.",
+    "habilidade": {
+      "codigo": "H14",
+      "descricao": "Avaliar proposta de intervenção na realidade utilizando conhecimentos geométricos relacionados a grandezas e medidas."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "conversão de unidades de volume",
+      "divisão"
+    ],
+    "dificuldade_tri": 2.42208,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 166",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117634"
+    }
+  },
+  {
+    "id": "2023-171",
+    "ano": 2023,
+    "numero": 171,
+    "area": "matematica",
+    "enunciado": "O gerente de uma fábrica pretende comparar a evolução das vendas de dois produtos similares (I e II). Para isso, passou a verificar o número de unidades vendidas de cada um desses produtos em cada mês. Os resultados dessa verificação, para os meses de abril a junho, são apresentados na tabela.\n\n| Produto | Vendas em abril (unidade) | Vendas em maio (unidade) | Vendas em junho (unidade) |\n|:---:|:---:|:---:|:---:|\n| I | 80 | 90 | 100 |\n| II | 190 | 170 | 150 |\n\nO gerente estava decidido a cessar a produção do produto II no mês seguinte àquele em que as vendas do produto I superassem as do produto II.\n\nSuponha que a variação na quantidade de unidades vendidas dos produtos I e II se manteve, mês a mês, como no período representado na tabela.\n\nEm qual mês o produto II parou de ser produzido?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "Junho.",
+        "engano_provavel": "Não há um erro de cálculo claro que leve a junho; provável escolha do último mês da tabela, sem projetar as vendas."
+      },
+      {
+        "letra": "B",
+        "texto": "Julho.",
+        "engano_provavel": "Usou a variação de abril a junho como se fosse mensal (+20 e −40): em julho I = 120 e II = 110, e ainda esqueceu do 'mês seguinte'."
+      },
+      {
+        "letra": "C",
+        "texto": "Agosto.",
+        "engano_provavel": "Achou corretamente que I supera II em agosto (120 contra 110), mas esqueceu que a produção só para no mês seguinte."
+      },
+      {
+        "letra": "D",
+        "texto": "Setembro.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "Outubro.",
+        "engano_provavel": "Considerou que II também cai 10 por mês (como I sobe 10): I supera II em setembro (130 contra 120) e a produção pararia em outubro."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Variação mensal: produto I aumenta 10 unidades; produto II diminui 20 unidades.\nJulho: I = 110 e II = 130 (I ainda abaixo).\nAgosto: I = 120 e II = 110 (I supera II pela primeira vez).\nA produção de II cessa no mês seguinte a agosto: setembro.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H24",
+      "descricao": "Utilizar informações expressas em gráficos ou tabelas para fazer inferências."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "sequência numérica",
+      "progressão aritmética",
+      "leitura de tabela"
+    ],
+    "dificuldade_tri": 1.75696,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 171",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "141567"
+    }
+  },
+  {
+    "id": "2023-173",
+    "ano": 2023,
+    "numero": 173,
+    "area": "matematica",
+    "enunciado": "Uma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte de seu programa de emagrecimento. Essas atividades são praticadas semanalmente de acordo com o quadro, que apresenta o número de horas diárias por atividade.\n\n| Dias da semana | Caminhar | Correr | Andar de bicicleta | Jogar futebol |\n|---|---|---|---|---|\n| Segunda-feira | 1,0 | 0,5 | 0,0 | 2,0 |\n| Terça-feira | 0,5 | 1,0 | 0,5 | 1,0 |\n| Quarta-feira | 0,0 | 1,5 | 1,0 | 0,5 |\n| Quinta-feira | 0,0 | 2,0 | 0,0 | 0,0 |\n| Sexta-feira | 0,0 | 0,5 | 0,0 | 2,5 |\n\nEla deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades físicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h) são os seguintes:\n\n| Atividade física | Caminhar | Correr | Andar de bicicleta | Jogar futebol |\n|---|---|---|---|---|\n| Gasto calórico (cal/h) | 248 | 764 | 356 | 492 |\n\nO dia da semana em que será comemorado o aniversário é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "segunda-feira.",
+        "engano_provavel": "Escolheu o dia com mais horas de atividade (segunda tem 3,5 h), sem considerar o gasto por hora de cada atividade."
+      },
+      {
+        "letra": "B",
+        "texto": "terça-feira.",
+        "engano_provavel": "Somou os gastos por hora das atividades praticadas no dia sem multiplicar pelas horas: terça tem as quatro, $248 + 764 + 356 + 492 = 1\\,860$."
+      },
+      {
+        "letra": "C",
+        "texto": "quarta-feira.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "quinta-feira.",
+        "engano_provavel": "Escolheu o dia com mais tempo na atividade de maior gasto por hora (correr 2 h na quinta), sem somar as demais atividades."
+      },
+      {
+        "letra": "E",
+        "texto": "sexta-feira.",
+        "engano_provavel": "Escolheu o dia com mais horas de futebol (2,5 h) ou errou uma das contas próximas: sexta dá 1 612, quase igual à segunda."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Gasto do dia = soma de (horas × cal/h) de cada atividade.\nSegunda: $248 + 0,5 \\cdot 764 + 2 \\cdot 492 = 248 + 382 + 984 = 1\\,614$.\nTerça: $124 + 764 + 178 + 492 = 1\\,558$.\nQuarta: $1,5 \\cdot 764 + 356 + 0,5 \\cdot 492 = 1\\,146 + 356 + 246 = 1\\,748$.\nQuinta: $2 \\cdot 764 = 1\\,528$; Sexta: $382 + 2,5 \\cdot 492 = 382 + 1\\,230 = 1\\,612$.\nO maior gasto é na quarta-feira. Alternativa C.",
+    "habilidade": {
+      "codigo": "H26",
+      "descricao": "Analisar informações expressas em gráficos ou tabelas como recurso para a construção de argumentos."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "leitura de tabelas",
+      "multiplicação de decimais",
+      "comparação de valores"
+    ],
+    "dificuldade_tri": 1.16539,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 173",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "81946"
+    }
+  },
+  {
+    "id": "2023-174",
+    "ano": 2023,
+    "numero": 174,
+    "area": "matematica",
+    "enunciado": "A cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. A diretora só pode gastar R\\$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R\\$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\n\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "(5,0 ; 5,5).",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "(8,0 ; 8,5).",
+        "engano_provavel": "Usou as 6 000 folhas do bimestre passado, sem ajustar ao novo número de alunos: $60 \\times 4 = 240$ reais e $\\frac{20}{240} \\approx 8{,}3\\%$."
+      },
+      {
+        "letra": "C",
+        "texto": "(11,5 ; 12,5).",
+        "engano_provavel": "Achou a diferença de 12 reais ($232 - 220$) e a tratou como se fosse 12%."
+      },
+      {
+        "letra": "D",
+        "texto": "(19,5 ; 20,5).",
+        "engano_provavel": "Usou 6 000 folhas (240 reais) e tratou a diferença de 20 reais como se fosse 20%."
+      },
+      {
+        "letra": "E",
+        "texto": "(3,5 ; 4,0).",
+        "engano_provavel": "Arredondou para baixo e comprou 57 embalagens ($57 \\times 4 = 228$ reais), obtendo $\\frac{8}{228} \\approx 3{,}5\\%$, o que deixaria faltar 50 folhas."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "São $6000 \\div 1200 = 5$ folhas por aluno; para 1 150 alunos: $1150 \\times 5 = 5750$ folhas.\nAs folhas vêm em embalagens de 100, então são necessárias 58 embalagens (57 dariam só 5 700 folhas).\nPreço sem desconto: $58 \\times 4 = 232$ reais.\nDesconto necessário: $232 - 220 = 12$ reais, ou seja, $\\frac{12}{232} \\approx 5{,}17\\%$.\nO valor pertence ao intervalo (5,0 ; 5,5). Alternativa A.",
+    "habilidade": {
+      "codigo": "H18",
+      "descricao": "Avaliar propostas de intervenção na realidade envolvendo variação de grandezas."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "proporcionalidade",
+      "porcentagem",
+      "arredondamento"
+    ],
+    "dificuldade_tri": 1.9392,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 174",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "27330"
+    }
+  },
+  {
+    "id": "2023-175",
+    "ano": 2023,
+    "numero": 175,
+    "area": "matematica",
+    "enunciado": "Alguns estudos comprovam que os carboidratos fornecem energia ao corpo, preservam as proteínas estruturais dos músculos durante a prática de atividade física e ainda dão força para o cérebro coordenar os movimentos, o que de fato tem impacto positivo no desenvolvimento do praticante. O ideal é consumir 1 grama de carboidrato para cada minuto de caminhada.\n\nCIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o desempenho do atleta? **Revista Saúde! É Vital**, n. 330, nov. 2010 (adaptado).\n\nUm casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos.\n\nA quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1.",
+        "engano_provavel": "Calculou só o consumo de um dia do casal (60 g), que cabe em 1 pacote, esquecendo os 30 dias."
+      },
+      {
+        "letra": "B",
+        "texto": "4.",
+        "engano_provavel": "Calculou para uma só pessoa: $900 \\div 270 \\approx 3{,}33$, arredondando para 4 pacotes."
+      },
+      {
+        "letra": "C",
+        "texto": "6.",
+        "engano_provavel": "Fez $1\\,800 \\div 270 \\approx 6{,}67$ e arredondou para baixo, o que deixaria o casal sem pão nos últimos dias."
+      },
+      {
+        "letra": "D",
+        "texto": "7.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "8.",
+        "engano_provavel": "Calculou para uma pessoa, arredondou para 4 pacotes e depois dobrou para o casal: $2 \\times 4 = 8$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Cada pessoa precisa de 30 g de carboidrato por dia (1 g por minuto em 30 minutos).\nO casal precisa de $2 \\times 30 = 60$ g por dia.\nEm 30 dias: $60 \\times 30 = 1\\,800$ g.\nCada pacote tem $18 \\times 15 = 270$ g.\n$1\\,800 \\div 270 \\approx 6{,}67$; como 6 pacotes não bastam, são necessários 7.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H16",
+      "descricao": "Resolver situação-problema envolvendo a variação de grandezas, direta ou inversamente proporcionais."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "proporcionalidade",
+      "divisão com arredondamento",
+      "multiplicação"
+    ],
+    "dificuldade_tri": 1.98507,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 175",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "16795"
+    }
+  },
+  {
+    "id": "2023-178",
+    "ano": 2023,
+    "numero": 178,
+    "area": "matematica",
+    "enunciado": "O calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso, e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidências de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab.\n\nDisponível em: www.suapesquisa.com. Acesso em: 20 ago. 2014.\n\nDe acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "741",
+        "engano_provavel": "Inverteu a conversão: $\\frac{1\\,040 \\times 260}{365} \\approx 741$."
+      },
+      {
+        "letra": "B",
+        "texto": "1 040",
+        "engano_provavel": "Parou nos anos Haab, $20 \\times 52 = 1\\,040$, sem converter para anos Tzolkim."
+      },
+      {
+        "letra": "C",
+        "texto": "1 460",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "2 100",
+        "engano_provavel": "Não há um caminho claro; 2 100 coincide com $20 \\times (365 - 260) = 20 \\times 105$, mistura sem sentido das durações."
+      },
+      {
+        "letra": "E",
+        "texto": "5 200",
+        "engano_provavel": "Multiplicou os ciclos pela duração do ano Tzolkim: $20 \\times 260 = 5\\,200$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Período em anos Haab: $20 \\times 52 = 1\\,040$.\nEm dias: $1\\,040 \\times 365 = 379\\,600$ dias.\nEm anos Tzolkim: $\\frac{379\\,600}{260} = 1\\,460$.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H3",
+      "descricao": "Resolver situação-problema envolvendo conhecimentos numéricos."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "conversão de unidades",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 1.53865,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 178",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "84857"
+    }
+  },
+  {
+    "id": "2023-180",
+    "ano": 2023,
+    "numero": 180,
+    "area": "matematica",
+    "enunciado": "Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante.\n\nUm maratonista, visando melhorar sua performance, auxiliado por um médico, mensura o seu consumo de oxigênio por minuto a velocidade constante. Com base nesse consumo e na massa do atleta, o médico calcula o EC do atleta.\n\nA unidade de medida da grandeza descrita pelo parâmetro EC é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$\\frac{\\text{min}}{\\text{mL} \\cdot \\text{kg}}$",
+        "engano_provavel": "Inverteu a razão do consumo, usando minuto por mililitro: $\\frac{\\text{min}/\\text{mL}}{\\text{kg}} = \\frac{\\text{min}}{\\text{mL} \\cdot \\text{kg}}$."
+      },
+      {
+        "letra": "B",
+        "texto": "$\\frac{\\text{mL}}{\\text{min} \\cdot \\text{kg}}$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "$\\frac{\\text{min} \\cdot \\text{mL}}{\\text{kg}}$",
+        "engano_provavel": "Tratou 'mL por minuto' como produto mL · min em vez de quociente, e então dividiu por kg."
+      },
+      {
+        "letra": "D",
+        "texto": "$\\frac{\\text{min} \\cdot \\text{kg}}{\\text{mL}}$",
+        "engano_provavel": "Fez a razão invertida, massa sobre consumo, e ainda tratou 'por minuto' como produto: $\\frac{\\text{kg} \\cdot \\text{min}}{\\text{mL}}$."
+      },
+      {
+        "letra": "E",
+        "texto": "$\\frac{\\text{mL} \\cdot \\text{kg}}{\\text{min}}$",
+        "engano_provavel": "Multiplicou o consumo pela massa em vez de dividir: $\\frac{\\text{mL}}{\\text{min}} \\cdot \\text{kg}$."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "O consumo de oxigênio é medido em mL por minuto: $\\frac{\\text{mL}}{\\text{min}}$.\nEC é esse consumo dividido pela massa em kg: $\\frac{\\text{mL}/\\text{min}}{\\text{kg}}$.\nDividir por kg equivale a multiplicar o denominador: $\\frac{\\text{mL}}{\\text{min} \\cdot \\text{kg}}$.\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H10",
+      "descricao": "Identificar relações entre grandezas e unidades de medida."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "unidades de medida",
+      "razão entre grandezas",
+      "análise dimensional"
+    ],
+    "dificuldade_tri": 2.11188,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2023, 2º dia, caderno 8 (rosa), questão 180",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2023_PV_impresso_D2_CD8.pdf",
+      "item_inep": "125933"
+    }
+  },
+  {
+    "id": "2024-138",
+    "ano": 2024,
+    "numero": 138,
+    "area": "matematica",
+    "enunciado": "O uso de aplicativos de transporte tem sido uma alternativa à população que busca preços mais competitivos para se locomover, principalmente nas grandes cidades. As formas usadas para determinar o valor cobrado por cada viagem variam de um aplicativo para outro, mas, em geral, o valor V a ser pago, em real, varia em função de:\n\n- tarifa base F: valor fixo, em real, cobrado no início da viagem;\n- tempo T: tempo, em minuto, de duração da viagem;\n- distância D: distância percorrida, em quilômetro.\n\nUm desses aplicativos cobra R\\$ 2,00 de valor fixo, acrescido de R\\$ 0,26 por minuto de viagem e de R\\$ 1,40 por quilômetro rodado.\n\nNessas condições, a expressão que fornece o valor V a ser pago por uma viagem desse aplicativo é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$2{,}00F + 0{,}26T + 1{,}40D$",
+        "engano_provavel": "Multiplicou a tarifa fixa pela variável F, sem perceber que 2,00 já é o próprio valor de F."
+      },
+      {
+        "letra": "B",
+        "texto": "$2{,}00 + 0{,}26T + 1{,}40D$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "$2{,}00 + 0{,}26T + D$",
+        "engano_provavel": "Esqueceu de multiplicar a distância pelo preço por quilômetro (1,40)."
+      },
+      {
+        "letra": "D",
+        "texto": "$0{,}26T + 1{,}40D$",
+        "engano_provavel": "Esqueceu de incluir a tarifa fixa de 2,00."
+      },
+      {
+        "letra": "E",
+        "texto": "$F + T + D$",
+        "engano_provavel": "Apenas somou as variáveis, sem usar os preços cobrados pelo aplicativo."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "A tarifa base é um valor fixo conhecido, 2,00, que não multiplica nenhuma variável.\nO custo do tempo é 0,26 por minuto: $0{,}26T$.\nO custo da distância é 1,40 por quilômetro: $1{,}40D$.\nSomando: $V = 2{,}00 + 0{,}26T + 1{,}40D$.\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H19",
+      "descricao": "Identificar representações algébricas que expressem a relação entre grandezas."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "função afim",
+      "modelagem algébrica"
+    ],
+    "dificuldade_tri": 0.91232,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 138",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117618"
+    }
+  },
+  {
+    "id": "2024-140",
+    "ano": 2024,
+    "numero": 140,
+    "area": "matematica",
+    "enunciado": "O arquiteto Renzo Piano exibiu a maquete da nova sede do Museu Whitney de Arte Americana, um prédio assimétrico que tem um vão aberto para a galeria principal, cuja medida da área é 1 672 m².\n\nConsidere que a escala da maquete exibida é 1 : 200.\n\nÉpoca, n. 682, jun. 2011 (adaptado).\n\nA medida da área do vão aberto nessa maquete, em centímetro quadrado, é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "4,18.",
+        "engano_provavel": "Aplicou a escala ao quadrado, mas converteu m² em cm² multiplicando por 100: $\\frac{1\\,672 \\times 100}{40\\,000} = 4{,}18$."
+      },
+      {
+        "letra": "B",
+        "texto": "8,36.",
+        "engano_provavel": "Aplicou só a escala linear e não converteu a unidade: $\\frac{1\\,672}{200} = 8{,}36$."
+      },
+      {
+        "letra": "C",
+        "texto": "41,80.",
+        "engano_provavel": "Aplicou a escala ao quadrado, mas converteu m² em cm² multiplicando por 1 000: $\\frac{1\\,672 \\times 1\\,000}{40\\,000} = 41{,}8$."
+      },
+      {
+        "letra": "D",
+        "texto": "83,60.",
+        "engano_provavel": "Não há uma conta exata clara; provavelmente aplicou só a escala linear ($\\frac{16\\,720\\,000}{200} = 83\\,600$) e se perdeu na vírgula ou na unidade."
+      },
+      {
+        "letra": "E",
+        "texto": "418,00.",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "Escala linear $1 : 200$ implica escala de área $1 : 200^2 = 1 : 40\\,000$.\nÁrea real em cm²: $1\\,672 \\text{ m}^2 = 1\\,672 \\times 10\\,000 = 16\\,720\\,000 \\text{ cm}^2$.\nÁrea na maquete: $\\frac{16\\,720\\,000}{40\\,000} = 418 \\text{ cm}^2$.\nAlternativa E.",
+    "habilidade": {
+      "codigo": "H11",
+      "descricao": "Utilizar a noção de escalas na leitura de representação de situação do cotidiano."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "escala",
+      "razão de áreas",
+      "conversão de unidades"
+    ],
+    "dificuldade_tri": 2.50442,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 140",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "15394"
+    }
+  },
+  {
+    "id": "2024-142",
+    "ano": 2024,
+    "numero": 142,
+    "area": "matematica",
+    "enunciado": "Um instituto de pesquisa constatou que, nos últimos dez anos, o crescimento populacional de uma cidade foi de 135,25%.\n\nQual é a representação decimal da taxa percentual desse crescimento populacional?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "13 525,0",
+        "engano_provavel": "Multiplicou por 100 em vez de dividir: $135,25 \\times 100 = 13\\,525$."
+      },
+      {
+        "letra": "B",
+        "texto": "135,25",
+        "engano_provavel": "Apenas retirou o símbolo %, sem dividir por 100: 135,25."
+      },
+      {
+        "letra": "C",
+        "texto": "13,525",
+        "engano_provavel": "Dividiu por 10 em vez de 100, deslocando a vírgula uma casa só: 13,525."
+      },
+      {
+        "letra": "D",
+        "texto": "1,3525",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "0,13525",
+        "engano_provavel": "Dividiu por 1 000 em vez de 100, deslocando a vírgula três casas: 0,13525."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Porcentagem significa 'por cem': $135,25\\% = \\frac{135,25}{100}$.\nDividir por 100 desloca a vírgula duas casas para a esquerda: 1,3525.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H1",
+      "descricao": "Reconhecer, no contexto social, diferentes significados e representações dos números e operações — naturais, inteiros, racionais ou reais."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "porcentagem",
+      "números decimais"
+    ],
+    "dificuldade_tri": 1.22835,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 142",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "76177"
+    }
+  },
+  {
+    "id": "2024-143",
+    "ano": 2024,
+    "numero": 143,
+    "area": "matematica",
+    "enunciado": "Um fazendeiro pretende construir um galinheiro ocupando uma região plana de formato retangular, com lados de comprimentos $L$ metro e $C$ metro. Os lados serão cercados por telas de tipos diferentes. Nos lados de comprimento $L$ metro, será utilizada uma tela cujo metro linear custa R\\$ 20,00, enquanto, nos outros dois lados, uma que custa R\\$ 15,00. O fazendeiro quer gastar, no máximo, R\\$ 6 000,00 na compra de toda a tela necessária para o galinheiro, e deseja que o galinheiro tenha a maior área possível.\n\nQual será a medida, em metro, do maior lado do galinheiro?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "85",
+        "engano_provavel": "Supôs que a área máxima ocorre com um quadrado: $40L + 30L = 6000 \\Rightarrow L \\approx 85{,}7$, arredondando para 85."
+      },
+      {
+        "letra": "B",
+        "texto": "100",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "175",
+        "engano_provavel": "Somou os dois lados encontrados: $75 + 100 = 175$."
+      },
+      {
+        "letra": "D",
+        "texto": "200",
+        "engano_provavel": "Respondeu o comprimento total da tela de 15 reais ($2 \\times 100 = 200$), ou o valor de $C$ quando $L = 0$, em vez do lado."
+      },
+      {
+        "letra": "E",
+        "texto": "350",
+        "engano_provavel": "Respondeu o perímetro do galinheiro: $2 \\times (75 + 100) = 350$."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Custo da tela: $2L \\times 20 + 2C \\times 15 = 40L + 30C$.\nPara a maior área, usa-se todo o orçamento: $40L + 30C = 6000$, logo $C = 200 - \\frac{4L}{3}$.\nÁrea: $A = L \\cdot C = 200L - \\frac{4L^2}{3}$, uma parábola com concavidade para baixo.\nO máximo ocorre em $L = \\frac{-200}{2 \\cdot (-\\frac{4}{3})} = 75$ m, e então $C = 200 - 100 = 100$ m.\nO maior lado mede 100 m. Alternativa B.",
+    "habilidade": {
+      "codigo": "H22",
+      "descricao": "Utilizar conhecimentos algébricos/geométricos como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "função quadrática",
+      "máximo de função",
+      "área do retângulo"
+    ],
+    "dificuldade_tri": 3.09917,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 143",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117796"
+    }
+  },
+  {
+    "id": "2024-146",
+    "ano": 2024,
+    "numero": 146,
+    "area": "matematica",
+    "enunciado": "Em uma empresa é comercializado um produto em embalagens em formato de cilindro circular reto, com raio medindo 3 cm, e altura medindo 15 cm. Essa empresa planeja comercializar o mesmo produto em embalagens em formato de cubo, com capacidade igual a 80% da capacidade da embalagem cilíndrica utilizada atualmente.\n\nUse 3 como valor aproximado para $\\pi$.\n\nA medida da aresta da nova embalagem, em centímetro, deve ser",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "6",
+        "engano_provavel": "Usou a área lateral do cilindro no lugar do volume ($2\\pi r h = 2 \\cdot 3 \\cdot 3 \\cdot 15 = 270$), tirou 80% (216) e fez $\\sqrt[3]{216} = 6$."
+      },
+      {
+        "letra": "B",
+        "texto": "18",
+        "engano_provavel": "Calculou bem o volume do cubo (324), mas tirou raiz quadrada em vez de cúbica: $\\sqrt{324} = 18$."
+      },
+      {
+        "letra": "C",
+        "texto": "$6\\sqrt{6}$",
+        "engano_provavel": "Usou a área lateral do cilindro (270), tirou 80% (216) e aplicou raiz quadrada: $\\sqrt{216} = 6\\sqrt{6}$."
+      },
+      {
+        "letra": "D",
+        "texto": "$6\\sqrt[3]{6}$",
+        "engano_provavel": "Usou o diâmetro (6 cm) como raio: $3 \\cdot 6^2 \\cdot 15 = 1\\,620$; $0{,}8 \\times 1\\,620 = 1\\,296$ e $\\sqrt[3]{1\\,296} = 6\\sqrt[3]{6}$."
+      },
+      {
+        "letra": "E",
+        "texto": "$3\\sqrt[3]{12}$",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "Volume do cilindro: $V = \\pi r^2 h = 3 \\cdot 3^2 \\cdot 15 = 405$ cm³.\nVolume do cubo: $0{,}8 \\times 405 = 324$ cm³.\nAresta: $a^3 = 324 \\Rightarrow a = \\sqrt[3]{324}$.\nComo $324 = 27 \\times 12$: $a = \\sqrt[3]{27} \\cdot \\sqrt[3]{12} = 3\\sqrt[3]{12}$.\nAlternativa E.",
+    "habilidade": {
+      "codigo": "H14",
+      "descricao": "Avaliar proposta de intervenção na realidade utilizando conhecimentos geométricos relacionados a grandezas e medidas."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "volume do cubo",
+      "porcentagem",
+      "raiz cúbica"
+    ],
+    "dificuldade_tri": 2.03277,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 146",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "84940"
+    }
+  },
+  {
+    "id": "2024-147",
+    "ano": 2024,
+    "numero": 147,
+    "area": "matematica",
+    "enunciado": "Uma criança, utilizando um aplicativo, escreveu uma mensagem para enviar a um amigo. Essa mensagem foi escrita seguindo estas etapas:\n\n| Etapas | Visor de escrita |\n|:---|:---|\n| 1ª etapa: inseriu três figuras do tipo 🙂 no visor de escrita da mensagem; | 🙂🙂🙂 |\n| 2ª etapa: copiou o que havia inserido anteriormente e colou (inseriu o que havia copiado) ao lado; | 🙂🙂🙂🙂🙂🙂 |\n| 3ª etapa: copiou o que tinha no visor na 2ª etapa e colou ao lado. | 🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂 |\n\nA criança seguiu copiando e colando, em cada etapa, o que tinha no visor na etapa imediatamente anterior, até concluir a 20ª etapa. Em seguida, enviou a mensagem.\n\nQual foi o total de figuras contidas na mensagem enviada?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$3 \\times 2^{19}$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "$3 \\times 2^{20}$",
+        "engano_provavel": "Usou o expoente igual ao número da etapa: $3 \\times 2^{20}$, sem perceber que a etapa 1 tem $3 \\times 2^0$."
+      },
+      {
+        "letra": "C",
+        "texto": "$3 \\times 2^{21}$",
+        "engano_provavel": "Errou o expoente em duas unidades, por exemplo contando a etapa 1 como já duplicada: $3 \\times 2^{21}$."
+      },
+      {
+        "letra": "D",
+        "texto": "$3 \\times 2^{20} - 1$",
+        "engano_provavel": "Tentou usar a fórmula da soma da PG e errou: subtraiu só 1 de $3 \\times 2^{20}$."
+      },
+      {
+        "letra": "E",
+        "texto": "$3 \\times 2^{20} - 3$",
+        "engano_provavel": "Somou as figuras de todas as etapas: $3(1 + 2 + \\dots + 2^{19}) = 3(2^{20} - 1) = 3 \\times 2^{20} - 3$, mas a mensagem enviada é só a do visor final."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Etapa 1: 3 figuras; etapa 2: 6; etapa 3: 12. A cada etapa a quantidade dobra.\nNa etapa $n$ há $3 \\times 2^{n-1}$ figuras (progressão geométrica de razão 2).\nNa 20ª etapa: $3 \\times 2^{19}$ figuras.\nAlternativa A.",
+    "habilidade": {
+      "codigo": "H2",
+      "descricao": "Identificar padrões numéricos ou princípios de contagem."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "progressão geométrica",
+      "potenciação"
+    ],
+    "dificuldade_tri": 1.61749,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 147",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "83799"
+    }
+  },
+  {
+    "id": "2024-148",
+    "ano": 2024,
+    "numero": 148,
+    "area": "matematica",
+    "enunciado": "Uma casa de shows terá um evento cujo custo total de produção é de R\\$ 34 350,00, sendo que comporta 500 pessoas. O preço do ingresso será de R\\$ 130,00 e, normalmente, 60% das pessoas adquirem meia-entrada, pagando R\\$ 65,00 pelo ingresso. Além do faturamento proveniente da venda de ingressos, a casa de shows vende, com 60% de lucro, bebidas e petiscos ao público no dia do evento.\n\nApós ter vendido todos os 500 ingressos, constatou-se que a quantidade de meias-entradas vendidas superou em 50% o que estava previsto, impactando o faturamento estimado com a venda de ingressos.\n\nNo dia do evento, decidiu-se manter o percentual de 60% de lucro sobre as bebidas e petiscos, pois todo o público que comprou ingresso compareceu ao show. Com isso, espera-se ter lucro de R\\$ 17 000,00 nesse evento.\n\nPara que se alcance o lucro esperado, o gasto médio por pessoa com bebidas e petiscos, em real, deverá ser de",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "19,50.",
+        "engano_provavel": "Usou a quantidade prevista de meias (300), ignorando o aumento de 50%: lucro com ingressos $45\\,500 - 34\\,350 = 11\\,150$, faltam $5\\,850$ e $g = \\frac{5\\,850}{0,6 \\times 500} = 19,50$."
+      },
+      {
+        "letra": "B",
+        "texto": "28,80.",
+        "engano_provavel": "Não há um erro de cálculo claro que leve a 28,80; provável escolha por estimativa."
+      },
+      {
+        "letra": "C",
+        "texto": "34,00.",
+        "engano_provavel": "Dividiu o lucro desejado pelo público, ignorando o lucro dos ingressos e a margem de 60%: $\\frac{17\\,000}{500} = 34$."
+      },
+      {
+        "letra": "D",
+        "texto": "52,00.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "68,70.",
+        "engano_provavel": "Dividiu o custo de produção pelo público: $\\frac{34\\,350}{500} = 68,70$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Meias previstas: $60\\% \\times 500 = 300$. Vendidas: $300 \\times 1,5 = 450$ meias e $500 - 450 = 50$ inteiras.\nFaturamento com ingressos: $450 \\times 65 + 50 \\times 130 = 29\\,250 + 6\\,500 = 35\\,750$.\nLucro com ingressos: $35\\,750 - 34\\,350 = 1\\,400$.\nLucro que falta vir de bebidas e petiscos: $17\\,000 - 1\\,400 = 15\\,600$.\nCom 60% de lucro sobre o valor vendido e gasto médio $g$ por pessoa: $0,6 \\times 500g = 15\\,600 \\Rightarrow 300g = 15\\,600 \\Rightarrow g = 52$.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H18",
+      "descricao": "Avaliar propostas de intervenção na realidade envolvendo variação de grandezas."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "porcentagem",
+      "lucro",
+      "média"
+    ],
+    "dificuldade_tri": 2.91962,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 148",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117797"
+    }
+  },
+  {
+    "id": "2024-150",
+    "ano": 2024,
+    "numero": 150,
+    "area": "matematica",
+    "enunciado": "O estádio do Maracanã passou por algumas modificações estruturais para a realização da Copa do Mundo de 2014, como, por exemplo, as dimensões do campo retangular. Para se adaptar aos padrões da Fifa, as dimensões do campo foram reduzidas de 110 m × 75 m para 105 m × 68 m.\n\nDisponível em: http://virgula.uol.com.br. Acesso em: 14 ago. 2013 (adaptado).\n\nEm quantos metros quadrados a área do campo do Maracanã foi reduzida?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "24",
+        "engano_provavel": "Calculou a redução do perímetro em vez da área: $2 \\times (5 + 7) = 24$."
+      },
+      {
+        "letra": "B",
+        "texto": "35",
+        "engano_provavel": "Multiplicou só as reduções de cada dimensão: $5 \\times 7 = 35$."
+      },
+      {
+        "letra": "C",
+        "texto": "555",
+        "engano_provavel": "Não há uma conta clara que leve a 555; provavelmente dividiu a diferença correta por 2 em algum passo."
+      },
+      {
+        "letra": "D",
+        "texto": "1 110",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "1 145",
+        "engano_provavel": "Somou as faixas retiradas contando o canto duas vezes: $5 \\times 75 + 7 \\times 110 = 375 + 770 = 1145$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Área antiga: $110 \\times 75 = 8250$ m².\nÁrea nova: $105 \\times 68 = 7140$ m².\nRedução: $8250 - 7140 = 1110$ m². Alternativa D.",
+    "habilidade": {
+      "codigo": "H8",
+      "descricao": "Resolver situação-problema que envolva conhecimentos geométricos de espaço e forma."
+    },
+    "competencia": {
+      "codigo": "C2",
+      "descricao": "Utilizar o conhecimento geométrico para realizar a leitura e a representação da realidade e agir sobre ela."
+    },
+    "conceitos": [
+      "área do retângulo",
+      "subtração"
+    ],
+    "dificuldade_tri": 1.13019,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 150",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "55423"
+    }
+  },
+  {
+    "id": "2024-152",
+    "ano": 2024,
+    "numero": 152,
+    "area": "matematica",
+    "enunciado": "João e Felipe participaram, na escola, de uma maratona de matemática na qual, durante uma semana, resolveram 200 questões cada. Nessa maratona, a porcentagem $P$ de acertos de cada participante é convertida em um conceito:\n\n- insatisfatório: se $0 \\leq P < 50$;\n- regular: se $50 \\leq P < 60$;\n- bom: se $60 \\leq P < 75$;\n- muito bom: se $75 \\leq P < 90$;\n- excelente: se $90 \\leq P \\leq 100$.\n\nJoão acertou 75% das questões da maratona e Felipe acertou 30% a menos que a quantidade de questões que João acertou.\n\nOs conceitos de João e Felipe foram, respectivamente,",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "muito bom e bom.",
+        "engano_provavel": "Usou como porcentagem de Felipe a razão em relação aos acertos de João: $\\frac{105}{150} = 70\\%$, que daria bom."
+      },
+      {
+        "letra": "B",
+        "texto": "muito bom e regular.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "muito bom e insatisfatório.",
+        "engano_provavel": "Subtraiu os percentuais diretamente: $75\\% - 30\\% = 45\\%$, que daria insatisfatório."
+      },
+      {
+        "letra": "D",
+        "texto": "bom e regular.",
+        "engano_provavel": "Classificou $P = 75$ como bom, esquecendo que o limite 75 pertence a muito bom ($75 \\leq P < 90$)."
+      },
+      {
+        "letra": "E",
+        "texto": "bom e insatisfatório.",
+        "engano_provavel": "Errou o limite de João (75 como bom) e ainda subtraiu os percentuais: $75 - 30 = 45\\%$, insatisfatório."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "João: $P = 75$, e $75 \\leq P < 90$ dá muito bom ($0{,}75 \\times 200 = 150$ acertos).\nFelipe acertou 30% a menos que 150: $150 \\times 0{,}70 = 105$ acertos.\nPorcentagem de Felipe: $\\frac{105}{200} = 52{,}5\\%$, e $50 \\leq P < 60$ dá regular.\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H4",
+      "descricao": "Avaliar a razoabilidade de um resultado numérico na construção de argumentos sobre afirmações quantitativas."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "porcentagem",
+      "desigualdades"
+    ],
+    "dificuldade_tri": 1.60614,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 152",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "35949"
+    }
+  },
+  {
+    "id": "2024-159",
+    "ano": 2024,
+    "numero": 159,
+    "area": "matematica",
+    "enunciado": "Uma piscina tem capacidade de 2 500 000 litros. Seu sistema de abastecimento foi regulado para ter uma vazão constante de 6 000 litros de água por minuto.\n\nO mesmo sistema foi instalado em uma segunda piscina, com capacidade de 2 750 000 litros, e regulado para ter uma vazão, também constante, capaz de enchê-la em um tempo 20% maior que o gasto para encher a primeira piscina.\n\nA vazão do sistema de abastecimento da segunda piscina, em litro por minuto, é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "8 250.",
+        "engano_provavel": "Ajustou pela capacidade ($6\\,000 \\times 1{,}1 = 6\\,600$) e, em vez de dividir por 1,2, dividiu por 0,8: $6\\,600 \\div 0{,}8 = 8\\,250$."
+      },
+      {
+        "letra": "B",
+        "texto": "7 920.",
+        "engano_provavel": "Ajustou pela capacidade e multiplicou por 1,2 em vez de dividir, como se mais tempo exigisse mais vazão: $6\\,600 \\times 1{,}2 = 7\\,920$."
+      },
+      {
+        "letra": "C",
+        "texto": "6 545.",
+        "engano_provavel": "Inverteu as duas razões: $6\\,000 \\times \\frac{1{,}2}{1{,}1} \\approx 6\\,545$."
+      },
+      {
+        "letra": "D",
+        "texto": "5 500.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "5 280.",
+        "engano_provavel": "Ajustou pela capacidade e tratou o tempo 20% maior como vazão 20% menor: $6\\,600 \\times 0{,}8 = 5\\,280$."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Tempo para encher a 1ª piscina: $t_1 = \\frac{2\\,500\\,000}{6\\,000} = \\frac{1\\,250}{3}$ min (cerca de 416,7 min).\nTempo da 2ª: $t_2 = 1{,}2 \\cdot t_1 = 500$ min.\nVazão da 2ª: $\\frac{2\\,750\\,000}{500} = 5\\,500$ L/min.\nConferindo pelas razões: $6\\,000 \\times \\frac{1{,}1}{1{,}2} = 5\\,500$.\nAlternativa D.",
+    "habilidade": {
+      "codigo": "H16",
+      "descricao": "Resolver situação-problema envolvendo a variação de grandezas, direta ou inversamente proporcionais."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "vazão",
+      "grandezas inversamente proporcionais",
+      "porcentagem"
+    ],
+    "dificuldade_tri": 1.84456,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 159",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117712"
+    }
+  },
+  {
+    "id": "2024-160",
+    "ano": 2024,
+    "numero": 160,
+    "area": "matematica",
+    "enunciado": "Uma tubulação despeja sempre o mesmo volume de água por unidade de tempo em uma caixa-d’água, o que significa dizer que a vazão de água nessa tubulação é constante. Na junção dessa tubulação com a caixa-d’água, está instalada uma membrana de filtragem cujo objetivo é filtrar eventuais impurezas presentes na água, combinado a um bom fluxo de água. O fluxo ($\\phi$) de água através da superfície da membrana é diretamente proporcional à vazão de água na tubulação, medida em mililitro por segundo, e inversamente proporcional à área da superfície da membrana, medida em centímetro quadrado.\n\nA unidade de medida adequada para descrever o fluxo ($\\phi$) de água que atravessa a superfície da membrana é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$\\text{mL} \\cdot \\text{s} \\cdot \\text{cm}^2$",
+        "engano_provavel": "Multiplicou todas as unidades, tratando a vazão como $\\text{mL} \\cdot \\text{s}$ e a área como fator direto."
+      },
+      {
+        "letra": "B",
+        "texto": "$\\frac{\\text{mL}}{\\text{s}} \\cdot \\text{cm}^2$",
+        "engano_provavel": "Tratou a área como diretamente proporcional: $\\frac{\\text{mL}}{\\text{s}} \\cdot \\text{cm}^2$."
+      },
+      {
+        "letra": "C",
+        "texto": "$\\frac{\\text{mL}}{\\text{cm}^2 \\cdot \\text{s}}$",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "$\\frac{\\text{cm}^2 \\cdot \\text{s}}{\\text{mL}}$",
+        "engano_provavel": "Inverteu a razão inteira, como se o fluxo fosse inversamente proporcional à vazão e diretamente à área: $\\frac{\\text{cm}^2 \\cdot \\text{s}}{\\text{mL}}$."
+      },
+      {
+        "letra": "E",
+        "texto": "$\\frac{\\text{cm}^2}{\\text{mL} \\cdot \\text{s}}$",
+        "engano_provavel": "Escreveu a vazão como $\\text{mL} \\cdot \\text{s}$ e ainda inverteu as proporcionalidades: $\\frac{\\text{cm}^2}{\\text{mL} \\cdot \\text{s}}$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Diretamente proporcional à vazão e inversamente à área: $\\phi = k \\cdot \\frac{\\text{vazão}}{\\text{área}}$.\nVazão em $\\frac{\\text{mL}}{\\text{s}}$ e área em $\\text{cm}^2$.\nUnidade: $\\frac{\\text{mL}/\\text{s}}{\\text{cm}^2} = \\frac{\\text{mL}}{\\text{cm}^2 \\cdot \\text{s}}$.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H10",
+      "descricao": "Identificar relações entre grandezas e unidades de medida."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "grandezas proporcionais",
+      "unidades de medida",
+      "análise dimensional"
+    ],
+    "dificuldade_tri": 1.78408,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 160",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117747"
+    }
+  },
+  {
+    "id": "2024-161",
+    "ano": 2024,
+    "numero": 161,
+    "area": "matematica",
+    "enunciado": "Uma empresa produz mochilas escolares sob encomenda. Essa empresa tem um custo total de produção, composto por um custo fixo, que não depende do número de mochilas, mais um custo variável, que é proporcional ao número de mochilas produzidas. O custo total cresce de forma linear, e a tabela apresenta esse custo para três quantidades de mochilas produzidas.\n\n| Quantidade de mochilas | 30 | 50 | 100 |\n|---|---|---|---|\n| Custo total (R\\$) | 1 050,00 | 1 650,00 | 3 150,00 |\n\nO custo total, em real, para a produção de 80 mochilas será",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "2 400,00.",
+        "engano_provavel": "Calculou só o custo variável e esqueceu o custo fixo: $30 \\times 80 = 2\\,400$."
+      },
+      {
+        "letra": "B",
+        "texto": "2 520,00.",
+        "engano_provavel": "Tratou o custo como proporcional à quantidade, a partir de 100 mochilas: $3\\,150 \\times \\frac{80}{100} = 2\\,520$."
+      },
+      {
+        "letra": "C",
+        "texto": "2 550,00.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "2 700,00.",
+        "engano_provavel": "Somou os custos de 30 e 50 mochilas porque $30 + 50 = 80$: $1\\,050 + 1\\,650 = 2\\,700$ (contou o custo fixo duas vezes)."
+      },
+      {
+        "letra": "E",
+        "texto": "2 800,00.",
+        "engano_provavel": "Tratou o custo como proporcional à quantidade, a partir de 30 mochilas: $1\\,050 \\times \\frac{80}{30} = 2\\,800$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "O custo é $C(x) = ax + b$. Taxa de variação: $a = \\frac{1\\,650 - 1\\,050}{50 - 30} = \\frac{600}{20} = 30$ reais por mochila.\nCusto fixo: $b = 1\\,050 - 30 \\times 30 = 150$ (confere: $30 \\times 100 + 150 = 3\\,150$).\n$C(80) = 30 \\times 80 + 150 = 2\\,400 + 150 = 2\\,550$.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H25",
+      "descricao": "Resolver problema com dados apresentados em tabelas ou gráficos."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "função afim",
+      "taxa de variação",
+      "custo fixo e variável"
+    ],
+    "dificuldade_tri": 1.73917,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 161",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "12877"
+    }
+  },
+  {
+    "id": "2024-163",
+    "ano": 2024,
+    "numero": 163,
+    "area": "matematica",
+    "enunciado": "Uma empresa de engenharia foi contratada para realizar um serviço no valor de R\\$ 71 250,00. Os sócios da empresa decidiram que 40% desse valor seria destinado ao pagamento de três engenheiros que gerenciaram o serviço. O pagamento para cada um deles será feito de forma diretamente proporcional ao total de horas trabalhadas. O número de dias e o número de horas diárias trabalhadas pelos engenheiros foram, respectivamente:\n\n- engenheiro I: 4 dias, numa jornada de 5 horas e meia por dia;\n- engenheiro II: 5 dias, numa jornada de 4 horas por dia;\n- engenheiro III: 6 dias, numa jornada de 2 horas e meia por dia.\n\nQual a maior diferença, em real, entre os valores recebidos por esse serviço entre dois desses engenheiros?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1 000",
+        "engano_provavel": "Calculou a diferença entre os engenheiros I e II, que não é a maior: $(22 - 20) \\times 500 = 1\\,000$."
+      },
+      {
+        "letra": "B",
+        "texto": "1 500",
+        "engano_provavel": "Multiplicou só a diferença entre as jornadas diárias pelo valor da hora, esquecendo os dias: $(5{,}5 - 2{,}5) \\times 500 = 1\\,500$."
+      },
+      {
+        "letra": "C",
+        "texto": "3 500",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "3 800",
+        "engano_provavel": "Dividiu o pagamento proporcionalmente aos dias, e não às horas: $28\\,500 \\div 15 = 1\\,900$ por dia e $(6 - 4) \\times 1\\,900 = 3\\,800$."
+      },
+      {
+        "letra": "E",
+        "texto": "5 250",
+        "engano_provavel": "Usou 60% do valor em vez de 40%: $42\\,750 \\div 57 = 750$ por hora e $7 \\times 750 = 5\\,250$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Valor destinado aos engenheiros: $0{,}40 \\times 71\\,250 = 28\\,500$.\nHoras: I: $4 \\times 5{,}5 = 22$; II: $5 \\times 4 = 20$; III: $6 \\times 2{,}5 = 15$; total de 57 h.\nValor por hora: $28\\,500 \\div 57 = 500$.\nA maior diferença é entre I e III: $(22 - 15) \\times 500 = 3\\,500$.\nAlternativa C.",
+    "habilidade": {
+      "codigo": "H16",
+      "descricao": "Resolver situação-problema envolvendo a variação de grandezas, direta ou inversamente proporcionais."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "divisão proporcional",
+      "porcentagem",
+      "proporcionalidade"
+    ],
+    "dificuldade_tri": 2.06903,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 163",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "117774"
+    }
+  },
+  {
+    "id": "2024-172",
+    "ano": 2024,
+    "numero": 172,
+    "area": "matematica",
+    "enunciado": "Em uma região com grande incidência de terremotos, observou-se que dois terremotos ocorridos apresentaram magnitudes $M_1$ e $M_2$, medidos segundo a escala Richter, e liberaram energias iguais a $E_1$ e $E_2$, respectivamente. Entre os estudiosos do assunto, é conhecida uma expressão algébrica relacionando esses valores dada por\n\n$M_2 - M_1 = \\frac{2}{3} \\log\\left(\\frac{E_2}{E_1}\\right)$\n\nEstudos mais abrangentes observaram que o primeiro terremoto apresentou a magnitude $M_1 = 6{,}9$ e a energia liberada foi um décimo da observada no segundo terremoto.\n\nO valor aproximado da magnitude $M_2$ do segundo terremoto, expresso com uma casa decimal, é igual a",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "5,4.",
+        "engano_provavel": "Inverteu a fração para $\\frac{3}{2}$ e também a razão das energias ($\\log 0{,}1 = -1$): $6{,}9 - 1{,}5 = 5{,}4$."
+      },
+      {
+        "letra": "B",
+        "texto": "6,2.",
+        "engano_provavel": "Inverteu a razão das energias, usando $\\frac{E_2}{E_1} = \\frac{1}{10}$: $6{,}9 - \\frac{2}{3} \\approx 6{,}2$."
+      },
+      {
+        "letra": "C",
+        "texto": "7,6.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "8,2.",
+        "engano_provavel": "Não há uma conta clara que leve a 8,2; uma possibilidade é usar razão 100 ($\\log 100 = 2$): $6{,}9 + \\frac{4}{3} \\approx 8{,}2$."
+      },
+      {
+        "letra": "E",
+        "texto": "8,4.",
+        "engano_provavel": "Usou $\\frac{3}{2}$ no lugar de $\\frac{2}{3}$: $6{,}9 + 1{,}5 = 8{,}4$."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "A energia do primeiro é um décimo da do segundo: $E_1 = \\frac{E_2}{10}$, logo $\\frac{E_2}{E_1} = 10$.\n$\\log 10 = 1$, então $M_2 - 6{,}9 = \\frac{2}{3} \\approx 0{,}67$.\n$M_2 \\approx 6{,}9 + 0{,}67 = 7{,}57 \\approx 7{,}6$. Alternativa C.",
+    "habilidade": {
+      "codigo": "H21",
+      "descricao": "Resolver situação-problema cuja modelagem envolva conhecimentos algébricos."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "logaritmo",
+      "substituição em fórmula"
+    ],
+    "dificuldade_tri": 2.29438,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 172",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "96636"
+    }
+  },
+  {
+    "id": "2024-177",
+    "ano": 2024,
+    "numero": 177,
+    "area": "matematica",
+    "enunciado": "Uma imobiliária iniciou uma campanha de divulgação para promover a venda de apartamentos que podem ser pagos em 100 parcelas mensais. O valor da primeira delas é fixado no momento da compra, com o pagamento dessa primeira parcela. A partir da segunda parcela, o valor é determinado pela aplicação de um acréscimo percentual fixo ao valor da parcela anterior. Como atrativo, a imobiliária fará o pagamento de todas as parcelas correspondentes ao mês de aniversário do comprador.\n\nUm cliente, que faz aniversário no mês de maio, decidiu comprar um desses apartamentos por meio do financiamento oferecido pela imobiliária, e pretende escolher o mês mais adequado para realizar essa compra, de modo que o valor total dos pagamentos seja o menor possível.\n\nQual é o mês que esse cliente deverá escolher para realizar a compra do apartamento?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "Fevereiro.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "Abril.",
+        "engano_provavel": "Garantiu 9 parcelas de maio, mas não percebeu que, comprando em abril, maio é só a 2ª parcela e as parcelas pagas pela imobiliária ficam menores do que comprando em fevereiro."
+      },
+      {
+        "letra": "C",
+        "texto": "Maio.",
+        "engano_provavel": "Achou vantajoso ganhar já a primeira parcela, mas, comprando em maio, as parcelas pagas pela imobiliária (1, 13, ..., 97) são as mais baratas de cada ano."
+      },
+      {
+        "letra": "D",
+        "texto": "Junho.",
+        "engano_provavel": "Quis que maio fosse o último mês de cada ciclo anual (parcelas 12, 24, ..., 96, as mais caras dentro de cada ano), mas esqueceu que assim só 8 parcelas caem em maio e a parcela 100 não é paga."
+      },
+      {
+        "letra": "E",
+        "texto": "Agosto.",
+        "engano_provavel": "Contou que a parcela 100 cai 3 meses depois do mês da compra em um ciclo de 12 meses ($99 = 8 \\cdot 12 + 3$) e andou 3 meses para frente a partir de maio em vez de para trás."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "As parcelas crescem (progressão geométrica de razão $q > 1$), então o cliente quer que a imobiliária pague o maior número possível de parcelas de maio e, de preferência, as mais caras.\n100 parcelas = 8 anos e 4 meses. Os 4 primeiros meses a partir da compra aparecem 9 vezes; os outros, 8 vezes.\nPara maio aparecer 9 vezes, a compra deve ser em fevereiro, março, abril ou maio. Comprando em fevereiro, maio é a 4ª parcela e as de maio são as parcelas 4, 16, ..., 100, incluindo a última e mais cara.\nEm junho, maio seria a 12ª parcela, mas só 8 parcelas de maio (12, 24, ..., 96) e sem a parcela 100; comparando, a soma $q^3(1 + q^{12} + \\dots + q^{96})$ de fevereiro supera $q^{11}(1 + q^{12} + \\dots + q^{84})$ de junho, pois o termo extra $q^{99}$ compensa.\nO cliente deve comprar em fevereiro. Alternativa A.",
+    "habilidade": {
+      "codigo": "H5",
+      "descricao": "Avaliar propostas de intervenção na realidade utilizando conhecimentos numéricos."
+    },
+    "competencia": {
+      "codigo": "C1",
+      "descricao": "Construir significados para os números naturais, inteiros, racionais e reais."
+    },
+    "conceitos": [
+      "progressão geométrica",
+      "contagem de meses",
+      "otimização"
+    ],
+    "dificuldade_tri": 2.60757,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2024, 2º dia, caderno 8 (verde), questão 177",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2024_PV_impresso_D2_CD8.pdf",
+      "item_inep": "125992"
+    }
+  }
+]

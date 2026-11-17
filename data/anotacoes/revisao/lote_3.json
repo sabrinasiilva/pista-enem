@@ -1,0 +1,468 @@
+[
+  {
+    "id": "2022-141",
+    "enunciado": "Uma cozinheira produz docinhos especiais por encomenda. Usando uma receita-base de massa, ela prepara uma porção, com a qual produz 50 docinhos maciços de formato esférico, com 2 cm de diâmetro. Um cliente encomenda 150 desses docinhos, mas pede que cada um tenha formato esférico com 4 cm de diâmetro. A cozinheira pretende preparar o número exato de porções da receita-base de massa necessário para produzir os docinhos dessa encomenda.\n\nQuantas porções da receita-base de massa ela deve preparar para atender esse cliente?",
+    "alternativas": {
+      "A": "2",
+      "B": "3",
+      "C": "6",
+      "D": "12",
+      "E": "24"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "O volume da esfera é proporcional ao cubo do raio ($V = \\frac{4}{3}\\pi r^3$), logo ao cubo do diâmetro.\nDobrar o diâmetro (de 2 cm para 4 cm) multiplica o volume por $2^3 = 8$.\nCada docinho grande usa a massa de 8 docinhos pequenos.\n150 docinhos grandes equivalem a $150 \\times 8 = 1200$ docinhos pequenos.\nComo uma porção rende 50 docinhos pequenos: $1200 \\div 50 = 24$ porções.\nAlternativa E.",
+    "enganos": {
+      "A": "Considerou só a razão entre os diâmetros ($4 \\div 2 = 2$), ignorando a quantidade de docinhos e o fato de o volume crescer com o cubo.",
+      "B": "Considerou só a quantidade de docinhos ($150 \\div 50 = 3$), sem levar em conta que cada docinho maior usa mais massa.",
+      "C": "Supôs que a massa cresce na mesma proporção do diâmetro: $3 \\times 2 = 6$.",
+      "D": "Supôs que a massa cresce com o quadrado do diâmetro, como se fosse área: $3 \\times 2^2 = 12$."
+    },
+    "conceitos": [
+      "volume da esfera",
+      "razão entre volumes de sólidos semelhantes",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2022-145",
+    "enunciado": "Peças metálicas de aeronaves abandonadas em aeroportos serão recicladas. Uma dessas peças é maciça e tem o formato cilíndrico, com a medida do raio da base igual a 4 cm e a da altura igual a 50 cm. Ela será derretida, e o volume de metal resultante será utilizado para a fabricação de esferas maciças com diâmetro de 1 cm, a serem usadas para confeccionar rolamentos. Para estimar a quantidade de esferas que poderão ser produzidas a partir de cada uma das peças cilíndricas, admite-se que não ocorre perda de material durante o processo de derretimento.\n\nQuantas dessas esferas poderão ser obtidas a partir de cada peça cilíndrica?",
+    "alternativas": {
+      "A": "800",
+      "B": "1 200",
+      "C": "2 400",
+      "D": "4 800",
+      "E": "6 400"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "Volume do cilindro: $V_c = \\pi r^2 h = \\pi \\cdot 4^2 \\cdot 50 = 800\\pi$ cm³.\nA esfera tem diâmetro 1 cm, logo raio $0{,}5$ cm.\nVolume de cada esfera: $V_e = \\frac{4}{3}\\pi (0{,}5)^3 = \\frac{4}{3}\\pi \\cdot \\frac{1}{8} = \\frac{\\pi}{6}$ cm³.\nNúmero de esferas: $800\\pi \\div \\frac{\\pi}{6} = 800 \\times 6 = 4800$.\nAlternativa D.",
+    "enganos": {
+      "A": "Usou a área da superfície da esfera no lugar do volume: $4\\pi (0{,}5)^2 = \\pi$, e $800\\pi \\div \\pi = 800$.",
+      "B": "Esqueceu o expoente do raio no volume da esfera: $\\frac{4}{3}\\pi \\cdot 0{,}5 = \\frac{2\\pi}{3}$, e $800\\pi \\div \\frac{2\\pi}{3} = 1200$.",
+      "C": "Elevou o raio ao quadrado em vez de ao cubo: $\\frac{4}{3}\\pi (0{,}5)^2 = \\frac{\\pi}{3}$, e $800\\pi \\div \\frac{\\pi}{3} = 2400$.",
+      "E": "Esqueceu o fator $\\frac{4}{3}$ no volume da esfera: $\\pi (0{,}5)^3 = \\frac{\\pi}{8}$, e $800\\pi \\div \\frac{\\pi}{8} = 6400$."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "volume da esfera",
+      "conservação de volume"
+    ]
+  },
+  {
+    "id": "2022-151",
+    "enunciado": "Definem-se o dia e o ano de um planeta de um sistema solar como sendo, respectivamente, o tempo que o planeta leva para dar 1 volta completa em torno de seu próprio eixo de rotação e o tempo para dar 1 volta completa em torno de seu Sol.\n\nSuponha que exista um planeta Z, em algum sistema solar, onde um dia corresponda a 73 dias terrestres e que 2 de seus anos correspondam a 1 ano terrestre. Considere que 1 ano terrestre tem 365 de seus dias.\n\nNo planeta Z, seu ano corresponderia a quantos de seus dias?",
+    "alternativas": {
+      "A": "2,5",
+      "B": "10,0",
+      "C": "730,0",
+      "D": "13 322,5",
+      "E": "53 290,0"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "2 anos de Z equivalem a 1 ano terrestre, então 1 ano de Z dura $365 \\div 2 = 182{,}5$ dias terrestres.\n1 dia de Z dura 73 dias terrestres.\nAno de Z medido em dias de Z: $182{,}5 \\div 73 = 2{,}5$.\nAlternativa A.",
+    "enganos": {
+      "B": "Inverteu a relação entre os anos (1 ano de Z = 2 anos terrestres) e depois converteu: $730 \\div 73 = 10$.",
+      "C": "Inverteu a relação entre os anos e não converteu para dias de Z: $365 \\times 2 = 730$.",
+      "D": "Multiplicou pela duração do dia de Z em vez de dividir: $182{,}5 \\times 73 = 13\\,322{,}5$.",
+      "E": "Inverteu a relação entre os anos e ainda multiplicou pela duração do dia: $730 \\times 73 = 53\\,290$."
+    },
+    "conceitos": [
+      "conversão de unidades",
+      "razão",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2022-161",
+    "enunciado": "Uma empresa produz e vende um tipo de chocolate, maciço, em formato de cone circular reto com as medidas do diâmetro da base e da altura iguais a 8 cm e 10 cm, respectivamente, como apresenta a figura.\n\nDevido a um aumento de preço dos ingredientes utilizados na produção desse chocolate, a empresa decide produzir esse mesmo tipo de chocolate com um volume 19% menor, no mesmo formato de cone circular reto com altura de 10 cm.\n\nPara isso, a empresa produzirá esses novos chocolates com medida do raio da base, em centímetro, igual a",
+    "alternativas": {
+      "A": "1,52.",
+      "B": "3,24.",
+      "C": "3,60.",
+      "D": "6,48.",
+      "E": "7,20."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O original tem uma figura do cone com diâmetro 8 cm e altura 10 cm; os dados já estão no texto.",
+    "gabarito_calculado": "C",
+    "resolucao": "Volume do cone: $V = \\frac{1}{3}\\pi r^2 h$; com $h$ fixo, o volume é proporcional a $r^2$.\nNovo volume: $0{,}81V$, logo $r_{novo}^2 = 0{,}81 \\cdot r^2$.\nRaio original: $r = 8 \\div 2 = 4$ cm.\n$r_{novo} = \\sqrt{0{,}81} \\cdot 4 = 0{,}9 \\cdot 4 = 3{,}6$ cm.\nAlternativa C.",
+    "enganos": {
+      "A": "Calculou 19% do diâmetro ($0{,}19 \\times 8 = 1{,}52$), confundindo a redução com a nova medida.",
+      "B": "Aplicou o fator do volume direto no raio, sem tirar a raiz: $0{,}81 \\times 4 = 3{,}24$.",
+      "D": "Aplicou o fator do volume direto no diâmetro: $0{,}81 \\times 8 = 6{,}48$.",
+      "E": "Tirou a raiz corretamente, mas aplicou o fator no diâmetro em vez do raio: $0{,}9 \\times 8 = 7{,}2$."
+    },
+    "conceitos": [
+      "volume do cone",
+      "porcentagem",
+      "raiz quadrada"
+    ]
+  },
+  {
+    "id": "2022-166",
+    "enunciado": "A luminosidade L de uma estrela está relacionada com o raio R e com a temperatura T dessa estrela segundo a Lei de Stefan-Boltzmann: $L = c \\cdot R^2 \\cdot T^4$, em que c é uma constante igual para todas as estrelas.\n\nDisponível em: http://ciencia.hsw.uol.com.br. Acesso em: 22 nov. 2013 (adaptado).\n\nConsidere duas estrelas E e F, sendo que a estrela E tem metade do raio da estrela F e o dobro da temperatura de F.\n\nIndique por $L_E$ e $L_F$ suas respectivas luminosidades.\n\nA relação entre as luminosidades dessas duas estrelas é dada por",
+    "alternativas": {
+      "A": "$L_E = \\frac{L_F}{2}$",
+      "B": "$L_E = \\frac{L_F}{4}$",
+      "C": "$L_E = L_F$",
+      "D": "$L_E = 4L_F$",
+      "E": "$L_E = 8L_F$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "Para F: $L_F = c \\cdot R^2 \\cdot T^4$.\nPara E: raio $\\frac{R}{2}$ e temperatura $2T$.\n$L_E = c \\cdot \\left(\\frac{R}{2}\\right)^2 \\cdot (2T)^4 = c \\cdot \\frac{R^2}{4} \\cdot 16T^4$.\n$L_E = 4 \\cdot c R^2 T^4 = 4L_F$.\nAlternativa D.",
+    "enganos": {
+      "A": "Elevou o raio ao quadrado, mas não elevou a temperatura à quarta: $\\frac{1}{4} \\cdot 2 = \\frac{1}{2}$.",
+      "B": "Considerou só o efeito do raio, $\\left(\\frac{1}{2}\\right)^2 = \\frac{1}{4}$, e esqueceu que a temperatura dobrou.",
+      "C": "Ignorou os expoentes e achou que metade e dobro se cancelam: $\\frac{1}{2} \\cdot 2 = 1$.",
+      "E": "Elevou a temperatura à quarta, mas esqueceu de elevar o raio ao quadrado: $\\frac{1}{2} \\cdot 16 = 8$."
+    },
+    "conceitos": [
+      "potenciação",
+      "substituição em fórmulas",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2022-171",
+    "enunciado": "Uma equipe de marketing digital foi contratada para aumentar as vendas de um produto ofertado em um site de comércio eletrônico. Para isso, elaborou um anúncio que, quando o cliente clica sobre ele, é direcionado para a página de vendas do produto. Esse anúncio foi divulgado em duas redes sociais, A e B, e foram obtidos os seguintes resultados:\n\n- rede social A: o anúncio foi visualizado por 3 000 pessoas; 10% delas clicaram sobre o anúncio e foram redirecionadas para o site; 3% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R\\$ 100,00;\n- rede social B: o anúncio foi visualizado por 1 000 pessoas; 30% delas clicaram sobre o anúncio e foram redirecionadas para o site; 2% das que clicaram sobre o anúncio compraram o produto. O investimento feito para a publicação do anúncio nessa rede foi de R\\$ 200,00.\n\nPor experiência, o pessoal da equipe de marketing considera que a quantidade de novas pessoas que verão o anúncio é diretamente proporcional ao investimento realizado, e que a quantidade de pessoas que comprarão o produto também se manterá proporcional à quantidade de pessoas que clicarão sobre o anúncio.\n\nO responsável pelo produto decidiu, então, investir mais R\\$ 300,00 em cada uma das duas redes sociais para a divulgação desse anúncio e obteve, de fato, o aumento proporcional esperado na quantidade de clientes que compraram esse produto. Para classificar o aumento obtido na quantidade (Q) de compradores desse produto, em consequência dessa segunda divulgação, em relação aos resultados observados na primeira divulgação, o responsável pelo produto adotou o seguinte critério:\n\n- $Q \\leq 60\\%$: não satisfatório;\n- $60\\% < Q \\leq 100\\%$: regular;\n- $100\\% < Q \\leq 150\\%$: bom;\n- $150\\% < Q \\leq 190\\%$: muito bom;\n- $190\\% < Q \\leq 200\\%$: excelente.\n\nO aumento na quantidade de compradores, em consequência dessa segunda divulgação, em relação ao que foi registrado com a primeira divulgação, foi classificado como",
+    "alternativas": {
+      "A": "não satisfatório.",
+      "B": "regular.",
+      "C": "bom.",
+      "D": "muito bom.",
+      "E": "excelente."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Interpretação usada: Q é o aumento percentual dos compradores da segunda divulgação (36) em relação aos da primeira (15), ou seja, 140%; a razão direta 36/15 = 240% não cabe em nenhuma faixa.",
+    "gabarito_calculado": "C",
+    "resolucao": "Primeira divulgação: A teve $3000 \\times 0{,}10 = 300$ cliques e $300 \\times 0{,}03 = 9$ compradores; B teve $1000 \\times 0{,}30 = 300$ cliques e $300 \\times 0{,}02 = 6$ compradores; total de 15.\nEm A, 100 reais renderam 3 000 visualizações; mais 300 reais rendem 9 000 novas visualizações, 900 cliques e 27 compradores.\nEm B, 200 reais renderam 1 000 visualizações; mais 300 reais rendem 1 500 novas visualizações, 450 cliques e 9 compradores.\nSegunda divulgação: $27 + 9 = 36$ compradores.\nAumento em relação à primeira: $\\frac{36 - 15}{15} = \\frac{21}{15} = 1{,}4 = 140\\%$.\nComo $100\\% < 140\\% \\leq 150\\%$, a classificação é bom.\nAlternativa C.",
+    "enganos": {
+      "A": "Considerou só os compradores novos da rede B em relação ao total inicial: $\\frac{9}{15} = 60\\%$.",
+      "B": "Achou que, como o investimento total dobrou (de 300 para 600 reais), os compradores também dobrariam, um aumento de 100%, sem considerar que cada rede rende de um jeito.",
+      "D": "Calculou o aumento pelas visualizações, sem aplicar as taxas de clique e de compra de cada rede: $\\frac{10\\,500 - 4\\,000}{4\\,000} = 162{,}5\\%$.",
+      "E": "Confundiu a razão entre os investimentos com o aumento percentual: $\\frac{600}{300} = 2$, lido como 200%."
+    },
+    "conceitos": [
+      "porcentagem",
+      "proporcionalidade",
+      "variação percentual"
+    ]
+  },
+  {
+    "id": "2022-176",
+    "enunciado": "Foram convidadas 32 equipes para um torneio de futebol, que foram divididas em 8 grupos com 4 equipes, sendo que, dentro de um grupo, cada equipe disputa uma única partida contra cada uma das demais equipes de seu grupo. A primeira e a segunda colocadas de cada grupo seguem para realizar as 8 partidas da próxima fase do torneio, chamada oitavas de final. Os vencedores das partidas das oitavas de final seguem para jogar as 4 partidas das quartas de final. Os vencedores das quartas de final disputam as 2 partidas das semifinais, e os vencedores avançam para a grande final, que define a campeã do torneio.\n\nPelas regras do torneio, cada equipe deve ter um período de descanso de, no mínimo, 3 dias entre dois jogos por ela disputados, ou seja, se um time disputar uma partida, por exemplo, num domingo, só poderá disputar a partida seguinte a partir da quinta-feira da mesma semana.\n\nO número mínimo de dias necessários para a realização desse torneio é",
+    "alternativas": {
+      "A": "22.",
+      "B": "25.",
+      "C": "28.",
+      "D": "48.",
+      "E": "64."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Na fase de grupos, cada equipe joga 3 partidas; todos os jogos de uma mesma rodada podem acontecer no mesmo dia.\nDepois vêm 4 fases eliminatórias: oitavas, quartas, semifinais e final.\nOs finalistas jogam $3 + 4 = 7$ partidas, em 7 datas diferentes.\nCom 3 dias de descanso, dois jogos seguidos de uma equipe ficam a 4 dias de distância: dias 1, 5, 9, 13, 17, 21 e 25.\nSão 7 dias de jogos e $6 \\times 3 = 18$ dias de descanso: $7 + 18 = 25$ dias.\nAlternativa B.",
+    "enganos": {
+      "A": "Contou só 5 intervalos de descanso entre as 7 partidas, em vez de 6: $7 + 5 \\times 3 = 22$.",
+      "C": "Reservou 4 dias para cada uma das 7 rodadas, incluindo um descanso desnecessário depois da final: $7 \\times 4 = 28$.",
+      "D": "Supôs uma partida por dia e contou só os jogos da fase de grupos: $8 \\times 6 = 48$ dias.",
+      "E": "Provavelmente supôs uma partida por dia no torneio todo ($48 + 8 + 4 + 2 + 1 = 63$ partidas) e chegou perto de 64; não há uma conta exata clara que dê 64."
+    },
+    "conceitos": [
+      "raciocínio lógico",
+      "contagem",
+      "sequências"
+    ]
+  },
+  {
+    "id": "2023-145",
+    "enunciado": "Para concretar a laje de sua residência, uma pessoa contratou uma construtora. Tal empresa informa que o preço y do concreto bombeado é composto de duas partes: uma fixa, chamada de taxa de bombeamento, e uma variável, que depende do volume x de concreto utilizado. Sabe-se que a taxa de bombeamento custa R\\$ 500,00 e que o metro cúbico do concreto bombeado é de R\\$ 250,00.\n\nA expressão que representa o preço y em função do volume x, em metro cúbico, é",
+    "alternativas": {
+      "A": "$y = 250x$",
+      "B": "$y = 500x$",
+      "C": "$y = 750x$",
+      "D": "$y = 250x + 500$",
+      "E": "$y = 500x + 250$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "A parte variável é o preço do metro cúbico vezes o volume: $250x$.\nA parte fixa é a taxa de bombeamento: 500.\nPreço total: $y = 250x + 500$.\nAlternativa D.",
+    "enganos": {
+      "A": "Considerou só a parte variável e esqueceu a taxa fixa de bombeamento.",
+      "B": "Usou a taxa de bombeamento como se fosse o preço por metro cúbico e esqueceu a parte fixa.",
+      "C": "Somou a taxa fixa com o preço do metro cúbico ($500 + 250 = 750$) e multiplicou tudo pelo volume.",
+      "E": "Trocou os papéis: multiplicou a taxa fixa pelo volume e somou o preço do metro cúbico como valor fixo."
+    },
+    "conceitos": [
+      "função afim",
+      "modelagem algébrica"
+    ]
+  },
+  {
+    "id": "2023-153",
+    "enunciado": "Dirigir após ingerir bebidas alcoólicas é uma atitude extremamente perigosa, uma vez que, a partir da primeira dose, a pessoa já começa a ter perda de sensibilidade de movimentos e de reflexos. Apesar de a eliminação e absorção do álcool depender de cada pessoa e de como o organismo consegue metabolizar a substância, ao final da primeira hora após a ingestão, a concentração de álcool (C) no sangue corresponde a aproximadamente 90% da quantidade (q) de álcool ingerida, e a eliminação total dessa concentração pode demorar até 12 horas.\n\nDisponível em: http://g1.globo.com. Acesso em: 1 dez. 2018 (adaptado).\n\nNessas condições, ao final da primeira hora após a ingestão da quantidade q de álcool, a concentração C dessa substância no sangue é expressa algebricamente por",
+    "alternativas": {
+      "A": "$C = 0{,}9q$",
+      "B": "$C = 0{,}1q$",
+      "C": "$C = 1 - 0{,}1q$",
+      "D": "$C = 1 - 0{,}9q$",
+      "E": "$C = q - 10$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "90% de q significa $\\frac{90}{100} \\cdot q = 0{,}9q$.\nO texto diz que a concentração C corresponde a 90% de q.\nLogo, $C = 0{,}9q$.\nAlternativa A.",
+    "enganos": {
+      "B": "Usou os 10% que faltam para 100% em vez dos 90%: $C = 0{,}1q$.",
+      "C": "Pensou em retirar 10% e escreveu o todo como o número 1, sem multiplicar por q: $1 - 0{,}1q$.",
+      "D": "Tratou os 90% como a parte eliminada e subtraiu do todo, escrito como 1 em vez de q: $1 - 0{,}9q$.",
+      "E": "Tratou a diferença de 10% como subtrair 10 unidades: $q - 10$."
+    },
+    "conceitos": [
+      "porcentagem",
+      "expressão algébrica"
+    ]
+  },
+  {
+    "id": "2023-161",
+    "enunciado": "Um agricultor é informado sobre um método de proteção para sua lavoura que consiste em inserir larvas específicas, de rápida reprodução. A reprodução dessas larvas faz com que sua população multiplique-se por 10 a cada 3 dias e, para evitar eventuais desequilíbrios, é possível cessar essa reprodução aplicando-se um produto X. O agricultor decide iniciar esse método com 100 larvas e dispõe de 5 litros do produto X, cuja aplicação recomendada é de exatamente 1 litro para cada população de 200 000 larvas. A quantidade total do produto X de que ele dispõe deverá ser aplicada de uma única vez.\n\nQuantos dias após iniciado esse método o agricultor deverá aplicar o produto X?",
+    "alternativas": {
+      "A": "2",
+      "B": "4",
+      "C": "6",
+      "D": "12",
+      "E": "18"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "5 litros, a 1 litro para cada 200 000 larvas, servem para exatamente $5 \\times 200\\,000 = 1\\,000\\,000 = 10^6$ larvas.\nPopulação após n períodos de 3 dias: $100 \\cdot 10^n = 10^{2+n}$.\n$10^{2+n} = 10^6 \\Rightarrow n = 4$ períodos.\nTempo: $4 \\times 3 = 12$ dias.\nAlternativa D.",
+    "enganos": {
+      "A": "Usou o expoente de $10^6$ e dividiu pelo período: $6 \\div 3 = 2$.",
+      "B": "Achou o número de multiplicações por 10 ($n = 4$), mas esqueceu que cada uma leva 3 dias.",
+      "C": "Tomou o expoente de $10^6$ como número de dias, ignorando as 100 larvas iniciais e o período de 3 dias.",
+      "E": "Ignorou as 100 larvas iniciais e contou 6 multiplicações por 10 a partir de 1 larva: $6 \\times 3 = 18$."
+    },
+    "conceitos": [
+      "função exponencial",
+      "potências de 10",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2023-167",
+    "enunciado": "Em janeiro do ano passado, a direção de uma fábrica abriu uma creche para os filhos de seus funcionários, com 10 salas, cada uma com capacidade para atender 10 crianças a cada ano. As vagas são sorteadas entre os filhos dos funcionários inscritos, enquanto os não contemplados pelo sorteio formam uma lista de espera. No ano passado, a lista de espera teve 400 nomes e, neste ano, esse número cresceu 10%.\n\nA direção da fábrica realizou uma pesquisa e constatou que a lista de espera para o próximo ano terá a mesma quantidade de nomes da lista de espera deste ano. Decidiu, então, construir, ao longo desse ano, novas salas para a creche, também com capacidade de atendimento para 10 crianças cada, de modo que o número de nomes na lista de espera no próximo ano seja 25% menor que o deste ano.\n\nO número mínimo de salas que deverão ser construídas é",
+    "alternativas": {
+      "A": "10.",
+      "B": "11.",
+      "C": "13.",
+      "D": "30.",
+      "E": "33."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Lista de espera deste ano: $400 \\times 1{,}10 = 440$ nomes.\nSem novas salas, a lista do próximo ano também teria 440 nomes.\nMeta, 25% menor: $440 \\times 0{,}75 = 330$ nomes.\nÉ preciso atender $440 - 330 = 110$ crianças a mais.\nCada sala nova atende 10 crianças: $110 \\div 10 = 11$ salas.\nAlternativa B.",
+    "enganos": {
+      "A": "Aplicou os 25% sobre a lista do ano passado, sem o aumento de 10%: $0{,}25 \\times 400 = 100$ crianças, ou seja, 10 salas.",
+      "C": "Aplicou os 25% sobre a lista somada às 100 vagas atuais: $0{,}25 \\times (440 + 100) = 135$, cerca de 13 salas.",
+      "D": "Calculou a lista reduzida a partir do ano passado ($0{,}75 \\times 400 = 300$) e dividiu por 10 como se fossem as crianças a atender: 30.",
+      "E": "Calculou a nova lista ($0{,}75 \\times 440 = 330$), mas dividiu esse total por 10 em vez de usar a redução de 110 nomes: 33."
+    },
+    "conceitos": [
+      "porcentagem",
+      "variação percentual",
+      "divisão"
+    ]
+  },
+  {
+    "id": "2023-175",
+    "enunciado": "Alguns estudos comprovam que os carboidratos fornecem energia ao corpo, preservam as proteínas estruturais dos músculos durante a prática de atividade física e ainda dão força para o cérebro coordenar os movimentos, o que de fato tem impacto positivo no desenvolvimento do praticante. O ideal é consumir 1 grama de carboidrato para cada minuto de caminhada.\n\nCIRINO, C. Boa pergunta: consumir carboidratos antes dos exercícios melhora o desempenho do atleta? **Revista Saúde! É Vital**, n. 330, nov. 2010 (adaptado).\n\nUm casal realizará diariamente 30 minutos de caminhada, ingerindo, antes dessa atividade, a quantidade ideal de carboidratos recomendada. Para ter o consumo ideal apenas por meio do consumo de pão de fôrma integral, o casal planeja garantir o suprimento de pães para um período de 30 dias ininterruptos. Sabe-se que cada pacote desse pão vem com 18 fatias, e que cada uma delas tem 15 gramas de carboidratos.\n\nA quantidade mínima de pacotes de pão de fôrma necessários para prover o suprimento a esse casal é",
+    "alternativas": {
+      "A": "1.",
+      "B": "4.",
+      "C": "6.",
+      "D": "7.",
+      "E": "8."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "Cada pessoa precisa de 30 g de carboidrato por dia (1 g por minuto em 30 minutos).\nO casal precisa de $2 \\times 30 = 60$ g por dia.\nEm 30 dias: $60 \\times 30 = 1\\,800$ g.\nCada pacote tem $18 \\times 15 = 270$ g.\n$1\\,800 \\div 270 \\approx 6{,}67$; como 6 pacotes não bastam, são necessários 7.\nAlternativa D.",
+    "enganos": {
+      "A": "Calculou só o consumo de um dia do casal (60 g), que cabe em 1 pacote, esquecendo os 30 dias.",
+      "B": "Calculou para uma só pessoa: $900 \\div 270 \\approx 3{,}33$, arredondando para 4 pacotes.",
+      "C": "Fez $1\\,800 \\div 270 \\approx 6{,}67$ e arredondou para baixo, o que deixaria o casal sem pão nos últimos dias.",
+      "E": "Calculou para uma pessoa, arredondou para 4 pacotes e depois dobrou para o casal: $2 \\times 4 = 8$."
+    },
+    "conceitos": [
+      "proporcionalidade",
+      "divisão com arredondamento",
+      "multiplicação"
+    ]
+  },
+  {
+    "id": "2024-138",
+    "enunciado": "O uso de aplicativos de transporte tem sido uma alternativa à população que busca preços mais competitivos para se locomover, principalmente nas grandes cidades. As formas usadas para determinar o valor cobrado por cada viagem variam de um aplicativo para outro, mas, em geral, o valor V a ser pago, em real, varia em função de:\n\n- tarifa base F: valor fixo, em real, cobrado no início da viagem;\n- tempo T: tempo, em minuto, de duração da viagem;\n- distância D: distância percorrida, em quilômetro.\n\nUm desses aplicativos cobra R\\$ 2,00 de valor fixo, acrescido de R\\$ 0,26 por minuto de viagem e de R\\$ 1,40 por quilômetro rodado.\n\nNessas condições, a expressão que fornece o valor V a ser pago por uma viagem desse aplicativo é",
+    "alternativas": {
+      "A": "$2{,}00F + 0{,}26T + 1{,}40D$",
+      "B": "$2{,}00 + 0{,}26T + 1{,}40D$",
+      "C": "$2{,}00 + 0{,}26T + D$",
+      "D": "$0{,}26T + 1{,}40D$",
+      "E": "$F + T + D$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "A tarifa base é um valor fixo conhecido, 2,00, que não multiplica nenhuma variável.\nO custo do tempo é 0,26 por minuto: $0{,}26T$.\nO custo da distância é 1,40 por quilômetro: $1{,}40D$.\nSomando: $V = 2{,}00 + 0{,}26T + 1{,}40D$.\nAlternativa B.",
+    "enganos": {
+      "A": "Multiplicou a tarifa fixa pela variável F, sem perceber que 2,00 já é o próprio valor de F.",
+      "C": "Esqueceu de multiplicar a distância pelo preço por quilômetro (1,40).",
+      "D": "Esqueceu de incluir a tarifa fixa de 2,00.",
+      "E": "Apenas somou as variáveis, sem usar os preços cobrados pelo aplicativo."
+    },
+    "conceitos": [
+      "função afim",
+      "modelagem algébrica"
+    ]
+  },
+  {
+    "id": "2024-146",
+    "enunciado": "Em uma empresa é comercializado um produto em embalagens em formato de cilindro circular reto, com raio medindo 3 cm, e altura medindo 15 cm. Essa empresa planeja comercializar o mesmo produto em embalagens em formato de cubo, com capacidade igual a 80% da capacidade da embalagem cilíndrica utilizada atualmente.\n\nUse 3 como valor aproximado para $\\pi$.\n\nA medida da aresta da nova embalagem, em centímetro, deve ser",
+    "alternativas": {
+      "A": "6",
+      "B": "18",
+      "C": "$6\\sqrt{6}$",
+      "D": "$6\\sqrt[3]{6}$",
+      "E": "$3\\sqrt[3]{12}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "Volume do cilindro: $V = \\pi r^2 h = 3 \\cdot 3^2 \\cdot 15 = 405$ cm³.\nVolume do cubo: $0{,}8 \\times 405 = 324$ cm³.\nAresta: $a^3 = 324 \\Rightarrow a = \\sqrt[3]{324}$.\nComo $324 = 27 \\times 12$: $a = \\sqrt[3]{27} \\cdot \\sqrt[3]{12} = 3\\sqrt[3]{12}$.\nAlternativa E.",
+    "enganos": {
+      "A": "Usou a área lateral do cilindro no lugar do volume ($2\\pi r h = 2 \\cdot 3 \\cdot 3 \\cdot 15 = 270$), tirou 80% (216) e fez $\\sqrt[3]{216} = 6$.",
+      "B": "Calculou bem o volume do cubo (324), mas tirou raiz quadrada em vez de cúbica: $\\sqrt{324} = 18$.",
+      "C": "Usou a área lateral do cilindro (270), tirou 80% (216) e aplicou raiz quadrada: $\\sqrt{216} = 6\\sqrt{6}$.",
+      "D": "Usou o diâmetro (6 cm) como raio: $3 \\cdot 6^2 \\cdot 15 = 1\\,620$; $0{,}8 \\times 1\\,620 = 1\\,296$ e $\\sqrt[3]{1\\,296} = 6\\sqrt[3]{6}$."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "volume do cubo",
+      "porcentagem",
+      "raiz cúbica"
+    ]
+  },
+  {
+    "id": "2024-151",
+    "enunciado": "Um artesão utiliza dois tipos de componentes, X e Y, nos enfeites que produz. Ele sempre compra todos os componentes em uma mesma loja. O quadro apresenta os preços dos dois tipos de componentes nas lojas I e II.\n\n| Lojas | Preços dos componentes (R\\$) – X | Preços dos componentes (R\\$) – Y |\n|:---:|:---:|:---:|\n| I | 3,00 | 1,00 |\n| II | 2,00 | 4,00 |\n\nEle confeccionará enfeites formados por duas unidades do componente X e uma unidade do componente Y e efetuará a compra na loja que oferecer o menor valor total para a confecção de um enfeite.\n\nO artesão efetuará a compra na loja",
+    "alternativas": {
+      "A": "I, pois o valor é R\\$ 7,00.",
+      "B": "I, pois o valor é R\\$ 4,00.",
+      "C": "II, pois o valor é R\\$ 6,00.",
+      "D": "I, pois anuncia o componente com o menor preço.",
+      "E": "II, pois o componente X, que é o mais utilizado, tem menor preço."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No original o cabeçalho é mesclado: 'Preços dos componentes (R$)' abrange as colunas X e Y.",
+    "gabarito_calculado": "A",
+    "resolucao": "Um enfeite usa 2 unidades de X e 1 de Y.\nLoja I: $2 \\times 3{,}00 + 1{,}00 = 7{,}00$.\nLoja II: $2 \\times 2{,}00 + 4{,}00 = 8{,}00$.\nA loja I é a mais barata, com total de 7 reais.\nAlternativa A.",
+    "enganos": {
+      "B": "Somou um componente de cada na loja I, esquecendo que são duas unidades de X: $3{,}00 + 1{,}00 = 4{,}00$.",
+      "C": "Na loja II, somou um de cada ($2{,}00 + 4{,}00 = 6{,}00$), esquecendo a segunda unidade de X, e achou II mais barata que os 7,00 da loja I.",
+      "D": "Escolheu a loja que tem o componente mais barato (Y a 1,00), sem calcular o custo total do enfeite.",
+      "E": "Escolheu a loja com o X mais barato, por ser o componente mais usado, sem calcular o total: na loja II o enfeite custa 8,00."
+    },
+    "conceitos": [
+      "operações com decimais",
+      "comparação de valores",
+      "leitura de tabela"
+    ]
+  },
+  {
+    "id": "2024-159",
+    "enunciado": "Uma piscina tem capacidade de 2 500 000 litros. Seu sistema de abastecimento foi regulado para ter uma vazão constante de 6 000 litros de água por minuto.\n\nO mesmo sistema foi instalado em uma segunda piscina, com capacidade de 2 750 000 litros, e regulado para ter uma vazão, também constante, capaz de enchê-la em um tempo 20% maior que o gasto para encher a primeira piscina.\n\nA vazão do sistema de abastecimento da segunda piscina, em litro por minuto, é",
+    "alternativas": {
+      "A": "8 250.",
+      "B": "7 920.",
+      "C": "6 545.",
+      "D": "5 500.",
+      "E": "5 280."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "Tempo para encher a 1ª piscina: $t_1 = \\frac{2\\,500\\,000}{6\\,000} = \\frac{1\\,250}{3}$ min (cerca de 416,7 min).\nTempo da 2ª: $t_2 = 1{,}2 \\cdot t_1 = 500$ min.\nVazão da 2ª: $\\frac{2\\,750\\,000}{500} = 5\\,500$ L/min.\nConferindo pelas razões: $6\\,000 \\times \\frac{1{,}1}{1{,}2} = 5\\,500$.\nAlternativa D.",
+    "enganos": {
+      "A": "Ajustou pela capacidade ($6\\,000 \\times 1{,}1 = 6\\,600$) e, em vez de dividir por 1,2, dividiu por 0,8: $6\\,600 \\div 0{,}8 = 8\\,250$.",
+      "B": "Ajustou pela capacidade e multiplicou por 1,2 em vez de dividir, como se mais tempo exigisse mais vazão: $6\\,600 \\times 1{,}2 = 7\\,920$.",
+      "C": "Inverteu as duas razões: $6\\,000 \\times \\frac{1{,}2}{1{,}1} \\approx 6\\,545$.",
+      "E": "Ajustou pela capacidade e tratou o tempo 20% maior como vazão 20% menor: $6\\,600 \\times 0{,}8 = 5\\,280$."
+    },
+    "conceitos": [
+      "vazão",
+      "grandezas inversamente proporcionais",
+      "porcentagem"
+    ]
+  },
+  {
+    "id": "2024-163",
+    "enunciado": "Uma empresa de engenharia foi contratada para realizar um serviço no valor de R\\$ 71 250,00. Os sócios da empresa decidiram que 40% desse valor seria destinado ao pagamento de três engenheiros que gerenciaram o serviço. O pagamento para cada um deles será feito de forma diretamente proporcional ao total de horas trabalhadas. O número de dias e o número de horas diárias trabalhadas pelos engenheiros foram, respectivamente:\n\n- engenheiro I: 4 dias, numa jornada de 5 horas e meia por dia;\n- engenheiro II: 5 dias, numa jornada de 4 horas por dia;\n- engenheiro III: 6 dias, numa jornada de 2 horas e meia por dia.\n\nQual a maior diferença, em real, entre os valores recebidos por esse serviço entre dois desses engenheiros?",
+    "alternativas": {
+      "A": "1 000",
+      "B": "1 500",
+      "C": "3 500",
+      "D": "3 800",
+      "E": "5 250"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Valor destinado aos engenheiros: $0{,}40 \\times 71\\,250 = 28\\,500$.\nHoras: I: $4 \\times 5{,}5 = 22$; II: $5 \\times 4 = 20$; III: $6 \\times 2{,}5 = 15$; total de 57 h.\nValor por hora: $28\\,500 \\div 57 = 500$.\nA maior diferença é entre I e III: $(22 - 15) \\times 500 = 3\\,500$.\nAlternativa C.",
+    "enganos": {
+      "A": "Calculou a diferença entre os engenheiros I e II, que não é a maior: $(22 - 20) \\times 500 = 1\\,000$.",
+      "B": "Multiplicou só a diferença entre as jornadas diárias pelo valor da hora, esquecendo os dias: $(5{,}5 - 2{,}5) \\times 500 = 1\\,500$.",
+      "D": "Dividiu o pagamento proporcionalmente aos dias, e não às horas: $28\\,500 \\div 15 = 1\\,900$ por dia e $(6 - 4) \\times 1\\,900 = 3\\,800$.",
+      "E": "Usou 60% do valor em vez de 40%: $42\\,750 \\div 57 = 750$ por hora e $7 \\times 750 = 5\\,250$."
+    },
+    "conceitos": [
+      "divisão proporcional",
+      "porcentagem",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2024-174",
+    "enunciado": "Para melhorar o fluxo de ônibus em uma avenida que tem dois semáforos, a prefeitura reduzirá o tempo em que cada sinal ficará vermelho, que atualmente é de 15 segundos a cada 60 segundos. Admita que o instante de chegada de um ônibus a cada semáforo é aleatório.\n\nO engenheiro de tráfego da prefeitura calculou a probabilidade de um ônibus encontrar cada um deles vermelho, obtendo $\\frac{15}{60}$. A partir daí, estabeleceu uma mesma redução na quantidade do tempo, em segundo, em que cada sinal ficará vermelho, de maneira que a probabilidade de um ônibus encontrar ambos os sinais vermelhos numa mesma viagem seja igual a $\\frac{4}{100}$, considerando os eventos independentes.\n\nPara isso, a redução do tempo em que o sinal ficará vermelho, em segundo, estabelecida pelo engenheiro foi de",
+    "alternativas": {
+      "A": "1,35.",
+      "B": "3,00.",
+      "C": "9,00.",
+      "D": "12,60.",
+      "E": "13,80."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Seja t o novo tempo de vermelho; a probabilidade de encontrar cada sinal vermelho passa a ser $\\frac{t}{60}$.\nComo os eventos são independentes: $\\left(\\frac{t}{60}\\right)^2 = \\frac{4}{100}$.\n$\\frac{t}{60} = \\frac{2}{10} = 0{,}2 \\Rightarrow t = 12$ s.\nRedução: $15 - 12 = 3$ s.\nAlternativa B.",
+    "enganos": {
+      "A": "Subtraiu as probabilidades de ambos vermelhos e multiplicou por 60: $\\left(\\frac{15}{60}\\right)^2 - 0{,}04 = 0{,}0225$ e $0{,}0225 \\times 60 = 1{,}35$.",
+      "C": "Errou a raiz, tomando $\\sqrt{0{,}04} = 0{,}1$: $t = 0{,}1 \\times 60 = 6$ s e redução de $15 - 6 = 9$ s.",
+      "D": "Não tirou a raiz e usou $\\frac{t}{60} = 0{,}04$: $t = 2{,}4$ s e redução de $15 - 2{,}4 = 12{,}6$ s.",
+      "E": "Dividiu a probabilidade por 2 em vez de tirar a raiz: $\\frac{t}{60} = 0{,}02$, $t = 1{,}2$ s e redução de $15 - 1{,}2 = 13{,}8$ s."
+    },
+    "conceitos": [
+      "probabilidade",
+      "eventos independentes",
+      "raiz quadrada"
+    ]
+  }
+]

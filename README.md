@@ -92,7 +92,8 @@ Detalhes de cada componente, modelo de dados, rotas da API e decisões técnicas
 ## Dados
 
 - **Fonte:** provas, gabaritos e matriz de referência do ENEM publicados pelo [Inep](https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos).
-- **Recorte inicial (v0.1.0):** questões de Matemática sem imagem. Depois, Ciências da Natureza e questões com imagem.
+- **Recorte inicial (v0.1.0):** 60 questões de Matemática sem imagem, de 2022 a 2024, transcritas da prova oficial e com gabarito conferido nos microdados do Inep. Depois, 2025, Ciências da Natureza e questões com imagem.
+- **Como foram montadas:** fontes, termos de uso e problemas encontrados em [docs/DADOS.md](docs/DADOS.md).
 - **Atribuição:** todas as questões exibidas trazem a fonte (Inep, ano e número da questão). Os termos de uso do material serão verificados antes de publicar qualquer conjunto de dados derivado.
 
 ## Avaliação

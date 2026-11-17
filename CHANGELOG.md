@@ -11,3 +11,8 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - Cronograma completo, da preparação ao lançamento
 - Documentação de arquitetura, avaliação e política de segurança
 - Licença MIT
+- Banco inicial de 60 questões de Matemática do ENEM (2022 a 2024), transcritas da prova oficial, com gabarito e habilidade conferidos nos microdados do Inep, resolução e engano provável de cada alternativa errada
+- Scripts de download, extração, conferência e seleção das questões, com testes
+- Matriz de referência de Matemática (7 competências e 30 habilidades) em JSON
+- Documentação dos dados: fontes, termos de uso e problemas encontrados no conjunto aberto
+- CI que valida os dados a cada pull request

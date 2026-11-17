@@ -1,0 +1,24 @@
+[
+  {
+    "id": "2023-144",
+    "enunciado": "Uma loja vende seus produtos de duas formas: à vista ou financiado em três parcelas mensais iguais. Para definir o valor dessas parcelas nas vendas financiadas, a loja aumenta em 20% o valor do produto à vista e divide esse novo valor por 3. A primeira parcela deve ser paga no ato da compra, e as duas últimas, em 30 e 60 dias após a compra.\n\nUm cliente da loja decidiu comprar, de forma financiada, um produto cujo valor à vista é R\\$ 1 500,00.\n\nUtilize 5,29 como aproximação para $\\sqrt{28}$.\n\nA taxa mensal de juros compostos praticada nesse financiamento é de",
+    "alternativas": {
+      "A": "6,7%",
+      "B": "10%",
+      "C": "20%",
+      "D": "21,5%",
+      "E": "23,3%"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Revisada por último: entrou na lista depois que a regra de anulação foi corrigida (o item saiu da calibração da TRI por motivo estatístico, mas não foi anulado).",
+    "gabarito_calculado": "D",
+    "resolucao": "Com o aumento de 20%, o total financiado é $1{,}2 \\times 1\\,500 = 1\\,800$, em 3 parcelas de 600 reais.\nA entrada de 600 é paga no ato, então o valor realmente financiado é $1\\,500 - 600 = 900$.\nTrazendo as outras parcelas para a data da compra: $900 = \\frac{600}{1+i} + \\frac{600}{(1+i)^2}$.\nCom $y = 1+i$: $900y^2 = 600y + 600$, ou seja, $3y^2 - 2y - 2 = 0$.\n$y = \\frac{2 + \\sqrt{28}}{6} \\approx \\frac{2 + 5{,}29}{6} \\approx 1{,}215$.\nA taxa é de cerca de 21,5% ao mês. Alternativa D.",
+    "enganos": {
+      "A": "Dividiu o acréscimo de 20% pelas 3 parcelas: $20\\% \\div 3 \\approx 6{,}7\\%$.",
+      "B": "Distribuiu o acréscimo de 20% igualmente pelos 2 meses de financiamento, como se fossem juros simples: $20\\% \\div 2 = 10\\%$.",
+      "C": "Tomou o acréscimo total de 20% como se fosse a taxa mensal, sem considerar a entrada nem os prazos.",
+      "E": "Não há uma conta clara que leve a 23,3%; é um valor próximo do correto, provavelmente escolhido por erro de arredondamento ou ao aplicar a fórmula de Bhaskara."
+    },
+    "conceitos": ["juros compostos", "valor presente", "equação do 2º grau"]
+  }
+]

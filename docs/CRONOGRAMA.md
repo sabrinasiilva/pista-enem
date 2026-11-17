@@ -55,15 +55,15 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** ter um banco inicial de questões confiável.
 
-- [ ] Ler os termos de uso das provas do Inep e registrar a conclusão em `docs/DADOS.md`
-- [ ] Pesquisar conjuntos de dados abertos de questões do ENEM e comparar com os PDFs oficiais
-- [ ] Baixar provas e gabaritos de Matemática de 2022 a 2025
-- [ ] Script `data/extrair.py` que transforma as questões em JSON (enunciado, alternativas, gabarito, ano, número, habilidade)
-- [ ] Revisão manual de uma amostra de 20% das questões extraídas
-- [ ] Selecionar 60 questões de Matemática sem imagem para o MVP
-- [ ] Para cada alternativa errada, registrar o engano mais provável (ex.: "trocou o sinal")
-- [ ] Baixar a matriz de referência do ENEM e mapear as habilidades de Matemática (H1 a H30)
-- [ ] Testes do script de extração (formato, gabarito válido, cinco alternativas)
+- [x] Ler os termos de uso das provas do Inep e registrar a conclusão em `docs/DADOS.md`
+- [x] Pesquisar conjuntos de dados abertos de questões do ENEM e comparar com os PDFs oficiais
+- [x] Baixar provas e gabaritos de Matemática de 2022 a 2024 (2025 passou para a Fase 7: o conjunto aberto vai só até 2024)
+- [x] Script `data/extrair.py` que transforma as questões em JSON (enunciado, alternativas, gabarito, ano, número, habilidade)
+- [x] Revisão manual das questões extraídas (feita em 100% das candidatas, não só 20%, porque o conjunto aberto tinha erros)
+- [x] Selecionar 60 questões de Matemática sem imagem para o MVP
+- [x] Para cada alternativa errada, registrar o engano mais provável (ex.: "trocou o sinal")
+- [x] Baixar a matriz de referência do ENEM e mapear as habilidades de Matemática (H1 a H30)
+- [x] Testes do script de extração (formato, gabarito válido, cinco alternativas)
 
 **Entregável:** `data/questoes-mvp.json` com 60 questões revisadas e anotadas.
 **Pronto quando:** 100% das questões têm gabarito conferido com o oficial e fonte registrada.
@@ -163,6 +163,7 @@ Total estimado: **cerca de 110 horas**.
 - [ ] Busca por habilidades relacionadas a cada questão, usada para montar as pistas
 - [ ] Sugestão de "questão parecida para praticar" ao final da sessão
 - [ ] Avaliação da busca (Recall@5) com 40 questões anotadas à mão
+- [ ] Questões de Matemática de 2025 transcritas da prova oficial, com o mesmo processo de revisão
 - [ ] Questões de Ciências da Natureza sem imagem (meta: mais 60)
 - [ ] Prompt `tutor_v2` comparado com o `tutor_v1` no conjunto de avaliação
 - [ ] **Release v0.2.0**
