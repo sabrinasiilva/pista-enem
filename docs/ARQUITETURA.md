@@ -59,6 +59,9 @@ erDiagram
     QUESTAO }o--o{ HABILIDADE : avalia
     QUESTAO ||--o{ SESSAO : "é resolvida em"
     SESSAO ||--|{ INTERACAO : registra
+    USUARIO ||--o{ ACESSO : "entra por"
+    USUARIO ||--o{ RESULTADO : acumula
+    USUARIO |o--o{ SESSAO : "pode ter"
 
     QUESTAO {
         uuid id
@@ -84,6 +87,30 @@ erDiagram
         text descricao
         vector embedding
     }
+    USUARIO {
+        uuid id
+        string apelido "único, sem dados pessoais"
+        string senha_hash "scrypt"
+        string codigo_recuperacao_hash "scrypt"
+        int meta_semanal
+        json habilidades_foco
+        string tema "claro, escuro, sistema"
+    }
+    ACESSO {
+        string token_hash "SHA-256 do token"
+        uuid usuario_id
+        timestamp expira_em "30 dias"
+    }
+    RESULTADO {
+        int id
+        uuid usuario_id
+        string questao_id
+        string habilidade
+        bool acertou_de_primeira
+        int tentativas
+        bool pediu_explicacao
+        timestamp concluido_em
+    }
     SESSAO {
         uuid id "anônimo, gerado pelo servidor"
         uuid questao_id
@@ -103,7 +130,9 @@ erDiagram
     }
 ```
 
-- **Sem dados pessoais:** a sessão não tem nome, e-mail nem IP salvo.
+- **Sem dados pessoais:** nem a sessão nem a conta têm nome, e-mail ou IP salvo. A conta é opcional.
+- **Resultados:** quando a resposta de uma sessão com conta é revelada, um resultado é gravado. É dele que saem o progresso, a lista de revisão e as recomendações do modo foco.
+- **Implementação atual:** as tabelas `usuarios`, `acessos` e `resultados` já existem (SQLAlchemy + Alembic, SQLite local). Sessões e interações continuam em memória até a Fase 5.
 - **Retenção:** interações são apagadas após 30 dias. Só ficam números agregados (taxa de acerto por questão, nível médio de pista).
 
 ## Rotas da API
@@ -119,6 +148,15 @@ erDiagram
 | POST | `/sessoes/{id}/mensagens` | Conversa com o tutor em streaming (Server-Sent Events: eventos `trecho` e `fim`) |
 | POST | `/sessoes/{id}/explicacao` | Pede a explicação completa (exige `confirmar: true` e pelo menos uma tentativa) |
 | GET | `/questoes/{id}/parecidas` | Sugere questões para praticar (RAG, Fase 7) |
+| GET | `/recomendacoes?quantidade=&habilidades=` | Questões para o modo foco: primeiro as para revisar, depois as nunca feitas das habilidades em foco |
+| POST | `/contas` | Cria uma conta (apelido e senha) e devolve o token e o código de recuperação |
+| POST | `/contas/entrar` | Entra na conta (limite de 5 tentativas a cada 15 minutos) |
+| POST | `/contas/recuperar` | Troca a senha com o código de recuperação e gera um código novo |
+| POST | `/contas/sair` | Revoga o token deste aparelho |
+| GET, PATCH, DELETE | `/eu` | Mostra, atualiza (meta, habilidades em foco, tema) ou apaga a conta |
+| PUT | `/eu/senha` | Troca a senha e desconecta os outros aparelhos |
+| GET | `/eu/progresso` | Meta da semana, sequência de dias, desempenho por habilidade e resultados recentes |
+| GET | `/eu/revisar` | Questões cuja última tentativa não foi um acerto de primeira |
 
 - O gabarito nunca sai da API antes de a resposta ser revelada (`explicacao` ou `concluida`), nem mesmo dentro do JSON.
 - Erros sempre vêm como `{"erro": {"codigo": "...", "mensagem": "..."}}`: 404 para questão ou sessão inexistente, 409 para ação não permitida no estado atual (por exemplo, `alternativa_repetida`), 422 para dados inválidos e 500 sem detalhes internos.
@@ -157,6 +195,8 @@ erDiagram
 | **Hugging Face Spaces** na API | Render | Meus outros projetos já usam as horas gratuitas do Render. Além disso, o Spaces é a vitrine padrão de projetos de IA. |
 | **GitHub Pages** no front-end | Vercel, Netlify | Já uso no portfólio e no CO2Bank, e o deploy fica no mesmo GitHub Actions. |
 | **Verificação da resposta no código** | Deixar a IA julgar | Gabarito é dado, não opinião. A IA só cuida da conversa. |
-| **Sem login** | Cadastro com e-mail | Muitos alunos são menores de idade. Sem dados pessoais, o risco de privacidade cai muito. |
+| **Conta opcional com apelido e senha** | Sem conta; cadastro com e-mail; login com Google | Muitos alunos são menores de idade. Apelido e senha guardam o progresso sem coletar dado pessoal. A recuperação é por um código mostrado no cadastro, e não por e-mail. Quem não quiser conta continua usando tudo. |
+| **Token no cabeçalho, não em cookie** | Cookie httpOnly | Front-end (GitHub Pages) e API (Hugging Face) ficam em domínios diferentes, e cookies entre domínios são bloqueados por vários navegadores. O token expira em 30 dias e é revogado ao sair. |
+| **scrypt da biblioteca padrão** | bcrypt, Argon2 | Algoritmo forte para senhas, sem dependência extra. |
 
 Os limites dos planos gratuitos mudam com frequência. Eles são conferidos na Fase 0 e revistos a cada release.

@@ -26,6 +26,10 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - Front-end em React, TypeScript e Tailwind: página inicial, página da questão com fórmulas em KaTeX, níveis de pista, conversa em streaming e explicação com confirmação
 - Testes de componentes com Vitest e Testing Library, e CI do front-end com checagem de dependências
 - Novo visual: exemplo de pista na página inicial, questões em abas por ano, página da questão em duas colunas no computador e ícone do site
+- Contas opcionais só com apelido e senha, com código de recuperação, troca de senha e exclusão da conta e do histórico
+- Banco de dados com SQLAlchemy e migrações do Alembic (SQLite local, pronto para PostgreSQL)
+- Progresso: meta da semana, sequência de dias, desempenho por habilidade e questões para revisar
+- Recomendações para o modo foco
 
 ### Corrigido
 - Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro

@@ -114,7 +114,7 @@ Os resultados de cada versão serão publicados aqui e em [docs/AVALIACAO.md](do
 
 ## Segurança e privacidade
 
-- **Sem cadastro e sem dados pessoais:** a sessão é anônima. Muitos estudantes do ENEM são menores de idade, então o projeto segue o princípio de coletar o mínimo possível (LGPD).
+- **Conta opcional e sem dados pessoais:** dá para usar sem conta. Quem quiser guardar o progresso cria uma conta só com apelido e senha, sem e-mail, nome ou idade. Muitos estudantes do ENEM são menores de idade, então o projeto segue o princípio de coletar o mínimo possível (LGPD).
 - **Chaves só no servidor:** a chave da IA nunca vai para o navegador nem para o Git.
 - **Defesa contra manipulação do prompt,** limite de requisições, limite diário de custo, CORS restrito e verificação automática de dependências.
 
