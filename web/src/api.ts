@@ -1,4 +1,17 @@
-import type { Estado, Letra, Questao, QuestaoResumo, ResultadoDaResposta, Saude, Sessao } from './tipos'
+import type {
+  Acesso,
+  Estado,
+  Letra,
+  ParaRevisar,
+  Progresso,
+  Questao,
+  QuestaoResumo,
+  ResultadoDaResposta,
+  Saude,
+  Sessao,
+  Tema,
+  Usuario,
+} from './tipos'
 
 const BASE = (import.meta.env.VITE_API_URL ?? 'http://localhost:8000').replace(/\/$/, '')
 
@@ -15,18 +28,41 @@ export class ErroDaApi extends Error {
 
 const SEM_CONEXAO = 'Não consegui falar com o servidor. Confira sua conexão e tente de novo.'
 
+// token da conta (se houver) e o que fazer quando ele expira
+let tokenAtual: string | null = null
+let aoExpirar: (() => void) | null = null
+
+export function definirToken(token: string | null) {
+  tokenAtual = token
+}
+
+export function aoExpirarASessao(funcao: (() => void) | null) {
+  aoExpirar = funcao
+}
+
 async function requisitar(caminho: string, init?: RequestInit): Promise<Response> {
   let resposta: Response
   try {
     resposta = await fetch(BASE + caminho, {
       ...init,
-      headers: { 'Content-Type': 'application/json', ...init?.headers },
+      headers: {
+        'Content-Type': 'application/json',
+        ...(tokenAtual ? { Authorization: `Bearer ${tokenAtual}` } : {}),
+        ...init?.headers,
+      },
     })
   } catch {
     throw new ErroDaApi(0, 'sem_conexao', SEM_CONEXAO)
   }
   if (!resposta.ok) {
     const corpo = await resposta.json().catch(() => null)
+    if (resposta.status === 401 && corpo?.erro?.codigo === 'sessao_expirada' && tokenAtual) {
+      // o token venceu: esquece a conta e repete a chamada sem ele, uma única vez
+      // (quem só queria ver uma questão não deve ver erro por causa de um login antigo)
+      tokenAtual = null
+      aoExpirar?.()
+      return requisitar(caminho, init)
+    }
     throw new ErroDaApi(
       resposta.status,
       corpo?.erro?.codigo ?? 'erro_http',
@@ -42,6 +78,10 @@ async function json<T>(caminho: string, init?: RequestInit): Promise<T> {
 
 function post(corpo: unknown): RequestInit {
   return { method: 'POST', body: JSON.stringify(corpo) }
+}
+
+function com(metodo: string, corpo: unknown): RequestInit {
+  return { method: metodo, body: JSON.stringify(corpo) }
 }
 
 export interface EventoDoServidor {
@@ -85,6 +125,32 @@ export const api = {
     json<ResultadoDaResposta>(`/sessoes/${encodeURIComponent(sessaoId)}/respostas`, post({ alternativa })),
   explicar: (sessaoId: string) =>
     json<unknown>(`/sessoes/${encodeURIComponent(sessaoId)}/explicacao`, post({ confirmar: true })),
+
+  // contas
+  cadastrar: (dados: { apelido: string; senha: string; meta_semanal: number; habilidades_foco: string[] }) =>
+    json<Acesso>('/contas', post(dados)),
+  entrar: (apelido: string, senha: string) => json<Acesso>('/contas/entrar', post({ apelido, senha })),
+  recuperar: (apelido: string, codigo: string, novaSenha: string) =>
+    json<Acesso>('/contas/recuperar', post({ apelido, codigo_de_recuperacao: codigo, nova_senha: novaSenha })),
+  sair: async () => {
+    await requisitar('/contas/sair', { method: 'POST' })
+  },
+  eu: () => json<Usuario>('/eu'),
+  atualizarPerfil: (dados: { meta_semanal?: number; habilidades_foco?: string[]; tema?: Tema }) =>
+    json<Usuario>('/eu', com('PATCH', dados)),
+  trocarSenha: async (senhaAtual: string, novaSenha: string) => {
+    await requisitar('/eu/senha', com('PUT', { senha_atual: senhaAtual, nova_senha: novaSenha }))
+  },
+  apagarConta: async (senha: string) => {
+    await requisitar('/eu', com('DELETE', { senha }))
+  },
+  progresso: () => json<Progresso>('/eu/progresso'),
+  revisar: () => json<ParaRevisar[]>('/eu/revisar'),
+  recomendacoes: (quantidade: number, habilidades: string[] = []) => {
+    const parametros = new URLSearchParams({ quantidade: String(quantidade) })
+    if (habilidades.length) parametros.set('habilidades', habilidades.join(','))
+    return json<QuestaoResumo[]>(`/recomendacoes?${parametros}`)
+  },
 
   /** Conversa com o tutor. Chama `aoReceber` a cada trecho e devolve o estado final. */
   async conversar(sessaoId: string, texto: string, aoReceber: (trecho: string) => void): Promise<Estado> {
