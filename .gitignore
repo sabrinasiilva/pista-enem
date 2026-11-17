@@ -19,6 +19,10 @@ node_modules/
 dist/
 coverage/
 
+# Banco de dados local
+*.db
+*.db-journal
+
 # Dados brutos baixados (PDFs do Inep não são versionados)
 data/brutos/
 

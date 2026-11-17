@@ -1,7 +1,10 @@
 from __future__ import annotations
 
 import pytest
+from sqlalchemy import create_engine
+from sqlalchemy.pool import StaticPool
 
+from app.banco import Base
 from app.config import RAIZ_DO_REPOSITORIO
 from app.tutor.motor import Tutor
 from app.tutor.prompts import Prompts
@@ -39,3 +42,12 @@ def criar(prompts, questao):
         return tutor, ia
 
     return _criar
+
+
+@pytest.fixture
+def motor():
+    """Banco SQLite em memória, novo a cada teste."""
+    motor = create_engine("sqlite://", connect_args={"check_same_thread": False}, poolclass=StaticPool)
+    Base.metadata.create_all(motor)
+    yield motor
+    motor.dispose()

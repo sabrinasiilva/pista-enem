@@ -30,6 +30,10 @@ class Configuracoes(BaseSettings):
     # endereços do front-end que podem chamar a API, separados por vírgula
     cors_origens: str = "http://localhost:5173"
 
+    # banco de dados: SQLite local por padrão; na Fase 5, PostgreSQL (Neon)
+    database_url: str = f"sqlite:///{(PASTA_API / 'pista.db').as_posix()}"
+    migrar_ao_iniciar: bool = True
+
     @property
     def lista_de_modelos(self) -> list[str]:
         return [m.strip() for m in self.gemini_modelos.split(",") if m.strip()]
