@@ -3,9 +3,9 @@ name: API
 on:
   push:
     branches: [main]
-    paths: ["api/**", "prompts/**", "evals/**", "data/questoes-mvp.json", ".github/workflows/api.yml"]
+    paths: ["api/**", "prompts/**", "evals/**", "data/questoes-mvp.json", ".dockerignore", ".github/workflows/api.yml"]
   pull_request:
-    paths: ["api/**", "prompts/**", "evals/**", "data/questoes-mvp.json", ".github/workflows/api.yml"]
+    paths: ["api/**", "prompts/**", "evals/**", "data/questoes-mvp.json", ".dockerignore", ".github/workflows/api.yml"]
 
 permissions:
   contents: read
@@ -30,3 +30,31 @@ jobs:
         run: ruff format --check --config pyproject.toml . ../evals
       - name: Testes
         run: python -m pytest -q
+
+  imagem:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Constrói a imagem
+        run: docker build -f api/Dockerfile -t pista-api .
+      - name: Sobe o container
+        run: docker run -d --name pista -p 8000:8000 pista-api
+      - name: Espera ficar saudável
+        run: |
+          for i in $(seq 1 30); do
+            if curl -fs localhost:8000/health; then exit 0; fi
+            sleep 1
+          done
+          docker logs pista
+          exit 1
+      - name: Confere as rotas
+        run: |
+          set -e
+          curl -fs localhost:8000/health | grep -q '"questoes":60'
+          curl -fs localhost:8000/docs > /dev/null
+          questao=$(curl -fs localhost:8000/questoes/2022-141)
+          if echo "$questao" | grep -q gabarito; then echo "a rota de questão expôs o gabarito"; exit 1; fi
+          sessao=$(curl -fs -X POST localhost:8000/sessoes -H 'Content-Type: application/json' -d '{"questao_id":"2022-141"}' | python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])')
+          curl -fs -X POST "localhost:8000/sessoes/$sessao/respostas" -H 'Content-Type: application/json' -d '{"alternativa":"D"}' | grep -q '"estado":"pista_1"'
+      - name: Confere que roda sem privilégios
+        run: test "$(docker exec pista id -u)" = "1000"
