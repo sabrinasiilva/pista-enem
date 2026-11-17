@@ -40,7 +40,7 @@ Total estimado: **cerca de 110 horas**.
 - [x] README, cronograma, arquitetura e política de segurança publicados
 - [x] Licença MIT, `.gitignore` e `CHANGELOG.md`
 - [x] Marcos (milestones) v0.1.0, v0.2.0 e v1.0.0 e issues por fase no GitHub
-- [ ] Quadro Kanban no GitHub Projects (A fazer, Fazendo, Revisão, Feito)
+- [x] Quadro Kanban no GitHub Projects (A fazer, Fazendo, Revisão, Feito)
 - [x] Padrão de commits definido (Conventional Commits, em português)
 - [x] Fluxo de branches: `main` protegida, trabalho em `feat/...` e `fix/...`, entrada via pull request
 - [x] Alertas do Dependabot e varredura de segredos ativados
