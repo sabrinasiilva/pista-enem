@@ -126,6 +126,16 @@ erDiagram
 - Até a Fase 5, as sessões ficam em memória, expiram em 24 horas e são limitadas a 10 000. Cada sessão tem um lock, para que duas requisições simultâneas não mudem o estado dela em paralelo.
 - A documentação interativa (Swagger) fica em `/docs`.
 
+## Front-end
+
+- **Telas:** página inicial (o que é o Pista e a lista de questões por ano) e página da questão (enunciado, alternativas, nível da pista, última mensagem do tutor em destaque, conversa e explicação com confirmação).
+- **Rotas por hash** (`#/questao/2022-141`): funcionam no GitHub Pages sem configuração extra no servidor.
+- **Fórmulas e tabelas:** Markdown com `remark-math` e KaTeX. O cifrão de dinheiro vem escapado (`R\$`) para não virar fórmula.
+- **Streaming:** a conversa usa `fetch` com leitura do corpo em Server-Sent Events, porque o `EventSource` do navegador só faz GET.
+- **Sessão retomada:** o identificador da sessão fica no `sessionStorage` da aba. Ao recarregar a página, a conversa continua de onde parou.
+- **Carregamento sob demanda:** a página da questão (com KaTeX e Markdown) só é baixada quando o aluno abre uma questão. A página inicial fica com cerca de 75 kB comprimidos.
+- **Estados de erro:** sem conexão, questão inexistente e falha numa ação têm mensagem própria e botão para tentar de novo. Quando a IA está desativada, aparece o aviso de "modo básico".
+
 ## Prompts e guardrails
 
 - **Prompts versionados:** `prompts/tutor_v1.md`, `prompts/tutor_v2.md` e assim por diante. Cada interação guarda a versão usada, e a avaliação compara versões antes de trocar.

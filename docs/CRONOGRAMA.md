@@ -107,14 +107,14 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** uma interface simples e agradável para o aluno.
 
-- [ ] Projeto React + TypeScript + Tailwind com Vite
-- [ ] Tela inicial: o que é o Pista e botão para começar
-- [ ] Tela da questão: enunciado, fórmulas com KaTeX, alternativas e fonte (Inep, ano, número)
-- [ ] Conversa com o tutor, mostrando o nível da pista atual e o texto chegando em streaming
-- [ ] Botão "quero a explicação completa", com confirmação
-- [ ] Estados de carregamento, erro e IA indisponível
-- [ ] Layout responsivo (celular primeiro)
-- [ ] Testes de componentes com Vitest e Testing Library
+- [x] Projeto React + TypeScript + Tailwind com Vite
+- [x] Tela inicial: o que é o Pista e botão para começar
+- [x] Tela da questão: enunciado, fórmulas com KaTeX, alternativas e fonte (Inep, ano, número)
+- [x] Conversa com o tutor, mostrando o nível da pista atual e o texto chegando em streaming
+- [x] Botão "quero a explicação completa", com confirmação
+- [x] Estados de carregamento, erro e IA indisponível
+- [x] Layout responsivo (celular primeiro)
+- [x] Testes de componentes com Vitest e Testing Library
 
 **Entregável:** front-end consumindo a API local.
 **Pronto quando:** uma pessoa que nunca viu o projeto resolve uma questão sem ajuda.
