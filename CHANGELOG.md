@@ -25,3 +25,8 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - Imagem Docker sem privilégios, construída e testada no CI
 - Front-end em React, TypeScript e Tailwind: página inicial, página da questão com fórmulas em KaTeX, níveis de pista, conversa em streaming e explicação com confirmação
 - Testes de componentes com Vitest e Testing Library, e CI do front-end com checagem de dependências
+- Novo visual: exemplo de pista na página inicial, questões em abas por ano, página da questão em duas colunas no computador e ícone do site
+
+### Corrigido
+- Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro
+- Pontuação logo depois de uma fórmula ia sozinha para a linha de baixo
