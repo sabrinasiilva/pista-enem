@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from datetime import datetime
 from typing import Literal
 
@@ -49,17 +50,36 @@ class AlternativaSaida(Esquema):
     texto: str
 
 
+def _formula_em_texto(formula: str) -> str:
+    formula = re.sub(r"\\d?frac\{([^{}]*)\}\{([^{}]*)\}", r"\1/\2", formula)
+    formula = re.sub(r"\\(times|cdot)", "×", formula)
+    formula = re.sub(r"\\[a-zA-Z]+", " ", formula)
+    return re.sub(r"[{}_^\\]", "", formula).strip()
+
+
+def texto_simples(markdown: str, limite: int = 140) -> str:
+    """Prévia em texto puro: sem tabelas, sem LaTeX e sem marcação, cortada numa palavra inteira."""
+    linhas = [linha for linha in markdown.splitlines() if not linha.lstrip().startswith("|")]
+    texto = " ".join(linhas).replace("\\$", "\0")
+    texto = re.sub(r"\$([^$]+)\$", lambda achado: _formula_em_texto(achado.group(1)), texto)
+    texto = re.sub(r"[*`#]", "", texto.replace("\0", "$"))
+    texto = " ".join(texto.split())
+    if len(texto) <= limite:
+        return texto
+    return texto[:limite].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
+
+
 class QuestaoResumo(Esquema):
     id: str = Field(examples=["2022-141"])
     ano: int
     numero: int
     area: str = Field(examples=["matematica"])
     habilidade: str = Field(examples=["H16"])
-    inicio_do_enunciado: str
+    inicio_do_enunciado: str = Field(description="Prévia em texto puro, sem fórmulas nem tabelas")
 
     @classmethod
     def de(cls, questao: Questao) -> QuestaoResumo:
-        inicio = questao.enunciado[:140].rsplit(" ", 1)[0] + "…" if len(questao.enunciado) > 140 else questao.enunciado
+        inicio = texto_simples(questao.enunciado)
         return cls(
             id=questao.id,
             ano=questao.ano,
