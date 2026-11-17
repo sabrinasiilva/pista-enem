@@ -29,11 +29,14 @@ export function Conversa({ mensagens, emAndamento, ocupado, aoEnviar }: Props) {
   }
 
   return (
-    <section aria-labelledby="titulo-conversa" className="rounded-2xl border border-stone-200 bg-white">
+    <section aria-labelledby="titulo-conversa" className="rounded-2xl border border-stone-200 bg-white shadow-sm">
       <h2 id="titulo-conversa" className="border-b border-stone-200 px-4 py-3 font-semibold">
         Conversa com o tutor
       </h2>
-      <div className="max-h-[28rem] space-y-3 overflow-y-auto px-4 py-4" aria-live="polite">
+      <div
+        className="max-h-[28rem] min-h-32 space-y-3 overflow-y-auto px-4 py-4 lg:max-h-[calc(100vh-17rem)]"
+        aria-live="polite"
+      >
         {mensagens.length === 0 && !emAndamento && (
           <p className="text-sm text-stone-500">
             Travou antes de responder? Pergunte aqui. O tutor ajuda sem entregar a resposta.

@@ -30,7 +30,15 @@ export function CaixaDeErro({ mensagem, aoTentarDeNovo }: { mensagem: string; ao
   )
 }
 
-export function AvisoModoBasico() {
+export function AvisoModoBasico({ compacto = false }: { compacto?: boolean }) {
+  if (compacto) {
+    return (
+      <p className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-900">
+        <span className="size-1.5 rounded-full bg-amber-500" aria-hidden />
+        Modo básico: pistas prontas, sem conversa com a IA
+      </p>
+    )
+  }
   return (
     <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
       O tutor está no modo básico agora: as pistas são prontas, sem conversa com a IA. Dá para resolver as questões
