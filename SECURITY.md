@@ -39,6 +39,7 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 - Muitos estudantes do ENEM são menores de idade, por isso o projeto foi desenhado para não coletar dados pessoais desde o início (LGPD, art. 14).
 - **Plano gratuito do Gemini:** nesse plano, o Google pode usar o conteúdo enviado para melhorar os produtos dele. Por isso a interface vai avisar para não digitar dados pessoais nas mensagens, e o tutor não pede nem comenta dados pessoais. Se o projeto passar a ter muitos usuários, a migração para o plano pago (em que os dados não são usados) entra no planejamento.
 - Mensagens bloqueadas pelo guardrail de entrada não são guardadas, nem no histórico da sessão.
+- No navegador, o token da conta fica no `localStorage` e vence em 30 dias. Isso exige proteger o site contra XSS: o Markdown é renderizado sem HTML bruto, e a política de segurança de conteúdo (CSP) entra na Fase 9.
 
 ## Controles técnicos
 

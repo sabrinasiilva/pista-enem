@@ -30,6 +30,8 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - Banco de dados com SQLAlchemy e migrações do Alembic (SQLite local, pronto para PostgreSQL)
 - Progresso: meta da semana, sequência de dias, desempenho por habilidade e questões para revisar
 - Recomendações para o modo foco
+- Site: menu lateral, criar conta em três passos, entrar, recuperar a conta, perfil, meu progresso, revisar erros, modo foco com cronômetro e resumo
+- Tema claro, escuro e automático
 
 ### Corrigido
 - Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro
