@@ -42,7 +42,7 @@ Total estimado: **cerca de 110 horas**.
 - [x] Marcos (milestones) v0.1.0, v0.2.0 e v1.0.0 e issues por fase no GitHub
 - [ ] Quadro Kanban no GitHub Projects (A fazer, Fazendo, Revisão, Feito)
 - [x] Padrão de commits definido (Conventional Commits, em português)
-- [ ] Fluxo de branches: `main` protegida, trabalho em `feat/...` e `fix/...`, entrada via pull request
+- [x] Fluxo de branches: `main` protegida, trabalho em `feat/...` e `fix/...`, entrada via pull request
 - [x] Alertas do Dependabot e varredura de segredos ativados
 - [ ] Chave da API do Gemini criada e guardada fora do repositório
 - [ ] Contas criadas: Neon (banco) e Hugging Face (API)
@@ -132,6 +132,7 @@ Total estimado: **cerca de 110 horas**.
 - [ ] CORS liberado só para o domínio do front-end
 - [ ] Workflow de CI: lint, checagem de tipos e testes a cada push e pull request
 - [ ] Workflow de CD: deploy do front e da API quando a `main` muda
+- [ ] Exigir o CI verde para fazer merge na `main` (regra de proteção da branch)
 - [ ] Monitor de disponibilidade no UptimeRobot
 
 **Entregável:** Pista acessível por um link público.
