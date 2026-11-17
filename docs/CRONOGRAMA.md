@@ -90,16 +90,16 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** expor o tutor para o front-end.
 
-- [ ] Projeto FastAPI com configurações por variável de ambiente
-- [ ] `GET /questoes` (lista filtrada por área e ano) e `GET /questoes/{id}`
-- [ ] `POST /sessoes` (sessão anônima) e `POST /sessoes/{id}/respostas`
-- [ ] `POST /sessoes/{id}/mensagens` com resposta em streaming
-- [ ] `GET /health`
-- [ ] Validação de entrada e saída com Pydantic e erros padronizados
-- [ ] Documentação automática (Swagger) revisada
-- [ ] Testes de integração das rotas
+- [x] Projeto FastAPI com configurações por variável de ambiente
+- [x] `GET /questoes` (lista filtrada por área e ano) e `GET /questoes/{id}`
+- [x] `POST /sessoes` (sessão anônima) e `POST /sessoes/{id}/respostas`
+- [x] `POST /sessoes/{id}/mensagens` com resposta em streaming
+- [x] `GET /health`
+- [x] Validação de entrada e saída com Pydantic e erros padronizados
+- [x] Documentação automática (Swagger) revisada
+- [x] Testes de integração das rotas
 
-**Entregável:** API rodando localmente com Docker.
+**Entregável:** API rodando localmente com Docker (a imagem é construída e testada no CI a cada PR).
 **Pronto quando:** dá para resolver uma questão inteira só pelo Swagger.
 
 ## Fase 4 · Front-end mínimo
