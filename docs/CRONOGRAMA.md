@@ -37,13 +37,13 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** deixar o repositório, as regras de trabalho e as ferramentas prontas antes de escrever código.
 
-- [ ] README, cronograma, arquitetura e política de segurança publicados
-- [ ] Licença MIT, `.gitignore` e `CHANGELOG.md`
-- [ ] Marcos (milestones) v0.1.0, v0.2.0 e v1.0.0 e issues por fase no GitHub
+- [x] README, cronograma, arquitetura e política de segurança publicados
+- [x] Licença MIT, `.gitignore` e `CHANGELOG.md`
+- [x] Marcos (milestones) v0.1.0, v0.2.0 e v1.0.0 e issues por fase no GitHub
 - [ ] Quadro Kanban no GitHub Projects (A fazer, Fazendo, Revisão, Feito)
-- [ ] Padrão de commits definido (Conventional Commits, em português)
+- [x] Padrão de commits definido (Conventional Commits, em português)
 - [ ] Fluxo de branches: `main` protegida, trabalho em `feat/...` e `fix/...`, entrada via pull request
-- [ ] Alertas do Dependabot e varredura de segredos ativados
+- [x] Alertas do Dependabot e varredura de segredos ativados
 - [ ] Chave da API do Gemini criada e guardada fora do repositório
 - [ ] Contas criadas: Neon (banco) e Hugging Face (API)
 
