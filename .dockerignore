@@ -1,6 +1,8 @@
 # A imagem só leva o necessário (lista do que entra, não do que sai)
 *
 !api/requirements.txt
+!api/alembic.ini
+!api/migrations/**
 !api/app/**
 !prompts/**
 !data/questoes-mvp.json
