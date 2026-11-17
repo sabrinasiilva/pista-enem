@@ -1,5 +1,5 @@
 import { vi } from 'vitest'
-import type { Estado, Letra, Mensagem, Questao, QuestaoResumo, Sessao } from '../tipos'
+import type { Estado, Letra, Mensagem, Questao, QuestaoResumo, ResultadoDaQuestao, Sessao, Usuario } from '../tipos'
 
 export const QUESTAO: Questao = {
   id: '2022-141',
@@ -58,17 +58,121 @@ export function servidorFalso(opcoes: Opcoes = {}) {
     gabarito: sessao.estado === 'explicacao' || sessao.estado === 'concluida' ? GABARITO : null,
   })
 
+  // contas: apelido -> dados; token -> apelido
+  const contas = new Map<string, { usuario: Usuario; senha: string; codigo: string; resultados: ResultadoDaQuestao[] }>()
+  const tokens = new Map<string, string>()
+  const donoDaSessao = new Map<string, string>()
+
+  const acesso = (apelido: string, codigo: string | null) => {
+    const token = `token-${++contador}`
+    tokens.set(token, apelido)
+    return { token, usuario: contas.get(apelido)!.usuario, codigo_de_recuperacao: codigo }
+  }
+
+  const gravarResultado = (sessao: Sessao) => {
+    const apelido = donoDaSessao.get(sessao.id)
+    if (!apelido || (sessao.estado !== 'concluida' && sessao.estado !== 'explicacao')) return
+    contas.get(apelido)!.resultados.push({
+      questao_id: sessao.questao_id,
+      habilidade: 'H16',
+      acertou: sessao.estado === 'concluida',
+      acertou_de_primeira: sessao.estado === 'concluida' && sessao.tentativas.length === 1,
+      tentativas: sessao.tentativas.length,
+      pediu_explicacao: sessao.estado === 'explicacao',
+      concluido_em: new Date().toISOString(),
+    })
+  }
+
   const fetchFalso = vi.fn(async (endereco: string, init?: RequestInit): Promise<Response> => {
     if (estado.semConexao) throw new TypeError('Failed to fetch')
-    const { pathname } = new URL(endereco)
+    const { pathname, searchParams } = new URL(endereco)
     const corpo = init?.body ? JSON.parse(String(init.body)) : null
     const metodo = init?.method ?? 'GET'
+    const cabecalhos = (init?.headers ?? {}) as Record<string, string>
+    const token = cabecalhos.Authorization?.replace('Bearer ', '')
+    const apelidoDoToken = token ? tokens.get(token) : undefined
+    if (token && !apelidoDoToken) return erro(401, 'sessao_expirada', 'Sua sessão expirou. Entre de novo.')
+    const conta = apelidoDoToken ? contas.get(apelidoDoToken) : undefined
+
+    // ------------------------------------------------ contas
+    if (pathname === '/contas' && metodo === 'POST') {
+      if (contas.has(corpo.apelido)) return erro(409, 'apelido_em_uso', 'Esse apelido já está em uso. Escolha outro.')
+      const usuario: Usuario = {
+        id: `u-${corpo.apelido}`,
+        apelido: corpo.apelido,
+        meta_semanal: corpo.meta_semanal,
+        habilidades_foco: corpo.habilidades_foco,
+        tema: 'sistema',
+        criado_em: '2026-11-17T12:00:00Z',
+      }
+      contas.set(corpo.apelido, { usuario, senha: corpo.senha, codigo: 'ABCD-EFGH-JKMN-PQRS', resultados: [] })
+      return json(acesso(corpo.apelido, 'ABCD-EFGH-JKMN-PQRS'), 201)
+    }
+    if (pathname === '/contas/entrar') {
+      const dados = contas.get(corpo.apelido.toLowerCase())
+      if (!dados || dados.senha !== corpo.senha) return erro(401, 'credenciais_invalidas', 'Apelido ou senha incorretos.')
+      return json(acesso(dados.usuario.apelido, null))
+    }
+    if (pathname === '/contas/recuperar') {
+      const dados = contas.get(corpo.apelido)
+      if (!dados || dados.codigo !== corpo.codigo_de_recuperacao) return erro(401, 'codigo_invalido', 'Apelido ou código de recuperação incorretos.')
+      dados.senha = corpo.nova_senha
+      dados.codigo = 'NOVO-CODI-GODE-RECU'
+      return json(acesso(dados.usuario.apelido, dados.codigo))
+    }
+    if (pathname === '/contas/sair') {
+      if (token) tokens.delete(token)
+      return new Response(null, { status: 204 })
+    }
+    if (pathname === '/recomendacoes') return json(RESUMOS.slice(0, Number(searchParams.get('quantidade') ?? 5)))
+    if (pathname.startsWith('/eu')) {
+      if (!conta) return erro(401, 'login_necessario', 'Entre na sua conta para continuar.')
+      if (pathname === '/eu' && metodo === 'GET') return json(conta.usuario)
+      if (pathname === '/eu' && metodo === 'PATCH') {
+        conta.usuario = { ...conta.usuario, ...corpo }
+        return json(conta.usuario)
+      }
+      if (pathname === '/eu' && metodo === 'DELETE') {
+        if (corpo.senha !== conta.senha) return erro(401, 'senha_incorreta', 'A senha está incorreta.')
+        contas.delete(conta.usuario.apelido)
+        return new Response(null, { status: 204 })
+      }
+      if (pathname === '/eu/senha') {
+        if (corpo.senha_atual !== conta.senha) return erro(401, 'senha_incorreta', 'A senha atual está incorreta.')
+        conta.senha = corpo.nova_senha
+        return new Response(null, { status: 204 })
+      }
+      if (pathname === '/eu/progresso') {
+        const r = conta.resultados
+        return json({
+          total_de_questoes: r.length,
+          acertos_de_primeira: r.filter((x) => x.acertou_de_primeira).length,
+          sequencia_de_dias: r.length ? 1 : 0,
+          feitas_na_semana: r.length,
+          meta_semanal: conta.usuario.meta_semanal,
+          por_habilidade: r.length
+            ? [{ codigo: 'H16', descricao: 'Variação de grandezas', feitas: r.length, acertos_de_primeira: r.filter((x) => x.acertou_de_primeira).length }]
+            : [],
+          recentes: r,
+        })
+      }
+      if (pathname === '/eu/revisar') {
+        return json(
+          conta.resultados
+            .filter((x) => !x.acertou_de_primeira)
+            .map((x) => ({ questao: RESUMOS.find((q) => q.id === x.questao_id) ?? RESUMOS[0], ultima_tentativa: x })),
+        )
+      }
+    }
 
     if (pathname === '/health')
       return json({ status: 'ok', versao: '0.1.0', questoes: 1, ia: opcoes.iaDesativada ? 'desativada' : 'gemini', prompt: 'tutor_v1' })
     if (pathname === '/questoes') return json(RESUMOS)
     if (pathname.startsWith('/questoes/')) {
-      return pathname === '/questoes/2022-141' ? json(QUESTAO) : erro(404, 'questao_nao_encontrada', 'Questão não encontrada.')
+      const resumo = RESUMOS.find((q) => pathname === `/questoes/${q.id}`)
+      return resumo
+        ? json({ ...QUESTAO, id: resumo.id, ano: resumo.ano, numero: resumo.numero })
+        : erro(404, 'questao_nao_encontrada', 'Questão não encontrada.')
     }
     if (pathname === '/sessoes' && metodo === 'POST') {
       const sessao: Sessao = {
@@ -80,6 +184,7 @@ export function servidorFalso(opcoes: Opcoes = {}) {
         mensagens: [],
       }
       sessoes.set(sessao.id, sessao)
+      if (conta) donoDaSessao.set(sessao.id, conta.usuario.apelido)
       return json(visivel(sessao), 201)
     }
 
@@ -97,6 +202,7 @@ export function servidorFalso(opcoes: Opcoes = {}) {
       const acertou = letra === GABARITO
       sessao.estado = acertou ? 'concluida' : (PROXIMO[sessao.estado] ?? sessao.estado)
       falar(sessao, 'tutor', acertou ? 'Isso! Como você pensou?' : `Pista para o estado ${sessao.estado}: o que acontece com o volume?`)
+      gravarResultado(sessao)
       return json({ acertou, estado: sessao.estado, tentativas: sessao.tentativas, gabarito: visivel(sessao).gabarito, mensagem: sessao.mensagens.at(-1) })
     }
     if (acao === 'explicacao') {
@@ -104,6 +210,7 @@ export function servidorFalso(opcoes: Opcoes = {}) {
       sessao.estado = 'explicacao'
       falar(sessao, 'aluno', 'Quero ver a explicação.')
       falar(sessao, 'tutor', 'O volume é multiplicado por 8, então são 24 porções. Alternativa E.')
+      gravarResultado(sessao)
       return json({ estado: sessao.estado, gabarito: GABARITO, mensagem: sessao.mensagens.at(-1) })
     }
     if (acao === 'mensagens') {
@@ -128,6 +235,7 @@ export function servidorFalso(opcoes: Opcoes = {}) {
   return {
     fetch: fetchFalso,
     sessoes,
+    contas,
     religar: () => {
       estado.semConexao = false
     },
