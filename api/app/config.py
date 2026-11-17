@@ -27,9 +27,16 @@ class Configuracoes(BaseSettings):
     arquivo_questoes: Path = RAIZ_DO_REPOSITORIO / "data" / "questoes-mvp.json"
     pasta_prompts: Path = RAIZ_DO_REPOSITORIO / "prompts"
 
+    # endereços do front-end que podem chamar a API, separados por vírgula
+    cors_origens: str = "http://localhost:5173"
+
     @property
     def lista_de_modelos(self) -> list[str]:
         return [m.strip() for m in self.gemini_modelos.split(",") if m.strip()]
+
+    @property
+    def lista_de_origens(self) -> list[str]:
+        return [o.strip() for o in self.cors_origens.split(",") if o.strip()]
 
 
 @lru_cache
