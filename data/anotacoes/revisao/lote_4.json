@@ -1,0 +1,462 @@
+[
+  {
+    "id": "2022-142",
+    "enunciado": "Nos cinco jogos finais da última temporada, com uma média de 18 pontos por jogo, um jogador foi eleito o melhor do campeonato de basquete. Na atual temporada, cinco jogadores têm a chance de igualar ou melhorar essa média. No quadro estão registradas as pontuações desses cinco jogadores nos quatro primeiros jogos das finais deste ano.\n\n| Jogadores | Jogo 1 | Jogo 2 | Jogo 3 | Jogo 4 |\n|:---:|:---:|:---:|:---:|:---:|\n| I | 12 | 25 | 20 | 20 |\n| II | 12 | 12 | 27 | 20 |\n| III | 14 | 14 | 17 | 26 |\n| IV | 15 | 18 | 21 | 21 |\n| V | 22 | 15 | 23 | 15 |\n\nO quinto e último jogo será realizado para decidir a equipe campeã e qual o melhor jogador da temporada.\n\nO jogador que precisa fazer a menor quantidade de pontos no quinto jogo, para igualar a média de pontos do melhor jogador da temporada passada, é o",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Para ter média 18 em 5 jogos, o total precisa ser $18 \\times 5 = 90$ pontos.\nSomas dos 4 primeiros jogos: I = 77; II = 71; III = 71; IV = 75; V = 75.\nPontos necessários no 5º jogo = 90 − soma: I = 13; II = 19; III = 19; IV = 15; V = 15.\nO menor valor necessário é 13, do jogador I.\nAlternativa A.",
+    "enganos": {
+      "B": "Escolheu o jogador com a maior pontuação isolada (27 no jogo 3), confundindo um bom jogo com a maior soma; II ainda precisa de 90 − 71 = 19 pontos.",
+      "C": "Escolheu o jogador com a melhor pontuação no último jogo (26), achando que a 'tendência de alta' basta, mas III soma só 71 e precisa de 19 pontos.",
+      "D": "Errou a soma do jogador I (ou de IV) e concluiu que IV, que precisa de 90 − 75 = 15, era o que menos precisava.",
+      "E": "Errou a soma do jogador I e ficou com V, que também precisa de 90 − 75 = 15 pontos, empatado com IV e acima dos 13 de I."
+    },
+    "conceitos": [
+      "média aritmética",
+      "leitura de tabela"
+    ]
+  },
+  {
+    "id": "2022-147",
+    "enunciado": "Uma loja comercializa cinco modelos de caixas-d’água (I, II, III, IV e V), todos em formato de cilindro reto de base circular. Os modelos II, III, IV e V têm as especificações de suas dimensões dadas em relação às dimensões do modelo I, cuja profundidade é $P$ e área da base é $A_b$, como segue:\n\n- modelo II: o dobro da profundidade e a metade da área da base do modelo I;\n- modelo III: o dobro da profundidade e a metade do raio da base do modelo I;\n- modelo IV: a metade da profundidade e o dobro da área da base do modelo I;\n- modelo V: a metade da profundidade e o dobro do raio da base do modelo I.\n\nUma pessoa pretende comprar nessa loja o modelo de caixa-d’água que ofereça a maior capacidade volumétrica.\n\nO modelo escolhido deve ser o",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "Volume do cilindro: $V = A_b \\cdot P$; modelo I: $V_I = A_b P$.\nModelo II: $2P \\cdot \\frac{A_b}{2} = A_b P$. Modelo IV: $\\frac{P}{2} \\cdot 2A_b = A_b P$.\nA área da base é proporcional a $r^2$: metade do raio dá $\\frac{A_b}{4}$; dobro do raio dá $4A_b$.\nModelo III: $2P \\cdot \\frac{A_b}{4} = \\frac{A_b P}{2}$. Modelo V: $\\frac{P}{2} \\cdot 4A_b = 2A_b P$.\nO maior volume é o do modelo V. Alternativa E.",
+    "enganos": {
+      "A": "Achou que dobrar uma dimensão e reduzir outra à metade sempre 'se compensa', concluindo que nenhum supera o modelo I de referência.",
+      "B": "Valorizou o dobro da profundidade sem considerar a base reduzida: $2P \\cdot \\frac{A_b}{2} = A_b P$, que só iguala o modelo I.",
+      "C": "Tratou a metade do raio como metade da área, obtendo $2P \\cdot \\frac{A_b}{2} = A_b P$, e escolheu pelo dobro da profundidade; na verdade a área cai para $\\frac{A_b}{4}$.",
+      "D": "Tratou o dobro do raio como dobro da área (ou o contrário), achando IV e V equivalentes, e ficou com IV, que dá $\\frac{P}{2} \\cdot 2A_b = A_b P$."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "área do círculo",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2022-153",
+    "enunciado": "Em uma loja, o preço promocional de uma geladeira é de R\\$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2% sobre o preço normal.\n\nUma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado.\n\nO valor apresentado pela loja, comparado ao valor calculado pela cliente, foi",
+    "alternativas": {
+      "A": "R\\$ 2,00 menor.",
+      "B": "R\\$ 100,00 menor.",
+      "C": "R\\$ 200,00 menor.",
+      "D": "R\\$ 42,00 maior.",
+      "E": "R\\$ 80,00 maior."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Os textos têm um único símbolo R$ cada, o que deixa número ímpar de cifrões (o validador acusa); mantido literal como na prova.",
+    "gabarito_calculado": "A",
+    "resolucao": "Preço normal: $1\\,000 \\times 1{,}10 = 1\\,100$ reais.\nValor da loja no cartão: $1\\,100 \\times 0{,}98 = 1\\,078$ reais.\nCálculo da cliente: $1\\,000 \\times 1{,}08 = 1\\,080$ reais.\nDiferença: $1\\,078 - 1\\,080 = -2$, ou seja, o valor da loja é 2 reais menor.\nAlternativa A.",
+    "enganos": {
+      "B": "Aplicou o desconto de 2% sobre o preço promocional: $1\\,000 \\times 0{,}98 = 980$, e comparou com 1 080, obtendo 100 reais a menos.",
+      "C": "Leu o desconto como 20%: $1\\,100 \\times 0{,}80 = 880$, e comparou com 1 080, obtendo 200 reais a menos.",
+      "D": "Somou os 2% em vez de descontar: $1\\,100 \\times 1{,}02 = 1\\,122$, e fez $1\\,122 - 1\\,080 = 42$ a mais.",
+      "E": "Tomou como diferença o próprio acréscimo calculado pela cliente: $1\\,080 - 1\\,000 = 80$, como se a loja cobrasse a mais."
+    },
+    "conceitos": [
+      "porcentagem",
+      "acréscimos e descontos sucessivos"
+    ]
+  },
+  {
+    "id": "2022-162",
+    "enunciado": "Em janeiro de 2013, foram declaradas 1 794 272 admissões e 1 765 372 desligamentos no Brasil, ou seja, foram criadas 28 900 vagas de emprego, segundo dados do Cadastro Geral de Empregados e Desempregados (Caged), divulgados pelo Ministério do Trabalho e Emprego (MTE). Segundo o Caged, o número de vagas criadas em janeiro de 2013 sofreu uma queda de 75%, quando comparado com o mesmo período de 2012.\n\nDisponível em: http://portal.mte.gov.br. Acesso em: 23 fev. 2013 (adaptado).\n\nDe acordo com as informações dadas, o número de vagas criadas em janeiro de 2012 foi",
+    "alternativas": {
+      "A": "16 514.",
+      "B": "86 700.",
+      "C": "115 600.",
+      "D": "441 343.",
+      "E": "448 568."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Inclui a linha de fonte que aparece no original.",
+    "gabarito_calculado": "C",
+    "resolucao": "Seja $x$ o número de vagas de janeiro de 2012.\nQueda de 75% significa que 2013 ficou com 25% de 2012: $0{,}25x = 28\\,900$.\n$x = \\frac{28\\,900}{0{,}25} = 28\\,900 \\times 4 = 115\\,600$.\nAlternativa C.",
+    "enganos": {
+      "A": "Dividiu por 1,75 como se 2012 fosse 75% menor que 2013: $\\frac{28\\,900}{1{,}75} \\approx 16\\,514$.",
+      "B": "Calculou só os 75% que 'sumiram': $28\\,900 \\times 3 = 86\\,700$, esquecendo de somar as 28 900 vagas que restaram.",
+      "D": "Usou o número de desligamentos em vez das vagas criadas: $\\frac{1\\,765\\,372}{4} = 441\\,343$.",
+      "E": "Usou o número de admissões em vez das vagas criadas: $\\frac{1\\,794\\,272}{4} = 448\\,568$."
+    },
+    "conceitos": [
+      "porcentagem",
+      "variação percentual"
+    ]
+  },
+  {
+    "id": "2022-167",
+    "enunciado": "Uma das informações que pode auxiliar no dimensionamento do número de pediatras que devem atender em uma Unidade Básica de Saúde (UBS) é o número que representa a mediana da quantidade de crianças por família existente na região sob sua responsabilidade. O quadro mostra a distribuição das frequências do número de crianças por família na região de responsabilidade de uma UBS.\n\n| Número de crianças por família | Frequência |\n|:---:|:---:|\n| 0 | 100 |\n| 1 | 400 |\n| 2 | 200 |\n| 3 | 150 |\n| 4 | 100 |\n| 5 | 50 |\n\nO número que representa a mediana da quantidade de crianças por família nessa região é",
+    "alternativas": {
+      "A": "1,0.",
+      "B": "1,5.",
+      "C": "1,9.",
+      "D": "2,1.",
+      "E": "2,5."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Total de famílias: 100 + 400 + 200 + 150 + 100 + 50 = 1 000 (número par).\nA mediana é a média do 500º e do 501º valores ordenados.\nFrequências acumuladas: até 0 crianças, 100; até 1, 500; até 2, 700.\nO 500º valor é 1 e o 501º é 2, logo a mediana é $\\frac{1 + 2}{2} = 1{,}5$.\nAlternativa B.",
+    "enganos": {
+      "A": "Tomou só o 500º valor (ou a moda, que é 1, com frequência 400) em vez da média entre o 500º e o 501º.",
+      "C": "Calculou a média aritmética em vez da mediana: $\\frac{0 + 400 + 400 + 450 + 400 + 250}{1\\,000} = 1{,}9$.",
+      "D": "Calculou a média ignorando as famílias sem crianças: $\\frac{1\\,900}{900} \\approx 2{,}1$.",
+      "E": "Tirou a mediana dos valores 0 a 5 da coluna, sem considerar as frequências: $\\frac{2 + 3}{2} = 2{,}5$."
+    },
+    "conceitos": [
+      "mediana",
+      "distribuição de frequências"
+    ]
+  },
+  {
+    "id": "2022-172",
+    "enunciado": "Uma montadora de automóveis divulgou que oferta a seus clientes mais de 1 000 configurações diferentes de carro, variando o modelo, a motorização, os opcionais e a cor do veículo. Atualmente, ela oferece 7 modelos de carros com 2 tipos de motores: 1.0 e 1.6. Já em relação aos opcionais, existem 3 escolhas possíveis: central multimídia, rodas de liga leve e bancos de couro, podendo o cliente optar por incluir um, dois, três ou nenhum dos opcionais disponíveis.\n\nPara ser fiel à divulgação feita, a quantidade mínima de cores que a montadora deverá disponibilizar a seus clientes é",
+    "alternativas": {
+      "A": "8.",
+      "B": "9.",
+      "C": "11.",
+      "D": "18.",
+      "E": "24."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Opcionais: cada um dos 3 pode ser incluído ou não, o que dá $2^3 = 8$ possibilidades (incluindo nenhum).\nSem a cor, há $7 \\times 2 \\times 8 = 112$ configurações.\nCom $c$ cores: $112c > 1\\,000 \\Rightarrow c > 8{,}93$.\nO menor inteiro é $c = 9$ ($112 \\times 9 = 1\\,008$).\nAlternativa B.",
+    "enganos": {
+      "A": "Arredondou $\\frac{1\\,000}{112} \\approx 8{,}93$ para baixo; com 8 cores são só $112 \\times 8 = 896$ configurações.",
+      "C": "Esqueceu a opção 'nenhum opcional': $2^3 - 1 = 7$, então $7 \\times 2 \\times 7 = 98$ e $\\frac{1\\,000}{98} \\approx 10{,}2$, arredondando para 11.",
+      "D": "Contou os opcionais como 4 escolhas (nenhum, um, dois ou três): $7 \\times 2 \\times 4 = 56$ e $\\frac{1\\,000}{56} \\approx 17{,}9$, arredondando para 18.",
+      "E": "Contou os opcionais como apenas 3 escolhas: $7 \\times 2 \\times 3 = 42$ e $\\frac{1\\,000}{42} \\approx 23{,}8$, arredondando para 24."
+    },
+    "conceitos": [
+      "princípio multiplicativo",
+      "subconjuntos",
+      "inequação"
+    ]
+  },
+  {
+    "id": "2022-179",
+    "enunciado": "A World Series é a decisão do campeonato norte-americano de beisebol. Os dois times que chegam a essa fase jogam, entre si, até sete partidas. O primeiro desses times que completar quatro vitórias é declarado campeão.\n\nConsidere que, em todas as partidas, a probabilidade de qualquer um dos dois times vencer é sempre $\\frac{1}{2}$.\n\nQual é a probabilidade de o time campeão ser aquele que venceu a primeira partida da World Series?",
+    "alternativas": {
+      "A": "$\\frac{35}{64}$",
+      "B": "$\\frac{40}{64}$",
+      "C": "$\\frac{42}{64}$",
+      "D": "$\\frac{44}{64}$",
+      "E": "$\\frac{52}{64}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No original, \"World Series\" está em itálico.",
+    "gabarito_calculado": "C",
+    "resolucao": "Supor que as 7 partidas sejam sempre jogadas não muda quem é campeão (quem chega a 4 vitórias primeiro tem a maioria das 7).\nDado que o time A venceu a 1ª partida, restam 6 partidas com $2^6 = 64$ resultados igualmente prováveis.\nA é campeão se vencer pelo menos 3 dessas 6 partidas.\nCasos favoráveis: $\\binom{6}{3} + \\binom{6}{4} + \\binom{6}{5} + \\binom{6}{6} = 20 + 15 + 6 + 1 = 42$.\nProbabilidade: $\\frac{42}{64}$. Alternativa C.",
+    "enganos": {
+      "A": "Usou $\\binom{7}{3} = 35$, contando as partidas como se fossem 7 restantes em vez de 6, sobre 64.",
+      "B": "Não há um erro de cálculo claro que leve a 40; provável estimativa ou erro ao somar as parcelas (por exemplo, trocando 12 por 10 em uma das parcelas 8 + 12 + 12 + 10).",
+      "D": "Fez o complementar de forma errada, subtraindo só o caso de exatamente 3 vitórias: $1 - \\frac{\\binom{6}{3}}{64} = \\frac{44}{64}$.",
+      "E": "Somou as probabilidades de fechar em 4, 5, 6 e 7 jogos sem fixar a última vitória no 7º jogo: $\\frac{8 + 12 + 12 + 20}{64} = \\frac{52}{64}$, usando $\\binom{6}{3}$ no lugar de $\\binom{5}{2}$."
+    },
+    "conceitos": [
+      "probabilidade",
+      "combinação",
+      "distribuição binomial"
+    ]
+  },
+  {
+    "id": "2023-149",
+    "enunciado": "Um tipo de semente necessita de bastante água nos dois primeiros meses após o plantio. Um produtor pretende estabelecer o melhor momento para o plantio desse tipo de semente, nos meses de outubro a março. Após consultar a previsão do índice mensal de precipitação de chuva (ImPC) da região onde ocorrerá o plantio, para o período chuvoso de 2020-2021, ele obteve os seguintes dados:\n\n- outubro/2020: ImPC = 250 mm;\n- novembro/2020: ImPC = 150 mm;\n- dezembro/2020: ImPC = 200 mm;\n- janeiro/2021: ImPC = 450 mm;\n- fevereiro/2021: ImPC = 100 mm;\n- março/2021: ImPC = 200 mm.\n\nCom base nessas previsões, ele precisa escolher dois meses consecutivos em que a média mensal de precipitação seja a maior possível.\n\nNo início de qual desses meses o produtor deverá plantar esse tipo de semente?",
+    "alternativas": {
+      "A": "Outubro.",
+      "B": "Novembro.",
+      "C": "Dezembro.",
+      "D": "Janeiro.",
+      "E": "Fevereiro."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Calcular a média de cada par de meses consecutivos.\nOut–Nov: (250 + 150)/2 = 200; Nov–Dez: (150 + 200)/2 = 175; Dez–Jan: (200 + 450)/2 = 325.\nJan–Fev: (450 + 100)/2 = 275; Fev–Mar: (100 + 200)/2 = 150.\nA maior média é a de dezembro e janeiro, então o plantio deve ser no início de dezembro.\nAlternativa C.",
+    "enganos": {
+      "A": "Escolheu o mês de maior chuva antes de janeiro (250 mm) ou o primeiro par, sem comparar as médias: out–nov dá só (250 + 150)/2 = 200.",
+      "B": "Entendeu que os dois meses chuvosos devem vir depois do mês do plantio e plantou em novembro para pegar dezembro e janeiro.",
+      "D": "Escolheu o mês de maior ImPC isolado (450 mm), mas janeiro e fevereiro têm média (450 + 100)/2 = 275, menor que 325.",
+      "E": "Não há um erro de cálculo claro que leve a fevereiro; provável escolha do mês logo após o pico de janeiro, como se a chuva acumulada contasse."
+    },
+    "conceitos": [
+      "média aritmética",
+      "comparação de dados"
+    ]
+  },
+  {
+    "id": "2023-156",
+    "enunciado": "Em um colégio público, a admissão no primeiro ano se dá por sorteio. Neste ano há 55 candidatos, cujas inscrições são numeradas de 01 a 55. O sorteio de cada número de inscrição será realizado em etapas, utilizando-se duas urnas. Da primeira urna será sorteada uma bola, dentre bolas numeradas de 0 a 9, que representará o algarismo das unidades do número de inscrição a ser sorteado e, em seguida, da segunda urna, será sorteada uma bola para representar o algarismo das dezenas desse número. Depois do primeiro sorteio, e antes de se sortear o algarismo das dezenas, as bolas que estarão presentes na segunda urna serão apenas aquelas cujos números formam, com o algarismo já sorteado, um número de 01 a 55.\n\nAs probabilidades de os candidatos de inscrição número 50 e 02 serem sorteados são, respectivamente,",
+    "alternativas": {
+      "A": "$\\frac{1}{50}$ e $\\frac{1}{60}$.",
+      "B": "$\\frac{1}{50}$ e $\\frac{1}{50}$.",
+      "C": "$\\frac{1}{50}$ e $\\frac{1}{10}$.",
+      "D": "$\\frac{1}{55}$ e $\\frac{1}{54}$.",
+      "E": "$\\frac{1}{100}$ e $\\frac{1}{100}$."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Inscrição 50: a unidade 0 sai com probabilidade $\\frac{1}{10}$.\nCom unidade 0, as dezenas possíveis formam 10, 20, 30, 40 e 50 (00 não vale): 5 bolas, logo $\\frac{1}{5}$. Assim, $P(50) = \\frac{1}{10} \\cdot \\frac{1}{5} = \\frac{1}{50}$.\nInscrição 02: a unidade 2 sai com probabilidade $\\frac{1}{10}$.\nCom unidade 2, as dezenas possíveis formam 02, 12, 22, 32, 42 e 52: 6 bolas, logo $\\frac{1}{6}$. Assim, $P(02) = \\frac{1}{10} \\cdot \\frac{1}{6} = \\frac{1}{60}$.\nAlternativa A.",
+    "enganos": {
+      "B": "Supôs 5 dezenas possíveis para qualquer unidade, esquecendo a dezena 0 no caso do 02: $\\frac{1}{10} \\cdot \\frac{1}{5} = \\frac{1}{50}$.",
+      "C": "Achou que, sorteada a unidade 2, a dezena 0 viria automaticamente, ficando só com $\\frac{1}{10}$ para o 02.",
+      "D": "Ignorou o processo das urnas e tratou como sorteio direto entre 55 números, e depois sem reposição: $\\frac{1}{55}$ e $\\frac{1}{54}$.",
+      "E": "Considerou as duas urnas sempre com 10 bolas: $\\frac{1}{10} \\cdot \\frac{1}{10} = \\frac{1}{100}$ para ambos."
+    },
+    "conceitos": [
+      "probabilidade",
+      "probabilidade condicional",
+      "princípio multiplicativo"
+    ]
+  },
+  {
+    "id": "2023-162",
+    "enunciado": "Ao realizar o cadastro em um aplicativo de investimentos, foi solicitado ao usuário que criasse uma senha, sendo permitido o uso somente dos seguintes caracteres:\n\n- algarismos de 0 a 9;\n- 26 letras minúsculas do alfabeto;\n- 26 letras maiúsculas do alfabeto;\n- 6 caracteres especiais !, @, #, \\$, *, &.\n\nTrês tipos de estruturas para senha foram apresentadas ao usuário:\n\n- tipo I: formada por quaisquer quatro caracteres distintos, escolhidos dentre os permitidos;\n- tipo II: formada por cinco caracteres distintos, iniciando por três letras, seguidas por um algarismo e, ao final, um caractere especial;\n- tipo III: formada por seis caracteres distintos, iniciando por duas letras, seguidas por dois algarismos e, ao final, dois caracteres especiais.\n\nConsidere $p_1$, $p_2$ e $p_3$ as probabilidades de se descobrirem ao acaso, na primeira tentativa, as senhas dos tipos I, II e III, respectivamente.\n\nNessas condições, o tipo de senha que apresenta a menor probabilidade de ser descoberta ao acaso, na primeira tentativa, é o",
+    "alternativas": {
+      "A": "tipo I, pois $p_1 < p_2 < p_3$.",
+      "B": "tipo I, pois tem menor quantidade de caracteres.",
+      "C": "tipo II, pois tem maior quantidade de letras.",
+      "D": "tipo III, pois $p_3 < p_2 < p_1$.",
+      "E": "tipo III, pois tem maior quantidade de caracteres."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O caractere especial cifrão foi escrito como \\$ para não abrir fórmula; isso deixa número ímpar de $ no enunciado (o validador acusa). O dataset troca os tipos I, II e III por 1, 2 e 3 e escreve os caracteres especiais por extenso.",
+    "gabarito_calculado": "A",
+    "resolucao": "Caracteres permitidos: $10 + 26 + 26 + 6 = 68$ (52 letras, 10 algarismos, 6 especiais).\nTipo I: $68 \\cdot 67 \\cdot 66 \\cdot 65 = 19\\,545\\,240$ senhas.\nTipo II: $52 \\cdot 51 \\cdot 50 \\cdot 10 \\cdot 6 = 7\\,956\\,000$ senhas.\nTipo III: $52 \\cdot 51 \\cdot 10 \\cdot 9 \\cdot 6 \\cdot 5 = 7\\,160\\,400$ senhas.\nComo $p = \\frac{1}{N}$, quanto mais senhas, menor a probabilidade: $p_1 < p_2 < p_3$.\nA menor probabilidade é a do tipo I. Alternativa A.",
+    "enganos": {
+      "B": "Acertou o tipo, mas pela razão errada: ter menos caracteres não torna a senha mais difícil; o que importa é o total de senhas, 19 545 240 no tipo I.",
+      "C": "Achou que mais letras bastam, sem calcular: o tipo II tem $7\\,956\\,000$ senhas, menos que as $19\\,545\\,240$ do tipo I.",
+      "D": "Supôs que mais caracteres sempre geram mais senhas, sem perceber que as restrições de posição reduzem o tipo III a $7\\,160\\,400$ senhas.",
+      "E": "Julgou só pelo tamanho da senha (6 caracteres), ignorando que as restrições por posição deixam o tipo III com o menor número de senhas."
+    },
+    "conceitos": [
+      "princípio multiplicativo",
+      "arranjo",
+      "probabilidade"
+    ]
+  },
+  {
+    "id": "2023-171",
+    "enunciado": "O gerente de uma fábrica pretende comparar a evolução das vendas de dois produtos similares (I e II). Para isso, passou a verificar o número de unidades vendidas de cada um desses produtos em cada mês. Os resultados dessa verificação, para os meses de abril a junho, são apresentados na tabela.\n\n| Produto | Vendas em abril (unidade) | Vendas em maio (unidade) | Vendas em junho (unidade) |\n|:---:|:---:|:---:|:---:|\n| I | 80 | 90 | 100 |\n| II | 190 | 170 | 150 |\n\nO gerente estava decidido a cessar a produção do produto II no mês seguinte àquele em que as vendas do produto I superassem as do produto II.\n\nSuponha que a variação na quantidade de unidades vendidas dos produtos I e II se manteve, mês a mês, como no período representado na tabela.\n\nEm qual mês o produto II parou de ser produzido?",
+    "alternativas": {
+      "A": "Junho.",
+      "B": "Julho.",
+      "C": "Agosto.",
+      "D": "Setembro.",
+      "E": "Outubro."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset troca I e II por 1 e 2 no texto e por \"l\" e \"ll\" na tabela.",
+    "gabarito_calculado": "D",
+    "resolucao": "Variação mensal: produto I aumenta 10 unidades; produto II diminui 20 unidades.\nJulho: I = 110 e II = 130 (I ainda abaixo).\nAgosto: I = 120 e II = 110 (I supera II pela primeira vez).\nA produção de II cessa no mês seguinte a agosto: setembro.\nAlternativa D.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve a junho; provável escolha do último mês da tabela, sem projetar as vendas.",
+      "B": "Usou a variação de abril a junho como se fosse mensal (+20 e −40): em julho I = 120 e II = 110, e ainda esqueceu do 'mês seguinte'.",
+      "C": "Achou corretamente que I supera II em agosto (120 contra 110), mas esqueceu que a produção só para no mês seguinte.",
+      "E": "Considerou que II também cai 10 por mês (como I sobe 10): I supera II em setembro (130 contra 120) e a produção pararia em outubro."
+    },
+    "conceitos": [
+      "sequência numérica",
+      "progressão aritmética",
+      "leitura de tabela"
+    ]
+  },
+  {
+    "id": "2023-178",
+    "enunciado": "O calendário maia apresenta duas contagens simultâneas de anos, o chamado ano Tzolkim, composto por 260 dias e que determinava o calendário religioso, e o ano Haab, composto por 365 dias e que determinava o calendário agrícola. Um historiador encontrou evidências de que gerações de uma mesma família governaram certa comunidade maia pelo período de 20 ciclos, sendo cada ciclo formado por 52 anos Haab.\n\nDisponível em: www.suapesquisa.com. Acesso em: 20 ago. 2014.\n\nDe acordo com as informações fornecidas, durante quantos anos Tzolkim aquela comunidade maia foi governada por tal família?",
+    "alternativas": {
+      "A": "741",
+      "B": "1 040",
+      "C": "1 460",
+      "D": "2 100",
+      "E": "5 200"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Inclui a linha de fonte que aparece no original.",
+    "gabarito_calculado": "C",
+    "resolucao": "Período em anos Haab: $20 \\times 52 = 1\\,040$.\nEm dias: $1\\,040 \\times 365 = 379\\,600$ dias.\nEm anos Tzolkim: $\\frac{379\\,600}{260} = 1\\,460$.\nAlternativa C.",
+    "enganos": {
+      "A": "Inverteu a conversão: $\\frac{1\\,040 \\times 260}{365} \\approx 741$.",
+      "B": "Parou nos anos Haab, $20 \\times 52 = 1\\,040$, sem converter para anos Tzolkim.",
+      "D": "Não há um caminho claro; 2 100 coincide com $20 \\times (365 - 260) = 20 \\times 105$, mistura sem sentido das durações.",
+      "E": "Multiplicou os ciclos pela duração do ano Tzolkim: $20 \\times 260 = 5\\,200$."
+    },
+    "conceitos": [
+      "conversão de unidades",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2024-140",
+    "enunciado": "O arquiteto Renzo Piano exibiu a maquete da nova sede do Museu Whitney de Arte Americana, um prédio assimétrico que tem um vão aberto para a galeria principal, cuja medida da área é 1 672 m².\n\nConsidere que a escala da maquete exibida é 1 : 200.\n\nÉpoca, n. 682, jun. 2011 (adaptado).\n\nA medida da área do vão aberto nessa maquete, em centímetro quadrado, é",
+    "alternativas": {
+      "A": "4,18.",
+      "B": "8,36.",
+      "C": "41,80.",
+      "D": "83,60.",
+      "E": "418,00."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Inclui a linha de fonte (Época, em itálico no original). O dataset escreve a escala como \"1 para 200\".",
+    "gabarito_calculado": "E",
+    "resolucao": "Escala linear $1 : 200$ implica escala de área $1 : 200^2 = 1 : 40\\,000$.\nÁrea real em cm²: $1\\,672 \\text{ m}^2 = 1\\,672 \\times 10\\,000 = 16\\,720\\,000 \\text{ cm}^2$.\nÁrea na maquete: $\\frac{16\\,720\\,000}{40\\,000} = 418 \\text{ cm}^2$.\nAlternativa E.",
+    "enganos": {
+      "A": "Aplicou a escala ao quadrado, mas converteu m² em cm² multiplicando por 100: $\\frac{1\\,672 \\times 100}{40\\,000} = 4{,}18$.",
+      "B": "Aplicou só a escala linear e não converteu a unidade: $\\frac{1\\,672}{200} = 8{,}36$.",
+      "C": "Aplicou a escala ao quadrado, mas converteu m² em cm² multiplicando por 1 000: $\\frac{1\\,672 \\times 1\\,000}{40\\,000} = 41{,}8$.",
+      "D": "Não há uma conta exata clara; provavelmente aplicou só a escala linear ($\\frac{16\\,720\\,000}{200} = 83\\,600$) e se perdeu na vírgula ou na unidade."
+    },
+    "conceitos": [
+      "escala",
+      "razão de áreas",
+      "conversão de unidades"
+    ]
+  },
+  {
+    "id": "2024-147",
+    "enunciado": "Uma criança, utilizando um aplicativo, escreveu uma mensagem para enviar a um amigo. Essa mensagem foi escrita seguindo estas etapas:\n\n| Etapas | Visor de escrita |\n|:---|:---|\n| 1ª etapa: inseriu três figuras do tipo 🙂 no visor de escrita da mensagem; | 🙂🙂🙂 |\n| 2ª etapa: copiou o que havia inserido anteriormente e colou (inseriu o que havia copiado) ao lado; | 🙂🙂🙂🙂🙂🙂 |\n| 3ª etapa: copiou o que tinha no visor na 2ª etapa e colou ao lado. | 🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂🙂 |\n\nA criança seguiu copiando e colando, em cada etapa, o que tinha no visor na etapa imediatamente anterior, até concluir a 20ª etapa. Em seguida, enviou a mensagem.\n\nQual foi o total de figuras contidas na mensagem enviada?",
+    "alternativas": {
+      "A": "$3 \\times 2^{19}$",
+      "B": "$3 \\times 2^{20}$",
+      "C": "$3 \\times 2^{21}$",
+      "D": "$3 \\times 2^{20} - 1$",
+      "E": "$3 \\times 2^{20} - 3$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "As figuras do original são carinhas sorridentes, representadas pelo emoji 🙂. O dataset escreve \"vigésima etapa\" e as alternativas D e E como \"3(2^20) - 1\" e \"3(2^20) - 3\".",
+    "gabarito_calculado": "A",
+    "resolucao": "Etapa 1: 3 figuras; etapa 2: 6; etapa 3: 12. A cada etapa a quantidade dobra.\nNa etapa $n$ há $3 \\times 2^{n-1}$ figuras (progressão geométrica de razão 2).\nNa 20ª etapa: $3 \\times 2^{19}$ figuras.\nAlternativa A.",
+    "enganos": {
+      "B": "Usou o expoente igual ao número da etapa: $3 \\times 2^{20}$, sem perceber que a etapa 1 tem $3 \\times 2^0$.",
+      "C": "Errou o expoente em duas unidades, por exemplo contando a etapa 1 como já duplicada: $3 \\times 2^{21}$.",
+      "D": "Tentou usar a fórmula da soma da PG e errou: subtraiu só 1 de $3 \\times 2^{20}$.",
+      "E": "Somou as figuras de todas as etapas: $3(1 + 2 + \\dots + 2^{19}) = 3(2^{20} - 1) = 3 \\times 2^{20} - 3$, mas a mensagem enviada é só a do visor final."
+    },
+    "conceitos": [
+      "progressão geométrica",
+      "potenciação"
+    ]
+  },
+  {
+    "id": "2024-152",
+    "enunciado": "João e Felipe participaram, na escola, de uma maratona de matemática na qual, durante uma semana, resolveram 200 questões cada. Nessa maratona, a porcentagem $P$ de acertos de cada participante é convertida em um conceito:\n\n- insatisfatório: se $0 \\leq P < 50$;\n- regular: se $50 \\leq P < 60$;\n- bom: se $60 \\leq P < 75$;\n- muito bom: se $75 \\leq P < 90$;\n- excelente: se $90 \\leq P \\leq 100$.\n\nJoão acertou 75% das questões da maratona e Felipe acertou 30% a menos que a quantidade de questões que João acertou.\n\nOs conceitos de João e Felipe foram, respectivamente,",
+    "alternativas": {
+      "A": "muito bom e bom.",
+      "B": "muito bom e regular.",
+      "C": "muito bom e insatisfatório.",
+      "D": "bom e regular.",
+      "E": "bom e insatisfatório."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve as desigualdades por extenso.",
+    "gabarito_calculado": "B",
+    "resolucao": "João: $P = 75$, e $75 \\leq P < 90$ dá muito bom ($0{,}75 \\times 200 = 150$ acertos).\nFelipe acertou 30% a menos que 150: $150 \\times 0{,}70 = 105$ acertos.\nPorcentagem de Felipe: $\\frac{105}{200} = 52{,}5\\%$, e $50 \\leq P < 60$ dá regular.\nAlternativa B.",
+    "enganos": {
+      "A": "Usou como porcentagem de Felipe a razão em relação aos acertos de João: $\\frac{105}{150} = 70\\%$, que daria bom.",
+      "C": "Subtraiu os percentuais diretamente: $75\\% - 30\\% = 45\\%$, que daria insatisfatório.",
+      "D": "Classificou $P = 75$ como bom, esquecendo que o limite 75 pertence a muito bom ($75 \\leq P < 90$).",
+      "E": "Errou o limite de João (75 como bom) e ainda subtraiu os percentuais: $75 - 30 = 45\\%$, insatisfatório."
+    },
+    "conceitos": [
+      "porcentagem",
+      "desigualdades"
+    ]
+  },
+  {
+    "id": "2024-160",
+    "enunciado": "Uma tubulação despeja sempre o mesmo volume de água por unidade de tempo em uma caixa-d’água, o que significa dizer que a vazão de água nessa tubulação é constante. Na junção dessa tubulação com a caixa-d’água, está instalada uma membrana de filtragem cujo objetivo é filtrar eventuais impurezas presentes na água, combinado a um bom fluxo de água. O fluxo ($\\phi$) de água através da superfície da membrana é diretamente proporcional à vazão de água na tubulação, medida em mililitro por segundo, e inversamente proporcional à área da superfície da membrana, medida em centímetro quadrado.\n\nA unidade de medida adequada para descrever o fluxo ($\\phi$) de água que atravessa a superfície da membrana é",
+    "alternativas": {
+      "A": "$\\text{mL} \\cdot \\text{s} \\cdot \\text{cm}^2$",
+      "B": "$\\frac{\\text{mL}}{\\text{s}} \\cdot \\text{cm}^2$",
+      "C": "$\\frac{\\text{mL}}{\\text{cm}^2 \\cdot \\text{s}}$",
+      "D": "$\\frac{\\text{cm}^2 \\cdot \\text{s}}{\\text{mL}}$",
+      "E": "$\\frac{\\text{cm}^2}{\\text{mL} \\cdot \\text{s}}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve \"fi\" no lugar do símbolo $\\phi$ e as unidades das alternativas por extenso.",
+    "gabarito_calculado": "C",
+    "resolucao": "Diretamente proporcional à vazão e inversamente à área: $\\phi = k \\cdot \\frac{\\text{vazão}}{\\text{área}}$.\nVazão em $\\frac{\\text{mL}}{\\text{s}}$ e área em $\\text{cm}^2$.\nUnidade: $\\frac{\\text{mL}/\\text{s}}{\\text{cm}^2} = \\frac{\\text{mL}}{\\text{cm}^2 \\cdot \\text{s}}$.\nAlternativa C.",
+    "enganos": {
+      "A": "Multiplicou todas as unidades, tratando a vazão como $\\text{mL} \\cdot \\text{s}$ e a área como fator direto.",
+      "B": "Tratou a área como diretamente proporcional: $\\frac{\\text{mL}}{\\text{s}} \\cdot \\text{cm}^2$.",
+      "D": "Inverteu a razão inteira, como se o fluxo fosse inversamente proporcional à vazão e diretamente à área: $\\frac{\\text{cm}^2 \\cdot \\text{s}}{\\text{mL}}$.",
+      "E": "Escreveu a vazão como $\\text{mL} \\cdot \\text{s}$ e ainda inverteu as proporcionalidades: $\\frac{\\text{cm}^2}{\\text{mL} \\cdot \\text{s}}$."
+    },
+    "conceitos": [
+      "grandezas proporcionais",
+      "unidades de medida",
+      "análise dimensional"
+    ]
+  },
+  {
+    "id": "2024-164",
+    "enunciado": "Um hospital tem 7 médicos cardiologistas e 6 médicos neurologistas em seu quadro de funcionários. Para executar determinada atividade, a direção desse hospital formará uma equipe com 5 médicos, sendo, pelo menos, 3 cardiologistas.\n\nA expressão numérica que representa o número máximo de maneiras distintas de formar essa equipe é",
+    "alternativas": {
+      "A": "$\\frac{7!}{4!} \\times \\frac{6!}{4!}$",
+      "B": "$\\frac{7!}{3! \\times 4!} \\times \\frac{6!}{2! \\times 4!}$",
+      "C": "$\\frac{7!}{3! \\times 4!} + \\frac{6!}{2! \\times 4!} + \\frac{5!}{1! \\times 4!}$",
+      "D": "$\\left(\\frac{7!}{3! \\times 4!} + \\frac{6!}{2! \\times 4!}\\right) \\times \\left(\\frac{7!}{4! \\times 3!} + \\frac{6!}{1! \\times 5!}\\right) \\times \\left(\\frac{7!}{5! \\times 2!} + \\frac{6!}{0! \\times 6!}\\right)$",
+      "E": "$\\left(\\frac{7!}{3! \\times 4!} \\times \\frac{6!}{2! \\times 4!}\\right) + \\left(\\frac{7!}{4! \\times 3!} \\times \\frac{6!}{1! \\times 5!}\\right) + \\left(\\frac{7!}{5! \\times 2!} \\times \\frac{6!}{0! \\times 6!}\\right)$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve as expressões por extenso.",
+    "gabarito_calculado": "E",
+    "resolucao": "Pelo menos 3 cardiologistas em 5 médicos: casos 3C + 2N, 4C + 1N e 5C + 0N.\n3C + 2N: $\\binom{7}{3} \\times \\binom{6}{2} = \\frac{7!}{3! \\times 4!} \\times \\frac{6!}{2! \\times 4!}$.\n4C + 1N: $\\binom{7}{4} \\times \\binom{6}{1} = \\frac{7!}{4! \\times 3!} \\times \\frac{6!}{1! \\times 5!}$.\n5C + 0N: $\\binom{7}{5} \\times \\binom{6}{0} = \\frac{7!}{5! \\times 2!} \\times \\frac{6!}{0! \\times 6!}$.\nCasos exclusivos se somam (princípio aditivo) e escolhas dentro de um caso se multiplicam: 525 + 210 + 21 = 756.\nAlternativa E.",
+    "enganos": {
+      "A": "Usou arranjos (ordem importando) e só o caso de exatamente 3 cardiologistas: $A_{7,3} \\times A_{6,2} = \\frac{7!}{4!} \\times \\frac{6!}{4!}$.",
+      "B": "Considerou só o caso de exatamente 3 cardiologistas e 2 neurologistas, esquecendo os casos com 4 e 5 cardiologistas.",
+      "C": "Somou escolhas que deveriam ser multiplicadas e encadeou as etapas sem sentido: $\\binom{7}{3} + \\binom{6}{2} + \\binom{5}{1}$.",
+      "D": "Trocou os papéis das operações: somou as escolhas dentro de cada caso e multiplicou os casos entre si."
+    },
+    "conceitos": [
+      "combinação",
+      "princípio aditivo",
+      "princípio multiplicativo"
+    ]
+  },
+  {
+    "id": "2024-175",
+    "enunciado": "A densidade demográfica de uma região é definida como sendo a razão entre o número de habitantes dessa região e sua área, expressa na unidade habitantes por quilômetro quadrado.\n\nUma região $R$ é subdividida em várias outras, sendo uma delas a região $Q$. A área de $Q$ é igual a três quartos da área de $R$, e o número de habitantes de $Q$ é igual à metade do número de habitantes de $R$. As densidades demográficas correspondentes a essas regiões são denotadas por $d(Q)$ e $d(R)$.\n\nA expressão que relaciona $d(Q)$ e $d(R)$ é",
+    "alternativas": {
+      "A": "$d(Q) = \\frac{1}{4} d(R)$",
+      "B": "$d(Q) = \\frac{1}{2} d(R)$",
+      "C": "$d(Q) = \\frac{3}{4} d(R)$",
+      "D": "$d(Q) = \\frac{3}{2} d(R)$",
+      "E": "$d(Q) = \\frac{2}{3} d(R)$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve \"d de Q\" e as frações por extenso.",
+    "gabarito_calculado": "E",
+    "resolucao": "Seja $H$ o número de habitantes e $A$ a área de $R$: $d(R) = \\frac{H}{A}$.\nPara $Q$: habitantes $\\frac{H}{2}$ e área $\\frac{3A}{4}$.\n$d(Q) = \\frac{H/2}{3A/4} = \\frac{H}{2} \\cdot \\frac{4}{3A} = \\frac{2}{3} \\cdot \\frac{H}{A}$.\nLogo $d(Q) = \\frac{2}{3} d(R)$. Alternativa E.",
+    "enganos": {
+      "A": "Subtraiu as frações em vez de dividir: $\\frac{3}{4} - \\frac{1}{2} = \\frac{1}{4}$.",
+      "B": "Considerou só a mudança no número de habitantes ($\\frac{1}{2}$), ignorando a área.",
+      "C": "Considerou só a mudança na área ($\\frac{3}{4}$), ignorando os habitantes.",
+      "D": "Inverteu a razão, dividindo área por habitantes: $\\frac{3/4}{1/2} = \\frac{3}{2}$."
+    },
+    "conceitos": [
+      "razão",
+      "densidade demográfica",
+      "frações"
+    ]
+  }
+]

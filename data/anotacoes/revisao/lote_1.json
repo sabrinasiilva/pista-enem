@@ -1,0 +1,490 @@
+[
+  {
+    "id": "2022-138",
+    "enunciado": "Ao escutar a notícia de que um filme recém-lançado arrecadou, no primeiro mês de lançamento, R\\$ 1,35 bilhão em bilheteria, um estudante escreveu corretamente o número que representa essa quantia, com todos os seus algarismos.\n\nO número escrito pelo estudante foi",
+    "alternativas": {
+      "A": "135 000,00.",
+      "B": "1 350 000,00.",
+      "C": "13 500 000,00.",
+      "D": "135 000 000,00.",
+      "E": "1 350 000 000,00."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "1 bilhão = 1 000 000 000.\n1,35 bilhão $= 1,35 \\times 1\\,000\\,000\\,000$.\nMultiplicar por $10^9$ desloca a vírgula 9 casas para a direita: 1 350 000 000.\nCom os centavos: 1 350 000 000,00. Alternativa E.",
+    "enganos": {
+      "A": "Tratou 1,35 bilhão como 1,35 × 100 000 (ou confundiu com cerca de 135 mil), deslocando a vírgula só 5 casas.",
+      "B": "Confundiu bilhão com milhão: 1,35 × 1 000 000 = 1 350 000.",
+      "C": "Deslocou a vírgula 7 casas em vez de 9: 1,35 × 10 000 000 = 13 500 000.",
+      "D": "Deslocou a vírgula 8 casas em vez de 9 (contou 1 bilhão como 100 000 000): 1,35 × 100 000 000 = 135 000 000."
+    },
+    "conceitos": [
+      "sistema de numeração decimal",
+      "potências de 10",
+      "ordens e classes"
+    ]
+  },
+  {
+    "id": "2022-143",
+    "enunciado": "Um casal planeja construir em sua chácara uma piscina com o formato de um paralelepípedo reto retângulo com capacidade para 90 000 L de água. O casal contratou uma empresa de construções que apresentou cinco projetos com diferentes combinações nas dimensões internas de profundidade, largura e comprimento. A piscina a ser construída terá revestimento interno em suas paredes e fundo com uma mesma cerâmica, e o casal irá escolher o projeto que exija a menor área de revestimento.\n\nAs dimensões internas de profundidade, largura e comprimento, respectivamente, para cada um dos projetos, são:\n\n• projeto I: 1,8 m, 2,0 m e 25,0 m;\n• projeto II: 2,0 m, 5,0 m e 9,0 m;\n• projeto III: 1,0 m, 6,0 m e 15,0 m;\n• projeto IV: 1,5 m, 15,0 m e 4,0 m;\n• projeto V: 2,5 m, 3,0 m e 12,0 m.\n\nO projeto que o casal deverá escolher será o",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset trocou os romanos I a V por algarismos 1 a 5 e escreveu \"litros\" e \"metros\" por extenso; o original usa \"L\" e \"m\".",
+    "gabarito_calculado": "B",
+    "resolucao": "A área a revestir é o fundo mais as 4 paredes (sem tampa): $A = L \\cdot C + 2P(L + C)$, com $P$ profundidade, $L$ largura e $C$ comprimento.\nI: $2 \\cdot 25 + 2 \\cdot 1,8 \\cdot 27 = 50 + 97,2 = 147,2$ m².\nII: $5 \\cdot 9 + 2 \\cdot 2 \\cdot 14 = 45 + 56 = 101$ m².\nIII: $6 \\cdot 15 + 2 \\cdot 1 \\cdot 21 = 90 + 42 = 132$ m².\nIV: $15 \\cdot 4 + 2 \\cdot 1,5 \\cdot 19 = 60 + 57 = 117$ m².\nV: $3 \\cdot 12 + 2 \\cdot 2,5 \\cdot 15 = 36 + 75 = 111$ m².\nA menor área é a do projeto II (101 m²). Alternativa B.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve ao projeto I (ele tem a maior área, 147,2 m²); provável escolha por intuição, por ser o projeto mais estreito (largura 2,0 m).",
+      "C": "Considerou só as paredes e esqueceu o fundo: paredes de III = $2 \\cdot 1 \\cdot (6 + 15) = 42$ m², a menor entre os projetos.",
+      "D": "Não há um erro de cálculo claro que leve ao projeto IV; provável erro aritmético ao comparar áreas próximas (IV tem 117 m², a terceira menor).",
+      "E": "Considerou só a área do fundo e esqueceu as paredes: fundo de V = $3 \\cdot 12 = 36$ m², o menor fundo entre os projetos."
+    },
+    "conceitos": [
+      "área de superfície",
+      "paralelepípedo",
+      "comparação de grandezas"
+    ]
+  },
+  {
+    "id": "2022-149",
+    "enunciado": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R\\$ 8 000,00 e R\\$ 12 000,00.\n\nA diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R\\$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\n\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
+    "alternativas": {
+      "A": "14,4.",
+      "B": "20,7.",
+      "C": "22,0.",
+      "D": "30,0.",
+      "E": "37,5."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset trocou \"R\\$ 8 000,00\" por \"8 000 reais\" e \"25%\" por \"25 por cento\".",
+    "gabarito_calculado": "D",
+    "resolucao": "Folha máxima permitida: $100 \\times 12\\,240 = 1\\,224\\,000$.\nNovo salário dos mestres: $8\\,000 \\times 1,25 = 10\\,000$; folha dos mestres: $60 \\times 10\\,000 = 600\\,000$.\nSobra para os doutores: $1\\,224\\,000 - 600\\,000 = 624\\,000$, ou seja, $\\frac{624\\,000}{40} = 15\\,600$ por doutor.\nAumento dos doutores: $\\frac{15\\,600 - 12\\,000}{12\\,000} = \\frac{3\\,600}{12\\,000} = 0,30$.\nO aumento máximo é de 30%. Alternativa D.",
+    "enganos": {
+      "A": "Trocou as quantidades de mestres e doutores (40 mestres e 60 doutores): $\\frac{1\\,224\\,000 - 40 \\times 10\\,000}{60} \\approx 13\\,733$, aumento de cerca de 14,4%.",
+      "B": "Usou a média simples dos dois salários, sem ponderar pelo número de professores: $\\frac{10\\,000 + 12\\,000(1 + x)}{2} = 12\\,240$ dá $x \\approx 20,7\\%$.",
+      "C": "Calculou o aumento da média atual ($12\\,240 - 9\\,600 = 2\\,640$) e aplicou esse valor ao salário dos doutores: $\\frac{2\\,640}{12\\,000} = 22\\%$.",
+      "E": "Achou que o aumento dos doutores seria o dos mestres corrigido pela razão entre as quantidades: $25\\% \\times \\frac{60}{40} = 37,5\\%$."
+    },
+    "conceitos": [
+      "média ponderada",
+      "porcentagem",
+      "aumento percentual"
+    ]
+  },
+  {
+    "id": "2022-158",
+    "enunciado": "Ao analisar os dados de uma epidemia em uma cidade, peritos obtiveram um modelo que avalia a quantidade de pessoas infectadas a cada mês, ao longo de um ano. O modelo é dado por $p(t) = -t^2 + 10t + 24$, sendo $t$ um número natural, variando de 1 a 12, que representa os meses do ano, e $p(t)$ a quantidade de pessoas infectadas no mês $t$ do ano. Para tentar diminuir o número de infectados no próximo ano, a Secretaria Municipal de Saúde decidiu intensificar a propaganda oficial sobre os cuidados com a epidemia. Foram apresentadas cinco propostas (I, II, III, IV e V), com diferentes períodos de intensificação das propagandas:\n\n• I: $1 \\leq t \\leq 2$;\n• II: $3 \\leq t \\leq 4$;\n• III: $5 \\leq t \\leq 6$;\n• IV: $7 \\leq t \\leq 9$;\n• V: $10 \\leq t \\leq 12$.\n\nA sugestão dos peritos é que seja escolhida a proposta cujo período de intensificação da propaganda englobe o mês em que, segundo o modelo, há a maior quantidade de infectados. A sugestão foi aceita.\n\nA proposta escolhida foi a",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset trocou os romanos I a V por algarismos e escreveu a função e as desigualdades por extenso.",
+    "gabarito_calculado": "C",
+    "resolucao": "$p(t) = -t^2 + 10t + 24$ é uma parábola com concavidade para baixo ($a = -1 < 0$), então tem valor máximo no vértice.\n$t_v = -\\frac{b}{2a} = -\\frac{10}{2 \\cdot (-1)} = 5$.\nConferindo: $p(5) = -25 + 50 + 24 = 49$, maior que $p(4) = p(6) = 48$.\nO mês 5 está no período $5 \\leq t \\leq 6$, da proposta III. Alternativa C.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve à proposta I; provável escolha por achar que a propaganda deve ser feita logo no início do ano.",
+      "B": "Testou alguns meses e parou cedo demais: viu $p(4) = 48$ maior que $p(3) = 45$ e não conferiu que $p(5) = 49$ é ainda maior.",
+      "D": "Errou o sinal das raízes, usando 2 e 12 em vez de $-2$ e 12, e tomou o ponto médio como vértice: $\\frac{2 + 12}{2} = 7$.",
+      "E": "Confundiu o máximo com uma raiz da função: $-t^2 + 10t + 24 = 0$ dá $t = 12$ (ou ignorou o sinal negativo de $t^2$ e achou que $p$ cresce até $t = 12$)."
+    },
+    "conceitos": [
+      "função quadrática",
+      "vértice da parábola",
+      "valor máximo"
+    ]
+  },
+  {
+    "id": "2022-163",
+    "enunciado": "Um prédio, com 9 andares e 8 apartamentos de 2 quartos por andar, está com todos os seus apartamentos à venda. Os apartamentos são identificados por números formados por dois algarismos, sendo que a dezena indica o andar onde se encontra o apartamento, e a unidade, um algarismo de 1 a 8, que diferencia os apartamentos de um mesmo andar. Quanto à incidência de sol nos quartos desses apartamentos, constatam-se as seguintes características, em função de seus números de identificação:\n\n• naqueles que finalizam em 1 ou 2, ambos os quartos recebem sol apenas na parte da manhã;\n• naqueles que finalizam em 3, 4, 5 ou 6, apenas um dos quartos recebe sol na parte da manhã;\n• naqueles que finalizam em 7 ou 8, ambos os quartos recebem sol apenas na parte da tarde.\n\nUma pessoa pretende comprar 2 desses apartamentos em um mesmo andar, mas quer que, em ambos, pelo menos um dos quartos receba sol na parte da manhã.\n\nDe quantas maneiras diferentes essa pessoa poderá escolher 2 desses apartamentos para compra nas condições desejadas?",
+    "alternativas": {
+      "A": "$9 \\times \\frac{6!}{(6-2)!}$",
+      "B": "$9 \\times \\frac{6!}{(6-2)! \\times 2!}$",
+      "C": "$9 \\times \\frac{4!}{(4-2)! \\times 2!}$",
+      "D": "$9 \\times \\frac{2!}{(2-2)! \\times 2!}$",
+      "E": "$9 \\times \\left(\\frac{8!}{(8-2)! \\times 2!} - 1\\right)$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Alternativas com frações e fatoriais, escritas no dataset de forma linear; transcritas em LaTeX.",
+    "gabarito_calculado": "B",
+    "resolucao": "Têm pelo menos um quarto com sol pela manhã os apartamentos com final 1, 2, 3, 4, 5 ou 6: são 6 por andar.\nOs dois apartamentos devem ser do mesmo andar e a ordem da escolha não importa, então é combinação: $C_{6,2} = \\frac{6!}{(6-2)! \\times 2!} = 15$ por andar.\nHá 9 andares possíveis (princípio multiplicativo): $9 \\times \\frac{6!}{(6-2)! \\times 2!}$.\nAlternativa B.",
+    "enganos": {
+      "A": "Usou arranjo em vez de combinação, contando a mesma dupla de apartamentos duas vezes: $A_{6,2} = \\frac{6!}{(6-2)!} = 30$ por andar.",
+      "C": "Considerou apenas os apartamentos com final 3, 4, 5 ou 6 (os que têm 'um quarto com sol pela manhã'), esquecendo os finais 1 e 2: $C_{4,2}$.",
+      "D": "Considerou apenas os apartamentos com final 1 ou 2 (ambos os quartos com sol pela manhã): $C_{2,2}$.",
+      "E": "Partiu do total de duplas por andar, $C_{8,2}$, e subtraiu só a dupla {7, 8}, esquecendo as duplas em que apenas um dos apartamentos termina em 7 ou 8."
+    },
+    "conceitos": [
+      "análise combinatória",
+      "combinação simples",
+      "princípio multiplicativo"
+    ]
+  },
+  {
+    "id": "2022-169",
+    "enunciado": "O pacote básico de um jogo para smartphone, que é vendido a R\\$ 50,00, contém 2 000 gemas e 100 000 moedas de ouro, que são itens utilizáveis nesse jogo.\n\nA empresa que comercializa esse jogo decidiu criar um pacote especial que será vendido a R\\$ 100,00 e que se diferenciará do pacote básico por apresentar maiores quantidades de gemas e moedas de ouro. Para estimular as vendas desse novo pacote, a empresa decidiu inserir nele 6 000 gemas a mais, em relação ao que o cliente teria caso optasse por comprar, com a mesma quantia, dois pacotes básicos.\n\nA quantidade de moedas de ouro que a empresa deverá inserir ao pacote especial, para que seja mantida a mesma proporção existente entre as quantidades de gemas e de moedas de ouro contidas no pacote básico, é",
+    "alternativas": {
+      "A": "50 000.",
+      "B": "100 000.",
+      "C": "200 000.",
+      "D": "300 000.",
+      "E": "400 000."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O enunciado é ambíguo: o total de moedas no pacote especial seria 500 000 (não está entre as alternativas); a resposta considera as moedas inseridas a mais em relação a dois pacotes básicos.",
+    "gabarito_calculado": "D",
+    "resolucao": "No pacote básico, a razão é $\\frac{100\\,000}{2\\,000} = 50$ moedas por gema.\nDois pacotes básicos têm 4 000 gemas e 200 000 moedas; o especial terá $4\\,000 + 6\\,000 = 10\\,000$ gemas.\nMantida a proporção, o especial terá $10\\,000 \\times 50 = 500\\,000$ moedas no total.\nEm relação aos dois pacotes básicos, a empresa insere $500\\,000 - 200\\,000 = 300\\,000$ moedas a mais (o mesmo que $6\\,000 \\times 50$).\nAlternativa D.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve a 50 000; provável confusão da razão de 50 moedas por gema com a própria resposta.",
+      "B": "Manteve as moedas de um único pacote básico, achando que só as gemas mudam: 100 000.",
+      "C": "Considerou apenas as moedas de dois pacotes básicos, sem acrescentar as moedas correspondentes às 6 000 gemas extras: $2 \\times 100\\,000 = 200\\,000$.",
+      "E": "Somou as 6 000 gemas extras a um único pacote básico ($2\\,000 + 6\\,000 = 8\\,000$ gemas) e aplicou a proporção: $8\\,000 \\times 50 = 400\\,000$."
+    },
+    "conceitos": [
+      "razão",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2022-174",
+    "enunciado": "Cada número que identifica uma agência bancária tem quatro dígitos: $N_1$, $N_2$, $N_3$, $N_4$ mais um dígito verificador $N_5$.\n\n| $N_1$ | $N_2$ | $N_3$ | $N_4$ | - | $N_5$ |\n|---|---|---|---|---|---|\n\nTodos esses dígitos são números naturais pertencentes ao conjunto $\\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\\}$. Para a determinação de $N_5$, primeiramente multiplica-se ordenadamente os quatro primeiros dígitos do número da agência por 5, 4, 3 e 2, respectivamente, somam-se os resultados e obtém-se $S = 5N_1 + 4N_2 + 3N_3 + 2N_4$.\n\nPosteriormente, encontra-se o resto da divisão de $S$ por 11, denotando por $R$ esse resto. Dessa forma, $N_5$ é a diferença $11 - R$.\n\nConsidere o número de uma agência bancária cujos quatro primeiros dígitos são 0100.\n\nQual é o dígito verificador $N_5$ dessa agência bancária?",
+    "alternativas": {
+      "A": "0",
+      "B": "6",
+      "C": "7",
+      "D": "8",
+      "E": "9"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O original tem um esquema ilustrativo com caixas \"N1 N2 N3 N4 - N5\", representado como tabela de uma linha; não traz informação além do texto.",
+    "gabarito_calculado": "C",
+    "resolucao": "Os dígitos são $N_1 = 0$, $N_2 = 1$, $N_3 = 0$, $N_4 = 0$.\n$S = 5 \\cdot 0 + 4 \\cdot 1 + 3 \\cdot 0 + 2 \\cdot 0 = 4$.\nO resto da divisão de 4 por 11 é $R = 4$ (o quociente é 0).\n$N_5 = 11 - 4 = 7$. Alternativa C.",
+    "enganos": {
+      "B": "Colocou o algarismo 1 na posição errada (como se o número fosse 1000), multiplicando-o por 5: $S = 5$, $R = 5$, $N_5 = 11 - 5 = 6$.",
+      "D": "Colocou o algarismo 1 na terceira posição (ou inverteu a ordem dos pesos), multiplicando-o por 3: $S = 3$, $N_5 = 11 - 3 = 8$.",
+      "E": "Colocou o algarismo 1 na última posição (como se o número fosse 0001), multiplicando-o por 2: $S = 2$, $N_5 = 11 - 2 = 9$.",
+      "A": "Não há um erro de cálculo claro; provavelmente achou que, como 4 é menor que 11, a divisão 'não dá' e tomou o quociente 0 como o dígito verificador."
+    },
+    "conceitos": [
+      "divisão euclidiana",
+      "resto da divisão",
+      "expressões numéricas"
+    ]
+  },
+  {
+    "id": "2023-137",
+    "enunciado": "O metrô de um município oferece dois tipos de tíquetes com colorações diferentes, azul e vermelha, sendo vendidos em cartelas, cada qual com nove tíquetes da mesma cor e mesmo valor unitário. Duas cartelas de tíquetes azuis e uma cartela de tíquetes vermelhos são vendidas por R\\$ 32,40. Sabe-se que o preço de um tíquete azul menos o preço de um tíquete vermelho é igual ao preço de um tíquete vermelho mais cinco centavos.\n\nQual o preço, em real, de uma cartela de tíquetes vermelhos?",
+    "alternativas": {
+      "A": "4,68",
+      "B": "6,30",
+      "C": "9,30",
+      "D": "10,50",
+      "E": "10,65"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset trocou \"R\\$ 32,40\" por \"32,40 reais\".",
+    "gabarito_calculado": "B",
+    "resolucao": "Sejam $a$ e $v$ os preços de um tíquete azul e de um vermelho. Cada cartela tem 9 tíquetes.\nDuas cartelas azuis e uma vermelha: $18a + 9v = 32,40$, ou seja, $2a + v = 3,60$.\n$a - v = v + 0,05 \\Rightarrow a = 2v + 0,05$.\nSubstituindo: $2(2v + 0,05) + v = 3,60 \\Rightarrow 5v = 3,50 \\Rightarrow v = 0,70$.\nCartela vermelha: $9 \\times 0,70 = 6,30$. Alternativa B.",
+    "enganos": {
+      "A": "Leu 'cinco centavos' como R\\$ 0,50: $a = 2v + 0,50$, então $5v + 1 = 3,60$, $v = 0,52$ e a cartela custa $9 \\times 0,52 = 4,68$.",
+      "C": "Considerou uma cartela de cada cor ($a + v = 3,60$) e leu cinco centavos como R\\$ 0,50: $3v + 0,50 = 3,60$, $v \\approx 1,033$, cartela $= 9,30$.",
+      "D": "Esqueceu o 'preço de um tíquete vermelho' na segunda condição e usou $a - v = 0,05$: $3v + 0,10 = 3,60$, $v \\approx 1,167$, cartela $= 10,50$.",
+      "E": "Considerou uma cartela de cada cor, $a + v = 3,60$, em vez de duas azuis e uma vermelha: $3v + 0,05 = 3,60$, $v \\approx 1,183$, cartela $= 10,65$."
+    },
+    "conceitos": [
+      "sistema de equações do 1º grau",
+      "equação do 1º grau"
+    ]
+  },
+  {
+    "id": "2023-151",
+    "enunciado": "Os 100 funcionários de uma empresa estão distribuídos em dois setores: Produção e Administração. Os funcionários de um mesmo setor recebem salários com valores iguais. O quadro apresenta a quantidade de funcionários por setor e seus respectivos salários.\n\n| Setor | Quantidade de funcionários | Salário (em real) |\n|---|---|---|\n| Produção | 75 | 2 000,00 |\n| Administração | 25 | 7 000,00 |\n\nA média dos salários dos 100 funcionários dessa empresa, em real, é",
+    "alternativas": {
+      "A": "2 000,00.",
+      "B": "2 500,00.",
+      "C": "3 250,00.",
+      "D": "4 500,00.",
+      "E": "9 000,00."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "A média deve ser ponderada pela quantidade de funcionários de cada setor.\nSoma dos salários: $75 \\times 2\\,000 + 25 \\times 7\\,000 = 150\\,000 + 175\\,000 = 325\\,000$.\nMédia: $\\frac{325\\,000}{100} = 3\\,250$.\nAlternativa C.",
+    "enganos": {
+      "A": "Tomou a moda (o salário da maioria, da Produção) como se fosse a média: 2 000,00.",
+      "B": "Não há um caminho de média que leve a 2 500,00; provavelmente calculou metade da diferença entre os salários, $\\frac{7\\,000 - 2\\,000}{2} = 2\\,500$.",
+      "D": "Fez a média simples dos dois salários, sem ponderar pelo número de funcionários: $\\frac{2\\,000 + 7\\,000}{2} = 4\\,500$.",
+      "E": "Somou os dois salários e esqueceu de dividir: $2\\,000 + 7\\,000 = 9\\,000$."
+    },
+    "conceitos": [
+      "média ponderada",
+      "média aritmética"
+    ]
+  },
+  {
+    "id": "2023-158",
+    "enunciado": "Analisando as vendas de uma empresa, o gerente concluiu que o montante diário arrecadado, em milhar de real, poderia ser calculado pela expressão $V(x) = \\frac{x^2}{4} - 10x + 105$, em que os valores de $x$ representam os dias do mês, variando de 1 a 30.\n\nUm dos fatores para avaliar o desempenho mensal da empresa é verificar qual é o menor montante diário $V_0$ arrecadado ao longo do mês e classificar o desempenho conforme as categorias apresentadas a seguir, em que as quantidades estão expressas em milhar de real.\n\n• Ótimo: $V_0 \\geq 24$\n• Bom: $20 \\leq V_0 < 24$\n• Normal: $10 \\leq V_0 < 20$\n• Ruim: $4 \\leq V_0 < 10$\n• Péssimo: $V_0 < 4$\n\nNo caso analisado, qual seria a classificação do desempenho da empresa?",
+    "alternativas": {
+      "A": "Ótimo.",
+      "B": "Bom.",
+      "C": "Normal.",
+      "D": "Ruim.",
+      "E": "Péssimo."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreveu a função e as desigualdades por extenso.",
+    "gabarito_calculado": "D",
+    "resolucao": "$V(x)$ é quadrática com $a = \\frac{1}{4} > 0$, então o menor valor ocorre no vértice.\n$x_v = -\\frac{b}{2a} = \\frac{10}{2 \\cdot \\frac{1}{4}} = 20$, que está entre 1 e 30.\n$V_0 = V(20) = \\frac{400}{4} - 200 + 105 = 100 - 200 + 105 = 5$.\nComo $4 \\leq 5 < 10$, o desempenho é Ruim. Alternativa D.",
+    "enganos": {
+      "A": "Ignorou o denominador 4 e usou $a = 1$: $x_v = 5$ e $V(5) = 6,25 - 50 + 105 = 61,25$ (ou avaliou só um extremo, como $V(30) = 30$), caindo em Ótimo.",
+      "B": "Achou o vértice $x_v = 20$ e usou esse valor (o dia) como se fosse o montante mínimo: $20 \\leq 20 < 24$, Bom.",
+      "C": "Não há um erro de cálculo claro; provavelmente avaliou um dia qualquer em vez do vértice, como $V(15) = 56,25 - 150 + 105 = 11,25$.",
+      "E": "Calculou o valor mínimo por $\\frac{\\Delta}{4a}$ trocando o sinal: $\\Delta = 100 - 105 = -5$ e obteve $-5$ em vez de $5$, caindo em Péssimo."
+    },
+    "conceitos": [
+      "função quadrática",
+      "vértice da parábola",
+      "valor mínimo"
+    ]
+  },
+  {
+    "id": "2023-165",
+    "enunciado": "No alojamento de uma universidade, há alguns quartos com o padrão superior ao dos demais. Um desses quartos ficou disponível, e muitos estudantes se candidataram para morar no local. Para escolher quem ficará com o quarto, um sorteio será realizado. Para esse sorteio, cartões individuais com os nomes de todos os estudantes inscritos serão depositados em uma urna, sendo que, para cada estudante de primeiro ano, será depositado um único cartão com seu nome; para cada estudante de segundo ano, dois cartões com seu nome; e, para cada estudante de terceiro ano, três cartões com seu nome. Foram inscritos 200 estudantes de primeiro ano, 150 de segundo ano e 100 de terceiro ano. Todos os cartões têm a mesma probabilidade de serem sorteados.\n\nQual a probabilidade de o vencedor do sorteio ser um estudante de terceiro ano?",
+    "alternativas": {
+      "A": "$\\frac{1}{2}$",
+      "B": "$\\frac{1}{3}$",
+      "C": "$\\frac{1}{8}$",
+      "D": "$\\frac{2}{9}$",
+      "E": "$\\frac{3}{8}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No original as alternativas são frações sem ponto final.",
+    "gabarito_calculado": "E",
+    "resolucao": "Cartões na urna: primeiro ano $200 \\times 1 = 200$; segundo ano $150 \\times 2 = 300$; terceiro ano $100 \\times 3 = 300$.\nTotal de cartões: $200 + 300 + 300 = 800$.\nProbabilidade de sair um cartão de terceiro ano: $\\frac{300}{800} = \\frac{3}{8}$.\nAlternativa E.",
+    "enganos": {
+      "A": "Usou só os pesos dos cartões, sem a quantidade de estudantes: $\\frac{3}{1 + 2 + 3} = \\frac{1}{2}$.",
+      "B": "Considerou os três anos igualmente prováveis, sem levar em conta quantidades nem cartões: $\\frac{1}{3}$.",
+      "C": "Usou o número de estudantes do terceiro ano sobre o total de cartões, esquecendo que cada um tem 3 cartões: $\\frac{100}{800} = \\frac{1}{8}$.",
+      "D": "Contou estudantes em vez de cartões: $\\frac{100}{200 + 150 + 100} = \\frac{100}{450} = \\frac{2}{9}$."
+    },
+    "conceitos": [
+      "probabilidade",
+      "casos favoráveis e possíveis"
+    ]
+  },
+  {
+    "id": "2023-173",
+    "enunciado": "Uma pessoa pratica quatro atividades físicas — caminhar, correr, andar de bicicleta e jogar futebol — como parte de seu programa de emagrecimento. Essas atividades são praticadas semanalmente de acordo com o quadro, que apresenta o número de horas diárias por atividade.\n\n| Dias da semana | Caminhar | Correr | Andar de bicicleta | Jogar futebol |\n|---|---|---|---|---|\n| Segunda-feira | 1,0 | 0,5 | 0,0 | 2,0 |\n| Terça-feira | 0,5 | 1,0 | 0,5 | 1,0 |\n| Quarta-feira | 0,0 | 1,5 | 1,0 | 0,5 |\n| Quinta-feira | 0,0 | 2,0 | 0,0 | 0,0 |\n| Sexta-feira | 0,0 | 0,5 | 0,0 | 2,5 |\n\nEla deseja comemorar seu aniversário e escolhe o dia da semana em que o gasto calórico com as atividades físicas praticadas for o maior. Para tanto, considera que os valores dos gastos calóricos das atividades por hora (cal/h) são os seguintes:\n\n| Atividade física | Caminhar | Correr | Andar de bicicleta | Jogar futebol |\n|---|---|---|---|---|\n| Gasto calórico (cal/h) | 248 | 764 | 356 | 492 |\n\nO dia da semana em que será comemorado o aniversário é",
+    "alternativas": {
+      "A": "segunda-feira.",
+      "B": "terça-feira.",
+      "C": "quarta-feira.",
+      "D": "quinta-feira.",
+      "E": "sexta-feira."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Gasto do dia = soma de (horas × cal/h) de cada atividade.\nSegunda: $248 + 0,5 \\cdot 764 + 2 \\cdot 492 = 248 + 382 + 984 = 1\\,614$.\nTerça: $124 + 764 + 178 + 492 = 1\\,558$.\nQuarta: $1,5 \\cdot 764 + 356 + 0,5 \\cdot 492 = 1\\,146 + 356 + 246 = 1\\,748$.\nQuinta: $2 \\cdot 764 = 1\\,528$; Sexta: $382 + 2,5 \\cdot 492 = 382 + 1\\,230 = 1\\,612$.\nO maior gasto é na quarta-feira. Alternativa C.",
+    "enganos": {
+      "A": "Escolheu o dia com mais horas de atividade (segunda tem 3,5 h), sem considerar o gasto por hora de cada atividade.",
+      "B": "Somou os gastos por hora das atividades praticadas no dia sem multiplicar pelas horas: terça tem as quatro, $248 + 764 + 356 + 492 = 1\\,860$.",
+      "D": "Escolheu o dia com mais tempo na atividade de maior gasto por hora (correr 2 h na quinta), sem somar as demais atividades.",
+      "E": "Escolheu o dia com mais horas de futebol (2,5 h) ou errou uma das contas próximas: sexta dá 1 612, quase igual à segunda."
+    },
+    "conceitos": [
+      "leitura de tabelas",
+      "multiplicação de decimais",
+      "comparação de valores"
+    ]
+  },
+  {
+    "id": "2023-180",
+    "enunciado": "Entre maratonistas, um parâmetro utilizado é o de economia de corrida (EC). O valor desse parâmetro é calculado pela razão entre o consumo de oxigênio, em mililitro (mL) por minuto (min), e a massa, em quilograma (kg), do atleta correndo a uma velocidade constante.\n\nUm maratonista, visando melhorar sua performance, auxiliado por um médico, mensura o seu consumo de oxigênio por minuto a velocidade constante. Com base nesse consumo e na massa do atleta, o médico calcula o EC do atleta.\n\nA unidade de medida da grandeza descrita pelo parâmetro EC é",
+    "alternativas": {
+      "A": "$\\frac{\\text{min}}{\\text{mL} \\cdot \\text{kg}}$",
+      "B": "$\\frac{\\text{mL}}{\\text{min} \\cdot \\text{kg}}$",
+      "C": "$\\frac{\\text{min} \\cdot \\text{mL}}{\\text{kg}}$",
+      "D": "$\\frac{\\text{min} \\cdot \\text{kg}}{\\text{mL}}$",
+      "E": "$\\frac{\\text{mL} \\cdot \\text{kg}}{\\text{min}}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O original traz a fonte \"Disponível em: www.treinamentoonline.com.br. Acesso em: 23 out. 2019 (adaptado).\" após o primeiro parágrafo, omitida aqui.",
+    "gabarito_calculado": "B",
+    "resolucao": "O consumo de oxigênio é medido em mL por minuto: $\\frac{\\text{mL}}{\\text{min}}$.\nEC é esse consumo dividido pela massa em kg: $\\frac{\\text{mL}/\\text{min}}{\\text{kg}}$.\nDividir por kg equivale a multiplicar o denominador: $\\frac{\\text{mL}}{\\text{min} \\cdot \\text{kg}}$.\nAlternativa B.",
+    "enganos": {
+      "A": "Inverteu a razão do consumo, usando minuto por mililitro: $\\frac{\\text{min}/\\text{mL}}{\\text{kg}} = \\frac{\\text{min}}{\\text{mL} \\cdot \\text{kg}}$.",
+      "C": "Tratou 'mL por minuto' como produto mL · min em vez de quociente, e então dividiu por kg.",
+      "D": "Fez a razão invertida, massa sobre consumo, e ainda tratou 'por minuto' como produto: $\\frac{\\text{kg} \\cdot \\text{min}}{\\text{mL}}$.",
+      "E": "Multiplicou o consumo pela massa em vez de dividir: $\\frac{\\text{mL}}{\\text{min}} \\cdot \\text{kg}$."
+    },
+    "conceitos": [
+      "unidades de medida",
+      "razão entre grandezas",
+      "análise dimensional"
+    ]
+  },
+  {
+    "id": "2024-142",
+    "enunciado": "Um instituto de pesquisa constatou que, nos últimos dez anos, o crescimento populacional de uma cidade foi de 135,25%.\n\nQual é a representação decimal da taxa percentual desse crescimento populacional?",
+    "alternativas": {
+      "A": "13 525,0",
+      "B": "135,25",
+      "C": "13,525",
+      "D": "1,3525",
+      "E": "0,13525"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "A alternativa A aparece no original com espaço fino entre milhar e centena (\"13 525,0\"). A questão está inteira na página 17; a página 18 não é necessária.",
+    "gabarito_calculado": "D",
+    "resolucao": "Porcentagem significa 'por cem': $135,25\\% = \\frac{135,25}{100}$.\nDividir por 100 desloca a vírgula duas casas para a esquerda: 1,3525.\nAlternativa D.",
+    "enganos": {
+      "A": "Multiplicou por 100 em vez de dividir: $135,25 \\times 100 = 13\\,525$.",
+      "B": "Apenas retirou o símbolo %, sem dividir por 100: 135,25.",
+      "C": "Dividiu por 10 em vez de 100, deslocando a vírgula uma casa só: 13,525.",
+      "E": "Dividiu por 1 000 em vez de 100, deslocando a vírgula três casas: 0,13525."
+    },
+    "conceitos": [
+      "porcentagem",
+      "números decimais"
+    ]
+  },
+  {
+    "id": "2024-148",
+    "enunciado": "Uma casa de shows terá um evento cujo custo total de produção é de R\\$ 34 350,00, sendo que comporta 500 pessoas. O preço do ingresso será de R\\$ 130,00 e, normalmente, 60% das pessoas adquirem meia-entrada, pagando R\\$ 65,00 pelo ingresso. Além do faturamento proveniente da venda de ingressos, a casa de shows vende, com 60% de lucro, bebidas e petiscos ao público no dia do evento.\n\nApós ter vendido todos os 500 ingressos, constatou-se que a quantidade de meias-entradas vendidas superou em 50% o que estava previsto, impactando o faturamento estimado com a venda de ingressos.\n\nNo dia do evento, decidiu-se manter o percentual de 60% de lucro sobre as bebidas e petiscos, pois todo o público que comprou ingresso compareceu ao show. Com isso, espera-se ter lucro de R\\$ 17 000,00 nesse evento.\n\nPara que se alcance o lucro esperado, o gasto médio por pessoa com bebidas e petiscos, em real, deverá ser de",
+    "alternativas": {
+      "A": "19,50.",
+      "B": "28,80.",
+      "C": "34,00.",
+      "D": "52,00.",
+      "E": "68,70."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset trocou os valores em dinheiro por \"... reais\" e \"%\" por \"por cento\".",
+    "gabarito_calculado": "D",
+    "resolucao": "Meias previstas: $60\\% \\times 500 = 300$. Vendidas: $300 \\times 1,5 = 450$ meias e $500 - 450 = 50$ inteiras.\nFaturamento com ingressos: $450 \\times 65 + 50 \\times 130 = 29\\,250 + 6\\,500 = 35\\,750$.\nLucro com ingressos: $35\\,750 - 34\\,350 = 1\\,400$.\nLucro que falta vir de bebidas e petiscos: $17\\,000 - 1\\,400 = 15\\,600$.\nCom 60% de lucro sobre o valor vendido e gasto médio $g$ por pessoa: $0,6 \\times 500g = 15\\,600 \\Rightarrow 300g = 15\\,600 \\Rightarrow g = 52$.\nAlternativa D.",
+    "enganos": {
+      "A": "Usou a quantidade prevista de meias (300), ignorando o aumento de 50%: lucro com ingressos $45\\,500 - 34\\,350 = 11\\,150$, faltam $5\\,850$ e $g = \\frac{5\\,850}{0,6 \\times 500} = 19,50$.",
+      "B": "Não há um erro de cálculo claro que leve a 28,80; provável escolha por estimativa.",
+      "C": "Dividiu o lucro desejado pelo público, ignorando o lucro dos ingressos e a margem de 60%: $\\frac{17\\,000}{500} = 34$.",
+      "E": "Dividiu o custo de produção pelo público: $\\frac{34\\,350}{500} = 68,70$."
+    },
+    "conceitos": [
+      "porcentagem",
+      "lucro",
+      "média"
+    ]
+  },
+  {
+    "id": "2024-155",
+    "enunciado": "Ao calcular a média de suas notas em 4 provas, um estudante dividiu, por engano, a soma das notas por 5. Com isso, a média obtida foi 1 unidade menor do que deveria ser, caso fosse calculada corretamente.\n\nO valor correto da média das notas desse estudante é",
+    "alternativas": {
+      "A": "4.",
+      "B": "5.",
+      "C": "6.",
+      "D": "19.",
+      "E": "21."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Seja $S$ a soma das notas. A média correta é $\\frac{S}{4}$ e a obtida foi $\\frac{S}{5}$.\n$\\frac{S}{4} - \\frac{S}{5} = 1 \\Rightarrow \\frac{5S - 4S}{20} = 1 \\Rightarrow S = 20$.\nMédia correta: $\\frac{20}{4} = 5$ (a errada foi $\\frac{20}{5} = 4$, de fato 1 a menos).\nAlternativa B.",
+    "enganos": {
+      "A": "Respondeu a média calculada com o engano, $\\frac{20}{5} = 4$, em vez da média correta.",
+      "C": "Achou a média errada (ou correta) e somou 1 a mais do que devia, por exemplo $5 + 1 = 6$.",
+      "D": "Achou a soma $S = 20$ e subtraiu 1, confundindo a soma com a média.",
+      "E": "Achou a soma $S = 20$ e somou 1, confundindo a soma com a média."
+    },
+    "conceitos": [
+      "média aritmética",
+      "equação do 1º grau"
+    ]
+  },
+  {
+    "id": "2024-161",
+    "enunciado": "Uma empresa produz mochilas escolares sob encomenda. Essa empresa tem um custo total de produção, composto por um custo fixo, que não depende do número de mochilas, mais um custo variável, que é proporcional ao número de mochilas produzidas. O custo total cresce de forma linear, e a tabela apresenta esse custo para três quantidades de mochilas produzidas.\n\n| Quantidade de mochilas | 30 | 50 | 100 |\n|---|---|---|---|\n| Custo total (R\\$) | 1 050,00 | 1 650,00 | 3 150,00 |\n\nO custo total, em real, para a produção de 80 mochilas será",
+    "alternativas": {
+      "A": "2 400,00.",
+      "B": "2 520,00.",
+      "C": "2 550,00.",
+      "D": "2 700,00.",
+      "E": "2 800,00."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreveu as alternativas sem casas decimais (\"2400.\"); o original traz \"2 400,00.\". No original há uma vírgula depois de \"custo total de produção\".",
+    "gabarito_calculado": "C",
+    "resolucao": "O custo é $C(x) = ax + b$. Taxa de variação: $a = \\frac{1\\,650 - 1\\,050}{50 - 30} = \\frac{600}{20} = 30$ reais por mochila.\nCusto fixo: $b = 1\\,050 - 30 \\times 30 = 150$ (confere: $30 \\times 100 + 150 = 3\\,150$).\n$C(80) = 30 \\times 80 + 150 = 2\\,400 + 150 = 2\\,550$.\nAlternativa C.",
+    "enganos": {
+      "A": "Calculou só o custo variável e esqueceu o custo fixo: $30 \\times 80 = 2\\,400$.",
+      "B": "Tratou o custo como proporcional à quantidade, a partir de 100 mochilas: $3\\,150 \\times \\frac{80}{100} = 2\\,520$.",
+      "D": "Somou os custos de 30 e 50 mochilas porque $30 + 50 = 80$: $1\\,050 + 1\\,650 = 2\\,700$ (contou o custo fixo duas vezes).",
+      "E": "Tratou o custo como proporcional à quantidade, a partir de 30 mochilas: $1\\,050 \\times \\frac{80}{30} = 2\\,800$."
+    },
+    "conceitos": [
+      "função afim",
+      "taxa de variação",
+      "custo fixo e variável"
+    ]
+  },
+  {
+    "id": "2024-169",
+    "enunciado": "Um jardineiro dispõe de $k$ metros lineares de cerca baixa para fazer um jardim ornamental. O jardim, delimitado por essa cerca, deve ter a forma de um triângulo equilátero, um quadrado ou um hexágono regular. A escolha será pela forma que resulte na maior área.\n\nO jardineiro escolherá a forma de",
+    "alternativas": {
+      "A": "hexágono regular, pois a área do jardim, em metro quadrado, será $\\frac{k^2\\sqrt{3}}{24}$.",
+      "B": "hexágono regular, pois a área do jardim, em metro quadrado, será $\\frac{3k^2\\sqrt{3}}{2}$.",
+      "C": "quadrado, pois a área do jardim, em metro quadrado, será $\\frac{k^2}{16}$.",
+      "D": "triângulo equilátero, pois a área do jardim, em metro quadrado, será $\\frac{k^2\\sqrt{3}}{36}$.",
+      "E": "triângulo equilátero, pois a área do jardim, em metro quadrado, será $\\frac{k^2\\sqrt{3}}{4}$."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreveu as frações e raízes das alternativas por extenso.",
+    "gabarito_calculado": "A",
+    "resolucao": "O perímetro de cada forma é $k$.\nTriângulo: lado $\\frac{k}{3}$, área $\\frac{(k/3)^2\\sqrt{3}}{4} = \\frac{k^2\\sqrt{3}}{36} \\approx 0,048k^2$.\nQuadrado: lado $\\frac{k}{4}$, área $\\frac{k^2}{16} \\approx 0,0625k^2$.\nHexágono: lado $\\frac{k}{6}$, área $6 \\cdot \\frac{(k/6)^2\\sqrt{3}}{4} = \\frac{k^2\\sqrt{3}}{24} \\approx 0,072k^2$.\nA maior área é a do hexágono regular, $\\frac{k^2\\sqrt{3}}{24}$. Alternativa A.",
+    "enganos": {
+      "B": "Escolheu a forma certa, mas usou $k$ como medida do lado do hexágono em vez de $\\frac{k}{6}$: $6 \\cdot \\frac{k^2\\sqrt{3}}{4} = \\frac{3k^2\\sqrt{3}}{2}$.",
+      "C": "Calculou corretamente a área do quadrado, $\\left(\\frac{k}{4}\\right)^2 = \\frac{k^2}{16}$, mas não comparou com a do hexágono, que é maior.",
+      "D": "Calculou corretamente a área do triângulo, $\\frac{k^2\\sqrt{3}}{36}$, mas comparou errado: é a menor das três áreas.",
+      "E": "Usou $k$ como medida do lado do triângulo em vez de $\\frac{k}{3}$, obtendo $\\frac{k^2\\sqrt{3}}{4}$, que parece a maior área."
+    },
+    "conceitos": [
+      "área de polígonos regulares",
+      "perímetro",
+      "hexágono regular"
+    ]
+  },
+  {
+    "id": "2024-177",
+    "enunciado": "Uma imobiliária iniciou uma campanha de divulgação para promover a venda de apartamentos que podem ser pagos em 100 parcelas mensais. O valor da primeira delas é fixado no momento da compra, com o pagamento dessa primeira parcela. A partir da segunda parcela, o valor é determinado pela aplicação de um acréscimo percentual fixo ao valor da parcela anterior. Como atrativo, a imobiliária fará o pagamento de todas as parcelas correspondentes ao mês de aniversário do comprador.\n\nUm cliente, que faz aniversário no mês de maio, decidiu comprar um desses apartamentos por meio do financiamento oferecido pela imobiliária, e pretende escolher o mês mais adequado para realizar essa compra, de modo que o valor total dos pagamentos seja o menor possível.\n\nQual é o mês que esse cliente deverá escolher para realizar a compra do apartamento?",
+    "alternativas": {
+      "A": "Fevereiro.",
+      "B": "Abril.",
+      "C": "Maio.",
+      "D": "Junho.",
+      "E": "Agosto."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "As parcelas crescem (progressão geométrica de razão $q > 1$), então o cliente quer que a imobiliária pague o maior número possível de parcelas de maio e, de preferência, as mais caras.\n100 parcelas = 8 anos e 4 meses. Os 4 primeiros meses a partir da compra aparecem 9 vezes; os outros, 8 vezes.\nPara maio aparecer 9 vezes, a compra deve ser em fevereiro, março, abril ou maio. Comprando em fevereiro, maio é a 4ª parcela e as de maio são as parcelas 4, 16, ..., 100, incluindo a última e mais cara.\nEm junho, maio seria a 12ª parcela, mas só 8 parcelas de maio (12, 24, ..., 96) e sem a parcela 100; comparando, a soma $q^3(1 + q^{12} + \\dots + q^{96})$ de fevereiro supera $q^{11}(1 + q^{12} + \\dots + q^{84})$ de junho, pois o termo extra $q^{99}$ compensa.\nO cliente deve comprar em fevereiro. Alternativa A.",
+    "enganos": {
+      "B": "Garantiu 9 parcelas de maio, mas não percebeu que, comprando em abril, maio é só a 2ª parcela e as parcelas pagas pela imobiliária ficam menores do que comprando em fevereiro.",
+      "C": "Achou vantajoso ganhar já a primeira parcela, mas, comprando em maio, as parcelas pagas pela imobiliária (1, 13, ..., 97) são as mais baratas de cada ano.",
+      "D": "Quis que maio fosse o último mês de cada ciclo anual (parcelas 12, 24, ..., 96, as mais caras dentro de cada ano), mas esqueceu que assim só 8 parcelas caem em maio e a parcela 100 não é paga.",
+      "E": "Contou que a parcela 100 cai 3 meses depois do mês da compra em um ciclo de 12 meses ($99 = 8 \\cdot 12 + 3$) e andou 3 meses para frente a partir de maio em vez de para trás."
+    },
+    "conceitos": [
+      "progressão geométrica",
+      "contagem de meses",
+      "otimização"
+    ]
+  }
+]

@@ -1,0 +1,463 @@
+[
+  {
+    "id": "2022-140",
+    "enunciado": "Uma pessoa precisa contratar um operário para fazer um serviço em sua casa. Para isso, ela postou um anúncio em uma rede social.\n\nCinco pessoas responderam informando preços por hora trabalhada, gasto diário com transporte e tempo necessário para conclusão do serviço, conforme valores apresentados no quadro.\n\n| Operário | Preço por hora (real) | Preço do transporte (real) | Tempo até conclusão (hora) |\n|:---:|:---:|:---:|:---:|\n| I | 120 | 0,00 | 8 |\n| II | 180 | 0,00 | 6 |\n| III | 170 | 20,00 | 6 |\n| IV | 110 | 10,00 | 9 |\n| V | 110 | 0,00 | 10 |\n\nSe a pessoa pretende gastar o mínimo possível com essa contratação, irá contratar o operário",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset troca os numerais romanos das alternativas por algarismos (1 a 5).",
+    "gabarito_calculado": "A",
+    "resolucao": "Custo de cada operário = (preço por hora) $\\times$ (horas) + transporte.\nI: $120 \\times 8 + 0 = 960$.\nII: $180 \\times 6 + 0 = 1080$.\nIII: $170 \\times 6 + 20 = 1040$.\nIV: $110 \\times 9 + 10 = 1000$ (mesmo contando dois dias de transporte, 1 010).\nV: $110 \\times 10 + 0 = 1100$.\nO menor custo é o do operário I, 960 reais. Alternativa A.",
+    "enganos": {
+      "B": "Escolheu o operário que termina mais rápido (6 h) e não cobra transporte, sem calcular o custo total: II custa $180 \\times 6 = 1080$, mais que I.",
+      "C": "Olhou só o menor tempo de conclusão (6 h) sem multiplicar o preço por hora pelas horas: III custa $170 \\times 6 + 20 = 1040$.",
+      "D": "Combinou o menor preço por hora (110) com transporte baixo sem fazer a conta completa: IV custa $110 \\times 9 + 10 = 1000$, acima de 960.",
+      "E": "Somou as colunas em vez de multiplicar preço por horas ($110 + 0 + 10 = 120$ é a menor soma) ou escolheu só pelo menor preço por hora sem transporte."
+    },
+    "conceitos": [
+      "multiplicação",
+      "comparação de custos",
+      "leitura de tabela"
+    ]
+  },
+  {
+    "id": "2022-144",
+    "enunciado": "Uma instituição de ensino superior ofereceu vagas em um processo seletivo de acesso a seus cursos. Finalizadas as inscrições, foi divulgada a relação do número de candidatos por vaga em cada um dos cursos oferecidos. Esses dados são apresentados no quadro.\n\n| Curso | Número de vagas oferecidas | Número de candidatos por vaga |\n|:---|:---:|:---:|\n| Administração | 30 | 6 |\n| Ciências Contábeis | 40 | 6 |\n| Engenharia Elétrica | 50 | 7 |\n| História | 30 | 8 |\n| Letras | 25 | 4 |\n| Pedagogia | 25 | 5 |\n\nQual foi o número total de candidatos inscritos nesse processo seletivo?",
+    "alternativas": {
+      "A": "200",
+      "B": "400",
+      "C": "1 200",
+      "D": "1 235",
+      "E": "7 200"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O texto do dataset repete as alternativas como uma tabela solta no fim do enunciado.",
+    "gabarito_calculado": "D",
+    "resolucao": "Candidatos de cada curso = vagas $\\times$ candidatos por vaga.\nAdministração: $30 \\times 6 = 180$; Ciências Contábeis: $40 \\times 6 = 240$.\nEngenharia Elétrica: $50 \\times 7 = 350$; História: $30 \\times 8 = 240$.\nLetras: $25 \\times 4 = 100$; Pedagogia: $25 \\times 5 = 125$.\nTotal: $180 + 240 + 350 + 240 + 100 + 125 = 1235$. Alternativa D.",
+    "enganos": {
+      "A": "Somou apenas o número de vagas ($30 + 40 + 50 + 30 + 25 + 25 = 200$), sem multiplicar pelos candidatos por vaga.",
+      "B": "Não há uma conta clara que leve a 400; provavelmente dobrou o total de vagas (200) por estimativa.",
+      "C": "Usou 6 candidatos por vaga para todos os cursos (a relação mais comum no quadro): $200 \\times 6 = 1200$.",
+      "E": "Multiplicou o total de vagas pela soma das relações candidato/vaga: $200 \\times 36 = 7200$."
+    },
+    "conceitos": [
+      "multiplicação",
+      "razão",
+      "leitura de tabela"
+    ]
+  },
+  {
+    "id": "2022-150",
+    "enunciado": "Um borrifador de atuação automática libera, a cada acionamento, uma mesma quantidade de inseticida. O recipiente desse produto, quando cheio, contém 360 mL de inseticida, que duram 60 dias se o borrifador permanecer ligado ininterruptamente e for acionado a cada 48 minutos.\n\nA quantidade de inseticida que é liberada a cada acionamento do borrifador, em mililitro, é",
+    "alternativas": {
+      "A": "0,125.",
+      "B": "0,200.",
+      "C": "4,800.",
+      "D": "6,000.",
+      "E": "12,000."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No original a unidade aparece como 360 mL; o dataset escreve 360 mililitros.",
+    "gabarito_calculado": "B",
+    "resolucao": "Minutos em 60 dias: $60 \\times 24 \\times 60 = 86400$ minutos.\nNúmero de acionamentos: $86400 \\div 48 = 1800$.\nQuantidade por acionamento: $360 \\div 1800 = 0{,}2$ mL. Alternativa B.",
+    "enganos": {
+      "A": "Dividiu 360 por $60 \\times 48 = 2880$, misturando dias com minutos: $360 \\div 2880 = 0{,}125$.",
+      "C": "Tratou os 60 dias como 60 horas: $3600 \\div 48 = 75$ acionamentos e $360 \\div 75 = 4{,}8$.",
+      "D": "Calculou o consumo por dia, e não por acionamento: $360 \\div 60 = 6$.",
+      "E": "Contou só os acionamentos de um dia ($1440 \\div 48 = 30$) e dividiu o total por eles: $360 \\div 30 = 12$."
+    },
+    "conceitos": [
+      "conversão de unidades de tempo",
+      "divisão",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2022-159",
+    "enunciado": "Um atleta iniciou seu treinamento visando as competições de fim de ano. Seu treinamento consiste em cinco tipos diferentes de treinos: treino $T_1$, treino $T_2$, treino $T_3$, treino $T_4$ e treino $T_5$. A sequência dos treinamentos deve seguir esta ordem:\n\n| Dia | 1º | 2º | 3º | 4º | 5º | 6º | 7º | 8º | 9º | 10º | 11º | 12º | 13º |\n|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| Treino | $T_1$ | R | R | $T_2$ | R | R | $T_3$ | R | $T_4$ | R | R | $T_5$ | R |\n\nA letra R significa repouso. Após completar a sequência de treinamentos, o atleta começa novamente a sequência a partir do treino $T_1$ e segue a ordem descrita. Após 24 semanas completas de treinamento, se dará o início das competições.\n\nA sequência de treinamentos que o atleta realizará na 24ª semana de treinos é",
+    "alternativas": {
+      "A": "$T_3$ R $T_4$ R R $T_5$ R.",
+      "B": "R $T_3$ R $T_4$ R R $T_5$.",
+      "C": "R $T_4$ R R $T_5$ R $T_1$.",
+      "D": "R R $T_5$ R $T_1$ R R.",
+      "E": "R $T_5$ R $T_1$ R R $T_2$."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No original o quadro é horizontal com ordinais (1º a 13º) e os treinos têm índice subscrito; o dataset escreve os dias por extenso e 24ª como vigésima quarta.",
+    "gabarito_calculado": "B",
+    "resolucao": "A sequência se repete a cada 13 dias.\nA 24ª semana vai do dia $23 \\times 7 + 1 = 162$ ao dia $24 \\times 7 = 168$.\n$162 = 12 \\times 13 + 6$, então o dia 162 é a 6ª posição do ciclo (R).\nAs posições 6 a 12 são: R, $T_3$, R, $T_4$, R, R, $T_5$.\nConferência: $168 = 12 \\times 13 + 12$, posição 12, que é $T_5$. Alternativa B.",
+    "enganos": {
+      "A": "Errou o início da semana por um dia (começou no dia 163, posição 7 do ciclo) e listou as posições 7 a 13.",
+      "C": "Deslocou a semana em dois dias (começou na posição 8 do ciclo), provavelmente contando mal o resto da divisão por 13.",
+      "D": "Não há uma conta clara; a sequência corresponde às posições 10 a 13 e 1 a 3, um deslocamento de quatro dias ao localizar o resto.",
+      "E": "Não há uma conta única clara; a sequência corresponde às posições 11 a 13 e 1 a 4, possivelmente por tomar um dia próximo de 168 como início da semana."
+    },
+    "conceitos": [
+      "sequências periódicas",
+      "divisão com resto",
+      "contagem"
+    ]
+  },
+  {
+    "id": "2022-164",
+    "enunciado": "Um médico faz o acompanhamento clínico de um grupo de pessoas que realizam atividades físicas diariamente. Ele observou que a perda média de massa dessas pessoas para cada hora de atividade física era de 1,5 kg. Sabendo que a massa de 1 L de água é de 1 kg, ele recomendou que ingerissem, ao longo das 3 horas seguintes ao final da atividade, uma quantidade total de água correspondente a 40% a mais do que a massa perdida na atividade física, para evitar desidratação.\n\nSeguindo a recomendação médica, uma dessas pessoas ingeriu, certo dia, um total de 1,7 L de água após terminar seus exercícios físicos.\n\nPara que a recomendação médica tenha efetivamente sido respeitada, a atividade física dessa pessoa, nesse dia, durou",
+    "alternativas": {
+      "A": "30 minutos ou menos.",
+      "B": "mais de 35 e menos de 45 minutos.",
+      "C": "mais de 45 e menos de 55 minutos.",
+      "D": "mais de 60 e menos de 70 minutos.",
+      "E": "70 minutos ou mais."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve as unidades por extenso (quilograma, litro, 40 por cento); o original usa kg, L e 40%.",
+    "gabarito_calculado": "C",
+    "resolucao": "Em $t$ horas de atividade, a massa perdida é $1{,}5t$ kg, o que equivale a $1{,}5t$ L de água.\nA recomendação é ingerir 40% a mais: $1{,}4 \\times 1{,}5t = 2{,}1t$ litros.\n$2{,}1t = 1{,}7 \\Rightarrow t = \\frac{1{,}7}{2{,}1} \\approx 0{,}81$ h.\nEm minutos: $0{,}81 \\times 60 \\approx 48{,}6$ min.\nEsse valor está entre 45 e 55 minutos. Alternativa C.",
+    "enganos": {
+      "A": "Tomou só 40% de 1,7 L como água perdida: $0{,}4 \\times 1{,}7 = 0{,}68$ L e $0{,}68 \\div 1{,}5 \\approx 0{,}45$ h, cerca de 27 min.",
+      "B": "Descontou 40% de 1,7 L em vez de dividir por 1,4: $0{,}6 \\times 1{,}7 = 1{,}02$ L e $1{,}02 \\div 1{,}5 = 0{,}68$ h, cerca de 41 min.",
+      "D": "Ignorou os 40% a mais: $1{,}7 \\div 1{,}5 \\approx 1{,}13$ h, cerca de 68 min.",
+      "E": "Multiplicou por 1,4 em vez de dividir: $1{,}7 \\times 1{,}4 \\div 1{,}5 \\approx 1{,}59$ h, cerca de 95 min."
+    },
+    "conceitos": [
+      "porcentagem",
+      "proporcionalidade",
+      "conversão de unidades de tempo"
+    ]
+  },
+  {
+    "id": "2022-170",
+    "enunciado": "Um parque tem dois circuitos de tamanhos diferentes para corridas. Um corredor treina nesse parque e, no primeiro dia, inicia seu treino percorrendo 3 voltas em torno do circuito maior e 2 voltas em torno do menor, perfazendo um total de 1 800 m. Em seguida, dando continuidade a seu treino, corre mais 2 voltas em torno do circuito maior e 1 volta em torno do menor, percorrendo mais 1 100 m.\n\nNo segundo dia, ele pretende percorrer 5 000 m nos circuitos do parque, fazendo um número inteiro de voltas em torno deles e de modo que o número de voltas seja o maior possível.\n\nA soma do número de voltas em torno dos dois circuitos, no segundo dia, será",
+    "alternativas": {
+      "A": "10.",
+      "B": "13.",
+      "C": "14.",
+      "D": "15.",
+      "E": "16."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve metros por extenso; o original usa m (1 800 m, 1 100 m, 5 000 m).",
+    "gabarito_calculado": "E",
+    "resolucao": "Sejam $x$ e $y$ os comprimentos dos circuitos maior e menor: $3x + 2y = 1800$ e $2x + y = 1100$.\nDa segunda, $y = 1100 - 2x$; substituindo: $3x + 2200 - 4x = 1800 \\Rightarrow x = 400$ e $y = 300$.\nNo segundo dia: $400a + 300b = 5000$, ou seja, $4a + 3b = 50$, com $a$ e $b$ inteiros não negativos.\nSoluções: $(a, b) = (11, 2), (8, 6), (5, 10), (2, 14)$, com somas 13, 14, 15 e 16.\nPara ter mais voltas, usa-se mais o circuito menor: $a + b = 2 + 14 = 16$. Alternativa E.",
+    "enganos": {
+      "A": "Não há uma conta clara que leve a 10; provável erro ao resolver o sistema (por exemplo, achar circuito maior de 500 m e fazer $5000 \\div 500 = 10$).",
+      "B": "Priorizou o circuito maior: $11 \\times 400 + 2 \\times 300 = 5000$, total de 13 voltas (o menor número possível, não o maior).",
+      "C": "Parou em uma solução intermediária, $8 \\times 400 + 6 \\times 300 = 5000$, com 14 voltas, sem testar as demais.",
+      "D": "Parou em $5 \\times 400 + 10 \\times 300 = 5000$, com 15 voltas, sem testar a combinação com 14 voltas no circuito menor."
+    },
+    "conceitos": [
+      "sistema de equações lineares",
+      "números inteiros",
+      "otimização"
+    ]
+  },
+  {
+    "id": "2022-175",
+    "enunciado": "Um casal está reformando a cozinha de casa e decidiu comprar um refrigerador novo. Observando a planta da nova cozinha, desenhada na escala de 1 : 50, notaram que o espaço destinado ao refrigerador tinha 3,8 cm de altura e 1,6 cm de largura. Eles sabem que os fabricantes de refrigeradores indicam que, para um bom funcionamento e fácil manejo na limpeza, esses eletrodomésticos devem ser colocados em espaços que permitam uma distância de, pelo menos, 10 cm de outros móveis ou paredes, tanto na parte superior quanto nas laterais. O casal comprou um refrigerador que caberia no local a ele destinado na nova cozinha, seguindo as instruções do fabricante.\n\nEsse refrigerador tem altura e largura máximas, em metro, respectivamente, iguais a",
+    "alternativas": {
+      "A": "1,80 e 0,60.",
+      "B": "1,80 e 0,70.",
+      "C": "1,90 e 0,80.",
+      "D": "2,00 e 0,90.",
+      "E": "2,00 e 1,00."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve a escala como 1 para 50; no original é 1 : 50.",
+    "gabarito_calculado": "A",
+    "resolucao": "Na escala 1 : 50, cada 1 cm da planta corresponde a 50 cm reais.\nAltura do espaço: $3{,}8 \\times 50 = 190$ cm; largura: $1{,}6 \\times 50 = 80$ cm.\nNa altura, a folga de 10 cm é só na parte superior: $190 - 10 = 180$ cm.\nNa largura, a folga é de 10 cm em cada lateral: $80 - 2 \\times 10 = 60$ cm.\nAltura e largura máximas: 1,80 m e 0,60 m. Alternativa A.",
+    "enganos": {
+      "B": "Descontou a folga de apenas uma lateral: $80 - 10 = 70$ cm.",
+      "C": "Aplicou a escala, mas esqueceu de descontar as folgas: 190 cm e 80 cm.",
+      "D": "Somou as folgas em vez de subtrair, e só uma vez na largura: $190 + 10 = 200$ cm e $80 + 10 = 90$ cm.",
+      "E": "Somou as folgas em vez de subtrair: $190 + 10 = 200$ cm e $80 + 2 \\times 10 = 100$ cm."
+    },
+    "conceitos": [
+      "escala",
+      "conversão de unidades de comprimento"
+    ]
+  },
+  {
+    "id": "2023-140",
+    "enunciado": "Um supermercado conta com cinco caixas disponíveis para pagamento. Foram instaladas telas que apresentam o tempo médio gasto por cada caixa para iniciar e finalizar o atendimento de cada cliente, e o número de pessoas presentes na fila de cada caixa em tempo real. Um cliente, na hora de passar sua compra, sabendo que cada um dos cinco caixas iniciará um novo atendimento naquele momento, pretende gastar o menor tempo possível de espera na fila. Ele observa que as telas apresentavam as informações a seguir.\n\n- Caixa I: atendimento 12 minutos, 5 pessoas na fila.\n- Caixa II: atendimento 6 minutos, 9 pessoas na fila.\n- Caixa III: atendimento 5 minutos, 6 pessoas na fila.\n- Caixa IV: atendimento 15 minutos, 2 pessoas na fila.\n- Caixa V: atendimento 9 minutos, 3 pessoas na fila.\n\nPara alcançar seu objetivo, o cliente deverá escolher o caixa",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset troca Caixa I a V por Caixa 1 a 5 e as alternativas romanas por algarismos.",
+    "gabarito_calculado": "E",
+    "resolucao": "Como cada caixa começa um novo atendimento agora, o cliente espera o atendimento de todas as pessoas que estão na fila à frente dele.\nEspera = tempo de atendimento $\\times$ pessoas na fila.\nI: $12 \\times 5 = 60$; II: $6 \\times 9 = 54$; III: $5 \\times 6 = 30$.\nIV: $15 \\times 2 = 30$; V: $9 \\times 3 = 27$ minutos.\nA menor espera é no caixa V (27 min). Alternativa E.",
+    "enganos": {
+      "A": "Não há uma conta clara que leve ao caixa I, que tem a maior espera (60 min); provável escolha sem cálculo.",
+      "B": "Dividiu o tempo de atendimento pelo número de pessoas em vez de multiplicar: $6 \\div 9 \\approx 0{,}67$ é o menor quociente.",
+      "C": "Incluiu o próprio atendimento na espera, multiplicando por pessoas + 1 (III: $5 \\times 7 = 35$ contra V: $9 \\times 4 = 36$), ou escolheu só pelo menor tempo de atendimento (5 min).",
+      "D": "Escolheu a fila com menos pessoas (2), sem considerar o tempo de cada atendimento: $15 \\times 2 = 30$ min."
+    },
+    "conceitos": [
+      "multiplicação",
+      "comparação de grandezas"
+    ]
+  },
+  {
+    "id": "2023-152",
+    "enunciado": "Visando atrair mais clientes, o gerente de uma loja anunciou uma promoção em que cada cliente que realizar uma compra pode ganhar um voucher para ser usado em sua próxima compra. Para ganhar seu voucher, o cliente precisa retirar, ao acaso, uma bolinha de dentro de cada uma das duas urnas A e B disponibilizadas pelo gerente, nas quais há apenas bolinhas pretas e brancas. Atualmente, a probabilidade de se escolher, ao acaso, uma bolinha preta na urna A é igual a 20% e a probabilidade de se escolher uma bolinha preta na urna B é 25%. Ganha o voucher o cliente que retirar duas bolinhas pretas, uma de cada urna.\n\nCom o passar dos dias, o gerente percebeu que, para a promoção ser viável aos negócios, era preciso alterar a probabilidade de acerto do cliente sem alterar a regra da promoção. Para isso, resolveu alterar a quantidade de bolinhas brancas na urna B de forma que a probabilidade de um cliente ganhar o voucher passasse a ser menor ou igual a 1%. Sabe-se que a urna B tem 4 bolinhas pretas e que, em ambas as urnas, todas as bolinhas têm a mesma probabilidade de serem retiradas.\n\nQual é o número mínimo de bolinhas brancas que o gerente deve adicionar à urna B?",
+    "alternativas": {
+      "A": "20",
+      "B": "60",
+      "C": "64",
+      "D": "68",
+      "E": "80"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve as porcentagens por extenso (20 por cento); o original usa 20%, 25% e 1%.",
+    "gabarito_calculado": "C",
+    "resolucao": "Probabilidade de ganhar = $P(\\text{preta em A}) \\times P(\\text{preta em B}) = 0{,}2 \\times P_B$.\nQueremos $0{,}2 \\times P_B \\leq 0{,}01$, ou seja, $P_B \\leq 0{,}05$.\nHoje a urna B tem 4 pretas e $P_B = 25\\%$, então tem 16 bolinhas (12 brancas).\nCom $x$ brancas adicionadas: $\\frac{4}{16 + x} \\leq 0{,}05 \\Rightarrow 16 + x \\geq 80 \\Rightarrow x \\geq 64$.\nO mínimo é 64 bolinhas brancas. Alternativa C.",
+    "enganos": {
+      "A": "Não há uma conta clara; uma possibilidade é usar a probabilidade da urna A na urna B e calcular $4 \\div 0{,}2 = 20$ bolinhas.",
+      "B": "Achou o total de 80 bolinhas, mas descontou as pretas duas vezes: $80 - 16 - 4 = 60$.",
+      "D": "Achou o total de 80 bolinhas e descontou só as 12 brancas existentes, esquecendo as 4 pretas: $80 - 12 = 68$.",
+      "E": "Achou o total necessário de 80 bolinhas na urna B e respondeu esse número, sem descontar as 16 que já estavam lá."
+    },
+    "conceitos": [
+      "probabilidade",
+      "eventos independentes",
+      "inequação"
+    ]
+  },
+  {
+    "id": "2023-160",
+    "enunciado": "Um pescador tem um custo fixo diário de R\\$ 900,00 com combustível, iscas, manutenção de seu barco e outras pequenas despesas. Ele vende cada quilograma de peixe por R\\$ 5,00. Sua meta é obter um lucro mínimo de R\\$ 800,00 por dia. Sozinho, ele consegue, ao final de um dia de trabalho, pescar 180 kg de peixe, o que é suficiente apenas para cobrir o custo fixo diário. Portanto, precisa contratar ajudantes, pagando para cada um R\\$ 250,00 por dia de trabalho. Além desse valor, 4% da receita obtida pela venda de peixe é repartida igualmente entre os ajudantes. Considerando o tamanho de seu barco, ele pode contratar até 5 ajudantes. Ele sabe que com um ajudante a pesca diária é de 300 kg e que, a partir do segundo ajudante contratado, aumenta-se em 100 kg a quantidade de peixe pescada por ajudante em um dia de trabalho.\n\nA quantidade mínima de ajudantes que esse pescador precisa contratar para conseguir o lucro diário pretendido é",
+    "alternativas": {
+      "A": "1.",
+      "B": "2.",
+      "C": "3.",
+      "D": "4.",
+      "E": "5."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset troca os valores em R\\$ por reais por extenso, kg por quilogramas e 4% por 4 por cento. A frase sobre o aumento de 100 kg por ajudante é ambígua; foi interpretada como acréscimo de 100 kg no total a cada ajudante a partir do segundo.",
+    "gabarito_calculado": "D",
+    "resolucao": "Lucro = receita - custo fixo - diárias - 4% da receita = $0{,}96R - 900 - 250n$, com $R = 5 \\times$ (kg pescados).\nPesca: 300 kg com 1 ajudante e mais 100 kg a cada ajudante a partir do segundo (400, 500, 600, 700 kg).\n$n = 1$: $R = 1500$, lucro $= 1440 - 900 - 250 = 290$.\n$n = 2$: $R = 2000$, lucro $= 1920 - 900 - 500 = 520$.\n$n = 3$: $R = 2500$, lucro $= 2400 - 900 - 750 = 750 < 800$.\n$n = 4$: $R = 3000$, lucro $= 2880 - 900 - 1000 = 980 \\geq 800$.\nSão necessários, no mínimo, 4 ajudantes. Alternativa D.",
+    "enganos": {
+      "A": "Comparou só a receita com a meta: com 1 ajudante a receita é $5 \\times 300 = 1500$, maior que 800, ignorando os custos.",
+      "B": "Esqueceu as diárias dos ajudantes: com 2 ajudantes, $0{,}96 \\times 2000 - 900 = 1020 \\geq 800$.",
+      "C": "Esqueceu os 4% da receita repartidos entre os ajudantes: com 3 ajudantes, $2500 - 900 - 750 = 850 \\geq 800$.",
+      "E": "Não há uma conta clara que leve a 5; provável escolha do máximo permitido pelo barco, por insegurança, sem testar 4 ajudantes."
+    },
+    "conceitos": [
+      "porcentagem",
+      "lucro",
+      "função afim"
+    ]
+  },
+  {
+    "id": "2023-166",
+    "enunciado": "A água utilizada pelos 75 moradores de um vilarejo provém de um reservatório de formato cilíndrico circular reto cujo raio da base mede 5 metros, sempre abastecido no primeiro dia de cada mês por caminhões-pipa. Cada morador desse vilarejo consome, em média, 200 litros de água por dia.\n\nNo mês de junho de um determinado ano, o vilarejo festejou o dia do seu padroeiro e houve um gasto extra de água nos primeiros 20 dias. Passado esse período, as pessoas verificaram a quantidade de água presente no reservatório e constataram que o nível da coluna de água estava em 1,5 metro. Decidiram, então, fazer um racionamento de água durante os 10 dias seguintes. Considere 3 como aproximação para $\\pi$.\n\nQual é a quantidade mínima de água, em litro, que cada morador, em média, deverá economizar por dia, de modo que o reservatório não fique sem água nos próximos 10 dias?",
+    "alternativas": {
+      "A": "50",
+      "B": "60",
+      "C": "80",
+      "D": "140",
+      "E": "150"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve pi por extenso; o original usa o símbolo π.",
+    "gabarito_calculado": "A",
+    "resolucao": "Volume de água restante: $V = \\pi r^2 h = 3 \\times 5^2 \\times 1{,}5 = 112{,}5$ m³, ou seja, 112 500 L.\nEsse volume precisa durar 10 dias para 75 moradores: $112500 \\div (75 \\times 10) = 150$ L por morador por dia.\nO consumo normal é de 200 L por dia, então cada morador deve economizar $200 - 150 = 50$ L por dia. Alternativa A.",
+    "enganos": {
+      "B": "Usou a área lateral em vez da área da base: $2\\pi r h = 2 \\times 3 \\times 5 \\times 1{,}5 = 45$ m³, o que dá $45000 \\div 750 = 60$ L, e respondeu esse consumo como economia.",
+      "C": "Não há uma conta clara que leve a 80; provável escolha por estimativa.",
+      "D": "Com o erro da área lateral (60 L por dia disponíveis), calculou a economia como $200 - 60 = 140$.",
+      "E": "Calculou corretamente o consumo permitido (150 L por dia), mas respondeu esse valor em vez da economia."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "conversão de unidades de volume",
+      "divisão"
+    ]
+  },
+  {
+    "id": "2023-174",
+    "enunciado": "A cada bimestre, a diretora de uma escola compra uma quantidade de folhas de papel ofício proporcional ao número de alunos matriculados. No bimestre passado, ela comprou 6 000 folhas para serem utilizadas pelos 1 200 alunos matriculados. Neste bimestre, alguns alunos cancelaram suas matrículas e a escola tem, agora, 1 150 alunos. A diretora só pode gastar R\\$ 220,00 nessa compra, e sabe que o fornecedor da escola vende as folhas de papel ofício em embalagens de 100 unidades a R\\$ 4,00 a embalagem. Assim, será preciso convencer o fornecedor a dar um desconto à escola, de modo que seja possível comprar a quantidade total de papel ofício necessária para o bimestre.\n\nO desconto necessário no preço final da compra, em porcentagem, pertence ao intervalo",
+    "alternativas": {
+      "A": "(5,0 ; 5,5).",
+      "B": "(8,0 ; 8,5).",
+      "C": "(11,5 ; 12,5).",
+      "D": "(19,5 ; 20,5).",
+      "E": "(3,5 ; 4,0)."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset troca R\\$ 220,00 e R\\$ 4,00 por reais por extenso.",
+    "gabarito_calculado": "A",
+    "resolucao": "São $6000 \\div 1200 = 5$ folhas por aluno; para 1 150 alunos: $1150 \\times 5 = 5750$ folhas.\nAs folhas vêm em embalagens de 100, então são necessárias 58 embalagens (57 dariam só 5 700 folhas).\nPreço sem desconto: $58 \\times 4 = 232$ reais.\nDesconto necessário: $232 - 220 = 12$ reais, ou seja, $\\frac{12}{232} \\approx 5{,}17\\%$.\nO valor pertence ao intervalo (5,0 ; 5,5). Alternativa A.",
+    "enganos": {
+      "B": "Usou as 6 000 folhas do bimestre passado, sem ajustar ao novo número de alunos: $60 \\times 4 = 240$ reais e $\\frac{20}{240} \\approx 8{,}3\\%$.",
+      "C": "Achou a diferença de 12 reais ($232 - 220$) e a tratou como se fosse 12%.",
+      "D": "Usou 6 000 folhas (240 reais) e tratou a diferença de 20 reais como se fosse 20%.",
+      "E": "Arredondou para baixo e comprou 57 embalagens ($57 \\times 4 = 228$ reais), obtendo $\\frac{8}{228} \\approx 3{,}5\\%$, o que deixaria faltar 50 folhas."
+    },
+    "conceitos": [
+      "proporcionalidade",
+      "porcentagem",
+      "arredondamento"
+    ]
+  },
+  {
+    "id": "2024-136",
+    "enunciado": "Contratos de vários serviços disponíveis na internet apresentam uma quantidade excessiva de informações. Isso faz com que o tempo necessário para a leitura desses contratos possa ser longo.\n\nO quadro apresenta uma amostra do tempo considerado necessário para a leitura completa do contrato de alguns serviços digitais.\n\n| Tipo de serviço | Tempo necessário para a leitura completa do contrato (em minuto) |\n|:---:|:---:|\n| A | 36 |\n| B | 17 |\n| C | 27 |\n| D | 13 |\n| E | 13 |\n| F | 13 |\n\nROMERO, L. Não li e concordo. Superinteressante, n. 307, ago. 2012 (adaptado).\n\nO tempo médio, em minuto, necessário para a leitura completa de um contrato de serviço dentre os listados no quadro é, com uma casa decimal, aproximadamente,",
+    "alternativas": {
+      "A": "13,0.",
+      "B": "15,0.",
+      "C": "19,8.",
+      "D": "20,0.",
+      "E": "23,3."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Incluída a referência da fonte que aparece abaixo do quadro; o dataset a omite.",
+    "gabarito_calculado": "C",
+    "resolucao": "Soma dos tempos: $36 + 17 + 27 + 13 + 13 + 13 = 119$ minutos.\nSão 6 serviços: média $= \\frac{119}{6} \\approx 19{,}83$.\nCom uma casa decimal: 19,8. Alternativa C.",
+    "enganos": {
+      "A": "Usou a moda (13, o valor que mais se repete) em vez da média.",
+      "B": "Usou a mediana: com os valores ordenados 13, 13, 13, 17, 27, 36, fez $\\frac{13 + 17}{2} = 15$.",
+      "D": "Arredondou a média $119 \\div 6 \\approx 19{,}83$ para o inteiro 20, ignorando o pedido de uma casa decimal.",
+      "E": "Calculou a média sem repetir o 13: $\\frac{36 + 17 + 27 + 13}{4} = 23{,}25$."
+    },
+    "conceitos": [
+      "média aritmética",
+      "medidas de tendência central"
+    ]
+  },
+  {
+    "id": "2024-143",
+    "enunciado": "Um fazendeiro pretende construir um galinheiro ocupando uma região plana de formato retangular, com lados de comprimentos $L$ metro e $C$ metro. Os lados serão cercados por telas de tipos diferentes. Nos lados de comprimento $L$ metro, será utilizada uma tela cujo metro linear custa R\\$ 20,00, enquanto, nos outros dois lados, uma que custa R\\$ 15,00. O fazendeiro quer gastar, no máximo, R\\$ 6 000,00 na compra de toda a tela necessária para o galinheiro, e deseja que o galinheiro tenha a maior área possível.\n\nQual será a medida, em metro, do maior lado do galinheiro?",
+    "alternativas": {
+      "A": "85",
+      "B": "100",
+      "C": "175",
+      "D": "200",
+      "E": "350"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset troca os valores em R\\$ por reais por extenso e escreve 6000 sem o espaço de milhar.",
+    "gabarito_calculado": "B",
+    "resolucao": "Custo da tela: $2L \\times 20 + 2C \\times 15 = 40L + 30C$.\nPara a maior área, usa-se todo o orçamento: $40L + 30C = 6000$, logo $C = 200 - \\frac{4L}{3}$.\nÁrea: $A = L \\cdot C = 200L - \\frac{4L^2}{3}$, uma parábola com concavidade para baixo.\nO máximo ocorre em $L = \\frac{-200}{2 \\cdot (-\\frac{4}{3})} = 75$ m, e então $C = 200 - 100 = 100$ m.\nO maior lado mede 100 m. Alternativa B.",
+    "enganos": {
+      "A": "Supôs que a área máxima ocorre com um quadrado: $40L + 30L = 6000 \\Rightarrow L \\approx 85{,}7$, arredondando para 85.",
+      "C": "Somou os dois lados encontrados: $75 + 100 = 175$.",
+      "D": "Respondeu o comprimento total da tela de 15 reais ($2 \\times 100 = 200$), ou o valor de $C$ quando $L = 0$, em vez do lado.",
+      "E": "Respondeu o perímetro do galinheiro: $2 \\times (75 + 100) = 350$."
+    },
+    "conceitos": [
+      "função quadrática",
+      "máximo de função",
+      "área do retângulo"
+    ]
+  },
+  {
+    "id": "2024-150",
+    "enunciado": "O estádio do Maracanã passou por algumas modificações estruturais para a realização da Copa do Mundo de 2014, como, por exemplo, as dimensões do campo retangular. Para se adaptar aos padrões da Fifa, as dimensões do campo foram reduzidas de 110 m × 75 m para 105 m × 68 m.\n\nDisponível em: http://virgula.uol.com.br. Acesso em: 14 ago. 2013 (adaptado).\n\nEm quantos metros quadrados a área do campo do Maracanã foi reduzida?",
+    "alternativas": {
+      "A": "24",
+      "B": "35",
+      "C": "555",
+      "D": "1 110",
+      "E": "1 145"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreve 110 metros por 75 metros e as alternativas D e E sem o espaço de milhar (1110 e 1145); incluída a referência da fonte.",
+    "gabarito_calculado": "D",
+    "resolucao": "Área antiga: $110 \\times 75 = 8250$ m².\nÁrea nova: $105 \\times 68 = 7140$ m².\nRedução: $8250 - 7140 = 1110$ m². Alternativa D.",
+    "enganos": {
+      "A": "Calculou a redução do perímetro em vez da área: $2 \\times (5 + 7) = 24$.",
+      "B": "Multiplicou só as reduções de cada dimensão: $5 \\times 7 = 35$.",
+      "C": "Não há uma conta clara que leve a 555; provavelmente dividiu a diferença correta por 2 em algum passo.",
+      "E": "Somou as faixas retiradas contando o canto duas vezes: $5 \\times 75 + 7 \\times 110 = 375 + 770 = 1145$."
+    },
+    "conceitos": [
+      "área do retângulo",
+      "subtração"
+    ]
+  },
+  {
+    "id": "2024-158",
+    "enunciado": "Uma doceira vende e entrega, em seu bairro, porções de 100 g de docinhos de aniversário. Atualmente, a taxa única de entrega é R\\$ 10,00, e o valor cobrado por uma porção é R\\$ 25,00. Por uma estratégia de vendas, a partir da próxima semana, a taxa única de entrega será R\\$ 15,00, e um novo valor será cobrado por uma porção, de maneira que o valor total a ser pago por um cliente na compra de 5 porções permaneça o mesmo.\n\nA partir da próxima semana, qual será o novo valor cobrado, em real, por uma porção?",
+    "alternativas": {
+      "A": "12,50",
+      "B": "20,00",
+      "C": "24,00",
+      "D": "30,00",
+      "E": "37,50"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset troca R\\$ por reais por extenso e 100 g por 100 gramas.",
+    "gabarito_calculado": "C",
+    "resolucao": "Hoje, 5 porções custam $5 \\times 25 + 10 = 135$ reais.\nCom a nova taxa, o novo preço $p$ deve satisfazer $5p + 15 = 135$.\n$5p = 120 \\Rightarrow p = 24$. Alternativa C.",
+    "enganos": {
+      "A": "Achou que o preço da porção deveria cair na mesma proporção em que a taxa subiu (50%): $25 \\times 0{,}5 = 12{,}50$.",
+      "B": "Tirou de uma única porção todo o aumento da taxa (ou fez a conta para 1 porção): $25 - 5 = 20$.",
+      "D": "Somou o aumento da taxa ao preço da porção: $25 + 5 = 30$.",
+      "E": "Aumentou o preço da porção na mesma proporção da taxa: $25 \\times 1{,}5 = 37{,}50$."
+    },
+    "conceitos": [
+      "equação do 1º grau",
+      "função afim"
+    ]
+  },
+  {
+    "id": "2024-162",
+    "enunciado": "A umidade relativa do ar é um dos indicadores utilizados na meteorologia para fazer previsões sobre o clima. O quadro apresenta as médias mensais, em porcentagem, da umidade relativa do ar em um período de seis meses consecutivos em uma cidade.\n\n| Meses | Maio | Jun. | Jul. | Ago. | Set. | Out. |\n|:---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| Média mensal da umidade relativa do ar (%) | 66 | 64 | 54 | 46 | 60 | 64 |\n\nNessa cidade, a mediana desses dados, em porcentagem, da umidade relativa do ar no período considerado foi",
+    "alternativas": {
+      "A": "56.",
+      "B": "58.",
+      "C": "59.",
+      "D": "60.",
+      "E": "62."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "Ordenando os valores: 46, 54, 60, 64, 64, 66.\nCom 6 valores, a mediana é a média dos dois centrais (3º e 4º): $\\frac{60 + 64}{2} = 62$. Alternativa E.",
+    "enganos": {
+      "A": "Calculou a média entre o maior e o menor valor: $\\frac{66 + 46}{2} = 56$.",
+      "B": "Calculou a média sem repetir o 64: $\\frac{46 + 54 + 60 + 64 + 66}{5} = 58$.",
+      "C": "Calculou a média aritmética em vez da mediana: $\\frac{354}{6} = 59$.",
+      "D": "Tomou o valor central dos 5 valores distintos (46, 54, 60, 64, 66), ou só o 3º valor da lista ordenada: 60."
+    },
+    "conceitos": [
+      "mediana",
+      "medidas de tendência central"
+    ]
+  },
+  {
+    "id": "2024-172",
+    "enunciado": "Em uma região com grande incidência de terremotos, observou-se que dois terremotos ocorridos apresentaram magnitudes $M_1$ e $M_2$, medidos segundo a escala Richter, e liberaram energias iguais a $E_1$ e $E_2$, respectivamente. Entre os estudiosos do assunto, é conhecida uma expressão algébrica relacionando esses valores dada por\n\n$M_2 - M_1 = \\frac{2}{3} \\log\\left(\\frac{E_2}{E_1}\\right)$\n\nEstudos mais abrangentes observaram que o primeiro terremoto apresentou a magnitude $M_1 = 6{,}9$ e a energia liberada foi um décimo da observada no segundo terremoto.\n\nO valor aproximado da magnitude $M_2$ do segundo terremoto, expresso com uma casa decimal, é igual a",
+    "alternativas": {
+      "A": "5,4.",
+      "B": "6,2.",
+      "C": "7,6.",
+      "D": "8,2.",
+      "E": "8,4."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No original a fórmula aparece centralizada em linha própria; o dataset a escreve por extenso (M índice 2 menos M índice 1...).",
+    "gabarito_calculado": "C",
+    "resolucao": "A energia do primeiro é um décimo da do segundo: $E_1 = \\frac{E_2}{10}$, logo $\\frac{E_2}{E_1} = 10$.\n$\\log 10 = 1$, então $M_2 - 6{,}9 = \\frac{2}{3} \\approx 0{,}67$.\n$M_2 \\approx 6{,}9 + 0{,}67 = 7{,}57 \\approx 7{,}6$. Alternativa C.",
+    "enganos": {
+      "A": "Inverteu a fração para $\\frac{3}{2}$ e também a razão das energias ($\\log 0{,}1 = -1$): $6{,}9 - 1{,}5 = 5{,}4$.",
+      "B": "Inverteu a razão das energias, usando $\\frac{E_2}{E_1} = \\frac{1}{10}$: $6{,}9 - \\frac{2}{3} \\approx 6{,}2$.",
+      "D": "Não há uma conta clara que leve a 8,2; uma possibilidade é usar razão 100 ($\\log 100 = 2$): $6{,}9 + \\frac{4}{3} \\approx 8{,}2$.",
+      "E": "Usou $\\frac{3}{2}$ no lugar de $\\frac{2}{3}$: $6{,}9 + 1{,}5 = 8{,}4$."
+    },
+    "conceitos": [
+      "logaritmo",
+      "substituição em fórmula"
+    ]
+  }
+]
