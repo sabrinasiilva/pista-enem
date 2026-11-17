@@ -148,7 +148,18 @@ pista-enem/
 
 ## Como rodar localmente
 
-Em construção. As instruções completas chegam com a versão v0.1.0. Pré-requisitos previstos: Python 3.12, Node.js 22, Docker e uma chave da API do Gemini.
+Em construção: as instruções completas chegam com a v0.1.0. Já dá para usar o tutor pelo terminal.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate              # no Windows: .venv\Scripts\activate
+pip install -r api/requirements-dev.txt
+
+cp api/.env.example api/.env           # e coloque a sua GEMINI_API_KEY
+cd api
+python -m app.tutor.terminal 2022-141  # sem a chave, funciona só com o plano B
+python -m pytest
+```
 
 ## Autora
 

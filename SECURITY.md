@@ -28,10 +28,12 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 ## Privacidade e LGPD
 
 - O Pista não pede nome, e-mail, CPF, idade nem qualquer dado pessoal.
-- O identificador da sessão é aleatório e gerado no navegador.
+- O identificador da sessão é aleatório (UUID) e gerado pelo servidor.
 - O endereço IP é usado só para limitar abusos e não é salvo no banco.
 - As interações são apagadas após 30 dias. Só ficam números agregados, sem ligação com nenhuma pessoa.
 - Muitos estudantes do ENEM são menores de idade, por isso o projeto foi desenhado para não coletar dados pessoais desde o início (LGPD, art. 14).
+- **Plano gratuito do Gemini:** nesse plano, o Google pode usar o conteúdo enviado para melhorar os produtos dele. Por isso a interface vai avisar para não digitar dados pessoais nas mensagens, e o tutor não pede nem comenta dados pessoais. Se o projeto passar a ter muitos usuários, a migração para o plano pago (em que os dados não são usados) entra no planejamento.
+- Mensagens bloqueadas pelo guardrail de entrada não são guardadas, nem no histórico da sessão.
 
 ## Controles técnicos
 
