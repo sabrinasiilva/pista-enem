@@ -1,0 +1,32 @@
+# Segredos e variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Node
+node_modules/
+dist/
+coverage/
+
+# Dados brutos baixados (PDFs do Inep não são versionados)
+data/brutos/
+
+# Relatórios gerados pela avaliação
+evals/relatorios/
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
