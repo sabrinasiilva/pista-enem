@@ -45,7 +45,7 @@ Total estimado: **cerca de 110 horas**.
 - [x] Fluxo de branches: `main` protegida, trabalho em `feat/...` e `fix/...`, entrada via pull request
 - [x] Alertas do Dependabot e varredura de segredos ativados
 - [ ] Chave da API do Gemini criada e guardada fora do repositório
-- [ ] Contas criadas: Neon (banco) e Hugging Face (API)
+- [ ] Contas criadas: Neon (banco) e Render (API)
 
 **Entregável:** repositório organizado, com documentação e quadro de tarefas.
 **Pronto quando:** qualquer pessoa entende o projeto só lendo o README, e toda tarefa do cronograma existe como issue.
@@ -147,8 +147,10 @@ Total estimado: **cerca de 110 horas**.
 - [ ] Banco PostgreSQL no Neon, com usuário de aplicação de privilégio mínimo
 - [ ] Migrações com Alembic (tabelas de questões, alternativas, sessões e interações)
 - [ ] Script de carga das 60 questões no banco
-- [ ] `Dockerfile` da API e deploy no Hugging Face Spaces, com a chave do Gemini nos segredos do Space
-- [ ] Front-end publicado no GitHub Pages
+- [x] `Dockerfile` da API e configuração do Render (`render.yaml`), com a chave do Gemini nas variáveis do Render
+- [ ] Serviço criado no Render e no ar
+- [x] Publicação do front-end no GitHub Pages (`publicar-site.yml`)
+- [ ] Site no ar, apontando para a API do Render
 - [ ] CORS liberado só para o domínio do front-end
 - [ ] Workflow de CI: lint, checagem de tipos e testes a cada push e pull request
 - [ ] Workflow de CD: deploy do front e da API quando a `main` muda

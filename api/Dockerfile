@@ -2,8 +2,8 @@
 #   docker build -f api/Dockerfile -t pista-api .
 #   docker run --rm -p 8000:8000 --env-file api/.env pista-api
 #
-# Roda como usuário sem privilégios (uid 1000, o mesmo que o Hugging Face Spaces usa).
-# A porta vem da variável PORT (8000 por padrão; o Hugging Face Spaces usa 7860).
+# Roda como usuário sem privilégios (uid 1000).
+# A porta vem da variável PORT (8000 por padrão; o Render define a sua).
 # As migrações do banco rodam ao iniciar. Sem DATABASE_URL própria, usa SQLite na pasta do
 # usuário, que some quando o container é recriado; o banco de verdade é o PostgreSQL da Fase 5.
 

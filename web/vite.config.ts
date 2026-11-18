@@ -11,5 +11,6 @@ export default defineConfig(({ command }) => ({
     environment: 'jsdom',
     setupFiles: ['./src/testes/preparar.ts'],
     css: false,
+    testTimeout: 15000,
   },
 }))

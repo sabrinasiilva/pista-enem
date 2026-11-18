@@ -1,10 +1,27 @@
 import { AlertTriangle, Loader2, RotateCw } from 'lucide-react'
+import { useEffect, useState } from 'react'
+
+/** Depois deste tempo, avisa que o servidor gratuito pode estar acordando. */
+export const ESPERA_ANTES_DO_AVISO = 4000
 
 export function Carregando({ texto = 'Carregando…' }: { texto?: string }) {
+  const [demorando, setDemorando] = useState(false)
+  useEffect(() => {
+    const relogio = setTimeout(() => setDemorando(true), ESPERA_ANTES_DO_AVISO)
+    return () => clearTimeout(relogio)
+  }, [])
+
   return (
-    <div role="status" className="flex items-center justify-center gap-2 py-16 text-stone-500">
-      <Loader2 className="size-5 animate-spin" aria-hidden />
-      <span>{texto}</span>
+    <div role="status" className="flex flex-col items-center justify-center gap-2 px-4 py-16 text-center text-stone-500">
+      <span className="inline-flex items-center gap-2">
+        <Loader2 className="size-5 animate-spin" aria-hidden />
+        <span>{texto}</span>
+      </span>
+      {demorando && (
+        <span className="max-w-sm text-sm">
+          O servidor gratuito dorme quando ninguém usa e leva até 1 minuto para acordar. Já já carrega.
+        </span>
+      )}
     </div>
   )
 }

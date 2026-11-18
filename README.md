@@ -64,7 +64,7 @@ flowchart TD
 ```mermaid
 flowchart LR
     U[Navegador do aluno] -->|HTTPS| F[Front-end<br/>React + TypeScript<br/>GitHub Pages]
-    F -->|HTTPS, JSON| A[API<br/>FastAPI<br/>Hugging Face Spaces]
+    F -->|HTTPS, JSON| A[API<br/>FastAPI<br/>Render]
     A --> T[Motor do tutor<br/>níveis de pista + guardrails]
     T --> R[Busca RAG]
     R --> D[(PostgreSQL + pgvector<br/>Neon)]
@@ -84,7 +84,7 @@ Detalhes de cada componente, modelo de dados, rotas da API e decisões técnicas
 | IA | Google Gemini (geração e embeddings) | Plano gratuito e já integrado em outro projeto meu (CO2Bank) |
 | Banco de dados | PostgreSQL com pgvector | Questões, sessões e vetores no mesmo banco, sem serviço extra |
 | Migrações | Alembic | Versão do banco controlada junto com o código |
-| Hospedagem | GitHub Pages (front), Hugging Face Spaces (API), Neon (banco) | Planos gratuitos, sem disputar horas com meus outros projetos no Render |
+| Hospedagem | GitHub Pages (front), Render (API, via Docker), Neon (banco) | Planos gratuitos; o passo a passo está em [docs/HOSPEDAGEM.md](docs/HOSPEDAGEM.md) |
 | CI/CD | GitHub Actions | Testes, checagem de segurança e deploy a cada push |
 | Testes | pytest, Vitest, Testing Library, Playwright | Unidade, integração e ponta a ponta |
 | Observabilidade | Logs estruturados, UptimeRobot | Latência, erros, uso de tokens e disponibilidade |

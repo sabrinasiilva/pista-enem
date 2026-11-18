@@ -1,0 +1,27 @@
+# Configuração da API no Render (Blueprint). No painel do Render: New > Blueprint > este repositório.
+# As chaves (GEMINI_API_KEY e DATABASE_URL) são pedidas na criação e ficam só no Render, nunca no Git.
+services:
+  - type: web
+    name: pista-api
+    runtime: docker
+    plan: free
+    # mesma região do banco no Neon (AWS us-east-1), para as consultas serem rápidas
+    region: virginia
+    dockerfilePath: ./api/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeploy: true
+    # só refaz o deploy quando muda algo que vai para a imagem da API
+    buildFilter:
+      paths:
+        - api/**
+        - prompts/**
+        - data/questoes-mvp.json
+        - render.yaml
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGENS
+        value: https://sabrinasiilva.github.io,http://localhost:5173

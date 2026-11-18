@@ -5,7 +5,7 @@
 ```mermaid
 flowchart LR
     U[Navegador do aluno] -->|HTTPS| F[Front-end<br/>React + TypeScript<br/>GitHub Pages]
-    F -->|HTTPS, JSON e streaming| A[API FastAPI<br/>Hugging Face Spaces]
+    F -->|HTTPS, JSON e streaming| A[API FastAPI<br/>Render]
     subgraph API
       A --> G1[Guardrail de entrada]
       G1 --> T[Motor do tutor<br/>máquina de estados]
@@ -202,11 +202,11 @@ erDiagram
 | **FastAPI** na API | Flask | Validação com Pydantic nativa, streaming e documentação automática. Já uso Pydantic no CO2Bank. |
 | **PostgreSQL + pgvector** | Banco vetorial dedicado (Pinecone, Chroma) | Um banco só para dados e vetores. O volume de questões é pequeno, e o pgvector dá conta. |
 | **Neon** como banco | Supabase, Render | PostgreSQL gerenciado com pgvector em plano gratuito. |
-| **Hugging Face Spaces** na API | Render | Meus outros projetos já usam as horas gratuitas do Render. Além disso, o Spaces é a vitrine padrão de projetos de IA. |
+| **Render** na API (Docker, plano gratuito) | Hugging Face Spaces | Plataforma que já uso no CO2Bank. As 750 horas gratuitas são divididas entre os serviços da conta, mas serviço dormindo não gasta horas. Contra: dorme depois de 15 minutos sem acesso e leva até 1 minuto para acordar (o site avisa). O banco fica no Neon, porque o disco do Render é apagado a cada deploy e o Postgres gratuito de lá expira em 30 dias. |
 | **GitHub Pages** no front-end | Vercel, Netlify | Já uso no portfólio e no CO2Bank, e o deploy fica no mesmo GitHub Actions. |
 | **Verificação da resposta no código** | Deixar a IA julgar | Gabarito é dado, não opinião. A IA só cuida da conversa. |
 | **Conta opcional com apelido e senha** | Sem conta; cadastro com e-mail; login com Google | Muitos alunos são menores de idade. Apelido e senha guardam o progresso sem coletar dado pessoal. A recuperação é por um código mostrado no cadastro, e não por e-mail. Quem não quiser conta continua usando tudo. |
-| **Token no cabeçalho, não em cookie** | Cookie httpOnly | Front-end (GitHub Pages) e API (Hugging Face) ficam em domínios diferentes, e cookies entre domínios são bloqueados por vários navegadores. O token expira em 30 dias e é revogado ao sair. |
+| **Token no cabeçalho, não em cookie** | Cookie httpOnly | Front-end (GitHub Pages) e API (Render) ficam em domínios diferentes, e cookies entre domínios são bloqueados por vários navegadores. O token expira em 30 dias e é revogado ao sair. |
 | **scrypt da biblioteca padrão** | bcrypt, Argon2 | Algoritmo forte para senhas, sem dependência extra. |
 
 Os limites dos planos gratuitos mudam com frequência. Eles são conferidos na Fase 0 e revistos a cada release.
