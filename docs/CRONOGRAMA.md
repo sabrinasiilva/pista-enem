@@ -146,7 +146,7 @@ Total estimado: **cerca de 110 horas**.
 
 - [ ] Banco PostgreSQL no Neon, com usuário de aplicação de privilégio mínimo
 - [x] Migrações com Alembic (tabelas de contas, acessos e resultados; questões continuam no JSON versionado)
-- [ ] Script de carga das 60 questões no banco
+- [x] ~~Script de carga das 60 questões no banco~~ (não se aplica: as questões ficam no JSON versionado e revisado; o banco guarda contas e resultados)
 - [x] `Dockerfile` da API e configuração do Render (`render.yaml`), com a chave do Gemini nas variáveis do Render
 - [x] Serviço criado no Render e no ar (https://pista-api.onrender.com)
 - [x] Publicação do front-end no GitHub Pages (`publicar-site.yml`)
@@ -154,8 +154,8 @@ Total estimado: **cerca de 110 horas**.
 - [x] CORS liberado só para o domínio do front-end
 - [x] Workflow de CI: lint, checagem de tipos e testes a cada push e pull request
 - [x] Workflow de CD: deploy do front e da API quando a `main` muda
-- [ ] Exigir o CI verde para fazer merge na `main` (regra de proteção da branch)
-- [ ] Monitor de disponibilidade (sem ping a cada poucos minutos: manteria a API acordada e gastaria as horas gratuitas do Render)
+- [x] Exigir o CI verde para fazer merge na `main` (regra de proteção da branch)
+- [x] Monitor de disponibilidade a cada 6 horas (`monitor.yml`), sem manter a API acordada
 
 **Entregável:** Pista acessível por um link público.
 **Pronto quando:** o fluxo completo funciona no ar, e um push na `main` atualiza tudo sem passo manual.
@@ -219,7 +219,7 @@ Total estimado: **cerca de 110 horas**.
 - [ ] Cabeçalhos de segurança (CSP, HSTS, X-Content-Type-Options)
 - [ ] Logs sem dados pessoais e sem o texto completo das mensagens
 - [ ] Retenção: interações apagadas após 30 dias, só métricas agregadas ficam
-- [ ] Aviso de privacidade no site, em linguagem simples
+- [x] Aviso de privacidade no site, em linguagem simples (Configurações e campo da conversa)
 - [ ] Análise de código com CodeQL e auditoria de dependências (`pip-audit`, `npm audit`) no CI
 - [ ] Configurações de segurança do Gemini revisadas (conteúdo impróprio bloqueado)
 - [ ] Backup do banco testado (restaurar num banco vazio)

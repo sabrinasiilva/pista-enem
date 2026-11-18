@@ -1,0 +1,24 @@
+name: Monitor
+
+# Confere de 6 em 6 horas se o site e a API estão no ar. Se algo cair, o workflow falha
+# e o GitHub manda um e-mail. Não é um "ping" para manter a API acordada: 4 visitas por dia
+# gastam poucas horas do plano gratuito do Render (um ping a cada 10 minutos gastaria todas).
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: API (pode levar até 1 minuto para acordar)
+        run: |
+          curl -fsS --retry 3 --retry-delay 20 --max-time 90 https://pista-api.onrender.com/health | tee resposta.json
+          grep -q '"status":"ok"' resposta.json
+          grep -q '"ia":"gemini"' resposta.json || { echo "A API está no ar, mas sem a IA (modo básico)"; exit 1; }
+      - name: Site
+        run: curl -fsS --retry 3 --max-time 30 -o /dev/null https://sabrinasiilva.github.io/pista-enem/
