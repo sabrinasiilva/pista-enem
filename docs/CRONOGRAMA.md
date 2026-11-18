@@ -44,8 +44,8 @@ Total estimado: **cerca de 110 horas**.
 - [x] Padrão de commits definido (Conventional Commits, em português)
 - [x] Fluxo de branches: `main` protegida, trabalho em `feat/...` e `fix/...`, entrada via pull request
 - [x] Alertas do Dependabot e varredura de segredos ativados
-- [ ] Chave da API do Gemini criada e guardada fora do repositório
-- [ ] Contas criadas: Neon (banco) e Render (API)
+- [x] Chave da API do Gemini criada e guardada fora do repositório
+- [x] Contas criadas: Neon (banco) e Render (API)
 
 **Entregável:** repositório organizado, com documentação e quadro de tarefas.
 **Pronto quando:** qualquer pessoa entende o projeto só lendo o README, e toda tarefa do cronograma existe como issue.
@@ -145,17 +145,17 @@ Total estimado: **cerca de 110 horas**.
 **Objetivo:** colocar o MVP no ar.
 
 - [ ] Banco PostgreSQL no Neon, com usuário de aplicação de privilégio mínimo
-- [ ] Migrações com Alembic (tabelas de questões, alternativas, sessões e interações)
+- [x] Migrações com Alembic (tabelas de contas, acessos e resultados; questões continuam no JSON versionado)
 - [ ] Script de carga das 60 questões no banco
 - [x] `Dockerfile` da API e configuração do Render (`render.yaml`), com a chave do Gemini nas variáveis do Render
-- [ ] Serviço criado no Render e no ar
+- [x] Serviço criado no Render e no ar (https://pista-api.onrender.com)
 - [x] Publicação do front-end no GitHub Pages (`publicar-site.yml`)
-- [ ] Site no ar, apontando para a API do Render
-- [ ] CORS liberado só para o domínio do front-end
-- [ ] Workflow de CI: lint, checagem de tipos e testes a cada push e pull request
-- [ ] Workflow de CD: deploy do front e da API quando a `main` muda
+- [x] Site no ar, apontando para a API do Render (https://sabrinasiilva.github.io/pista-enem/)
+- [x] CORS liberado só para o domínio do front-end
+- [x] Workflow de CI: lint, checagem de tipos e testes a cada push e pull request
+- [x] Workflow de CD: deploy do front e da API quando a `main` muda
 - [ ] Exigir o CI verde para fazer merge na `main` (regra de proteção da branch)
-- [ ] Monitor de disponibilidade no UptimeRobot
+- [ ] Monitor de disponibilidade (sem ping a cada poucos minutos: manteria a API acordada e gastaria as horas gratuitas do Render)
 
 **Entregável:** Pista acessível por um link público.
 **Pronto quando:** o fluxo completo funciona no ar, e um push na `main` atualiza tudo sem passo manual.
