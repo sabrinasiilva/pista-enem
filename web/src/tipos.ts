@@ -8,7 +8,7 @@ export interface Saude {
   status: 'ok'
   versao: string
   questoes: number
-  ia: 'gemini' | 'desativada'
+  ia: 'gemini' | 'desativada' | 'cota_esgotada'
   prompt: string
 }
 

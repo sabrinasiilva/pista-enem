@@ -37,8 +37,10 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 ### Alterado
 - Tutor mais rápido: Gemini 3.5 Flash-Lite com raciocínio mínimo como modelo principal (3.8 Flash como reserva), limite de espera de 12 s e respostas de até 60 palavras, sem cumprimentos
 - Indicador "o tutor está pensando" enquanto a pista é gerada, e tempo de cada chamada à IA no log
+- Limites de uso por IP, por sessão e cota diária do Gemini, com o tutor em modo básico quando a cota acaba
 - Migrações podem usar um usuário do banco diferente (`MIGRACOES_DATABASE_URL`), para a API rodar com um usuário de permissão mínima
 
 ### Corrigido
+- O limite de tentativas de login usava o IP do proxy do Render: cinco erros de qualquer pessoa bloqueavam o login de todos. Agora usa o IP real do aluno
 - Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro
 - Pontuação logo depois de uma fórmula ia sozinha para a linha de baixo

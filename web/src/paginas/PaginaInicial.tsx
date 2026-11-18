@@ -148,7 +148,7 @@ export function PaginaInicial() {
         </div>
 
         <div className="mt-6 space-y-4">
-          {saude?.ia === 'desativada' && <AvisoModoBasico />}
+          {saude && saude.ia !== 'gemini' && <AvisoModoBasico />}
           {erro && <CaixaDeErro mensagem={erro} aoTentarDeNovo={carregar} />}
           {!erro && !questoes && <Carregando texto="Carregando as questões…" />}
         </div>

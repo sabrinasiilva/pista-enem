@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 
 from .banco import Usuario
 from .contas import ErroDeConta, usuario_do_token
-from .limites import LimiteDeTentativas
+from .limites import LimiteDeRequisicoes, LimiteDeTentativas
 from .sessoes import RepositorioDeSessoes
 from .tutor.motor import Tutor
 
@@ -25,6 +25,42 @@ def sessoes(request: Request) -> RepositorioDeSessoes:
 
 def limite_de_login(request: Request) -> LimiteDeTentativas:
     return request.app.state.limite_de_login
+
+
+class LimiteAtingido(Exception):
+    def __init__(self, mensagem: str):
+        super().__init__(mensagem)
+        self.mensagem = mensagem
+
+
+def ip_do_cliente(request: Request) -> str:
+    """IP real do aluno. Atrás do Render, vem do cabeçalho que a Cloudflare define."""
+    cabecalho = request.app.state.config.cabecalho_ip_do_cliente
+    if cabecalho and (valor := request.headers.get(cabecalho)):
+        return valor.strip()
+    return request.client.host if request.client else "desconhecido"
+
+
+def exigir(limite: LimiteDeRequisicoes, chave: str, mensagem: str) -> None:
+    if not limite.permitir(chave):
+        raise LimiteAtingido(mensagem)
+
+
+def limite_de_ia(request: Request) -> None:
+    """Limite por IP das ações que chamam a IA (responder, conversar, explicar)."""
+    exigir(
+        request.app.state.limite_ia_por_ip,
+        ip_do_cliente(request),
+        "Muitas mensagens em pouco tempo. Espere alguns minutos e tente de novo.",
+    )
+
+
+def limite_de_sessoes(request: Request) -> None:
+    exigir(
+        request.app.state.limite_sessoes_por_ip,
+        ip_do_cliente(request),
+        "Muitas questões abertas em pouco tempo. Espere alguns minutos e tente de novo.",
+    )
 
 
 def banco(request: Request) -> Iterator[Session]:

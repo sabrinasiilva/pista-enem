@@ -71,7 +71,7 @@ export function PaginaQuestao({ id, aoTerminar, acaoFinal, semVoltar = false }: 
       setSessao(dadosDaSessao)
       api
         .saude()
-        .then((saude) => setModoBasico(saude.ia === 'desativada'))
+        .then((saude) => setModoBasico(saude.ia !== 'gemini'))
         .catch(() => {})
     } catch (e) {
       setErro(

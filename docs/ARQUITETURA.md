@@ -161,6 +161,7 @@ erDiagram
 - O gabarito nunca sai da API antes de a resposta ser revelada (`explicacao` ou `concluida`), nem mesmo dentro do JSON.
 - Erros sempre vêm como `{"erro": {"codigo": "...", "mensagem": "..."}}`: 404 para questão ou sessão inexistente, 409 para ação não permitida no estado atual (por exemplo, `alternativa_repetida`), 422 para dados inválidos e 500 sem detalhes internos.
 - Campos desconhecidos no corpo são recusados (422).
+- Limites de uso devolvem 429 (`muitas_requisicoes`) com `Retry-After`: 40 ações com IA a cada 10 minutos por IP, 40 por sessão e 30 sessões novas a cada 10 minutos por IP. Passada a cota diária de chamadas ao Gemini, o tutor usa o plano B e o `/health` mostra `"ia": "cota_esgotada"`.
 - Até a Fase 5, as sessões ficam em memória, expiram em 24 horas e são limitadas a 10 000. Cada sessão tem um lock, para que duas requisições simultâneas não mudem o estado dela em paralelo.
 - A documentação interativa (Swagger) fica em `/docs`.
 

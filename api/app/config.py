@@ -39,6 +39,15 @@ class Configuracoes(BaseSettings):
     migracoes_database_url: str | None = None
     migrar_ao_iniciar: bool = True
 
+    # limites de uso (Fase 6). Ações com IA: responder, conversar e pedir a explicação.
+    limite_ia_por_ip: int = 40  # a cada 10 minutos
+    limite_ia_por_sessao: int = 40  # no total
+    limite_sessoes_por_ip: int = 30  # a cada 10 minutos
+    ia_cota_diaria: int = 1500  # chamadas ao Gemini por dia; depois disso, plano B
+    # cabeçalho com o IP real do aluno. No Render, a Cloudflare define o True-Client-IP,
+    # que o cliente não consegue forjar (o X-Forwarded-For consegue). Vazio: usa a conexão.
+    cabecalho_ip_do_cliente: str = "true-client-ip"
+
     @field_validator("database_url", "migracoes_database_url")
     @classmethod
     def _usar_psycopg(cls, url: str | None) -> str | None:

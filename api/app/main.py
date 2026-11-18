@@ -19,7 +19,7 @@ from .banco import criar_motor, fabrica_de_sessoes
 from .config import PASTA_API, Configuracoes, configuracoes
 from .erros import registrar_tratadores
 from .esquemas import Saude
-from .limites import LimiteDeTentativas
+from .limites import IAComCota, LimiteDeRequisicoes, LimiteDeTentativas
 from .rotas import contas, eu, questoes, sessoes
 from .sessoes import RepositorioDeSessoes
 from .tutor.fabrica import criar_tutor
@@ -61,7 +61,10 @@ def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, m
     async def ciclo_de_vida(app: FastAPI):
         app.state.tutor = tutor or criar_tutor(config)
         app.state.sessoes = RepositorioDeSessoes()
+        app.state.config = config
         app.state.limite_de_login = LimiteDeTentativas()
+        app.state.limite_ia_por_ip = LimiteDeRequisicoes(config.limite_ia_por_ip, 10 * 60)
+        app.state.limite_sessoes_por_ip = LimiteDeRequisicoes(config.limite_sessoes_por_ip, 10 * 60)
         if motor is None and config.migrar_ao_iniciar:
             migrar(config.url_das_migracoes)
         motor_em_uso = motor or criar_motor(config.database_url)
@@ -102,7 +105,13 @@ def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, m
             status="ok",
             versao=__version__,
             questoes=len(estado_tutor.banco),
-            ia="gemini" if estado_tutor.ia is not None else "desativada",
+            ia=(
+                "desativada"
+                if estado_tutor.ia is None
+                else "cota_esgotada"
+                if isinstance(estado_tutor.ia, IAComCota) and estado_tutor.ia.cota.esgotada
+                else "gemini"
+            ),
             prompt=estado_tutor.prompts.versao,
         )
 
