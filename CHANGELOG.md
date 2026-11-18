@@ -6,6 +6,10 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 
 ## [Não lançado]
 
+## [0.2.0] - 2026-11-18
+
+Duas matérias e 179 questões, questão parecida e `tutor_v2`.
+
 ### Adicionado
 - Ciências da Natureza (2022 a 2024) e Matemática de 2025: o banco passa de 60 para 179 questões, todas transcritas da prova oficial e com o gabarito conferido
 - Filtro por matéria na lista de questões e foco por competência de Ciências da Natureza
@@ -60,5 +64,6 @@ Primeira versão pública: 60 questões de Matemática, tutor no ar e primeira a
 - Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro
 - Pontuação logo depois de uma fórmula ia sozinha para a linha de baixo
 
-[Não lançado]: https://github.com/sabrinasiilva/pista-enem/compare/v0.1.0...HEAD
+[Não lançado]: https://github.com/sabrinasiilva/pista-enem/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/sabrinasiilva/pista-enem/releases/tag/v0.2.0
 [0.1.0]: https://github.com/sabrinasiilva/pista-enem/releases/tag/v0.1.0
