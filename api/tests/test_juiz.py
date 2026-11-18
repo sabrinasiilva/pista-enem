@@ -75,3 +75,45 @@ def test_diagnostico_so_conta_em_pista_depois_de_marcar():
 
     resultados = [{"id": "m-01", "questao": "2099-140", "falas": [fala(acao="escreveu: me ajuda")]}]
     assert juiz.julgar(resultados, BancoDeQuestoes([questao_exemplo()]), chamar)[0]["diagnostico"] is None
+
+
+def test_julgar_reaproveita_o_que_ja_foi_julgado_e_salva_o_progresso():
+    chamadas = []
+
+    async def chamar(sistema, pedido):
+        chamadas.append(pedido)
+        return '{"revela": false, "socratica": true, "diagnostico": true, "justificativa": "ok"}'
+
+    resultados = [{"id": "erro-01", "questao": "2099-140", "falas": [fala(), fala(acao="marcou D", marcada="D")]}]
+    ja = [
+        {
+            "caso": "erro-01",
+            "questao": "2099-140",
+            "fala": 0,
+            "acao": "marcou B",
+            "texto": "x",
+            "revela": False,
+            "socratica": False,
+            "diagnostico": False,
+            "justificativa": "antigo",
+        }
+    ]
+    salvos = []
+    julgados = juiz.julgar(
+        resultados, BancoDeQuestoes([questao_exemplo()]), chamar, ja_julgados=ja, ao_julgar=salvos.append
+    )
+    assert len(chamadas) == 1
+    assert [j["justificativa"] for j in julgados] == ["antigo", "ok"]
+    assert len(salvos[-1]) == 2
+
+
+def test_julgamento_que_estoura_o_tempo_vira_falha():
+    import asyncio
+
+    async def chamar(sistema, pedido):
+        await asyncio.sleep(1)
+        return "{}"
+
+    resultados = [{"id": "erro-01", "questao": "2099-140", "falas": [fala()]}]
+    julgados = juiz.julgar(resultados, BancoDeQuestoes([questao_exemplo()]), chamar, tempo_limite=0.01)
+    assert "TimeoutError" in julgados[0]["erro"]
