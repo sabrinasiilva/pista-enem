@@ -55,8 +55,11 @@ class ClienteRemoto:
         self.base = base.rstrip("/")
         self.intervalo = intervalo
 
-    def _post(self, caminho: str, corpo: dict) -> bytes:
+    def pausar(self) -> None:
+        """Espera entre chamadas, fora da medição de tempo."""
         time.sleep(self.intervalo)
+
+    def _post(self, caminho: str, corpo: dict) -> bytes:
         requisicao = urllib.request.Request(  # noqa: S310 - o esquema é conferido no __init__
             self.base + caminho,
             method="POST",
@@ -125,6 +128,8 @@ def avaliar_caso(cliente, caso: dict, banco: BancoDeQuestoes) -> dict:
     sessao = cliente.nova_sessao(caso["questao"])
     falas = []
     for passo in caso["passos"]:
+        if hasattr(cliente, "pausar"):
+            cliente.pausar()
         inicio = time.monotonic()
         if "responder" in passo:
             texto, estado = cliente.responder(sessao, passo["responder"])

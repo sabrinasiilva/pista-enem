@@ -83,7 +83,7 @@ Total estimado: **cerca de 110 horas**.
 - [x] Testes unitários com a IA simulada (mock): transições de estado, guardrails e plano B
 
 **Entregável:** módulo `api/app/tutor` funcionando no terminal com uma questão real.
-**Pronto quando:** os testes passam e nenhuma das 60 questões vaza a resposta antes do nível 3 numa rodada manual (`evals/vazamento.py`, com a IA de verdade).
+**Pronto quando:** os testes passam e nenhuma das 60 questões vaza a resposta antes do nível 3 numa rodada manual (`evals/rodar.py`, com a IA de verdade).
 
 ## Fase 3 · API mínima
 **Período:** 28 a 29/11/2026 · **Horas:** 6
@@ -165,11 +165,11 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** medir antes de divulgar.
 
-- [ ] Conjunto de avaliação com 30 casos (respostas erradas reais e tentativas de manipulação)
-- [ ] Script `evals/rodar.py` que mede vazamento de resposta e resistência a manipulação
-- [ ] Limite de requisições por sessão e por IP
-- [ ] Limite diário de chamadas à IA (proteção de custo)
-- [ ] Primeiros resultados em `docs/AVALIACAO.md`
+- [x] Conjunto de avaliação com 30 casos (respostas erradas reais e tentativas de manipulação)
+- [x] Script `evals/rodar.py` que mede vazamento de resposta e resistência a manipulação
+- [x] Limite de requisições por sessão e por IP
+- [x] Limite diário de chamadas à IA (proteção de custo)
+- [x] Primeiros resultados em `docs/AVALIACAO.md`
 - [ ] **Release v0.1.0:** tag, notas da versão e `CHANGELOG.md` atualizado
 
 **Entregável:** v0.1.0 publicada, com métricas.
