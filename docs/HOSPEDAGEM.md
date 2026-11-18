@@ -119,5 +119,5 @@ O workflow `monitor.yml` confere o site e a API de 6 em 6 horas. Se algo cair (o
 |---|---|---|
 | Site mostra "Não consegui falar com o servidor" | API dormindo ou endereço errado | Espere 1 minuto e recarregue; confira a variável `API_URL` |
 | Site aparece em "modo básico" | `GEMINI_API_KEY` vazia ou errada no Render | Confira a variável em **Render › pista-api › Environment** |
-| Deploy no Render falha logo no início | `DATABASE_UR L` errada | Copie de novo a connection string do Neon |
+| Deploy no Render falha logo no início | `DATABASE_URL` errada | Copie de novo a connection string do Neon |
 | Erro de CORS no console do navegador | Site num endereço diferente de `sabrinasiilva.github.io` | Ajuste `CORS_ORIGENS` no Render |
