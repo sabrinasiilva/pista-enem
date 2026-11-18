@@ -76,6 +76,39 @@ O site é publicado automaticamente pelo workflow `publicar-site.yml` a cada mud
 2. Resolva uma questão errando de propósito. A pista deve responder ao seu erro, e o aviso de "modo básico" não deve aparecer.
 3. Crie uma conta, resolva outra questão e veja se ela aparece em **Meu progresso**.
 
+## 6. Usuário do banco com permissão mínima
+
+Por padrão, a API usa o usuário dono do banco (`neondb_owner`), que pode apagar tabelas. O mais seguro é a API usar no dia a dia um usuário que só lê e escreve dados, e deixar o dono apenas para as migrações. Assim, mesmo que alguém consiga mandar um comando malicioso, ele não apaga a estrutura do banco.
+
+1. Gere uma senha longa (32 caracteres ou mais) no seu gerenciador de senhas. Use só letras e números, para não precisar escapar nada na URL.
+2. No Neon, abra o projeto **pista** e clique em **SQL Editor**. Cole o código abaixo, troque `SENHA_FORTE` pela senha do passo 1 e clique em **Run**:
+
+```sql
+-- usuário da API: entra no banco, mas não cria nem apaga tabelas
+CREATE ROLE pista_app WITH LOGIN PASSWORD 'SENHA_FORTE';
+GRANT CONNECT ON DATABASE neondb TO pista_app;
+GRANT USAGE ON SCHEMA public TO pista_app;
+
+-- pode ler e escrever nas tabelas que já existem...
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO pista_app;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO pista_app;
+
+-- ...e nas que as migrações criarem no futuro
+ALTER DEFAULT PRIVILEGES FOR ROLE neondb_owner IN SCHEMA public
+  GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO pista_app;
+ALTER DEFAULT PRIVILEGES FOR ROLE neondb_owner IN SCHEMA public
+  GRANT USAGE, SELECT ON SEQUENCES TO pista_app;
+```
+
+3. Monte a connection string do usuário novo: pegue a que você já usa e troque só o começo, `neondb_owner:senha-antiga@`, por `pista_app:SENHA_FORTE@`. O resto (servidor, `/neondb?sslmode=require...`) fica igual.
+4. No Render, abra **pista-api › Environment** e:
+   - crie `MIGRACOES_DATABASE_URL` com a connection string **antiga** (a do dono);
+   - troque o valor de `DATABASE_URL` pela connection string **nova** (a do `pista_app`);
+   - clique em **Save, rebuild, and deploy**.
+5. Depois do deploy, abra `/health`: deve continuar com `"status":"ok"`.
+
+Se o nome do banco ou do dono for diferente de `neondb` e `neondb_owner`, eles aparecem na própria connection string: `postgresql://DONO:senha@servidor/BANCO`.
+
 ## Monitoramento
 
 O workflow `monitor.yml` confere o site e a API de 6 em 6 horas. Se algo cair (ou a IA sair do ar), ele falha e o GitHub manda um e-mail. Quatro visitas por dia gastam pouco das horas gratuitas do Render.
@@ -86,5 +119,5 @@ O workflow `monitor.yml` confere o site e a API de 6 em 6 horas. Se algo cair (o
 |---|---|---|
 | Site mostra "Não consegui falar com o servidor" | API dormindo ou endereço errado | Espere 1 minuto e recarregue; confira a variável `API_URL` |
 | Site aparece em "modo básico" | `GEMINI_API_KEY` vazia ou errada no Render | Confira a variável em **Render › pista-api › Environment** |
-| Deploy no Render falha logo no início | `DATABASE_URL` errada | Copie de novo a connection string do Neon |
+| Deploy no Render falha logo no início | `DATABASE_UR L` errada | Copie de novo a connection string do Neon |
 | Erro de CORS no console do navegador | Site num endereço diferente de `sabrinasiilva.github.io` | Ajuste `CORS_ORIGENS` no Render |
