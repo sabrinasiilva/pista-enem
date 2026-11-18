@@ -66,10 +66,9 @@ flowchart LR
     U[Navegador do aluno] -->|HTTPS| F[Front-end<br/>React + TypeScript<br/>GitHub Pages]
     F -->|HTTPS, JSON| A[API<br/>FastAPI<br/>Render]
     A --> T[Motor do tutor<br/>níveis de pista + guardrails]
-    T --> R[Busca RAG]
-    R --> D[(PostgreSQL + pgvector<br/>Neon)]
+    T --> R[Busca por texto<br/>em memória]
+    A --> D[(PostgreSQL<br/>Neon)]
     T --> L[LLM<br/>Google Gemini]
-    A --> D
 ```
 
 Detalhes de cada componente, modelo de dados, rotas da API e decisões técnicas em [docs/ARQUITETURA.md](docs/ARQUITETURA.md).
@@ -81,8 +80,8 @@ Detalhes de cada componente, modelo de dados, rotas da API e decisões técnicas
 | Front-end | React, TypeScript, Tailwind CSS, Vite | Stack que já uso no trabalho; tipagem evita erros na interface |
 | Fórmulas | KaTeX | Questões de Matemática e Natureza têm fórmulas |
 | API | Python, FastAPI, Pydantic | Validação forte dos dados e respostas em streaming |
-| IA | Google Gemini (geração e embeddings) | Plano gratuito e já integrado em outro projeto meu (CO2Bank) |
-| Banco de dados | PostgreSQL com pgvector | Questões, sessões e vetores no mesmo banco, sem serviço extra |
+| IA | Google Gemini | Plano gratuito e já integrado em outro projeto meu (CO2Bank) |
+| Banco de dados | PostgreSQL (Neon) | Contas e resultados. As questões ficam num JSON versionado, e a busca roda em memória |
 | Migrações | Alembic | Versão do banco controlada junto com o código |
 | Hospedagem | GitHub Pages (front), Render (API, via Docker), Neon (banco) | Planos gratuitos; o passo a passo está em [docs/HOSPEDAGEM.md](docs/HOSPEDAGEM.md) |
 | CI/CD | GitHub Actions | Testes, checagem de segurança e deploy a cada push |

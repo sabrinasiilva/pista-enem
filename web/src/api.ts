@@ -119,6 +119,8 @@ export const api = {
   saude: () => json<Saude>('/health'),
   listarQuestoes: () => json<QuestaoResumo[]>('/questoes'),
   obterQuestao: (id: string) => json<Questao>(`/questoes/${encodeURIComponent(id)}`),
+  parecidas: (id: string, quantidade = 3) =>
+    json<QuestaoResumo[]>(`/questoes/${encodeURIComponent(id)}/parecidas?quantidade=${quantidade}`),
   criarSessao: (questaoId: string) => json<Sessao>('/sessoes', post({ questao_id: questaoId })),
   obterSessao: (id: string) => json<Sessao>(`/sessoes/${encodeURIComponent(id)}`),
   responder: (sessaoId: string, alternativa: Letra) =>

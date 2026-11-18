@@ -75,6 +75,7 @@ class QuestaoResumo(Esquema):
     numero: int
     area: str = Field(examples=["matematica"])
     habilidade: str = Field(examples=["H16"])
+    habilidade_chave: str = Field(examples=["MT-H16"], description="Habilidade com a área, usada no progresso")
     inicio_do_enunciado: str = Field(description="Prévia em texto puro, sem fórmulas nem tabelas")
 
     @classmethod
@@ -86,6 +87,7 @@ class QuestaoResumo(Esquema):
             numero=questao.numero,
             area=questao.area,
             habilidade=questao.habilidade,
+            habilidade_chave=questao.habilidade_chave,
             inicio_do_enunciado=inicio,
         )
 

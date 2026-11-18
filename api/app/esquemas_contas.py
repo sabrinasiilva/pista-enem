@@ -5,13 +5,19 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Annotated, Literal
 
-from pydantic import Field
+from pydantic import AfterValidator, Field
 
 from .banco import Usuario
 from .esquemas import Esquema, QuestaoResumo
+from .tutor.questoes import chave_de_habilidade
 
 Tema = Literal["claro", "escuro", "sistema"]
-CodigoDeHabilidade = Annotated[str, Field(pattern=r"^H([1-9]|[12][0-9]|30)$", examples=["H16"])]
+# "MT-H16" ou "CN-H16"; "H16" sozinho ainda é aceito (versão antiga do site) e vira "MT-H16"
+CodigoDeHabilidade = Annotated[
+    str,
+    Field(pattern=r"^((MT|CN)-)?H([1-9]|[12][0-9]|30)$", examples=["MT-H16"]),
+    AfterValidator(chave_de_habilidade),
+]
 
 
 class UsuarioSaida(Esquema):
@@ -38,7 +44,7 @@ class Cadastro(Esquema):
     apelido: str = Field(min_length=3, max_length=20, examples=["estudante_2026"])
     senha: str = Field(min_length=8, max_length=128)
     meta_semanal: int = Field(default=10, ge=1, le=200)
-    habilidades_foco: list[CodigoDeHabilidade] = Field(default_factory=list, max_length=30)
+    habilidades_foco: list[CodigoDeHabilidade] = Field(default_factory=list, max_length=60)
 
 
 class Login(Esquema):
@@ -62,7 +68,7 @@ class AcessoSaida(Esquema):
 
 class AtualizacaoDoPerfil(Esquema):
     meta_semanal: int | None = Field(default=None, ge=1, le=200)
-    habilidades_foco: list[CodigoDeHabilidade] | None = Field(default=None, max_length=30)
+    habilidades_foco: list[CodigoDeHabilidade] | None = Field(default=None, max_length=60)
     tema: Tema | None = None
 
 

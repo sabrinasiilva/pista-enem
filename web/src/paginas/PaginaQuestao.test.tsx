@@ -91,6 +91,9 @@ describe('PaginaQuestao', () => {
     await responder(usuario, 'E')
     expect(await screen.findByText(/Você acertou! A resposta é a alternativa E/)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Outra questão' })).toBeInTheDocument()
+    const parecidas = await screen.findByRole('navigation', { name: 'Praticar o mesmo assunto' })
+    expect(parecidas).toHaveTextContent('ENEM 2023 · Questão 150')
+    expect(parecidas).not.toHaveTextContent('Questão 105')
   })
 
   it('a conversa mostra a resposta do tutor chegando em trechos', async () => {

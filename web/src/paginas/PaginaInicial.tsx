@@ -11,6 +11,7 @@ import {
 } from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
 import { api, ErroDaApi } from '../api'
+import { MATERIAS, type Materia } from '../areas'
 import { AvisoModoBasico, CaixaDeErro, Carregando } from '../componentes/Avisos'
 import { BarraDeProgresso } from '../componentes/ui'
 import { useConta } from '../conta'
@@ -31,6 +32,7 @@ export function PaginaInicial() {
   const [saude, setSaude] = useState<Saude | null>(null)
   const [erro, setErro] = useState<string | null>(null)
   const [ano, setAno] = useState<number | null>(null)
+  const [materia, setMateria] = useState<Materia | null>(null)
 
   const carregar = useCallback(async () => {
     setErro(null)
@@ -52,9 +54,12 @@ export function PaginaInicial() {
     irPara({ pagina: 'questao', id: questoes[Math.floor(Math.random() * questoes.length)].id })
   }
 
-  const anos = [...new Set((questoes ?? []).map((q) => q.ano))].sort((a, b) => b - a)
-  const anoAtual = ano ?? anos[0]
-  const doAno = (questoes ?? []).filter((q) => q.ano === anoAtual)
+  const materias = MATERIAS.filter((m) => (questoes ?? []).some((q) => q.area === m.id))
+  const materiaAtual = materias.find((m) => m.id === materia) ?? materias[0]
+  const daMateria = (questoes ?? []).filter((q) => q.area === materiaAtual?.id)
+  const anos = [...new Set(daMateria.map((q) => q.ano))].sort((a, b) => b - a)
+  const anoAtual = ano !== null && anos.includes(ano) ? ano : anos[0]
+  const doAno = daMateria.filter((q) => q.ano === anoAtual)
 
   return (
     <main>
@@ -65,7 +70,9 @@ export function PaginaInicial() {
       <section className="border-b border-stone-200 bg-white">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-10 sm:py-16 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">Matemática do ENEM</p>
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+              Matemática e Ciências da Natureza do ENEM
+            </p>
             <h1 className="mt-3 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               Aprenda com o seu erro, não com o gabarito.
             </h1>
@@ -127,6 +134,25 @@ export function PaginaInicial() {
             </h2>
             <p className="mt-1 text-sm text-stone-500">Provas oficiais do Inep, sem questões com figura por enquanto.</p>
           </div>
+          <div className="flex flex-wrap items-center gap-2">
+          {materias.length > 1 && (
+            <div role="tablist" aria-label="Matéria" className="inline-flex rounded-xl bg-stone-200/70 p-1">
+              {materias.map((cada) => (
+                <button
+                  key={cada.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={cada.id === materiaAtual?.id}
+                  onClick={() => setMateria(cada.id)}
+                  className={`rounded-lg px-4 py-1.5 text-sm font-medium transition ${
+                    cada.id === materiaAtual?.id ? 'bg-white text-stone-900 shadow-sm' : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                >
+                  {cada.nomeCurto}
+                </button>
+              ))}
+            </div>
+          )}
           {anos.length > 0 && (
             <div role="tablist" aria-label="Ano da prova" className="inline-flex rounded-xl bg-stone-200/70 p-1">
               {anos.map((cada) => (
@@ -145,6 +171,7 @@ export function PaginaInicial() {
               ))}
             </div>
           )}
+          </div>
         </div>
 
         <div className="mt-6 space-y-4">
@@ -154,12 +181,16 @@ export function PaginaInicial() {
         </div>
 
         {doAno.length > 0 && (
-          <ul role="tabpanel" aria-label={`Questões do ENEM ${anoAtual}`} className="mt-2 grid gap-3 sm:grid-cols-2">
+          <ul
+            role="tabpanel"
+            aria-label={`Questões de ${materiaAtual?.nome} do ENEM ${anoAtual}`}
+            className="mt-2 grid gap-3 sm:grid-cols-2"
+          >
             {doAno.map((questao) => (
               <li key={questao.id}>
                 <a
                   href={`#/questao/${questao.id}`}
-                  aria-label={`Questão ${questao.numero} do ENEM ${questao.ano}`}
+                  aria-label={`Questão ${questao.numero} do ENEM ${questao.ano}, ${materiaAtual?.nome}`}
                   className="group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md"
                 >
                   <span className="flex items-center justify-between">

@@ -20,11 +20,24 @@ describe('PaginaInicial', () => {
     renderizar(<PaginaInicial />)
     const aba2023 = await screen.findByRole('tab', { name: '2023' })
     expect(aba2023).toHaveAttribute('aria-selected', 'true')
-    expect(screen.getByRole('link', { name: 'Questão 150 do ENEM 2023' })).toHaveAttribute('href', '#/questao/2023-150')
-    expect(screen.queryByRole('link', { name: 'Questão 141 do ENEM 2022' })).not.toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Questão 150 do ENEM 2023, Matemática' })).toHaveAttribute('href', '#/questao/2023-150')
+    expect(screen.queryByRole('link', { name: 'Questão 141 do ENEM 2022, Matemática' })).not.toBeInTheDocument()
 
     await usuario.click(screen.getByRole('tab', { name: '2022' }))
-    expect(screen.getByRole('link', { name: 'Questão 141 do ENEM 2022' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Questão 141 do ENEM 2022, Matemática' })).toBeInTheDocument()
+  })
+
+  it('separa as questões por matéria', async () => {
+    servidorFalso()
+    const usuario = userEvent.setup()
+    renderizar(<PaginaInicial />)
+    const matematica = await screen.findByRole('tab', { name: 'Matemática' })
+    expect(matematica).toHaveAttribute('aria-selected', 'true')
+    expect(screen.queryByRole('link', { name: /Ciências da Natureza/ })).not.toBeInTheDocument()
+
+    await usuario.click(screen.getByRole('tab', { name: 'Natureza' }))
+    expect(screen.getByRole('link', { name: 'Questão 105 do ENEM 2023, Ciências da Natureza' })).toBeInTheDocument()
+    expect(screen.queryByRole('tab', { name: '2022' })).not.toBeInTheDocument()
   })
 
   it('o botão de começar leva a uma questão', async () => {

@@ -24,6 +24,20 @@ def listar(
 
 
 @rotas.get(
+    "/{questao_id}/parecidas",
+    summary="Questões parecidas para praticar",
+    description="Mesma área, assunto e conceitos próximos; a mesma habilidade conta a favor.",
+    response_model=list[QuestaoResumo],
+    responses={404: {"model": Erro}},
+)
+def parecidas(
+    questao_id: str, tutor: TutorDep, quantidade: Annotated[int, Query(ge=1, le=10)] = 3
+) -> list[QuestaoResumo]:
+    questao = tutor.banco.obter(questao_id)
+    return [QuestaoResumo.de(q) for q in tutor.busca.parecidas(questao, quantidade)]
+
+
+@rotas.get(
     "/{questao_id}",
     summary="Mostra uma questão para resolver",
     description="Enunciado e alternativas. O gabarito nunca é enviado aqui.",

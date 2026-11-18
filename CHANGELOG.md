@@ -6,6 +6,16 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 
 ## [Não lançado]
 
+### Adicionado
+- Ciências da Natureza (2022 a 2024) e Matemática de 2025: o banco passa de 60 para 179 questões, todas transcritas da prova oficial e com o gabarito conferido
+- Filtro por matéria na lista de questões e foco por competência de Ciências da Natureza
+- "Praticar o mesmo assunto": três questões parecidas ao terminar uma questão (`GET /questoes/{id}/parecidas`)
+- Prompt `tutor_v2`: diz a matéria da questão e proíbe entregar o último passo antes da hora
+- Avaliação da busca de habilidades (`evals/busca.py`, Recall@5)
+
+### Alterado
+- Habilidades com a área no código (`MT-H16`, `CN-H16`) no progresso e no foco. A migração `0002` converte os dados antigos, e a API ainda aceita `H16` vindo de versões antigas do site
+
 ## [0.1.0] - 2026-11-18
 
 Primeira versão pública: 60 questões de Matemática, tutor no ar e primeira avaliação (0 vazamentos em 46 mensagens, 10 de 10 manipulações barradas, latência p50 de 0,8 s).

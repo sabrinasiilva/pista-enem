@@ -55,7 +55,7 @@ def test_cadastro_devolve_token_e_codigo_de_recuperacao(cliente):
     assert len(corpo["codigo_de_recuperacao"]) == 19  # XXXX-XXXX-XXXX-XXXX
     assert corpo["usuario"]["apelido"] == "ana.estuda"
     assert corpo["usuario"]["meta_semanal"] == 15
-    assert corpo["usuario"]["habilidades_foco"] == ["H16", "H3"]
+    assert corpo["usuario"]["habilidades_foco"] == ["MT-H16", "MT-H3"]
     assert corpo["usuario"]["tema"] == "sistema"
     assert "senha" not in str(corpo["usuario"])
 
@@ -186,11 +186,11 @@ def test_atualizar_perfil(cliente):
     token = cadastrar(cliente)["token"]
     corpo = cliente.patch(
         "/eu",
-        json={"meta_semanal": 20, "habilidades_foco": ["H21", "H1"], "tema": "escuro"},
+        json={"meta_semanal": 20, "habilidades_foco": ["MT-H21", "CN-H1"], "tema": "escuro"},
         headers=autorizacao(token),
     ).json()
     assert corpo["meta_semanal"] == 20
-    assert corpo["habilidades_foco"] == ["H1", "H21"]
+    assert corpo["habilidades_foco"] == ["CN-H1", "MT-H21"]
     assert corpo["tema"] == "escuro"
     assert cliente.patch("/eu", json={"tema": "roxo"}, headers=autorizacao(token)).status_code == 422
 
@@ -259,8 +259,8 @@ def test_progresso(cliente):
     assert corpo["meta_semanal"] == 3
     assert corpo["sequencia_de_dias"] == 1
     habilidades = {h["codigo"]: h for h in corpo["por_habilidade"]}
-    assert habilidades["H3"]["acertos_de_primeira"] == 1
-    assert habilidades["H16"] == {**habilidades["H16"], "feitas": 1, "acertos_de_primeira": 0}
+    assert habilidades["MT-H3"]["acertos_de_primeira"] == 1
+    assert habilidades["MT-H16"] == {**habilidades["MT-H16"], "feitas": 1, "acertos_de_primeira": 0}
 
 
 def test_revisar_lista_so_o_que_nao_foi_acertado_de_primeira(cliente):

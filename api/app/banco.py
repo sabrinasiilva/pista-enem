@@ -54,7 +54,7 @@ class Resultado(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     usuario_id: Mapped[str] = mapped_column(ForeignKey("usuarios.id", ondelete="CASCADE"), index=True)
     questao_id: Mapped[str] = mapped_column(String(20), index=True)
-    habilidade: Mapped[str] = mapped_column(String(5))
+    habilidade: Mapped[str] = mapped_column(String(8))  # "MT-H16"
     acertou: Mapped[bool] = mapped_column(Boolean)
     acertou_de_primeira: Mapped[bool] = mapped_column(Boolean)
     tentativas: Mapped[int] = mapped_column(Integer)
