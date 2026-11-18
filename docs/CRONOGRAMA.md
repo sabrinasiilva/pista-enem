@@ -144,7 +144,7 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** colocar o MVP no ar.
 
-- [ ] Banco PostgreSQL no Neon, com usuário de aplicação de privilégio mínimo
+- [x] Banco PostgreSQL no Neon, com usuário de aplicação de privilégio mínimo (`pista_app`; o dono só nas migrações)
 - [x] Migrações com Alembic (tabelas de contas, acessos e resultados; questões continuam no JSON versionado)
 - [x] ~~Script de carga das 60 questões no banco~~ (não se aplica: as questões ficam no JSON versionado e revisado; o banco guarda contas e resultados)
 - [x] `Dockerfile` da API e configuração do Render (`render.yaml`), com a chave do Gemini nas variáveis do Render
