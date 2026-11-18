@@ -22,7 +22,7 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 | O comportamento do tutor | Manipulação do prompt ("ignore as instruções") | Guardrail de entrada, instruções fixas no servidor, testes automáticos de manipulação |
 | A privacidade dos alunos | Coleta e exposição de dados pessoais | Conta opcional só com apelido e senha, sessão anônima para quem não tem conta, logs sem texto das mensagens |
 | As contas | Senha adivinhada ou vazada | Senhas e códigos de recuperação com scrypt e sal, tokens guardados só como hash, limite de 5 tentativas de login a cada 15 minutos, mesma resposta para apelido inexistente e senha errada |
-| O orçamento | Abuso que esgota o plano gratuito | Limite de requisições por sessão e por IP, limite diário de chamadas à IA |
+| O orçamento | Abuso que esgota o plano gratuito | 40 ações com IA a cada 10 minutos por IP, 40 por sessão, 30 sessões a cada 10 minutos por IP e 1 500 chamadas ao Gemini por dia. Ao passar da cota diária, o tutor segue no modo básico (sem erro) e o monitor manda e-mail |
 | O banco de dados | Acesso indevido e perda de dados | Usuário com privilégio mínimo, consultas parametrizadas pelo ORM, backup testado |
 | A cadeia de dependências | Pacotes com falhas conhecidas | Dependabot, `pip-audit` e `npm audit` no CI, CodeQL |
 
@@ -49,5 +49,6 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 - Validação de todas as entradas com Pydantic
 - Configurações de segurança de conteúdo do Gemini ativadas
 - `main` protegida: mudanças só entram por pull request com o CI verde
+- IP do aluno lido do cabeçalho `True-Client-IP`, definido pela Cloudflare na frente do Render, que o cliente não consegue forjar. O `X-Forwarded-For` não é usado, porque o Render mantém o valor enviado pelo cliente
 
 O plano de implementação destes controles está na Fase 9 do [cronograma](docs/CRONOGRAMA.md).

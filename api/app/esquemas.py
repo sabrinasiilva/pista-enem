@@ -186,5 +186,5 @@ class Saude(Esquema):
     status: Literal["ok"]
     versao: str
     questoes: int
-    ia: Literal["gemini", "desativada"]
+    ia: Literal["gemini", "desativada", "cota_esgotada"]
     prompt: str

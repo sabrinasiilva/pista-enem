@@ -17,8 +17,7 @@ MUITAS_TENTATIVAS = {429: {"model": Erro, "description": "Tentativas demais; esp
 
 
 def _chaves(request: Request, apelido: str) -> tuple[str, str]:
-    ip = request.client.host if request.client else "desconhecido"
-    return f"apelido:{apelido.strip().lower()}", f"ip:{ip}"
+    return f"apelido:{apelido.strip().lower()}", f"ip:{dependencias.ip_do_cliente(request)}"
 
 
 def _saida(entrada: contas.Entrada) -> AcessoSaida:

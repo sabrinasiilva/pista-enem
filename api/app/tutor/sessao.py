@@ -42,6 +42,7 @@ class Sessao:
     # conta do aluno, se ele entrou; sem conta, a sessão é anônima e nada é gravado
     usuario_id: str | None = None
     resultado_gravado: bool = False
+    acoes_com_ia: int = 0  # para o limite por sessão
 
     @property
     def resposta_revelada(self) -> bool:

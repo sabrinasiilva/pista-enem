@@ -4,14 +4,14 @@ import json
 from collections.abc import AsyncIterator
 from typing import Annotated
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 
 from .. import dependencias
 from ..banco import Usuario
-from ..dependencias import BancoDep, UsuarioOpcional
+from ..dependencias import BancoDep, LimiteAtingido, UsuarioOpcional, limite_de_ia, limite_de_sessoes
 from ..esquemas import (
     Erro,
     ExplicacaoEntrada,
@@ -45,6 +45,12 @@ def _obter(sessoes: RepositorioDeSessoes, sessao_id: str, usuario: Usuario | Non
     return sessao, trava
 
 
+def _contar_acao(sessao: Sessao, request: Request) -> None:
+    sessao.acoes_com_ia += 1
+    if sessao.acoes_com_ia > request.app.state.config.limite_ia_por_sessao:
+        raise LimiteAtingido("Esta questão chegou ao limite de mensagens. Abra a questão de novo para continuar.")
+
+
 def _gravar_se_terminou(sessao: Sessao, tutor: Tutor, banco: Session) -> None:
     """Quando a resposta é revelada, grava o resultado no histórico da conta (uma única vez)."""
     if sessao.usuario_id is None or sessao.resultado_gravado or not sessao.resposta_revelada:
@@ -56,6 +62,7 @@ def _gravar_se_terminou(sessao: Sessao, tutor: Tutor, banco: Session) -> None:
 @rotas.post(
     "",
     status_code=201,
+    dependencies=[Depends(limite_de_sessoes)],
     summary="Abre uma sessão para uma questão",
     description="Com o token de uma conta, o resultado entra no histórico do aluno. Sem token, a sessão é anônima.",
     response_model=SessaoSaida,
@@ -81,6 +88,7 @@ def obter(sessao_id: str, tutor: TutorDep, sessoes: SessoesDep, usuario: Usuario
 
 @rotas.post(
     "/{sessao_id}/respostas",
+    dependencies=[Depends(limite_de_ia)],
     summary="Envia a alternativa marcada",
     description=(
         "O código compara com o gabarito e decide o próximo estado: `concluida` se acertou, "
@@ -91,6 +99,7 @@ def obter(sessao_id: str, tutor: TutorDep, sessoes: SessoesDep, usuario: Usuario
     responses={**NAO_ENCONTRADA, **CONFLITO},
 )
 async def responder(
+    request: Request,
     sessao_id: str,
     dados: RespostaEntrada,
     tutor: TutorDep,
@@ -99,6 +108,7 @@ async def responder(
     banco: BancoDep,
 ) -> RespostaSaida:
     sessao, trava = _obter(sessoes, sessao_id, usuario)
+    _contar_acao(sessao, request)
     async with trava:
         resultado = await tutor.responder(sessao, dados.alternativa)
         await run_in_threadpool(_gravar_se_terminou, sessao, tutor, banco)
@@ -114,6 +124,7 @@ async def responder(
 
 @rotas.post(
     "/{sessao_id}/mensagens",
+    dependencies=[Depends(limite_de_ia)],
     summary="Conversa com o tutor (streaming)",
     description=(
         'Resposta em Server-Sent Events. Cada evento `trecho` traz `{"texto": ...}`; '
@@ -124,9 +135,15 @@ async def responder(
     responses={200: {"content": {"text/event-stream": {}}}, **NAO_ENCONTRADA},
 )
 async def conversar(
-    sessao_id: str, dados: MensagemEntrada, tutor: TutorDep, sessoes: SessoesDep, usuario: UsuarioOpcional
+    request: Request,
+    sessao_id: str,
+    dados: MensagemEntrada,
+    tutor: TutorDep,
+    sessoes: SessoesDep,
+    usuario: UsuarioOpcional,
 ) -> StreamingResponse:
     sessao, trava = _obter(sessoes, sessao_id, usuario)  # 404 antes de abrir o streaming
+    _contar_acao(sessao, request)
 
     async def eventos() -> AsyncIterator[str]:
         async with trava:
@@ -143,12 +160,14 @@ async def conversar(
 
 @rotas.post(
     "/{sessao_id}/explicacao",
+    dependencies=[Depends(limite_de_ia)],
     summary="Pede a explicação completa",
     description="Só depois de pelo menos uma tentativa, e com `confirmar: true`. Revela o gabarito.",
     response_model=ExplicacaoSaida,
     responses={**NAO_ENCONTRADA, **CONFLITO},
 )
 async def explicar(
+    request: Request,
     sessao_id: str,
     dados: ExplicacaoEntrada,
     tutor: TutorDep,
@@ -157,6 +176,7 @@ async def explicar(
     banco: BancoDep,
 ) -> ExplicacaoSaida:
     sessao, trava = _obter(sessoes, sessao_id, usuario)
+    _contar_acao(sessao, request)
     async with trava:
         mensagem = await tutor.explicar(sessao, dados.confirmar)
         await run_in_threadpool(_gravar_se_terminou, sessao, tutor, banco)
