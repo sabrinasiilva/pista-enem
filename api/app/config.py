@@ -32,18 +32,27 @@ class Configuracoes(BaseSettings):
     # endereços do front-end que podem chamar a API, separados por vírgula
     cors_origens: str = "http://localhost:5173"
 
-    # banco de dados: SQLite local por padrão; na Fase 5, PostgreSQL (Neon)
+    # banco de dados: SQLite local por padrão; em produção, PostgreSQL (Neon)
     database_url: str = f"sqlite:///{(PASTA_API / 'pista.db').as_posix()}"
+    # usuário dono do banco, só para as migrações (criar e alterar tabelas). Assim o dia a dia
+    # da API usa um usuário que não consegue apagar tabelas. Sem isto, usa database_url.
+    migracoes_database_url: str | None = None
     migrar_ao_iniciar: bool = True
 
-    @field_validator("database_url")
+    @field_validator("database_url", "migracoes_database_url")
     @classmethod
-    def _usar_psycopg(cls, url: str) -> str:
+    def _usar_psycopg(cls, url: str | None) -> str | None:
         """O Neon entrega "postgresql://..."; o SQLAlchemy precisa saber qual driver usar."""
+        if not url:
+            return None if url is None else url
         for prefixo in ("postgres://", "postgresql://"):
             if url.startswith(prefixo):
                 return "postgresql+psycopg://" + url[len(prefixo) :]
         return url
+
+    @property
+    def url_das_migracoes(self) -> str:
+        return self.migracoes_database_url or self.database_url
 
     @property
     def lista_de_modelos(self) -> list[str]:

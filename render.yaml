@@ -23,5 +23,8 @@ services:
         sync: false
       - key: DATABASE_URL
         sync: false
+      # usuário dono do banco, só para as migrações (ver docs/HOSPEDAGEM.md)
+      - key: MIGRACOES_DATABASE_URL
+        sync: false
       - key: CORS_ORIGENS
         value: https://sabrinasiilva.github.io,http://localhost:5173

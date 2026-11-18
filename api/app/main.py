@@ -63,7 +63,7 @@ def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, m
         app.state.sessoes = RepositorioDeSessoes()
         app.state.limite_de_login = LimiteDeTentativas()
         if motor is None and config.migrar_ao_iniciar:
-            migrar(config.database_url)
+            migrar(config.url_das_migracoes)
         motor_em_uso = motor or criar_motor(config.database_url)
         app.state.fabrica_de_sessoes = fabrica_de_sessoes(motor_em_uso)
         yield
