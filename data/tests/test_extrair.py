@@ -154,5 +154,18 @@ def test_extrair_matriz_pega_so_matematica_e_junta_linhas_quebradas():
     assert matriz["habilidades"][2]["competencia"] == "C2"
 
 
-def test_toda_habilidade_tem_competencia():
-    assert sorted(extrair.COMPETENCIAS_POR_HABILIDADE) == list(range(1, 31))
+def test_blocos_reconhecem_o_formato_de_2025():
+    blocos = extrair.blocos_por_questao("Questão 141\nprimeira\nQuestão 142\nsegunda\n")
+    assert blocos[141].strip() == "primeira"
+    assert blocos[142].strip() == "segunda"
+
+
+def test_cabecalho_de_2025_e_removido():
+    pagina = "MATEMÁTICA E SUAS TECNOLOGIAS | 2º DIA | CADERNO 7 | AZUL\nTexto da questão"
+    assert extrair.limpar_pagina(pagina) == "Texto da questão"
+
+
+def test_aceita_ate_tres_posicoes_com_questao_substituta():
+    gabaritos = {136: "A", 137: "B", 138: "C", 139: "D"}
+    itens = [item(136, "A"), item(137, "B"), item(138, "E"), item(139, "D")]  # 138: substituta no conjunto
+    assert len(extrair.itens_por_posicao(itens, gabaritos)[138]) == 1

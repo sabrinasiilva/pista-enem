@@ -1,0 +1,190 @@
+{
+  "area": "natureza",
+  "fonte": "https://download.inep.gov.br/enem/outros_documentos/enem_matriz_de_referencia_v1.pdf",
+  "competencias": [
+    {
+      "codigo": "C1",
+      "descricao": "Compreender as ciências naturais e as tecnologias a elas associadas como construções humanas, percebendo seus papéis nos processos de produção e no desenvolvimento econômico e social da humanidade."
+    },
+    {
+      "codigo": "C2",
+      "descricao": "Identificar a presença e aplicar as tecnologias associadas às ciências naturais em diferentes contextos."
+    },
+    {
+      "codigo": "C3",
+      "descricao": "Associar intervenções que resultam em degradação ou conservação ambiental a processos produtivos e sociais e a instrumentos ou ações científico-tecnológicos."
+    },
+    {
+      "codigo": "C4",
+      "descricao": "Compreender interações entre organismos e ambiente, em particular aquelas relacionadas à saúde humana, relacionando conhecimentos científicos, aspectos culturais e características individuais."
+    },
+    {
+      "codigo": "C5",
+      "descricao": "Entender métodos e procedimentos próprios das ciências naturais e aplicá-los em diferentes contextos."
+    },
+    {
+      "codigo": "C6",
+      "descricao": "Apropriar-se de conhecimentos da física para, em situações-problema, interpretar, avaliar ou planejar intervenções científico-tecnológicas."
+    },
+    {
+      "codigo": "C7",
+      "descricao": "Apropriar-se de conhecimentos da química para, em situações-problema, interpretar, avaliar ou planejar intervenções científico-tecnológicas."
+    },
+    {
+      "codigo": "C8",
+      "descricao": "Apropriar-se de conhecimentos da biologia para, em situações-problema, interpretar, avaliar ou planejar intervenções científico-tecnológicas."
+    }
+  ],
+  "habilidades": [
+    {
+      "codigo": "H1",
+      "competencia": "C1",
+      "descricao": "Reconhecer características ou propriedades de fenômenos ondulatórios ou oscilatórios, relacionando-os a seus usos em diferentes contextos."
+    },
+    {
+      "codigo": "H2",
+      "competencia": "C1",
+      "descricao": "Associar a solução de problemas de comunicação, transporte, saúde ou outro, com o correspondente desenvolvimento científico e tecnológico."
+    },
+    {
+      "codigo": "H3",
+      "competencia": "C1",
+      "descricao": "Confrontar interpretações científicas com interpretações baseadas no senso comum, ao longo do tempo ou em diferentes culturas."
+    },
+    {
+      "codigo": "H4",
+      "competencia": "C1",
+      "descricao": "Avaliar propostas de intervenção no ambiente, considerando a qualidade da vida humana ou as medidas de conservação, recuperação ou utilização sustentável da biodiversidade. CIÊNCIAS DA NATUREZA E SUAS TECNOLOGIAS"
+    },
+    {
+      "codigo": "H5",
+      "competencia": "C2",
+      "descricao": "Dimensionar circuitos ou dispositivos elétricos de uso cotidiano."
+    },
+    {
+      "codigo": "H6",
+      "competencia": "C2",
+      "descricao": "Relacionar informações para compreender manuais de instalação ou utilização de aparelhos ou sistemas tecnológicos de uso comum."
+    },
+    {
+      "codigo": "H7",
+      "competencia": "C2",
+      "descricao": "Selecionar testes de controle, parâmetros ou critérios para a comparação de materiais e produtos, tendo em vista a defesa do consumidor, a saúde do trabalhador ou a qualidade de vida."
+    },
+    {
+      "codigo": "H8",
+      "competencia": "C3",
+      "descricao": "Identificar etapas em processos de obtenção, transformação, utilização ou reciclagem de recursos naturais, energéticos ou matérias-primas, considerando processos biológicos, químicos ou físicos neles envolvidos."
+    },
+    {
+      "codigo": "H9",
+      "competencia": "C3",
+      "descricao": "Compreender a importância dos ciclos biogeoquímicos ou do fluxo de energia para a vida ou da ação de agentes ou fenômenos que possam causar alterações nesses processos."
+    },
+    {
+      "codigo": "H10",
+      "competencia": "C3",
+      "descricao": "Analisar perturbações ambientais, identificando fontes, transporte e(ou) destino dos poluentes ou prevendo efeitos em sistemas naturais, produtivos ou sociais."
+    },
+    {
+      "codigo": "H11",
+      "competencia": "C3",
+      "descricao": "Reconhecer benefícios, limitações e aspectos éticos da biotecnologia, considerando estruturas e processos biológicos envolvidos em produtos biotecnológicos."
+    },
+    {
+      "codigo": "H12",
+      "competencia": "C3",
+      "descricao": "Avaliar impactos em ambientes naturais decorrentes de atividades sociais ou econômicas, considerando interesses contraditórios."
+    },
+    {
+      "codigo": "H13",
+      "competencia": "C4",
+      "descricao": "Reconhecer mecanismos de transmissão da vida, prevendo ou explicando a manifestação de características dos seres vivos."
+    },
+    {
+      "codigo": "H14",
+      "competencia": "C4",
+      "descricao": "Identificar padrões em fenômenos e processos vitais dos organismos, como manutenção do equilíbrio interno, defesa, relações com o ambiente, sexualidade, entre outros."
+    },
+    {
+      "codigo": "H15",
+      "competencia": "C4",
+      "descricao": "Interpretar modelos e experimentos para explicar fenômenos ou processos biológicos em qualquer nível de organização dos sistemas biológicos."
+    },
+    {
+      "codigo": "H16",
+      "competencia": "C4",
+      "descricao": "Compreender o papel da evolução na produção de padrões, processos biológicos ou na organização taxonômica dos seres vivos."
+    },
+    {
+      "codigo": "H17",
+      "competencia": "C5",
+      "descricao": "Relacionar informações apresentadas em diferentes formas de linguagem e representação usadas nas ciências físicas, químicas ou biológicas, como texto discursivo, gráficos, tabelas, relações matemáticas ou linguagem simbólica."
+    },
+    {
+      "codigo": "H18",
+      "competencia": "C5",
+      "descricao": "Relacionar propriedades físicas, químicas ou biológicas de produtos, sistemas ou procedimentos tecnológicos às finalidades a que se destinam."
+    },
+    {
+      "codigo": "H19",
+      "competencia": "C5",
+      "descricao": "Avaliar métodos, processos ou procedimentos das ciências naturais que contribuam para diagnosticar ou solucionar problemas de ordem social, econômica ou ambiental."
+    },
+    {
+      "codigo": "H20",
+      "competencia": "C6",
+      "descricao": "Caracterizar causas ou efeitos dos movimentos de partículas, substâncias, objetos ou corpos celestes."
+    },
+    {
+      "codigo": "H21",
+      "competencia": "C6",
+      "descricao": "Utilizar leis físicas e(ou) químicas para interpretar processos naturais ou tecno­ lógicos inseridos no contexto da termodinâmica e(ou) do eletromagnetismo."
+    },
+    {
+      "codigo": "H22",
+      "competencia": "C6",
+      "descricao": "Compreender fenômenos decorrentes da interação entre a radiação e a matéria em suas manifestações em processos naturais ou tecnológicos, ou em suas implicações biológicas, sociais, econômicas ou ambientais."
+    },
+    {
+      "codigo": "H23",
+      "competencia": "C6",
+      "descricao": "Avaliar possibilidades de geração, uso ou transformação de energia em ambientes específicos, considerando implicações éticas, ambientais, sociais e(ou) econômicas."
+    },
+    {
+      "codigo": "H24",
+      "competencia": "C7",
+      "descricao": "Utilizar códigos e nomenclatura da química para caracterizar materiais, substâncias ou transformações químicas."
+    },
+    {
+      "codigo": "H25",
+      "competencia": "C7",
+      "descricao": "Caracterizar materiais ou substâncias, identificando etapas, rendimentos ou implicações biológicas, sociais, econômicas ou ambientais de sua obtenção ou produção."
+    },
+    {
+      "codigo": "H26",
+      "competencia": "C7",
+      "descricao": "Avaliar implicações sociais, ambientais e(ou) econômicas na produção ou no consumo de recursos energéticos ou minerais, identificando transformações químicas ou de energia envolvidas nesses processos."
+    },
+    {
+      "codigo": "H27",
+      "competencia": "C7",
+      "descricao": "Avaliar propostas de intervenção no meio ambiente aplicando conhecimentos químicos, observando riscos ou benefícios."
+    },
+    {
+      "codigo": "H28",
+      "competencia": "C8",
+      "descricao": "Associar características adaptativas dos organismos com seu modo de vida ou com seus limites de distribuição em diferentes ambientes, em especial em ambientes brasileiros."
+    },
+    {
+      "codigo": "H29",
+      "competencia": "C8",
+      "descricao": "Interpretar experimentos ou técnicas que utilizam seres vivos, analisando implicações para o ambiente, a saúde, a produção de alimentos, as matérias- primas ou os produtos industriais."
+    },
+    {
+      "codigo": "H30",
+      "competencia": "C8",
+      "descricao": "Avaliar propostas de alcance individual ou coletivo, identificando aquelas que visam à preservação e à implementação da saúde individual, coletiva ou do ambiente."
+    }
+  ]
+}

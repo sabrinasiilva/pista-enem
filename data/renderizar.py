@@ -19,11 +19,12 @@ def main() -> None:
     pasta = fontes.PASTA_BRUTOS / "paginas"
     pasta.mkdir(parents=True, exist_ok=True)
     indice = {}
-    for ano in fontes.ANOS:
+    for ano in fontes.TODOS_OS_ANOS:
         with pymupdf.open(fontes.caminho_prova(ano)) as documento:
             pagina_da_questao = {}
             for numero_pagina, pagina in enumerate(documento):
-                for numero in range(fontes.PRIMEIRA_QUESTAO_MATEMATICA, fontes.ULTIMA_QUESTAO_MATEMATICA + 1):
+                for numero in range(91, 181):
+                    # search_for ignora maiúsculas: acha "QUESTÃO 141" (até 2024) e "Questão 141" (2025)
                     if numero not in pagina_da_questao and pagina.search_for(f"QUESTÃO {numero}"):
                         pagina_da_questao[numero] = numero_pagina
             ultima = len(documento) - 1
