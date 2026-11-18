@@ -1,5 +1,5 @@
 import { Check } from 'lucide-react'
-import { AREAS } from '../areas'
+import { AREAS, MATERIAS } from '../areas'
 
 /** Escolha das áreas de foco (competências da matriz do ENEM). */
 export function SeletorDeAreas({
@@ -17,10 +17,12 @@ export function SeletorDeAreas({
     )
 
   return (
-    <fieldset>
-      <legend className="sr-only">Áreas de foco</legend>
+    <div className="space-y-5">
+      {MATERIAS.map((materia) => (
+    <fieldset key={materia.id}>
+      <legend className="mb-2 text-sm font-semibold text-stone-700">{materia.nome}</legend>
       <div className="grid gap-2 sm:grid-cols-2">
-        {AREAS.map((area) => {
+        {AREAS.filter((area) => area.materia === materia.id).map((area) => {
           const marcada = selecionadas.includes(area.competencia)
           return (
             <label
@@ -52,5 +54,7 @@ export function SeletorDeAreas({
         })}
       </div>
     </fieldset>
+      ))}
+    </div>
   )
 }

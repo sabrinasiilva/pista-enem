@@ -1,6 +1,7 @@
-import { ArrowLeft, BookOpen, ExternalLink, Lightbulb, PartyPopper, Shuffle } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BookOpen, ExternalLink, Lightbulb, PartyPopper, Shuffle } from 'lucide-react'
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { api, ErroDaApi } from '../api'
+import { nomeDaMateria } from '../areas'
 import { daAba } from '../armazenamento'
 import { Alternativas } from '../componentes/Alternativas'
 import { AvisoModoBasico, CaixaDeErro, Carregando } from '../componentes/Avisos'
@@ -9,7 +10,7 @@ import { Progresso } from '../componentes/Progresso'
 import { TextoRico } from '../componentes/TextoRico'
 import { useConta } from '../conta'
 import { irPara } from '../rotas'
-import { ESTADOS_FINAIS, type Letra, type Questao, type Sessao } from '../tipos'
+import { ESTADOS_FINAIS, type Letra, type Questao, type QuestaoResumo, type Sessao } from '../tipos'
 
 type Acao = 'resposta' | 'mensagem' | 'explicacao'
 
@@ -186,6 +187,7 @@ export function PaginaQuestao({ id, aoTerminar, acaoFinal, semVoltar = false }: 
               <span className="font-semibold text-stone-900">
                 ENEM {questao.ano} · Questão {questao.numero}
               </span>
+              <span>{nomeDaMateria(questao.area)}</span>
               <span
                 className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-600"
                 title={questao.habilidade.descricao}
@@ -324,6 +326,7 @@ export function PaginaQuestao({ id, aoTerminar, acaoFinal, semVoltar = false }: 
                 )}
               </div>
             )}
+            {encerrada && !acaoFinal && <QuestoesParecidas id={questao.id} />}
           </section>
         </div>
 
@@ -346,5 +349,48 @@ function VoltarParaInicio() {
       <ArrowLeft className="size-4" aria-hidden />
       Todas as questões
     </a>
+  )
+}
+
+/** Ao terminar: questões do mesmo assunto para praticar. Se a busca falhar, simplesmente não aparece. */
+function QuestoesParecidas({ id }: { id: string }) {
+  const [parecidas, setParecidas] = useState<QuestaoResumo[]>([])
+
+  useEffect(() => {
+    let ativo = true
+    api
+      .parecidas(id, 3)
+      .then((lista) => ativo && setParecidas(lista))
+      .catch(() => ativo && setParecidas([]))
+    return () => {
+      ativo = false
+    }
+  }, [id])
+
+  if (parecidas.length === 0) return null
+  return (
+    <nav aria-labelledby="titulo-parecidas" className="rounded-2xl border border-stone-200 bg-white p-4">
+      <h3 id="titulo-parecidas" className="font-semibold">
+        Praticar o mesmo assunto
+      </h3>
+      <ul className="mt-3 space-y-2">
+        {parecidas.map((questao) => (
+          <li key={questao.id}>
+            <a
+              href={`#/questao/${questao.id}`}
+              className="group flex items-center gap-3 rounded-xl border border-stone-200 p-3 text-sm transition hover:border-stone-300 hover:bg-stone-50"
+            >
+              <span className="min-w-0 flex-1">
+                <span className="block font-medium">
+                  ENEM {questao.ano} · Questão {questao.numero}
+                </span>
+                <span className="block truncate text-stone-500">{questao.inicio_do_enunciado}</span>
+              </span>
+              <ArrowRight className="size-4 shrink-0 transition group-hover:translate-x-0.5" aria-hidden />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   )
 }

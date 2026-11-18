@@ -44,14 +44,14 @@ Código: [github.com/sabrinasiilva/pista-enem](https://github.com/sabrinasiilva/
 """
 
 
-def migrar(url: str) -> None:
-    """Aplica as migrações do Alembic até a última versão."""
+def migrar(url: str, versao: str = "head") -> None:
+    """Aplica as migrações do Alembic até a última versão (ou até `versao`)."""
     from alembic import command
     from alembic.config import Config
 
     alembic = Config(str(PASTA_API / "alembic.ini"), attributes={"configurar_logs": False})
     alembic.set_main_option("sqlalchemy.url", url.replace("%", "%%"))
-    command.upgrade(alembic, "head")
+    command.upgrade(alembic, versao)
 
 
 def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, motor: Engine | None = None) -> FastAPI:

@@ -61,10 +61,21 @@ def test_health(montar):
 def test_lista_questoes_com_filtro(montar, banco_real):
     cliente, _ = montar(banco=banco_real)
     todas = cliente.get("/questoes").json()
-    assert len(todas) == 60
+    assert len(todas) == len(banco_real)
     de_2023 = cliente.get("/questoes", params={"ano": 2023}).json()
     assert de_2023 and all(q["ano"] == 2023 for q in de_2023)
-    assert cliente.get("/questoes", params={"area": "natureza"}).json() == []
+    assert all(q["area"] == "natureza" for q in cliente.get("/questoes", params={"area": "natureza"}).json())
+    assert all(q["habilidade_chave"].endswith(q["habilidade"]) for q in todas)
+
+
+def test_questoes_parecidas_sao_da_mesma_area(montar, banco_real):
+    cliente, _ = montar(banco=banco_real)
+    questao = banco_real.listar(area="matematica")[0]
+    parecidas = cliente.get(f"/questoes/{questao.id}/parecidas", params={"quantidade": 3}).json()
+    assert len(parecidas) == 3
+    assert all(p["area"] == "matematica" and p["id"] != questao.id for p in parecidas)
+    assert cliente.get("/questoes/1999-999/parecidas").status_code == 404
+    assert cliente.get(f"/questoes/{questao.id}/parecidas", params={"quantidade": 50}).status_code == 422
 
 
 def test_questao_nunca_envia_gabarito_nem_enganos(montar, banco_real):

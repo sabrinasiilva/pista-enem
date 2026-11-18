@@ -107,7 +107,7 @@ export function PaginaProgresso() {
                   <li key={habilidade.codigo}>
                     <div className="flex items-baseline justify-between gap-3 text-sm">
                       <span className="font-medium">
-                        {areaDaHabilidade(habilidade.codigo)?.nome ?? 'Matemática'}{' '}
+                        {areaDaHabilidade(habilidade.codigo)?.nome ?? 'Outro assunto'}{' '}
                         <span className="text-stone-400">· {habilidade.codigo}</span>
                       </span>
                       <span className="shrink-0 text-stone-500">

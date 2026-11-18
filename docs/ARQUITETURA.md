@@ -9,12 +9,11 @@ flowchart LR
     subgraph API
       A --> G1[Guardrail de entrada]
       G1 --> T[Motor do tutor<br/>máquina de estados]
-      T --> R[Busca RAG]
+      T --> R[Busca por texto<br/>em memória]
       T --> L[Cliente do Gemini<br/>tempo limite + plano B]
       L --> G2[Guardrail de saída]
     end
-    R --> D[(PostgreSQL + pgvector<br/>Neon)]
-    A --> D
+    A --> D[(PostgreSQL<br/>Neon)]
     L --> GM[Google Gemini]
 ```
 
@@ -23,11 +22,11 @@ flowchart LR
 | Front-end | Mostrar a questão, receber a alternativa, exibir a conversa em streaming. Não guarda nenhum segredo. |
 | API | Validar entradas, controlar sessões, aplicar limites de uso e orquestrar o tutor. |
 | Motor do tutor | Decidir o nível da pista e montar o contexto do prompt. **Quem decide se o aluno acertou é o código, comparando com o gabarito, e não a IA.** |
-| Busca RAG | Encontrar as habilidades da matriz e as questões relacionadas para apoiar a pista. |
+| Busca por texto | Achar questões parecidas (mesmo assunto, com bônus para a mesma habilidade) para o aluno praticar. Índice TF-IDF montado na inicialização. |
 | Cliente do Gemini | Chamar o modelo com tempo limite e novas tentativas. Se falhar, devolver uma mensagem padrão. |
 | Guardrail de entrada | Limitar o tamanho da mensagem e identificar tentativas de manipulação do prompt. |
 | Guardrail de saída | Antes do nível 3, bloquear e refazer qualquer resposta que revele a alternativa correta. |
-| Banco | Questões, alternativas, habilidades, vetores, sessões anônimas e interações. |
+| Banco | Contas, acessos e resultados. As questões ficam em `data/questoes-mvp.json`, versionado com o código. |
 
 ## Máquina de estados da sessão
 
@@ -199,10 +198,10 @@ erDiagram
 
 | Decisão | Alternativas consideradas | Motivo |
 |---|---|---|
-| **Google Gemini** como modelo | OpenAI, Claude, modelos abertos | Plano gratuito, bom em português e já usado no CO2Bank. Principal: `gemini-3.8-flash` com raciocínio `low`, para responder rápido. Reserva: `gemini-3.5-flash-lite`. Os dois são configuráveis por variável de ambiente, e o cliente fica isolado em `api/app/tutor/ia.py` para facilitar a troca. |
+| **Google Gemini** como modelo | OpenAI, Claude, modelos abertos | Plano gratuito, bom em português e já usado no CO2Bank. Principal: `gemini-3.5-flash-lite` com raciocínio `minimal`, para responder em cerca de 1 s. Reserva: `gemini-3.8-flash` com raciocínio `low`. Os dois são configuráveis por variável de ambiente, e o cliente fica isolado em `api/app/tutor/ia.py` para facilitar a troca. |
 | **FastAPI** na API | Flask | Validação com Pydantic nativa, streaming e documentação automática. Já uso Pydantic no CO2Bank. |
-| **PostgreSQL + pgvector** | Banco vetorial dedicado (Pinecone, Chroma) | Um banco só para dados e vetores. O volume de questões é pequeno, e o pgvector dá conta. |
-| **Neon** como banco | Supabase, Render | PostgreSQL gerenciado com pgvector em plano gratuito. |
+| **Busca por texto (TF-IDF) em memória**, sem pgvector | pgvector no Neon; banco vetorial dedicado (Pinecone, Chroma) | São menos de 200 questões e 60 habilidades: o índice é montado na inicialização da API em milissegundos, sem serviço nem dependência extra. Para "questão parecida", o resultado é bom (mesmo assunto e mesma habilidade). Para adivinhar a habilidade de uma questão, a busca por palavras chega a 59% de Recall@5 (`docs/AVALIACAO.md`), longe da meta de 90%; o próximo passo é testar embeddings, e o pgvector só entra se o volume crescer. |
+| **Neon** como banco | Supabase, Render | PostgreSQL gerenciado em plano gratuito (com pgvector, se um dia a busca precisar). |
 | **Render** na API (Docker, plano gratuito) | Hugging Face Spaces | Plataforma que já uso no CO2Bank. As 750 horas gratuitas são divididas entre os serviços da conta, mas serviço dormindo não gasta horas. Contra: dorme depois de 15 minutos sem acesso e leva até 1 minuto para acordar (o site avisa). O banco fica no Neon, porque o disco do Render é apagado a cada deploy e o Postgres gratuito de lá expira em 30 dias. |
 | **GitHub Pages** no front-end | Vercel, Netlify | Já uso no portfólio e no CO2Bank, e o deploy fica no mesmo GitHub Actions. |
 | **Verificação da resposta no código** | Deixar a IA julgar | Gabarito é dado, não opinião. A IA só cuida da conversa. |
