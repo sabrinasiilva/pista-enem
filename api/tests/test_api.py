@@ -285,3 +285,39 @@ def test_documentacao_openapi(montar):
         "/sessoes/{sessao_id}/mensagens",
         "/sessoes/{sessao_id}/explicacao",
     } <= rotas
+
+
+# ---------------------------------------------------------------- cabeçalhos de segurança
+
+
+def test_respostas_da_api_tem_cabecalhos_de_seguranca(montar):
+    cliente, _ = montar()
+    resposta = cliente.get("/health")
+    assert resposta.headers["x-content-type-options"] == "nosniff"
+    assert resposta.headers["x-frame-options"] == "DENY"
+    assert "max-age=31536000" in resposta.headers["strict-transport-security"]
+    assert resposta.headers["content-security-policy"].startswith("default-src 'none'")
+    assert resposta.headers["cache-control"] == "no-store"
+
+
+def test_erro_tambem_tem_cabecalhos(montar):
+    cliente, _ = montar()
+    resposta = cliente.get("/questoes/1999-999")
+    assert resposta.status_code == 404
+    assert resposta.headers["x-content-type-options"] == "nosniff"
+
+
+def test_documentacao_continua_abrindo(montar):
+    cliente, _ = montar()
+    resposta = cliente.get("/docs")
+    assert resposta.status_code == 200
+    assert "cdn.jsdelivr.net" in resposta.headers["content-security-policy"]
+
+
+def test_conversa_em_streaming_continua_funcionando_com_os_cabecalhos(montar):
+    cliente, _ = montar("Uma pista.")
+    sessao = cliente.post("/sessoes", json={"questao_id": "2099-140"}).json()
+    resposta = cliente.post(f"/sessoes/{sessao['id']}/mensagens", json={"texto": "por onde começo?"})
+    assert resposta.status_code == 200
+    assert resposta.headers["x-content-type-options"] == "nosniff"
+    assert "event: fim" in resposta.text

@@ -30,6 +30,10 @@ jobs:
         run: ruff format --check --config pyproject.toml . ../evals
       - name: Testes
         run: python -m pytest -q
+      - name: Dependências da API sem falhas conhecidas
+        run: |
+          pip install pip-audit
+          pip-audit -r requirements.txt
 
   api-docker:
     runs-on: ubuntu-latest
