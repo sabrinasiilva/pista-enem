@@ -126,3 +126,33 @@ def test_converte_papeis_para_o_formato_do_gemini():
         {"role": "user", "parts": [{"text": "oi"}]},
         {"role": "model", "parts": [{"text": "olá"}]},
     ]
+
+
+def test_le_modelo_com_nivel_de_raciocinio():
+    from app.tutor.ia import ler_modelos
+
+    assert ler_modelos(["gemini-3.5-flash-lite:minimal", " gemini-3.8-flash "], "low") == (
+        ("gemini-3.5-flash-lite", "minimal"),
+        ("gemini-3.8-flash", "low"),
+    )
+
+
+async def test_cada_modelo_recebe_o_seu_nivel_de_raciocinio():
+    configuracoes = []
+
+    class ModelosQueGuardam(ModelosFalsos):
+        async def generate_content(self, model, contents, config):
+            configuracoes.append((model, config["thinking_config"]["thinking_level"]))
+            return await super().generate_content(model, contents, config)
+
+    falsos = ModelosQueGuardam(ErroComCodigo(503), ErroComCodigo(503), "Olá")
+    gemini = ClienteGemini(
+        chave="falsa",
+        modelos=["rapido:minimal", "reserva:low"],
+        tempo_limite=0.05,
+        espera_inicial=0,
+        cliente=SimpleNamespace(aio=SimpleNamespace(models=falsos)),
+    )
+    resposta = await gemini.gerar("s", [("aluno", "oi")])
+    assert resposta.modelo == "reserva"
+    assert configuracoes == [("rapido", "minimal"), ("rapido", "minimal"), ("reserva", "low")]

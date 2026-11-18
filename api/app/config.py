@@ -18,10 +18,12 @@ class Configuracoes(BaseSettings):
 
     # IA. Sem chave, o tutor funciona só com o plano B (mensagens fixas e resolução anotada).
     gemini_api_key: SecretStr | None = None
-    gemini_modelos: str = "gemini-3.8-flash,gemini-3.5-flash-lite"  # principal e reservas, em ordem
-    ia_tempo_limite: float = 20.0
+    # principal e reservas, em ordem, no formato "modelo:nível de raciocínio".
+    # O Flash-Lite com "minimal" responde em poucos segundos; o 3.8 Flash é a reserva, mais lento.
+    gemini_modelos: str = "gemini-3.5-flash-lite:minimal,gemini-3.8-flash:low"
+    ia_tempo_limite: float = 12.0
     ia_tentativas_por_modelo: int = 2
-    ia_nivel_de_raciocinio: Literal["low", "medium", "high"] = "low"
+    ia_nivel_de_raciocinio: Literal["minimal", "low", "medium", "high"] = "low"  # para modelos sem nível
 
     versao_prompt: str = "tutor_v1"
     arquivo_questoes: Path = RAIZ_DO_REPOSITORIO / "data" / "questoes-mvp.json"
