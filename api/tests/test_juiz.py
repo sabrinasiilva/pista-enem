@@ -117,3 +117,16 @@ def test_julgamento_que_estoura_o_tempo_vira_falha():
     resultados = [{"id": "erro-01", "questao": "2099-140", "falas": [fala()]}]
     julgados = juiz.julgar(resultados, BancoDeQuestoes([questao_exemplo()]), chamar, tempo_limite=0.01)
     assert "TimeoutError" in julgados[0]["erro"]
+
+
+def test_para_de_chamar_quando_a_cota_acaba():
+    chamadas = []
+
+    async def chamar(sistema, pedido):
+        chamadas.append(pedido)
+        raise RuntimeError("429 RESOURCE_EXHAUSTED. You exceeded your current quota")
+
+    resultados = [{"id": "erro-01", "questao": "2099-140", "falas": [fala(), fala(acao="marcou D", marcada="D")]}]
+    julgados = juiz.julgar(resultados, BancoDeQuestoes([questao_exemplo()]), chamar, paralelas=1)
+    assert len(chamadas) == 1
+    assert "não julgado" in julgados[1]["erro"]

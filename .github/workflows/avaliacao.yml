@@ -20,6 +20,10 @@ on:
       julgar_execucao:
         description: "Só o juiz: número de uma execução anterior (o tutor não roda de novo)"
         default: ""
+  # Agendamento único: 19/11 às 6h de Brasília (9h UTC), depois de a cota diária do Gemini renovar,
+  # para julgar os 120 casos da execução 44326297246. Remover depois dessa rodada.
+  schedule:
+    - cron: "0 9 19 11 *"
 
 permissions:
   contents: read
@@ -31,6 +35,11 @@ jobs:
     timeout-minutes: 180
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      # no agendamento não há inputs: roda só o juiz sobre a rodada de 120 casos
+      CASOS: ${{ inputs.casos || 'casos-120.json' }}
+      ROTULO: ${{ inputs.rotulo || 'tutor_v2-120' }}
+      RODAR_JUIZ: ${{ github.event_name == 'schedule' || inputs.juiz }}
+      JULGAR_EXECUCAO: ${{ inputs.julgar_execucao || (github.event_name == 'schedule' && '44326297246' || '') }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -44,18 +53,18 @@ jobs:
           test -n "$GEMINI_API_KEY" || { echo "Cadastre o segredo GEMINI_API_KEY em Settings → Secrets and variables → Actions"; exit 1; }
       - name: Tutor (casos da avaliação)
         id: tutor
-        if: inputs.julgar_execucao == ''
+        if: env.JULGAR_EXECUCAO == ''
         # vazamento faz o script sair com erro, mas o relatório e o juiz ainda precisam rodar
         run: |
           set +e
-          python evals/rodar.py --local --casos "evals/${{ inputs.casos }}" --rotulo "${{ inputs.rotulo }}" --intervalo 4 | tee saida.txt
+          python evals/rodar.py --local --casos "evals/$CASOS" --rotulo "$ROTULO" --intervalo 4 | tee saida.txt
           echo "codigo=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
           grep '^RELATORIO_JSON=' saida.txt | cut -d= -f2 | sed 's/^/relatorio=/' >> "$GITHUB_OUTPUT"
       - name: Relatório de uma execução anterior
-        if: inputs.julgar_execucao != ''
+        if: env.JULGAR_EXECUCAO != ''
         uses: actions/download-artifact@v4
         with:
-          run-id: ${{ inputs.julgar_execucao }}
+          run-id: ${{ env.JULGAR_EXECUCAO }}
           github-token: ${{ github.token }}
           path: evals/relatorios/
           merge-multiple: true
@@ -70,8 +79,10 @@ jobs:
             echo "relatorio=$arquivo" >> "$GITHUB_OUTPUT"
           fi
       - name: Juiz automático
-        if: inputs.juiz && steps.rel.outputs.relatorio != ''
+        id: juiz
+        if: env.RODAR_JUIZ == 'true' && steps.rel.outputs.relatorio != ''
         timeout-minutes: 120
+        # se falhar em mais de 20% dos julgamentos, o script sai com erro e o workflow fica vermelho
         run: python evals/juiz.py "${{ steps.rel.outputs.relatorio }}" --paralelas 3 --intervalo 2
       - name: Resumo
         if: always() && steps.rel.outputs.relatorio != ''
@@ -82,10 +93,10 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: relatorios-${{ inputs.rotulo }}${{ inputs.julgar_execucao != '' && '-juiz' || '' }}
+          name: relatorios-${{ env.ROTULO }}${{ env.JULGAR_EXECUCAO != '' && '-juiz' || '' }}-${{ github.run_number }}
           path: evals/relatorios/
           retention-days: 30
       - name: Resultado do tutor
-        if: inputs.julgar_execucao == ''
+        if: env.JULGAR_EXECUCAO == ''
         run: |
           test "${{ steps.tutor.outputs.codigo }}" = "0" || { echo "Houve vazamento: veja o relatório"; exit 1; }

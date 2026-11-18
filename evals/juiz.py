@@ -107,6 +107,10 @@ def julgar(
         item = {"caso": caso, "questao": questao.id, "fala": indice, "acao": fala["acao"], "texto": fala["texto"]}
         async with semaforo:
             for _tentativa in range(2):  # uma nova tentativa se falhar
+                if cota_esgotada:
+                    # não adianta insistir: o resto fica para quando a cota renovar
+                    item["erro"] = "cota da IA esgotada: não julgado"
+                    break
                 try:
                     texto = await asyncio.wait_for(chamar(sistema, montar_pedido(questao, fala)), tempo_limite)
                     item.pop("erro", None)
@@ -116,6 +120,9 @@ def julgar(
                     break
                 except Exception as erro:  # noqa: BLE001 - um julgamento falho não derruba os outros
                     item["erro"] = f"{type(erro).__name__}: {erro}"[:200]
+                    if eh_cota_esgotada(erro):
+                        cota_esgotada.append(True)
+                        break
                     await asyncio.sleep(intervalo or 0)
             await asyncio.sleep(intervalo)
         feitos[(caso, indice)] = item
@@ -125,12 +132,22 @@ def julgar(
         return item
 
     feitos: dict[tuple[str, int], dict] = dict(prontos)
+    cota_esgotada: list[bool] = []  # vira não vazia no primeiro erro de cota
 
     async def todos() -> list[dict]:
         semaforo = asyncio.Semaphore(paralelas)
         return list(await asyncio.gather(*(um(*p, semaforo) for p in pendentes)))
 
     return asyncio.run(todos())
+
+
+LIMITE_DE_FALHAS = 0.2  # acima disso, a rodada não vale e o workflow fica vermelho
+
+
+def eh_cota_esgotada(erro: Exception) -> bool:
+    """429 por cota (RESOURCE_EXHAUSTED): diferente de um 503 passageiro, não melhora tentando de novo."""
+    texto = str(erro)
+    return "RESOURCE_EXHAUSTED" in texto or ("429" in texto and "quota" in texto.lower())
 
 
 def resumir(julgados: list[dict]) -> dict:
@@ -272,6 +289,9 @@ def main() -> None:
     Path(f"{base}-juiz.md").write_text(texto, encoding="utf-8")
     print(json.dumps(resumo, ensure_ascii=False, indent=1))
     print(f"\nRelatório do juiz: {base}-juiz.md")
+    total = resumo["julgadas"] + resumo["falhas_do_juiz"]
+    if total and resumo["falhas_do_juiz"] / total > LIMITE_DE_FALHAS:
+        sys.exit(f"O juiz falhou em {resumo['falhas_do_juiz']} de {total} julgamentos: esta rodada não vale.")
 
 
 if __name__ == "__main__":
