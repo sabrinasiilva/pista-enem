@@ -1,0 +1,11 @@
+name: Teste temporario de IP
+on: pull_request
+jobs:
+  outro-ip:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for i in 1 2; do
+            codigo=$(curl -s -o /dev/null -w '%{http_code}' --max-time 90 -X POST https://pista-api.onrender.com/contas/entrar -H 'Content-Type: application/json' -d '{"apelido":"runner_teste_ip","senha":"senha-errada-123"}')
+            echo "RESULTADO_LOGIN=$codigo"
+          done
