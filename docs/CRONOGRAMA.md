@@ -188,7 +188,7 @@ Total estimado: **cerca de 110 horas**.
 - [x] Questões de Matemática de 2025 transcritas da prova oficial, com o mesmo processo de revisão (29 entraram; 15 dependem de figura ou ficaram longe do PDF)
 - [x] Questões de Ciências da Natureza sem imagem (77, meta era 60)
 - [x] Prompt `tutor_v2` comparado com o `tutor_v1` no conjunto de avaliação
-- [ ] **Release v0.2.0**
+- [x] **Release v0.2.0**
 
 **Entregável:** v0.2.0 com RAG e duas áreas do conhecimento.
 **Pronto quando:** Recall@5 ≥ 90% e nenhuma métrica da v0.1.0 piorou.
