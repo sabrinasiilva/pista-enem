@@ -45,7 +45,16 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 
 - HTTPS em todos os serviços
 - CORS liberado apenas para o domínio do front-end
-- Cabeçalhos de segurança: Content-Security-Policy, Strict-Transport-Security, X-Content-Type-Options
+- Cabeçalhos de segurança na API (`api/app/cabecalhos.py`), em todas as respostas, inclusive erros e streaming:
+  - `Content-Security-Policy: default-src 'none'`, porque a API só devolve JSON. A documentação (`/docs`) tem uma política própria, que libera só o jsDelivr;
+  - `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: no-referrer` e `Cache-Control: no-store`.
+- Site: o GitHub Pages não permite configurar cabeçalhos HTTP, então a CSP vai numa tag `<meta>` gerada no build (`web/csp.ts`):
+  - script só do próprio site, mais o script do tema, liberado pelo hash;
+  - conexões só com a API configurada.
+
+  Pela mesma limitação, `frame-ancestors` e HSTS não podem ser definidos no site. O HSTS do domínio `github.io` é do próprio GitHub.
+- Análise estática com CodeQL (Python e TypeScript) em todo PR e toda semana
+- Auditoria de dependências no CI: `pip-audit` na API e `npm audit` no site
 - Validação de todas as entradas com Pydantic
 - Configurações de segurança de conteúdo do Gemini ativadas
 - `main` protegida: mudanças só entram por pull request com o CI verde

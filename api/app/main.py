@@ -16,6 +16,7 @@ from sqlalchemy import Engine
 
 from . import __version__
 from .banco import criar_motor, fabrica_de_sessoes
+from .cabecalhos import CabecalhosDeSeguranca
 from .config import PASTA_API, Configuracoes, configuracoes
 from .erros import registrar_tratadores
 from .esquemas import Saude
@@ -92,6 +93,7 @@ def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, m
         allow_methods=["GET", "POST", "PATCH", "PUT", "DELETE"],
         allow_headers=["Content-Type", "Authorization"],
     )
+    app.add_middleware(CabecalhosDeSeguranca)
     registrar_tratadores(app)
     app.include_router(questoes.rotas)
     app.include_router(sessoes.rotas)
