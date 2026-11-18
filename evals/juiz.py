@@ -14,7 +14,6 @@ import json
 import os
 import random
 import sys
-import time
 from collections.abc import Awaitable, Callable
 from pathlib import Path
 
@@ -78,34 +77,60 @@ def interpretar(texto: str) -> dict:
 Chamada = Callable[[str, str], Awaitable[str]]
 
 
-def julgar(resultados: list[dict], banco: BancoDeQuestoes, chamar: Chamada, intervalo: float = 0.0) -> list[dict]:
+def julgar(
+    resultados: list[dict],
+    banco: BancoDeQuestoes,
+    chamar: Chamada,
+    intervalo: float = 0.0,
+    paralelas: int = 3,
+    tempo_limite: float = 90.0,
+    ja_julgados: list[dict] | None = None,
+    ao_julgar: Callable[[list[dict]], None] | None = None,
+) -> list[dict]:
+    """Julga as mensagens, `paralelas` de cada vez, e devolve na ordem dos casos.
+
+    `ja_julgados` (de uma rodada interrompida) são reaproveitados, e `ao_julgar` recebe a lista
+    parcial depois de cada julgamento, para salvar o progresso.
+    """
     sistema = criterios()
-    julgados = []
+    prontos = {(j["caso"], j["fala"]): j for j in ja_julgados or [] if "erro" not in j}
+    pendentes = []
     for resultado in resultados:
         questao = banco.obter(resultado["questao"])
         for indice, fala in enumerate(resultado["falas"]):
-            if not deve_julgar(fala):
-                continue
-            item = {
-                "caso": resultado["id"],
-                "questao": questao.id,
-                "fala": indice,
-                "acao": fala["acao"],
-                "texto": fala["texto"],
-            }
-            try:
-                item.update(interpretar(asyncio.run(chamar(sistema, montar_pedido(questao, fala)))))
-                if not fala["acao"].startswith("marcou"):
-                    item["diagnostico"] = None  # só pistas depois de marcar têm engano para diagnosticar
-            except Exception as erro:  # noqa: BLE001 - um julgamento falho não derruba os outros
-                item["erro"] = f"{type(erro).__name__}: {erro}"[:200]
-            julgados.append(item)
-            print(
-                f"{item['caso']} fala {indice}: {item.get('erro') or ('REVELA' if item['revela'] else 'ok')}",
-                flush=True,
-            )
-            time.sleep(intervalo)
-    return julgados
+            if deve_julgar(fala):
+                pendentes.append((resultado["id"], questao, indice, fala))
+
+    async def um(caso, questao, indice, fala, semaforo) -> dict:
+        if (caso, indice) in prontos:
+            return prontos[(caso, indice)]
+        item = {"caso": caso, "questao": questao.id, "fala": indice, "acao": fala["acao"], "texto": fala["texto"]}
+        async with semaforo:
+            for _tentativa in range(2):  # uma nova tentativa se falhar
+                try:
+                    texto = await asyncio.wait_for(chamar(sistema, montar_pedido(questao, fala)), tempo_limite)
+                    item.pop("erro", None)
+                    item.update(interpretar(texto))
+                    if not fala["acao"].startswith("marcou"):
+                        item["diagnostico"] = None  # só pistas depois de marcar têm engano para diagnosticar
+                    break
+                except Exception as erro:  # noqa: BLE001 - um julgamento falho não derruba os outros
+                    item["erro"] = f"{type(erro).__name__}: {erro}"[:200]
+                    await asyncio.sleep(intervalo or 0)
+            await asyncio.sleep(intervalo)
+        feitos[(caso, indice)] = item
+        print(f"{caso} fala {indice}: {item.get('erro') or ('REVELA' if item['revela'] else 'ok')}", flush=True)
+        if ao_julgar:
+            ao_julgar(list(feitos.values()))
+        return item
+
+    feitos: dict[tuple[str, int], dict] = dict(prontos)
+
+    async def todos() -> list[dict]:
+        semaforo = asyncio.Semaphore(paralelas)
+        return list(await asyncio.gather(*(um(*p, semaforo) for p in pendentes)))
+
+    return asyncio.run(todos())
 
 
 def resumir(julgados: list[dict]) -> dict:
@@ -213,17 +238,33 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("relatorio", type=Path)
     parser.add_argument("--modelo", default="gemini-3.8-flash")
-    parser.add_argument("--intervalo", type=float, default=6.0, help="segundos entre chamadas (plano gratuito)")
+    parser.add_argument("--intervalo", type=float, default=2.0, help="segundos de pausa de cada chamada")
+    parser.add_argument("--paralelas", type=int, default=3, help="chamadas ao mesmo tempo")
     argumentos = parser.parse_args()
     if sys.platform == "win32":
         sys.stdout.reconfigure(encoding="utf-8")
 
     dados = json.loads(argumentos.relatorio.read_text(encoding="utf-8"))
     banco = BancoDeQuestoes.de_arquivo(RAIZ / "data" / "questoes-mvp.json")
-    julgados = julgar(dados["resultados"], banco, cliente_gemini(argumentos.modelo), argumentos.intervalo)
+    base = argumentos.relatorio.with_suffix("")
+    parcial = Path(f"{base}-juiz-parcial.json")
+    # rodada interrompida: reaproveita o que já foi julgado
+    ja_julgados = json.loads(parcial.read_text(encoding="utf-8")) if parcial.exists() else None
+
+    def salvar_parcial(lista: list[dict]) -> None:
+        parcial.write_text(json.dumps(lista, ensure_ascii=False), encoding="utf-8")
+
+    julgados = julgar(
+        dados["resultados"],
+        banco,
+        cliente_gemini(argumentos.modelo),
+        argumentos.intervalo,
+        argumentos.paralelas,
+        ja_julgados=ja_julgados,
+        ao_julgar=salvar_parcial,
+    )
     resumo = resumir(julgados)
 
-    base = argumentos.relatorio.with_suffix("")
     Path(f"{base}-juiz.json").write_text(
         json.dumps({"resumo": resumo, "julgados": julgados}, ensure_ascii=False, indent=1), encoding="utf-8"
     )
