@@ -170,7 +170,7 @@ Total estimado: **cerca de 110 horas**.
 - [x] Limite de requisições por sessão e por IP
 - [x] Limite diário de chamadas à IA (proteção de custo)
 - [x] Primeiros resultados em `docs/AVALIACAO.md`
-- [ ] **Release v0.1.0:** tag, notas da versão e `CHANGELOG.md` atualizado
+- [x] **Release v0.1.0:** tag, notas da versão e `CHANGELOG.md` atualizado
 
 **Entregável:** v0.1.0 publicada, com métricas.
 **Pronto quando:** vazamento de 0% no conjunto de avaliação e release criada no GitHub.

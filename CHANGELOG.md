@@ -6,6 +6,10 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 
 ## [Não lançado]
 
+## [0.1.0] - 2026-11-18
+
+Primeira versão pública: 60 questões de Matemática, tutor no ar e primeira avaliação (0 vazamentos em 46 mensagens, 10 de 10 manipulações barradas, latência p50 de 0,8 s).
+
 ### Adicionado
 - README com o problema, a ideia, a arquitetura e as metas de avaliação
 - Cronograma completo, da preparação ao lançamento
@@ -45,3 +49,6 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - O limite de tentativas de login usava o IP do proxy do Render: cinco erros de qualquer pessoa bloqueavam o login de todos. Agora usa o IP real do aluno
 - Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro
 - Pontuação logo depois de uma fórmula ia sozinha para a linha de baixo
+
+[Não lançado]: https://github.com/sabrinasiilva/pista-enem/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/sabrinasiilva/pista-enem/releases/tag/v0.1.0
