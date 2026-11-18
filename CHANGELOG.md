@@ -32,6 +32,7 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - Recomendações para o modo foco
 - Site: menu lateral, criar conta em três passos, entrar, recuperar a conta, perfil, meu progresso, revisar erros, modo foco com cronômetro e resumo
 - Tema claro, escuro e automático
+- Hospedagem: `render.yaml` para a API no Render, driver do PostgreSQL (Neon), publicação do site no GitHub Pages e aviso de "servidor acordando"
 
 ### Corrigido
 - Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro
