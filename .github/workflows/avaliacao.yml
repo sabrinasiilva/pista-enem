@@ -11,7 +11,7 @@ on:
         options: [casos-120.json, casos.json]
         default: casos-120.json
       rotulo:
-        description: Nome da rodada no relatório (ex.: tutor_v2)
+        description: "Nome da rodada no relatório, por exemplo tutor_v2"
         default: tutor_v2
       juiz:
         description: Rodar também o juiz automático
@@ -36,7 +36,8 @@ jobs:
           cache-dependency-path: api/requirements.txt
       - run: pip install -r api/requirements.txt
       - name: Confere a chave
-        run: test -n "$GEMINI_API_KEY" || { echo "Cadastre o segredo GEMINI_API_KEY em Settings → Secrets and variables → Actions"; exit 1; }
+        run: |
+          test -n "$GEMINI_API_KEY" || { echo "Cadastre o segredo GEMINI_API_KEY em Settings → Secrets and variables → Actions"; exit 1; }
       - name: Tutor (casos da avaliação)
         id: tutor
         # vazamento faz o script sair com erro, mas o relatório e o juiz ainda precisam rodar
@@ -61,4 +62,5 @@ jobs:
           path: evals/relatorios/
           retention-days: 30
       - name: Resultado do tutor
-        run: test "${{ steps.tutor.outputs.codigo }}" = "0" || { echo "Houve vazamento: veja o relatório"; exit 1; }
+        run: |
+          test "${{ steps.tutor.outputs.codigo }}" = "0" || { echo "Houve vazamento: veja o relatório"; exit 1; }
