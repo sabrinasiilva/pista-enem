@@ -1,0 +1,64 @@
+name: Avaliação
+
+# Roda a avaliação do tutor e o juiz automático com a chave do segredo GEMINI_API_KEY.
+# Só roda quando alguém pede (Actions → Avaliação → Run workflow), porque gasta cota da IA.
+on:
+  workflow_dispatch:
+    inputs:
+      casos:
+        description: Conjunto de casos
+        type: choice
+        options: [casos-120.json, casos.json]
+        default: casos-120.json
+      rotulo:
+        description: Nome da rodada no relatório (ex.: tutor_v2)
+        default: tutor_v2
+      juiz:
+        description: Rodar também o juiz automático
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  avaliacao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: api/requirements.txt
+      - run: pip install -r api/requirements.txt
+      - name: Confere a chave
+        run: test -n "$GEMINI_API_KEY" || { echo "Cadastre o segredo GEMINI_API_KEY em Settings → Secrets and variables → Actions"; exit 1; }
+      - name: Tutor (casos da avaliação)
+        id: tutor
+        # vazamento faz o script sair com erro, mas o relatório e o juiz ainda precisam rodar
+        run: |
+          set +e
+          python evals/rodar.py --local --casos "evals/${{ inputs.casos }}" --rotulo "${{ inputs.rotulo }}" --intervalo 4 | tee saida.txt
+          echo "codigo=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          grep '^RELATORIO_JSON=' saida.txt | cut -d= -f2 | sed 's/^/relatorio=/' >> "$GITHUB_OUTPUT"
+      - name: Juiz automático
+        if: inputs.juiz && steps.tutor.outputs.relatorio != ''
+        run: python evals/juiz.py "${{ steps.tutor.outputs.relatorio }}" --intervalo 6
+      - name: Resumo
+        if: always() && steps.tutor.outputs.relatorio != ''
+        run: |
+          base="${{ steps.tutor.outputs.relatorio }}"
+          head -n 16 "${base%.json}.md" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "${base%.json}-juiz.md" ]; then echo >> "$GITHUB_STEP_SUMMARY"; head -n 10 "${base%.json}-juiz.md" >> "$GITHUB_STEP_SUMMARY"; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: relatorios-${{ inputs.rotulo }}
+          path: evals/relatorios/
+          retention-days: 30
+      - name: Resultado do tutor
+        run: test "${{ steps.tutor.outputs.codigo }}" = "0" || { echo "Houve vazamento: veja o relatório"; exit 1; }

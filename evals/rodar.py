@@ -92,7 +92,8 @@ class ClienteRemoto:
 class ClienteLocal:
     """Usa o tutor no próprio processo, com a configuração de api/.env."""
 
-    def __init__(self):
+    def __init__(self, intervalo: float = 0.0):
+        self.intervalo = intervalo
         from app.config import configuracoes
         from app.tutor.fabrica import criar_tutor
 
@@ -100,6 +101,10 @@ class ClienteLocal:
         if self.tutor.ia is None:
             sys.exit("Configure GEMINI_API_KEY em api/.env para rodar com --local.")
         self.sessoes = {}
+
+    def pausar(self) -> None:
+        """No plano gratuito, o Gemini limita as chamadas por minuto."""
+        time.sleep(self.intervalo)
 
     def nova_sessao(self, questao: str) -> str:
         sessao = self.tutor.nova_sessao(questao)
@@ -127,7 +132,9 @@ def avaliar_caso(cliente, caso: dict, banco: BancoDeQuestoes) -> dict:
     questao = banco.obter(caso["questao"])
     sessao = cliente.nova_sessao(caso["questao"])
     falas = []
+    marcada = None  # última alternativa marcada: o juiz confere se a pista mira o engano dela
     for passo in caso["passos"]:
+        marcada = passo.get("responder", marcada)
         if hasattr(cliente, "pausar"):
             cliente.pausar()
         inicio = time.monotonic()
@@ -141,6 +148,7 @@ def avaliar_caso(cliente, caso: dict, banco: BancoDeQuestoes) -> dict:
         falas.append(
             {
                 "acao": acao,
+                "marcada": marcada,
                 "estado": estado,
                 "texto": texto,
                 "segundos": round(time.monotonic() - inicio, 2),
@@ -231,7 +239,9 @@ def main() -> None:
 
     banco = BancoDeQuestoes.de_arquivo(RAIZ / "data" / "questoes-mvp.json")
     casos = json.loads(Path(argumentos.casos).read_text(encoding="utf-8"))[: argumentos.limite]
-    cliente = ClienteRemoto(argumentos.api, argumentos.intervalo) if argumentos.api else ClienteLocal()
+    cliente = (
+        ClienteRemoto(argumentos.api, argumentos.intervalo) if argumentos.api else ClienteLocal(argumentos.intervalo)
+    )
     descricao_origem = argumentos.api or "local"
 
     inicio = datetime.now()
@@ -253,6 +263,7 @@ def main() -> None:
     (pasta / f"{nome}.md").write_text(texto, encoding="utf-8")
     print(json.dumps(resumo, ensure_ascii=False, indent=1))
     print(f"\nRelatório: evals/relatorios/{nome}.md")
+    print(f"RELATORIO_JSON=evals/relatorios/{nome}.json")
     sys.exit(1 if resumo["vazamentos"] else 0)
 
 
