@@ -1,54 +1,54 @@
 import { ArrowLeft, BookOpen, ExternalLink, Lightbulb, PartyPopper, Shuffle } from 'lucide-react'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { api, ErroDaApi } from '../api'
+import { daAba } from '../armazenamento'
 import { Alternativas } from '../componentes/Alternativas'
 import { AvisoModoBasico, CaixaDeErro, Carregando } from '../componentes/Avisos'
 import { Conversa } from '../componentes/Conversa'
 import { Progresso } from '../componentes/Progresso'
 import { TextoRico } from '../componentes/TextoRico'
+import { useConta } from '../conta'
 import { irPara } from '../rotas'
 import { ESTADOS_FINAIS, type Letra, type Questao, type Sessao } from '../tipos'
 
 type Acao = 'resposta' | 'mensagem' | 'explicacao'
 
-const chaveDaSessao = (questaoId: string) => `pista:sessao:${questaoId}`
-
-function lerSessaoGuardada(questaoId: string): string | null {
-  try {
-    return sessionStorage.getItem(chaveDaSessao(questaoId))
-  } catch {
-    return null
-  }
-}
-
-function guardarSessao(questaoId: string, sessaoId: string) {
-  try {
-    sessionStorage.setItem(chaveDaSessao(questaoId), sessaoId)
-  } catch {
-    // sem armazenamento (modo privado): a sessão só não é retomada ao recarregar
-  }
-}
+// a sessão guardada na aba é separada por conta: ao entrar, a questão começa numa sessão da conta
+const chaveDaSessao = (questaoId: string, conta: string) => `pista:sessao:${conta}:${questaoId}`
 
 function mensagemDe(erro: unknown): string {
   return erro instanceof ErroDaApi ? erro.message : 'Algo deu errado. Tente de novo.'
 }
 
 /** Retoma a sessão desta aba, se ainda existir; senão abre uma nova. */
-async function abrirSessao(questaoId: string): Promise<Sessao> {
-  const guardada = lerSessaoGuardada(questaoId)
+async function abrirSessao(questaoId: string, conta: string): Promise<Sessao> {
+  const guardada = daAba.ler(chaveDaSessao(questaoId, conta))
   if (guardada) {
     try {
-      return await api.obterSessao(guardada)
+      const sessao = await api.obterSessao(guardada)
+      // uma questão já terminada recomeça: voltar a ela é para refazer (revisão, modo foco)
+      if (!ESTADOS_FINAIS.includes(sessao.estado)) return sessao
     } catch (erro) {
       if (!(erro instanceof ErroDaApi && erro.status === 404)) throw erro
     }
   }
   const nova = await api.criarSessao(questaoId)
-  guardarSessao(questaoId, nova.id)
+  daAba.gravar(chaveDaSessao(questaoId, conta), nova.id)
   return nova
 }
 
-export function PaginaQuestao({ id }: { id: string }) {
+interface Props {
+  id: string
+  /** chamado uma vez quando a resposta é revelada (usado pelo modo foco) */
+  aoTerminar?: (sessao: Sessao) => void
+  /** botão mostrado no fim, no lugar de "Outra questão" */
+  acaoFinal?: ReactNode
+  semVoltar?: boolean
+}
+
+export function PaginaQuestao({ id, aoTerminar, acaoFinal, semVoltar = false }: Props) {
+  const { usuario, carregando: contaCarregando } = useConta()
+  const conta = usuario?.id ?? 'anonimo'
   const [questao, setQuestao] = useState<Questao | null>(null)
   const [sessao, setSessao] = useState<Sessao | null>(null)
   const [modoBasico, setModoBasico] = useState(false)
@@ -66,7 +66,7 @@ export function PaginaQuestao({ id }: { id: string }) {
     setQuestao(null)
     setSessao(null)
     try {
-      const [dadosDaQuestao, dadosDaSessao] = await Promise.all([api.obterQuestao(id), abrirSessao(id)])
+      const [dadosDaQuestao, dadosDaSessao] = await Promise.all([api.obterQuestao(id), abrirSessao(id, conta)])
       setQuestao(dadosDaQuestao)
       setSessao(dadosDaSessao)
       api
@@ -80,11 +80,18 @@ export function PaginaQuestao({ id }: { id: string }) {
           : mensagemDe(e),
       )
     }
-  }, [id])
+  }, [id, conta])
 
   useEffect(() => {
-    void carregar()
-  }, [carregar])
+    // espera saber se há conta, para a sessão já nascer ligada a ela
+    if (!contaCarregando) void carregar()
+  }, [carregar, contaCarregando])
+
+  const terminou = sessao !== null && ESTADOS_FINAIS.includes(sessao.estado)
+  useEffect(() => {
+    // avisa uma única vez, quando a resposta é revelada
+    if (terminou && sessao) aoTerminar?.(sessao)
+  }, [terminou])
 
   /** Executa uma ação e depois sincroniza a sessão com o servidor, mesmo se a ação falhar. */
   const executar = async (acao: Acao, tarefa: (sessaoId: string) => Promise<unknown>) => {
@@ -165,10 +172,12 @@ export function PaginaQuestao({ id }: { id: string }) {
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-6">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <VoltarParaInicio />
-        {modoBasico && <AvisoModoBasico compacto />}
-      </div>
+      {(!semVoltar || modoBasico) && (
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          {!semVoltar && <VoltarParaInicio />}
+          {modoBasico && <AvisoModoBasico compacto />}
+        </div>
+      )}
 
       <div className="mt-4 grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
         <div className="min-w-0 space-y-6">
@@ -290,14 +299,16 @@ export function PaginaQuestao({ id }: { id: string }) {
                     ? `Você acertou! A resposta é a alternativa ${sessao.gabarito}.`
                     : `A resposta é a alternativa ${sessao.gabarito}.`}
                 </p>
-                <button
-                  type="button"
-                  onClick={outraQuestao}
-                  className="inline-flex items-center gap-2 rounded-xl bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-stone-700"
-                >
-                  <Shuffle className="size-4" aria-hidden />
-                  Outra questão
-                </button>
+                {acaoFinal ?? (
+                  <button
+                    type="button"
+                    onClick={outraQuestao}
+                    className="inline-flex items-center gap-2 rounded-xl bg-stone-900 px-4 py-2.5 text-sm font-semibold text-white hover:bg-stone-700"
+                  >
+                    <Shuffle className="size-4" aria-hidden />
+                    Outra questão
+                  </button>
+                )}
               </div>
             )}
           </section>

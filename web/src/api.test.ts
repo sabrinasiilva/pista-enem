@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { api, ErroDaApi, lerEventos } from './api'
+import { aoExpirarASessao, api, definirToken, ErroDaApi, lerEventos } from './api'
 
 function fluxoDe(...pedacos: Uint8Array[]): ReadableStream<Uint8Array> {
   return new ReadableStream({
@@ -45,5 +45,29 @@ describe('erros da API', () => {
   it('aguenta resposta de erro que não é JSON', async () => {
     vi.stubGlobal('fetch', vi.fn(async () => new Response('Bad Gateway', { status: 502 })))
     await expect(api.saude()).rejects.toMatchObject({ status: 502, codigo: 'erro_http' })
+  })
+})
+
+describe('token vencido', () => {
+  it('esquece o token e repete a chamada sem ele', async () => {
+    const chamadas: (string | undefined)[] = []
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async (_: string, init?: RequestInit) => {
+        const autorizacao = (init?.headers as Record<string, string>).Authorization
+        chamadas.push(autorizacao)
+        return autorizacao
+          ? new Response(JSON.stringify({ erro: { codigo: 'sessao_expirada', mensagem: 'expirou' } }), { status: 401 })
+          : new Response(JSON.stringify([]), { status: 200 })
+      }),
+    )
+    let avisado = false
+    aoExpirarASessao(() => {
+      avisado = true
+    })
+    definirToken('velho')
+    await expect(api.listarQuestoes()).resolves.toEqual([])
+    expect(chamadas).toEqual(['Bearer velho', undefined])
+    expect(avisado).toBe(true)
   })
 })

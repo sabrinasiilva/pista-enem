@@ -119,6 +119,26 @@ Total estimado: **cerca de 110 horas**.
 **Entregável:** front-end consumindo a API local.
 **Pronto quando:** uma pessoa que nunca viu o projeto resolve uma questão sem ajuda.
 
+## Fase 4.5 · Contas, foco e tema (pedida em 17/11/2026)
+**Período:** 17/11/2026 · fora do plano original
+
+**Objetivo:** guardar o progresso de quem quiser, sem coletar dados pessoais, e dar formas de estudar com foco.
+
+- [x] Banco de dados com SQLAlchemy e migrações do Alembic (SQLite local, pronto para o PostgreSQL da Fase 5)
+- [x] Conta opcional só com apelido e senha, com código de recuperação no lugar do e-mail
+- [x] Cadastro em três passos: acesso, meta e áreas de foco, código de recuperação
+- [x] Entrar, sair, recuperar a conta, trocar a senha e apagar a conta com todo o histórico
+- [x] Segurança das contas: scrypt, tokens guardados só como hash, limite de tentativas de login
+- [x] Meta semanal, sequência de dias e desempenho por assunto ("Meu progresso")
+- [x] Lista de questões para revisar ("Revisar erros")
+- [x] Modo foco: quantidade, tempo e áreas, com fila recomendada, cronômetro e resumo
+- [x] Menu lateral no computador e menu que abre no celular
+- [x] Tema claro, escuro e automático, salvo na conta
+- [x] Testes da API e do front-end para tudo isso
+
+**Entregável:** contas, progresso, revisão, modo foco e tema funcionando no site.
+**Pronto quando:** um aluno cria a conta, resolve questões, vê o progresso e refaz os erros, no celular e no computador.
+
 ## Fase 5 · Infraestrutura, banco e deploy do MVP
 **Período:** 04 a 05/12/2026 · **Horas:** 6
 
@@ -214,7 +234,7 @@ Total estimado: **cerca de 110 horas**.
 - [ ] Fórmulas acessíveis para leitores de tela
 - [ ] Questões com imagem, usando a leitura de imagens do Gemini
 - [ ] Testes de ponta a ponta com Playwright (fluxo completo no celular e no computador)
-- [ ] Tema claro e escuro
+- [x] Tema claro e escuro (feito na Fase 4.5)
 - [ ] Revisão de desempenho do front-end (Lighthouse ≥ 90)
 
 **Entregável:** front-end acessível e questões com imagem disponíveis.

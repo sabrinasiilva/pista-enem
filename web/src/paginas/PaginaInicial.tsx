@@ -1,9 +1,21 @@
-import { ArrowRight, Lightbulb, MessageCircleQuestion, MousePointerClick, Shuffle, X } from 'lucide-react'
+import {
+  ArrowRight,
+  Flame,
+  Lightbulb,
+  MessageCircleQuestion,
+  MousePointerClick,
+  RotateCcw,
+  Shuffle,
+  Target,
+  X,
+} from 'lucide-react'
 import { useCallback, useEffect, useState } from 'react'
 import { api, ErroDaApi } from '../api'
 import { AvisoModoBasico, CaixaDeErro, Carregando } from '../componentes/Avisos'
-import { irPara } from '../rotas'
-import type { QuestaoResumo, Saude } from '../tipos'
+import { BarraDeProgresso } from '../componentes/ui'
+import { useConta } from '../conta'
+import { endereco, irPara } from '../rotas'
+import type { Progresso, QuestaoResumo, Saude, Usuario } from '../tipos'
 
 const PASSOS = [
   { icone: MousePointerClick, titulo: 'Tente', texto: 'Escolha uma questão oficial do ENEM e marque a alternativa que achar certa.' },
@@ -11,7 +23,10 @@ const PASSOS = [
   { icone: Lightbulb, titulo: 'Entenda', texto: 'Se travar de novo, vem uma dica. A resolução completa só aparece se você pedir.' },
 ]
 
+const rolarParaQuestoes = () => document.getElementById('questoes')?.scrollIntoView?.({ behavior: 'smooth' })
+
 export function PaginaInicial() {
+  const { usuario } = useConta()
   const [questoes, setQuestoes] = useState<QuestaoResumo[] | null>(null)
   const [saude, setSaude] = useState<Saude | null>(null)
   const [erro, setErro] = useState<string | null>(null)
@@ -43,6 +58,10 @@ export function PaginaInicial() {
 
   return (
     <main>
+      {usuario ? (
+        <PainelDoAluno usuario={usuario} aoSortear={sortear} />
+      ) : (
+        <>
       <section className="border-b border-stone-200 bg-white">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-10 sm:py-16 lg:grid-cols-[1.1fr_1fr]">
           <div>
@@ -64,9 +83,13 @@ export function PaginaInicial() {
                 <Shuffle className="size-5" aria-hidden />
                 Começar com uma questão aleatória
               </button>
-              <a href="#questoes" className="text-sm font-medium text-stone-600 underline-offset-4 hover:underline">
+              <button
+                type="button"
+                onClick={rolarParaQuestoes}
+                className="text-sm font-medium text-stone-600 underline-offset-4 hover:underline"
+              >
                 ou escolha uma questão
-              </a>
+              </button>
             </div>
           </div>
           <Demonstracao />
@@ -92,6 +115,9 @@ export function PaginaInicial() {
           ))}
         </ol>
       </section>
+
+        </>
+      )}
 
       <section id="questoes" className="mx-auto max-w-5xl scroll-mt-4 px-4 pb-16" aria-labelledby="titulo-questoes">
         <div className="flex flex-wrap items-end justify-between gap-4">
@@ -194,5 +220,78 @@ function Demonstracao() {
         A pista responde ao erro específico da alternativa marcada.
       </figcaption>
     </figure>
+  )
+}
+
+function PainelDoAluno({ usuario, aoSortear }: { usuario: Usuario; aoSortear: () => void }) {
+  const [progresso, setProgresso] = useState<Progresso | null>(null)
+  useEffect(() => {
+    api.progresso().then(setProgresso).catch(() => {})
+  }, [])
+
+  const faltam = progresso ? Math.max(0, progresso.meta_semanal - progresso.feitas_na_semana) : null
+  return (
+    <section className="border-b border-stone-200 bg-white">
+      <div className="mx-auto max-w-5xl px-4 py-10">
+        <h1 className="text-3xl font-bold tracking-tight">Oi, {usuario.apelido}!</h1>
+        <p className="mt-2 text-stone-600">
+          {faltam === null
+            ? 'Bom te ver de volta.'
+            : faltam === 0
+              ? 'Meta da semana cumprida. O que vier agora é bônus.'
+              : `Faltam ${faltam} questões para a meta da semana.`}
+        </p>
+        <div className="mt-6 grid gap-4 md:grid-cols-[1.4fr_1fr]">
+          <div className="rounded-2xl border border-stone-200 bg-stone-50 p-5">
+            <div className="flex items-baseline justify-between gap-3">
+              <span className="font-semibold">Meta da semana</span>
+              <span className="text-sm text-stone-500">
+                {progresso ? `${progresso.feitas_na_semana} de ${progresso.meta_semanal}` : '…'}
+              </span>
+            </div>
+            <div className="mt-3">
+              <BarraDeProgresso
+                valor={progresso?.feitas_na_semana ?? 0}
+                maximo={progresso?.meta_semanal ?? usuario.meta_semanal}
+                rotulo="Meta da semana"
+              />
+            </div>
+            <p className="mt-4 inline-flex items-center gap-1.5 text-sm text-stone-600">
+              <Flame className="size-4 text-amber-500" aria-hidden />
+              {progresso?.sequencia_de_dias ?? 0} {progresso?.sequencia_de_dias === 1 ? 'dia seguido' : 'dias seguidos'}
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <a
+              href={endereco({ pagina: 'foco' })}
+              className="flex flex-1 items-center gap-3 rounded-2xl bg-stone-900 p-4 font-semibold text-white transition hover:bg-stone-700"
+            >
+              <Target className="size-6 text-amber-400" aria-hidden />
+              <span>
+                Modo foco
+                <span className="block text-sm font-normal opacity-80">Questões escolhidas para você, com tempo</span>
+              </span>
+            </a>
+            <div className="grid grid-cols-2 gap-3">
+              <a
+                href={endereco({ pagina: 'revisar' })}
+                className="flex items-center justify-center gap-2 rounded-2xl border border-stone-200 bg-white p-3 text-sm font-semibold hover:bg-stone-100"
+              >
+                <RotateCcw className="size-4" aria-hidden />
+                Revisar erros
+              </a>
+              <button
+                type="button"
+                onClick={aoSortear}
+                className="flex items-center justify-center gap-2 rounded-2xl border border-stone-200 bg-white p-3 text-sm font-semibold hover:bg-stone-100"
+              >
+                <Shuffle className="size-4" aria-hidden />
+                Aleatória
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }

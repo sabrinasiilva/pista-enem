@@ -1,12 +1,13 @@
-import { render, screen, waitFor, within } from '@testing-library/react'
+import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, expect, it } from 'vitest'
+import { renderizar } from '../testes/renderizar'
 import { servidorFalso } from '../testes/servidorFalso'
 import { PaginaQuestao } from './PaginaQuestao'
 
 async function abrir(id = '2022-141') {
   const usuario = userEvent.setup()
-  const tela = render(<PaginaQuestao id={id} />)
+  const tela = renderizar(<PaginaQuestao id={id} />)
   return { usuario, tela }
 }
 
@@ -127,6 +128,20 @@ describe('PaginaQuestao', () => {
     expect(await screen.findByText(/Pista 1 de 2/)).toBeInTheDocument()
     const criouOutra = servidor.fetch.mock.calls.some(([, init]) => init?.method === 'POST')
     expect(criouOutra).toBe(false)
+  })
+
+  it('voltar a uma questão já terminada começa uma tentativa nova', async () => {
+    const servidor = servidorFalso()
+    const { usuario, tela } = await abrir()
+    await screen.findAllByRole('radio')
+    await responder(usuario, 'E')
+    await screen.findByText(/Você acertou! A resposta/)
+    tela.unmount()
+
+    servidor.fetch.mockClear()
+    await abrir()
+    expect(await screen.findByText('Marque a alternativa que achar certa.')).toBeInTheDocument()
+    expect(servidor.fetch.mock.calls.some(([endereco, init]) => endereco.endsWith('/sessoes') && init?.method === 'POST')).toBe(true)
   })
 
   it('mostra o aviso de modo básico quando a IA está desativada', async () => {

@@ -57,3 +57,47 @@ export interface ResultadoDaResposta {
 }
 
 export const ESTADOS_FINAIS: Estado[] = ['explicacao', 'concluida']
+
+// ---------------------------------------------------------------- contas e progresso
+
+export type Tema = 'claro' | 'escuro' | 'sistema'
+
+export interface Usuario {
+  id: string
+  apelido: string
+  meta_semanal: number
+  habilidades_foco: string[]
+  tema: Tema
+  criado_em: string
+}
+
+export interface Acesso {
+  token: string
+  usuario: Usuario
+  codigo_de_recuperacao: string | null
+}
+
+export interface ResultadoDaQuestao {
+  questao_id: string
+  habilidade: string
+  acertou: boolean
+  acertou_de_primeira: boolean
+  tentativas: number
+  pediu_explicacao: boolean
+  concluido_em: string
+}
+
+export interface Progresso {
+  total_de_questoes: number
+  acertos_de_primeira: number
+  sequencia_de_dias: number
+  feitas_na_semana: number
+  meta_semanal: number
+  por_habilidade: { codigo: string; descricao: string; feitas: number; acertos_de_primeira: number }[]
+  recentes: ResultadoDaQuestao[]
+}
+
+export interface ParaRevisar {
+  questao: QuestaoResumo
+  ultima_tentativa: ResultadoDaQuestao
+}

@@ -166,7 +166,17 @@ erDiagram
 
 ## Front-end
 
-- **Telas:** página inicial (o que é o Pista e a lista de questões por ano) e página da questão (enunciado, alternativas, nível da pista, última mensagem do tutor em destaque, conversa e explicação com confirmação).
+- **Telas:**
+  - página inicial (apresentação para quem não tem conta; painel com a meta da semana para quem tem);
+  - página da questão;
+  - modo foco (configuração, fila com cronômetro e resumo);
+  - revisar erros e meu progresso;
+  - entrar, criar conta (três passos), recuperar a conta e perfil;
+  - configurações.
+- **Menu:** lateral e fixo no computador; no celular, abre por cima da página e fecha com Esc.
+- **Conta no navegador:** o token fica no `localStorage`. Se ele vencer, o site esquece a conta e repete a chamada sem ela, para quem só queria ver uma questão não ver erro.
+- **Tema:** claro, escuro ou automático. Em vez de escrever uma variante escura em cada classe, as escalas de cor do Tailwind são invertidas quando o `<html>` tem a classe `dark` (`web/src/tema-escuro.css`, gerado a partir das cores oficiais). Um script curto no `index.html` aplica o tema antes de desenhar a página, para não piscar branco.
+- **Modo foco:** a fila e os resultados ficam no `sessionStorage` da aba. As questões vêm de `/recomendacoes`.
 - **Rotas por hash** (`#/questao/2022-141`): funcionam no GitHub Pages sem configuração extra no servidor.
 - **Fórmulas e tabelas:** Markdown com `remark-math` e KaTeX. O cifrão de dinheiro vem escapado (`R\$`) para não virar fórmula.
 - **Streaming:** a conversa usa `fetch` com leitura do corpo em Server-Sent Events, porque o `EventSource` do navegador só faz GET.
