@@ -50,7 +50,8 @@ jobs:
       - name: Confere as rotas
         run: |
           set -e
-          curl -fs localhost:8000/health | grep -q '"questoes":60'
+          esperado=$(python3 -c 'import json; print(len(json.load(open("data/questoes-mvp.json", encoding="utf-8"))))')
+          curl -fs localhost:8000/health | grep -q "\"questoes\":$esperado"
           curl -fs localhost:8000/docs > /dev/null
           # a URL da fonte contém "provas_e_gabaritos", então a checagem olha as chaves do JSON
           curl -fs localhost:8000/questoes/2022-141 | python3 -c 'import json,sys; q=json.load(sys.stdin); assert "gabarito" not in q and all(set(a)=={"letra","texto"} for a in q["alternativas"]), "a rota de questão expôs o gabarito"'

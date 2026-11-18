@@ -8,7 +8,16 @@ from pathlib import Path
 PASTA_DADOS = Path(__file__).resolve().parent
 PASTA_BRUTOS = PASTA_DADOS / "brutos"
 
+# anos com o texto do conjunto da Maritaca; 2025 vem só do PDF oficial (transcrito na revisão)
 ANOS = (2022, 2023, 2024)
+ANOS_SO_DO_PDF = (2025,)
+TODOS_OS_ANOS = ANOS + ANOS_SO_DO_PDF
+
+# áreas do 2º dia: faixa de questões, sigla nos microdados e um trecho que marca a área na matriz
+AREAS = {
+    "natureza": {"sigla": "CN", "primeira": 91, "ultima": 135, "marca_na_matriz": "Compreender as ciências naturais"},
+    "matematica": {"sigla": "MT", "primeira": 136, "ultima": 180, "marca_na_matriz": "Construir significados para os números"},
+}
 
 # Conjunto de dados da Maritaca AI (licença Apache-2.0), fixado numa revisão
 # para que a extração seja reproduzível.
@@ -24,13 +33,13 @@ CADERNOS = {
     2022: {"codigo": 6, "cor": "CINZA"},
     2023: {"codigo": 8, "cor": "ROSA"},
     2024: {"codigo": 8, "cor": "VERDE"},
+    # 2025: sem o conjunto da Maritaca; caderno escolhido e prova identificada pelo gabarito oficial
+    2025: {"codigo": 7, "cor": "AZUL", "prova": "1471"},
 }
 PROVA_URL = "https://download.inep.gov.br/enem/provas_e_gabaritos/{ano}_PV_impresso_D2_CD{codigo}.pdf"
 
 MATRIZ_URL = "https://download.inep.gov.br/enem/outros_documentos/enem_matriz_de_referencia_v1.pdf"
 
-PRIMEIRA_QUESTAO_MATEMATICA = 136
-ULTIMA_QUESTAO_MATEMATICA = 180
 
 
 def caminho_maritaca(ano: int) -> Path:

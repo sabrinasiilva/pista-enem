@@ -7,6 +7,7 @@ que diz em quais imagens está cada questão.
 """
 
 import json
+import re
 
 import pymupdf
 
@@ -19,13 +20,13 @@ def main() -> None:
     pasta = fontes.PASTA_BRUTOS / "paginas"
     pasta.mkdir(parents=True, exist_ok=True)
     indice = {}
-    for ano in fontes.ANOS:
+    for ano in fontes.TODOS_OS_ANOS:
         with pymupdf.open(fontes.caminho_prova(ano)) as documento:
             pagina_da_questao = {}
             for numero_pagina, pagina in enumerate(documento):
-                for numero in range(fontes.PRIMEIRA_QUESTAO_MATEMATICA, fontes.ULTIMA_QUESTAO_MATEMATICA + 1):
-                    if numero not in pagina_da_questao and pagina.search_for(f"QUESTÃO {numero}"):
-                        pagina_da_questao[numero] = numero_pagina
+                # "QUESTÃO 141" até 2024 e "Questão 141" em 2025 (search_for não iguala Ã e ã)
+                for achado in re.finditer(r"QUESTÃO\s*(\d{2,3})\b", pagina.get_text(), re.IGNORECASE):
+                    pagina_da_questao.setdefault(int(achado.group(1)), numero_pagina)
             ultima = len(documento) - 1
             for numero, inicio in pagina_da_questao.items():
                 # a questão vai até a página onde começa a próxima

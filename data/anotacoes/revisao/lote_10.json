@@ -1,0 +1,389 @@
+[
+  {
+    "id": "2025-136",
+    "enunciado": "Uma pessoa pretende instalar um kit de gás natural veicular (GNV) em seu carro. Na loja que escolheu para realizar a compra e instalação desse kit, havia cinco modelos de cilindro para armazenamento do gás, cujas capacidades, em metro cúbico, eram, respectivamente: 10, 14, 17, 21 e 25. O preço do cilindro é proporcional à sua capacidade. Esse carro rodará 30 km diariamente, 7 dias por semana, e o consumo do GNV é de 1 $\\text{m}^3$ a cada 13 km rodados. A pessoa escolherá o modelo de cilindro de menor preço e que garanta apenas um abastecimento semanal.\n\nNessas condições, qual será a capacidade, em metro cúbico, do cilindro escolhido por essa pessoa?",
+    "alternativas": {
+      "A": "10",
+      "B": "14",
+      "C": "17",
+      "D": "21",
+      "E": "25"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Distância semanal: $30 \\times 7 = 210$ km.\nConsumo semanal: $\\frac{210}{13} \\approx 16{,}15$ $\\text{m}^3$.\nO cilindro precisa ter capacidade de pelo menos 16,15 $\\text{m}^3$; como o preço é proporcional à capacidade, escolhe-se o menor que atende.\nEntre 10, 14, 17, 21 e 25, o menor que é maior ou igual a 16,15 é 17.\nAlternativa C.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve a 10; provável escolha do cilindro mais barato sem verificar se ele dura a semana inteira.",
+      "B": "Arredondou o consumo diário $\\frac{30}{13} \\approx 2{,}3$ para 2 $\\text{m}^3$ e multiplicou por 7 dias: $2 \\times 7 = 14$.",
+      "D": "Arredondou o consumo diário $\\frac{30}{13} \\approx 2{,}3$ para cima, 3 $\\text{m}^3$, e multiplicou por 7 dias: $3 \\times 7 = 21$.",
+      "E": "Escolheu o maior cilindro 'para garantir', ignorando que deveria ser o de menor preço que atende ao consumo de cerca de 16,15 $\\text{m}^3$."
+    },
+    "conceitos": [
+      "proporcionalidade",
+      "divisão",
+      "arredondamento"
+    ]
+  },
+  {
+    "id": "2025-137",
+    "enunciado": "A reportagem de uma revista abordou o uso de redes sociais pelos internautas brasileiros. Alguns dos dados apurados pela reportagem estão apresentados no infográfico.\n\n**Perfil dos brasileiros nas redes sociais**\n\n90% dos internautas brasileiros acessam redes sociais\n\nMULHERES × HOMENS\n\n60% da quantidade de internautas brasileiros que acessam redes sociais são mulheres\n\nDisponível em: http://revistagalileu.globo.com. Acesso em: 22 out. 2015 (adaptado).\n\nSegundo os dados do infográfico, ao se escolher aleatoriamente um internauta brasileiro no período ao qual se refere a reportagem, a probabilidade de ele ser um homem que acessa alguma rede social é",
+    "alternativas": {
+      "A": "$\\frac{30}{90}$",
+      "B": "$\\frac{36}{100}$",
+      "C": "$\\frac{40}{100}$",
+      "D": "$\\frac{40}{90}$",
+      "E": "$\\frac{46}{90}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Infográfico com bonecos ilustrativos (9 de 10 internautas acessam; 12 mulheres e 8 homens entre os que acessam); os dados numéricos foram transcritos como texto.",
+    "gabarito_calculado": "B",
+    "resolucao": "Dos internautas brasileiros, 90% acessam redes sociais.\nEntre os que acessam, 60% são mulheres, logo $100\\% - 60\\% = 40\\%$ são homens.\nProbabilidade de ser homem e acessar: $0{,}90 \\times 0{,}40 = 0{,}36$.\nIsso equivale a $\\frac{36}{100}$.\nAlternativa B.",
+    "enganos": {
+      "A": "Tratou os 60% como percentual do total de internautas e fez $90 - 60 = 30$ homens entre os 90 que acessam, obtendo $\\frac{30}{90}$.",
+      "C": "Usou apenas os 40% de homens entre os que acessam, esquecendo de multiplicar pelos 90% que acessam redes sociais.",
+      "D": "Calculou a probabilidade condicional (homem, dado que acessa) e escreveu 40 sobre 90, misturando os dois percentuais sem multiplicá-los.",
+      "E": "Não há um erro de cálculo claro; possivelmente somou os 10% que não acessam aos 36% de homens que acessam ($36 + 10 = 46$) e dividiu por 90."
+    },
+    "conceitos": [
+      "probabilidade",
+      "porcentagem",
+      "probabilidade da interseção"
+    ]
+  },
+  {
+    "id": "2025-138",
+    "enunciado": "Em um jogo de computador, um cubo se encontra inicialmente posicionado conforme indicado na figura.\n\n[Figura: sistema de eixos $x$, $y$, $z$ com malha quadriculada nos três planos coordenados; o cubo de aresta 1 ocupa $5 \\leq x \\leq 6$, $1 \\leq y \\leq 2$, $6 \\leq z \\leq 7$, e suas projeções ortogonais aparecem em azul nos planos $xy$, $xz$ e $yz$.]\n\nCada deslocamento efetuado por esse cubo se dá sempre em uma das direções definidas pelos três eixos coordenados. Ao se movimentar a partir da posição inicial, esse cubo se aproximou 3 unidades do plano $yz$, se afastou 5 unidades do plano $xz$ e se aproximou 4 unidades do plano $xy$.\n\nA figura que apresenta as projeções ortogonais desse cubo sobre os três planos coordenados, após efetuar as movimentações descritas, é",
+    "alternativas": {
+      "A": "[Figura: projeções em vermelho correspondentes a $1 \\leq x \\leq 2$, $6 \\leq y \\leq 7$, $3 \\leq z \\leq 4$.]",
+      "B": "[Figura: projeções em vermelho correspondentes a $0 \\leq x \\leq 1$, $4 \\leq y \\leq 5$, $2 \\leq z \\leq 3$.]",
+      "C": "[Figura: projeções em vermelho incoerentes entre si: no plano $yz$, $5 \\leq y \\leq 6$ e $2 \\leq z \\leq 3$; no plano $xz$, $2 \\leq x \\leq 3$; no plano $xy$, $2 \\leq x \\leq 3$ e $6 \\leq y \\leq 7$.]",
+      "D": "[Figura: projeções em vermelho correspondentes a $2 \\leq x \\leq 3$, $5 \\leq y \\leq 6$, $2 \\leq z \\leq 3$.]",
+      "E": "[Figura: projeções em vermelho correspondentes a $2 \\leq x \\leq 3$, $6 \\leq y \\leq 7$, $2 \\leq z \\leq 3$.]"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Figura inicial e alternativas são gráficos 3D; as coordenadas descritas entre colchetes foram lidas na malha (unidade 1) medindo a posição dos quadrados coloridos, e não fazem parte da prova.",
+    "gabarito_calculado": "E",
+    "resolucao": "Pela figura, o cubo inicial ocupa $5 \\leq x \\leq 6$, $1 \\leq y \\leq 2$, $6 \\leq z \\leq 7$.\nAproximar-se 3 unidades do plano $yz$ (onde $x = 0$) diminui $x$ em 3: $2 \\leq x \\leq 3$.\nAfastar-se 5 unidades do plano $xz$ (onde $y = 0$) aumenta $y$ em 5: $6 \\leq y \\leq 7$.\nAproximar-se 4 unidades do plano $xy$ (onde $z = 0$) diminui $z$ em 4: $2 \\leq z \\leq 3$.\nProjeções: no $yz$, quadrado em $y$ de 6 a 7 e $z$ de 2 a 3; no $xz$, $x$ de 2 a 3 e $z$ de 2 a 3; no $xy$, $x$ de 2 a 3 e $y$ de 6 a 7.\nAlternativa E.",
+    "enganos": {
+      "A": "Trocou os deslocamentos 3 e 4: diminuiu $x$ em 4 ($1 \\leq x \\leq 2$) e $z$ em 3 ($3 \\leq z \\leq 4$).",
+      "B": "Trocou os deslocamentos 3 e 5: diminuiu $x$ em 5 ($0 \\leq x \\leq 1$) e aumentou $y$ em 3 ($4 \\leq y \\leq 5$).",
+      "C": "Escolheu uma figura em que só algumas projeções conferem, sem checar que a projeção no plano $yz$ ($5 \\leq y \\leq 6$) não é compatível com a do plano $xy$ ($6 \\leq y \\leq 7$).",
+      "D": "Contou mal as unidades no eixo $y$ (por exemplo, contando linhas da malha em vez de casas) e deslocou só 4 unidades: $5 \\leq y \\leq 6$."
+    },
+    "conceitos": [
+      "geometria espacial",
+      "projeção ortogonal",
+      "coordenadas no espaço"
+    ]
+  },
+  {
+    "id": "2025-139",
+    "enunciado": "No entorno de uma lagoa circular, cujo raio mede 1 km, há um uma ciclovia. Devido aos frequentes roubos de bicicleta, a prefeitura planeja alocar policiais em posições estratégicas para patrulhar essa ciclovia, de forma a torná-la totalmente protegida. Um ponto da ciclovia é considerado protegido se houver pelo menos um policial a, no máximo, 200 m de distância daquele ponto, posicionado sobre a ciclovia. A figura ilustra um ponto $P$ sobre a ciclovia, que estará protegido se houver pelo menos um policial posicionado sobre a região de cor cinza escuro.\n\nDesconsidere a largura da pista da ciclovia e utilize 3 como aproximação para $\\pi$.\n\n[Figura: lagoa circular com a ciclovia em volta; um trecho cinza escuro da ciclovia com o ponto $P$ no meio, marcado com 200 m para cada lado de $P$.]\n\nNessas condições, a quantidade mínima necessária de policiais a serem alocados ao longo dessa ciclovia para torná-la protegida é",
+    "alternativas": {
+      "A": "4.",
+      "B": "8.",
+      "C": "15.",
+      "D": "30.",
+      "E": "60."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Erro do original mantido: \"há um uma ciclovia\". A figura apenas ilustra o trecho de 200 m para cada lado de P, já descrito no texto; foi substituída por descrição.",
+    "gabarito_calculado": "C",
+    "resolucao": "Comprimento da ciclovia: $C = 2\\pi r = 2 \\times 3 \\times 1\\,000 = 6\\,000$ m.\nCada policial protege os pontos a até 200 m de cada lado dele, ou seja, um trecho de $2 \\times 200 = 400$ m.\nPara cobrir toda a ciclovia: $\\frac{6\\,000}{400} = 15$ policiais.\nAlternativa C.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve a 4; provável escolha por intuição (um policial por quadrante da lagoa).",
+      "B": "Usou a área em vez do perímetro: $\\pi r^2 = 3$ km² dividido por 0,4 km dá 7,5, arredondado para 8.",
+      "D": "Considerou que cada policial cobre só 200 m (um lado só): $\\frac{6\\,000}{200} = 30$.",
+      "E": "Calculou $\\frac{6\\,000}{200} = 30$ e ainda dobrou, achando que cada ponto precisa de um policial de cada lado: $2 \\times 30 = 60$."
+    },
+    "conceitos": [
+      "comprimento da circunferência",
+      "divisão",
+      "geometria plana"
+    ]
+  },
+  {
+    "id": "2025-140",
+    "enunciado": "Em um laboratório, um recipiente contém 10 litros de uma solução composta apenas pelas substâncias $S_1$ e $S_2$. Dessa solução, 99,95% é de $S_1$. Uma quantidade de $S_1$ será retirada dessa solução, mantendo a quantidade inicial de $S_2$, de modo que 99,90% da nova solução seja de $S_1$.\n\nQual é a quantidade de $S_1$, em litro, que será retirada?",
+    "alternativas": {
+      "A": "0,0050",
+      "B": "0,0100",
+      "C": "0,5000",
+      "D": "4,9775",
+      "E": "5,0000"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "Quantidade de $S_2$: $0{,}05\\% \\times 10 = 0{,}005$ L, e de $S_1$: 9,995 L.\nNa nova solução, $S_2$ (que não muda) passa a ser $100\\% - 99{,}90\\% = 0{,}10\\%$ do total.\nNovo total: $\\frac{0{,}005}{0{,}001} = 5$ L, com $5 - 0{,}005 = 4{,}995$ L de $S_1$.\n$S_1$ retirado: $9{,}995 - 4{,}995 = 5$ L.\nAlternativa E.",
+    "enganos": {
+      "A": "Calculou a diferença de porcentagens aplicada ao volume inicial: $(99{,}95\\% - 99{,}90\\%) \\times 10 = 0{,}005$ L (que coincide com a quantidade de $S_2$).",
+      "B": "Aplicou 0,10% ao volume inicial, $0{,}001 \\times 10 = 0{,}01$ L, sem perceber que o total da solução muda.",
+      "C": "Fez uma razão entre as frações de $S_2$, $\\frac{0{,}05\\%}{0{,}10\\%} = 0{,}5$, e tomou esse número como o volume retirado.",
+      "D": "Não há um caminho claro para 4,9775; parece um valor próximo de 5 obtido por algum erro de arredondamento ou ao aplicar porcentagem sobre o novo volume de 5 L."
+    },
+    "conceitos": [
+      "porcentagem",
+      "misturas",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2025-141",
+    "enunciado": "Uma distribuidora de combustível possui caminhões-tanque com capacidade de 30 000 litros cada. Em qualquer transporte realizado por esses caminhões, um mesmo volume de combustível é descartado, pois fica com muitas impurezas. Esse volume descartado independe da quantidade transportada.\n\nUm posto de combustível encomendou 10 000 litros de gasolina dessa distribuidora, que enviou 10 200 litros, considerando o volume descartado no transporte. Mesmo assim, a quantidade de gasolina entregue ao posto foi de 9 900 litros.\n\nEm um novo pedido, esse posto solicitou que fosse entregue exatamente o dobro do volume de gasolina encomendado no pedido anterior.\n\nUtilizando o mesmo caminhão da entrega anterior, qual é o volume mínimo de gasolina, em litro, que a distribuidora deverá enviar para garantir a entrega da quantidade encomendada nesse novo pedido?",
+    "alternativas": {
+      "A": "20 100",
+      "B": "20 200",
+      "C": "20 300",
+      "D": "20 400",
+      "E": "20 600"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Volume descartado em cada transporte: $10\\,200 - 9\\,900 = 300$ L.\nO descarte não depende da quantidade transportada, então continua 300 L.\nNovo pedido: $2 \\times 10\\,000 = 20\\,000$ L.\nVolume a enviar: $20\\,000 + 300 = 20\\,300$ L.\nAlternativa C.",
+    "enganos": {
+      "A": "Dobrou o volume efetivamente entregue antes e somou o descarte: $2 \\times 9\\,900 + 300 = 20\\,100$.",
+      "B": "Considerou como descarte a diferença entre enviado e encomendado, $10\\,200 - 10\\,000 = 200$, e fez $20\\,000 + 200 = 20\\,200$.",
+      "D": "Simplesmente dobrou o volume enviado antes: $2 \\times 10\\,200 = 20\\,400$, tratando o descarte como proporcional.",
+      "E": "Achou que o descarte também dobra: $20\\,000 + 2 \\times 300 = 20\\,600$."
+    },
+    "conceitos": [
+      "operações com números naturais",
+      "interpretação de problemas"
+    ]
+  },
+  {
+    "id": "2025-142",
+    "enunciado": "Uma empresa de tecnologia vai padronizar a velocidade de conexão de internet que oferece a seus clientes em dez cidades. A direção da empresa decide que seu novo padrão de velocidade de referência será a mediana dos valores das velocidades de referência de conexões nessas dez cidades. Esses valores, em megabyte por segundo (MB/s), são apresentados no quadro.\n\n| Cidades | Velocidade de referência (MB/s) |\n|---|---|\n| C1 | 390 |\n| C2 | 380 |\n| C3 | 320 |\n| C4 | 390 |\n| C5 | 340 |\n| C6 | 380 |\n| C7 | 390 |\n| C8 | 400 |\n| C9 | 350 |\n| C10 | 360 |\n\nA velocidade de referência, em megabyte por segundo, a ser adotada por essa empresa é",
+    "alternativas": {
+      "A": "360.",
+      "B": "370.",
+      "C": "380.",
+      "D": "390.",
+      "E": "400."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Ordenando os 10 valores: 320, 340, 350, 360, 380, 380, 390, 390, 390, 400.\nCom quantidade par, a mediana é a média do 5º e do 6º valores.\nMediana $= \\frac{380 + 380}{2} = 380$ MB/s.\nAlternativa C.",
+    "enganos": {
+      "A": "Não ordenou os dados e tirou a média do 5º e 6º valores na ordem do quadro (C5 e C6): $\\frac{340 + 380}{2} = 360$.",
+      "B": "Calculou a média aritmética em vez da mediana: $\\frac{3\\,700}{10} = 370$.",
+      "D": "Confundiu mediana com moda: 390 é o valor que mais se repete.",
+      "E": "Escolheu o maior valor do quadro, 400, como padrão de referência."
+    },
+    "conceitos": [
+      "mediana",
+      "estatística",
+      "medidas de tendência central"
+    ]
+  },
+  {
+    "id": "2025-143",
+    "enunciado": "Na cantina de uma escola, há cinco alimentos vendidos em pacotes com diferentes quantidades de porções.\n\nAs informações nutricionais contidas nos rótulos desses produtos estão indicadas nas imagens.\n\n| Alimento | Pacote | Sódio |\n|---|---|---|\n| Batata chips | Pacote com 3 porções de 50 g | 170 mg de sódio por porção |\n| Palitos salgados | Pacote com 4 porções de 20 g | 501 mg de sódio por porção |\n| Biscoito multigrãos | Pacote com 8 porções de 25 g | 264 mg de sódio por porção |\n| Biscoito de polvilho | Pacote com 6 porções de 15 g | 175 mg de sódio por porção |\n| Biscoito de água e sal | Pacote com 5 porções de 40 g | 166 mg de sódio por porção |\n\nUma estudante opta sempre pelo alimento com a menor quantidade total de sódio por pacote.\n\nQual desses produtos deve ser o escolhido pela estudante?",
+    "alternativas": {
+      "A": "Batata chips.",
+      "B": "Palitos salgados.",
+      "C": "Biscoito multigrãos.",
+      "D": "Biscoito de polvilho.",
+      "E": "Biscoito de água e sal."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Os rótulos aparecem como cinco caixas coloridas; transcritos como tabela.",
+    "gabarito_calculado": "A",
+    "resolucao": "Sódio total por pacote = número de porções × sódio por porção.\nBatata chips: $3 \\times 170 = 510$ mg; palitos: $4 \\times 501 = 2\\,004$ mg.\nMultigrãos: $8 \\times 264 = 2\\,112$ mg; polvilho: $6 \\times 175 = 1\\,050$ mg.\nÁgua e sal: $5 \\times 166 = 830$ mg.\nO menor total é 510 mg, da batata chips.\nAlternativa A.",
+    "enganos": {
+      "B": "Olhou a massa do pacote e escolheu o mais leve ($4 \\times 20 = 80$ g), sem calcular o sódio.",
+      "C": "Dividiu o sódio pelo número de porções em vez de multiplicar: $\\frac{264}{8} = 33$ mg, o menor desses quocientes.",
+      "D": "Escolheu o produto com a menor porção (15 g), confundindo tamanho da porção com quantidade de sódio.",
+      "E": "Comparou só o sódio por porção (166 mg é o menor) sem multiplicar pelo número de porções do pacote."
+    },
+    "conceitos": [
+      "multiplicação",
+      "comparação de grandezas",
+      "interpretação de dados"
+    ]
+  },
+  {
+    "id": "2025-144",
+    "enunciado": "Uma fábrica utilizou uma impressora 3D para produzir o protótipo de uma peça. O protótipo tem forma de um poliedro convexo, obtido pela justaposição de dois sólidos distintos, um com a forma de um prisma hexagonal regular reto e o outro com a forma de um tronco de pirâmide hexagonal reta. A base maior do tronco de pirâmide coincide com uma das bases do prisma.\n\nApós a impressão do protótipo, ele foi encaminhado ao setor de customização para realização da pintura de sua superfície. O critério definido para realização da pintura considera que faces congruentes entre si devem ser pintadas com uma mesma cor, e faces não congruentes entre si devem apresentar cores distintas.\n\nQual é a quantidade de cores utilizadas para pintar o protótipo?",
+    "alternativas": {
+      "A": "9",
+      "B": "8",
+      "C": "6",
+      "D": "4",
+      "E": "3"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "A base do prisma que coincide com a base maior do tronco fica interna e não é pintada.\nFaces externas: a outra base do prisma (hexágono regular maior), as 6 faces laterais retangulares do prisma, as 6 faces laterais trapezoidais do tronco e a base menor do tronco (hexágono regular menor).\nOs 6 retângulos são congruentes entre si (1 cor) e os 6 trapézios também (1 cor).\nOs dois hexágonos têm tamanhos diferentes, então não são congruentes (2 cores).\nTotal: $1 + 1 + 1 + 1 = 4$ cores.\nAlternativa D.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve a 9; provável contagem desorganizada de tipos de faces dos dois sólidos.",
+      "B": "Contou as 8 faces do prisma hexagonal ($6 + 2$) em vez de agrupar faces congruentes do protótipo.",
+      "C": "Associou o número de cores ao número de lados do hexágono (6 faces laterais), confundindo quantidade de faces com quantidade de tipos.",
+      "E": "Considerou os dois hexágonos (base do prisma e base menor do tronco) congruentes por serem ambos hexágonos regulares: $1 + 1 + 1 = 3$."
+    },
+    "conceitos": [
+      "geometria espacial",
+      "prismas",
+      "tronco de pirâmide",
+      "congruência"
+    ]
+  },
+  {
+    "id": "2025-145",
+    "enunciado": "Pesquisas na área de neurobiologia confirmam que a prática meditativa é responsável por diminuir consideravelmente a frequência respiratória para praticantes avançados, que, após iniciarem a meditação, têm suas frequências respiratórias reduzidas até se estabilizarem em um nível mais baixo. O gráfico apresenta a relação da frequência respiratória, em incursões de respirações por minuto (rpm), em relação ao tempo, em minuto, de um praticante avançado, em que ($f_1$) representa a frequência no instante $t_1$, no qual se inicia a prática meditativa; e ($f_2$), a frequência no instante $t_2$, a partir do qual esta se estabiliza durante a meditação.\n\n[Gráfico: eixo vertical \"Frequência respiratória (rpm)\" e eixo horizontal \"Tempo (min)\"; a curva é constante no nível $f_1$ até $t_1$ (\"Início da prática meditativa\"), decresce entre $t_1$ e $t_2$ e permanece constante no nível $f_2$ a partir de $t_2$.]\n\nDisponível em: www.redepsi.com.br. Acesso em: 3 dez. 2018 (adaptado).\n\nA partir do instante $t_1$, em que se inicia a prática meditativa, o comportamento da frequência respiratória, em relação ao tempo,",
+    "alternativas": {
+      "A": "mantém-se constante.",
+      "B": "é diretamente proporcional ao tempo.",
+      "C": "é inversamente proporcional ao tempo.",
+      "D": "diminui até o instante $t_2$, a partir do qual se torna constante.",
+      "E": "diminui de forma proporcional ao tempo, tanto entre $t_1$ e $t_2$ quanto após $t_2$."
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Questão de leitura de gráfico; o gráfico foi descrito entre colchetes. O próprio texto já indica a queda até estabilizar.",
+    "gabarito_calculado": "D",
+    "resolucao": "No gráfico, a partir de $t_1$ a curva desce: a frequência diminui.\nEssa queda continua até $t_2$, quando a frequência chega a $f_2$.\nDepois de $t_2$, a curva fica horizontal: a frequência é constante.\nA queda não é proporcional ao tempo (a frequência não vai a zero nem segue $f = k \\cdot t$ ou $f = \\frac{k}{t}$).\nAlternativa D.",
+    "enganos": {
+      "A": "Olhou só o trecho antes de $t_1$ ou só o trecho depois de $t_2$, onde a curva é horizontal, ignorando a queda entre $t_1$ e $t_2$.",
+      "B": "Associou 'varia com o tempo' a proporcionalidade direta, sem notar que a frequência diminui enquanto o tempo aumenta.",
+      "C": "Viu que a frequência cai quando o tempo aumenta e concluiu que é inversamente proporcional, ignorando que depois de $t_2$ ela fica constante.",
+      "E": "Percebeu a queda entre $t_1$ e $t_2$ mas não notou que depois de $t_2$ a curva é horizontal (constante)."
+    },
+    "conceitos": [
+      "leitura de gráficos",
+      "funções",
+      "crescimento e decrescimento"
+    ]
+  },
+  {
+    "id": "2025-146",
+    "enunciado": "No atletismo, um grande desafio da prova de 100 metros rasos é a sua conclusão num tempo abaixo da marca de referência dos 10,00 segundos. Vários atletas já alcançaram esse feito. Em 2009, o jamaicano Usain Bolt estabeleceu o recorde mundial masculino dessa prova, com o tempo de 9,58 segundos.\n\nQual é a diferença, em segundo, entre a marca de referência e a marca estabelecida por Usain Bolt em 2009?",
+    "alternativas": {
+      "A": "0,02",
+      "B": "0,42",
+      "C": "0,52",
+      "D": "1,02",
+      "E": "1,42"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Diferença: $10{,}00 - 9{,}58$.\nCentésimos: como 0 < 8, empresta-se: $10 - 8 = 2$.\nDécimos: o 0 virou 9 após o empréstimo: $9 - 5 = 4$.\nUnidades: o 10 virou 9: $9 - 9 = 0$.\nResultado: 0,42 s. Alternativa B.",
+    "enganos": {
+      "A": "Tratou os centésimos como se fossem em base 60 (como minutos e segundos): $10{,}00 = 9{,}60$ e $9{,}60 - 9{,}58 = 0{,}02$.",
+      "C": "Ao emprestar para os centésimos, esqueceu de diminuir os décimos: $10 - 8 = 2$ e $10 - 5 = 5$, obtendo 0,52.",
+      "D": "Fez o empréstimo como se houvesse 60 centésimos em um segundo e não ajustou as unidades: $10{,}60 - 9{,}58 = 1{,}02$.",
+      "E": "Fez corretamente os centésimos e décimos (0,42), mas esqueceu de descontar o empréstimo nas unidades: $10 - 9 = 1$, obtendo 1,42."
+    },
+    "conceitos": [
+      "subtração de decimais",
+      "números decimais"
+    ]
+  },
+  {
+    "id": "2025-147",
+    "enunciado": "Uma escola de idiomas oferece cursos de inglês, espanhol, francês e alemão. Os gráficos apresentam a distribuição percentual das matrículas, por idioma, em 2023, e a distribuição da quantidade de matrículas, por idioma, em 2024.\n\n**Porcentagem de matrículas por idioma – 2023**\n\n| Idioma | Porcentagem |\n|---|---|\n| Inglês | 60% |\n| Espanhol | 25% |\n| Francês | 10% |\n| Alemão | 5% |\n\n**Quantidade de matrículas por idioma – 2024**\n\n| Idioma | Quantidade |\n|---|---|\n| Inglês | 280 |\n| Espanhol | 80 |\n| Francês | 20 |\n| Alemão | 20 |\n\nPara planejar as atividades de 2025, o gerente da escola estimou que o total de matrículas será o mesmo de 2024, e a distribuição percentual das matrículas, por idioma, será igual à registrada em 2023.\n\nSegundo essa estimativa, o número de matrículas no curso de francês para o ano de 2025 será",
+    "alternativas": {
+      "A": "2.",
+      "B": "12.",
+      "C": "20.",
+      "D": "22.",
+      "E": "40."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Os dados vêm de um gráfico de setores (2023) e de um gráfico de barras (2024), com todos os valores rotulados; transcritos como tabelas.",
+    "gabarito_calculado": "E",
+    "resolucao": "Total de matrículas em 2024: $280 + 80 + 20 + 20 = 400$.\nEm 2025, o total será 400 e o francês terá 10%, como em 2023.\nMatrículas em francês: $10\\% \\times 400 = 40$.\nAlternativa E.",
+    "enganos": {
+      "A": "Aplicou os 10% de 2023 à quantidade de francês de 2024, em vez de ao total: $10\\% \\times 20 = 2$.",
+      "B": "Calculou o total sem o inglês ($80 + 20 + 20 = 120$) e tomou 10% disso: 12.",
+      "C": "Repetiu a quantidade de francês de 2024 (20), ignorando a nova distribuição percentual (ou usou os 5% do alemão: $5\\% \\times 400 = 20$).",
+      "D": "Somou à quantidade de 2024 um aumento de 10%: $20 + 10\\% \\times 20 = 22$."
+    },
+    "conceitos": [
+      "porcentagem",
+      "leitura de gráficos"
+    ]
+  },
+  {
+    "id": "2025-148",
+    "enunciado": "O controle remoto de um carrinho de brinquedo vem equipado com uma tela que ajusta automaticamente a escala empregada na exibição de cada deslocamento. A tela apresenta a imagem do deslocamento, a escala utilizada na geração dessa imagem e o comprimento desse deslocamento, em centímetro, em conformidade com a escala empregada. As figuras representam a tela do controle remoto exibindo os dados de cinco deslocamentos realizados por esse carrinho.\n\n| Tela | Pontos indicados | Comprimento na tela | Escala |\n|---|---|---|---|\n| I | A e B | 9 cm | 1 : 100 |\n| II | B e C | 5 cm | 1 : 300 |\n| III | D e C | 5 cm | 1 : 600 |\n| IV | D e E | 3 cm | 1 : 700 |\n| V | E e F | 2 cm | 1 : 1 000 |\n\nA opção que indica o deslocamento de maior comprimento realizado pelo carrinho de brinquedo é",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "As cinco telas mostram um segmento com seta, o comprimento em cm e a escala; os dados foram transcritos como tabela. As setas de sentido foram omitidas, pois não interferem na resolução.",
+    "gabarito_calculado": "C",
+    "resolucao": "Comprimento real = comprimento na tela × denominador da escala.\nI: $9 \\times 100 = 900$ cm; II: $5 \\times 300 = 1\\,500$ cm.\nIII: $5 \\times 600 = 3\\,000$ cm; IV: $3 \\times 700 = 2\\,100$ cm.\nV: $2 \\times 1\\,000 = 2\\,000$ cm.\nO maior é o III, com 3 000 cm (30 m).\nAlternativa C.",
+    "enganos": {
+      "A": "Comparou só os comprimentos na tela e escolheu o maior (9 cm), ignorando a escala.",
+      "B": "Não há um erro de cálculo claro que leve ao II; provável escolha por estimativa visual do segmento.",
+      "D": "Errou a conta de um dos produtos (por exemplo, achou $5 \\times 600 = 300$ ou similar) e ficou com o IV, de 2 100 cm, como maior.",
+      "E": "Escolheu a maior escala (1 : 1 000), achando que ela sozinha indica o maior deslocamento, sem multiplicar pelo comprimento de 2 cm."
+    },
+    "conceitos": [
+      "escala",
+      "proporcionalidade",
+      "multiplicação"
+    ]
+  },
+  {
+    "id": "2025-149",
+    "enunciado": "A cúpula pentagonal giralongada é um poliedro de Johnson, cujas faces são polígonos regulares, mas que não é um poliedro de Platão, de Arquimedes, prisma ou antiprisma.\n\nAs figuras apresentam esse poliedro em duas posições e uma de suas planificações.\n\n[Figura: o poliedro visto em duas posições e uma planificação com um decágono central (vermelho), triângulos (azuis), quadrados (amarelos) e um pentágono (verde).]\n\nQuantos vértices tem esse poliedro?",
+    "alternativas": {
+      "A": "21",
+      "B": "25",
+      "C": "55",
+      "D": "80",
+      "E": "110"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "A contagem de faces (25 triângulos, 5 quadrados, 1 pentágono e 1 decágono) só é obtida pela figura.",
+    "gabarito_calculado": "B",
+    "resolucao": "Pela planificação, as faces são: 25 triângulos, 5 quadrados, 1 pentágono e 1 decágono, total $F = 32$.\nCada aresta pertence a duas faces: $A = \\frac{25 \\cdot 3 + 5 \\cdot 4 + 5 + 10}{2} = \\frac{110}{2} = 55$.\nRelação de Euler: $V - A + F = 2 \\Rightarrow V = 2 + 55 - 32 = 25$.\nConferindo: 5 vértices no pentágono, 10 no decágono e 10 na outra borda do anel de triângulos: $5 + 10 + 10 = 25$.\nAlternativa B.",
+    "enganos": {
+      "A": "Errou o sinal na relação de Euler: $V = A - F - 2 = 55 - 32 - 2 = 21$.",
+      "C": "Confundiu vértices com arestas e respondeu o número de arestas, 55.",
+      "D": "Não há um erro claro que leve a 80; possivelmente somou arestas e vértices ($55 + 25 = 80$).",
+      "E": "Somou os lados de todas as faces ($75 + 20 + 5 + 10 = 110$) sem dividir, esquecendo que cada aresta (ou vértice) é compartilhada."
+    },
+    "conceitos": [
+      "poliedros",
+      "relação de euler",
+      "planificação"
+    ]
+  },
+  {
+    "id": "2025-150",
+    "enunciado": "Uma fábrica de tijolos ecológicos com 3 funcionários, cada um trabalhando 6 horas diárias, produz 720 unidades por dia. Para atender ao crescimento da demanda por esse tipo de tijolo, essa fábrica passou a ter 5 funcionários, cada um trabalhando 9 horas por dia, aumentando, assim, sua capacidade de produção. Todos os funcionários produzem igual quantidade de tijolos a cada hora, independentemente de trabalharem 6 ou 9 horas diárias.\n\nO número de tijolos fabricados diariamente após o aumento da capacidade de produção é",
+    "alternativas": {
+      "A": "800.",
+      "B": "1 080.",
+      "C": "1 200.",
+      "D": "1 800.",
+      "E": "2 520."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "Antes: $3 \\times 6 = 18$ horas de trabalho por dia produzem 720 tijolos.\nProdução por funcionário por hora: $\\frac{720}{18} = 40$ tijolos.\nDepois: $5 \\times 9 = 45$ horas de trabalho por dia.\nProdução diária: $45 \\times 40 = 1\\,800$ tijolos.\nAlternativa D.",
+    "enganos": {
+      "A": "Tratou as horas como inversamente proporcionais à produção: $720 \\times \\frac{5}{3} \\times \\frac{6}{9} = 800$.",
+      "B": "Considerou só o aumento das horas, esquecendo os novos funcionários: $720 \\times \\frac{9}{6} = 1\\,080$.",
+      "C": "Considerou só o aumento de funcionários, esquecendo as horas: $720 \\times \\frac{5}{3} = 1\\,200$.",
+      "E": "Calculou a nova produção (1 800) e somou à antiga como se fosse acréscimo: $720 + 1\\,800 = 2\\,520$."
+    },
+    "conceitos": [
+      "regra de três composta",
+      "proporcionalidade"
+    ]
+  }
+]

@@ -35,19 +35,32 @@ def test_matriz_tem_7_competencias_e_30_habilidades(matriz):
     assert all(h["descricao"] for h in matriz["habilidades"])
 
 
-def test_questoes_extraidas_tem_45_por_ano(todas):
-    for ano in (2022, 2023, 2024):
-        assert sum(1 for q in todas.values() if q["ano"] == ano) == 45
+def test_questoes_extraidas_tem_45_por_area_e_ano(todas):
+    grupos = [("matematica", ano) for ano in (2022, 2023, 2024, 2025)] + [("natureza", ano) for ano in (2022, 2023, 2024)]
+    for area, ano in grupos:
+        assert sum(1 for q in todas.values() if q["area"] == area and q["ano"] == ano) == 45, (area, ano)
 
 
 def test_gabarito_do_conjunto_confere_com_microdados(todas):
-    assert all(q["conferencia"]["gabarito_confere_com_microdados"] for q in todas.values())
+    """Só diverge onde o conjunto aberto traz a questão substituta do caderno adaptado (no máximo 3 por prova)."""
+    divergentes = [q for q in todas.values() if not q["conferencia"]["gabarito_confere_com_microdados"]]
+    assert len(divergentes) <= 3
+    assert all(q["conferencia"]["pendencias"] for q in divergentes)
 
 
-def test_mvp_tem_60_questoes_unicas(mvp):
+def test_matrizes_das_duas_areas():
+    for area, competencias in (("matematica", 7), ("natureza", 8)):
+        matriz = carregar(f"matriz_{area}.json")
+        assert len(matriz["competencias"]) == competencias, area
+        assert [h["codigo"] for h in matriz["habilidades"]] == [f"H{i}" for i in range(1, 31)], area
+        assert all(h["competencia"] for h in matriz["habilidades"]), area
+
+
+def test_banco_tem_pelo_menos_60_questoes_por_area_sem_repetir(mvp):
     ids = [q["id"] for q in mvp]
-    assert len(ids) == 60
-    assert len(set(ids)) == 60
+    assert len(ids) == len(set(ids))
+    for area in ("matematica", "natureza"):
+        assert sum(q["area"] == area for q in mvp) >= 60, area
 
 
 def test_mvp_gabarito_igual_ao_oficial(mvp, todas):
@@ -73,12 +86,15 @@ def test_mvp_sem_imagem_e_sem_anuladas(mvp, todas):
         assert not todas[questao["id"]]["anulada"]
 
 
-def test_mvp_habilidade_e_competencia_da_matriz(mvp, matriz, todas):
-    habilidades = {h["codigo"]: h for h in matriz["habilidades"]}
+def test_mvp_habilidade_e_competencia_da_matriz_da_area(mvp, todas):
+    matrizes = {area: {h["codigo"]: h for h in carregar(f"matriz_{area}.json")["habilidades"]}
+                for area in ("matematica", "natureza")}
     for questao in mvp:
         codigo = questao["habilidade"]["codigo"]
         assert codigo == todas[questao["id"]]["habilidade"], questao["id"]
-        assert questao["competencia"]["codigo"] == habilidades[codigo]["competencia"]
+        assert questao["area"] == todas[questao["id"]]["area"], questao["id"]
+        assert questao["habilidade"]["descricao"] == matrizes[questao["area"]][codigo]["descricao"], questao["id"]
+        assert questao["competencia"]["codigo"] == matrizes[questao["area"]][codigo]["competencia"], questao["id"]
 
 
 def test_mvp_fonte_registrada(mvp):

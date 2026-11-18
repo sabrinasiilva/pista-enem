@@ -1,0 +1,524 @@
+[
+  {
+    "id": "2022-121",
+    "enunciado": "Em um autódromo, os carros podem derrapar em uma curva e bater na parede de proteção. Para diminuir o impacto de uma batida, pode-se colocar na parede uma barreira de pneus, isso faz com que a colisão seja mais demorada e o carro retorne com velocidade reduzida. Outra opção é colocar uma barreira de blocos de um material que se deforma, tornando-a tão demorada quanto a colisão com os pneus, mas que não permite a volta do carro após a colisão.\n\nComparando as duas situações, como ficam a força média exercida sobre o carro e a energia mecânica dissipada?",
+    "alternativas": {
+      "A": "A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de blocos.",
+      "B": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de pneus.",
+      "C": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é a mesma nas duas situações.",
+      "D": "A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de pneus.",
+      "E": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de blocos."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Pelo teorema do impulso, $F_m \\cdot \\Delta t = \\Delta Q = m\\,\\Delta v$; como as duas colisões duram o mesmo tempo, a força média é maior onde a variação de velocidade é maior.\nNos blocos o carro para: $|\\Delta v| = v$. Nos pneus ele volta com velocidade $v'$: $|\\Delta v| = v + v'$, que é maior.\nLogo a força média é maior na barreira de pneus.\nNos blocos toda a energia cinética inicial $\\frac{m v^2}{2}$ é dissipada; nos pneus parte dela volta como energia cinética do carro ($\\frac{m v'^2}{2}$), então dissipa-se menos.\nForça maior nos pneus e energia dissipada maior nos blocos: alternativa A.",
+    "enganos": {
+      "B": "Inverteu as duas grandezas: achou que a barreira rígida que 'segura' o carro aplica mais força e que o pneu, por ser elástico, dissipa mais energia.",
+      "C": "Ignorou que o carro volta nos pneus: considerou a variação de velocidade só até parar e achou que a energia perdida é a mesma porque a velocidade inicial é a mesma.",
+      "D": "Acertou a força pelo impulso, mas achou que a colisão com mais 'quique' dissipa mais energia, sem perceber que a energia cinética de volta não foi dissipada.",
+      "E": "Acertou a energia, mas associou a deformação permanente dos blocos a um impacto mais forte, sem usar que o retorno nos pneus aumenta a variação da quantidade de movimento."
+    },
+    "conceitos": [
+      "impulso",
+      "quantidade de movimento",
+      "energia mecânica",
+      "colisões"
+    ]
+  },
+  {
+    "id": "2022-124",
+    "enunciado": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (Artocarpus heterophyllus), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se aclimatou muito bem em praticamente todo o território nacional.\n\nCasos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
+    "alternativas": {
+      "A": "ocupam áreas de vegetação nativa e substituem parcialmente a flora original.",
+      "B": "estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras.",
+      "C": "alteram os nichos e aumentam o número de possibilidades de relações entre os seres vivos daquele ambiente.",
+      "D": "apresentam alta taxa de reprodução e se mantêm com um número de indivíduos superior à capacidade suporte do ambiente.",
+      "E": "diminuem a relação de competição entre os polinizadores e facilitam a ação de dispersores de sementes de espécies nativas."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Nome científico em itálico na prova, transcrito sem formatação.",
+    "gabarito_calculado": "A",
+    "resolucao": "O texto diz que a jaqueira é exótica e se aclimatou muito bem em quase todo o território.\nEspécie exótica bem adaptada e sem inimigos naturais torna-se invasora: compete com as plantas nativas por luz, espaço e nutrientes.\nAo ocupar áreas de vegetação nativa, ela substitui parte da flora original, reduzindo a diversidade de espécies.\nAlternativa A.",
+    "enganos": {
+      "B": "Focou nos frutos como recurso para animais e supôs exclusão competitiva entre animais nativos, quando o impacto principal é sobre a flora nativa ocupada pela árvore.",
+      "C": "Contradição com o enunciado: aumentar as possibilidades de relações elevaria a biodiversidade, não a reduziria.",
+      "D": "Confundiu sucesso da invasora com superar a capacidade de suporte; uma população não se mantém de forma estável acima dela.",
+      "E": "Descreveu efeitos positivos (menos competição, mais dispersão de nativas), que não explicam redução de biodiversidade."
+    },
+    "conceitos": [
+      "espécies exóticas invasoras",
+      "biodiversidade",
+      "competição interespecífica"
+    ]
+  },
+  {
+    "id": "2022-125",
+    "enunciado": "Em um dia de calor intenso, dois colegas estão a brincar com a água da mangueira. Um deles quer saber até que altura o jato de água alcança, a partir da saída de água, quando a mangueira está posicionada totalmente na direção vertical. O outro colega propõe então o seguinte experimento: eles posicionarem a saída de água da mangueira na direção horizontal, a 1 m de altura em relação ao chão, e então medirem a distância horizontal entre a mangueira e o local onde a água atinge o chão. A medida dessa distância foi de 3 m, e a partir disso eles calcularam o alcance vertical do jato de água. Considere a aceleração da gravidade de $10\\ \\mathrm{m\\,s^{-2}}$.\n\nO resultado que eles obtiveram foi de",
+    "alternativas": {
+      "A": "1,50 m.",
+      "B": "2,25 m.",
+      "C": "4,00 m.",
+      "D": "4,50 m.",
+      "E": "5,00 m."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Lançamento horizontal de $h = 1$ m: $h = \\frac{g t^2}{2} \\Rightarrow t^2 = \\frac{2 \\cdot 1}{10} = 0{,}2\\ \\mathrm{s^2}$.\nVelocidade de saída: $v_0 = \\frac{x}{t} \\Rightarrow v_0^2 = \\frac{x^2}{t^2} = \\frac{9}{0{,}2} = 45\\ \\mathrm{m^2/s^2}$.\nCom a mangueira na vertical, a água sobe até $H = \\frac{v_0^2}{2g} = \\frac{45}{20} = 2{,}25$ m.\n(Atalho: $H = \\frac{x^2}{4h} = \\frac{9}{4}$.)\nAlternativa B.",
+    "enganos": {
+      "A": "Fez uma proporção direta e ingênua, dividindo o alcance horizontal por 2 (3/2 = 1,5), sem usar a cinemática do lançamento.",
+      "C": "Somou o alcance horizontal à altura da mangueira (3 + 1 = 4 m), sem calcular a velocidade de saída.",
+      "D": "Calculou $v_0^2 = 45$ corretamente, mas esqueceu o fator 2 de Torricelli e fez $H = \\frac{v_0^2}{g} = 4{,}5$ m.",
+      "E": "Não há caminho óbvio; possivelmente errou o tempo de queda e a velocidade em cadeia, ou chutou o valor mais alto."
+    },
+    "conceitos": [
+      "lançamento horizontal",
+      "lançamento vertical",
+      "equação de torricelli"
+    ]
+  },
+  {
+    "id": "2022-126",
+    "enunciado": "O etanol é um combustível produzido a partir da fermentação da sacarose presente no caldo de cana-de-açúcar. Um dos fatores que afeta a produção desse álcool é o grau de deterioração da sacarose, que se inicia após o corte, por causa da ação de microrganismos. Foram analisadas cinco amostras de diferentes tipos de cana-de-açúcar e cada uma recebeu um código de identificação. No quadro são apresentados os dados de concentração de sacarose e de microrganismos presentes nessas amostras.\n\n| Amostra de cana-de-açúcar | RB72 | RB84 | RB92 | SP79 | SP80 |\n|---|---|---|---|---|---|\n| Concentração inicial de sacarose ($\\mathrm{g\\,L^{-1}}$) | 13,0 | 18,0 | 16,0 | 14,0 | 17,0 |\n| Concentração de microrganismos ($\\mathrm{mg\\,L^{-1}}$) | 0,7 | 0,8 | 0,6 | 0,5 | 0,9 |\n\nPretende-se escolher o tipo de cana-de-açúcar que conterá o maior teor de sacarose 10 horas após o corte e que, consequentemente, produzirá a maior quantidade de etanol por fermentação. Considere que existe uma redução de aproximadamente 50% da concentração de sacarose nesse tempo, para cada 1,0 mg $\\mathrm{L^{-1}}$ de microrganismos presentes na cana-de-açúcar.\n\nDisponível em: www.inovacao.unicamp.br. Acesso em: 11 ago. 2012 (adaptado).\n\nQual tipo de cana-de-açúcar deve ser escolhido?",
+    "alternativas": {
+      "A": "RB72",
+      "B": "RB84",
+      "C": "RB92",
+      "D": "SP79",
+      "E": "SP80"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No quadro original, 'Amostra de cana-de-açúcar' é um cabeçalho mesclado sobre os cinco códigos; foi colocado na primeira célula do cabeçalho.",
+    "gabarito_calculado": "C",
+    "resolucao": "A redução é proporcional: cada 1,0 mg/L de microrganismos reduz 50%, então a fração perdida é $0{,}5 \\times$ (concentração de microrganismos).\nRB72: perde 35% $\\rightarrow 13{,}0 \\times 0{,}65 = 8{,}45$; RB84: perde 40% $\\rightarrow 18{,}0 \\times 0{,}60 = 10{,}8$.\nRB92: perde 30% $\\rightarrow 16{,}0 \\times 0{,}70 = 11{,}2$; SP79: perde 25% $\\rightarrow 14{,}0 \\times 0{,}75 = 10{,}5$.\nSP80: perde 45% $\\rightarrow 17{,}0 \\times 0{,}55 = 9{,}35$ (valores em $\\mathrm{g\\,L^{-1}}$).\nO maior teor remanescente é o da RB92: alternativa C.",
+    "enganos": {
+      "A": "Inverteu o critério e escolheu a amostra com o menor teor de sacarose restante (8,45 g/L).",
+      "B": "Olhou só a concentração inicial de sacarose (18,0, a maior), ignorando a perda causada pelos microrganismos.",
+      "D": "Olhou só a menor concentração de microrganismos (0,5), ignorando que a sacarose inicial da SP79 é baixa (ou calculou a menor perda absoluta, 3,5 g/L).",
+      "E": "Considerou a perda de 50% igual para todas, independentemente da concentração de microrganismos, e ficou com uma das maiores sacaroses iniciais; ou leu a tabela trocando os dados."
+    },
+    "conceitos": [
+      "proporcionalidade",
+      "interpretação de tabela",
+      "fermentação alcoólica"
+    ]
+  },
+  {
+    "id": "2022-127",
+    "enunciado": "Entre as diversas técnicas para diagnóstico da covid-19, destaca-se o teste genético. Considerando as diferentes variantes e cargas virais, um exemplo é a PCR, reação efetuada por uma enzima do tipo polimerase. Essa técnica permite identificar, com confiabilidade, o material genético do SARS-CoV-2, um vírus de RNA. Para comprovação da infecção por esse coronavírus, são coletadas amostras de secreções do indivíduo. Uma etapa que antecede a reação de PCR precisa ser realizada para permitir a amplificação do material genético do vírus.\n\nEssa etapa deve ser realizada para",
+    "alternativas": {
+      "A": "concentrar o RNA viral para otimizar a técnica.",
+      "B": "identificar nas amostras anticorpos anti-SARS-CoV-2.",
+      "C": "proliferar o vírus em culturas, aumentando a carga viral.",
+      "D": "purificar ácidos nucleicos virais, facilitando a ação da enzima.",
+      "E": "obter moléculas de cDNA viral por meio da transcrição reversa."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "A PCR usa uma DNA polimerase, que só copia moldes de DNA.\nO SARS-CoV-2 é um vírus de RNA; seu genoma não pode ser amplificado diretamente pela PCR.\nAntes é preciso converter o RNA em DNA complementar (cDNA) com a transcriptase reversa (RT-PCR).\nAlternativa E.",
+    "enganos": {
+      "A": "Achou que o problema é a pouca quantidade de RNA, sem perceber que a polimerase da PCR não usa RNA como molde.",
+      "B": "Confundiu teste genético com teste sorológico, que detecta anticorpos.",
+      "C": "Achou que é preciso aumentar a carga viral em cultura, mas a própria PCR é que amplifica o material genético.",
+      "D": "Escolheu uma etapa de preparo real (extração), mas que não resolve o ponto central: o RNA precisa virar DNA para ser amplificado."
+    },
+    "conceitos": [
+      "pcr",
+      "transcrição reversa",
+      "vírus de rna"
+    ]
+  },
+  {
+    "id": "2022-129",
+    "enunciado": "O urânio é empregado como fonte de energia em reatores nucleares. Para tanto, o seu mineral deve ser refinado, convertido a hexafluoreto de urânio e posteriormente enriquecido, para aumentar de 0,7% a 3% a abundância de um isótopo específico — o urânio-235. Uma das formas de enriquecimento utiliza a pequena diferença de massa entre os hexafluoretos de urânio-235 e de urânio-238 para separá-los por efusão, precedida pela vaporização. Esses vapores devem efundir repetidamente milhares de vezes através de barreiras porosas formadas por telas com grande número de pequenos orifícios. No entanto, devido à complexidade e à grande quantidade de energia envolvida, cientistas e engenheiros continuam a pesquisar procedimentos alternativos de enriquecimento.\n\nATKINS, P.; JONES, L. Princípios de química: questionando a vida moderna e o meio ambiente. Porto Alegre: Bookman, 2006 (adaptado).\n\nConsiderando a diferença de massa mencionada entre os dois isótopos, que tipo de procedimento alternativo ao da efusão pode ser empregado para tal finalidade?",
+    "alternativas": {
+      "A": "Peneiração.",
+      "B": "Centrifugação.",
+      "C": "Extração por solvente.",
+      "D": "Destilação fracionada.",
+      "E": "Separação magnética."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Os hexafluoretos de U-235 e U-238 são quimicamente idênticos e diferem apenas na massa.\nUm método que separa por diferença de massa (densidade) é a centrifugação: a rotação rápida empurra as moléculas mais pesadas para a periferia.\nÉ o método das ultracentrífugas usado no enriquecimento de urânio.\nAlternativa B.",
+    "enganos": {
+      "A": "Associou as 'telas com orifícios' da efusão a uma peneira, mas peneiração separa sólidos por tamanho de partícula, não moléculas de massas quase iguais.",
+      "C": "Extração por solvente depende de diferença de solubilidade, e isótopos têm comportamento químico praticamente idêntico.",
+      "D": "Pensou em separar por ponto de ebulição, mas os dois hexafluoretos têm volatilidades praticamente iguais, e o critério pedido é a massa.",
+      "E": "Associou isótopos de um metal a magnetismo, mas a diferença entre eles é de nêutrons/massa, não de propriedade magnética útil."
+    },
+    "conceitos": [
+      "isótopos",
+      "separação de misturas",
+      "centrifugação"
+    ]
+  },
+  {
+    "id": "2022-130",
+    "enunciado": "A Agência Nacional de Vigilância Sanitária (Anvisa) aprovou um produto de terapia gênica no país, indicado para o tratamento da distrofia hereditária da retina. O procedimento é recomendado para crianças acima de 12 meses e adultos com perda de visão causada pela mutação do gene humano RPE65. O produto, elaborado por engenharia genética, é composto por um vírus, no qual foi inserida uma cópia do gene normal humano RPE65 para corrigir o funcionamento das células da retina.\n\nANVISA. Disponível em: www.gov.br/anvisa. Acesso em: 4 dez. 2021 (adaptado).\n\nO sucesso dessa terapia advém do fato de que o produto favorecerá a",
+    "alternativas": {
+      "A": "correção do código genético para a tradução da proteína.",
+      "B": "alteração do RNA ribossômico ligado à síntese da proteína.",
+      "C": "produção de mutações benéficas para a correção do problema.",
+      "D": "liberação imediata da proteína normal na região ocular humana.",
+      "E": "expressão do gene responsável pela produção da enzima normal."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "O vírus funciona como vetor que leva uma cópia normal do gene RPE65 às células da retina.\nNas células, esse gene é transcrito e traduzido, produzindo a proteína (enzima) funcional que faltava.\nOu seja, a terapia funciona pela expressão do gene normal introduzido.\nAlternativa E.",
+    "enganos": {
+      "A": "Confundiu gene (sequência do DNA) com código genético, que é universal e não é corrigido; a terapia adiciona um gene, não muda o código.",
+      "B": "Achou que a terapia age no RNA ribossômico, mas o gene inserido codifica a proteína via RNA mensageiro.",
+      "C": "Acreditou que o vírus induz mutações benéficas, quando na verdade ele entrega uma cópia já normal do gene.",
+      "D": "Pensou que o vírus carrega a proteína pronta; ele carrega o gene, e a proteína é produzida pela célula, não liberada de imediato."
+    },
+    "conceitos": [
+      "terapia gênica",
+      "expressão gênica",
+      "vetores virais"
+    ]
+  },
+  {
+    "id": "2022-133",
+    "enunciado": "De acordo com a Organização Mundial da Saúde, a filariose e a leishmaniose são consideradas doenças tropicais infecciosas e constituem uma preocupação para a saúde pública por ser alto o índice de mortalidade a elas associado.\n\nUma medida profilática comum a essas duas doenças é o(a)",
+    "alternativas": {
+      "A": "incineração do lixo orgânico.",
+      "B": "construção de rede de esgoto.",
+      "C": "uso de vermífugo pela população.",
+      "D": "controle das populações dos vetores.",
+      "E": "consumo de carnes vermelhas bem cozidas."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "A filariose (elefantíase) é transmitida pela picada de mosquitos (Culex).\nA leishmaniose é transmitida pela picada do mosquito-palha (flebotomíneo).\nComo ambas dependem de insetos vetores, a medida comum é controlar as populações desses vetores.\nAlternativa D.",
+    "enganos": {
+      "A": "Associou doença a lixo de forma genérica; incinerar lixo orgânico não atinge os criadouros nem a transmissão pela picada.",
+      "B": "Confundiu com doenças de veiculação hídrica ou fecal-oral (como esquistossomose e verminoses), que se previnem com saneamento.",
+      "C": "Lembrou que a filária é um verme e generalizou o vermífugo, mas a leishmaniose é causada por protozoário e o vermífugo não é profilaxia de transmissão.",
+      "E": "Confundiu com teníase ou cisticercose, transmitidas por carne mal cozida."
+    },
+    "conceitos": [
+      "doenças transmitidas por vetores",
+      "profilaxia",
+      "parasitoses"
+    ]
+  },
+  {
+    "id": "2022-134",
+    "enunciado": "Em 2017, foi inaugurado, no estado da Bahia, o Parque Solar Lapa, composto por duas usinas (Bom Jesus da Lapa e Lapa) e capaz de gerar cerca de 300 GWh de energia por ano. Considere que cada usina apresente potência igual a 75 MW, com o parque totalizando uma potência instalada de 150 MW. Considere ainda que a irradiância solar média é de 1 500 $\\frac{\\mathrm{W}}{\\mathrm{m^2}}$ e que a eficiência dos painéis é de 20%.\n\nParque Solar Lapa entra em operação. Disponível em: www.canalbioenergia.com.br. Acesso em: 9 jun. 2022 (adaptado).\n\nNessas condições, a área total dos painéis solares que compõem o Parque Solar Lapa é mais próxima de:",
+    "alternativas": {
+      "A": "1 000 000 $\\mathrm{m^2}$",
+      "B": "500 000 $\\mathrm{m^2}$",
+      "C": "250 000 $\\mathrm{m^2}$",
+      "D": "100 000 $\\mathrm{m^2}$",
+      "E": "20 000 $\\mathrm{m^2}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Potência útil = eficiência $\\times$ irradiância $\\times$ área: $P = \\eta \\cdot I \\cdot A$.\nCada $\\mathrm{m^2}$ fornece $0{,}20 \\times 1\\,500 = 300$ W de potência elétrica.\nPara o parque inteiro ($150\\ \\mathrm{MW} = 1{,}5 \\times 10^8$ W): $A = \\frac{1{,}5 \\times 10^8}{300} = 5 \\times 10^5\\ \\mathrm{m^2}$.\nA área é de cerca de 500 000 m²: alternativa B.",
+    "enganos": {
+      "A": "Somou as potências de forma errada, usando 300 MW (dobrou os 150 MW ou confundiu com os 300 GWh), o que dá o dobro da área.",
+      "C": "Usou a potência de apenas uma usina (75 MW) em vez da potência total do parque.",
+      "D": "Ignorou a eficiência e fez $A = \\frac{P}{I} = \\frac{1{,}5 \\times 10^8}{1\\,500}$.",
+      "E": "Aplicou a eficiência de forma invertida, multiplicando a potência por 0,2: $A = \\frac{0{,}2 \\times 1{,}5 \\times 10^8}{1\\,500}$."
+    },
+    "conceitos": [
+      "potência",
+      "rendimento",
+      "intensidade de radiação"
+    ]
+  },
+  {
+    "id": "2022-135",
+    "enunciado": "Os riscos apresentados pelos produtos dependem de suas propriedades e da reatividade quando em contato com outras substâncias. Para prevenir os riscos devido à natureza química dos produtos, devemos conhecer a lista de substâncias incompatíveis e de uso cotidiano em fábricas, hospitais e laboratórios, a fim de observar cuidados na estocagem, manipulação e descarte. O quadro elenca algumas dessas incompatibilidades, que podem levar à ocorrência de acidentes.\n\n| Substância | Incompatibilidade | Riscos associados |\n|---|---|---|\n| Ácidos minerais fortes concentrados | Bases fortes<br>Cianetos<br>Hipoclorito de sódio | Reação enérgica, explosão, produção de oxidante forte e produto tóxico |\n| Ácido nítrico concentrado | Matéria orgânica | Reação enérgica, explosão e produto tóxico |\n\nConsidere que houve o descarte indevido de dois conjuntos de substâncias:\n\n(1) ácido clorídrico concentrado com cianeto de potássio;\n\n(2) ácido nítrico concentrado com sacarose.\n\nDisponível em: www.fiocruz.br. Acesso em: 6 dez. 2017 (adaptado).\n\nO descarte dos conjuntos (1) e (2) resultará, respectivamente, em",
+    "alternativas": {
+      "A": "liberação de gás tóxico e reação oxidativa forte.",
+      "B": "reação oxidativa forte e liberação de gás tóxico.",
+      "C": "formação de sais tóxicos e reação oxidativa forte.",
+      "D": "liberação de gás tóxico e liberação de gás oxidante.",
+      "E": "formação de sais tóxicos e liberação de gás oxidante."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No quadro, os três itens de incompatibilidade dos ácidos minerais aparecem em linhas separadas na mesma célula (representados com <br>).",
+    "gabarito_calculado": "A",
+    "resolucao": "(1) Ácido forte desloca o ácido fraco HCN do cianeto: $\\mathrm{HCl + KCN \\rightarrow KCl + HCN}$.\nO $\\mathrm{HCN}$ (ácido cianídrico) é volátil e muito tóxico: há liberação de gás tóxico.\n(2) O $\\mathrm{HNO_3}$ concentrado é um oxidante forte e reage de forma enérgica com a matéria orgânica (sacarose), oxidando-a.\nPortanto: liberação de gás tóxico e reação oxidativa forte, nessa ordem.\nAlternativa A.",
+    "enganos": {
+      "B": "Acertou os dois fenômenos, mas inverteu a ordem pedida ('respectivamente').",
+      "C": "Viu que forma KCl e pensou só no sal como produto, ignorando o $\\mathrm{HCN}$ gasoso; além disso, KCl não é tóxico.",
+      "D": "Acertou o (1), mas no (2) focou num possível gás ($\\mathrm{NO_2}$) em vez da característica central do ácido nítrico concentrado: oxidar fortemente a matéria orgânica.",
+      "E": "Errou o (1) ao pensar só na formação de sal e, no (2), descreveu um gás oxidante em vez da reação oxidativa com a sacarose."
+    },
+    "conceitos": [
+      "reações de deslocamento de ácidos",
+      "ácido nítrico como oxidante",
+      "segurança química"
+    ]
+  },
+  {
+    "id": "2023-91",
+    "enunciado": "É comum em viagens de avião sermos solicitados a desligar aparelhos cujo funcionamento envolva a emissão ou a recepção de ondas eletromagnéticas, como celulares. A justificativa dada para esse procedimento é, entre outras coisas, a necessidade de eliminar fontes de sinais eletromagnéticos que possam interferir nas comunicações, via rádio, dos pilotos com a torre de controle.\n\nEssa interferência poderá ocorrer somente se as ondas emitidas pelo celular e as recebidas pelo rádio do avião",
+    "alternativas": {
+      "A": "forem ambas audíveis.",
+      "B": "tiverem a mesma potência.",
+      "C": "tiverem a mesma frequência.",
+      "D": "tiverem a mesma intensidade.",
+      "E": "propagarem-se com velocidades diferentes."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Um receptor de rádio é sintonizado em uma faixa de frequência.\nUm sinal só atrapalha a recepção se estiver na mesma frequência (ou faixa) que o receptor capta; aí as ondas se superpõem e o sinal fica corrompido.\nPotência e intensidade só alteram quanto o sinal interfere, não se ele interfere.\nAlternativa C.",
+    "enganos": {
+      "A": "Confundiu ondas eletromagnéticas de rádio com ondas sonoras; elas não são audíveis.",
+      "B": "Achou que a interferência depende de as ondas terem a mesma 'força', mas o que define a captação pelo receptor é a frequência.",
+      "D": "Mesma confusão que potência: intensidade influencia o quanto interfere, não é a condição para haver interferência no receptor.",
+      "E": "No ar, todas as ondas eletromagnéticas se propagam praticamente com a mesma velocidade (a da luz); não há velocidades diferentes."
+    },
+    "conceitos": [
+      "ondas eletromagnéticas",
+      "interferência",
+      "frequência"
+    ]
+  },
+  {
+    "id": "2023-93",
+    "enunciado": "Uma cafeteria adotou copos fabricados a partir de uma composição de 50% de plástico reciclado não biodegradável e 50% de casca de café. O copo é reutilizável e retornável, pois o material, semelhante a uma cerâmica, suporta a lavagem. Embora ele seja comercializado por um preço considerado alto quando comparado ao de um copo de plástico descartável, essa cafeteria possibilita aos clientes retornarem o copo sujo e levarem o café quente servido em outro copo já limpo e higienizado. O material desse copo oferece também o conforto de não esquentar na parte externa.\n\nCafeteria adota copo reutilizável feito com casca de café. Disponível em: www.gazetadopovo.com.br. Acesso em: 5 dez. 2019 (adaptado).\n\nQuais duas vantagens esse copo apresenta em comparação ao copo descartável?",
+    "alternativas": {
+      "A": "Ter a durabilidade de uma cerâmica e ser totalmente biodegradável.",
+      "B": "Ser tão durável quanto uma cerâmica e ter alta condutividade térmica.",
+      "C": "Ser um mau condutor térmico e aumentar o resíduo biodegradável na natureza.",
+      "D": "Ter baixa condutividade térmica e reduzir o resíduo não biodegradável na natureza.",
+      "E": "Ter alta condutividade térmica e possibilitar a degradação do material no meio ambiente."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "O copo 'não esquenta na parte externa' com café quente: o material é mau condutor térmico (baixa condutividade).\nEle é reutilizável e retornável, então substitui muitos copos descartáveis de plástico.\nComo 50% é plástico não biodegradável, ele não é totalmente biodegradável; a vantagem ambiental é reduzir o lixo não biodegradável gerado.\nAlternativa D.",
+    "enganos": {
+      "A": "Ignorou que metade do copo é plástico não biodegradável; ele não é totalmente biodegradável.",
+      "B": "Confundiu 'não esquentar por fora' com alta condutividade térmica, quando é justamente o contrário.",
+      "C": "Acertou o isolamento térmico, mas achou que a casca de café aumenta o resíduo na natureza, quando o ganho é reduzir o lixo descartável.",
+      "E": "Errou as duas: o material é isolante (baixa condutividade) e, por conter plástico não biodegradável, não se degrada facilmente."
+    },
+    "conceitos": [
+      "condutividade térmica",
+      "resíduos sólidos",
+      "biodegradabilidade"
+    ]
+  },
+  {
+    "id": "2023-94",
+    "enunciado": "O consumo exagerado de refrigerantes é preocupante, pois contribui para o aumento de casos de obesidade e diabetes. Considere dois refrigerantes enlatados, um comum e um diet, e que ambos possuam a mesma quantidade de aditivos, exceto pela presença de açúcar. O refrigerante comum contém basicamente água carbonatada e grande quantidade de açúcar; já o refrigerante diet tem água carbonatada e adoçantes, cujas massas são muito pequenas.\n\nCAVAGIS, A. D. M.; PEREIRA, E. A.; OLIVEIRA, L. C. Um método simples para avaliar o teor de sacarose e $\\mathrm{CO_2}$ em refrigerantes. Química Nova na Escola, n. 3, ago. 2014 (adaptado).\n\nEntre as duas versões apresentadas, o refrigerante comum possui",
+    "alternativas": {
+      "A": "maior densidade.",
+      "B": "menor viscosidade.",
+      "C": "maior volume de gás dissolvido.",
+      "D": "menor massa de solutos dissolvidos.",
+      "E": "maior temperatura de congelamento."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O título do artigo citado aparece apenas na referência, não como título da questão.",
+    "gabarito_calculado": "A",
+    "resolucao": "O refrigerante comum tem grande massa de açúcar dissolvida, enquanto o diet tem adoçantes de massa muito pequena.\nPara volumes semelhantes, mais massa de soluto significa maior massa total por volume: maior densidade.\n(É o motivo de a lata de refrigerante comum afundar na água e a diet flutuar.)\nAlternativa A.",
+    "enganos": {
+      "B": "Inverteu o efeito do açúcar: soluções concentradas de açúcar são mais viscosas, não menos.",
+      "C": "Achou que o refrigerante comum tem mais gás, mas ambos têm água carbonatada; o açúcar não aumenta a solubilidade do gás.",
+      "D": "Inverteu os dados do texto: é o comum que tem grande quantidade de açúcar, logo maior massa de solutos.",
+      "E": "Confundiu o efeito coligativo: mais soluto abaixa a temperatura de congelamento (crioscopia), não a eleva."
+    },
+    "conceitos": [
+      "densidade",
+      "soluções",
+      "propriedades coligativas"
+    ]
+  },
+  {
+    "id": "2023-96",
+    "enunciado": "Avaliação de substâncias genotóxicas\n\nO ensaio de micronúcleos é um teste de avaliação de genotoxicidade que associa a presença de micronúcleos (pequenos núcleos que aparecem próximo aos núcleos das células) com lesões genéticas. Os micronúcleos são fragmentos de DNA encapsulados, provenientes do fuso mitótico durante a divisão celular.\n\nDIAS, V. M. Micronúcleos em células tumorais: biologia e implicações para a tumorigênese. Dissertação de Mestrado. USP, 2006 (adaptado).\n\nOs micronúcleos se originam dos(as)",
+    "alternativas": {
+      "A": "nucléolos.",
+      "B": "lisossomos.",
+      "C": "ribossomos.",
+      "D": "mitocôndrias.",
+      "E": "cromossomos."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "'Avaliação de substâncias genotóxicas' é o título em negrito da questão; 'Micronúcleos em células tumorais...' é o título da obra na referência.",
+    "gabarito_calculado": "E",
+    "resolucao": "O texto diz que os micronúcleos são fragmentos de DNA vindos do fuso mitótico durante a divisão celular.\nNa divisão, o DNA nuclear está condensado em cromossomos, que se prendem ao fuso.\nCromossomos inteiros ou fragmentos que se atrasam ou se quebram ficam fora dos núcleos-filhos e formam micronúcleos.\nAlternativa E.",
+    "enganos": {
+      "A": "Associou a palavra 'núcleo' a nucléolo, que é região de síntese de RNA ribossômico e não está ligado ao fuso.",
+      "B": "Lisossomos são organelas de digestão e não contêm DNA; não há relação com o fuso mitótico.",
+      "C": "Ribossomos são formados por RNA e proteínas, não por DNA, e não se prendem ao fuso.",
+      "D": "Lembrou que mitocôndrias têm DNA próprio, mas esse DNA não é distribuído pelo fuso mitótico."
+    },
+    "conceitos": [
+      "divisão celular",
+      "cromossomos",
+      "mutações cromossômicas"
+    ]
+  },
+  {
+    "id": "2023-99",
+    "enunciado": "Pais com síndrome de Down\n\nA síndrome de Down é uma alteração genética associada à trissomia do cromossomo 21, ou seja, o indivíduo possui três cromossomos 21 e não um par, como é normal. Isso ocorre pela união de um gameta contendo um cromossomo 21 com um gameta possuidor de dois cromossomos 21. Embora, normalmente, as mulheres com a síndrome sejam estéreis, em 2008, no interior de São Paulo, uma delas deu à luz uma menina sem a síndrome de Down.\n\nMORENO, T. Três anos após dar à luz, mãe portadora de síndrome de Down revela detalhes de seu dia a dia. Disponível em: www.band.uol.com.br. Acesso em: 31 out. 2013 (adaptado).\n\nSabendo disso, um jovem casal, ambos com essa síndrome, procura um médico especialista para aconselhamento genético porque querem ter um bebê.\n\nO médico informa ao casal que, com relação ao cromossomo 21, os zigotos formados serão",
+    "alternativas": {
+      "A": "todos normais.",
+      "B": "todos tetrassômicos.",
+      "C": "apenas normais ou tetrassômicos.",
+      "D": "apenas trissômicos ou tetrassômicos.",
+      "E": "normais, trissômicos ou tetrassômicos."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "'Pais com síndrome de Down' é o título em negrito da questão; o subtítulo do dataset é, na prova, o título da reportagem na referência.",
+    "gabarito_calculado": "E",
+    "resolucao": "Cada pessoa trissômica tem três cromossomos 21; na meiose, os gametas recebem um ou dois cromossomos 21.\nCombinações na fecundação: 1 + 1 = 2 (normal); 1 + 2 = 3 (trissômico); 2 + 2 = 4 (tetrassômico).\nO caso da reportagem (mãe com Down e filha sem a síndrome) confirma que gametas com um único 21 são possíveis.\nLogo os zigotos podem ser normais, trissômicos ou tetrassômicos: alternativa E.",
+    "enganos": {
+      "A": "Generalizou o caso da reportagem (filha sem síndrome) como se fosse o único resultado possível.",
+      "B": "Achou que cada gameta de um trissômico leva sempre dois cromossomos 21, esquecendo os gametas com apenas um.",
+      "C": "Considerou que os dois pais sempre produzem o mesmo tipo de gameta, esquecendo a combinação 1 + 2 que gera trissomia.",
+      "D": "Achou impossível um filho normal de pais com Down, apesar de o texto relatar exatamente esse caso."
+    },
+    "conceitos": [
+      "meiose",
+      "aneuploidias",
+      "síndrome de down"
+    ]
+  },
+  {
+    "id": "2023-103",
+    "enunciado": "Uma concessionária é responsável por um trecho de 480 quilômetros de uma rodovia. Nesse trecho, foram construídas 10 praças de pedágio, onde funcionários recebem os pagamentos nas cabines de cobrança. Também existe o serviço automático, em que os veículos providos de um dispositivo passam por uma cancela, que se abre automaticamente, evitando filas e diminuindo o tempo de viagem. Segundo a concessionária, o tempo médio para efetuar a passagem em uma cabine é de 3 minutos, e as velocidades máximas permitidas na rodovia são 100 km/h, para veículos leves, e 80 km/h, para veículos de grande porte.\n\nConsidere um carro e um caminhão viajando, ambos com velocidades constantes e iguais às máximas permitidas, e que somente o caminhão tenha o serviço automático de cobrança.\n\nComparado ao caminhão, quantos minutos a menos o carro leva para percorrer toda a rodovia?",
+    "alternativas": {
+      "A": "30",
+      "B": "42",
+      "C": "72",
+      "D": "288",
+      "E": "360"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Carro em movimento: $t = \\frac{480}{100} = 4{,}8$ h $= 288$ min.\nCarro nos pedágios (sem serviço automático): $10 \\times 3 = 30$ min; total $= 318$ min.\nCaminhão (com serviço automático, sem paradas): $t = \\frac{480}{80} = 6$ h $= 360$ min.\nDiferença: $360 - 318 = 42$ min.\nAlternativa B.",
+    "enganos": {
+      "A": "Considerou só o tempo gasto nas cabines (10 × 3 = 30 min), ignorando a diferença de velocidade.",
+      "C": "Calculou só a diferença dos tempos em movimento (360 − 288 = 72 min), esquecendo as paradas do carro nos pedágios.",
+      "D": "Respondeu o tempo do carro em movimento (288 min), não a diferença pedida.",
+      "E": "Respondeu o tempo total do caminhão (360 min), não a diferença pedida."
+    },
+    "conceitos": [
+      "velocidade média",
+      "movimento uniforme",
+      "conversão de unidades"
+    ]
+  },
+  {
+    "id": "2023-105",
+    "enunciado": "Em uma indústria alimentícia, para produção de doce de leite, utiliza-se um tacho de parede oca com uma entrada para vapor de água a 120 °C e uma saída para água líquida em equilíbrio com o vapor a 100 °C. Ao passar pela parte oca do tacho, o vapor de água transforma-se em líquido, liberando energia. A parede transfere essa energia para o interior do tacho, resultando na evaporação de água e consequente concentração do produto.\n\nNo processo de concentração do produto, é utilizada energia proveniente",
+    "alternativas": {
+      "A": "somente do calor latente de vaporização.",
+      "B": "somente do calor latente de condensação.",
+      "C": "do calor sensível e do calor latente de vaporização.",
+      "D": "do calor sensível e do calor latente de condensação.",
+      "E": "do calor latente de condensação e do calor latente de vaporização."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "O vapor entra a 120 °C e sai como líquido a 100 °C: ele primeiro esfria de 120 °C para 100 °C (perde calor sensível) e depois condensa (perde calor latente de condensação).\nEssas duas parcelas de energia liberada passam pela parede e vão para o produto.\nA vaporização da água do doce é o efeito (consome essa energia), não a fonte dela.\nAlternativa D.",
+    "enganos": {
+      "A": "Confundiu a fonte com o efeito: a vaporização da água do produto consome energia, não a fornece; e ignorou o resfriamento do vapor.",
+      "B": "Percebeu a condensação, mas esqueceu que o vapor também esfria de 120 °C para 100 °C, liberando calor sensível.",
+      "C": "Viu o calor sensível, mas tomou a vaporização (que ocorre no produto) como fonte, em vez da condensação no tacho.",
+      "E": "Somou os dois processos de mudança de fase citados no texto, sem distinguir que só a condensação libera energia e ignorando o calor sensível."
+    },
+    "conceitos": [
+      "calor sensível",
+      "calor latente",
+      "mudanças de estado físico"
+    ]
+  },
+  {
+    "id": "2023-106",
+    "enunciado": "A gasolina é uma mistura de hidrocarbonetos de cadeias saturadas contendo de 8 a 12 átomos de carbono. Além disso, a gasolina de alto desempenho deve conter elevados teores de hidrocarbonetos de cadeias ramificadas, de forma a resistir à compressão e entrar em ignição apenas quando a vela aciona uma centelha elétrica no motor. No quadro, estão apresentados compostos que podem ser utilizados como combustíveis.\n\n| Composto | Nomenclatura |\n|---|---|\n| I | *n*-decano |\n| II | *n*-heptano |\n| III | 2,2,4-trimetilpentano |\n| IV | 3-etil-4-metilex-1-eno |\n| V | 3-etil-2-metilpentan-1-ol |\n\nEntre esses compostos, aquele que conferirá maior desempenho como combustível é o",
+    "alternativas": {
+      "A": "I.",
+      "B": "II.",
+      "C": "III.",
+      "D": "IV.",
+      "E": "V."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "As alternativas na prova são algarismos romanos (I. a V.); o dataset as trocou por 1. a 5.",
+    "gabarito_calculado": "C",
+    "resolucao": "O texto exige hidrocarboneto saturado, com 8 a 12 carbonos e cadeia ramificada.\nI (n-decano) e II (n-heptano) têm cadeia normal; o II ainda tem só 7 carbonos.\nIV é um alceno (insaturado) e V é um álcool (não é hidrocarboneto).\nIII, 2,2,4-trimetilpentano (isoctano), é um alcano com 8 carbonos e muito ramificado: resiste à compressão.\nAlternativa C.",
+    "enganos": {
+      "A": "Atendeu apenas à faixa de 8 a 12 carbonos e à cadeia saturada, esquecendo a exigência de ramificação.",
+      "B": "Escolheu o n-heptano talvez lembrando dele na escala de octanagem, mas ele é o padrão de baixo desempenho (cadeia normal, 7 carbonos).",
+      "D": "Viu as ramificações (etil e metil), mas ignorou a dupla ligação (-eno), que torna a cadeia insaturada.",
+      "E": "Viu a cadeia ramificada, mas não percebeu que o sufixo -ol indica álcool, e não hidrocarboneto."
+    },
+    "conceitos": [
+      "hidrocarbonetos",
+      "nomenclatura orgânica",
+      "cadeias ramificadas",
+      "octanagem"
+    ]
+  },
+  {
+    "id": "2023-107",
+    "enunciado": "De acordo com a Constituição Federal, é competência dos municípios o gerenciamento dos serviços de limpeza e coleta dos resíduos urbanos (lixo). No entanto, há relatos de que parte desse lixo acaba sendo incinerado, liberando substâncias tóxicas para o ambiente e causando acidentes por explosões, principalmente quando ocorre a incineração de frascos de aerossóis (por exemplo: desodorantes, inseticidas e repelentes). A temperatura elevada provoca a vaporização de todo o conteúdo dentro desse tipo de frasco, aumentando a pressão em seu interior até culminar na explosão da embalagem.\n\nZVEIBIL, V. Z. et al. Cartilha de limpeza urbana. Disponível em: www.ibam.org.br. Acesso em: 6 jul. 2015 (adaptado).\n\nSuponha um frasco metálico de um aerossol de capacidade igual a 100 mL, contendo 0,1 mol de produtos gasosos à temperatura de 650 °C, no momento da explosão.\n\nConsidere: $R = 0{,}082\\ \\frac{\\mathrm{L \\cdot atm}}{\\mathrm{mol \\cdot K}}$\n\nA pressão, em atm, dentro do frasco, no momento da explosão, é mais próxima de",
+    "alternativas": {
+      "A": "756.",
+      "B": "533.",
+      "C": "76.",
+      "D": "53.",
+      "E": "13."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O título 'Cartilha de limpeza urbana' que o dataset põe no início é, na prova, o título da obra na referência.",
+    "gabarito_calculado": "C",
+    "resolucao": "Equação de Clapeyron: $PV = nRT \\Rightarrow P = \\frac{nRT}{V}$.\nConversões: $V = 100$ mL $= 0{,}1$ L; $T = 650 + 273 = 923$ K.\n$P = \\frac{0{,}1 \\times 0{,}082 \\times 923}{0{,}1} = 0{,}082 \\times 923 \\approx 75{,}7$ atm.\nO valor mais próximo é 76: alternativa C.",
+    "enganos": {
+      "A": "Usou a temperatura em kelvin, mas converteu 100 mL errado para 0,01 L, obtendo um valor 10 vezes maior (≈ 757).",
+      "B": "Errou as duas conversões: usou 650 em vez de 923 K e 0,01 L em vez de 0,1 L (0,1 × 0,082 × 650 / 0,01 ≈ 533).",
+      "D": "Converteu o volume corretamente, mas usou a temperatura em Celsius (650) em vez de kelvin: 0,082 × 650 ≈ 53.",
+      "E": "Não há caminho natural; possivelmente manipulou a equação de forma invertida (algo como 1/(0,082 × 923) × 1 000 ≈ 13)."
+    },
+    "conceitos": [
+      "equação de clapeyron",
+      "gases ideais",
+      "escala kelvin"
+    ]
+  },
+  {
+    "id": "2023-110",
+    "enunciado": "A biorremediação designa tratamentos que usam organismos para reduzir a quantidade de substâncias tóxicas no ambiente ou degradá-las em substâncias não tóxicas ou de menor toxicidade. Uma planta aquática, o aguapé, tem sido utilizada para a biorremediação de ambientes contaminados por metais tóxicos. Sabe-se que esses poluentes serão captados para dentro do corpo do vegetal.\n\nDentro do corpo do vegetal, esses contaminantes serão",
+    "alternativas": {
+      "A": "digeridos por enzimas.",
+      "B": "acumulados nos tecidos.",
+      "C": "eliminados pelos estômatos.",
+      "D": "metabolizados por glândulas.",
+      "E": "utilizados como fonte energética."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Metais tóxicos são elementos químicos: não podem ser degradados ou digeridos em substâncias mais simples.\nA planta os absorve e os armazena em seus tecidos (fitorremediação por acumulação), retirando-os da água.\nDepois, a planta pode ser removida do ambiente, levando os metais junto.\nAlternativa B.",
+    "enganos": {
+      "A": "Generalizou a definição de biorremediação ('degradar') para metais, que são elementos e não podem ser digeridos por enzimas.",
+      "C": "Confundiu com a eliminação de gases e vapor de água pelos estômatos; metais não são liberados dessa forma.",
+      "D": "Supôs um metabolismo que transforma o metal, mas metais não são decompostos e 'glândulas' não descrevem esse processo na planta.",
+      "E": "Achou que o contaminante vira alimento, mas metais tóxicos não fornecem energia ao vegetal."
+    },
+    "conceitos": [
+      "biorremediação",
+      "bioacumulação",
+      "metais pesados"
+    ]
+  }
+]

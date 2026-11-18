@@ -1,0 +1,523 @@
+[
+  {
+    "id": "2023-112",
+    "enunciado": "Os raios cósmicos são fontes de radiação ionizante potencialmente perigosas para o organismo humano. Para quantificar a dose de radiação recebida, utiliza-se o sievert (Sv), definido como a unidade de energia recebida por unidade de massa. A exposição à radiação proveniente de raios cósmicos aumenta com a altitude, o que pode representar um problema para as tripulações de aeronaves. Recentemente, foram realizadas medições acuradas das doses de radiação ionizante para voos entre Rio de Janeiro e Roma. Os resultados têm indicado que a dose média de radiação recebida na fase de cruzeiro (que geralmente representa 80% do tempo total de voo) desse trecho intercontinental é 2 μSv/h. As normas internacionais da aviação civil limitam em 1 000 horas por ano o tempo de trabalho para as tripulações que atuem em voos intercontinentais. Considere que a dose de radiação ionizante para uma radiografia torácica é estimada em 0,2 mSv.\n\nRUAS, A. C. O tripulante de aeronaves e a radiação ionizante. São Paulo: Edição do Autor, 2019 (adaptado).\n\nA quantas radiografias torácicas corresponde a dose de radiação ionizante à qual um tripulante que atue no trecho Rio de Janeiro–Roma é exposto ao longo de um ano?",
+    "alternativas": {
+      "A": "8",
+      "B": "10",
+      "C": "80",
+      "D": "100",
+      "E": "1 000"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset transformou a referência bibliográfica em título e escreveu as unidades por extenso (\"2 microsieverts por hora\", \"80 por cento\"); a prova usa \"2 μSv/h\", \"80%\" e \"0,2 mSv\", e inclui \"(Sv)\".",
+    "gabarito_calculado": "A",
+    "resolucao": "Tempo de voo por ano: 1 000 h; a fase de cruzeiro é 80% disso: $0{,}8 \\times 1\\,000 = 800$ h.\nDose anual na fase de cruzeiro: $800 \\times 2 = 1\\,600\\ \\mu\\mathrm{Sv} = 1{,}6$ mSv.\nCada radiografia torácica equivale a 0,2 mSv.\nNúmero de radiografias: $\\frac{1{,}6}{0{,}2} = 8$.\nAlternativa A.",
+    "enganos": {
+      "B": "Ignorou que a dose de 2 μSv/h vale só para os 80% do tempo em cruzeiro e usou as 1 000 h inteiras: $2\\,000\\ \\mu\\mathrm{Sv} / 200\\ \\mu\\mathrm{Sv} = 10$.",
+      "C": "Usou os 80% corretamente, mas errou a conversão de mili para micro por um fator 10 (tomou 0,2 mSv como 20 μSv): $1\\,600 / 20 = 80$.",
+      "D": "Somou os dois erros: ignorou os 80% e converteu 0,2 mSv como 20 μSv: $2\\,000 / 20 = 100$.",
+      "E": "Confundiu as horas trabalhadas com o número de radiografias, ou dividiu 2 000 μSv por 2 (misturando as unidades), chegando a 1 000."
+    },
+    "conceitos": [
+      "dose de radiação",
+      "conversão de unidades",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2023-115",
+    "enunciado": "Informações digitais — dados — são gravadas em discos ópticos, como CD e DVD, na forma de cavidades microscópicas. A gravação e a leitura óptica dessas informações são realizadas por um laser (fonte de luz monocromática). Quanto menores as dimensões dessas cavidades, mais dados são armazenados na mesma área do disco. O fator limitante para a leitura de dados é o espalhamento da luz pelo efeito de difração, fenômeno que ocorre quando a luz atravessa um obstáculo com dimensões da ordem de seu comprimento de onda. Essa limitação motivou o desenvolvimento de lasers com emissão em menores comprimentos de onda, possibilitando armazenar e ler dados em cavidades cada vez menores.\n\nEm qual região espectral se situa o comprimento de onda do laser que otimiza o armazenamento e a leitura de dados em discos de uma mesma área?",
+    "alternativas": {
+      "A": "Violeta.",
+      "B": "Azul.",
+      "C": "Verde.",
+      "D": "Vermelho.",
+      "E": "Infravermelho."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "A difração é significativa quando a cavidade tem dimensões da ordem do comprimento de onda; então cavidades menores exigem $\\lambda$ menor.\nMais dados na mesma área significa cavidades menores, logo o melhor laser é o de menor comprimento de onda entre as opções.\nOrdem dos comprimentos de onda: infravermelho > vermelho > verde > azul > violeta.\nO menor $\\lambda$ entre as alternativas é o do violeta. Alternativa A.",
+    "enganos": {
+      "B": "Lembrou que o Blu-ray usa laser \"azul\" e respondeu pela tecnologia conhecida, sem comparar qual região tem o menor comprimento de onda entre as opções.",
+      "C": "Escolheu o meio do espectro visível, sem relacionar a ordem das cores com o comprimento de onda.",
+      "D": "Inverteu a relação: achou que o vermelho, de maior comprimento de onda, seria melhor (ou lembrou que o DVD usa laser vermelho).",
+      "E": "Inverteu a relação entre comprimento de onda e tamanho da cavidade (ou associou ao laser infravermelho do CD), escolhendo o maior $\\lambda$."
+    },
+    "conceitos": [
+      "difração",
+      "comprimento de onda",
+      "espectro eletromagnético"
+    ]
+  },
+  {
+    "id": "2023-116",
+    "enunciado": "O bluetooth é uma tecnologia de comunicação sem fio, de curto alcance, presente em diferentes dispositivos eletrônicos de consumo. Ela permite que aparelhos eletrônicos diferentes se conectem e troquem dados entre si. No padrão bluetooth, denominado de Classe 2, as antenas transmitem sinais de potência igual a 2,4 mW e possibilitam conectar dois dispositivos distanciados até 10 m. Considere que essas antenas se comportam como fontes puntiformes que emitem ondas eletromagnéticas esféricas e que a intensidade do sinal é calculada pela potência por unidade de área. Considere 3 como valor aproximado para $\\pi$.\n\nPara que o sinal de bluetooth seja detectado pelas antenas, o valor mínimo de sua intensidade, em $\\mathrm{\\frac{W}{m^2}}$, é mais próximo de",
+    "alternativas": {
+      "A": "$2{,}0 \\times 10^{-6}$.",
+      "B": "$2{,}0 \\times 10^{-5}$.",
+      "C": "$2{,}4 \\times 10^{-5}$.",
+      "D": "$2{,}4 \\times 10^{-3}$.",
+      "E": "$2{,}4 \\times 10^{-1}$."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "\"bluetooth\" está em itálico na prova. O dataset escreveu \"2,4 miliwatts\", \"10metros\" e \"watt por metro quadrado\" por extenso.",
+    "gabarito_calculado": "A",
+    "resolucao": "A intensidade mínima é a que chega à distância máxima de conexão, $r = 10$ m.\nOnda esférica: a potência se espalha pela área da esfera, $A = 4\\pi r^2 = 4 \\times 3 \\times 10^2 = 1\\,200\\ \\mathrm{m^2}$.\nPotência: $P = 2{,}4\\ \\mathrm{mW} = 2{,}4 \\times 10^{-3}$ W.\n$I = \\frac{P}{A} = \\frac{2{,}4 \\times 10^{-3}}{1{,}2 \\times 10^{3}} = 2{,}0 \\times 10^{-6}\\ \\mathrm{W/m^2}$.\nAlternativa A.",
+    "enganos": {
+      "B": "Esqueceu de elevar o raio ao quadrado: $A = 4\\pi r = 120$, e $\\frac{2{,}4 \\times 10^{-3}}{120} = 2{,}0 \\times 10^{-5}$.",
+      "C": "Dividiu a potência só por $r^2 = 100$, esquecendo o fator $4\\pi$ da área da esfera: $2{,}4 \\times 10^{-5}$.",
+      "D": "Tomou a própria potência em watts ($2{,}4 \\times 10^{-3}$ W) como se fosse a intensidade, sem dividir pela área.",
+      "E": "Multiplicou a potência por $r^2$ em vez de dividir: $2{,}4 \\times 10^{-3} \\times 100 = 2{,}4 \\times 10^{-1}$."
+    },
+    "conceitos": [
+      "intensidade de onda",
+      "potência",
+      "área da esfera"
+    ]
+  },
+  {
+    "id": "2023-117",
+    "enunciado": "A tecnologia de vacinas de RNA mensageiro (RNAm) é investigada há anos. Avanços científicos em genética molecular permitiram desenvolver uma vacina para controle da pandemia da covid-19 causada pelo vírus de RNA SARS-CoV-2. A vacina de RNAm tem sequências de genes do vírus. Entretanto, por ser muito instável, o RNAm deve ser recoberto por uma capa de lipídios que evita sua degradação e favorece sua ação. Dessa forma, o RNAm desempenhará sua função específica atuando no mesmo compartimento celular de sempre.\n\nDisponível em: https://sbim.org.br. Acesso em: 29 nov. 2021 (adaptado).\n\nA imunização produzida por esse tipo de vacina é alcançada por meio da",
+    "alternativas": {
+      "A": "estimulação de leucócitos induzida pela capa lipídica contendo RNAm.",
+      "B": "atuação do RNAm como sequestrador do vírus para o meio extracelular.",
+      "C": "tradução do RNAm em proteína viral, desencadeando a resposta antigênica.",
+      "D": "competição entre o RNAm vacinal e o RNA viral pelos sítios dos ribossomos.",
+      "E": "incorporação do RNAm viral ao genoma do hospedeiro, gerando novo fenótipo."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "O texto diz que o RNAm tem sequências de genes do vírus e atua \"no mesmo compartimento celular de sempre\", ou seja, no citoplasma, nos ribossomos.\nA função específica do RNAm é ser traduzido em proteína.\nA célula produz então uma proteína do vírus (antígeno), que é reconhecida pelo sistema imune.\nIsso gera anticorpos e células de memória: imunização ativa. Alternativa C.",
+    "enganos": {
+      "A": "Achou que a capa lipídica é o que estimula o sistema imune, quando ela só protege o RNAm e facilita sua entrada na célula.",
+      "B": "Imaginou o RNAm agindo diretamente contra o vírus, como um anticorpo ou remédio, e não como molde para produzir antígeno.",
+      "D": "Confundiu vacina (prevenção, gera memória imunológica) com antiviral que bloquearia a replicação do vírus já presente.",
+      "E": "Concepção alternativa comum de que a vacina de RNAm altera o DNA; o RNAm fica no citoplasma e não é incorporado ao genoma."
+    },
+    "conceitos": [
+      "vacina de rnam",
+      "tradução",
+      "resposta imune",
+      "antígeno"
+    ]
+  },
+  {
+    "id": "2023-118",
+    "enunciado": "Na fertilização in vitro, espermatozoides são adicionados aos gametas femininos retirados de uma mulher. Após o período de incubação, a fecundação é favorecida pela ação de enzimas. Em um procedimento realizado, observou-se que nenhum dos gametas femininos foi fertilizado e, posteriormente, verificou-se que havia sido adicionado, equivocadamente, um coquetel de inibidores das enzimas do acrossomo, no lugar de um dos nutrientes constituintes do meio de cultura.\n\nO coquetel de inibidores impediu o(a)",
+    "alternativas": {
+      "A": "formação do pronúcleo masculino.",
+      "B": "início da divisão mitótica do zigoto.",
+      "C": "término da segunda divisão meiótica do ovócito.",
+      "D": "passagem do espermatozoide pela corona radiata e zona pelúcida.",
+      "E": "fusão das membranas plasmáticas do ovócito e do espermatozoide."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "O acrossomo é uma vesícula na cabeça do espermatozoide com enzimas digestivas (como hialuronidase e acrosina).\nNa reação acrossômica, essas enzimas digerem as camadas que envolvem o ovócito: corona radiata e zona pelúcida.\nCom as enzimas inibidas, o espermatozoide não atravessa esses envoltórios e não chega à membrana do ovócito.\nAs etapas seguintes (fusão, término da meiose, pronúcleos, mitose) nem chegam a ocorrer, mas o bloqueio direto é na passagem. Alternativa D.",
+    "enganos": {
+      "A": "Escolheu uma etapa posterior que também deixa de ocorrer, sem identificar o ponto em que as enzimas acrossômicas atuam.",
+      "B": "Pensou na consequência final (não há zigoto para se dividir), não na etapa impedida diretamente pelas enzimas.",
+      "C": "Lembrou que a meiose II do ovócito só termina após a penetração, mas isso é desencadeado pela entrada do espermatozoide, não pelas enzimas do acrossomo.",
+      "E": "Achou que as enzimas acrossômicas promovem a fusão das membranas, que depende de proteínas de reconhecimento e ocorre só depois de atravessar a zona pelúcida."
+    },
+    "conceitos": [
+      "fecundação",
+      "reação acrossômica",
+      "gametas"
+    ]
+  },
+  {
+    "id": "2023-119",
+    "enunciado": "O fogão por indução funciona a partir do surgimento de uma corrente elétrica induzida no fundo da panela, com consequente transformação de energia elétrica em calor por efeito Joule. A principal vantagem desses fogões é a eficiência energética, que é substancialmente maior que a dos fogões convencionais.\n\nA corrente elétrica mencionada é induzida por",
+    "alternativas": {
+      "A": "radiação.",
+      "B": "condução.",
+      "C": "campo elétrico variável.",
+      "D": "campo magnético variável.",
+      "E": "ressonância eletromagnética."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Erro no dataset: a alternativa A aparece como \"indução\" e sem ponto final; na prova oficial é \"radiação.\".",
+    "gabarito_calculado": "D",
+    "resolucao": "Corrente induzida é o fenômeno da indução eletromagnética (lei de Faraday).\nUma bobina sob o vidro recebe corrente alternada e cria um campo magnético que varia no tempo.\nA variação do fluxo magnético no fundo metálico da panela induz correntes (correntes de Foucault).\nEssas correntes dissipam energia por efeito Joule e aquecem a panela. Alternativa D.",
+    "enganos": {
+      "A": "Associou o fogão a aquecimento por radiação (como no micro-ondas ou na chapa incandescente), confundindo o modo de transferência de calor com a origem da corrente.",
+      "B": "Pensou na condução de calor do fogão convencional, ou em corrente conduzida por fios, e não em indução.",
+      "C": "Lembrou que é um fenômeno eletromagnético, mas trocou os campos: pela lei de Faraday, é a variação do fluxo magnético que induz a corrente.",
+      "E": "Escolheu um termo técnico que soa adequado, misturando com ressonância (como em carregadores sem fio), sem relacionar com a lei de Faraday."
+    },
+    "conceitos": [
+      "indução eletromagnética",
+      "lei de faraday",
+      "efeito joule"
+    ]
+  },
+  {
+    "id": "2023-121",
+    "enunciado": "Muitas mulheres sofrem com desconfortos nos dias que antecedem a menstruação, a chamada tensão pré-menstrual. Entre outros sintomas, podem ocorrer alterações de humor. Atualmente, acredita-se que os sintomas são resultado da queda na concentração do neurotransmissor serotonina, que, por sua vez, está relacionado com a diminuição na produção dos hormônios ovarianos estrógeno e progesterona, observada nessa fase do ciclo feminino.\n\nDIMMOCK, P. W. et al. Efficacy of Selective Serotonin-Reuptake Inhibitors in Premenstrual Syndrome: a Systematic Review. The Lancet, n. 9 236, 2000 (adaptado).\n\nA redução da produção desses hormônios nessa fase está relacionada com o(a)",
+    "alternativas": {
+      "A": "regressão do corpo lúteo ovariano.",
+      "B": "diminuição na produção de ocitocina.",
+      "C": "liberação do gameta feminino na ovulação.",
+      "D": "aumento nos níveis dos hormônios LH e FSH.",
+      "E": "elevação nos níveis sorológicos de adrenalina."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset transformou parte da referência bibliográfica em título.",
+    "gabarito_calculado": "A",
+    "resolucao": "Os dias antes da menstruação são o fim da fase lútea do ciclo.\nNa fase lútea, o corpo lúteo produz progesterona e estrógeno.\nSem fecundação (e sem hCG), o corpo lúteo regride e vira corpo albicans.\nCom isso caem estrógeno e progesterona, o endométrio descama e vem a menstruação. Alternativa A.",
+    "enganos": {
+      "B": "Associou hormônios femininos à ocitocina, que atua no parto e na ejeção do leite, não na produção ovariana de estrógeno e progesterona.",
+      "C": "Confundiu a fase: a ovulação ocorre no meio do ciclo, e depois dela os níveis de progesterona sobem, não caem.",
+      "D": "Lembrou que LH e FSH mudam no ciclo, mas o pico deles é perto da ovulação; no fim da fase lútea a queda vem da regressão do corpo lúteo.",
+      "E": "Ligou alterações de humor ao estresse e à adrenalina, fugindo do controle hormonal do ciclo menstrual."
+    },
+    "conceitos": [
+      "ciclo menstrual",
+      "corpo lúteo",
+      "hormônios sexuais"
+    ]
+  },
+  {
+    "id": "2023-122",
+    "enunciado": "As cetonas fazem parte de famílias olfativas encontradas em muitos alimentos. A molécula de hexan-3-ona é um exemplo desses compostos voláteis responsáveis pelo aroma, podendo ser obtida por processos energéticos realizados em meio ácido, na presença de oxidantes como o permanganato de potássio.\n\nPara se produzir esse composto volátil em laboratório, deve-se oxidar a molécula de",
+    "alternativas": {
+      "A": "hexanal.",
+      "B": "hexan-1-ol.",
+      "C": "hexan-3-ol.",
+      "D": "hex-1-en-1-ol.",
+      "E": "ácido hexanoico."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "A hexan-3-ona é uma cetona com a carbonila no carbono 3 de uma cadeia de 6 carbonos.\nCetonas são obtidas pela oxidação de álcoois secundários (OH em carbono ligado a dois outros carbonos).\nO álcool secundário com 6 carbonos e OH no carbono 3 é o hexan-3-ol.\n$\\mathrm{CH_3CH_2CH(OH)CH_2CH_2CH_3 \\xrightarrow{[O]} CH_3CH_2COCH_2CH_2CH_3}$. Alternativa C.",
+    "enganos": {
+      "A": "Achou que aldeído oxida a cetona, mas aldeído oxidado vira ácido carboxílico; além disso, a carbonila do hexanal está no carbono 1.",
+      "B": "Esqueceu a posição: hexan-1-ol é álcool primário, que oxida a aldeído (hexanal) e depois a ácido, nunca a cetona.",
+      "D": "Viu um composto com OH e dupla, mas esse enol tautomeriza em hexanal (carbonila no carbono 1), não leva à hexan-3-ona.",
+      "E": "Inverteu o sentido da reação: o ácido hexanoico já é o produto mais oxidado da cadeia e não oxida a cetona."
+    },
+    "conceitos": [
+      "oxidação de álcoois",
+      "cetonas",
+      "funções orgânicas"
+    ]
+  },
+  {
+    "id": "2023-123",
+    "enunciado": "Durante a evolução das plantas, ocorreu uma transição do ambiente aquático para o ambiente terrestre graças ao surgimento de algumas estruturas que as tornaram independentes da água. Esse fato permitiu maior dispersão desse grupo de seres vivos, sendo possível observá-los em diferentes ambientes na atualidade.\n\nQual estrutura possibilitou a independência da água para a fecundação dos seres vivos citados acima?",
+    "alternativas": {
+      "A": "Fruto.",
+      "B": "Esporo.",
+      "C": "Semente.",
+      "D": "Tubo polínico.",
+      "E": "Vaso condutor."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "A pergunta é sobre a fecundação, não sobre a dispersão ou o transporte.\nEm briófitas e pteridófitas, o anterozoide flagelado precisa nadar na água até a oosfera.\nNas gimnospermas e angiospermas, o grão de pólen forma o tubo polínico, que leva o gameta masculino até a oosfera.\nAssim a fecundação deixa de depender de água ambiental. Alternativa D.",
+    "enganos": {
+      "A": "Lembrou da novidade das angiospermas, mas o fruto protege e dispersa sementes, depois da fecundação.",
+      "B": "Esporos servem à dispersão e já existem em briófitas e pteridófitas, que ainda dependem de água para a fecundação.",
+      "C": "Confundiu a independência da água para dispersão e germinação (semente) com a independência para fecundação (tubo polínico).",
+      "E": "Associou a conquista do ambiente terrestre aos vasos condutores, que resolvem o transporte de água e seiva, não a fecundação."
+    },
+    "conceitos": [
+      "evolução das plantas",
+      "tubo polínico",
+      "fecundação vegetal"
+    ]
+  },
+  {
+    "id": "2023-124",
+    "enunciado": "O vidro contendo alumínio em sua composição é um excelente material para acondicionar medicamentos e suplementos, porque pode ser esterilizado por aquecimento. No entanto, quando o medicamento ou suplemento contém substâncias que se ligam fortemente ao íon desse metal, a dissolução do alumínio é promovida em função do deslocamento do equilíbrio químico estabelecido entre a espécie imobilizada no vidro e a espécie em solução. Por essa razão, recomenda-se que suplementos de nutrição de recém-nascidos contendo gluconato de cálcio sejam acondicionados em embalagens plásticas, e não nesse tipo de vidro.\n\nAtualização da recomendação da Sociedade Portuguesa de Neonatologia. Disponível em: www.spneonatologia.pt. Acesso em: 22 out. 2021 (adaptado).\n\nCaso esse suplemento seja acondicionado em embalagem desse tipo de vidro, o risco de contaminação por alumínio será maior se o(a)",
+    "alternativas": {
+      "A": "vidro do frasco for translúcido.",
+      "B": "concentração de gluconato de cálcio for alta.",
+      "C": "frasco de vidro apresentar uma maior espessura.",
+      "D": "vidro for previamente esterilizado em altas temperaturas.",
+      "E": "reação do alumínio com gluconato de cálcio for endotérmica."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset transformou a referência bibliográfica em título.",
+    "gabarito_calculado": "B",
+    "resolucao": "Há um equilíbrio entre o alumínio imobilizado no vidro e o íon alumínio em solução.\nO gluconato se liga fortemente ao íon alumínio, retirando-o da solução (forma complexo).\nPelo princípio de Le Chatelier, retirar o íon da solução desloca o equilíbrio no sentido da dissolução do alumínio do vidro.\nQuanto maior a concentração de gluconato, maior esse deslocamento e mais alumínio passa para o suplemento. Alternativa B.",
+    "enganos": {
+      "A": "Imaginou que a luz que atravessa o vidro provoca a liberação do metal, ideia que não aparece no texto.",
+      "C": "Pensou que mais vidro significa mais alumínio disponível, mas o equilíbrio ocorre na superfície em contato com a solução, não depende da espessura.",
+      "D": "Leu a esterilização por aquecimento como risco, quando o texto a apresenta como vantagem; o problema é a substância que se liga ao íon.",
+      "E": "Aplicou Le Chatelier à temperatura sem dado nenhum sobre aquecimento na armazenagem; ser endotérmica só favoreceria a dissolução se houvesse aquecimento."
+    },
+    "conceitos": [
+      "equilíbrio químico",
+      "princípio de le chatelier",
+      "complexação"
+    ]
+  },
+  {
+    "id": "2023-125",
+    "enunciado": "Barbatimão é o nome popular de uma árvore cuja casca é utilizada para fins medicinais. Essa casca é constituída principalmente de dois tecidos vegetais: periderme e floema. A extração da casca tem levado à morte muitos indivíduos dessa espécie, quando o corte retira um anel completo ao longo da circunferência do tronco. Aqueles que têm parte da casca retirada sem completar essa circunferência podem sobreviver.\n\nA morte desses indivíduos, decorrente da retirada do anel completo da casca, é provocada pela interrupção da",
+    "alternativas": {
+      "A": "fotossíntese.",
+      "B": "transpiração.",
+      "C": "troca de gases.",
+      "D": "formação de brotos.",
+      "E": "nutrição das raízes."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "Retirar a casca em anel completo remove o floema em toda a volta do tronco (anel de Malpighi).\nO floema leva a seiva elaborada (açúcares da fotossíntese) das folhas para o resto da planta, inclusive as raízes.\nO xilema, mais interno, continua levando água às folhas, que seguem fazendo fotossíntese por um tempo.\nSem receber açúcares, as raízes morrem por falta de nutrição, e depois a planta inteira morre. Alternativa E.",
+    "enganos": {
+      "A": "Achou que a planta para de fazer fotossíntese, mas as folhas continuam recebendo água pelo xilema; o que falta é levar o açúcar até as raízes.",
+      "B": "Confundiu floema com xilema: a transpiração depende do transporte de água pelo xilema, que não é retirado com a casca.",
+      "C": "Associou a casca (periderme, com lenticelas) às trocas gasosas, mas as folhas continuam fazendo trocas pelos estômatos.",
+      "D": "Pensou em perda de tecido de crescimento, mas a morte se explica pela falta de seiva elaborada nas raízes, não pela falta de brotos."
+    },
+    "conceitos": [
+      "floema",
+      "anel de malpighi",
+      "transporte de seiva"
+    ]
+  },
+  {
+    "id": "2023-126",
+    "enunciado": "Um garoto comprou vários abacates na feira, mas descobriu que eles não estavam maduros o suficiente para serem consumidos. Sua mãe recomendou que ele colocasse os abacates em um recipiente fechado, pois isso aceleraria seu amadurecimento. Com certa dúvida, o garoto realizou esta experiência: colocou alguns abacates no recipiente e deixou os demais em uma fruteira aberta. Surpreendendo-se, ele percebeu que os frutos que estavam no recipiente fechado amadureceram mais rapidamente.\n\nA aceleração desse processo é causada por",
+    "alternativas": {
+      "A": "acúmulo de gás etileno.",
+      "B": "redução da umidade do ar.",
+      "C": "aumento da concentração de $\\mathrm{CO_2}$.",
+      "D": "diminuição da intensidade luminosa.",
+      "E": "isolamento do contato com $\\mathrm{O_2}$ atmosférico."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Frutos em amadurecimento liberam etileno, um hormônio vegetal gasoso.\nO etileno estimula o próprio amadurecimento (amolecimento, mudança de cor, conversão de amido em açúcares).\nNo recipiente fechado o gás não se dispersa e se acumula, acelerando o processo.\nNa fruteira aberta o etileno se espalha no ar. Alternativa A.",
+    "enganos": {
+      "B": "Atribuiu o efeito a uma condição física do ar no recipiente; fechar o recipiente tende a aumentar a umidade, e ela não é a causa do amadurecimento.",
+      "C": "Percebeu que algum gás se acumula, mas escolheu o $\\mathrm{CO_2}$ da respiração, que na verdade retarda o amadurecimento.",
+      "D": "Associou o recipiente fechado ao escuro e achou que a falta de luz acelera o amadurecimento; o fruto colhido não depende de luz para amadurecer.",
+      "E": "Pensou que tirar o $\\mathrm{O_2}$ aceleraria o processo; baixo $\\mathrm{O_2}$ reduz a respiração e é usado justamente para retardar o amadurecimento."
+    },
+    "conceitos": [
+      "etileno",
+      "hormônios vegetais",
+      "amadurecimento de frutos"
+    ]
+  },
+  {
+    "id": "2023-127",
+    "enunciado": "Há muito tempo são conhecidas espécies de lesmas-do-mar com uma capacidade ímpar: guardar parte da maquinaria das células das algas que consomem — os cloroplastos — e mantê-los funcionais dentro das suas próprias células, obtendo assim parte do seu alimento. Investigadores portugueses descobriram que essas lesmas-do-mar podem ser mais eficientes nesse processo do que as próprias algas que consomem.\n\nDisponível em: www.cienciahoje.pt. Acesso em: 10 fev. 2015 (adaptado).\n\nEssa adaptação confere a esse organismo a capacidade de obter primariamente",
+    "alternativas": {
+      "A": "ácidos nucleicos.",
+      "B": "carboidratos.",
+      "C": "proteínas.",
+      "D": "vitaminas.",
+      "E": "lipídios."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Os cloroplastos mantidos funcionais fazem fotossíntese dentro das células da lesma.\nO produto primário da fotossíntese é a glicose (carboidrato): $\\mathrm{6\\,CO_2 + 6\\,H_2O \\rightarrow C_6H_{12}O_6 + 6\\,O_2}$.\nAssim, a lesma passa a obter diretamente carboidratos produzidos pelos cloroplastos.\nAlternativa B.",
+    "enganos": {
+      "A": "Lembrou que cloroplastos têm DNA próprio e achou que a lesma obtém ácidos nucleicos deles, confundindo estrutura da organela com o produto da fotossíntese.",
+      "C": "Pensou em \"alimento\" como proteína, sem ligar o cloroplasto à fotossíntese, cujo produto direto é açúcar.",
+      "D": "Associou alimento vindo de planta/alga a vitaminas, sem considerar o produto primário da fotossíntese.",
+      "E": "Associou armazenamento de energia a lipídios, mas eles não são o produto primário da fotossíntese."
+    },
+    "conceitos": [
+      "fotossíntese",
+      "cloroplastos",
+      "carboidratos"
+    ]
+  },
+  {
+    "id": "2023-128",
+    "enunciado": "A leishmaniose visceral é uma zoonose causada por um protozoário do gênero Leishmania que é encontrado em diversos tecidos. Ela é transmitida ao homem de forma indireta, por vetores do ambiente doméstico. O cão é considerado um importante hospedeiro desse protozoário, podendo ou não apresentar os sintomas da doença, como perda de peso, anemia, ferimentos na pele, diarreia, conjuntivite e insuficiência renal. Em uma região que sofre com alta incidência dessa doença, uma campanha do centro de zoonoses buscou verificar a presença desse protozoário nos cães para tentar controlar a doença.\n\nEm qual material biológico dos cães a presença desse protozoário representa risco de transmissão dessa zoonose?",
+    "alternativas": {
+      "A": "Urina.",
+      "B": "Saliva.",
+      "C": "Fezes.",
+      "D": "Sangue.",
+      "E": "Secreção ocular."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "\"Leishmania\" está em itálico na prova.",
+    "gabarito_calculado": "D",
+    "resolucao": "O texto diz que a transmissão ao homem é indireta, por vetores.\nO vetor da leishmaniose é o mosquito-palha (flebotomíneo), um inseto hematófago.\nAo picar um cão infectado, o inseto ingere o protozoário junto com o sangue (e células da pele) e depois o transmite a uma pessoa ao picá-la.\nPortanto, o material que representa risco de transmissão é o sangue. Alternativa D.",
+    "enganos": {
+      "A": "Ligou a insuficiência renal citada nos sintomas à urina como via de transmissão (lembrando também da leptospirose), ignorando que a transmissão é por vetor.",
+      "B": "Pensou em transmissão por mordida ou lambida, como na raiva, apesar de o texto dizer que a transmissão é indireta.",
+      "C": "Ligou o sintoma de diarreia às fezes como via de contágio, como em verminoses, ignorando o vetor.",
+      "E": "Ligou o sintoma de conjuntivite à secreção ocular como fonte de contágio, confundindo sintoma com via de transmissão."
+    },
+    "conceitos": [
+      "leishmaniose",
+      "vetor",
+      "zoonose"
+    ]
+  },
+  {
+    "id": "2023-129",
+    "enunciado": "Um professor lança uma esfera verticalmente para cima, a qual retorna, depois de alguns segundos, ao ponto de lançamento. Em seguida, lista em um quadro todas as possibilidades para as grandezas cinemáticas.\n\n| Grandeza cinemática | Módulo | Sentido |\n|---|---|---|\n| Velocidade | $v \\neq 0$ | Para cima |\n| Velocidade | $v \\neq 0$ | Para baixo |\n| Velocidade | $v = 0$ | Indefinido* |\n| Aceleração | $a \\neq 0$ | Para cima |\n| Aceleração | $a \\neq 0$ | Para baixo |\n| Aceleração | $a = 0$ | Indefinido* |\n\n*Grandezas com módulo nulo não têm sentido definido.\n\nEle solicita aos alunos que analisem as grandezas cinemáticas no instante em que a esfera atinge a altura máxima, escolhendo uma combinação para os módulos e sentidos da velocidade e da aceleração.\n\nA escolha que corresponde à combinação correta é",
+    "alternativas": {
+      "A": "$v = 0$ e $a \\neq 0$ para cima.",
+      "B": "$v \\neq 0$ para cima e $a = 0$.",
+      "C": "$v = 0$ e $a \\neq 0$ para baixo.",
+      "D": "$v \\neq 0$ para cima e $a \\neq 0$ para cima.",
+      "E": "$v \\neq 0$ para baixo e $a \\neq 0$ para baixo."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No quadro original, as células \"Velocidade\", \"Aceleração\", \"v ≠ 0\" e \"a ≠ 0\" são mescladas; na tabela Markdown foram repetidas em cada linha. O dataset escreveu \"zero\" por extenso nas alternativas.",
+    "gabarito_calculado": "C",
+    "resolucao": "Na altura máxima a esfera para de subir e começa a descer: a velocidade é nula nesse instante, $v = 0$.\nDurante todo o voo (desprezando o ar) a única força é o peso, então a aceleração é a da gravidade, $a = g \\neq 0$.\nA aceleração da gravidade aponta sempre para baixo, inclusive no ponto mais alto.\nCombinação: $v = 0$ e $a \\neq 0$ para baixo. Alternativa C.",
+    "enganos": {
+      "A": "Acertou $v = 0$, mas achou que a aceleração aponta no sentido do movimento de subida, confundindo o sentido da aceleração com o da velocidade.",
+      "B": "Concepção alternativa de que no topo a esfera \"para\" e por isso a aceleração é nula, enquanto ainda teria velocidade para cima.",
+      "D": "Associou força e aceleração ao sentido do movimento (\"se sobe, há força para cima\"), ideia aristotélica, e ainda não percebeu que a velocidade se anula no topo.",
+      "E": "Descreveu o instante logo depois do topo, já na descida, sem perceber que exatamente na altura máxima a velocidade é zero."
+    },
+    "conceitos": [
+      "lançamento vertical",
+      "aceleração da gravidade",
+      "velocidade instantânea"
+    ]
+  },
+  {
+    "id": "2023-130",
+    "enunciado": "O número de abelhas encontra-se em declínio em várias regiões do mundo, inclusive no Brasil, sendo que vários fatores contribuem para o colapso de suas colmeias. Nos Estados Unidos, bombas de sementes de espécies vegetais nativas têm sido utilizadas para combater o desaparecimento desses insetos. Elas são pequenas bolinhas recheadas com sementes, adubo e argila. Quando são arremessadas e ficam expostas ao sol e à chuva, germinam até mesmo em solo pouco fértil.\n\nDARAYA, V. Disponível em: http://planetasustentavel.abril.com.br. Acesso em: 2 fev. 2015 (adaptado).\n\nEsse método contribui para a preservação das abelhas porque",
+    "alternativas": {
+      "A": "reduz sua predação.",
+      "B": "reduz o uso de pesticidas.",
+      "C": "reduz a competição por abrigo.",
+      "D": "aumenta a oferta de alimento.",
+      "E": "aumenta os locais de reprodução."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "As bombas de sementes fazem crescer plantas nativas em novos locais.\nEssas plantas florescem e oferecem néctar e pólen, que são o alimento das abelhas.\nMais flores disponíveis significa mais recursos alimentares para as colmeias.\nAlternativa D.",
+    "enganos": {
+      "A": "Imaginou que a vegetação serviria de esconderijo contra predadores, ideia que o texto não sustenta.",
+      "B": "Lembrou que pesticidas são uma causa conhecida do declínio das abelhas, mas o método descrito não muda o uso de pesticidas.",
+      "C": "Pensou nas plantas como abrigo, mas as abelhas fazem colmeias e o que as plantas floridas oferecem é néctar e pólen.",
+      "E": "Confundiu oferta de alimento com local de nidificação; plantas floridas não são os locais onde as abelhas se reproduzem."
+    },
+    "conceitos": [
+      "polinização",
+      "relações ecológicas",
+      "conservação"
+    ]
+  },
+  {
+    "id": "2023-131",
+    "enunciado": "Os mais antigos cozinhavam o feijão na panela de ferro a fim de acabar com a palidez de seus filhos. Alguns chegavam até a colocar um prego enferrujado nesse cozimento para liberar o ferro contido nele. Sabe-se que esse elemento pode ser encontrado na sua forma metálica ou iônica, sendo essencial para a manutenção da vida humana.\n\nAs estratégias citadas eram utilizadas com o objetivo de",
+    "alternativas": {
+      "A": "tratar a diarreia.",
+      "B": "prevenir a anemia.",
+      "C": "evitar as verminoses.",
+      "D": "remediar o raquitismo.",
+      "E": "combater a febre amarela."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "As estratégias buscam enriquecer o alimento com ferro.\nO ferro é componente da hemoglobina, que transporta oxigênio nas hemácias.\nA palidez citada no texto é sinal típico de anemia ferropriva (falta de ferro).\nLogo, o objetivo era prevenir a anemia. Alternativa B.",
+    "enganos": {
+      "A": "Associou cuidados caseiros na alimentação infantil a problemas intestinais, sem relacionar o ferro à hemoglobina.",
+      "C": "Lembrou que verminoses podem causar anemia, mas o ferro repõe o mineral e não elimina os vermes.",
+      "D": "Confundiu os minerais: raquitismo está ligado à falta de vitamina D e cálcio, não de ferro.",
+      "E": "Associou palidez a uma doença infecciosa; febre amarela é causada por vírus e prevenida com vacina, não com ferro."
+    },
+    "conceitos": [
+      "anemia ferropriva",
+      "ferro",
+      "hemoglobina"
+    ]
+  },
+  {
+    "id": "2023-132",
+    "enunciado": "A utilização de tecnologia nuclear é um tema bastante controverso, por causa do risco de acidentes graves, como aqueles ocorridos em Chernobyl (1986), em Goiânia (1987) e em Fukushima (2011). Apesar de muitas desvantagens, como a geração de resíduos tóxicos, a descontaminação ambiental dispendiosa em caso de acidentes e a utilização em armas nucleares, a geração de energia nuclear apresenta vantagens em comparação a outras fontes de energia.\n\nA geração dessa energia tem como característica:",
+    "alternativas": {
+      "A": "Formar resíduos facilmente recicláveis.",
+      "B": "Promover o aumento do desmatamento.",
+      "C": "Contribuir para a produção de chuva ácida.",
+      "D": "Emitir gases tóxicos que são lançados no ambiente.",
+      "E": "Produzir calor sem o consumo de combustíveis fósseis."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "O texto pede uma vantagem da energia nuclear em relação a outras fontes.\nNa usina nuclear, o calor vem da fissão de núcleos de urânio, não da queima de carvão, petróleo ou gás.\nPor isso não há combustão de fósseis nem emissão de $\\mathrm{CO_2}$ ou de óxidos de enxofre e nitrogênio na geração.\nAlternativa E.",
+    "enganos": {
+      "A": "Contradiz o próprio texto, que cita a geração de resíduos tóxicos; o lixo radioativo é de difícil tratamento, não facilmente reciclável.",
+      "B": "Atribuiu à usina nuclear um impacto típico de hidrelétricas (alagamento) ou de biomassa, que não é característico da energia nuclear.",
+      "C": "Confundiu com termelétricas a combustíveis fósseis, que emitem óxidos de enxofre e nitrogênio formadores de chuva ácida.",
+      "D": "Confundiu o vapor d'água das torres de resfriamento com fumaça tóxica, ou generalizou as emissões das termelétricas fósseis."
+    },
+    "conceitos": [
+      "energia nuclear",
+      "fontes de energia",
+      "impactos ambientais"
+    ]
+  },
+  {
+    "id": "2023-133",
+    "enunciado": "Em uma indústria, o controle da dureza da água é importante quando ela é utilizada em caldeiras, uma vez que sais pouco solúveis, formados a partir de sulfatos e carbonatos, podem acumular-se no interior das tubulações, causando obstruções. Para avaliar a água utilizada nessa indústria, foram realizados testes de qualidade que consideraram os seguintes parâmetros:\n\n| Teste | Parâmetro medido |\n|---|---|\n| 1 | Cálcio |\n| 2 | Cloreto |\n| 3 | Turbidez |\n| 4 | Coliformes totais |\n| 5 | Sólidos sedimentáveis |\n\nQual teste deve ser considerado para controlar a formação desse tipo de obstrução de tubulações?",
+    "alternativas": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset trocou \"consideraram os seguintes parâmetros:\" por \"consideraram os parâmetros apresentados no quadro.\".",
+    "gabarito_calculado": "A",
+    "resolucao": "Dureza da água é a concentração de íons $\\mathrm{Ca^{2+}}$ e $\\mathrm{Mg^{2+}}$ dissolvidos.\nEsses cátions formam sais pouco solúveis com sulfato e carbonato, como $\\mathrm{CaCO_3}$ e $\\mathrm{CaSO_4}$, que se depositam nas caldeiras.\nOs ânions (sulfato, carbonato) já estão citados; o parâmetro do quadro ligado à dureza é o cálcio.\nAlternativa A.",
+    "enganos": {
+      "B": "Pensou em ânion formador de sal, mas os cloretos de cálcio e magnésio são solúveis; a incrustação vem de carbonatos e sulfatos.",
+      "C": "Confundiu sólidos em suspensão (turbidez) com sais dissolvidos que precipitam e formam incrustações.",
+      "D": "Associou qualidade da água a contaminação biológica, que não tem relação com a dureza nem com incrustações.",
+      "E": "Achou que o depósito vem de sólidos que já estão na água e sedimentam, sem perceber que a incrustação se forma por precipitação de sais dissolvidos."
+    },
+    "conceitos": [
+      "dureza da água",
+      "solubilidade de sais",
+      "precipitação"
+    ]
+  },
+  {
+    "id": "2023-134",
+    "enunciado": "As aves apresentam dois tipos de músculos em seus corpos: vermelhos e brancos. Aves migratórias como garças, gansos e patos selvagens têm os músculos vermelhos bem desenvolvidos, com ampla rede de vasos sanguíneos.\n\nNas viagens por grandes distâncias, tais músculos são fundamentais, pois favorecem o(a)",
+    "alternativas": {
+      "A": "execução de manobras.",
+      "B": "metabolismo corpóreo elevado.",
+      "C": "manutenção da aerodinâmica.",
+      "D": "deslocamento a grandes velocidades.",
+      "E": "capacidade de voo em grandes altitudes."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Músculos vermelhos têm muita mioglobina, muitas mitocôndrias e grande irrigação sanguínea.\nIsso garante oferta contínua de $\\mathrm{O_2}$ e respiração aeróbica intensa, com muito ATP por um longo tempo.\nÉ esse metabolismo elevado e sustentado que permite o voo de longa duração sem fadiga.\nMúsculos brancos, ao contrário, são de contração rápida e anaeróbicos, bons para arrancadas curtas. Alternativa B.",
+    "enganos": {
+      "A": "Atribuiu aos músculos vermelhos uma função típica dos brancos, de contração rápida para movimentos curtos e bruscos.",
+      "C": "Pensou em forma do corpo; aerodinâmica depende de penas e formato, não do tipo de fibra muscular.",
+      "D": "Confundiu resistência (longa duração) com velocidade; explosões de velocidade são associadas às fibras brancas, de contração rápida.",
+      "E": "Associou a irrigação sanguínea ao ar rarefeito das altitudes, mas o texto destaca as longas distâncias, que exigem resistência aeróbica."
+    },
+    "conceitos": [
+      "tecido muscular",
+      "metabolismo aeróbico",
+      "fisiologia animal"
+    ]
+  }
+]
