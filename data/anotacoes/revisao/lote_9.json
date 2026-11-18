@@ -1,0 +1,376 @@
+[
+  {
+    "id": "2023-135",
+    "enunciado": "Existe no comércio um produto antimofo constituído por uma embalagem com tampa perfurada contendo cloreto de cálcio anidro, $\\mathrm{CaCl_2}$. Uma vez aberto o lacre, essa substância absorve a umidade ambiente, transformando-se em cloreto de cálcio di-hidratado, $\\mathrm{CaCl_2 \\cdot 2H_2O}$.\n\nConsidere a massa molar da água igual a 18 $\\mathrm{g\\,mol^{-1}}$, e a massa molar do cloreto de cálcio anidro igual a 111 $\\mathrm{g\\,mol^{-1}}$.\n\nNa hidratação da substância presente no antimofo, o ganho percentual, em massa, é mais próximo de",
+    "alternativas": {
+      "A": "14%",
+      "B": "16%",
+      "C": "24%",
+      "D": "32%",
+      "E": "75%"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset acrescentou a palavra \"fórmula\" antes de CaCl2·2H2O e escreveu as unidades por extenso; o original usa $\\mathrm{g\\,mol^{-1}}$. As alternativas não têm ponto final na prova.",
+    "gabarito_calculado": "D",
+    "resolucao": "Cada mol de $\\mathrm{CaCl_2}$ (111 g) absorve 2 mol de água: $2 \\times 18 = 36$ g.\nO ganho de massa é a água absorvida (36 g) em relação à massa inicial, que é a do sal anidro (111 g).\nGanho percentual: $\\frac{36}{111} \\approx 0,324$, ou seja, cerca de 32%.\nAlternativa D.",
+    "enganos": {
+      "A": "Considerou só uma molécula de água e dividiu pela massa do sal já hidratado: $\\frac{18}{129} \\approx 14\\%$.",
+      "B": "Esqueceu o coeficiente 2 do di-hidrato e contou só uma água: $\\frac{18}{111} \\approx 16\\%$.",
+      "C": "Calculou a porcentagem de água no sal hidratado, dividindo pela massa final em vez da inicial: $\\frac{36}{147} \\approx 24\\%$.",
+      "E": "Calculou a fração de sal anidro dentro do hidrato ($\\frac{111}{147} \\approx 75\\%$), confundindo composição percentual com ganho de massa."
+    },
+    "conceitos": ["sal hidratado", "massa molar", "porcentagem em massa"]
+  },
+  {
+    "id": "2024-92",
+    "enunciado": "O exoesqueleto dos crustáceos é formado por quitina e impregnações de sais calcários e, por isso, é mais duro quando comparado com o exoesqueleto de outros artrópodes. Esse revestimento externo confere proteção, mas, por ser duro, limita o crescimento desses animais.\n\nPara superar essa limitação, o exoesqueleto deve ser",
+    "alternativas": {
+      "A": "formado somente na fase adulta do animal.",
+      "B": "fragmentado para expansão nas áreas de articulação.",
+      "C": "modelado continuamente para ajuste ao tamanho do corpo.",
+      "D": "substituído por meio de mudas que ocorrem periodicamente.",
+      "E": "impregnado por pequena quantidade de sais para sua distensão."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "O texto diz que o exoesqueleto é rígido e, por isso, não acompanha o crescimento do corpo.\nNos artrópodes, o exoesqueleto não cresce nem se remodela: ele é trocado periodicamente.\nNa muda (ecdise), o animal descarta o exoesqueleto velho, cresce enquanto o novo ainda está mole e depois o novo endurece.\nPortanto, o exoesqueleto é substituído por mudas periódicas. Alternativa D.",
+    "enganos": {
+      "A": "Supôs que bastaria o animal não ter exoesqueleto enquanto cresce, ignorando que os jovens também precisam da proteção e que ele existe desde as fases iniciais.",
+      "B": "Imaginou que as articulações, por serem flexíveis, permitiriam o exoesqueleto se abrir e expandir, confundindo flexibilidade para movimento com crescimento.",
+      "C": "Pensou no exoesqueleto como um tecido vivo que cresce junto com o corpo (como o osso do endoesqueleto), o que não acontece com essa cutícula rígida.",
+      "E": "Tomou ao pé da letra a ideia de que os sais tornam o exoesqueleto duro e concluiu que menos sais o deixariam elástico, quando a solução real é a troca, não a distensão."
+    },
+    "conceitos": ["exoesqueleto", "muda (ecdise)", "artrópodes"]
+  },
+  {
+    "id": "2024-94",
+    "enunciado": "**Impactos do microplástico**\n\nA ação de fatores abióticos aliada à biodeterioração contribuem para a formação de microplásticos, os quais se aderem a outros poluentes orgânicos apolares persistentes, como os derivados de pesticidas lipossolúveis. Há uma proporcionalidade direta entre a solubilidade desses tipos de poluentes e sua concentração nos tecidos dos organismos expostos a eles.\n\nDisponível em: www.ecycle.com.br. Acesso em: 9 dez. 2021 (adaptado).\n\nEm animais vertebrados, essa associação de poluentes será preferencialmente acumulada no tecido",
+    "alternativas": {
+      "A": "ósseo.",
+      "B": "nervoso.",
+      "C": "epitelial.",
+      "D": "adiposo.",
+      "E": "sanguíneo."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset omitiu a fonte (Disponível em: www.ecycle.com.br...).",
+    "gabarito_calculado": "D",
+    "resolucao": "Os poluentes são apolares e lipossolúveis (dissolvem-se em gordura).\nO texto diz que a concentração nos tecidos é proporcional à solubilidade do poluente naquele meio.\nO tecido rico em lipídios, onde esses compostos são mais solúveis, é o tecido adiposo.\nLogo, eles se acumulam preferencialmente no tecido adiposo. Alternativa D.",
+    "enganos": {
+      "A": "Associou acúmulo a tecidos mineralizados (como o chumbo e o estrôncio que se depositam nos ossos), sem considerar que o poluente é orgânico apolar.",
+      "B": "Lembrou que o tecido nervoso tem muitos lipídios na mielina ou que pesticidas são neurotóxicos, mas o principal reservatório de gordura do corpo é o tecido adiposo.",
+      "C": "Pensou no epitélio como porta de entrada (pele, intestino), confundindo o local de absorção com o local de acúmulo.",
+      "E": "Pensou no sangue porque ele transporta substâncias pelo corpo, mas o plasma é aquoso e não dissolve bem compostos apolares."
+    },
+    "conceitos": ["polaridade e solubilidade", "bioacumulação", "tecido adiposo"]
+  },
+  {
+    "id": "2024-95",
+    "enunciado": "Em aeroportos, por razões de segurança, os passageiros devem ter suas bagagens de mão examinadas antes do embarque, passando-as em esteiras para sua inspeção por aparelhos de raios X. Nessas inspeções, os passageiros são orientados a retirar seus computadores portáteis (notebooks ou laptops) de malas, mochilas ou bolsas para passá-los isoladamente pela esteira.\n\nQue explicação física justifica esse procedimento?",
+    "alternativas": {
+      "A": "Os raios X não interagem com os componentes metálicos do computador, o que impede a formação de imagens.",
+      "B": "Os raios X desmagnetizam o disco rígido do computador, quando refratados pelos componentes metálicos das bagagens de mão.",
+      "C": "Os raios X aquecem os materiais metálicos encontrados em bagagens de mão, quando refletidos pelos componentes do computador.",
+      "D": "Os raios X não atravessam os componentes densos do computador, o que impede a visualização de objetos que estão à frente ou atrás deles.",
+      "E": "Os raios X ionizam os materiais metálicos normalmente encontrados em bagagens de mão, quando difratados pelos componentes do computador."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "A imagem de raios X se forma pela diferença de absorção: materiais pouco densos deixam os raios passar, materiais densos (metais) os absorvem e aparecem como sombra.\nO computador tem muitos componentes metálicos e densos (bateria, placas, carcaça) que absorvem fortemente os raios X.\nDentro da mala, essa sombra encobriria os objetos que estão na frente ou atrás do computador na direção do feixe.\nPassando o computador separado, os demais itens da bagagem podem ser vistos. Alternativa D.",
+    "enganos": {
+      "A": "Inverteu o comportamento: metais interagem fortemente com raios X (absorvem), e é justamente isso que forma a sombra na imagem.",
+      "B": "Confundiu raios X com campo magnético, supondo que a radiação apaga dados do disco rígido; além disso, raios X praticamente não sofrem refração nesses materiais.",
+      "C": "Atribuiu ao procedimento uma preocupação com aquecimento, como se fosse um forno de micro-ondas, mas a dose do equipamento não aquece objetos de forma relevante.",
+      "E": "Usou o termo correto 'ionizante' para os raios X, mas o procedimento não tem a ver com ionizar metais nem com difração; o problema é a opacidade do computador."
+    },
+    "conceitos": ["raios X", "absorção de radiação", "formação de imagem"]
+  },
+  {
+    "id": "2024-96",
+    "enunciado": "Com base em testes realizados em ratos, concluiu-se que os compostos nitrosos são substâncias mutagênicas, ou seja, produzem mutações nas células e possivelmente câncer. Esses compostos podem ser obtidos pela reação entre o nitrito de sódio, que é um conservante adicionado às carnes, e o ácido clorídrico. O ácido nitroso produzido irá reagir com compostos nitrogenados, como as aminas, dando origem aos compostos nitrosos.\n\nEm qual órgão esse processo será iniciado?",
+    "alternativas": {
+      "A": "Rim.",
+      "B": "Fígado.",
+      "C": "Intestino.",
+      "D": "Pâncreas.",
+      "E": "Estômago."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No dataset falta o ponto final da alternativa E.",
+    "gabarito_calculado": "E",
+    "resolucao": "O processo começa com a reação entre o nitrito de sódio (da carne) e o ácido clorídrico.\nNo corpo, o ácido clorídrico é produzido e liberado no suco gástrico, dentro do estômago.\nÉ ali que se forma o ácido nitroso, que depois reage com aminas formando os compostos nitrosos.\nPortanto, o processo se inicia no estômago. Alternativa E.",
+    "enganos": {
+      "A": "Associou o rim à eliminação de substâncias tóxicas, mas ali não há ácido clorídrico para reagir com o nitrito.",
+      "B": "Pensou no fígado como órgão que metaboliza toxinas e drogas, ignorando que a reação depende do HCl do suco gástrico.",
+      "C": "Lembrou que a maior parte da digestão e absorção ocorre no intestino, mas o meio intestinal é neutralizado e não tem HCl.",
+      "D": "Lembrou que o pâncreas produz suco digestivo, mas o suco pancreático é básico (bicarbonato), não contém ácido clorídrico."
+    },
+    "conceitos": ["sistema digestório", "suco gástrico", "nitrosaminas"]
+  },
+  {
+    "id": "2024-97",
+    "enunciado": "**Sistemas agroflorestais (SAFs)**\n\nOs sistemas agroflorestais alinham os interesses econômicos aos ecológicos. Esses sistemas podem ser usados na recuperação ambiental de áreas degradadas que se tornaram pouco produtivas, como as utilizadas por muito tempo para pastagem. Para isso, num primeiro momento, as árvores nativas são plantadas em conjunto com culturas agrícolas anuais, como feijão, mandioca, milho e abóbora, que geram renda para os proprietários da terra e incentivam a manutenção do sistema. Em um segundo momento, são introduzidas outras espécies, como trepadeiras e arbustos, de acordo com um arranjo espacial e temporal preestabelecido. Nesse processo, ocorrerão mudanças graduais na estrutura e composição das comunidades vegetais ao longo do tempo, que culminarão no aumento da diversidade do ambiente.\n\nDisponível em: www.embrapa.br. Acesso em: 9 dez. 2021 (adaptado).\n\nO conjunto dessas mudanças graduais é análogo ao processo natural denominado",
+    "alternativas": {
+      "A": "rotação de culturas.",
+      "B": "sucessão ecológica.",
+      "C": "coevolução específica.",
+      "D": "adaptação por seleção.",
+      "E": "convergência adaptativa."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset omitiu a fonte, juntou o comando ao texto e escreveu a alternativa A como \"A rotação de culturas.\"; na prova é \"rotação de culturas.\".",
+    "gabarito_calculado": "B",
+    "resolucao": "O texto descreve mudanças graduais, ao longo do tempo, na estrutura e na composição das comunidades vegetais de uma área degradada.\nEssas mudanças levam ao aumento da diversidade, com espécies sendo substituídas e acrescentadas em etapas.\nO processo natural em que comunidades se substituem gradualmente até uma comunidade mais diversa e estável é a sucessão ecológica (aqui, secundária, pois a área já foi ocupada antes).\nAlternativa B.",
+    "enganos": {
+      "A": "Associou o plantio de feijão, milho e mandioca a uma prática agrícola, mas rotação de culturas é técnica humana de alternar cultivos, não um processo natural de mudança da comunidade.",
+      "C": "Confundiu mudança na comunidade ao longo de anos com evolução recíproca entre espécies que interagem, que ocorre em escala evolutiva.",
+      "D": "Confundiu mudança ecológica (substituição de espécies na comunidade) com mudança evolutiva das populações por seleção natural.",
+      "E": "Confundiu o processo com espécies diferentes que ficam parecidas por viver em ambientes semelhantes, o que não tem relação com a substituição gradual de comunidades."
+    },
+    "conceitos": ["sucessão ecológica", "recuperação de áreas degradadas", "biodiversidade"]
+  },
+  {
+    "id": "2024-98",
+    "enunciado": "As fibras musculares esqueléticas não são todas iguais. As fibras lentas, também conhecidas como fibras vermelhas, apresentam muitas mitocôndrias e são bem supridas por vasos sanguíneos. Já as fibras rápidas, ou fibras brancas, apresentam poucas mitocôndrias e recebem menor suprimento sanguíneo. Dessa forma, a distribuição das fibras nos músculos esqueléticos do corpo auxilia de forma diferenciada no desempenho físico de um atleta.\n\nSADAVA, D. et al. **Vida: a ciência da biologia** — volume III: plantas e animais. Porto Alegre: Artmed, 2009 (adaptado).\n\nUm atleta que sonha em disputar os Jogos Olímpicos e tem uma maior proporção de fibras brancas que fibras vermelhas teria mais vantagens na realização da prova de:",
+    "alternativas": {
+      "A": "Triatlo.",
+      "B": "Salto em altura.",
+      "C": "Marcha atlética.",
+      "D": "Maratona aquática.",
+      "E": "Ciclismo em estrada."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset transformou o título da obra da fonte (\"Vida: a ciência da biologia\") em título da questão e omitiu o restante da referência.",
+    "gabarito_calculado": "B",
+    "resolucao": "Fibras vermelhas (lentas): muitas mitocôndrias e muito sangue, metabolismo aeróbio, resistência à fadiga; servem a esforços longos.\nFibras brancas (rápidas): poucas mitocôndrias, energia sobretudo anaeróbia; contraem com força e rapidez, mas se cansam logo.\nQuem tem mais fibras brancas se sai melhor em esforços curtos, intensos e explosivos.\nEntre as provas, a única de esforço curto e explosivo é o salto em altura; as demais são provas de longa duração. Alternativa B.",
+    "enganos": {
+      "A": "Inverteu os papéis das fibras, achando que as rápidas favorecem provas longas; o triatlo é prova de resistência, que depende das fibras vermelhas aeróbias.",
+      "C": "Associou 'rápidas' a velocidade de deslocamento; a marcha atlética é prova longa, de resistência aeróbia, favorecida pelas fibras vermelhas.",
+      "D": "Inverteu os papéis das fibras; a maratona aquática dura horas e exige metabolismo aeróbio, típico das fibras com muitas mitocôndrias.",
+      "E": "Associou a velocidade das bicicletas às fibras rápidas, mas o ciclismo em estrada é prova longa de resistência, dependente das fibras vermelhas."
+    },
+    "conceitos": ["fibras musculares", "metabolismo aeróbio e anaeróbio", "mitocôndria"]
+  },
+  {
+    "id": "2024-100",
+    "enunciado": "Uma agricultora, com a intenção de comercializar o milho recém-colhido, testou uma forma de preservar o sabor adocicado do seu produto. O melhor resultado foi obtido quando ela imergiu as espigas em água fervente durante alguns minutos e, em seguida, em água gelada. Com esse procedimento, parte da glicose do milho não foi transformada em amido, mantendo o seu sabor adocicado.\n\nUtilizando esse procedimento, o sabor foi conservado porque houve",
+    "alternativas": {
+      "A": "desnaturação enzimática pela alta temperatura.",
+      "B": "conversão de nutrientes pela redução de temperatura.",
+      "C": "degradação das reservas nutritivas pelo choque térmico.",
+      "D": "impedimento da entrada de oxigênio pela fervura da água.",
+      "E": "desidratação dos grãos por causa da alteração da temperatura."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Após a colheita, enzimas do grão continuam convertendo glicose em amido, e o milho perde o sabor doce.\nA imersão em água fervente aquece o grão e desnatura essas enzimas (proteínas), que perdem a forma do sítio ativo e deixam de funcionar.\nA água gelada em seguida só interrompe o cozimento.\nSem enzimas ativas, a glicose não vira amido e o sabor doce é mantido. Alternativa A.",
+    "enganos": {
+      "B": "Deu o papel principal à água gelada, achando que o frio converte nutrientes; o frio apenas interrompe o cozimento, e quem inativa as enzimas é o calor.",
+      "C": "Imaginou que o choque térmico quebra as reservas (o amido) em açúcar, mas o texto diz que a glicose deixou de ser transformada em amido, não que o amido foi degradado.",
+      "D": "Pensou que a conversão dependeria de oxigênio e que a fervura o bloquearia, sem relação com a ação enzimática descrita.",
+      "E": "Supôs que a variação de temperatura secaria os grãos, mas eles foram imersos em água e a desidratação não explica a manutenção da glicose."
+    },
+    "conceitos": ["enzimas", "desnaturação proteica", "amido e glicose"]
+  },
+  {
+    "id": "2024-107",
+    "enunciado": "No senso comum, considera-se, ainda hoje, que compostos orgânicos são substâncias presentes nos seres vivos. Na Química, a expressão “compostos orgânicos” tem um uso histórico de mais de 200 anos, adquirindo diferentes conotações ao longo do desenvolvimento dessa ciência. Atualmente, atribui-se a essa expressão outro significado.\n\nA concepção científica atual define esses compostos como substâncias",
+    "alternativas": {
+      "A": "benéficas à saúde humana.",
+      "B": "capazes de serem biodegradadas.",
+      "C": "formadas a partir de gás carbônico.",
+      "D": "produzidas sem o uso de agrotóxicos.",
+      "E": "contendo carbono como elemento principal."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "O texto lembra que a ideia antiga (teoria da força vital) ligava compostos orgânicos aos seres vivos.\nApós a síntese da ureia por Wöhler (1828), essa ideia foi abandonada.\nHoje a Química Orgânica é definida como a química dos compostos do carbono, independentemente da origem.\nAlternativa E.",
+    "enganos": {
+      "A": "Confundiu o termo químico com o uso popular de 'orgânico' como natural e saudável; muitos compostos orgânicos são tóxicos.",
+      "B": "Associou 'orgânico' a 'matéria orgânica' que se decompõe; muitos compostos orgânicos, como plásticos e pesticidas, são persistentes.",
+      "C": "Lembrou que a fotossíntese produz compostos orgânicos a partir de $\\mathrm{CO_2}$, generalizando a origem biológica para a definição.",
+      "D": "Confundiu com 'alimento orgânico' (cultivado sem agrotóxicos), justamente o senso comum que o texto diz ter sido superado."
+    },
+    "conceitos": ["química orgânica", "compostos de carbono", "teoria da força vital"]
+  },
+  {
+    "id": "2024-109",
+    "enunciado": "Uma ambulância em alta velocidade com a sirene ligada desloca-se em direção a um radar operado por uma pessoa. O radar emite ondas de rádio com frequência $f_0$ que são refletidas pela dianteira da ambulância, retornando para o detector com frequência $f_r$. A percepção do operador do radar, em relação ao som emitido pela sirene, é de que este se altera à medida que a ambulância se aproxima ou se afasta.\n\nDurante a aproximação, como o operador percebe o som da sirene e qual é a relação entre as frequências $f_r$ e $f_0$ medidas pelo radar?",
+    "alternativas": {
+      "A": "Mais grave do que o som emitido e $f_r < f_0$.",
+      "B": "Mais agudo do que o som emitido e $f_r < f_0$.",
+      "C": "Mais agudo do que o som emitido e $f_r = f_0$.",
+      "D": "Mais agudo do que o som emitido e $f_r > f_0$.",
+      "E": "Mais grave do que o som emitido e $f_r > f_0$."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreveu \"f zero\" e \"fr\" por extenso; o original usa $f_0$ e $f_r$ com índice.",
+    "gabarito_calculado": "D",
+    "resolucao": "Efeito Doppler: quando fonte e observador se aproximam, a frequência percebida é maior que a emitida.\nA sirene se aproxima do operador, então ele ouve uma frequência maior: som mais agudo.\nAs ondas do radar batem na ambulância, que se aproxima; ela funciona como um refletor em movimento em direção ao radar.\nA onda refletida volta com frequência maior que a emitida: $f_r > f_0$ (é assim que o radar mede velocidade).\nAlternativa D.",
+    "enganos": {
+      "A": "Inverteu o efeito Doppler nos dois casos, associando aproximação a diminuição de frequência (som mais grave e $f_r < f_0$).",
+      "B": "Acertou o som mais agudo, mas achou que a onda refletida perde frequência na reflexão, sem aplicar o Doppler ao refletor que se aproxima.",
+      "C": "Acertou a sirene, mas achou que a reflexão não altera a frequência, como num espelho parado, esquecendo que a ambulância está em movimento.",
+      "E": "Confundiu 'grave' com 'agudo' (associou som alto/intenso a grave) e aplicou o Doppler corretamente só ao radar."
+    },
+    "conceitos": ["efeito Doppler", "frequência e altura do som", "radar"]
+  },
+  {
+    "id": "2024-112",
+    "enunciado": "O desenvolvimento da biotecnologia e da clonagem gênica em procariotos fez com que a produção de proteínas se tornasse mais intensa, rápida e econômica. Para a produção de hormônios, enzimas e proteínas de resistência a drogas, uma variação da técnica de reação em cadeia pela polimerase (PCR, na sigla em inglês) utiliza a enzima transcriptase reversa (RT-PCR), que sintetiza moléculas de DNA complementares a partir de fitas de RNA.\n\nNesse contexto, essa técnica é importante para detectar genes",
+    "alternativas": {
+      "A": "expressos.",
+      "B": "plasmidiais.",
+      "C": "bacterianos.",
+      "D": "dominantes.",
+      "E": "autossômicos."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "A RT-PCR parte de RNA: a transcriptase reversa produz DNA complementar (cDNA) a partir dele.\nNa célula, o RNA mensageiro só existe quando o gene está sendo transcrito, ou seja, expresso.\nAssim, detectar o RNA de um gene indica que ele está ativo naquela célula, e o cDNA obtido corresponde à sequência que codifica a proteína.\nAlternativa A.",
+    "enganos": {
+      "B": "Associou clonagem em procariotos a plasmídeos (vetores usados na técnica), mas a RT-PCR detecta RNA de qualquer origem, não só genes de plasmídeos.",
+      "C": "Ligou a técnica às bactérias citadas no texto como produtoras de proteínas, confundindo o organismo usado na clonagem com o tipo de gene detectado.",
+      "D": "Confundiu gene expresso (transcrito em RNA) com alelo dominante (que se manifesta no fenótipo do heterozigoto), conceitos de níveis diferentes.",
+      "E": "Associou 'gene' a cromossomo humano; a RT-PCR não distingue genes autossômicos de genes ligados ao sexo, e sim genes transcritos dos não transcritos."
+    },
+    "conceitos": ["RT-PCR", "transcrição reversa", "expressão gênica"]
+  },
+  {
+    "id": "2024-114",
+    "enunciado": "O soro caseiro serve para combater a desidratação por meio da reposição da água e sais minerais perdidos, por exemplo, por diarreia. Uma receita simples para a sua preparação consiste em utilizar duas colheres grandes (de sopa) de açúcar e duas colheres pequenas (de café) de sal de cozinha, dissolvidos em 2 L de água fervida, obtendo-se uma solução com concentração de íon sódio de 1,4 mg/mL.\n\nConsidere as massas molares: NaCl = 58,5 g/mol; Na = 23 g/mol.\n\nQual é o valor mais próximo da massa, em grama, de cloreto de sódio presente em uma única colher pequena?",
+    "alternativas": {
+      "A": "0,7 g",
+      "B": "1,8 g",
+      "C": "2,8 g",
+      "D": "3,6 g",
+      "E": "7,0 g"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreveu as unidades por extenso (\"miligrama por mililitro\", \"gramas por mol\", \"grama\"); o original usa mg/mL, g/mol e g, sem ponto final nas alternativas.",
+    "gabarito_calculado": "D",
+    "resolucao": "Massa de sódio no soro: $1,4\\ \\mathrm{mg/mL} \\times 2\\,000\\ \\mathrm{mL} = 2\\,800$ mg $= 2,8$ g de Na.\nCada 58,5 g de NaCl contém 23 g de Na, então a massa de NaCl é $2,8 \\times \\frac{58,5}{23} \\approx 7,1$ g.\nEssa massa corresponde a duas colheres pequenas de sal.\nUma colher: $\\frac{7,1}{2} \\approx 3,6$ g. Alternativa D.",
+    "enganos": {
+      "A": "Usou 1 L em vez de 2 L (1,4 g de Na), dividiu por 2 colheres e não converteu sódio em cloreto de sódio: 0,7 g.",
+      "B": "Usou 1 L em vez de 2 L: $1,4 \\times \\frac{58,5}{23} \\approx 3,6$ g de NaCl e, dividindo por 2, 1,8 g.",
+      "C": "Calculou a massa de sódio nos 2 L (2,8 g) e parou aí, sem converter para NaCl nem dividir pelas duas colheres.",
+      "E": "Calculou corretamente o NaCl total (cerca de 7,1 g), mas esqueceu que são duas colheres e não dividiu por 2."
+    },
+    "conceitos": ["concentração em massa", "massa molar", "proporção estequiométrica"]
+  },
+  {
+    "id": "2024-117",
+    "enunciado": "O biogás é uma alternativa energética muito importante, pois, além de reduzir a dependência por combustíveis fósseis, sua obtenção pode ser realizada a partir de resíduos da produção agroindustrial. Considere que o biogás produzido em um empreendimento de suinocultura contém 70% em volume de metano (massa molar 16 g/mol; volume molar 22 L/mol). Ele será utilizado para geração de energia em substituição ao etanol (massa molar 46 g/mol) em um gerador no qual 1 $\\mathrm{m^3}$ de biogás de origem suína substitui 0,59 L de etanol anidro (densidade 0,78 g/mL).\n\nNessas condições, a massa de metano necessária para substituir 10 mol de etanol na produção de energia é mais próxima de",
+    "alternativas": {
+      "A": "300 g.",
+      "B": "400 g.",
+      "C": "510 g.",
+      "D": "590 g.",
+      "E": "720 g."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset escreveu \"70 por cento\" e as unidades por extenso (inclusive \"1 metro cúbico\"); o original usa 70%, g/mol, L/mol e $\\mathrm{m^3}$.",
+    "gabarito_calculado": "C",
+    "resolucao": "10 mol de etanol: $10 \\times 46 = 460$ g.\nVolume desse etanol: $\\frac{460\\ \\mathrm{g}}{0,78\\ \\mathrm{g/mL}} \\approx 590$ mL $= 0,59$ L.\nPelo texto, 0,59 L de etanol é substituído por 1 $\\mathrm{m^3}$ = 1 000 L de biogás.\nMetano nesse biogás: $0,70 \\times 1\\,000 = 700$ L, ou seja, $\\frac{700}{22} \\approx 31,8$ mol.\nMassa de metano: $31,8 \\times 16 \\approx 509$ g, cerca de 510 g. Alternativa C.",
+    "enganos": {
+      "A": "Fez a conta certa até 509 g e multiplicou de novo pelo volume 0,59 (tratando-o como fator): $509 \\times 0,59 \\approx 300$ g.",
+      "B": "Usou a densidade do etanol de forma indevida sobre a massa de metano: $509 \\times 0,78 \\approx 397$ g, cerca de 400 g.",
+      "D": "Confundiu o volume de etanol (cerca de 590 mL) com a massa de metano procurada, tomando 590 como resposta.",
+      "E": "Esqueceu que só 70% do biogás é metano e considerou os 1 000 L inteiros: $\\frac{1\\,000}{22} \\times 16 \\approx 727$ g."
+    },
+    "conceitos": ["estequiometria", "volume molar", "densidade", "biogás"]
+  },
+  {
+    "id": "2024-119",
+    "enunciado": "**Brasil fecha 2020 entre os maiores recicladores de latas de alumínio**\n\nA bauxita contém alumina ($\\mathrm{Al_2O_3}$), que é a matéria-prima para produção do alumínio (Al). De forma geral, são necessários 50 kg de bauxita para produzir 10 kg de alumínio. O Brasil fechou 2020 como um dos principais líderes mundiais em reciclagem de latas de alumínio. De acordo com levantamento da Associação Brasileira dos Fabricantes de Latas de Alumínio (Abralatas), o país obteve um índice de reciclagem de 97,4%, de um total de $4,0 \\times 10^5$ toneladas de latas vendidas. Considere que a lata é constituída de alumínio puro.\n\nDisponível em: https://agenciabrasil.ebc.com.br. Acesso em: 30 nov. 2021 (adaptado).\n\nLevando em conta apenas a reciclagem de latas, qual é o valor mais próximo da massa de bauxita, em tonelada, que deixou de ser extraída da natureza em 2020 no Brasil?",
+    "alternativas": {
+      "A": "$1,0 \\times 10^4$ ton",
+      "B": "$3,9 \\times 10^5$ ton",
+      "C": "$5,0 \\times 10^5$ ton",
+      "D": "$1,9 \\times 10^6$ ton",
+      "E": "$2,0 \\times 10^7$ ton"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset achatou a notação (\"Al2O3\", \"4,0 vezes 10 elevado a 5\", \"97,4 por cento\", \"quilogramas\") e trocou \"ton\" por \"toneladas\" nas alternativas; também omitiu a fonte.",
+    "gabarito_calculado": "D",
+    "resolucao": "Alumínio reciclado: $0,974 \\times 4,0 \\times 10^5 \\approx 3,9 \\times 10^5$ t.\nPela proporção do texto, 50 kg de bauxita geram 10 kg de alumínio: são 5 t de bauxita por tonelada de alumínio.\nBauxita poupada: $5 \\times 3,9 \\times 10^5 \\approx 1,95 \\times 10^6$ t.\nO valor mais próximo é $1,9 \\times 10^6$ t. Alternativa D.",
+    "enganos": {
+      "A": "Calculou a parte não reciclada (2,6% de $4,0 \\times 10^5$, cerca de $1,0 \\times 10^4$ t) e ainda esqueceu de converter alumínio em bauxita.",
+      "B": "Calculou a massa de alumínio reciclado ($3,9 \\times 10^5$ t) e parou aí, sem converter para bauxita pela proporção 5 : 1.",
+      "C": "Usou a parte não reciclada (cerca de $1,0 \\times 10^4$ t) e multiplicou por 50 em vez de usar a razão 5 : 1, chegando a cerca de $5 \\times 10^5$ t.",
+      "E": "Multiplicou o alumínio reciclado por 50 (o número de quilos de bauxita) em vez de pela razão 50/10 = 5: $3,9 \\times 10^5 \\times 50 \\approx 2,0 \\times 10^7$ t."
+    },
+    "conceitos": ["proporção", "porcentagem", "reciclagem de alumínio"]
+  },
+  {
+    "id": "2024-121",
+    "enunciado": "O vírus linfotrópico de células T humanas tipo 1 (HTLV-1) é um retrovírus do mesmo grupo do vírus da imunodeficiência humana (HIV). Ambos são transmitidos da mesma forma e infectam as mesmas células de defesa do organismo, os linfócitos T. A diferença entre eles é que o HTLV-1 estimula o aumento da produção desses linfócitos, enquanto o HIV causa destruição dessas células.\n\nROMANELLI, L. C. F.; CARAMELLI, P.; PROIETTI, A. B. F. C. O vírus linfotrópico de células T humanas tipo 1 (HTLV-1): quando suspeitar da infecção? **Revista da Associação Médica Brasileira**, v. 56, 2010 (adaptado).\n\nUma possível consequência da infecção por HTLV-1 é o desenvolvimento de",
+    "alternativas": {
+      "A": "aids.",
+      "B": "câncer.",
+      "C": "diabetes.",
+      "D": "hepatite B.",
+      "E": "hemorragia."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset transformou o título do artigo da fonte em título da questão; na prova não há título, só a referência abaixo do texto.",
+    "gabarito_calculado": "B",
+    "resolucao": "O texto diz que o HTLV-1 estimula o aumento da produção de linfócitos T.\nProliferação celular exagerada e descontrolada é a característica do câncer.\nDe fato, o HTLV-1 está associado à leucemia/linfoma de células T do adulto.\nAlternativa B.",
+    "enganos": {
+      "A": "Associou o HTLV-1 ao HIV por serem retrovírus do mesmo grupo, ignorando a diferença destacada: o HTLV-1 aumenta os linfócitos em vez de destruí-los.",
+      "C": "Não há relação direta entre o HTLV-1 e a produção ou ação da insulina; a alternativa só seria escolhida por chute ou por associar 'doença crônica' em geral.",
+      "D": "Confundiu vírus diferentes com mesma forma de transmissão (sangue, sexo): a hepatite B é causada por outro vírus, o HBV.",
+      "E": "Associou infecção de células do sangue a sangramento, confundindo linfócitos (defesa) com plaquetas (coagulação)."
+    },
+    "conceitos": ["retrovírus", "linfócitos T", "proliferação celular e câncer"]
+  },
+  {
+    "id": "2024-127",
+    "enunciado": "Indústrias farmacêuticas e instituições científicas têm trabalhado no desenvolvimento de diferentes vacinas contra a covid-19. Em algumas dessas vacinas, a principal estrutura antigênica é uma proteína de superfície viral chamada espícula (*spike*, em inglês). Essa proteína só existe em coronavírus, incluindo o SARS-CoV-2. Ela se liga a receptores de membrana específicos das células humanas por um mecanismo do tipo “chave-fechadura”. Dessa forma, os vírus entram nas células, podendo se multiplicar e acarretar a doença.\n\n**O que são vacinas?** Disponível em: www.cienciaviva.pt. Acesso em: 30 nov. 2021 (adaptado).\n\nNessas vacinas, essa proteína viral induz a",
+    "alternativas": {
+      "A": "produção de anticorpos específicos contra os vírus.",
+      "B": "imunidade passiva contra o desenvolvimento da doença.",
+      "C": "alteração genômica para formação da memória imunológica.",
+      "D": "neutralização direta dos vírus presentes na circulação sanguínea.",
+      "E": "modificação dos receptores de membrana específicos para o vírus."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset transformou o título da fonte (\"O que são vacinas?\") em título da questão e omitiu o ponto final da alternativa E.",
+    "gabarito_calculado": "A",
+    "resolucao": "Na vacina, a proteína espícula atua como antígeno.\nO sistema imune reconhece esse antígeno e é estimulado a produzir anticorpos específicos contra ele (e células de memória).\nComo a espícula só existe no coronavírus, esses anticorpos reconhecem o vírus e podem impedir sua ligação aos receptores das células.\nTrata-se de imunização ativa. Alternativa A.",
+    "enganos": {
+      "B": "Confundiu vacina (imunidade ativa: o corpo produz os anticorpos) com soro (imunidade passiva: anticorpos prontos).",
+      "C": "Imaginou que a vacina altera o DNA do vacinado; a memória imunológica vem da ativação de linfócitos de memória, não de alteração genômica induzida pela vacina.",
+      "D": "Atribuiu à própria proteína vacinal a ação de neutralizar vírus; quem neutraliza são os anticorpos produzidos depois, a proteína só estimula sua produção.",
+      "E": "Leu o mecanismo 'chave-fechadura' do texto e achou que a vacina mudaria a 'fechadura' (os receptores humanos), quando ela age gerando anticorpos contra a 'chave'."
+    },
+    "conceitos": ["vacinação", "antígeno e anticorpo", "imunidade ativa"]
+  },
+  {
+    "id": "2024-134",
+    "enunciado": "Moradores do Brooklin, bairro de São Paulo, perdem o sono com um som alto, constante e estridente. O barulho é causado por anfíbios anuros trazidos do Caribe, da espécie *Eleutherodactylus jahnstonei*, que têm tamanho um pouco maior que o de um grão de feijão e que encontraram na capital um ambiente favorável. Cientistas foram até o local e encontraram esses animais nos jardins das casas.\n\n**Pererecas-assobiadoras tiram o sono de moradores do Brooklin**. Disponível em: http://g1.globo.com. Acesso em: 26 mar. 2015 (adaptado).\n\nAo emitirem o som estridente, esses anfíbios",
+    "alternativas": {
+      "A": "indicam que estão fora de seu hábitat natural.",
+      "B": "alertam para a presença de poluição urbana.",
+      "C": "sinalizam a existência de superpopulação.",
+      "D": "direcionam insetos para sua alimentação.",
+      "E": "atraem fêmeas para o acasalamento."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O dataset transformou o título da fonte em título da questão e omitiu o restante da referência.",
+    "gabarito_calculado": "E",
+    "resolucao": "Em anuros (sapos, rãs e pererecas), o canto é emitido principalmente pelos machos.\nEsse canto de anúncio serve para atrair fêmeas da mesma espécie e marcar território na época reprodutiva.\nO texto diz que os animais encontraram ambiente favorável, ou seja, estão se reproduzindo ali.\nPortanto, o som tem função reprodutiva. Alternativa E.",
+    "enganos": {
+      "A": "Misturou o contexto da notícia (espécie exótica trazida do Caribe) com a função biológica do canto, que é a mesma no hábitat de origem.",
+      "B": "Associou animais em cidade a indicadores de poluição; o canto não é resposta à poluição, e anfíbios bioindicadores mostram poluição pelo seu desaparecimento, não pelo canto.",
+      "C": "Confundiu o efeito percebido (muitos animais fazendo barulho) com a função do canto de cada indivíduo.",
+      "D": "Imaginou que o som atrai presas, mas anuros caçam insetos de forma visual e com a língua; o canto é comunicação entre indivíduos da espécie."
+    },
+    "conceitos": ["comunicação animal", "comportamento reprodutivo", "anfíbios anuros"]
+  }
+]

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "2025-151",
+    "enunciado": "Para acompanhar o fluxo de visitantes em seu prédio, uma empresa estabeleceu um código de identificação para a visitação. De acordo com a regra estabelecida, cada visitante será identificado com um código sequencial numérico com 7 dígitos, determinado, da esquerda para a direita, da seguinte forma:\n\n- o primeiro dígito indica o andar ao qual o visitante se dirige, que é um número de 1 a 4;\n- os dois próximos dígitos correspondem ao número do setor da empresa ao qual o visitante se destina. Esse número varia de 01 a 20;\n- os três dígitos seguintes correspondem ao número do funcionário da empresa com quem o visitante irá se reunir. Esse número varia de 001 a 135;\n- o último dígito indica se o visitante chegou à empresa pela manhã, dígito 0, ou à tarde, dígito 1.\n\nUm visitante chegou à empresa às 10 horas da manhã para se reunir com o funcionário identificado pelo número 109, que trabalha no setor 08 da empresa, localizado no 2º andar.\n\nO código de identificação desse visitante é",
+    "alternativas": {
+      "A": "0109082.",
+      "B": "0281090.",
+      "C": "1010982.",
+      "D": "2081090.",
+      "E": "2810910."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "As regras dos dígitos aparecem como lista com marcadores na prova.",
+    "gabarito_calculado": "D",
+    "resolucao": "Andar (1 dígito): 2.\nSetor (2 dígitos): 08.\nFuncionário (3 dígitos): 109.\nPeríodo (1 dígito): chegou às 10 h da manhã, então 0.\nJuntando na ordem: 2 | 08 | 109 | 0 = 2081090.\nAlternativa D.",
+    "enganos": {
+      "A": "Montou o código na ordem inversa (período, funcionário, setor, andar): 0 | 109 | 08 | 2 = 0109082.",
+      "B": "Escreveu o setor sem o zero à esquerda (2 | 8 | 109 | 0 = 281090) e completou os 7 dígitos com um 0 no início.",
+      "C": "Usou a hora de chegada (10) no lugar do dígito do período e inverteu a ordem: 10 | 109 | 8 | 2 = 1010982.",
+      "E": "Escreveu o setor sem o zero à esquerda e usou a hora 10 no lugar do dígito do período: 2 | 8 | 109 | 10 = 2810910."
+    },
+    "conceitos": [
+      "princípio posicional",
+      "códigos numéricos",
+      "interpretação de regras"
+    ]
+  },
+  {
+    "id": "2025-152",
+    "enunciado": "Quatro candidatos se apresentaram para realizar a prova de um concurso. Antes de iniciar a prova, os celulares dos quatro candidatos foram recolhidos pelo aplicador, que os guardou, cada um, dentro de um envelope preto. Ao término da prova, o aplicador devolveu os quatro envelopes com os celulares aos quatro candidatos, de maneira aleatória, já que não havia feito a identificação dos envelopes.\n\nA probabilidade de que todos os candidatos tenham recebido de volta os envelopes com os seus respectivos celulares é",
+    "alternativas": {
+      "A": "$\\frac{1}{2}$",
+      "B": "$\\frac{1}{10}$",
+      "C": "$\\frac{1}{16}$",
+      "D": "$\\frac{1}{24}$",
+      "E": "$\\frac{1}{256}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "Cada distribuição dos 4 envelopes aos 4 candidatos é uma permutação.\nTotal de distribuições: $4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.\nSó uma delas entrega cada envelope ao dono certo.\nProbabilidade: $\\frac{1}{24}$.\nAlternativa D.",
+    "enganos": {
+      "A": "Pensou em só dois resultados possíveis (todos acertam ou não) e atribuiu chance de $\\frac{1}{2}$.",
+      "B": "Somou as possibilidades em vez de multiplicar: $4 + 3 + 2 + 1 = 10$, obtendo $\\frac{1}{10}$.",
+      "C": "Contou $4 \\times 4 = 16$ possibilidades, como se fossem só dois sorteios independentes de 4 opções.",
+      "E": "Tratou cada entrega como independente e com reposição, cada uma com chance $\\frac{1}{4}$: $\\left(\\frac{1}{4}\\right)^4 = \\frac{1}{256}$."
+    },
+    "conceitos": [
+      "probabilidade",
+      "permutação",
+      "fatorial"
+    ]
+  },
+  {
+    "id": "2025-153",
+    "enunciado": "Em um jogo digital, há três personagens: um herói e dois vilões. A programação é feita de tal forma que o herói sempre será atacado pelo vilão que estiver mais próximo dele. Uma das maneiras de “confundir” os vilões é movimentar o herói por trajetórias que o mantenha equidistante dos vilões, gerando indefinição entre eles e, com isso, não sendo atacado.\n\nPara a programação de uma das etapas desse jogo, o programador considerou, no plano cartesiano, o quadrado STUV como a região de movimentação dos personagens, onde V e T representam as posições fixas dos vilões, e S, a posição inicial do herói, como apresentado na figura.\n\nQual é a equação da trajetória em que o herói poderá se movimentar sem ser atacado?",
+    "alternativas": {
+      "A": "$y = -3x + 20$",
+      "B": "$y = -3x + 16$",
+      "C": "$y = -3x - 20$",
+      "D": "$y = 3x + 16$",
+      "E": "$y = 3x - 16$"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "A figura mostra o quadrado STUV no plano cartesiano com S (6 ; 2) e V (8 ; 6) rotulados; T e U aparecem sem coordenadas (T fica em (2 ; 4) pela geometria do quadrado).",
+    "gabarito_calculado": "A",
+    "resolucao": "O herói deve ficar equidistante de V e T: o lugar geométrico é a mediatriz de $\\overline{VT}$, que no quadrado é a diagonal SU.\nLado SV: $\\vec{SV} = (2, 4)$. O lado ST é perpendicular e de mesmo tamanho: $\\vec{ST} = (-4, 2)$, logo $T = (2, 4)$.\nPonto médio de VT: $\\left(\\frac{8+2}{2}, \\frac{6+4}{2}\\right) = (5, 5)$; inclinação de VT: $\\frac{6-4}{8-2} = \\frac{1}{3}$.\nA mediatriz tem inclinação $-3$: $y - 5 = -3(x - 5) \\Rightarrow y = -3x + 20$.\nConferindo com S (6 ; 2): $-18 + 20 = 2$. Alternativa A.",
+    "enganos": {
+      "B": "Usou a inclinação certa passando por S, mas errou o sinal ao isolar y: $y - 2 = -3(x - 6) \\Rightarrow y = -3x + 18 - 2 = -3x + 16$.",
+      "C": "Achou a inclinação certa, mas trocou o sinal do coeficiente linear ao montar a equação, chegando a $y = -3x - 20$.",
+      "D": "Tomou a inclinação 3 (inverso de $\\frac{1}{3}$ sem trocar o sinal) e ainda errou o sinal do termo independente ao passar por S, obtendo $y = 3x + 16$.",
+      "E": "Esqueceu que a perpendicular tem inclinação oposta e inversa e usou 3 passando por S: $2 = 3 \\cdot 6 + b \\Rightarrow b = -16$."
+    },
+    "conceitos": [
+      "geometria analítica",
+      "mediatriz",
+      "equação da reta",
+      "retas perpendiculares"
+    ]
+  },
+  {
+    "id": "2025-154",
+    "enunciado": "Uma livraria comercializa livros dos seguintes gêneros literários: ficção científica, autoajuda, romance e biografia. O gráfico apresenta o estoque dos livros que essa livraria tem, por gênero literário e por nacionalidade do autor, bem como a demanda por gênero literário, obtida por meio de uma enquete feita com seus clientes habituais.\n\nO gerente da livraria fará a encomenda de novos exemplares somente do gênero cuja quantidade em estoque seja insuficiente para atender a demanda constatada pela enquete.\n\nO gênero de livro do qual o gerente deverá encomendar mais exemplares é",
+    "alternativas": {
+      "A": "ficção, pois é o que apresenta maior demanda.",
+      "B": "biografia, pois é o gênero que tem a menor demanda.",
+      "C": "autoajuda, pois a quantidade em estoque é inferior à demanda.",
+      "D": "biografia, pois é o gênero que tem a menor quantidade de livros em estoque.",
+      "E": "romance, pois é o que apresenta o menor estoque de livros de autores brasileiros."
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Gráfico 'Estoque e demanda por livros': barras de autor brasileiro e estrangeiro e linha de demanda. Valores lidos: Ficção 80 e 120 (demanda 160); Autoajuda 50 e 80 (demanda 135); Romance 40 e 105 (demanda 140); Biografia 45 e 50 (demanda 80). Alguns valores ficam entre linhas de grade.",
+    "gabarito_calculado": "C",
+    "resolucao": "Estoque total por gênero = autor brasileiro + autor estrangeiro.\nFicção: $80 + 120 = 200 \\geq 160$ (suficiente).\nAutoajuda: $50 + 80 = 130 < 135$ (insuficiente).\nRomance: $40 + 105 = 145 \\geq 140$ (suficiente); Biografia: $45 + 50 = 95 \\geq 80$ (suficiente).\nSó a autoajuda tem estoque menor que a demanda. Alternativa C.",
+    "enganos": {
+      "A": "Escolheu o gênero de maior demanda sem somar o estoque, que em ficção (200) supera a demanda (160).",
+      "B": "Olhou apenas a demanda e escolheu o menor valor, sem compará-la com o estoque.",
+      "D": "Escolheu o gênero com menor estoque total (95) sem perceber que ele ainda supera a demanda (80).",
+      "E": "Comparou só a barra de autores brasileiros (romance 40) com a demanda, ignorando o estoque de autores estrangeiros."
+    },
+    "conceitos": [
+      "leitura de gráficos",
+      "comparação de quantidades"
+    ]
+  },
+  {
+    "id": "2025-155",
+    "enunciado": "Dez casais fundaram um grupo de dança e decidiram constituir uma diretoria com três cargos: presidente, secretário e tesoureiro. Para maior representatividade, decidiu-se que no máximo uma pessoa por casal poderá ocupar um cargo nessa diretoria.\n\nQuantas diretorias diferentes podem ser constituídas por esses 10 casais?",
+    "alternativas": {
+      "A": "10 × 9 × 8",
+      "B": "20 × 18 × 16",
+      "C": "20 × 19 × 18",
+      "D": "10 × 9 × 8 × 2",
+      "E": "20 × 18 × 16 × 2"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Presidente: qualquer uma das 20 pessoas.\nSecretário: não pode ser o presidente nem seu cônjuge, sobram $20 - 2 = 18$.\nTesoureiro: exclui os dois casais já usados, sobram $20 - 4 = 16$.\nOs cargos são distintos, então a ordem importa: $20 \\times 18 \\times 16$.\nAlternativa B.",
+    "enganos": {
+      "A": "Escolheu os casais em ordem ($10 \\times 9 \\times 8$), mas esqueceu de escolher qual pessoa de cada casal assume o cargo (faltou $2^3$).",
+      "C": "Ignorou a restrição de no máximo uma pessoa por casal e contou arranjos simples de 20 pessoas: $20 \\times 19 \\times 18$.",
+      "D": "Escolheu os casais em ordem e multiplicou por 2 uma única vez, em vez de $2 \\times 2 \\times 2$ (um fator para cada cargo).",
+      "E": "Fez a contagem correta e ainda multiplicou por 2 a mais, como se fosse preciso escolher novamente o membro do casal."
+    },
+    "conceitos": [
+      "análise combinatória",
+      "princípio fundamental da contagem"
+    ]
+  },
+  {
+    "id": "2025-156",
+    "enunciado": "Um artista, que costuma fazer desenhos com areia na praia, pediu a um banhista que fizesse um pequeno desenho, que serviria de esboço para uma grande obra de arte a ser feita na areia. Esse desenho está representado na figura.\n\nApós a conclusão, a obra de arte obtida manteve as mesmas proporções do desenho feito pelo banhista, sendo que as medidas indicadas na figura foram ampliadas para 30 m.\n\nEm qual escala esse desenho representa a obra de arte?",
+    "alternativas": {
+      "A": "1 : 1,5",
+      "B": "1 : 2,25",
+      "C": "1 : 10",
+      "D": "1 : 100",
+      "E": "1 : 150"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "A figura é um desenho de sol com as cotas 20 cm (largura) e 20 cm (altura); a única informação necessária da figura é a medida de 20 cm, que não aparece no texto.",
+    "gabarito_calculado": "E",
+    "resolucao": "Na figura, as medidas indicadas são 20 cm; na obra, viraram 30 m.\nConvertendo para a mesma unidade: $30 \\text{ m} = 3\\,000 \\text{ cm}$.\nEscala = desenho : real = $20 : 3\\,000$.\nDividindo por 20: $1 : 150$.\nAlternativa E.",
+    "enganos": {
+      "A": "Dividiu 30 por 20 sem converter metros em centímetros: $\\frac{30}{20} = 1{,}5$.",
+      "B": "Não converteu as unidades e ainda elevou a razão ao quadrado, como se fosse escala de área: $1{,}5^2 = 2{,}25$.",
+      "C": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa ou erro de conversão de unidades.",
+      "D": "Confundiu a escala com o fator de conversão de metro para centímetro (1 m = 100 cm), sem dividir pela medida do desenho."
+    },
+    "conceitos": [
+      "escala",
+      "conversão de unidades",
+      "razão"
+    ]
+  },
+  {
+    "id": "2025-157",
+    "enunciado": "O cortisol é um hormônio produzido pelas glândulas adrenais e pode ser considerado um importante marcador do estresse fisiológico. Em um estudo desenvolvido com enfermeiros, foi verificado que a concentração de cortisol salivar em um dia de trabalho, denotada por T, era, em média, 1,59 vezes a concentração de cortisol salivar em um dia de folga, denotada por F.\n\nROCHA, M. C. P. et al. Estresse em enfermeiros: o uso do cortisol salivar no dia de trabalho e de folga. **Rev. Esc. Enferm. USP**, n. 5, 2013 (adaptado).\n\nNesse estudo, a relação obtida entre T e F foi",
+    "alternativas": {
+      "A": "$T = 1{,}59 + F$",
+      "B": "$F = 1{,}59 + T$",
+      "C": "$\\frac{T}{F} = 1{,}59$",
+      "D": "$\\frac{F}{T} = 1{,}59$",
+      "E": "$F \\cdot T = 1{,}59$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "“T era 1,59 vezes F” significa $T = 1{,}59 \\cdot F$.\nDividindo os dois lados por F: $\\frac{T}{F} = 1{,}59$.\nAlternativa C.",
+    "enganos": {
+      "A": "Interpretou “1,59 vezes” como “1,59 a mais”, transformando a relação multiplicativa em soma: $T = 1{,}59 + F$.",
+      "B": "Trocou a multiplicação por soma e ainda inverteu os papéis de T e F.",
+      "D": "Montou a razão invertida, colocando a folga no numerador: $\\frac{F}{T}$.",
+      "E": "Escreveu o produto das concentrações em vez do quociente entre elas."
+    },
+    "conceitos": [
+      "razão",
+      "linguagem algébrica"
+    ]
+  },
+  {
+    "id": "2025-158",
+    "enunciado": "Um estacionamento possui 120 vagas para veículos, e todas essas vagas estão ocupadas. Cada cliente paga uma mensalidade para utilizar uma vaga, que é calculada com base nas despesas mensais do estacionamento e no lucro pretendido. As despesas mensais do estacionamento são: R\\$ 14 240,00 com manutenção mais R\\$ 36,00 de seguro por veículo. O lucro do estacionamento é determinado pela diferença do valor arrecadado com as mensalidades pelas despesas efetuadas. A partir do mês seguinte, o valor do seguro por veículo aumentará em 20%, e as despesas com manutenção permanecerão sem alterações. Com isso, o dono do estacionamento reajustará as mensalidades para obter um lucro mensal de R\\$ 10 000,00. Apesar desse reajuste, todas as vagas continuarão ocupadas.\n\nO valor, em real, da mensalidade reajustada será",
+    "alternativas": {
+      "A": "185,60.",
+      "B": "226,09.",
+      "C": "245,20.",
+      "D": "268,93.",
+      "E": "285,60."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Novo seguro por veículo: $36 \\cdot 1{,}2 = 43{,}20$; para 120 veículos: $120 \\cdot 43{,}20 = 5\\,184$.\nDespesas novas: $14\\,240 + 5\\,184 = 19\\,424$.\nArrecadação necessária: $19\\,424 + 10\\,000 = 29\\,424$.\nMensalidade: $\\frac{29\\,424}{120} = 245{,}20$.\nAlternativa C.",
+    "enganos": {
+      "A": "Aplicou o aumento de 20% sobre toda a despesa e esqueceu o lucro: $\\frac{(14\\,240 + 4\\,320) \\cdot 1{,}2}{120} = \\frac{22\\,272}{120} = 185{,}60$.",
+      "B": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa.",
+      "D": "Aplicou os 20% também sobre a manutenção e depois somou o lucro: $\\frac{18\\,560 \\cdot 1{,}2 + 10\\,000}{120} = \\frac{32\\,272}{120} \\approx 268{,}93$.",
+      "E": "Aplicou os 20% sobre despesas e lucro juntos: $\\frac{(18\\,560 + 10\\,000) \\cdot 1{,}2}{120} = \\frac{34\\,272}{120} = 285{,}60$."
+    },
+    "conceitos": [
+      "porcentagem",
+      "lucro e despesa",
+      "equação do 1º grau"
+    ]
+  },
+  {
+    "id": "2025-159",
+    "enunciado": "O dono de uma sorveteria armazena sorvete em potes de 20 000 cm$^3$. Ele serve o sorvete em taças, em porções de 250 mL.\n\nA quantidade de taças que ele consegue servir a partir de um pote cheio de sorvete é",
+    "alternativas": {
+      "A": "5.",
+      "B": "8.",
+      "C": "50.",
+      "D": "80.",
+      "E": "800."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "$1 \\text{ cm}^3 = 1 \\text{ mL}$, então o pote tem 20 000 mL.\nNúmero de taças: $\\frac{20\\,000}{250} = 80$.\nAlternativa D.",
+    "enganos": {
+      "A": "Converteu o pote para 20 L e a porção para $\\frac{1}{4}$ L, mas dividiu 20 por 4 em vez de multiplicar: $20 \\div 4 = 5$.",
+      "B": "Usou a conversão errada $1 \\text{ cm}^3 = 0{,}1$ mL: $\\frac{2\\,000}{250} = 8$.",
+      "C": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa ou erro na divisão.",
+      "E": "Usou a conversão errada $1 \\text{ cm}^3 = 10$ mL: $\\frac{200\\,000}{250} = 800$."
+    },
+    "conceitos": [
+      "volume e capacidade",
+      "conversão de unidades",
+      "divisão"
+    ]
+  },
+  {
+    "id": "2025-160",
+    "enunciado": "Um recipiente tem um formato que faz com que, ao ser enchido de água com uma vazão constante, a distância D da lâmina de água ao tampo da mesa, em centímetro, aumente em relação ao tempo T, em minuto, de acordo com uma função do tipo\n\n$D = k + \\text{tg}[p(T + m)]$,\n\nsendo os parâmetros k, p e m números reais, para T variando entre 0 e 4 minutos, conforme ilustrado na figura, na qual estão apresentadas assíntotas verticais da função tangente utilizada na definição de D.\n\nA expressão algébrica que representa a relação entre D e T é",
+    "alternativas": {
+      "A": "$D = 2{,}5 + \\text{tg}\\left[30\\left(T - \\frac{5 - 2\\pi}{2}\\right)\\right]$",
+      "B": "$D = 4 + \\text{tg}\\left[30\\left(T + \\frac{5}{2}\\right)\\right]$",
+      "C": "$D = 4 + \\text{tg}\\left[2{,}5\\left(T + \\frac{5 + 2\\pi}{2}\\right)\\right]$",
+      "D": "$D = 30 + \\text{tg}\\left[\\frac{1}{2}(T - 5)\\right]$",
+      "E": "$D = 30 + \\text{tg}\\left[\\frac{1}{2}\\left(T - \\frac{5}{2}\\right)\\right]$"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Gráfico de D por T ao lado do recipiente sobre o tampo da mesa: assíntotas verticais em $T = \\frac{5 - 2\\pi}{2}$ e $T = \\frac{5 + 2\\pi}{2}$; ponto de inflexão marcado em T = 2,5 com D = 30; T vai de 0 a 4.",
+    "gabarito_calculado": "E",
+    "resolucao": "As assíntotas consecutivas estão em $\\frac{5 - 2\\pi}{2}$ e $\\frac{5 + 2\\pi}{2}$, distantes $2\\pi$: esse é o período.\nPeríodo de $\\text{tg}(px)$ é $\\frac{\\pi}{p}$, então $\\frac{\\pi}{p} = 2\\pi \\Rightarrow p = \\frac{1}{2}$.\nO centro (ponto de inflexão) fica no meio das assíntotas, em $T = \\frac{5}{2}$, onde $\\text{tg}(0) = 0$; logo $m = -\\frac{5}{2}$.\nNesse ponto o gráfico mostra $D = 30$, então $k = 30$.\n$D = 30 + \\text{tg}\\left[\\frac{1}{2}\\left(T - \\frac{5}{2}\\right)\\right]$. Alternativa E.",
+    "enganos": {
+      "A": "Trocou os papéis dos valores lidos no gráfico (usou 2,5 como k e 30 como p) e deslocou pela assíntota esquerda em vez do centro.",
+      "B": "Usou o tempo final 4 como k, o 30 como p e trocou o sinal do deslocamento, centrando em $T = -\\frac{5}{2}$.",
+      "C": "Usou 4 como k, 2,5 como p e deslocou pela assíntota direita com sinal trocado.",
+      "D": "Acertou k e p, mas tomou o centro como a soma das abscissas das assíntotas ($\\frac{5-2\\pi}{2} + \\frac{5+2\\pi}{2} = 5$) sem dividir por 2."
+    },
+    "conceitos": [
+      "função tangente",
+      "período",
+      "translação de gráficos",
+      "assíntotas"
+    ]
+  },
+  {
+    "id": "2025-161",
+    "enunciado": "Os quadrados em cinza na figura representam os quarteirões de uma parte do bairro onde moram João e seu amigo. O quadrado pequeno (A), pintado em preto e localizado no canto superior esquerdo de um quadrado maior, indica a casa do amigo de João. João também mora em uma casa de esquina, mas na extremidade nordeste de um quarteirão. Para chegar à casa de seu amigo, ao sair de casa, João deve caminhar pelo quarteirão onde mora na direção oeste, dobrar à direita, caminhar por três quarteirões na direção norte e dobrar à esquerda. A casa de seu amigo fica no segundo quarteirão a oeste.\n\nO quarteirão onde se encontra a casa de João é representado pelo quadrado com a letra",
+    "alternativas": {
+      "A": "P.",
+      "B": "Q.",
+      "C": "R.",
+      "D": "S.",
+      "E": "T."
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Malha de 6 colunas por 7 linhas de quarteirões, com rosa dos ventos (N para cima, L à direita). Posições (linha, coluna, contando de cima e da esquerda): Q (1, 5); A (4, 3); S (4, 5); R (7, 1); P (7, 5); T (7, 6).",
+    "gabarito_calculado": "A",
+    "resolucao": "Refaça o caminho ao contrário a partir da casa do amigo, no canto noroeste do quarteirão A (linha 4, coluna 3).\nA casa fica no 2º quarteirão a oeste da esquina onde João dobrou à esquerda, e na rua ao norte desses quarteirões; então essa esquina fica na rua acima da linha 4, entre as colunas 4 e 5 (passando pelas colunas 4 e 3 até A).\nAntes disso João andou 3 quarteirões para o norte pela rua entre as colunas 4 e 5 (linhas 6, 5 e 4): ele partiu da rua acima da linha 7.\nEle começou na esquina nordeste do seu quarteirão e andou para oeste pelo próprio quarteirão até essa rua: o quarteirão é o da linha 7, coluna 5.\nEsse é o quarteirão P. Alternativa A.",
+    "enganos": {
+      "B": "Inverteu norte e sul ao refazer o caminho, subindo 3 quarteirões a partir de A em vez de descer, e chegou à linha 1, coluna 5 (Q).",
+      "C": "Inverteu leste e oeste ao refazer o caminho, indo 2 quarteirões para oeste de A em vez de leste, e chegou à coluna 1, linha 7 (R).",
+      "D": "Considerou só o trecho para oeste e ignorou os 3 quarteirões caminhados para o norte, ficando na mesma linha de A (S).",
+      "E": "Contou um quarteirão a mais na direção leste (incluiu o próprio quarteirão de João na contagem), chegando à coluna 6 (T)."
+    },
+    "conceitos": [
+      "localização e orientação",
+      "pontos cardeais",
+      "malha quadriculada"
+    ]
+  },
+  {
+    "id": "2025-162",
+    "enunciado": "Uma empresa produziu, em um determinado mês, 110 toneladas de plástico a partir de derivados de petróleo e 80 toneladas a partir de plásticos reciclados. O custo para reciclar uma tonelada de plástico é de R\\$ 500,00, que equivale a 5% do custo para produzir a mesma quantidade de plástico a partir de derivados de petróleo. Para o mês seguinte, a meta dessa empresa é produzir a mesma quantidade de plástico que foi produzida nesse mês, mas com redução de, pelo menos, 50% no custo de produção.\n\nPara que no mês seguinte a empresa atinja a meta, a quantidade mínima de toneladas de plástico que devem ser produzidas a partir de reciclagem deverá ser",
+    "alternativas": {
+      "A": "135.",
+      "B": "140.",
+      "C": "155.",
+      "D": "160.",
+      "E": "175."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "Custo por tonelada de petróleo: $\\frac{500}{0{,}05} = 10\\,000$ reais.\nCusto atual: $110 \\cdot 10\\,000 + 80 \\cdot 500 = 1\\,140\\,000$; a meta é no máximo $570\\,000$.\nCom x toneladas recicladas e $190 - x$ de petróleo: $500x + 10\\,000(190 - x) \\leq 570\\,000$.\n$1\\,900\\,000 - 9\\,500x \\leq 570\\,000 \\Rightarrow x \\geq 140$.\nAlternativa B.",
+    "enganos": {
+      "A": "Desconsiderou o custo da reciclagem e só reduziu à metade o custo do petróleo: $10\\,000(190 - x) \\leq 550\\,000 \\Rightarrow x \\geq 135$ (equivale a cortar o petróleo de 110 para 55 t).",
+      "C": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa.",
+      "D": "Interpretou a redução de 50% no custo como dobrar a produção reciclada: $80 \\times 2 = 160$.",
+      "E": "Somou às 80 t recicladas metade da produção total: $80 + \\frac{190}{2} = 175$."
+    },
+    "conceitos": [
+      "porcentagem",
+      "inequação do 1º grau",
+      "custo"
+    ]
+  },
+  {
+    "id": "2025-163",
+    "enunciado": "Em uma escola, todos os estudantes do ensino médio praticam uma das três modalidades esportivas oferecidas como atividade física, e cada um deles pratica somente uma dessas atividades. Os gráficos trazem alguns dados relativos aos quantitativos de estudantes que praticam essas modalidades esportivas nessa escola, apesar de algumas quantidades não terem sido informadas.\n\nQual é a quantidade de estudantes no ensino médio dessa escola?",
+    "alternativas": {
+      "A": "720",
+      "B": "360",
+      "C": "320",
+      "D": "288",
+      "E": "240"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Dois gráficos: barras 'Modalidades esportivas no ensino médio, por série' (eixo sem valores numéricos, só linhas de grade igualmente espaçadas) e setores 'Quantidade de estudantes, por modalidade esportiva' com apenas o setor de basquete rotulado (80). Em unidades de grade: 1ª série futebol 7, vôlei 3, basquete 1; 2ª série 6, 3, 3; 3ª série 5, 4, 4.",
+    "gabarito_calculado": "B",
+    "resolucao": "No gráfico de barras, conte as linhas de grade: futebol $7 + 6 + 5 = 18$, vôlei $3 + 3 + 4 = 10$, basquete $1 + 3 + 4 = 8$ unidades.\nTotal: $18 + 10 + 8 = 36$ unidades (confere: futebol é metade do gráfico de setores).\nO gráfico de setores diz que basquete tem 80 estudantes: $8$ unidades $= 80$, logo cada unidade vale 10.\nTotal de estudantes: $36 \\times 10 = 360$.\nAlternativa B.",
+    "enganos": {
+      "A": "Associou os 80 estudantes de basquete a uma barra de 4 unidades (3ª série), fazendo cada unidade valer 20: $36 \\times 20 = 720$.",
+      "C": "Estimou o setor de basquete como um quarto do círculo: $4 \\times 80 = 320$.",
+      "D": "Confundiu o número de unidades de basquete (8) com o valor de cada unidade: $36 \\times 8 = 288$.",
+      "E": "Supôs que as três modalidades tinham a mesma quantidade de estudantes do basquete: $3 \\times 80 = 240$."
+    },
+    "conceitos": [
+      "leitura de gráficos",
+      "proporcionalidade",
+      "gráfico de setores"
+    ]
+  },
+  {
+    "id": "2025-164",
+    "enunciado": "O dono de uma embarcação deve partir do ponto P e chegar ao ponto R por meio de dois deslocamentos lineares e navegando a uma velocidade constante. Essa viagem será feita durante a noite, e como ele dispõe somente de uma bússola e de um relógio, planejou sua rota da seguinte forma:\n\n1º – partir do ponto P na direção 110 e navegar por 4 horas, alcançando um ponto Q;\n\n2º – partir do ponto Q na direção 90 e navegar por 2 horas, alcançando o ponto de destino R.\n\nNo entanto, ao direcionar o barco para o primeiro deslocamento, o fez na direção 340, em vez de 110. Com isso, realizou os seguintes deslocamentos:\n\n1º – partiu do ponto P na direção 340 e navegou por 4 horas, alcançando um ponto S;\n\n2º – partiu do ponto S na direção 90 e navegou por 2 horas, alcançando o ponto T.\n\nA figura apresenta a bússola, a rota planejada e a rota executada.\n\nO dono da embarcação só percebeu o equívoco ao chegar ao ponto T. Com isso, agora ele precisa definir a direção e o tempo de navegação que lhe permita, partindo do ponto T, chegar ao ponto de destino R por meio de uma rota retilínea.\n\nConsidere 0,64 como aproximação para $\\cos 50°$.\n\nA direção e o tempo aproximado de navegação que o dono da embarcação deve utilizar são, respectivamente,",
+    "alternativas": {
+      "A": "135 e 7 horas e 15 minutos.",
+      "B": "45 e 7 horas e 15 minutos.",
+      "C": "135 e 12 horas.",
+      "D": "135 e 6 horas.",
+      "E": "45 e 6 horas."
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "A figura mostra uma bússola graduada em graus a partir do norte (0 = N, 90 = L, 180 = S, 270 = O, sentido horário) e o esboço das rotas P→Q→R (planejada) e P→S→T (executada), com o trecho TR tracejado. A convenção das direções vem da bússola.",
+    "gabarito_calculado": "A",
+    "resolucao": "Os segundos trechos são iguais (direção 90, 2 h), então $\\vec{TR} = \\vec{SQ}$: basta achar o segmento SQ.\nNo triângulo PSQ, $PS = PQ = 4$ h de navegação e o ângulo em P é $110° - (340° - 360°) = 130°$.\nLei dos cossenos: $SQ^2 = 4^2 + 4^2 - 2 \\cdot 4 \\cdot 4 \\cos 130° = 32 + 32 \\cdot 0{,}64 = 52{,}48$, logo $SQ \\approx 7{,}24$ h $\\approx$ 7 h 15 min.\nDireção: os ângulos da base do triângulo isósceles medem 25°; de S, a direção para P é 160, e Q fica 25° antes, em $160 - 25 = 135$ (sudeste), coerente com a figura.\nDireção 135 e cerca de 7 horas e 15 minutos. Alternativa A.",
+    "enganos": {
+      "B": "Calculou o tempo corretamente, mas leu a direção como nordeste (45) em vez de sudeste (135), confundindo o sentido da rota TR.",
+      "C": "Somou os tempos de todos os trechos das duas rotas como se fossem a distância: $4 + 2 + 4 + 2 = 12$ horas.",
+      "D": "Somou apenas os tempos de uma das rotas ($4 + 2 = 6$ horas) em vez de usar a lei dos cossenos.",
+      "E": "Somou os tempos de uma rota ($4 + 2 = 6$ horas) e ainda leu a direção como nordeste (45)."
+    },
+    "conceitos": [
+      "lei dos cossenos",
+      "trigonometria",
+      "orientação por ângulos",
+      "vetores"
+    ]
+  },
+  {
+    "id": "2025-165",
+    "enunciado": "Em um estudo clínico, 55 mulheres foram distribuídas, aleatoriamente, em 5 grupos de 11 pessoas. Para testar uma nova medicação, será escolhido um grupo no qual a maioria das mulheres tenham idades entre 20 e 30 anos. Os demais grupos tomarão placebo ou medicações já existentes no mercado. O quadro, parcialmente preenchido, informa alguns dados relativos às idades das mulheres desses grupos.\n\n| Grupos | Menor idade | Maior idade | Média | Mediana | Moda | Desvio padrão |\n|---|---|---|---|---|---|---|\n| 1 | | | 25 | | | 10 |\n| 2 | | | | 25 | | 9 |\n| 3 | | | | | 25 | |\n| 4 | | | 25 | | | 1 |\n| 5 | 20 | 35 | | | | |\n\nMesmo com o quadro incompleto, foi possível selecionar um desses grupos porque, apenas com os dados apresentados no quadro, foi identificado um grupo que, certamente, atendia ao critério de escolha.\n\nO grupo escolhido foi o",
+    "alternativas": {
+      "A": "1.",
+      "B": "2.",
+      "C": "3.",
+      "D": "4.",
+      "E": "5."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O quadro está transcrito como tabela Markdown; células vazias correspondem a dados não informados.",
+    "gabarito_calculado": "D",
+    "resolucao": "Grupo 4: média 25 e desvio padrão 1, então a soma dos quadrados dos desvios é cerca de $11 \\cdot 1^2 = 11$.\nUma mulher fora de [20, 30] teria desvio maior que 5, contribuindo com mais de $5^2 = 25 > 11$: impossível. Logo todas estão entre 20 e 30.\nGrupo 1 (média 25, desvio 10) e grupo 2 (mediana 25, desvio 9) podem ter muitas idades longe de 25.\nGrupo 3: a moda 25 pode corresponder a só 2 mulheres; grupo 5: idades entre 20 e 35 podem estar quase todas acima de 30.\nSó o grupo 4 garante o critério. Alternativa D.",
+    "enganos": {
+      "A": "Considerou que média 25 basta, sem perceber que o desvio padrão 10 permite idades muito dispersas, fora de 20 a 30.",
+      "B": "Achou que mediana 25 garante a maioria entre 20 e 30, mas ela só garante metade abaixo e metade acima de 25, sem limitar a distância.",
+      "C": "Supôs que a moda 25 indica a maioria das mulheres com 25 anos, mas a moda pode corresponder a apenas 2 pessoas.",
+      "E": "Viu que a menor idade é 20 e achou que isso basta, ignorando que as idades podem estar quase todas entre 30 e 35."
+    },
+    "conceitos": [
+      "estatística",
+      "medidas de tendência central",
+      "desvio padrão"
+    ]
+  }
+]

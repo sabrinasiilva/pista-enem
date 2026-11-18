@@ -23,7 +23,7 @@ def problemas_da_revisao(revisao: dict) -> list[str]:
     faltando = CAMPOS - revisao.keys()
     if faltando:
         return [f"campos faltando: {sorted(faltando)}"]
-    if not re.fullmatch(r"20\d\d-1[3-8]\d", revisao["id"]):
+    if not re.fullmatch(r"20\d\d-(9[1-9]|1[0-7]\d|180)", revisao["id"]):
         erros.append("id inválido")
     if sorted(revisao["alternativas"]) != list(LETRAS):
         erros.append("alternativas precisam ser exatamente A, B, C, D e E")

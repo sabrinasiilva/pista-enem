@@ -1,0 +1,369 @@
+[
+  {
+    "id": "2025-166",
+    "enunciado": "Pace é um termo usado por um corredor para denominar o seu ritmo médio em uma corrida. Representa o tempo médio, em segundo, que esse corredor leva para percorrer 1 km.\n\nO esquema apresenta o tempo, em segundo, que um corredor levou para cruzar as marcas que definem os quatro primeiros trechos de 1 km, em uma corrida de 5 km, e o tempo gasto para percorrer cada trecho de 1 km.\n\n| Comprimento do percurso | 0 km | 1 km | 2 km | 3 km | 4 km | 5 km |\n|---|---|---|---|---|---|---|\n| Tempo de corrida | 0 s | 272 s | 556 s | 844 s | 1 132 s | |\n\n| Trecho | 1º trecho | 2º trecho | 3º trecho | 4º trecho | 5º trecho |\n|---|---|---|---|---|---|\n| Tempo gasto em cada trecho de 1 km | 272 s | 284 s | 288 s | 288 s | |\n\nO melhor pace que esse corredor alcançou em corridas de 5 km foi 281 s/km.\n\nPara que consiga repetir nessa corrida seu melhor pace em corridas de 5 km, seu tempo, no 5º trecho, deve ser quantos segundos menor do que o que ele gastou para percorrer o 4º trecho?",
+    "alternativas": {
+      "A": "1",
+      "B": "2",
+      "C": "8",
+      "D": "9",
+      "E": "15"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O esquema original é uma linha do percurso com setas indicando os tempos acumulados e os tempos por trecho; foi convertido em duas tabelas sem perda de informação. A palavra pace aparece em itálico no original.",
+    "gabarito_calculado": "E",
+    "resolucao": "Pace de 281 s/km em 5 km significa tempo total de $5 \\times 281 = 1405$ s.\nAté a marca de 4 km ele já gastou 1 132 s.\nTempo disponível para o 5º trecho: $1405 - 1132 = 273$ s.\nO 4º trecho levou 288 s, então a diferença é $288 - 273 = 15$ s.\nAlternativa E.",
+    "enganos": {
+      "A": "Comparou o tempo necessário no 5º trecho com o do 1º trecho em vez do 4º: $273 - 272 = 1$.",
+      "B": "Calculou o pace médio dos quatro primeiros trechos ($1132 \\div 4 = 283$) e subtraiu o melhor pace: $283 - 281 = 2$.",
+      "C": "Achou o tempo do 5º trecho (273 s) e o comparou com o pace de 281 s/km em vez do 4º trecho: $281 - 273 = 8$.",
+      "D": "Comparou o melhor pace com o tempo do 1º trecho, $281 - 272 = 9$, sem considerar o tempo total da corrida."
+    },
+    "conceitos": [
+      "média aritmética",
+      "taxa média",
+      "operações com números naturais"
+    ]
+  },
+  {
+    "id": "2025-167",
+    "enunciado": "Uma pessoa tem um carro bicombustível, que funciona a gás natural veicular (GNV) e a gasolina. O rendimento do carro, medido em km/m³, no caso do gás, ou medido em km/L, no caso da gasolina, depende, entre outros fatores, da velocidade, em km/h, em que o carro trafega. Essa relação está em conformidade com estes gráficos.\n\nDurante um feriado, essa pessoa realizou uma viagem de 240 km. Para obter uma estimativa de gasto de combustível, assuma que em todo o trajeto se manteve uma velocidade constante de 60 km/h. Considere que, durante metade do caminho, foi utilizado apenas GNV e, na outra metade, apenas gasolina. O que foi pago pelo metro cúbico de GNV e pelo litro de gasolina correspondeu, respectivamente, a R\\$ 2,00 e a R\\$ 3,00.\n\nQual foi a diferença, em real, entre os gastos totais com gasolina e com GNV?",
+    "alternativas": {
+      "A": "4",
+      "B": "8",
+      "C": "14",
+      "D": "21",
+      "E": "30"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Dois gráficos de rendimento × velocidade (20 a 140 km/h): GNV em km/m³ (8 em 20 km/h, 10 em 60 km/h, máximo 12 em 100 km/h, 10 em 140 km/h) e gasolina em km/L (6 em 20 km/h, 8 em 60 km/h, máximo 11 em 100 km/h, cerca de 9 em 140 km/h). A leitura em 60 km/h é necessária para resolver.",
+    "gabarito_calculado": "D",
+    "resolucao": "Nos gráficos, a 60 km/h o rendimento do GNV é 10 km/m³ e o da gasolina é 8 km/L.\nCada combustível foi usado em metade do trajeto: 120 km.\nGNV: $120 \\div 10 = 12$ m³, custando $12 \\times 2 = 24$ reais.\nGasolina: $120 \\div 8 = 15$ L, custando $15 \\times 3 = 45$ reais.\nDiferença: $45 - 24 = 21$ reais.\nAlternativa D.",
+    "enganos": {
+      "A": "Multiplicou o rendimento pelo preço em vez de dividir a distância pelo rendimento: $8 \\times 3 - 10 \\times 2 = 24 - 20 = 4$.",
+      "B": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa.",
+      "C": "Leu os rendimentos em 80 km/h (11 km/m³ e 10 km/L) em vez de 60 km/h: $12 \\times 3 - \\frac{120}{11} \\times 2 \\approx 36 - 21{,}8 \\approx 14$.",
+      "E": "Leu os rendimentos no início das curvas (20 km/h: 8 km/m³ e 6 km/L): $20 \\times 3 - 15 \\times 2 = 60 - 30 = 30$."
+    },
+    "conceitos": [
+      "leitura de gráfico",
+      "razão",
+      "proporcionalidade"
+    ]
+  },
+  {
+    "id": "2025-168",
+    "enunciado": "Em um país, a primeira etapa para obtenção da carteira de motorista é a contratação de três produtos:\n\n- pacote com 20 aulas teóricas;\n- pacote com 10 aulas práticas;\n- aluguel do veículo para realização das aulas práticas.\n\nUma pessoa que pretende obter a carteira de motorista pesquisou o valor do aluguel do veículo e os valores de cada aula teórica e de cada aula prática em três autoescolas. O quadro apresenta esses valores.\n\n| Autoescola | Valor de cada aula teórica (R\\$) | Valor de cada aula prática (R\\$) | Aluguel do veículo (R\\$) |\n|---|---|---|---|\n| I | 10 | 80 | 400 |\n| II | 30 | 50 | 200 |\n| III | 20 | 40 | 400 |\n\nEla contratará os três produtos numa mesma autoescola de modo que o custo total nessa primeira etapa seja o menor possível.\n\nA autoescola que será contratada é a",
+    "alternativas": {
+      "A": "I, com o custo total de R\\$ 1 400,00.",
+      "B": "II, com o custo total de R\\$ 280,00.",
+      "C": "II, com o custo total de R\\$ 1 300,00.",
+      "D": "III, com o custo total de R\\$ 460,00.",
+      "E": "III, com o custo total de R\\$ 1 200,00."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "Custo total = $20 \\times$ (aula teórica) $+ 10 \\times$ (aula prática) + aluguel.\nAutoescola I: $20 \\times 10 + 10 \\times 80 + 400 = 200 + 800 + 400 = 1400$.\nAutoescola II: $20 \\times 30 + 10 \\times 50 + 200 = 600 + 500 + 200 = 1300$.\nAutoescola III: $20 \\times 20 + 10 \\times 40 + 400 = 400 + 400 + 400 = 1200$.\nO menor custo é o da autoescola III, R\\$ 1 200,00. Alternativa E.",
+    "enganos": {
+      "A": "Escolheu a autoescola com a aula teórica mais barata (R\\$ 10,00), sem comparar os custos totais, que dão R\\$ 1 400,00, o maior deles.",
+      "B": "Somou só os preços unitários e o aluguel, sem multiplicar pelas quantidades de aulas: $30 + 50 + 200 = 280$.",
+      "C": "Escolheu a autoescola com o aluguel mais barato (R\\$ 200,00) e calculou seu total, sem verificar que a III sai mais barata.",
+      "D": "Somou os preços unitários e o aluguel sem multiplicar pelo número de aulas: $20 + 40 + 400 = 460$."
+    },
+    "conceitos": [
+      "expressões numéricas",
+      "comparação de valores",
+      "multiplicação"
+    ]
+  },
+  {
+    "id": "2025-169",
+    "enunciado": "A produtividade de soja em uma área cultivada é a média da quantidade de sacas de 50 quilogramas que são produzidas por hectare. O quadro apresenta a área cultivada e a produtividade de soja em certa propriedade, ao longo de cinco safras, com períodos de um ano, de 2011 a 2016.\n\n| Safra | 11-12 | 12-13 | 13-14 | 14-15 | 15-16 |\n|---|---|---|---|---|---|\n| Área cultivada (hectare) | 200 | 220 | 250 | 250 | 200 |\n| Produtividade (sacas de 50 kg por hectare) | 40 | 30 | 45 | 45 | 50 |\n\nO gráfico de linhas que representa a produção de soja dessa propriedade, em tonelada, nessas cinco safras é",
+    "alternativas": {
+      "A": "Gráfico de linhas com produção (tonelada) nas safras 11-12 a 15-16: 400; 330; 562,5; 562,5; 500.",
+      "B": "Gráfico de linhas com produção (tonelada) nas safras 11-12 a 15-16: 40; 30; 45; 45; 50.",
+      "C": "Gráfico de linhas com produção (tonelada) nas safras 11-12 a 15-16: 200; 220; 250; 250; 200.",
+      "D": "Gráfico de linhas com produção (tonelada) nas safras 11-12 a 15-16: 240; 250; 295; 295; 250.",
+      "E": "Gráfico de linhas com produção (tonelada) nas safras 11-12 a 15-16: 8; 6,6; 11,25; 11,25; 10."
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "As alternativas são gráficos de linhas (eixo vertical Produção (tonelada), eixo horizontal Safra); foram descritas pelos valores rotulados em cada ponto. Escalas: A de 250 a 600, B de 20 a 55, C de 100 a 300, D de 150 a 325, E de 5 a 12.",
+    "gabarito_calculado": "A",
+    "resolucao": "Produção em sacas = área × produtividade; cada saca tem 50 kg = 0,05 t.\n11-12: $200 \\times 40 = 8000$ sacas $\\to 8000 \\times 0{,}05 = 400$ t.\n12-13: $220 \\times 30 = 6600$ sacas $\\to 330$ t.\n13-14 e 14-15: $250 \\times 45 = 11250$ sacas $\\to 562{,}5$ t cada.\n15-16: $200 \\times 50 = 10000$ sacas $\\to 500$ t.\nOs valores 400; 330; 562,5; 562,5; 500 estão no gráfico A. Alternativa A.",
+    "enganos": {
+      "B": "Usou apenas a produtividade (40, 30, 45, 45, 50) como se fosse a produção, sem multiplicar pela área nem converter para toneladas.",
+      "C": "Usou apenas a área cultivada (200, 220, 250, 250, 200) como se fosse a produção.",
+      "D": "Somou área e produtividade em vez de multiplicar: $200 + 40 = 240$, $220 + 30 = 250$, $250 + 45 = 295$, $200 + 50 = 250$.",
+      "E": "Calculou o número de sacas ($200 \\times 40 = 8000$) e dividiu por 1 000 sem multiplicar pelos 50 kg de cada saca, obtendo 8; 6,6; 11,25; 11,25; 10."
+    },
+    "conceitos": [
+      "leitura de tabela",
+      "gráfico de linhas",
+      "conversão de unidades",
+      "multiplicação"
+    ]
+  },
+  {
+    "id": "2025-170",
+    "enunciado": "Uma caixa de descarga, acoplada a um vaso sanitário, tem a forma de paralelepípedo reto retângulo cujas dimensões internas da base são 2,5 dm e 1,5 dm. Nessa caixa há uma boia que interrompe o abastecimento quando a altura da coluna de água atinge 2 dm, conforme a figura.\n\nA cada acionamento da descarga, todo o volume de água contida na caixa é despejado no vaso. Para reduzir o volume de água despejado a cada acionamento, uma pessoa colocará, no interior dessa caixa, garrafas de 300 mL, cheias de areia e tampadas, de modo a ficarem submersas quando o abastecimento for interrompido.\n\nPara garantir o funcionamento eficiente, o mínimo de água despejada a cada acionamento deve ser de 5 L.\n\nA quantidade máxima de garrafas que serão colocadas nessa caixa, garantindo um funcionamento eficiente, é igual a",
+    "alternativas": {
+      "A": "10.",
+      "B": "8.",
+      "C": "4.",
+      "D": "3.",
+      "E": "2."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "A figura mostra a caixa enchendo e depois cheia até 2 dm, com base 2,5 dm × 1,5 dm; todas as medidas necessárias estão no texto, então a figura é ilustrativa.",
+    "gabarito_calculado": "B",
+    "resolucao": "Volume de água com a boia fechando: $2{,}5 \\times 1{,}5 \\times 2 = 7{,}5$ dm³ $= 7{,}5$ L.\nPara sobrar pelo menos 5 L de água, as garrafas podem ocupar no máximo $7{,}5 - 5 = 2{,}5$ L $= 2500$ mL.\nCada garrafa ocupa 300 mL: $2500 \\div 300 \\approx 8{,}33$.\nO máximo inteiro é 8 garrafas (com 8, sobram $7{,}5 - 2{,}4 = 5{,}1$ L; com 9, só 4,8 L).\nAlternativa B.",
+    "enganos": {
+      "A": "Calculou mal o volume da caixa, por exemplo somando as dimensões da base em dobro ($2 \\times (2{,}5 + 1{,}5) = 8$ L), e obteve $(8 - 5) \\div 0{,}3 = 10$ garrafas.",
+      "C": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa ou erro de conversão entre mL e L.",
+      "D": "Somou as dimensões em vez de multiplicar ($2{,}5 + 1{,}5 + 2 = 6$ L) e fez $(6 - 5) \\div 0{,}3 \\approx 3$ garrafas.",
+      "E": "Usou 1,5 dm como altura da água (medida que aparece na figura) em vez de 2 dm: $2{,}5 \\times 1{,}5 \\times 1{,}5 = 5{,}625$ L, e $(5{,}625 - 5) \\div 0{,}3 \\approx 2$."
+    },
+    "conceitos": [
+      "volume do paralelepípedo",
+      "conversão de unidades",
+      "divisão"
+    ]
+  },
+  {
+    "id": "2025-171",
+    "enunciado": "Um confeiteiro passou a produzir tortas em formato de cilindro circular reto, com raio da base variando entre 12 cm e 16 cm e altura de 6 cm. Essas tortas deverão ser embaladas em caixas com formato de prisma reto de base quadrada, de modo que seja possível acomodar a torta em seu interior e ainda restar pelo menos 1 cm de distância entre a torta e as superfícies internas da caixa, lateral e superior. Ele dispõe, originalmente, de caixas no formato pretendido, cujas dimensões internas são 14 cm de comprimento do lado da base e 7 cm de altura, que não atendem às suas necessidades. Portanto, ele comprará novas caixas, com o mesmo formato das caixas originais, mas com comprimento do lado da base maior, que sejam adequadas para embalar todos os tipos de torta que produz.\n\nA aresta da base das novas caixas deve ser, no mínimo, quantos centímetros maior do que a das caixas originais?",
+    "alternativas": {
+      "A": "4",
+      "B": "12",
+      "C": "16",
+      "D": "18",
+      "E": "20"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "A caixa precisa servir para a maior torta: raio 16 cm, diâmetro 32 cm.\nCom 1 cm de folga de cada lado, o lado da base deve medir pelo menos $32 + 1 + 1 = 34$ cm.\nA altura de 7 cm já atende ($6 + 1 = 7$).\nAumento da aresta: $34 - 14 = 20$ cm.\nAlternativa E.",
+    "enganos": {
+      "A": "Usou o raio no lugar do diâmetro: $16 + 2 = 18$ e $18 - 14 = 4$.",
+      "B": "Dimensionou pela menor torta (raio 12): $24 + 2 = 26$ e $26 - 14 = 12$.",
+      "C": "Não há um erro de cálculo claro que leve a este valor; talvez tenha tomado o maior raio (16) como resposta ou usado $2 \\times (16 - 1) - 14 = 16$.",
+      "D": "Esqueceu a folga de 1 cm de cada lado: $32 - 14 = 18$."
+    },
+    "conceitos": [
+      "cilindro",
+      "prisma",
+      "diâmetro e raio"
+    ]
+  },
+  {
+    "id": "2025-172",
+    "enunciado": "Um empresário utiliza máquinas cuja pressão interna $P$, em atmosfera, depende do tempo contínuo de utilização $t$, em hora, e de um parâmetro positivo $K$, que define o modelo da máquina, segundo a expressão:\n\n$P = 4 \\cdot \\log[-K \\cdot (t + 1) \\cdot (t - 19)]$\n\nO fabricante dessas máquinas recomenda ao usuário que a pressão interna desse tipo de máquina não ultrapasse 10 atmosferas durante seu funcionamento.\n\nO empresário pretende comprar novas máquinas desse tipo que deverão funcionar, diariamente, por um período contínuo de 10 horas. Para isso, precisa definir o modelo de máquina a ser adquirida escolhendo o maior valor possível do parâmetro $K$, atendendo à recomendação do fabricante.\n\nO maior valor a ser escolhido para $K$ é",
+    "alternativas": {
+      "A": "$10^{0,5}$",
+      "B": "$10^{8}$",
+      "C": "$\\frac{10^{2,5}}{84}$",
+      "D": "$\\frac{10^{2,5}}{99}$",
+      "E": "$25 \\times 10^{-2}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "O argumento do log é $K(t + 1)(19 - t)$, uma parábola em $t$ com raízes $-1$ e $19$ e vértice em $t = 9$.\nComo $t$ vai de 0 a 10, o vértice $t = 9$ está no intervalo, e é aí que a pressão é máxima.\nEm $t = 9$: $K \\cdot 10 \\cdot 10 = 100K$, logo $P_{max} = 4 \\log(100K)$.\nExigindo $4 \\log(100K) \\leq 10$: $\\log(100K) \\leq 2{,}5$, ou seja, $100K \\leq 10^{2,5}$.\nEntão $K \\leq 10^{0,5}$, e o maior valor é $10^{0,5}$.\nAlternativa A.",
+    "enganos": {
+      "B": "Esqueceu o fator 4 na frente do log: $\\log(100K) \\leq 10 \\Rightarrow 2 + \\log K \\leq 10 \\Rightarrow K \\leq 10^{8}$.",
+      "C": "Avaliou a pressão no meio do período, $t = 5$, em vez do máximo: $(5 + 1)(19 - 5) = 84$, obtendo $K \\leq \\frac{10^{2,5}}{84}$.",
+      "D": "Avaliou a pressão só no fim do período, $t = 10$: $(10 + 1)(19 - 10) = 99$, obtendo $K \\leq \\frac{10^{2,5}}{99}$, sem perceber que o máximo ocorre em $t = 9$.",
+      "E": "Não aplicou a definição de logaritmo: tratou $\\log(10K) \\leq 2{,}5$ como $10K \\leq 2{,}5$, obtendo $K = 0{,}25 = 25 \\times 10^{-2}$."
+    },
+    "conceitos": [
+      "logaritmo",
+      "função quadrática",
+      "vértice da parábola",
+      "inequação"
+    ]
+  },
+  {
+    "id": "2025-173",
+    "enunciado": "Em uma cidade, será construído um túnel que atravessa uma montanha para facilitar o trânsito de automóveis e bicicletas. Dois projetos foram elaborados e os esquemas com as vistas frontais desses projetos são apresentados na figura.\n\nO Projeto 1 conta com dois túneis, um exclusivo para bicicletas e o outro, para automóveis. O Projeto 2 conta com um único túnel, com espaços reservados para o trânsito exclusivo de bicicletas e automóveis. Nos dois projetos, os túneis têm o formato de semicilindro reto de mesma extensão, com vias de ida e volta para os dois tipos de veículos, separados por muretas.\n\nO projeto a ser aprovado será aquele que apresentar a menor área da seção transversal, pois implicará menor volume de material retirado da montanha.\n\nConsidere 3 como aproximação para $\\pi$ e desconsidere as espessuras das muretas.\n\nO projeto a ser aprovado é",
+    "alternativas": {
+      "A": "o 1, pois apresenta área de seção transversal medindo 67,5 m².",
+      "B": "o 2, pois apresenta área de seção transversal medindo 121,5 m².",
+      "C": "o 1, pois apresenta área de seção transversal medindo 135 m².",
+      "D": "o 2, pois apresenta área de seção transversal medindo 243 m².",
+      "E": "qualquer um dos dois, pois apresentam áreas de suas seções transversais com medidas iguais."
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "Figura: Projeto 1 tem um túnel para automóveis em semicírculo de diâmetro 12 m (volta | ida) e um túnel para bicicletas de diâmetro 6 m (volta | ida); Projeto 2 tem um túnel de uso misto em semicírculo com base dividida em 3 m, 6 m, 6 m e 3 m (volta, volta, ida, ida), diâmetro total 18 m. As medidas só aparecem na figura.",
+    "gabarito_calculado": "A",
+    "resolucao": "Projeto 1: semicírculos de raios 6 m e 3 m.\nÁrea: $\\frac{3 \\cdot 6^2}{2} + \\frac{3 \\cdot 3^2}{2} = 54 + 13{,}5 = 67{,}5$ m².\nProjeto 2: semicírculo de diâmetro $3 + 6 + 6 + 3 = 18$ m, raio 9 m.\nÁrea: $\\frac{3 \\cdot 9^2}{2} = 121{,}5$ m².\nMenor área: Projeto 1, com 67,5 m². Alternativa A.",
+    "enganos": {
+      "B": "Calculou corretamente a área do Projeto 2, mas errou o Projeto 1 usando os diâmetros como raios ($\\frac{3 \\cdot 144}{2} + \\frac{3 \\cdot 36}{2} = 270$), concluindo que o 2 é menor.",
+      "C": "Usou a área do círculo inteiro em vez do semicírculo: $3 \\cdot 36 + 3 \\cdot 9 = 108 + 27 = 135$.",
+      "D": "Usou círculo inteiro no Projeto 2 ($3 \\cdot 81 = 243$) e escolheu o 2, provavelmente também errando o Projeto 1 (por exemplo, usando diâmetros como raios).",
+      "E": "Raciocinou linearmente: como a soma das larguras é igual nos dois projetos ($12 + 6 = 18$), supôs áreas iguais, esquecendo que a área depende do quadrado do raio."
+    },
+    "conceitos": [
+      "área do círculo",
+      "semicírculo",
+      "comparação de áreas"
+    ]
+  },
+  {
+    "id": "2025-175",
+    "enunciado": "Um pai comprou oito presentes diferentes (dentre os quais, uma bicicleta e um celular) para dar a seus três filhos. Ele pretende distribuir os presentes de modo que o filho mais velho e o mais novo recebam três presentes cada um, e o do meio receba os dois presentes restantes. O mais velho ganhará, entre seus presentes, ou uma bicicleta ou um celular, mas não ambos.\n\nDe quantas maneiras distintas a distribuição dos presentes pode ser feita?",
+    "alternativas": {
+      "A": "36",
+      "B": "53",
+      "C": "300",
+      "D": "360",
+      "E": "560"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Mais velho: escolhe qual dos dois (bicicleta ou celular) recebe: 2 modos.\nCompleta com 2 presentes entre os 6 que não são bicicleta nem celular: $C_{6,2} = 15$. Total para ele: $2 \\times 15 = 30$.\nRestam 5 presentes; o mais novo recebe 3: $C_{5,3} = 10$; o do meio fica com os 2 restantes (1 modo).\nTotal: $30 \\times 10 = 300$.\nAlternativa C.",
+    "enganos": {
+      "A": "Contou só as escolhas do mais velho, e ainda incluindo o caso em que recebe os dois ($C_{8,3} - C_{6,3} = 56 - 20 = 36$), esquecendo de distribuir os demais presentes.",
+      "B": "Não há um erro de cálculo claro que leve a este valor; provável soma indevida de casos parciais em vez de multiplicação.",
+      "D": "Interpretou a condição como pelo menos um dos dois, incluindo o caso de ambos: $(56 - 20) \\times C_{5,3} = 36 \\times 10 = 360$.",
+      "E": "Ignorou a restrição sobre bicicleta e celular: $C_{8,3} \\times C_{5,3} = 56 \\times 10 = 560$."
+    },
+    "conceitos": [
+      "combinação",
+      "princípio multiplicativo",
+      "análise combinatória"
+    ]
+  },
+  {
+    "id": "2025-176",
+    "enunciado": "A final de um campeonato de futebol foi disputada em 2 tempos regulamentares, de 45 minutos cada, sem acréscimos, com uma prorrogação de 30 minutos, também sem acréscimos. Um jogador entrou no início do segundo tempo, com um equipamento para medir a distância percorrida durante sua participação no jogo. Ao final do segundo tempo regulamentar, esse jogador havia percorrido 4,5 km. Ele manteve na prorrogação a mesma velocidade média que havia mantido no segundo tempo regulamentar.\n\nA distância percorrida por esse jogador durante sua participação na partida, em quilômetro, foi",
+    "alternativas": {
+      "A": "4,5.",
+      "B": "6,0.",
+      "C": "7,5.",
+      "D": "9,0.",
+      "E": "12,0."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "No segundo tempo: 4,5 km em 45 min, ou seja, $\\frac{4{,}5}{45} = 0{,}1$ km/min.\nNa prorrogação de 30 min, com a mesma velocidade: $0{,}1 \\times 30 = 3$ km.\nTotal da participação: $4{,}5 + 3 = 7{,}5$ km.\nAlternativa C.",
+    "enganos": {
+      "A": "Considerou apenas a distância do segundo tempo (4,5 km), esquecendo a prorrogação.",
+      "B": "Considerou a prorrogação como só 15 minutos (um dos tempos da prorrogação): $4{,}5 + 0{,}1 \\times 15 = 6{,}0$.",
+      "D": "Supôs que a prorrogação durou o mesmo que o segundo tempo e dobrou a distância: $2 \\times 4{,}5 = 9{,}0$.",
+      "E": "Calculou como se o jogador tivesse jogado a partida toda, 120 min: $0{,}1 \\times 120 = 12{,}0$."
+    },
+    "conceitos": [
+      "velocidade média",
+      "proporcionalidade",
+      "razão"
+    ]
+  },
+  {
+    "id": "2025-177",
+    "enunciado": "A figura ilustra o projeto visual para confecção de uma medalha comemorativa, com a forma de um cilindro circular reto, de diâmetro 6 cm e espessura 3 mm.\n\nA figura $ABCD$ tem a forma de um quadrado e é a base de um prisma que atravessa toda a medalha. A região da medalha externa a esse prisma será cunhada em ouro. Pretende-se cunhar 100 dessas medalhas.\n\nConsidere 3,1 como valor aproximado para $\\pi$.\n\nQual é o volume de ouro, em centímetro cúbico, necessário para a confecção dessas medalhas?",
+    "alternativas": {
+      "A": "288",
+      "B": "297",
+      "C": "567",
+      "D": "990",
+      "E": "1 134"
+    },
+    "depende_de_figura": true,
+    "observacao_transcricao": "A figura mostra o quadrado ABCD inscrito na circunferência da face da medalha (vértices A e C nas extremidades do diâmetro vertical de 6 cm, B e D nas do horizontal) e a medalha em perspectiva com espessura 3 mm. O fato de o quadrado estar inscrito só aparece na figura.",
+    "gabarito_calculado": "B",
+    "resolucao": "Raio da medalha: 3 cm; espessura: 3 mm = 0,3 cm.\nÁrea do círculo: $3{,}1 \\times 3^2 = 27{,}9$ cm².\nO quadrado está inscrito, com diagonal 6 cm: área $= \\frac{6 \\cdot 6}{2} = 18$ cm².\nÁrea em ouro: $27{,}9 - 18 = 9{,}9$ cm²; volume por medalha: $9{,}9 \\times 0{,}3 = 2{,}97$ cm³.\nPara 100 medalhas: $2{,}97 \\times 100 = 297$ cm³.\nAlternativa B.",
+    "enganos": {
+      "A": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa ou arredondamento errado de $\\sqrt{2}$ no lado do quadrado.",
+      "C": "Tomou o lado do quadrado como 3 cm (o raio), com área 9: $(27{,}9 - 9) \\times 0{,}3 \\times 100 = 567$.",
+      "D": "Esqueceu de multiplicar pela espessura de 0,3 cm: $9{,}9 \\times 100 = 990$.",
+      "E": "Não há um caminho claro; o valor é o dobro de 567, o que sugere usar quadrado de lado 3 e ainda dobrar a área (por exemplo, confundir com $2\\pi r^2$): $(55{,}8 - 18) \\times 0{,}3 \\times 100 = 1134$."
+    },
+    "conceitos": [
+      "volume do cilindro",
+      "volume do prisma",
+      "área do círculo",
+      "quadrado inscrito"
+    ]
+  },
+  {
+    "id": "2025-178",
+    "enunciado": "Três dados cúbicos, com faces numeradas de 1 a 6, foram utilizados em um jogo. Artur escolheu dois dados, e João ficou com o terceiro. O jogo consiste em ambos lançarem seus dados, observarem os números nas faces voltadas para cima e compararem o maior número obtido por Artur com o número obtido por João. Vence o jogador que obtiver o maior número. Em caso de empate, a vitória é de João.\n\nO jogador que tem a maior probabilidade de vitória é",
+    "alternativas": {
+      "A": "Artur, com probabilidade de $\\frac{2}{3}$",
+      "B": "João, com probabilidade de $\\frac{4}{9}$",
+      "C": "Artur, com probabilidade de $\\frac{91}{216}$",
+      "D": "João, com probabilidade de $\\frac{91}{216}$",
+      "E": "Artur, com probabilidade de $\\frac{125}{216}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "João vence quando seu número $j$ é maior ou igual ao maior dos dois dados de Artur.\nDado $j$, a chance de os dois dados de Artur serem $\\leq j$ é $\\frac{j^2}{36}$.\n$P(\\text{João}) = \\frac{1}{6}\\sum_{j=1}^{6} \\frac{j^2}{36} = \\frac{1 + 4 + 9 + 16 + 25 + 36}{216} = \\frac{91}{216}$.\n$P(\\text{Artur}) = 1 - \\frac{91}{216} = \\frac{125}{216}$, que é maior.\nAlternativa E.",
+    "enganos": {
+      "A": "Achou que a chance é proporcional ao número de dados: Artur tem 2 dos 3 dados, logo $\\frac{2}{3}$.",
+      "B": "Não há um erro de cálculo claro que leve a este valor; provável escolha por estimativa.",
+      "C": "Calculou corretamente $\\frac{91}{216}$, que é a probabilidade de João, mas atribuiu esse valor a Artur.",
+      "D": "Calculou corretamente a probabilidade de João, $\\frac{91}{216}$, mas não percebeu que ela é menor que $\\frac{1}{2}$, logo Artur tem mais chance."
+    },
+    "conceitos": [
+      "probabilidade",
+      "eventos complementares",
+      "espaço amostral"
+    ]
+  },
+  {
+    "id": "2025-179",
+    "enunciado": "A luminância de um objeto é a grandeza que descreve a quantidade de luz produzida ou refletida por sua superfície. Ela está definida como a razão entre a intensidade luminosa, medida em candela (cd), e o quadrado da distância do objeto até o foco de luz, medida em metro (m).\n\nA unidade de medida da luminância de um objeto é",
+    "alternativas": {
+      "A": "$\\frac{\\text{cd}}{\\text{m}^2}$",
+      "B": "$\\frac{\\text{m}^2}{\\text{cd}}$",
+      "C": "$\\frac{\\text{cd}}{\\text{m}}$",
+      "D": "$\\frac{\\text{m}}{\\text{cd}}$",
+      "E": "$\\frac{\\text{m}}{\\text{cd}^2}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Luminância $= \\frac{\\text{intensidade luminosa}}{(\\text{distância})^2}$.\nA intensidade está em cd e a distância em m, então o quadrado da distância está em m².\nUnidade: $\\frac{\\text{cd}}{\\text{m}^2}$.\nAlternativa A.",
+    "enganos": {
+      "B": "Inverteu a razão, colocando a distância ao quadrado no numerador: $\\frac{\\text{m}^2}{\\text{cd}}$.",
+      "C": "Esqueceu que a distância está ao quadrado: $\\frac{\\text{cd}}{\\text{m}}$.",
+      "D": "Inverteu a razão e ainda esqueceu o quadrado da distância: $\\frac{\\text{m}}{\\text{cd}}$.",
+      "E": "Inverteu a razão e aplicou o quadrado à grandeza errada (intensidade em vez da distância): $\\frac{\\text{m}}{\\text{cd}^2}$."
+    },
+    "conceitos": [
+      "razão",
+      "unidades de medida",
+      "grandezas"
+    ]
+  },
+  {
+    "id": "2025-180",
+    "enunciado": "Quatro amigos, cada um com 100 moedas, criaram um jogo, no qual cada um assume uma das quatro posições, 1, 2, 3 ou 4, indicadas na figura, e nela permanece até o final.\n\nO desenvolvimento do jogo se dá em rodadas e, em todas elas, cada jogador transfere e recebe uma quantidade de moedas, da seguinte maneira:\n\n- o jogador na posição 1 transfere 1 moeda para o jogador na posição 2;\n- o jogador na posição 2 transfere 2 moedas para o jogador na posição 3;\n- o jogador na posição 3 transfere 3 moedas para o jogador na posição 4;\n- o jogador na posição 4 transfere 4 moedas para o jogador na posição 1, completando a rodada.\n\nAo final da rodada $n$, qual é a expressão algébrica que representa o número de moedas do jogador na posição 1?",
+    "alternativas": {
+      "A": "$103 + 4n$",
+      "B": "$103 + 3n$",
+      "C": "$100 + 4n$",
+      "D": "$100 + 3n$",
+      "E": "$99 + 4n$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "A figura mostra as posições 1, 2, 3 e 4 dispostas em círculo com setas no sentido 1 → 2 → 3 → 4 → 1; a regra de transferência está toda no texto, então a figura não é necessária.",
+    "gabarito_calculado": "D",
+    "resolucao": "Em cada rodada, o jogador na posição 1 perde 1 moeda (para o 2) e ganha 4 moedas (do 4).\nSaldo por rodada: $-1 + 4 = +3$ moedas.\nComeçando com 100 moedas, após $n$ rodadas ele tem $100 + 3n$.\nAlternativa D.",
+    "enganos": {
+      "A": "Somou o saldo de uma rodada ao valor inicial ($100 + 3 = 103$) e ainda contou só as moedas recebidas por rodada: $103 + 4n$.",
+      "B": "Somou o saldo da primeira rodada ao valor inicial e depois contou de novo todas as $n$ rodadas, contando a primeira duas vezes: $103 + 3n$.",
+      "C": "Considerou só as 4 moedas recebidas por rodada, esquecendo a moeda que o jogador 1 transfere: $100 + 4n$.",
+      "E": "Descontou a moeda transferida uma única vez, e não a cada rodada: $100 - 1 + 4n = 99 + 4n$."
+    },
+    "conceitos": [
+      "expressão algébrica",
+      "sequência",
+      "progressão aritmética"
+    ]
+  }
+]

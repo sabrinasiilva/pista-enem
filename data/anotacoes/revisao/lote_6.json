@@ -1,0 +1,523 @@
+[
+  {
+    "id": "2022-91",
+    "enunciado": "O protozoário Trypanosoma cruzi, causador da doença de Chagas, pode ser a nova arma da medicina contra o câncer. Pesquisadores brasileiros conseguiram criar uma vacina contra a doença usando uma variação do protozoário incapaz de desencadear a patologia (não patogênico). Para isso, realizaram uma modificação genética criando um T. cruzi capaz de produzir também moléculas fabricadas pelas células tumorais. Quando o organismo inicia o combate ao protozoário, entra em contato também com a molécula tumoral, que passa a ser vista também pelo sistema imune como um indicador de células do protozoário. Depois de induzidas as defesas, estas passam a destruir todas as células com a molécula tumoral, como se lutassem apenas contra o protozoário.\n\nDisponível em: www.estadao.com.br. Acesso em: 1 mar. 2012 (adaptado).\n\nQual o mecanismo utilizado no experimento para enganar as células de defesa, fazendo com que ataquem o tumor?",
+    "alternativas": {
+      "A": "Autoimunidade.",
+      "B": "Hipersensibilidade.",
+      "C": "Ativação da resposta inata.",
+      "D": "Apresentação de antígeno específico.",
+      "E": "Desencadeamento de processo anti-inflamatório."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "O T. cruzi modificado passa a produzir uma molécula típica das células tumorais.\nAo combater o protozoário, o sistema imune entra em contato com essa molécula, que funciona como antígeno.\nLinfócitos são ativados contra esse antígeno específico e passam a reconhecer qualquer célula que o exiba, inclusive as tumorais.\nÉ uma resposta adaptativa, dirigida a um antígeno determinado, apresentado junto com o protozoário.\nAlternativa D.",
+    "enganos": {
+      "A": "Como as células tumorais são do próprio corpo, achou que atacá-las seria autoimunidade, mas o ataque é dirigido a um antígeno tumoral apresentado de propósito, e não a tecidos sadios por falha de tolerância.",
+      "B": "Associou a defesa intensa contra as células tumorais a uma reação exagerada (alergia), sem perceber que se trata de uma resposta específica induzida por vacina.",
+      "C": "Pensou que o contato com o protozoário apenas ativa defesas inespecíficas, ignorando que o reconhecimento de uma molécula específica (o antígeno tumoral) é próprio da resposta adaptativa.",
+      "E": "Confundiu ativar as defesas com um processo anti-inflamatório, que na verdade reduziria a resposta imune em vez de direcioná-la ao tumor."
+    },
+    "conceitos": [
+      "resposta imune adaptativa",
+      "antígeno",
+      "vacina"
+    ]
+  },
+  {
+    "id": "2022-95",
+    "enunciado": "Os resultados de um ensaio clínico randomizado na Indonésia apontaram uma redução de 77% dos casos de dengue nas áreas que receberam o mosquito Aedes aegypti infectado com a bactéria Wolbachia. Trata-se da mesma técnica utilizada no Brasil pelo Método Wolbachia, iniciativa conduzida pela Fundação Oswaldo Cruz — Fiocruz. Essa bactéria induz a redução da carga viral no mosquito e, consequentemente, o número de casos de dengue na área, sendo repassada por meio do cruzamento entre os insetos. Como essa bactéria é um organismo intracelular e o vírus também precisa entrar nas células para se reproduzir, ambos necessitarão de recursos comuns.\n\nCOSTA, G. Agência Fiocruz de Notícias. **Estudo confirma eficácia do Método Wolbachia para dengue**. Disponível em: https://portal.fiocruz.br. Acesso em: 3 jun. 2022 (adaptado).\n\nEssa tecnologia utilizada no combate à dengue consiste na",
+    "alternativas": {
+      "A": "predação do vírus pela bactéria.",
+      "B": "esterilização de mosquitos infectados.",
+      "C": "alteração no genótipo do mosquito pela bactéria.",
+      "D": "competição do vírus e da bactéria no hospedeiro.",
+      "E": "inserção de material genético do vírus na bactéria."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Nomes científicos (Aedes aegypti, Wolbachia) em itálico na prova. A questão está toda na página 3; a página 4 não tem conteúdo dela.",
+    "gabarito_calculado": "D",
+    "resolucao": "O texto diz que a bactéria e o vírus vivem dentro das células do mosquito.\nAmbos \"necessitarão de recursos comuns\": disputam os mesmos recursos celulares.\nDisputa por recurso limitado entre duas espécies é competição interespecífica.\nCom a bactéria ocupando a célula, o vírus se multiplica menos e a carga viral cai.\nAlternativa D.",
+    "enganos": {
+      "A": "Interpretou a redução da carga viral como se a bactéria \"comesse\" o vírus, mas o texto fala em disputa por recursos comuns, não em predação.",
+      "B": "Confundiu o Método Wolbachia com a técnica de soltura de mosquitos estéreis; o texto diz que a bactéria é repassada pelo cruzamento, então os mosquitos se reproduzem.",
+      "C": "Confundiu com mosquitos transgênicos: a bactéria é transmitida aos descendentes, mas não altera o DNA do mosquito.",
+      "E": "Imaginou uma manipulação genética entre vírus e bactéria, que o texto não menciona; os dois apenas convivem na célula disputando recursos."
+    },
+    "conceitos": [
+      "competição interespecífica",
+      "controle biológico",
+      "dengue"
+    ]
+  },
+  {
+    "id": "2022-96",
+    "enunciado": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.\n\nQual é a etapa de retirada de grande parte desses sólidos?",
+    "alternativas": {
+      "A": "Coagulação.",
+      "B": "Decantação.",
+      "C": "Filtração.",
+      "D": "Desinfecção.",
+      "E": "Fluoretação."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Na prova a pergunta está em parágrafo separado do texto-base.",
+    "gabarito_calculado": "B",
+    "resolucao": "Na coagulação (e floculação), os sólidos suspensos se aglomeram em flocos maiores, mas continuam na água.\nNa decantação, esses flocos, mais densos, depositam-se no fundo do tanque e a maior parte dos sólidos é separada.\nA filtração vem depois e retém apenas as partículas menores que não decantaram.\nDesinfecção (cloro) elimina microrganismos e fluoretação adiciona flúor; nenhuma retira sólidos.\nAlternativa B.",
+    "enganos": {
+      "A": "Achou que, por agrupar as partículas, a coagulação já as retira, mas ela só forma flocos que ainda precisam ser separados.",
+      "C": "Associou \"retirar sólidos\" à filtração por ser o método mais conhecido, sem notar que ela só remove o que restou após a decantação.",
+      "D": "Confundiu limpeza microbiológica (desinfecção) com remoção de partículas suspensas.",
+      "E": "Não há caminho plausível: a fluoretação apenas adiciona flúor à água; só seria marcada por desconhecer as etapas."
+    },
+    "conceitos": [
+      "tratamento de água",
+      "decantação",
+      "separação de misturas"
+    ]
+  },
+  {
+    "id": "2022-97",
+    "enunciado": "Os ursos, por não apresentarem uma hibernação verdadeira, acordam por causa da presença de termogenina, uma proteína mitocondrial que impede a chegada dos prótons até a ATP sintetase, gerando calor. Esse calor é importante para aquecer o organismo, permitindo seu despertar.\n\nSADAVA, D. et al. **Vida: a ciência da biologia**. Porto Alegre: Artmed, 2009 (adaptado).\n\nEm qual etapa do metabolismo energético celular a termogenina interfere?",
+    "alternativas": {
+      "A": "Glicólise.",
+      "B": "Fermentação lática.",
+      "C": "Ciclo do ácido cítrico.",
+      "D": "Oxidação do piruvato.",
+      "E": "Fosforilação oxidativa."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "A termogenina impede que os prótons cheguem à ATP sintetase.\nO gradiente de prótons através da membrana interna da mitocôndria, gerado pela cadeia respiratória, é usado pela ATP sintetase para produzir ATP.\nEsse acoplamento entre cadeia transportadora de elétrons e síntese de ATP é a fosforilação oxidativa.\nDesacoplando o processo, a energia do gradiente é liberada como calor em vez de virar ATP.\nAlternativa E.",
+    "enganos": {
+      "A": "Lembrou que a glicólise produz ATP, mas ela ocorre no citosol e não depende de gradiente de prótons nem da ATP sintetase.",
+      "B": "Associou a produção de calor e a falta de ATP a um metabolismo anaeróbio, mas a termogenina atua na mitocôndria, não na fermentação.",
+      "C": "Lembrou que o ciclo de Krebs ocorre na mitocôndria e escolheu por isso, mas ele não envolve o fluxo de prótons pela ATP sintetase.",
+      "D": "Escolheu outra etapa mitocondrial; a oxidação do piruvato produz acetil-CoA e NADH, sem relação com a ATP sintetase."
+    },
+    "conceitos": [
+      "respiração celular",
+      "fosforilação oxidativa",
+      "atp sintetase"
+    ]
+  },
+  {
+    "id": "2022-98",
+    "enunciado": "A fim de classificar as melhores rotas em um aplicativo de trânsito, um pesquisador propõe um modelo com base em circuitos elétricos. Nesse modelo, a corrente representa o número de carros que passam por um ponto da pista no intervalo de 1 s. A diferença de potencial (d.d.p.) corresponde à quantidade de energia por carro necessária para o deslocamento de 1 m. De forma análoga à lei de Ohm, cada via é classificada pela sua resistência, sendo a de maior resistência a mais congestionada. O aplicativo mostra as rotas em ordem crescente, ou seja, da rota de menor para a de maior resistência.\n\nComo teste para o sistema, são utilizadas três possíveis vias para uma viagem de A até B, com os valores de d.d.p. e corrente conforme a tabela.\n\n| Rota | d.d.p. $\\left(\\frac{\\mathrm{J}}{\\mathrm{carro \\cdot m}}\\right)$ | Corrente $\\left(\\frac{\\mathrm{carro}}{\\mathrm{s}}\\right)$ |\n|---|---|---|\n| 1 | 510 | 4 |\n| 2 | 608 | 4 |\n| 3 | 575 | 3 |\n\nNesse teste, a ordenação das rotas indicadas pelo aplicativo será:",
+    "alternativas": {
+      "A": "1, 2, 3.",
+      "B": "1, 3, 2.",
+      "C": "2, 1, 3.",
+      "D": "3, 1, 2.",
+      "E": "3, 2, 1."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Por analogia com a lei de Ohm, $R = \\frac{U}{i}$.\nRota 1: $R_1 = \\frac{510}{4} = 127{,}5$.\nRota 2: $R_2 = \\frac{608}{4} = 152$.\nRota 3: $R_3 = \\frac{575}{3} \\approx 191{,}7$.\nEm ordem crescente de resistência: $R_1 < R_2 < R_3$, ou seja, 1, 2, 3.\nAlternativa A.",
+    "enganos": {
+      "B": "Ordenou as rotas só pela d.d.p. (510 < 575 < 608), sem dividir pela corrente.",
+      "C": "Multiplicou d.d.p. por corrente em vez de dividir (2 040; 2 432; 1 725) e ainda ordenou de forma decrescente; caminho pouco provável, com dois erros.",
+      "D": "Multiplicou d.d.p. por corrente em vez de dividir (1 725 < 2 040 < 2 432), ou ordenou só pela corrente, achando que menos carros por segundo significa menos resistência.",
+      "E": "Calculou as resistências corretamente, mas listou da maior para a menor, ignorando que o aplicativo usa ordem crescente."
+    },
+    "conceitos": [
+      "lei de ohm",
+      "resistência elétrica",
+      "analogia"
+    ]
+  },
+  {
+    "id": "2022-100",
+    "enunciado": "No processo de captação da luz pelo olho para a formação de imagens estão envolvidas duas estruturas celulares: os cones e os bastonetes. Os cones são sensíveis à energia dos fótons, e os bastonetes, à quantidade de fótons incidentes. A energia dos fótons que compõem os raios luminosos está associada à sua frequência, e a intensidade, ao número de fótons incidentes.\n\nUm animal que tem bastonetes mais sensíveis irá",
+    "alternativas": {
+      "A": "apresentar daltonismo.",
+      "B": "perceber cores fora do espectro do visível.",
+      "C": "enxergar bem em ambientes mal iluminados.",
+      "D": "necessitar de mais luminosidade para enxergar.",
+      "E": "fazer uma pequena distinção de cores em ambientes iluminados."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "C",
+    "resolucao": "Segundo o texto, os bastonetes respondem à quantidade de fótons, isto é, à intensidade da luz.\nBastonetes mais sensíveis detectam mesmo um número pequeno de fótons.\nPouca luz significa poucos fótons incidentes; logo, o animal consegue enxergar em ambientes mal iluminados.\nDistinguir cores (frequência/energia do fóton) é função dos cones, não dos bastonetes.\nAlternativa C.",
+    "enganos": {
+      "A": "Associou bastonetes a alterações de visão de cores, mas o daltonismo está ligado aos cones, que respondem à energia (frequência) dos fótons.",
+      "B": "Confundiu sensibilidade à quantidade de fótons com sensibilidade a outras frequências, como ultravioleta ou infravermelho, o que dependeria dos cones.",
+      "D": "Inverteu a relação: maior sensibilidade significa precisar de menos luz, não de mais.",
+      "E": "Atribuiu aos bastonetes a função de distinguir cores, que o texto associa aos cones (energia dos fótons)."
+    },
+    "conceitos": [
+      "visão",
+      "fóton",
+      "intensidade luminosa"
+    ]
+  },
+  {
+    "id": "2022-101",
+    "enunciado": "O veneno da cascavel pode causar hemorragia com risco de morte a quem é picado pela serpente. No entanto, pesquisadores do Brasil e da Bélgica desenvolveram uma molécula de interesse farmacêutico, a PEG-collineína-1, a partir de uma proteína encontrada no veneno dessa cobra, capaz de modular a coagulação sanguínea. Embora a técnica não seja nova, foi a primeira vez que o método foi usado a partir de uma toxina animal na sua forma recombinante, ou seja, produzida em laboratório por um fungo geneticamente modificado.\n\nJULIÃO, A. **Técnica modifica proteína do veneno de cascavel e permite criar fármaco que modula a coagulação sanguínea**. Disponível em: https://agencia.fapesp.br. Acesso em: 22 nov. 2021 (adaptado).\n\nEsse novo medicamento apresenta potencial aplicação para",
+    "alternativas": {
+      "A": "impedir a formação de trombos, típicos em alguns casos de acidente vascular cerebral.",
+      "B": "tratar consequências da anemia profunda, em razão da perda de grande volume de sangue.",
+      "C": "evitar a manifestação de urticárias, comumente relacionadas a processos alérgicos.",
+      "D": "reduzir o inchaço dos linfonodos, parte da resposta imunitária de diferentes infecções.",
+      "E": "regular a oscilação da pressão arterial, característica dos quadros de hipertensão."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "O veneno causa hemorragia, ou seja, dificulta a coagulação do sangue.\nA molécula derivada dele modula a coagulação, então tem ação anticoagulante.\nAnticoagulantes servem para evitar coágulos indesejados dentro dos vasos (trombos).\nTrombos podem obstruir artérias do cérebro e causar AVC isquêmico.\nAlternativa A.",
+    "enganos": {
+      "B": "Associou \"hemorragia\" e \"sangue\" a tratar perda de sangue, mas um anticoagulante agravaria o sangramento em vez de tratá-lo.",
+      "C": "Ligou veneno a reações alérgicas, mas o texto fala em coagulação, não em resposta alérgica.",
+      "D": "Associou o medicamento ao sistema imune por envolver toxina e proteína, sem relação com a coagulação.",
+      "E": "Relacionou circulação sanguínea a pressão arterial, mas o texto trata de coagulação, não de controle da pressão."
+    },
+    "conceitos": [
+      "coagulação sanguínea",
+      "trombose",
+      "biotecnologia"
+    ]
+  },
+  {
+    "id": "2022-102",
+    "enunciado": "Um Buraco Negro é um corpo celeste que possui uma grande quantidade de matéria concentrada em uma pequena região do espaço, de modo que sua força gravitacional é tão grande que qualquer partícula fica aprisionada em sua superfície, inclusive a luz. O raio dessa região caracteriza uma superfície-limite, chamada de horizonte de eventos, da qual nada consegue escapar. Considere que o Sol foi instantaneamente substituído por um Buraco Negro com a mesma massa solar, de modo que o seu horizonte de eventos seja de aproximadamente 3,0 km.\n\nSCHWARZSCHILD, K. **On the Gravitational Field of a Mass Point According to Einstein’s Theory**. Disponível em: arxiv.org. Acesso em: 26 maio 2022 (adaptado).\n\nApós a substituição descrita, o que aconteceria aos planetas do Sistema Solar?",
+    "alternativas": {
+      "A": "Eles se moveriam em órbitas espirais, aproximando-se sucessivamente do Buraco Negro.",
+      "B": "Eles oscilariam aleatoriamente em torno de suas órbitas elípticas originais.",
+      "C": "Eles se moveriam em direção ao centro do Buraco Negro.",
+      "D": "Eles passariam a precessionar mais rapidamente.",
+      "E": "Eles manteriam suas órbitas inalteradas."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "E",
+    "resolucao": "A força gravitacional sobre um planeta é $F = \\frac{G M m}{d^2}$: depende da massa do corpo central e da distância até ele.\nO Buraco Negro tem a mesma massa do Sol, e os planetas continuam às mesmas distâncias.\nFora do corpo, uma massa com simetria esférica atrai como se estivesse concentrada no centro; o tamanho (3 km) não importa para quem está longe.\nLogo, a força sobre cada planeta é a mesma e as órbitas não mudam.\nAlternativa E.",
+    "enganos": {
+      "A": "Acreditou que buracos negros \"sugam\" tudo ao redor, mas a atração só é extrema muito perto do horizonte de eventos; a distâncias planetárias é igual à do Sol.",
+      "B": "Imaginou uma perturbação causada pela troca, mas sem mudança de massa nem de distância não há força diferente para gerar oscilações.",
+      "C": "Mesma concepção de que o buraco negro atrai tudo para dentro, ignorando que a força depende só da massa e da distância.",
+      "D": "Lembrou de efeitos relativísticos (como a precessão de Mercúrio), mas eles dependem da massa e da distância, que não mudaram."
+    },
+    "conceitos": [
+      "gravitação universal",
+      "órbitas",
+      "buraco negro"
+    ]
+  },
+  {
+    "id": "2022-103",
+    "enunciado": "Durante o ano de 2020, impulsionado pela necessidade de respostas rápidas e eficientes para desinfectar ambientes de possíveis contaminações com o SARS-CoV-2, causador da covid-19, diversas alternativas foram buscadas para os procedimentos de descontaminação de materiais e ambientes. Entre elas, o uso de ozônio em meio aquoso como agente sanitizante para pulverização em humanos e equipamentos de proteção em câmaras ou túneis, higienização de automóveis e de ambientes fechados e descontaminação de trajes. No entanto, pouca atenção foi dada à toxicidade do ozônio, à formação de subprodutos, ao nível de concentração segura e às precauções necessárias.\n\nLIMA, M. J. A.; FELIX, E. P.; CARDOSO, A. A. Aplicações e implicações do ozônio na indústria, ambiente e saúde. **Química Nova**, n. 9, 2021 (adaptado).\n\nO grande risco envolvido no emprego indiscriminado dessa substância deve-se à sua ação química como",
+    "alternativas": {
+      "A": "catalisador.",
+      "B": "oxidante.",
+      "C": "redutor.",
+      "D": "ácido.",
+      "E": "base."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Na prova, o título do artigo na referência não está em negrito; apenas o nome do periódico (Química Nova).",
+    "gabarito_calculado": "B",
+    "resolucao": "O ozônio ($\\mathrm{O_3}$) é uma forma muito reativa do oxigênio.\nEle recebe elétrons com facilidade, oxidando outras substâncias: é um oxidante forte.\nÉ essa ação que destrói microrganismos (sanitizante), mas também oxida tecidos humanos, como mucosas e vias respiratórias, e gera subprodutos.\nPor isso o uso indiscriminado é tóxico.\nAlternativa B.",
+    "enganos": {
+      "A": "Lembrou que o ozônio participa de reações em cadeia na atmosfera (ou que acelera a desinfecção) e confundiu isso com ação de catalisador, que não é consumido na reação.",
+      "C": "Inverteu os papéis: o ozônio se reduz ao reagir, por isso é o agente oxidante, não o redutor.",
+      "D": "Associou substância corrosiva e tóxica a caráter ácido, mas o ozônio não doa prótons.",
+      "E": "Não há caminho plausível; o ozônio não tem caráter básico, só seria marcada por associar toxicidade a substâncias cáusticas."
+    },
+    "conceitos": [
+      "oxirredução",
+      "agente oxidante",
+      "ozônio"
+    ]
+  },
+  {
+    "id": "2022-105",
+    "enunciado": "Uma lanterna funciona com três pilhas de resistência interna igual a 0,5 Ω cada, ligadas em série. Quando posicionadas corretamente, devem acender a lâmpada incandescente de especificações 4,5 W e 4,5 V. Cada pilha na posição correta gera uma f.e.m. (força eletromotriz) de 1,5 V. Uma pessoa, ao trocar as pilhas da lanterna, comete o equívoco de inverter a posição de uma das pilhas. Considere que as pilhas mantêm contato independentemente da posição.\n\nCom esse equívoco, qual é a intensidade de corrente que passa pela lâmpada ao se ligar a lanterna?",
+    "alternativas": {
+      "A": "0,25 A",
+      "B": "0,33 A",
+      "C": "0,75 A",
+      "D": "1,00 A",
+      "E": "1,33 A"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "A",
+    "resolucao": "Resistência da lâmpada: $R = \\frac{U^2}{P} = \\frac{4{,}5^2}{4{,}5} = 4{,}5\\ \\Omega$.\nCom uma pilha invertida, sua f.e.m. se opõe às outras: $\\varepsilon = 1{,}5 + 1{,}5 - 1{,}5 = 1{,}5$ V.\nAs resistências internas continuam em série: $3 \\times 0{,}5 = 1{,}5\\ \\Omega$.\nCorrente: $i = \\frac{\\varepsilon}{R + r} = \\frac{1{,}5}{4{,}5 + 1{,}5} = 0{,}25$ A.\nAlternativa A.",
+    "enganos": {
+      "B": "Considerou a f.e.m. resultante de 1,5 V, mas esqueceu as resistências internas: $\\frac{1{,}5}{4{,}5} \\approx 0{,}33$ A.",
+      "C": "Ignorou a inversão e calculou a corrente com as pilhas na posição correta: $\\frac{4{,}5}{4{,}5 + 1{,}5} = 0{,}75$ A.",
+      "D": "Usou a corrente nominal da lâmpada, $\\frac{P}{U} = \\frac{4{,}5}{4{,}5} = 1$ A, sem considerar a inversão nem as resistências internas.",
+      "E": "Inverteu a lei de Ohm no circuito correto, dividindo a resistência total pela f.e.m.: $\\frac{6}{4{,}5} \\approx 1{,}33$."
+    },
+    "conceitos": [
+      "circuito elétrico",
+      "força eletromotriz",
+      "resistência interna",
+      "lei de ohm"
+    ]
+  },
+  {
+    "id": "2022-106",
+    "enunciado": "Em uma aula prática de bioquímica, para medir a atividade catalítica da enzima catalase, foram realizados seis ensaios independentes, nas mesmas condições, variando-se apenas a temperatura. A catalase decompõe o peróxido de hidrogênio ($\\mathrm{H_2O_2}$), produzindo água e oxigênio. Os resultados dos ensaios estão apresentados no quadro.\n\n| Ensaio | Temperatura (°C) | Resultado: Decomposição de $\\mathrm{H_2O_2}$ $\\left(\\frac{10^{-12}\\ \\mathrm{mol}}{\\mathrm{min}}\\right)$ |\n|---|---|---|\n| 1 | 10 | 8,0 |\n| 2 | 15 | 10,5 |\n| 3 | 20 | 9,5 |\n| 4 | 25 | 5,0 |\n| 5 | 30 | 3,6 |\n| 6 | 35 | 3,1 |\n\nOs diferentes resultados dos ensaios justificam-se pelo(a)",
+    "alternativas": {
+      "A": "variação do pH do meio.",
+      "B": "aumento da energia de ativação.",
+      "C": "consumo da enzima durante o ensaio.",
+      "D": "diminuição da concentração do substrato.",
+      "E": "modificação da estrutura tridimensional da enzima."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "No quadro, \"Resultado\" é um cabeçalho que abrange a coluna \"Decomposição de H2O2 (10^-12 mol/min)\"; foram unidos em uma só coluna.",
+    "gabarito_calculado": "E",
+    "resolucao": "Só a temperatura variou entre os ensaios; todas as outras condições foram iguais.\nA atividade sobe até cerca de 15 °C (ótimo) e depois cai bastante.\nAcima da temperatura ótima, a agitação térmica rompe ligações que mantêm a forma da proteína (desnaturação).\nCom a estrutura tridimensional alterada, o sítio ativo perde o encaixe com o substrato e a atividade diminui.\nAlternativa E.",
+    "enganos": {
+      "A": "Lembrou que o pH afeta enzimas, mas o enunciado diz que só a temperatura variou.",
+      "B": "Achou que a temperatura muda a energia de ativação; a enzima diminui a energia de ativação, e a queda de atividade vem da perda da forma da enzima.",
+      "C": "Pensou que a enzima é gasta na reação, mas enzimas são catalisadores e não são consumidas.",
+      "D": "Atribuiu a queda à falta de substrato, mas os ensaios são independentes e feitos nas mesmas condições, com a mesma quantidade inicial."
+    },
+    "conceitos": [
+      "enzimas",
+      "desnaturação",
+      "temperatura ótima"
+    ]
+  },
+  {
+    "id": "2022-107",
+    "enunciado": "Antimicrobianos são substâncias naturais ou sintéticas que têm capacidade de matar ou inibir o crescimento de microrganismos. A tabela apresenta uma lista de antimicrobianos hipotéticos, bem como suas ações e efeitos sobre o metabolismo microbiano.\n\n| Antimicrobiano | Ação | Efeito |\n|---|---|---|\n| 1 | Une-se aos ribossomos | Impede a síntese proteica |\n| 2 | Une-se aos microtúbulos | Impede a segregação das cromátides |\n| 3 | Une-se aos fosfolipídeos da membrana plasmática | Reduz a permeabilidade da membrana plasmática |\n| 4 | Interfere na síntese de timina | Inibe a síntese de DNA |\n| 5 | Interfere na síntese de uracila | Impede a síntese de RNA |\n\nQual dos antimicrobianos deve ser utilizado para curar uma infecção causada por um fungo sem afetar as bactérias da microbiota normal do organismo?",
+    "alternativas": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4",
+      "E": "5"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "A questão está toda na página 6; a página 7 não tem conteúdo dela.",
+    "gabarito_calculado": "B",
+    "resolucao": "O alvo precisa existir no fungo (eucarionte) e não existir nas bactérias (procariontes).\nRibossomos, membrana plasmática de fosfolipídios, DNA (com timina) e RNA (com uracila) estão presentes nos dois grupos.\nMicrotúbulos fazem parte do citoesqueleto e do fuso que separa as cromátides na divisão celular dos eucariontes; bactérias não têm fuso de microtúbulos.\nAssim, o antimicrobiano 2 atinge o fungo e poupa as bactérias.\nAlternativa B.",
+    "enganos": {
+      "A": "Esqueceu que bactérias também têm ribossomos; um antimicrobiano que se une aos ribossomos em geral as atingiria.",
+      "C": "Lembrou que antifúngicos reais agem na membrana, mas aqui o alvo são os fosfolipídios, presentes também na membrana das bactérias.",
+      "D": "Não considerou que todo ser vivo tem DNA com timina, inclusive as bactérias.",
+      "E": "Associou uracila a algo exclusivo de certos organismos, mas o RNA com uracila existe em fungos e bactérias."
+    },
+    "conceitos": [
+      "célula procarionte e eucarionte",
+      "citoesqueleto",
+      "antimicrobianos"
+    ]
+  },
+  {
+    "id": "2022-108",
+    "enunciado": "O manual de uma ducha elétrica informa que seus três níveis de aquecimento (morno, quente e superquente) apresentam as seguintes variações de temperatura da água em função de sua vazão:\n\n| Vazão $\\left(\\frac{\\mathrm{L}}{\\mathrm{min}}\\right)$ | $\\Delta T$ (°C) Morno | $\\Delta T$ (°C) Quente | $\\Delta T$ (°C) Superquente |\n|---|---|---|---|\n| 3 | 10 | 20 | 30 |\n| 6 | 5 | 10 | 15 |\n\nUtiliza-se um disjuntor para proteger o circuito dessa ducha contra sobrecargas elétricas em qualquer nível de aquecimento. Por padrão, o disjuntor é especificado pela corrente nominal igual ao múltiplo de 5 A imediatamente superior à corrente máxima do circuito. Considere que a ducha deve ser ligada em 220 V e que toda a energia é dissipada através da resistência do chuveiro e convertida em energia térmica transferida para a água, que apresenta calor específico de 4,2 $\\frac{\\mathrm{J}}{\\mathrm{g\\,°C}}$ e densidade de 1 000 $\\frac{\\mathrm{g}}{\\mathrm{L}}$.\n\nO disjuntor adequado para a proteção dessa ducha é especificado por:",
+    "alternativas": {
+      "A": "60 A",
+      "B": "30 A",
+      "C": "20 A",
+      "D": "10 A",
+      "E": "5 A"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Na tabela original, ΔT (°C) é um cabeçalho que abrange as colunas Morno, Quente e Superquente; foi repetido em cada coluna.",
+    "gabarito_calculado": "B",
+    "resolucao": "A corrente máxima ocorre no nível superquente (maior potência).\nCom 3 L/min: em 1 min passam 3 000 g de água, e $Q = m c \\Delta T = 3\\,000 \\times 4{,}2 \\times 30 = 378\\,000$ J.\nPotência: $P = \\frac{378\\,000}{60} = 6\\,300$ W (com 6 L/min e 15 °C dá o mesmo valor).\nCorrente: $i = \\frac{P}{U} = \\frac{6\\,300}{220} \\approx 28{,}6$ A.\nO múltiplo de 5 A imediatamente superior é 30 A.\nAlternativa B.",
+    "enganos": {
+      "A": "Combinou a maior vazão (6 L/min) com a maior variação (30 °C), que não aparecem juntas na tabela: $P = 12\\,600$ W e $i \\approx 57$ A, levando a 60 A.",
+      "C": "Usou o nível quente em vez do superquente: $P = 4\\,200$ W, $i \\approx 19{,}1$ A, levando a 20 A.",
+      "D": "Usou o nível morno: $P = 2\\,100$ W, $i \\approx 9{,}5$ A, levando a 10 A.",
+      "E": "Cruzou linha e coluna erradas da tabela (3 L/min com 5 °C): $P = 1\\,050$ W, $i \\approx 4{,}8$ A, levando a 5 A."
+    },
+    "conceitos": [
+      "potência elétrica",
+      "calor sensível",
+      "corrente elétrica"
+    ]
+  },
+  {
+    "id": "2022-109",
+    "enunciado": "Um grupo de alunos realizou um experimento para observar algumas propriedades dos ácidos, adicionando um pedaço de mármore ($\\mathrm{CaCO_3}$) a uma solução aquosa de ácido clorídrico (HCl), observando a liberação de um gás e o aumento da temperatura.\n\nO gás obtido no experimento é o:",
+    "alternativas": {
+      "A": "$\\mathrm{H_2}$",
+      "B": "$\\mathrm{O_2}$",
+      "C": "$\\mathrm{CO_2}$",
+      "D": "CO",
+      "E": "$\\mathrm{Cl_2}$"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Há um desenho do aparato (frasco com ácido e mármore ligado por tubo a um béquer com bolhas de gás), apenas ilustrativo; não é necessário para resolver.",
+    "gabarito_calculado": "C",
+    "resolucao": "Ácido reagindo com carbonato forma sal, água e gás carbônico.\n$\\mathrm{CaCO_3 + 2\\,HCl \\rightarrow CaCl_2 + H_2O + CO_2}$.\nNa verdade forma-se ácido carbônico ($\\mathrm{H_2CO_3}$), que é instável e se decompõe em $\\mathrm{H_2O}$ e $\\mathrm{CO_2}$.\nO gás liberado é o $\\mathrm{CO_2}$.\nAlternativa C.",
+    "enganos": {
+      "A": "Generalizou a reação de ácido com metal (que libera $\\mathrm{H_2}$) para o carbonato, que não é um metal.",
+      "B": "Viu oxigênio na fórmula do carbonato e supôs que ele seria liberado como $\\mathrm{O_2}$, sem balancear a reação.",
+      "D": "Confundiu com o monóxido de carbono das combustões incompletas; a decomposição do ácido carbônico gera $\\mathrm{CO_2}$.",
+      "E": "Achou que o cloro do HCl sairia como gás, mas o cloreto permanece em solução como $\\mathrm{CaCl_2}$."
+    },
+    "conceitos": [
+      "reação ácido-carbonato",
+      "ácido carbônico",
+      "funções inorgânicas"
+    ]
+  },
+  {
+    "id": "2022-111",
+    "enunciado": "Um pai faz um balanço utilizando dois segmentos paralelos e iguais da mesma corda para fixar uma tábua a uma barra horizontal. Por segurança, opta por um tipo de corda cuja tensão de ruptura seja 25% superior à tensão máxima calculada nas seguintes condições:\n\n- O ângulo máximo atingido pelo balanço em relação à vertical é igual a 90°;\n- Os filhos utilizarão o balanço até que tenham uma massa de 24 kg.\n\nAlém disso, ele aproxima o movimento do balanço para o movimento circular uniforme, considera que a aceleração da gravidade é igual a 10 $\\mathrm{\\frac{m}{s^2}}$ e despreza forças dissipativas.\n\nQual é a tensão de ruptura da corda escolhida?",
+    "alternativas": {
+      "A": "120 N",
+      "B": "300 N",
+      "C": "360 N",
+      "D": "450 N",
+      "E": "900 N"
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "D",
+    "resolucao": "A tensão é máxima no ponto mais baixo. Partindo de 90° (altura $h = L$), a conservação de energia dá $v^2 = 2gL$.\nNo ponto mais baixo: $T - mg = \\frac{m v^2}{L} = 2mg$, logo $T = 3mg = 3 \\times 24 \\times 10 = 720$ N.\nEssa tensão se divide entre os dois segmentos de corda: $\\frac{720}{2} = 360$ N em cada.\nCom 25% de margem: $1{,}25 \\times 360 = 450$ N.\nAlternativa D.",
+    "enganos": {
+      "A": "Considerou só o peso dividido entre as duas cordas, $\\frac{240}{2} = 120$ N, sem a resultante centrípeta e sem a margem de 25%.",
+      "B": "Aplicou a margem de 25% só ao peso, $1{,}25 \\times 240 = 300$ N, ignorando a resultante centrípeta e a divisão entre as duas cordas.",
+      "C": "Calculou corretamente a tensão em cada corda (360 N), mas esqueceu de acrescentar os 25% de segurança.",
+      "E": "Aplicou os 25% sobre a tensão total, $1{,}25 \\times 720 = 900$ N, sem dividir entre os dois segmentos de corda."
+    },
+    "conceitos": [
+      "resultante centrípeta",
+      "conservação da energia mecânica",
+      "tração"
+    ]
+  },
+  {
+    "id": "2022-113",
+    "enunciado": "As células da epiderme da folha da Tradescantia pallida purpurea, uma herbácea popularmente conhecida como trapoeraba-roxa, contém um vacúolo onde se encontra um pigmento que dá a coloração arroxeada a esse tecido. Em um experimento, um corte da epiderme de uma folha da trapoeraba-roxa foi imerso em ambiente hipotônico e, logo em seguida, foi colocado em uma lâmina e observado em microscópio óptico.\n\nDurante a observação desse corte, foi possível identificar o(a)",
+    "alternativas": {
+      "A": "acúmulo do solvente com fragmentação da organela.",
+      "B": "rompimento da membrana celular com liberação do citosol.",
+      "C": "aumento do vacúolo com diluição do pigmento no seu interior.",
+      "D": "quebra da parede celular com extravasamento do pigmento.",
+      "E": "murchamento da célula com expulsão do pigmento do vacúolo."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Nome científico (Tradescantia pallida purpurea) em itálico na prova. \"contém\" está assim no original, apesar da concordância com \"células\".",
+    "gabarito_calculado": "C",
+    "resolucao": "Em meio hipotônico, a água entra na célula por osmose.\nNas células vegetais, essa água se acumula principalmente no vacúolo, que aumenta de volume.\nO pigmento fica mais diluído, e a cor arroxeada fica mais clara.\nA parede celular resiste à pressão e impede que a célula se rompa (a célula fica túrgida).\nAlternativa C.",
+    "enganos": {
+      "A": "Imaginou que a entrada de água estouraria o vacúolo, mas ele apenas aumenta de volume.",
+      "B": "Aplicou o que acontece com hemácias em meio hipotônico (lise), esquecendo que a parede celular impede o rompimento da célula vegetal.",
+      "D": "Achou que a pressão da água quebraria a parede celular, que na verdade é rígida e resiste à turgência.",
+      "E": "Confundiu meio hipotônico com hipertônico: murchamento (plasmólise) ocorre quando a célula perde água."
+    },
+    "conceitos": [
+      "osmose",
+      "célula vegetal",
+      "turgescência"
+    ]
+  },
+  {
+    "id": "2022-114",
+    "enunciado": "A variação da incidência de radiação solar sobre a superfície da Terra resulta em uma variação de temperatura ao longo de um dia denominada amplitude térmica. Edificações e pavimentações realizadas nas áreas urbanas contribuem para alterar as amplitudes térmicas dessas regiões, em comparação com regiões que mantêm suas características naturais, com presença de vegetação e água, já que o calor específico do concreto é inferior ao da água. Assim, parte da avaliação do impacto ambiental que a presença de concreto proporciona às áreas urbanas consiste em considerar a substituição da área concretada por um mesmo volume de água e comparar as variações de temperatura devido à absorção da radiação solar nas duas situações (concretada e alagada). Desprezando os efeitos da evaporação e considerando que toda a radiação é absorvida, essa avaliação pode ser realizada com os seguintes dados:\n\n|  | Densidade $\\left(\\frac{\\mathrm{kg}}{\\mathrm{m^3}}\\right)$ | Calor específico $\\left(\\frac{\\mathrm{J}}{\\mathrm{g\\,°C}}\\right)$ |\n|---|---|---|\n| Água | 1 000 | 4,2 |\n| Concreto | 2 500 | 0,8 |\n\nROMERO, M. A. B. et al. **Mudanças climáticas e ilhas de calor urbanas**. Brasília: UnB; ETB, 2019 (adaptado).\n\nA razão entre as variações de temperatura nas áreas concretada e alagada é mais próxima de",
+    "alternativas": {
+      "A": "1,0.",
+      "B": "2,1.",
+      "C": "2,5.",
+      "D": "5,3.",
+      "E": "13,1."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "",
+    "gabarito_calculado": "B",
+    "resolucao": "A mesma radiação é absorvida nas duas situações: $Q = m c \\Delta T$ é igual para concreto e água.\nComo o volume é o mesmo, $m = d V$, então $\\Delta T = \\frac{Q}{d V c}$, inversamente proporcional a $d \\cdot c$.\nÁgua: $d c = 1\\,000 \\times 4{,}2 = 4\\,200$; concreto: $d c = 2\\,500 \\times 0{,}8 = 2\\,000$.\n$\\frac{\\Delta T_{\\mathrm{concreto}}}{\\Delta T_{\\mathrm{água}}} = \\frac{4\\,200}{2\\,000} = 2{,}1$.\nAlternativa B.",
+    "enganos": {
+      "A": "Pensou que, recebendo a mesma radiação, as duas áreas variariam igualmente de temperatura, ignorando massa e calor específico.",
+      "C": "Usou só a razão entre as densidades, $\\frac{2\\,500}{1\\,000} = 2{,}5$, esquecendo o calor específico.",
+      "D": "Usou só a razão entre os calores específicos, $\\frac{4{,}2}{0{,}8} \\approx 5{,}3$, esquecendo que o concreto tem mais massa no mesmo volume.",
+      "E": "Multiplicou as duas razões, $5{,}25 \\times 2{,}5 \\approx 13{,}1$, tratando a maior densidade do concreto como se aumentasse sua variação de temperatura."
+    },
+    "conceitos": [
+      "calor sensível",
+      "capacidade térmica",
+      "densidade"
+    ]
+  },
+  {
+    "id": "2022-115",
+    "enunciado": "O elemento iodo (I) tem função biológica e é acumulado na tireoide. Nos acidentes nucleares de Chernobyl e Fukushima, ocorreu a liberação para a atmosfera do radioisótopo $^{131}\\mathrm{I}$, responsável por enfermidades nas pessoas que foram expostas a ele. O decaimento de uma massa de 12 microgramas do isótopo $^{131}\\mathrm{I}$ foi monitorado por 14 dias, conforme o quadro.\n\n| Tempo (dia) | Massa residual de $^{131}\\mathrm{I}$ (μg) |\n|---|---|\n| 0 | 12,0 |\n| 2 | 10,1 |\n| 4 | 8,5 |\n| 5 | 7,8 |\n| 6 | 7,2 |\n| 8 | 6,0 |\n| 14 | 3,6 |\n\nApós o período de 40 dias, a massa residual desse isótopo é mais próxima de",
+    "alternativas": {
+      "A": "2,4 μg.",
+      "B": "1,5 μg.",
+      "C": "0,8 μg.",
+      "D": "0,4 μg.",
+      "E": "0,2 μg."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "Na prova o isótopo aparece como 131I (número de massa sobrescrito), e não \"iodo-131\" como no dataset; as alternativas usam μg.",
+    "gabarito_calculado": "D",
+    "resolucao": "Pelo quadro, a massa cai de 12,0 μg para 6,0 μg em 8 dias: a meia-vida é de 8 dias.\nEm 40 dias, passam $\\frac{40}{8} = 5$ meias-vidas.\nMassa residual: $\\frac{12}{2^5} = \\frac{12}{32} = 0{,}375$ μg.\nO valor mais próximo é 0,4 μg.\nAlternativa D.",
+    "enganos": {
+      "A": "Dividiu a massa pelo número de meias-vidas, $\\frac{12}{5} = 2{,}4$, como se o decaimento fosse linear.",
+      "B": "Considerou só 3 meias-vidas ($\\frac{12}{8} = 1{,}5$), por exemplo tomando a meia-vida perto de 14 dias, ou dividiu a massa pelo valor da meia-vida (8).",
+      "C": "Contou 4 meias-vidas em vez de 5 ($\\frac{12}{16} = 0{,}75$), errando a divisão dos 40 dias ou a contagem das metades.",
+      "E": "Contou uma meia-vida a mais, $\\frac{12}{2^6} \\approx 0{,}19$, por exemplo contando o instante inicial como uma etapa."
+    },
+    "conceitos": [
+      "radioatividade",
+      "meia-vida",
+      "decaimento exponencial"
+    ]
+  },
+  {
+    "id": "2022-116",
+    "enunciado": "Desde a proposição da teoria de seleção natural por Darwin, os seres vivos nunca mais foram olhados da mesma forma. No que diz respeito à reprodução de anfíbios anuros, os cientistas já descreveram diferentes padrões reprodutivos, como os exemplificados a seguir:\n\nEspécie 1 – As fêmeas produzem cerca de 5 000 gametas, que são fecundados na água, em lagoas temporárias de estação chuvosa. Todo o desenvolvimento embrionário, do ovo à metamorfose, ocorre, nesse ambiente, independente dos pais.\n\nEspécie 2 – As fêmeas produzem aproximadamente 200 gametas, que são depositados em poças próximas a corpos-d’água. Os embriões são vigiados pelos machos durante boa parte do seu desenvolvimento.\n\nEspécie 3 – As fêmeas produzem por volta de 20 gametas, que são fecundados sobre a superfície das folhas de plantas cujos galhos estão dispostos acima da superfície de corpos-d’água e aí se desenvolvem até a eclosão.\n\nEspécie 4 – As fêmeas produzem poucos gametas que, quando fecundados, são “abocanhados” pelos machos. Os embriões se desenvolvem no interior do saco vocal do macho até a metamorfose, quando saem através da boca do pai.\n\nOs padrões descritos evidenciam que",
+    "alternativas": {
+      "A": "as fêmeas influenciam o comportamento dos machos.",
+      "B": "o cuidado parental é necessário para o desenvolvimento.",
+      "C": "o grau de evolução determina o comportamento reprodutivo.",
+      "D": "o sucesso reprodutivo pode ser garantido por estratégias diferentes.",
+      "E": "o ambiente induz modificação na produção do número de gametas femininos."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "A questão continua no topo da coluna direita da página 9 (comando e alternativas).",
+    "gabarito_calculado": "D",
+    "resolucao": "As quatro espécies se reproduzem com sucesso, mas de formas diferentes.\nHá uma troca: muitos gametas sem cuidado (espécie 1) ou poucos gametas com mais proteção e cuidado (espécies 2, 3 e 4).\nCada estratégia foi mantida pela seleção natural por funcionar no ambiente de cada espécie.\nLogo, o sucesso reprodutivo pode ser alcançado por estratégias diferentes.\nAlternativa D.",
+    "enganos": {
+      "A": "Leu nos exemplos o papel dos machos e inferiu uma influência das fêmeas sobre eles, o que o texto não mostra.",
+      "B": "Generalizou a partir das espécies com cuidado parental, mas a espécie 1 se desenvolve sem os pais.",
+      "C": "Usou a ideia de evolução como escala de progresso (espécies \"mais evoluídas\"), o que não existe na teoria de Darwin.",
+      "E": "Concepção lamarquista: achou que o ambiente induz diretamente a mudança no número de gametas, em vez de a seleção natural favorecer variações já existentes."
+    },
+    "conceitos": [
+      "seleção natural",
+      "estratégias reprodutivas",
+      "cuidado parental"
+    ]
+  },
+  {
+    "id": "2022-120",
+    "enunciado": "Diversas substâncias são empregadas com a intenção de incrementar o desempenho esportivo de atletas de alto nível. O chamado doping sanguíneo, por exemplo, pela utilização da eritropoietina, é proibido pelas principais federações de esportes no mundo. A eritropoietina é um hormônio produzido pelos rins e fígado e sua principal ação é regular o processo de eritropoiese. Seu uso administrado intravenosamente em quantidades superiores àquelas presentes naturalmente no organismo permite que o indivíduo aumente a sua capacidade de realização de exercícios físicos.\n\nEsse tipo de doping está diretamente relacionado ao aumento da",
+    "alternativas": {
+      "A": "frequência cardíaca.",
+      "B": "capacidade pulmonar.",
+      "C": "massa muscular do indivíduo.",
+      "D": "atividade anaeróbica da musculatura.",
+      "E": "taxa de transporte de oxigênio pelo sangue."
+    },
+    "depende_de_figura": false,
+    "observacao_transcricao": "O termo doping aparece em itálico na prova.",
+    "gabarito_calculado": "E",
+    "resolucao": "Eritropoiese é a produção de eritrócitos (hemácias).\nMais eritropoietina leva à produção de mais hemácias.\nAs hemácias contêm hemoglobina, que transporta oxigênio.\nCom mais hemácias, o sangue leva mais oxigênio aos músculos, e o atleta rende mais em exercícios aeróbicos.\nAlternativa E.",
+    "enganos": {
+      "A": "Confundiu com estimulantes que aceleram o coração; a eritropoietina atua na produção de hemácias, não no ritmo cardíaco.",
+      "B": "Associou mais oxigênio a pulmões maiores, mas o hormônio não muda a capacidade pulmonar, e sim quanto oxigênio o sangue consegue carregar.",
+      "C": "Confundiu com doping por esteroides anabolizantes, que aumentam a massa muscular.",
+      "D": "Inverteu o efeito: com mais oxigênio disponível, o músculo depende menos do metabolismo anaeróbico."
+    },
+    "conceitos": [
+      "eritropoiese",
+      "hemácias",
+      "transporte de oxigênio"
+    ]
+  }
+]

@@ -56,10 +56,11 @@ def test_matrizes_das_duas_areas():
         assert all(h["competencia"] for h in matriz["habilidades"]), area
 
 
-def test_mvp_tem_60_questoes_unicas(mvp):
+def test_banco_tem_pelo_menos_60_questoes_por_area_sem_repetir(mvp):
     ids = [q["id"] for q in mvp]
-    assert len(ids) == 60
-    assert len(set(ids)) == 60
+    assert len(ids) == len(set(ids))
+    for area in ("matematica", "natureza"):
+        assert sum(q["area"] == area for q in mvp) >= 60, area
 
 
 def test_mvp_gabarito_igual_ao_oficial(mvp, todas):
@@ -85,12 +86,15 @@ def test_mvp_sem_imagem_e_sem_anuladas(mvp, todas):
         assert not todas[questao["id"]]["anulada"]
 
 
-def test_mvp_habilidade_e_competencia_da_matriz(mvp, matriz, todas):
-    habilidades = {h["codigo"]: h for h in matriz["habilidades"]}
+def test_mvp_habilidade_e_competencia_da_matriz_da_area(mvp, todas):
+    matrizes = {area: {h["codigo"]: h for h in carregar(f"matriz_{area}.json")["habilidades"]}
+                for area in ("matematica", "natureza")}
     for questao in mvp:
         codigo = questao["habilidade"]["codigo"]
         assert codigo == todas[questao["id"]]["habilidade"], questao["id"]
-        assert questao["competencia"]["codigo"] == habilidades[codigo]["competencia"]
+        assert questao["area"] == todas[questao["id"]]["area"], questao["id"]
+        assert questao["habilidade"]["descricao"] == matrizes[questao["area"]][codigo]["descricao"], questao["id"]
+        assert questao["competencia"]["codigo"] == matrizes[questao["area"]][codigo]["competencia"], questao["id"]
 
 
 def test_mvp_fonte_registrada(mvp):

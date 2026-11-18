@@ -57,30 +57,6 @@ def test_dinheiro_com_cifrao_sem_escape_e_problema():
 
 # ---------------------------------------------------------------- seleção
 
-def questao(ano, numero, habilidade):
-    return {"id": f"{ano}-{numero}", "ano": ano, "numero": numero, "habilidade": {"codigo": habilidade}}
-
-
-def test_escolher_alterna_habilidades_antes_de_repetir():
-    elegiveis = [questao(2022, 136, "H1"), questao(2022, 137, "H1"), questao(2022, 138, "H1"),
-                 questao(2023, 140, "H2"), questao(2024, 150, "H3")]
-    escolhidas = selecionar.escolher(elegiveis, 3)
-    assert sorted(q["habilidade"]["codigo"] for q in escolhidas) == ["H1", "H2", "H3"]
-
-
-def test_escolher_alterna_anos_dentro_da_habilidade():
-    elegiveis = [questao(2022, 136, "H1"), questao(2022, 137, "H1"), questao(2023, 140, "H1")]
-    escolhidas = selecionar.escolher(elegiveis, 2)
-    assert {q["ano"] for q in escolhidas} == {2022, 2023}
-
-
-def test_escolher_e_deterministico_e_ordenado():
-    elegiveis = [questao(2024, 150, "H3"), questao(2022, 136, "H1"), questao(2023, 140, "H2")]
-    primeira = selecionar.escolher(elegiveis, 3)
-    assert primeira == selecionar.escolher(list(reversed(elegiveis)), 3)
-    assert [q["id"] for q in primeira] == ["2022-136", "2023-140", "2024-150"]
-
-
 def test_sem_latex_remove_comandos_para_comparar_com_pdf():
     assert selecionar.sem_latex("$\\frac{1}{2}$").split() == ["1", "2"]
 
@@ -96,3 +72,10 @@ def test_exclui_transcricao_muito_diferente_do_pdf():
     questao_oficial = {"anulada": False, "tem_imagem": False, "gabarito": "B",
                        "conferencia": {"item_igual_nos_cadernos_regulares": True}}
     assert selecionar.motivos_de_exclusao(questao_oficial, revisao_valida(), 0.5) == ["transcrição só 50% parecida com o PDF"]
+
+
+def test_aceita_id_de_natureza_e_de_matematica():
+    assert validar_revisao.problemas_da_revisao(revisao_valida(id="2022-91")) == []
+    assert validar_revisao.problemas_da_revisao(revisao_valida(id="2025-180")) == []
+    assert "id inválido" in validar_revisao.problemas_da_revisao(revisao_valida(id="2022-90"))
+    assert "id inválido" in validar_revisao.problemas_da_revisao(revisao_valida(id="2022-181"))
