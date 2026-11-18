@@ -4,14 +4,14 @@ on:
   push:
     branches: [main]
     paths: ["data/**", ".github/workflows/dados.yml"]
+  # em todo PR, para poder ser obrigatório no merge
   pull_request:
-    paths: ["data/**", ".github/workflows/dados.yml"]
 
 permissions:
   contents: read
 
 jobs:
-  testes:
+  dados:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5

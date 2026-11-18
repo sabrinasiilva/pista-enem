@@ -4,14 +4,14 @@ on:
   push:
     branches: [main]
     paths: ["web/**", ".github/workflows/web.yml"]
+  # em todo PR, para poder ser obrigatório no merge
   pull_request:
-    paths: ["web/**", ".github/workflows/web.yml"]
 
 permissions:
   contents: read
 
 jobs:
-  qualidade:
+  web:
     runs-on: ubuntu-latest
     defaults:
       run:

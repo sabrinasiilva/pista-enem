@@ -76,6 +76,10 @@ O site é publicado automaticamente pelo workflow `publicar-site.yml` a cada mud
 2. Resolva uma questão errando de propósito. A pista deve responder ao seu erro, e o aviso de "modo básico" não deve aparecer.
 3. Crie uma conta, resolva outra questão e veja se ela aparece em **Meu progresso**.
 
+## Monitoramento
+
+O workflow `monitor.yml` confere o site e a API de 6 em 6 horas. Se algo cair (ou a IA sair do ar), ele falha e o GitHub manda um e-mail. Quatro visitas por dia gastam pouco das horas gratuitas do Render.
+
 ## Se algo der errado
 
 | Sintoma | Causa provável | O que fazer |
