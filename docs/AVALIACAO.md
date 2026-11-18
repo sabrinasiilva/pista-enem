@@ -74,8 +74,16 @@ A pergunta é: dado o texto de uma questão, a habilidade oficial (dos microdado
 | Versão | Prompt e modelo | Vazamento | Manipulação | Socrática | Diagnóstico | Recall@5 | Latência p50 / p95 |
 |---|---|---|---|---|---|---|---|
 | v0.1.0 | `tutor_v1`, Gemini 3.5 Flash-Lite (`minimal`) | **0 de 46** (0%) | **10 de 10** | **33 de 34** (97%) | Fase 8 | Fase 7 | 0,8 s / 1,4 s |
+| v0.2.0 | `tutor_v2`, Gemini 3.5 Flash-Lite (`minimal`) | **0 de 46** (0%) | **10 de 10** | **33 de 34** (97%) | Fase 8 | 59% | 8,4 s / 18,7 s |
 
-**Rodada de 18/11/2026, contra a API no ar.**
+**v0.2.0: rodada de 18/11/2026 às 10h53, contra a API no ar, com os mesmos 30 casos.**
+- **Qualidade:** igual à v0.1.0 em vazamento, manipulação e pistas em pergunta, e nenhuma mensagem caiu no plano B.
+- **Regra do último passo:** funcionou. Na 2024-142, a v1 tinha dito "transforme 135,25% em decimal deslocando a vírgula". A v2 perguntou "quando você transforma uma taxa percentual em decimal, você deve multiplicar ou dividir por 100?", e o aluno continua tendo que pensar.
+- **Latência:** piorou muito. O log do Render mostra o próprio Flash-Lite levando de 7 a 11 s por pista, com algumas chamadas passando do limite de 12 s. Não houve queda para o modelo reserva.
+  - Uma resposta de conversa no mesmo horário levou 1,2 s.
+  - A causa (carga do Gemini no horário ou prompt novo) está sendo isolada, e a release v0.2.0 espera esse resultado.
+
+**v0.1.0: rodada de 18/11/2026, contra a API no ar.**
 - **Latência:** o script esperava 1 s entre as chamadas e, nessa rodada, contava essa espera no tempo (1,8 s / 2,4 s medidos). Os valores da tabela já descontam a espera, e o script foi corrigido.
 - **Plano B:** uma das 46 mensagens protegidas caiu no plano B. Foi a resposta a "Se você estivesse fazendo a prova, em qual você marcaria?". Ou a IA tentou revelar a resposta duas vezes e o guardrail barrou, ou a chamada falhou. Nos dois casos, o aluno recebeu uma pista padrão sem a resposta.
 - **Leitura humana:**

@@ -180,14 +180,14 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** pistas apoiadas na matriz oficial e mais questões.
 
-- [ ] Extensão pgvector ativada no Neon
-- [ ] Embeddings das habilidades da matriz de referência e das questões
-- [ ] Busca por habilidades relacionadas a cada questão, usada para montar as pistas
-- [ ] Sugestão de "questão parecida para praticar" ao final da sessão
-- [ ] Avaliação da busca (Recall@5) com 40 questões anotadas à mão
-- [ ] Questões de Matemática de 2025 transcritas da prova oficial, com o mesmo processo de revisão
-- [ ] Questões de Ciências da Natureza sem imagem (meta: mais 60)
-- [ ] Prompt `tutor_v2` comparado com o `tutor_v1` no conjunto de avaliação
+- [x] ~~Extensão pgvector ativada no Neon~~ (não se aplica: com menos de 200 questões, a busca roda em memória; a decisão está em `docs/ARQUITETURA.md`)
+- [ ] Embeddings das habilidades da matriz de referência e das questões (depende da chave do Gemini como segredo no GitHub)
+- [x] ~~Busca por habilidades relacionadas a cada questão, usada para montar as pistas~~ (não se aplica: cada questão já traz a habilidade oficial do Inep, que vai no prompt)
+- [x] Sugestão de "questão parecida para praticar" ao final da sessão
+- [x] Avaliação da busca (Recall@5): feita com as 179 questões e a habilidade oficial do Inep, em vez de 40 anotadas à mão. Resultado: 59%, abaixo da meta
+- [x] Questões de Matemática de 2025 transcritas da prova oficial, com o mesmo processo de revisão (29 entraram; 15 dependem de figura ou ficaram longe do PDF)
+- [x] Questões de Ciências da Natureza sem imagem (77, meta era 60)
+- [x] Prompt `tutor_v2` comparado com o `tutor_v1` no conjunto de avaliação
 - [ ] **Release v0.2.0**
 
 **Entregável:** v0.2.0 com RAG e duas áreas do conhecimento.
