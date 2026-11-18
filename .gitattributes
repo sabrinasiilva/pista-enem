@@ -1,0 +1,5 @@
+# texto sempre com LF no repositório (o Windows converte na hora do checkout)
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.ico binary
