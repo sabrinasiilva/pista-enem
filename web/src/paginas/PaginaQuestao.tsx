@@ -213,7 +213,20 @@ export function PaginaQuestao({ id, aoTerminar, acaoFinal, semVoltar = false }: 
               Sua resposta
             </h2>
             <Progresso estado={sessao.estado} />
-            {ultimaDoTutor && (
+            {(ocupado === 'resposta' || ocupado === 'explicacao') && (
+              <div
+                role="status"
+                className="flex items-center gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-900"
+              >
+                <span aria-hidden className="flex gap-1">
+                  <span className="size-2 animate-bounce rounded-full bg-amber-500 [animation-delay:-0.3s]" />
+                  <span className="size-2 animate-bounce rounded-full bg-amber-500 [animation-delay:-0.15s]" />
+                  <span className="size-2 animate-bounce rounded-full bg-amber-500" />
+                </span>
+                {ocupado === 'resposta' ? 'O tutor está pensando na sua pista…' : 'O tutor está preparando a explicação…'}
+              </div>
+            )}
+            {ultimaDoTutor && ocupado !== 'resposta' && ocupado !== 'explicacao' && (
               <aside
                 ref={destaque}
                 aria-label="Última mensagem do tutor"

@@ -53,6 +53,16 @@ describe('PaginaQuestao', () => {
     expect(await screen.findByText(/Pista 2 de 2/)).toBeInTheDocument()
   })
 
+  it('mostra que o tutor está pensando enquanto a pista é gerada', async () => {
+    servidorFalso({ atrasoDaResposta: 300 })
+    const { usuario } = await abrir()
+    await screen.findAllByRole('radio')
+    await responder(usuario, 'B')
+    expect(await screen.findByText('O tutor está pensando na sua pista…')).toBeInTheDocument()
+    expect(await screen.findByText(/Pista 1 de 2/)).toBeInTheDocument()
+    expect(screen.queryByText('O tutor está pensando na sua pista…')).not.toBeInTheDocument()
+  })
+
   it('a explicação completa pede confirmação e revela a resposta', async () => {
     servidorFalso()
     const { usuario } = await abrir()
