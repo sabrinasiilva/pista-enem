@@ -34,6 +34,10 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/), e
 - Tema claro, escuro e automático
 - Hospedagem: `render.yaml` para a API no Render, driver do PostgreSQL (Neon), publicação do site no GitHub Pages e aviso de "servidor acordando"
 
+### Alterado
+- Tutor mais rápido: Gemini 3.5 Flash-Lite com raciocínio mínimo como modelo principal (3.8 Flash como reserva), limite de espera de 12 s e respostas de até 60 palavras, sem cumprimentos
+- Indicador "o tutor está pensando" enquanto a pista é gerada, e tempo de cada chamada à IA no log
+
 ### Corrigido
 - Prévia das questões mostrava LaTeX e pedaços de tabela; agora é texto puro
 - Pontuação logo depois de uma fórmula ia sozinha para a linha de baixo
