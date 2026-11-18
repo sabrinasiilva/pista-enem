@@ -34,6 +34,8 @@ interface Opcoes {
   iaDesativada?: boolean
   semConexao?: boolean
   respostaDoTutor?: string
+  /** atraso, em ms, para responder às alternativas (simula a IA pensando) */
+  atrasoDaResposta?: number
 }
 
 function json(dados: unknown, status = 200): Response {
@@ -195,6 +197,7 @@ export function servidorFalso(opcoes: Opcoes = {}) {
 
     if (!acao) return json(visivel(sessao))
     if (acao === 'respostas') {
+      if (opcoes.atrasoDaResposta) await new Promise((r) => setTimeout(r, opcoes.atrasoDaResposta))
       const letra = corpo.alternativa as Letra
       if (sessao.tentativas.includes(letra)) return erro(409, 'alternativa_repetida', `Você já tentou a alternativa ${letra}.`)
       falar(sessao, 'aluno', `Marquei a alternativa ${letra}.`)
