@@ -6,7 +6,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-from pydantic import SecretStr
+from pydantic import SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 PASTA_API = Path(__file__).resolve().parents[1]
@@ -33,6 +33,15 @@ class Configuracoes(BaseSettings):
     # banco de dados: SQLite local por padrão; na Fase 5, PostgreSQL (Neon)
     database_url: str = f"sqlite:///{(PASTA_API / 'pista.db').as_posix()}"
     migrar_ao_iniciar: bool = True
+
+    @field_validator("database_url")
+    @classmethod
+    def _usar_psycopg(cls, url: str) -> str:
+        """O Neon entrega "postgresql://..."; o SQLAlchemy precisa saber qual driver usar."""
+        for prefixo in ("postgres://", "postgresql://"):
+            if url.startswith(prefixo):
+                return "postgresql+psycopg://" + url[len(prefixo) :]
+        return url
 
     @property
     def lista_de_modelos(self) -> list[str]:
