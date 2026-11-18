@@ -43,7 +43,7 @@ describe('criar conta', () => {
     expect(localStorage.getItem('pista:token')).not.toBeNull()
     const conta = servidor.contas.get('estudante_1')!
     expect(conta.usuario.meta_semanal).toBe(20)
-    expect(conta.usuario.habilidades_foco).toEqual(['H6', 'H7', 'H8', 'H9'])
+    expect(conta.usuario.habilidades_foco).toEqual(['MT-H6', 'MT-H7', 'MT-H8', 'MT-H9'])
   })
 
   it('avisa sobre apelido com e-mail e senhas diferentes antes de enviar', async () => {

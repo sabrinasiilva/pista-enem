@@ -14,6 +14,7 @@ from collections.abc import AsyncIterator
 from dataclasses import dataclass
 
 from . import guardrails
+from .busca import BuscaDeQuestoes
 from .estados import ESTADOS_PROTEGIDOS, Estado, TransicaoInvalida, apos_pedido_de_explicacao, apos_resposta
 from .ia import ClienteDeIA, ErroDaIA, Turno
 from .prompts import Prompts
@@ -74,6 +75,14 @@ class Tutor:
         self.banco = banco
         self.prompts = prompts
         self.ia = ia
+        self._busca: BuscaDeQuestoes | None = None
+
+    @property
+    def busca(self) -> BuscaDeQuestoes:
+        """Índice das questões parecidas, montado no primeiro uso."""
+        if self._busca is None:
+            self._busca = BuscaDeQuestoes(self.banco)
+        return self._busca
 
     def nova_sessao(self, questao_id: str) -> Sessao:
         self.banco.obter(questao_id)  # garante que a questão existe

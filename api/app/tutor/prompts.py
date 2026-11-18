@@ -60,6 +60,7 @@ class Prompts:
         contexto = self.secoes["sistema"].format_map(
             {
                 "regra_da_resposta": regra,
+                "area": questao.area_nome,
                 "fonte": questao.fonte,
                 "enunciado": questao.enunciado,
                 "alternativas": "\n".join(f"{a.letra}) {a.texto}" for a in questao.alternativas),

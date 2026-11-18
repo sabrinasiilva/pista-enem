@@ -25,7 +25,7 @@ class Configuracoes(BaseSettings):
     ia_tentativas_por_modelo: int = 2
     ia_nivel_de_raciocinio: Literal["minimal", "low", "medium", "high"] = "low"  # para modelos sem nível
 
-    versao_prompt: str = "tutor_v1"
+    versao_prompt: str = "tutor_v2"
     arquivo_questoes: Path = RAIZ_DO_REPOSITORIO / "data" / "questoes-mvp.json"
     pasta_prompts: Path = RAIZ_DO_REPOSITORIO / "prompts"
 

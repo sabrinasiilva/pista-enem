@@ -26,8 +26,9 @@ const GABARITO: Letra = 'E'
 const PROXIMO: Partial<Record<Estado, Estado>> = { respondendo: 'pista_1', pista_1: 'pista_2', pista_2: 'explicacao' }
 
 export const RESUMOS: QuestaoResumo[] = [
-  { id: '2022-141', ano: 2022, numero: 141, area: 'matematica', habilidade: 'H16', inicio_do_enunciado: 'Uma cozinheira…' },
-  { id: '2023-150', ano: 2023, numero: 150, area: 'matematica', habilidade: 'H8', inicio_do_enunciado: 'Uma escultura…' },
+  { id: '2022-141', ano: 2022, numero: 141, area: 'matematica', habilidade: 'H16', habilidade_chave: 'MT-H16', inicio_do_enunciado: 'Uma cozinheira…' },
+  { id: '2023-150', ano: 2023, numero: 150, area: 'matematica', habilidade: 'H8', habilidade_chave: 'MT-H8', inicio_do_enunciado: 'Uma escultura…' },
+  { id: '2023-105', ano: 2023, numero: 105, area: 'natureza', habilidade: 'H21', habilidade_chave: 'CN-H21', inicio_do_enunciado: 'Uma panela de pressão…' },
 ]
 
 interface Opcoes {
@@ -76,7 +77,7 @@ export function servidorFalso(opcoes: Opcoes = {}) {
     if (!apelido || (sessao.estado !== 'concluida' && sessao.estado !== 'explicacao')) return
     contas.get(apelido)!.resultados.push({
       questao_id: sessao.questao_id,
-      habilidade: 'H16',
+      habilidade: 'MT-H16',
       acertou: sessao.estado === 'concluida',
       acertou_de_primeira: sessao.estado === 'concluida' && sessao.tentativas.length === 1,
       tentativas: sessao.tentativas.length,
@@ -126,7 +127,11 @@ export function servidorFalso(opcoes: Opcoes = {}) {
       if (token) tokens.delete(token)
       return new Response(null, { status: 204 })
     }
-    if (pathname === '/recomendacoes') return json(RESUMOS.slice(0, Number(searchParams.get('quantidade') ?? 5)))
+    if (pathname === '/recomendacoes') {
+      // só as de Matemática, para o modo foco dos testes ter uma fila de duas questões
+      const deMatematica = RESUMOS.filter((q) => q.area === 'matematica')
+      return json(deMatematica.slice(0, Number(searchParams.get('quantidade') ?? 5)))
+    }
     if (pathname.startsWith('/eu')) {
       if (!conta) return erro(401, 'login_necessario', 'Entre na sua conta para continuar.')
       if (pathname === '/eu' && metodo === 'GET') return json(conta.usuario)
@@ -153,7 +158,7 @@ export function servidorFalso(opcoes: Opcoes = {}) {
           feitas_na_semana: r.length,
           meta_semanal: conta.usuario.meta_semanal,
           por_habilidade: r.length
-            ? [{ codigo: 'H16', descricao: 'Variação de grandezas', feitas: r.length, acertos_de_primeira: r.filter((x) => x.acertou_de_primeira).length }]
+            ? [{ codigo: 'MT-H16', descricao: 'Variação de grandezas', feitas: r.length, acertos_de_primeira: r.filter((x) => x.acertou_de_primeira).length }]
             : [],
           recentes: r,
         })
@@ -170,6 +175,11 @@ export function servidorFalso(opcoes: Opcoes = {}) {
     if (pathname === '/health')
       return json({ status: 'ok', versao: '0.1.0', questoes: 1, ia: opcoes.iaDesativada ? 'desativada' : 'gemini', prompt: 'tutor_v1' })
     if (pathname === '/questoes') return json(RESUMOS)
+    const parecidas = pathname.match(/^\/questoes\/([^/]+)\/parecidas$/)
+    if (parecidas) {
+      const base = RESUMOS.find((q) => q.id === parecidas[1])
+      return json(RESUMOS.filter((q) => q.id !== base?.id && q.area === base?.area))
+    }
     if (pathname.startsWith('/questoes/')) {
       const resumo = RESUMOS.find((q) => pathname === `/questoes/${q.id}`)
       return resumo

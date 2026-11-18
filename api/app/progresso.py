@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta, timezone
 
 from .banco import Resultado
-from .tutor.questoes import BancoDeQuestoes, Questao
+from .tutor.questoes import CHAVE_DE_HABILIDADE, BancoDeQuestoes, Questao, chave_de_habilidade, ordem_da_chave
 
 # horário de Brasília (o Brasil não tem horário de verão desde 2019)
 FUSO = timezone(timedelta(hours=-3))
@@ -45,7 +45,7 @@ class Habilidade:
 
 
 def por_habilidade(resultados: Sequence[Resultado], banco: BancoDeQuestoes) -> list[Habilidade]:
-    descricoes = {q.habilidade: q.habilidade_descricao for q in banco.listar()}
+    descricoes = {q.habilidade_chave: q.habilidade_descricao for q in banco.listar()}
     feitas: dict[str, int] = defaultdict(int)
     acertos: dict[str, int] = defaultdict(int)
     for resultado in resultados:
@@ -53,7 +53,7 @@ def por_habilidade(resultados: Sequence[Resultado], banco: BancoDeQuestoes) -> l
         acertos[resultado.habilidade] += resultado.acertou_de_primeira
     return [
         Habilidade(codigo, descricoes.get(codigo, ""), feitas[codigo], acertos[codigo])
-        for codigo in sorted(feitas, key=lambda c: int(c[1:]))
+        for codigo in sorted(feitas, key=ordem_da_chave)
     ]
 
 
@@ -86,13 +86,13 @@ def recomendar(
     sorteio = random.Random(semente)  # noqa: S311 - sorteio de questões, não é uso criptográfico
     ultimos = ultimo_por_questao(resultados)
     revisar = {r.questao_id for r in questoes_para_revisar(resultados)}
-    foco = set(habilidades_foco)
+    foco = {chave_de_habilidade(h) for h in habilidades_foco if CHAVE_DE_HABILIDADE.match(h.strip())}
 
     def prioridade(questao: Questao) -> int:
         if questao.id in revisar:
             return 0
         if questao.id not in ultimos:
-            return 1 if questao.habilidade in foco else 2
+            return 1 if questao.habilidade_chave in foco else 2
         return 3
 
     questoes = banco.listar()
@@ -108,7 +108,7 @@ def registrar_resultado(sessao_do_banco, sessao_do_tutor, questao: Questao) -> R
     resultado = Resultado(
         usuario_id=sessao_do_tutor.usuario_id,
         questao_id=questao.id,
-        habilidade=questao.habilidade,
+        habilidade=questao.habilidade_chave,
         acertou=acertou,
         acertou_de_primeira=acertou and len(sessao_do_tutor.tentativas) == 1,
         tentativas=len(sessao_do_tutor.tentativas),

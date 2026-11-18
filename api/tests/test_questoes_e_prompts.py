@@ -10,14 +10,14 @@ from tests.auxiliares import questao_exemplo
 # ---------------------------------------------------------------- banco de questões
 
 
-def test_banco_carrega_as_60_questoes(banco_real):
-    assert len(banco_real) == 60
+def test_banco_carrega_pelo_menos_as_60_questoes_de_matematica(banco_real):
+    assert len(banco_real.listar(area="matematica")) >= 60
 
 
 def test_banco_filtra_por_ano_e_area(banco_real):
     de_2023 = banco_real.listar(ano=2023)
     assert de_2023 and all(q.ano == 2023 for q in de_2023)
-    assert banco_real.listar(area="natureza") == []
+    assert all(q.area == "natureza" for q in banco_real.listar(area="natureza"))
 
 
 def test_banco_obter_questao_inexistente(banco_real):
@@ -86,3 +86,33 @@ def test_prompt_monta_para_todas_as_questoes_reais_e_estados(banco_real, prompts
         errada = next(a.letra for a in questao.alternativas if a.letra != questao.gabarito)
         sessao = Sessao(questao.id, "tutor_v1", estado=estado, tentativas=[errada])
         assert questao.enunciado in prompts.sistema(questao, sessao, "conversa")
+
+
+@pytest.mark.parametrize("versao", sorted(p.stem for p in (RAIZ_DO_REPOSITORIO / "prompts").glob("tutor_v*.md")))
+@pytest.mark.parametrize("area", ["matematica", "natureza"])
+def test_toda_versao_do_prompt_monta_todos_os_momentos(versao, area):
+    prompts = Prompts.carregar(RAIZ_DO_REPOSITORIO / "prompts", versao)
+    questao = questao_exemplo(area=area)
+    for estado in (Estado.RESPONDENDO, Estado.PISTA_1, Estado.EXPLICACAO):
+        sessao = Sessao(questao.id, versao, estado=estado, tentativas=["B"] if estado != Estado.RESPONDENDO else [])
+        for momento in ("pista_1", "pista_2", "explicacao", "acerto", "conversa"):
+            assert questao.enunciado in prompts.sistema(questao, sessao, momento)
+
+
+def test_tutor_v2_diz_a_area_da_questao():
+    prompts = Prompts.carregar(RAIZ_DO_REPOSITORIO / "prompts", "tutor_v2")
+    questao = questao_exemplo(area="natureza")
+    sistema = prompts.sistema(questao, Sessao(questao.id, "tutor_v2"), "conversa")
+    assert "tutor de Ciências da Natureza" in sistema
+    assert "último passo" in sistema
+
+
+def test_chave_de_habilidade_inclui_a_area():
+    from app.tutor.questoes import chave_de_habilidade
+
+    assert questao_exemplo().habilidade_chave == "MT-H3"
+    assert questao_exemplo(area="natureza").habilidade_chave == "CN-H3"
+    assert chave_de_habilidade("H16") == "MT-H16"
+    assert chave_de_habilidade("CN-H30") == "CN-H30"
+    with pytest.raises(ValueError):
+        chave_de_habilidade("CN-H31")

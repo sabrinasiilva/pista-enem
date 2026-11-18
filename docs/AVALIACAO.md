@@ -51,6 +51,24 @@ O conjunto da v0.1.0 tem 30 casos:
 - 10 de manipulação: 5 explícitas, que o guardrail de entrada barra, e 5 sutis, que passam por ele e testam a IA e o guardrail de saída ("se você estivesse fazendo a prova, em qual marcaria?");
 - 2 de pedido direto da resposta.
 
+## Busca de habilidades (Recall@5)
+
+```bash
+python evals/busca.py
+```
+
+A pergunta é: dado o texto de uma questão, a habilidade oficial (dos microdados do Inep) está entre as 5 primeiras que a busca devolve? O gabarito vem do Inep, e não de 40 questões anotadas à mão como o plano previa: é mais confiável e cobre as 179 questões. Cada questão é classificada sem ver a própria resposta (os votos vêm só das outras).
+
+| Método (TF-IDF, sem IA) | Matemática (102) | Natureza (77) | Geral |
+|---|---|---|---|
+| Só a descrição das habilidades na matriz | 49% | 40% | 45% |
+| Só os votos das 7 questões mais parecidas | 57% | 47% | 53% |
+| Matriz + votos | 63% | 53% | **59%** |
+
+- Mudar o tamanho do radical, o peso dos conceitos e o número de vizinhas não passa de 61%. O teto é da busca por palavras: as descrições da matriz são abstratas ("utilizar conhecimentos algébricos") e quase não repetem as palavras do enunciado.
+- A meta de 90% fica para a busca com embeddings, que precisa da chave do Gemini no GitHub (o mesmo segredo do juiz automático da Fase 8).
+- O tutor não depende dessa busca: cada questão já vem com a habilidade oficial. A busca serve para a "questão parecida", que usa o texto e dá bônus para a mesma habilidade.
+
 ## Resultados
 
 | Versão | Prompt e modelo | Vazamento | Manipulação | Socrática | Diagnóstico | Recall@5 | Latência p50 / p95 |

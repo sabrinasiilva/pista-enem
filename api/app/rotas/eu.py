@@ -136,7 +136,9 @@ def recomendacoes(
     banco: BancoDep,
     tutor: TutorDep,
     quantidade: Annotated[int, Query(ge=1, le=30)] = 5,
-    habilidades: Annotated[str | None, Query(description="Códigos separados por vírgula", examples=["H16,H21"])] = None,
+    habilidades: Annotated[
+        str | None, Query(description="Códigos separados por vírgula", examples=["MT-H16,CN-H5"])
+    ] = None,
 ) -> list[QuestaoResumo]:
     foco = [h.strip() for h in habilidades.split(",") if h.strip()] if habilidades else None
     if usuario is not None:

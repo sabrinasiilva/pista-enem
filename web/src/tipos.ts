@@ -18,6 +18,8 @@ export interface QuestaoResumo {
   numero: number
   area: string
   habilidade: string
+  /** Habilidade com a área ("MT-H16"), a mesma usada no progresso e no foco. */
+  habilidade_chave: string
   inicio_do_enunciado: string
 }
 
