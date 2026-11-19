@@ -91,6 +91,10 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
   - saída: a letra da alternativa certa, o valor dela e a posição ("a terceira alternativa").
 
   Limites conhecidos: pedidos vagos ("qual é?") e números por extenso ("novecentos e sessenta") passam por esses filtros. Nesses casos, quem segura a resposta são as instruções do tutor, e o juiz automático da avaliação mede se elas funcionaram.
+- Backup: o Neon guarda o histórico do banco e permite criar uma cópia de qualquer momento dentro da janela de restauração. Testado em 19/11/2026:
+  - foi criado um branch a partir de um momento do passado, com uma conta de teste já criada;
+  - `api/scripts/conferir_backup.py` comparou a cópia com o original: as tabelas, as linhas (usuários e acessos) e a versão das migrações (`0002`) bateram;
+  - o script mostra só a contagem de linhas, e as conexões ficam no terminal de quem roda, nunca no código.
 - `main` protegida: mudanças só entram por pull request com o CI verde
 - IP do aluno lido do cabeçalho `True-Client-IP`, definido pela Cloudflare na frente do Render, que o cliente não consegue forjar. O `X-Forwarded-For` não é usado, porque o Render mantém o valor enviado pelo cliente
 

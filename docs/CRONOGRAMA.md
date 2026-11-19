@@ -214,15 +214,15 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** tratar segurança como parte do produto.
 
-- [ ] Modelo de ameaças documentado em `SECURITY.md` (o que proteger, de quem e como)
-- [ ] Testes automáticos de manipulação de prompt (pelo menos 30 variações)
-- [ ] Cabeçalhos de segurança (CSP, HSTS, X-Content-Type-Options)
-- [ ] Logs sem dados pessoais e sem o texto completo das mensagens
-- [ ] Retenção: interações apagadas após 30 dias, só métricas agregadas ficam
+- [x] Modelo de ameaças documentado em `SECURITY.md` (o que proteger, de quem e como) (#48)
+- [x] Testes automáticos de manipulação de prompt (pelo menos 30 variações) (60 casos, #46)
+- [x] Cabeçalhos de segurança (CSP, HSTS, X-Content-Type-Options) (#44)
+- [x] Logs sem dados pessoais e sem o texto completo das mensagens (#47)
+- [x] Retenção: interações apagadas após 30 dias, só métricas agregadas ficam (#47: as conversas nem são gravadas e somem em até 24 h)
 - [x] Aviso de privacidade no site, em linguagem simples (Configurações e campo da conversa)
-- [ ] Análise de código com CodeQL e auditoria de dependências (`pip-audit`, `npm audit`) no CI
-- [ ] Configurações de segurança do Gemini revisadas (conteúdo impróprio bloqueado)
-- [ ] Backup do banco testado (restaurar num banco vazio)
+- [x] Análise de código com CodeQL e auditoria de dependências (`pip-audit`, `npm audit`) no CI (#44)
+- [x] Configurações de segurança do Gemini revisadas (conteúdo impróprio bloqueado) (#46)
+- [x] Backup do banco testado (restaurar num banco vazio) (restauração do Neon num momento do passado, conferida em 19/11/2026)
 
 **Entregável:** `SECURITY.md` completo e CI com checagens de segurança.
 **Pronto quando:** nenhum alerta crítico aberto e todos os testes de manipulação falham para o atacante.
