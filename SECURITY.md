@@ -56,7 +56,12 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 - Análise estática com CodeQL (Python e TypeScript) em todo PR e toda semana
 - Auditoria de dependências no CI: `pip-audit` na API e `npm audit` no site
 - Validação de todas as entradas com Pydantic
-- Configurações de segurança de conteúdo do Gemini ativadas
+- Filtros de conteúdo do Gemini definidos no código (`api/app/tutor/ia.py`): assédio, ódio e conteúdo sexual bloqueiam já no nível baixo, porque o público tem menores de idade; conteúdo perigoso bloqueia no nível médio, para não barrar questões de Química e Biologia. Uma resposta bloqueada cai no plano B
+- Guardrails contra manipulação do tutor, com 60 casos testados em `api/tests/test_manipulacao.py`:
+  - entrada: pedido para ignorar as instruções, troca de papel ("finja ser", "modo DAN"), extração do prompt, falsa autoridade ("sou a professora"), marcas de papel falsas (`<sistema>`, `[SYSTEM]`) e disfarces (letras espaçadas, números no lugar de letras), em português e inglês;
+  - saída: a letra da alternativa certa, o valor dela e a posição ("a terceira alternativa").
+
+  Limites conhecidos: pedidos vagos ("qual é?") e números por extenso ("novecentos e sessenta") passam por esses filtros. Nesses casos, quem segura a resposta são as instruções do tutor, e o juiz automático da avaliação mede se elas funcionaram.
 - `main` protegida: mudanças só entram por pull request com o CI verde
 - IP do aluno lido do cabeçalho `True-Client-IP`, definido pela Cloudflare na frente do Render, que o cliente não consegue forjar. O `X-Forwarded-For` não é usado, porque o Render mantém o valor enviado pelo cliente
 
