@@ -235,7 +235,7 @@ function Demonstracao() {
         <p className="mt-2 text-sm text-stone-700">
           Cada docinho tinha 2 cm de diâmetro e agora terá 4 cm. Quantas porções de massa ela deve preparar?
         </p>
-        <div className="mt-4 flex items-center gap-3 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-stone-500">
+        <div className="mt-4 flex items-center gap-3 rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-sm text-stone-600">
           <span className="flex size-6 items-center justify-center rounded-full border border-red-200 bg-white">
             <X className="size-3.5 text-red-500" aria-hidden />
           </span>

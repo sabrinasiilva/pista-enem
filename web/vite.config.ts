@@ -5,8 +5,9 @@ import { defineConfig, loadEnv } from 'vite'
 import { politicaDeConteudo } from './csp'
 
 // Publicado em sabrinasiilva.github.io/pista-enem/ (Fase 5); em desenvolvimento, na raiz.
-export default defineConfig(({ command, mode }) => ({
-  base: command === 'build' ? '/pista-enem/' : '/',
+export default defineConfig(({ command, mode, isPreview }) => ({
+  // o preview serve o build, então usa o mesmo caminho do site publicado
+  base: command === 'build' || isPreview ? '/pista-enem/' : '/',
   plugins: [
     react(),
     tailwindcss(),
