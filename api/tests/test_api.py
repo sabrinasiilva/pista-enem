@@ -58,7 +58,8 @@ def test_questao_nunca_envia_gabarito_nem_enganos(montar, banco_real):
     cliente, _ = montar(banco=banco_real)
     for resumo in cliente.get("/questoes").json():
         corpo = cliente.get(f"/questoes/{resumo['id']}").json()
-        assert set(corpo) == {"id", "ano", "numero", "area", "enunciado", "alternativas", "habilidade", "fonte", "figuras"}
+        campos = {"id", "ano", "numero", "area", "enunciado", "alternativas", "habilidade", "fonte", "figuras"}
+        assert set(corpo) == campos
         assert all(set(a) == {"letra", "texto"} for a in corpo["alternativas"])
 
 
