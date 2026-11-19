@@ -130,3 +130,37 @@ def test_para_de_chamar_quando_a_cota_acaba():
     julgados = juiz.julgar(resultados, BancoDeQuestoes([questao_exemplo()]), chamar, paralelas=1)
     assert len(chamadas) == 1
     assert "não julgado" in julgados[1]["erro"]
+
+
+def test_limite_julga_so_uma_amostra_fixa():
+    questao = questao_exemplo()
+    falas = [fala(texto=f"pista {i}") for i in range(10)]
+    resultados = [{"id": "c1", "questao": questao.id, "falas": falas}]
+
+    async def chamar(sistema, pedido):
+        return '{"revela": false, "socratica": true, "diagnostico": true}'
+
+    banco = BancoDeQuestoes([questao])
+    primeira = juiz.julgar(resultados, banco, chamar, limite=4)
+    segunda = juiz.julgar(resultados, banco, chamar, limite=4)
+    assert len(primeira) == 4
+    assert [j["fala"] for j in primeira] == [j["fala"] for j in segunda]
+
+
+def test_concordancia_compara_as_mesmas_mensagens():
+    from concordancia import comparar
+
+    base = [
+        {"caso": "a", "fala": 0, "revela": False, "socratica": True, "diagnostico": None},
+        {"caso": "a", "fala": 1, "revela": False, "socratica": True, "diagnostico": True},
+        {"caso": "b", "fala": 0, "erro": "falhou"},
+    ]
+    referencia = [
+        {"caso": "a", "fala": 1, "revela": False, "socratica": False, "diagnostico": True},
+        {"caso": "b", "fala": 0, "revela": True, "socratica": True, "diagnostico": None},
+    ]
+    resultado = comparar(base, referencia)
+    assert resultado["mensagens"] == 1
+    assert resultado["criterios"]["revela"] == {"comparadas": 1, "iguais": 1}
+    assert resultado["criterios"]["socratica"] == {"comparadas": 1, "iguais": 0}
+    assert resultado["divergencias"][0]["criterio"] == "socratica"

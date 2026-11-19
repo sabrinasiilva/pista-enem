@@ -1,9 +1,12 @@
 """Juiz automático: um segundo modelo avalia cada mensagem do tutor de um relatório de evals/rodar.py.
 
 Uso: python evals/juiz.py evals/relatorios/<relatorio>.json [--intervalo 6] [--modelo gemini-3.8-flash]
+     [--limite 40] [--nome juiz-flash]
 
 Precisa de GEMINI_API_KEY no ambiente (ou em api/.env). Os critérios estão em evals/criterios_juiz.md.
 Gera <relatorio>-juiz.json e <relatorio>-juiz.md, com as métricas e uma amostra para a revisão humana.
+Com --limite, julga só uma amostra fixa das mensagens (para conferir um juiz com outro, ver concordancia.py);
+--nome troca o sufixo dos arquivos, para os dois juízes não se sobrescreverem.
 """
 
 from __future__ import annotations
@@ -86,11 +89,13 @@ def julgar(
     tempo_limite: float = 90.0,
     ja_julgados: list[dict] | None = None,
     ao_julgar: Callable[[list[dict]], None] | None = None,
+    limite: int | None = None,
 ) -> list[dict]:
     """Julga as mensagens, `paralelas` de cada vez, e devolve na ordem dos casos.
 
     `ja_julgados` (de uma rodada interrompida) são reaproveitados, e `ao_julgar` recebe a lista
-    parcial depois de cada julgamento, para salvar o progresso.
+    parcial depois de cada julgamento, para salvar o progresso. Com `limite`, julga só essa quantidade
+    de mensagens, sorteadas sempre do mesmo jeito.
     """
     sistema = criterios()
     prontos = {(j["caso"], j["fala"]): j for j in ja_julgados or [] if "erro" not in j}
@@ -100,6 +105,9 @@ def julgar(
         for indice, fala in enumerate(resultado["falas"]):
             if deve_julgar(fala):
                 pendentes.append((resultado["id"], questao, indice, fala))
+    if limite is not None and limite < len(pendentes):
+        sorteados = set(random.Random(2026).sample(range(len(pendentes)), limite))  # noqa: S311 - reproduzível
+        pendentes = [p for i, p in enumerate(pendentes) if i in sorteados]
 
     async def um(caso, questao, indice, fala, semaforo) -> dict:
         if (caso, indice) in prontos:
@@ -123,7 +131,9 @@ def julgar(
                     if eh_cota_esgotada(erro):
                         cota_esgotada.append(True)
                         break
-                    await asyncio.sleep(intervalo or 0)
+                    # 503 é o modelo sobrecarregado: vale esperar um pouco mais antes de tentar de novo
+                    sobrecarga = "503" in str(erro) or "UNAVAILABLE" in str(erro)
+                    await asyncio.sleep(max(intervalo, 15) if sobrecarga else intervalo)
             await asyncio.sleep(intervalo)
         feitos[(caso, indice)] = item
         print(f"{caso} fala {indice}: {item.get('erro') or ('REVELA' if item['revela'] else 'ok')}", flush=True)
@@ -257,6 +267,8 @@ def main() -> None:
     parser.add_argument("--modelo", default="gemini-3.8-flash")
     parser.add_argument("--intervalo", type=float, default=2.0, help="segundos de pausa de cada chamada")
     parser.add_argument("--paralelas", type=int, default=3, help="chamadas ao mesmo tempo")
+    parser.add_argument("--limite", type=int, help="julga só esta quantidade de mensagens (amostra fixa)")
+    parser.add_argument("--nome", default="juiz", help="sufixo dos arquivos gerados")
     argumentos = parser.parse_args()
     if sys.platform == "win32":
         sys.stdout.reconfigure(encoding="utf-8")
@@ -264,7 +276,8 @@ def main() -> None:
     dados = json.loads(argumentos.relatorio.read_text(encoding="utf-8"))
     banco = BancoDeQuestoes.de_arquivo(RAIZ / "data" / "questoes-mvp.json")
     base = argumentos.relatorio.with_suffix("")
-    parcial = Path(f"{base}-juiz-parcial.json")
+    nome = argumentos.nome
+    parcial = Path(f"{base}-{nome}-parcial.json")
     # rodada interrompida: reaproveita o que já foi julgado
     ja_julgados = json.loads(parcial.read_text(encoding="utf-8")) if parcial.exists() else None
 
@@ -279,16 +292,18 @@ def main() -> None:
         argumentos.paralelas,
         ja_julgados=ja_julgados,
         ao_julgar=salvar_parcial,
+        limite=argumentos.limite,
     )
     resumo = resumir(julgados)
 
-    Path(f"{base}-juiz.json").write_text(
+    resumo["modelo"] = argumentos.modelo
+    Path(f"{base}-{nome}.json").write_text(
         json.dumps({"resumo": resumo, "julgados": julgados}, ensure_ascii=False, indent=1), encoding="utf-8"
     )
     texto = relatorio(resumo, julgados, argumentos.relatorio.name)
-    Path(f"{base}-juiz.md").write_text(texto, encoding="utf-8")
+    Path(f"{base}-{nome}.md").write_text(texto, encoding="utf-8")
     print(json.dumps(resumo, ensure_ascii=False, indent=1))
-    print(f"\nRelatório do juiz: {base}-juiz.md")
+    print(f"\nRelatório do juiz: {base}-{nome}.md")
     total = resumo["julgadas"] + resumo["falhas_do_juiz"]
     if total and resumo["falhas_do_juiz"] / total > LIMITE_DE_FALHAS:
         sys.exit(f"O juiz falhou em {resumo['falhas_do_juiz']} de {total} julgamentos: esta rodada não vale.")
