@@ -56,6 +56,18 @@ def ler_modelos(texto: Sequence[str], nivel_padrao: str) -> tuple[tuple[str, str
     return tuple(modelos)
 
 
+# Filtros do próprio Gemini, explícitos em vez do padrão da API. O público tem menores de idade,
+# então assédio, ódio e conteúdo sexual bloqueiam já no nível baixo. Conteúdo perigoso fica no médio
+# porque questões de Química e Biologia falam de reações, venenos e doenças. Uma resposta bloqueada
+# chega vazia e cai no plano B (outro modelo ou mensagem escrita à mão).
+FILTROS_DE_SEGURANCA = [
+    {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_LOW_AND_ABOVE"},
+    {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_LOW_AND_ABOVE"},
+    {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_LOW_AND_ABOVE"},
+    {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_MEDIUM_AND_ABOVE"},
+]
+
+
 class ClienteGemini:
     def __init__(
         self,
@@ -86,6 +98,7 @@ class ClienteGemini:
             "system_instruction": sistema,
             "max_output_tokens": self.maximo_de_tokens,
             "thinking_config": {"thinking_level": nivel},
+            "safety_settings": FILTROS_DE_SEGURANCA,
         }
 
     async def gerar(self, sistema: str, conversa: Sequence[Turno]) -> RespostaDaIA:

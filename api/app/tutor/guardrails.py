@@ -52,17 +52,40 @@ PADROES_DE_MANIPULACAO = [
     r"\bignor[aeo]\w* (as |todas as |suas |essas |tuas )?(instruc|regra|orientac|diretriz)",
     r"\besquec[ae]\w* (as |todas as |suas |essas )?(instruc|regra|orientac)",
     r"\bdesconsider[ae]\w* (as |todas as |suas )?(instruc|regra)",
-    r"\bignore (all |the |your |previous )*(instructions|rules)",
-    r"\bvoce (agora )?(e|eh|sera) (um|uma|o|a) (outro|outra|nova|novo|assistente|ia|modelo)",
-    r"\b(a partir de agora|agora) voce (e|eh|vai ser)\b",
+    r"\bignor[aeo]\w* tudo\b",
+    r"\besquec[ae]\w* (tudo|o que (te|lhe|voce))\b",
+    r"\b(ignore|disregard|forget|override)\b.{0,25}\b(instructions|rules|prompt)\b",
+    r"\b(you are now|act as|pretend to be|do anything now)\b",
+    r"\bvoce (agora )?(e|eh|sera) (um|uma|o|a) (outro|outra|nova|novo|assistente|ia|modelo|robo|bot|personagem)",
+    r"\b(a partir de agora|agora) voce (e|eh|vai ser|vai responder|responde)\b",
+    r"\b(nao tem|sem) (regras|filtro|filtros|restric\w*|limites)\b",
     r"\bfinja (que|ser)\b",
+    r"\bfaz de conta\b",
+    r"\bimagine que voce\b",
+    r"\bvamos (jogar|brincar) (de |um )?(jogo|faz)",
     r"\b(modo|mode) (desenvolvedor|developer|dan|jailbreak|deus|admin)",
+    r"\bdeveloper mode\b",
+    r"\bunrestricted\b",
     r"\bjailbreak\b",
-    r"\b(prompt|instrucoes) (do |de )?sistema\b",
-    r"\bsystem prompt\b",
-    r"\b(mostre|revele|repita|imprima|escreva|diga) (as |suas |tuas )?(instrucoes|regras)\b",
-    r"\bsou (o |a |seu |sua )?(professor|professora|desenvolvedor|desenvolvedora|criador|criadora|administrador)\b",
+    r"\bprompt\b",
+    r"\binstrucoes (do |de )?sistema\b",
+    r"\bnovas? (instrucao|instrucoes|regra|regras)\b",
+    r"\b(mostre|mostra|revele|revela|repita|repete|imprima|escreva|escreve|diga|diz|traduza|traduz|resuma|resume|"
+    r"liste|lista|copie|copia) (pra mim |para mim |me )?(as |o |a )?(suas |tuas |seu |teu )?"
+    r"(instrucoes|texto acima|mensagem inicial)\b",
+    r"\b(suas|tuas) regras\b",
+    r"\bregras que (voce|vc|te) (recebeu|deram|passaram)\b",
+    r"\bsou (o |a |seu |sua )?(professor|professora|desenvolvedor|desenvolvedora|criador|criadora|administrador|"
+    r"administradora|dono|dona)\b",
 ]
+
+# Marcas de papel falsas, procuradas no texto original: "<sistema>", "[SYSTEM]", "### system".
+_PAPEL_FALSO = re.compile(
+    r"(?im)<\s*/?\s*(sistema|system|assistente|assistant|aluno|user|usuario|usuário)\s*>"
+    r"|\[\s*(sistema|system|admin|instru[çc][ãa]o)\s*\]"
+    r"|^\s*#+\s*(sistema|system)\b"
+)
+_LEET = str.maketrans("013457@$", "oieastas")
 
 PADROES_DE_PEDIDO_DA_RESPOSTA = [
     r"\bqual (e |eh |seria )?a (resposta|alternativa|letra|opcao) (certa|correta)",
@@ -71,6 +94,13 @@ PADROES_DE_PEDIDO_DA_RESPOSTA = [
     r"(logo |so |apenas )?a (resposta|letra|alternativa)",
     r"\b(so|apenas) (quero|preciso) (d)?a (resposta|letra|alternativa)",
     r"\b(gabarito|resposta certa|resposta correta)\b",
+    r"\bqual (e |eh )?a (certa|correta)\b",
+    r"\bqual (alternativa|letra|opcao|item|resposta) (e|eh|esta|seria) (a )?(certa|correta)\b",
+    r"\b(qual|que) (alternativa|letra|opcao|item) (eu )?(marco|marcar|escolho|escolher|assinalo|assinalar|e)\b",
+    r"\b(dizer|falar|contar|passar) (qual|que) (e |eh )?(a )?(alternativa|letra|opcao|resposta)\b",
+    r"\ba resposta (e|eh|seria|da)\b",
+    r"^(e|eh|seria) (a )?(letra |alternativa )?[a-e]$",
+    r"\b(what|which)( is|s)? (the )?(correct |right )?(answer|option|letter|alternative)\b",
 ]
 
 _MANIPULACAO = [re.compile(p) for p in PADROES_DE_MANIPULACAO]
@@ -88,10 +118,17 @@ def verificar_entrada(texto: str) -> VerificacaoDeEntrada:
         return VerificacaoDeEntrada(False, "vazia")
     if len(texto) > LIMITE_DE_CARACTERES:
         return VerificacaoDeEntrada(False, "longa")
-    normalizado = normalizar(texto)
-    if any(p.search(normalizado) for p in _MANIPULACAO):
+    if _PAPEL_FALSO.search(texto) or any(p.search(forma) for forma in _formas(texto) for p in _MANIPULACAO):
         return VerificacaoDeEntrada(False, "manipulacao")
     return VerificacaoDeEntrada(True)
+
+
+def _formas(texto: str) -> list[str]:
+    """O texto normalizado e versões sem disfarce: "1gn0r3" vira "ignore", "i g n o r e" vira "ignore"."""
+    normalizado = normalizar(texto)
+    sem_leet = normalizar(texto.lower().translate(_LEET))
+    juntas = re.sub(r"\b(\w) (?=\w\b)", r"\1", normalizado)
+    return [normalizado, sem_leet, juntas]
 
 
 def pede_a_resposta(texto: str) -> bool:
@@ -103,7 +140,10 @@ def pede_a_resposta(texto: str) -> bool:
 
 # A letra é procurada no texto original (com acentos e maiúsculas): sem acento, "é" vira "e"
 # e se confunde com a alternativa E; e o artigo "a" se confunde com a alternativa A.
-_CHAVE = r"(?i:alternativas?|letra|op[çc][ãa]o|item|resposta|gabarito|marque|marcar|escolha|escolher|assinale)"
+_CHAVE = (
+    r"(?i:alternativas?|letra|op[çc][ãa]o|item|resposta|gabarito|marque|marcar|escolha|escolher|assinale|correta|certa)"
+)
+_ORDINAIS = {"A": "primeira", "B": "segunda", "C": "terceira", "D": "quarta", "E": "quinta"}
 _MEIO = r"(?:\s+(?i:correta|certa|final))?(?:\s*(?i:é|e|eh|seria|será|sera|:))?(?:\s+(?i:a|o))?"
 
 
@@ -142,6 +182,12 @@ def revela_a_resposta(texto: str, questao: Questao) -> bool:
     if _revela_a_letra(texto, questao.gabarito):
         return True
     normalizado = normalizar(texto)
+    ordinais = [_ORDINAIS.get(questao.gabarito, "")]
+    if questao.gabarito == questao.alternativas[-1].letra:
+        ordinais.append("ultima")
+    for ordinal in filter(None, ordinais):
+        if re.search(rf"\b{ordinal} (alternativa|opcao)\b|\b(alternativa|opcao) {ordinal}\b", normalizado):
+            return True
     enunciado = normalizar(questao.enunciado)
     for trecho in _trechos_da_alternativa(questao):
         # se o trecho já está no enunciado, citá-lo não entrega nada

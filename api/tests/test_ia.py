@@ -156,3 +156,27 @@ async def test_cada_modelo_recebe_o_seu_nivel_de_raciocinio():
     resposta = await gemini.gerar("s", [("aluno", "oi")])
     assert resposta.modelo == "reserva"
     assert configuracoes == [("rapido", "minimal"), ("rapido", "minimal"), ("reserva", "low")]
+
+
+async def test_filtros_de_seguranca_vao_em_toda_chamada():
+    configuracoes = []
+
+    class ModelosQueGuardam(ModelosFalsos):
+        async def generate_content(self, model, contents, config):
+            configuracoes.append(config)
+            return await super().generate_content(model, contents, config)
+
+    falsos = ModelosQueGuardam("Olá")
+    gemini = ClienteGemini(chave="falsa", modelos=["m"], cliente=SimpleNamespace(aio=SimpleNamespace(models=falsos)))
+    await gemini.gerar("s", [("aluno", "oi")])
+    filtros = {f["category"]: f["threshold"] for f in configuracoes[0]["safety_settings"]}
+    assert filtros["HARM_CATEGORY_SEXUALLY_EXPLICIT"] == "BLOCK_LOW_AND_ABOVE"
+    assert len(filtros) == 4
+
+
+async def test_resposta_bloqueada_pelo_filtro_cai_no_plano_b():
+    # o Gemini devolve texto vazio quando o filtro bloqueia
+    gemini, falsos = cliente(None, None, None, None)
+    with pytest.raises(ErroDaIA):
+        await gemini.gerar("s", [("aluno", "oi")])
+    assert falsos.chamadas == ["principal", "principal", "reserva", "reserva"]
