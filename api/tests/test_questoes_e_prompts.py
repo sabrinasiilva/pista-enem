@@ -2,7 +2,7 @@ import pytest
 
 from app.config import RAIZ_DO_REPOSITORIO
 from app.tutor.estados import Estado
-from app.tutor.prompts import PromptInvalido, Prompts
+from app.tutor.prompts import PromptInvalido, Prompts, _enunciado_com_figuras
 from app.tutor.questoes import QuestaoNaoEncontrada
 from app.tutor.sessao import Sessao
 from tests.auxiliares import questao_exemplo
@@ -85,7 +85,8 @@ def test_prompt_monta_para_todas_as_questoes_reais_e_estados(banco_real, prompts
     for questao in banco_real.listar():
         errada = next(a.letra for a in questao.alternativas if a.letra != questao.gabarito)
         sessao = Sessao(questao.id, "tutor_v1", estado=estado, tentativas=[errada])
-        assert questao.enunciado in prompts.sistema(questao, sessao, "conversa")
+        # com figura, a marca [[figura N]] vira a descrição da figura
+        assert _enunciado_com_figuras(questao) in prompts.sistema(questao, sessao, "conversa")
 
 
 @pytest.mark.parametrize("versao", sorted(p.stem for p in (RAIZ_DO_REPOSITORIO / "prompts").glob("tutor_v*.md")))

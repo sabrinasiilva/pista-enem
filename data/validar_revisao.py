@@ -6,6 +6,7 @@ Uso: python data/validar_revisao.py data/anotacoes/revisao/lote_1.json
 import json
 import re
 import sys
+from pathlib import Path
 
 LETRAS = "ABCDE"
 CAMPOS = {"id", "enunciado", "alternativas", "depende_de_figura", "observacao_transcricao",
@@ -16,6 +17,25 @@ CONTROLE = re.compile(r"[\x00-\x09\x0b-\x1f]")
 DELIMITADOR = re.compile(r"(?<!\\)\$")
 CIFRAO_SEM_ESCAPE = re.compile(r"(?<!\$)R\$\s*\d")  # "R$ 2,00"; não confunde com a variável "$R$"
 FORMULA = re.compile(r"(?<!\\)\$\$?(.+?)(?<!\\)\$\$?", re.S)
+MARCA_DE_FIGURA = re.compile(r"\[\[figura (\d+)\]\]")
+PASTA_DE_IMAGENS = Path(__file__).parent / "imagens"
+
+
+def problemas_das_figuras(revisao: dict) -> list[str]:
+    """Questão com figura: cada figura tem recorte e descrição, e o enunciado marca onde ela fica."""
+    figuras = revisao.get("figuras", [])
+    if not isinstance(figuras, list):
+        return ["figuras precisa ser uma lista"]
+    erros = []
+    for figura in figuras:
+        if not (isinstance(figura, dict) and figura.get("arquivo") and figura.get("descricao", "").strip()):
+            erros.append("cada figura precisa de arquivo e descricao")
+        elif not (PASTA_DE_IMAGENS / figura["arquivo"]).is_file():
+            erros.append(f"figura não encontrada em data/imagens: {figura['arquivo']}")
+    marcas = sorted(int(n) for n in MARCA_DE_FIGURA.findall(revisao["enunciado"]))
+    if marcas != list(range(1, len(figuras) + 1)):
+        erros.append("o enunciado precisa marcar cada figura uma vez, em ordem: [[figura 1]], [[figura 2]]...")
+    return erros
 
 
 def problemas_da_revisao(revisao: dict) -> list[str]:
@@ -36,6 +56,7 @@ def problemas_da_revisao(revisao: dict) -> list[str]:
         erros.append("depende_de_figura precisa ser true ou false")
     if not (isinstance(revisao["conceitos"], list) and 1 <= len(revisao["conceitos"]) <= 4):
         erros.append("conceitos precisa ser uma lista com 1 a 4 itens")
+    erros += problemas_das_figuras(revisao)
 
     textos = [revisao["enunciado"], revisao["resolucao"], *revisao["alternativas"].values(), *revisao["enganos"].values()]
     for texto in textos:

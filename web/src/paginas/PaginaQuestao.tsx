@@ -195,19 +195,7 @@ export function PaginaQuestao({ id, aoTerminar, acaoFinal, semVoltar = false }: 
                 Habilidade {questao.habilidade.codigo}
               </span>
             </header>
-            <TextoRico texto={questao.enunciado} className="text-[1.05rem] leading-relaxed" />
-            {questao.figuras?.map((figura, indice) => (
-              <figure key={figura.url} className="mt-4 overflow-hidden rounded-xl border border-stone-200 bg-white p-2">
-                {/* fundo branco nos dois temas: a figura vem da prova, em preto sobre branco */}
-                <img
-                  src={urlDaApi(figura.url)}
-                  alt={figura.descricao}
-                  loading="lazy"
-                  className="mx-auto max-h-[28rem] w-auto max-w-full bg-[#ffffff]"
-                />
-                <figcaption className="sr-only">Figura {indice + 1}</figcaption>
-              </figure>
-            ))}
+            <Enunciado questao={questao} />
             <p className="mt-5 border-t border-stone-100 pt-3 text-xs text-stone-500">
               Fonte: Inep, {questao.fonte.prova}.{' '}
               <a
@@ -404,5 +392,43 @@ function QuestoesParecidas({ id }: { id: string }) {
         ))}
       </ul>
     </nav>
+  )
+}
+
+const MARCA_DE_FIGURA = /\[\[figura (\d+)\]\]/
+
+/** Enunciado com as figuras no lugar marcado ([[figura 1]]); figura sem marca vai no fim. */
+function Enunciado({ questao }: { questao: Questao }) {
+  const figuras = questao.figuras ?? []
+  const partes = questao.enunciado.split(MARCA_DE_FIGURA) // texto, número, texto, número...
+  const usadas = new Set<number>()
+  const conteudo = partes.map((parte, i) => {
+    if (i % 2 === 0) {
+      return parte.trim() ? <TextoRico key={i} texto={parte} className="text-[1.05rem] leading-relaxed" /> : null
+    }
+    const numero = Number(parte)
+    usadas.add(numero)
+    return figuras[numero - 1] ? <Figura key={i} figura={figuras[numero - 1]} numero={numero} /> : null
+  })
+  return (
+    <div className="space-y-4">
+      {conteudo}
+      {figuras.map((figura, i) => (usadas.has(i + 1) ? null : <Figura key={figura.url} figura={figura} numero={i + 1} />))}
+    </div>
+  )
+}
+
+function Figura({ figura, numero }: { figura: { url: string; descricao: string }; numero: number }) {
+  return (
+    <figure className="overflow-hidden rounded-xl border border-stone-200 bg-[#ffffff] p-2">
+      {/* fundo branco nos dois temas: a figura vem da prova, em preto sobre branco */}
+      <img
+        src={urlDaApi(figura.url)}
+        alt={figura.descricao}
+        loading="lazy"
+        className="mx-auto max-h-[28rem] w-auto max-w-full"
+      />
+      <figcaption className="sr-only">Figura {numero}</figcaption>
+    </figure>
   )
 }

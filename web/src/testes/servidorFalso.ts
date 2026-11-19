@@ -7,7 +7,7 @@ export const QUESTAO: Questao = {
   numero: 141,
   area: 'matematica',
   enunciado:
-    'Uma cozinheira faz docinhos com $2$ cm de diâmetro e cada porção custa R\\$ 10,00.\n\n| Tamanho | Porções |\n|---|---|\n| pequeno | 1 |\n\nO volume cresce com $d^3$. Quantas porções ela deve preparar?',
+    'Uma cozinheira faz docinhos com $2$ cm de diâmetro e cada porção custa R\\$ 10,00.\n\n| Tamanho | Porções |\n|---|---|\n| pequeno | 1 |\n\n[[figura 1]]\n\nO volume cresce com $d^3$. Quantas porções ela deve preparar?',
   alternativas: [
     { letra: 'A', texto: '2' },
     { letra: 'B', texto: '3' },

@@ -1,5 +1,67 @@
 [
   {
+    "id": "2022-136",
+    "ano": 2022,
+    "numero": 136,
+    "area": "matematica",
+    "enunciado": "A esperança de vida ao nascer é o número médio de anos que um indivíduo tende a viver a partir de seu nascimento, considerando dados da população. No Brasil, esse número vem aumentando consideravelmente, como mostra o gráfico.\n\n[[figura 1]]\n\nPode-se observar que a esperança de vida ao nascer em 2012 foi exatamente a média das registradas nos anos de 2011 e 2013. Suponha que esse fato também ocorreu com a esperança de vida ao nascer em 2013, em relação às esperanças de vida de 2012 e de 2014.\n\nCaso a suposição feita tenha sido confirmada, a esperança de vida ao nascer no Brasil no ano de 2014 terá sido, em ano, igual a",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "74,23.",
+        "engano_provavel": "Repetiu o valor de 2013, como se a esperança de vida não mudasse de um ano para o outro."
+      },
+      {
+        "letra": "B",
+        "texto": "74,51.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "75,07.",
+        "engano_provavel": "Somou ao valor de 2013 um aumento maior que o de um ano (três vezes o aumento anual de 0,28)."
+      },
+      {
+        "letra": "D",
+        "texto": "75,23.",
+        "engano_provavel": "Somou 1 ano inteiro ao valor de 2013 em vez de usar a relação de média."
+      },
+      {
+        "letra": "E",
+        "texto": "78,49.",
+        "engano_provavel": "Não usou a relação de média e chegou a um aumento muito maior do que o gráfico mostra de um ano para o outro."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Se 2013 é a média de 2012 e 2014: $74{,}23 = \\frac{73{,}95 + x}{2}$.\nEntão $x = 2 \\times 74{,}23 - 73{,}95 = 148{,}46 - 73{,}95 = 74{,}51$.\nAlternativa B.",
+    "habilidade": {
+      "codigo": "H24",
+      "descricao": "Utilizar informações expressas em gráficos ou tabelas para fazer inferências."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "média aritmética",
+      "leitura de gráfico de linha",
+      "equação do 1º grau"
+    ],
+    "dificuldade_tri": 0.46698,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 136",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "85588"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-136-1.png",
+        "descricao": "Gráfico de linha \"Esperança de vida ao nascer\" no Brasil, de 2008 a 2013, com o eixo vertical de 72 a 75 anos. Valores: 2008: 72,78; 2009: 73,09; 2010: 73,4; 2011: 73,67; 2012: 73,95; 2013: 74,23. Fonte: IBGE (adaptado)."
+      }
+    ]
+  },
+  {
     "id": "2022-138",
     "ano": 2022,
     "numero": 138,
@@ -54,6 +116,68 @@
       "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
       "item_inep": "60441"
     }
+  },
+  {
+    "id": "2022-139",
+    "ano": 2022,
+    "numero": 139,
+    "area": "matematica",
+    "enunciado": "O governo de um estado pretende realizar uma obra de infraestrutura para auxiliar na integração e no processo de escoamento da produção agrícola de duas cidades. O projeto consiste na interligação direta das cidades A e B com a Rodovia 003, pela construção das Rodovias 001 e 002. As duas rodovias serão construídas em linha reta e deverão se conectar à Rodovia 003 em um mesmo ponto, conforme esboço apresentado na figura, na qual estão também indicadas as posições das cidades A e B, considerando o eixo x posicionado sobre a Rodovia 003, e cinco localizações sugeridas para o ponto de conexão entre as três rodovias.\n\n[[figura 1]]\n\nPretende-se que a distância percorrida entre as duas cidades, pelas Rodovias 001 e 002, passando pelo ponto de conexão, seja a menor possível.\n\nDadas as exigências do projeto, qual das localizações sugeridas deve ser a escolhida para o ponto de conexão?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "I",
+        "engano_provavel": "Ligou a cidade A à rodovia pelo caminho mais curto só para ela (perto de x = 20), sem pensar no trecho até B."
+      },
+      {
+        "letra": "B",
+        "texto": "II",
+        "engano_provavel": "Trocou as distâncias das cidades à rodovia ao dividir o trecho entre elas, chegando perto de x = 30."
+      },
+      {
+        "letra": "C",
+        "texto": "III",
+        "engano_provavel": "Escolheu o ponto médio entre as projeções das cidades (x = 35), que só seria o melhor se as duas estivessem à mesma distância da rodovia."
+      },
+      {
+        "letra": "D",
+        "texto": "IV",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "V",
+        "engano_provavel": "Escolheu o ponto bem embaixo da cidade B, achando que descer em linha reta até a rodovia é sempre o mais curto."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Reflita a cidade B em relação ao eixo x: B' = (50, −20). O caminho mais curto de A até B passando pelo eixo é a reta de A até B'.\nEssa reta vai de (20, 40) a (50, −20): desce 60 km enquanto anda 30 km, ou seja, 2 km para baixo a cada 1 km para a direita.\nPara descer os 40 km de A até o eixo, anda 20 km: cruza o eixo em x = 40.\nO ponto IV está em x = 40. Alternativa D.",
+    "habilidade": {
+      "codigo": "H9",
+      "descricao": "Utilizar conhecimentos geométricos de espaço e forma na seleção de argumentos propostos como solução de problemas do cotidiano."
+    },
+    "competencia": {
+      "codigo": "C2",
+      "descricao": "Utilizar o conhecimento geométrico para realizar a leitura e a representação da realidade e agir sobre ela."
+    },
+    "conceitos": [
+      "distância entre pontos",
+      "reflexão em relação a um eixo",
+      "plano cartesiano"
+    ],
+    "dificuldade_tri": 6.27505,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 139",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "117886"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-139-1.png",
+        "descricao": "Plano cartesiano com x (km) de 0 a 55 e y (km) de 0 a 40. A Rodovia 003 fica sobre o eixo x. A cidade A está no ponto (20, 40) e a cidade B no ponto (50, 20). Cinco pontos sugeridos para a conexão ficam no eixo x: I em x = 25, II em x = 30, III em x = 35, IV em x = 40 e V em x = 50. Linhas pontilhadas (Rodovia 001) ligam A a cada ponto e linhas contínuas (Rodovia 002) ligam cada ponto a B."
+      }
+    ]
   },
   {
     "id": "2022-140",
@@ -391,6 +515,68 @@
     }
   },
   {
+    "id": "2022-146",
+    "ano": 2022,
+    "numero": 146,
+    "area": "matematica",
+    "enunciado": "Uma pessoa precisa se deslocar de automóvel do ponto *P* para o ponto *Q*, indicados na figura, na qual as linhas verticais e horizontais simbolizam ruas.\n\n[[figura 1]]\n\nPor causa do sentido de tráfego nessas ruas, o caminho poligonal destacado é a possibilidade mais curta de efetuar esse deslocamento. Para descrevê-lo, deve-se especificar qual o sentido a ser tomado em cada cruzamento de ruas, em relação à direção de deslocamento do automóvel, que se movimentará continuamente. Para isso, empregam-se as letras E, F e D para indicar \"vire à esquerda\", \"siga em frente\" e \"vire à direita\", respectivamente.\n\nA sequência de letras que descreve o caminho poligonal destacado é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "DDEFDDEEFFD.",
+        "engano_provavel": "No segundo cruzamento virou de novo em vez de seguir em frente, contando um D a mais no começo."
+      },
+      {
+        "letra": "B",
+        "texto": "DFEFDDDEFFD.",
+        "engano_provavel": "Depois de descer, achou que virar para a direita no mapa é virar à direita para o motorista; quem desce e vai para a direita do mapa vira à esquerda."
+      },
+      {
+        "letra": "C",
+        "texto": "DFEFDDEEFFD.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "EFDFEEDDFFE.",
+        "engano_provavel": "Usou esquerda e direita do mapa, e não do motorista, trocando todos os E e D."
+      },
+      {
+        "letra": "E",
+        "texto": "EFDFEEEDFFE.",
+        "engano_provavel": "Trocou esquerda e direita do motorista pelas do mapa e ainda errou a virada depois da descida."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "O carro sai de P subindo. Em cada cruzamento, olhe para onde o carro está indo:\nsubindo, vira para a direita (D); segue reto (F); vira para cima, que é a esquerda de quem anda para a direita (E); segue (F); vira para a direita (D); vira para baixo, que é a direita de quem anda para a direita (D); vira para a direita, que é a esquerda de quem desce (E); vira para cima (E); segue (F); segue (F); vira para a direita (D).\nSequência: DFEFDDEEFFD. Alternativa C.",
+    "habilidade": {
+      "codigo": "H6",
+      "descricao": "Interpretar a localização e a movimentação de pessoas/objetos no espaço tridimensional e sua representação no espaço bidimensional."
+    },
+    "competencia": {
+      "codigo": "C2",
+      "descricao": "Utilizar o conhecimento geométrico para realizar a leitura e a representação da realidade e agir sobre ela."
+    },
+    "conceitos": [
+      "orientação espacial",
+      "lateralidade",
+      "trajetos em malha"
+    ],
+    "dificuldade_tri": 0.94716,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 146",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "10322"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-146-1.png",
+        "descricao": "Malha quadriculada de ruas. O caminho destacado sai de P, embaixo à esquerda, andando para cima (indicado por uma seta). Ele sobe um quarteirão, vai dois quarteirões para a direita, sobe dois, vai um para a direita, desce um, vai um para a direita, sobe três e vai um para a direita até chegar a Q, em cima à direita."
+      }
+    ]
+  },
+  {
     "id": "2022-147",
     "ano": 2022,
     "numero": 147,
@@ -445,6 +631,68 @@
       "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
       "item_inep": "63204"
     }
+  },
+  {
+    "id": "2022-148",
+    "ano": 2022,
+    "numero": 148,
+    "area": "matematica",
+    "enunciado": "No período de 2005 a 2013, o valor de venda dos imóveis em uma cidade apresentou alta, o que resultou no aumento dos aluguéis. Os gráficos apresentam a evolução desses valores, para um mesmo imóvel, no mercado imobiliário dessa cidade.\n\n[[figura 1]]\n\nA rentabilidade do aluguel de um imóvel é calculada pela razão entre o valor mensal de aluguel e o valor de mercado desse imóvel.\n\nCom base nos dados fornecidos, em que ano a rentabilidade do aluguel foi maior?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "2005",
+        "engano_provavel": "Escolheu o ano em que o imóvel era mais barato, sem calcular a razão entre aluguel e valor do imóvel."
+      },
+      {
+        "letra": "B",
+        "texto": "2007",
+        "engano_provavel": null
+      },
+      {
+        "letra": "C",
+        "texto": "2009",
+        "engano_provavel": "Comparou os aumentos de um período para o outro, e não a razão entre aluguel e valor do imóvel em cada ano."
+      },
+      {
+        "letra": "D",
+        "texto": "2011",
+        "engano_provavel": "Fez a razão invertida (valor do imóvel ÷ aluguel) e escolheu o maior resultado."
+      },
+      {
+        "letra": "E",
+        "texto": "2013",
+        "engano_provavel": "Escolheu o ano com o maior aluguel, sem dividir pelo valor do imóvel."
+      }
+    ],
+    "gabarito": "B",
+    "resolucao": "Rentabilidade = aluguel ÷ valor do imóvel (o imóvel está em milhares de reais):\n2005: $630 \\div 90\\,000 = 0{,}70\\%$; 2007: $960 \\div 120\\,000 = 0{,}80\\%$; 2009: $1\\,350 \\div 270\\,000 = 0{,}50\\%$; 2011: $1\\,800 \\div 450\\,000 = 0{,}40\\%$; 2013: $3\\,240 \\div 540\\,000 = 0{,}60\\%$.\nA maior é a de 2007. Alternativa B.",
+    "habilidade": {
+      "codigo": "H26",
+      "descricao": "Analisar informações expressas em gráficos ou tabelas como recurso para a construção de argumentos."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "razão",
+      "porcentagem",
+      "leitura de gráfico de barras"
+    ],
+    "dificuldade_tri": 1.32978,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 148",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "68123"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-148-1.png",
+        "descricao": "Dois gráficos de barras, com os anos 2005, 2007, 2009, 2011 e 2013. O de cima mostra o valor mensal do aluguel, em reais: 630, 960, 1 350, 1 800 e 3 240. O de baixo mostra o valor de mercado do imóvel, em milhares de reais: 90, 120, 270, 450 e 540."
+      }
+    ]
   },
   {
     "id": "2022-149",
@@ -668,6 +916,130 @@
       "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
       "item_inep": "68369"
     }
+  },
+  {
+    "id": "2022-155",
+    "ano": 2022,
+    "numero": 155,
+    "area": "matematica",
+    "enunciado": "Uma empresa de engenharia projetou uma casa com a forma de um retângulo para um de seus clientes. Esse cliente solicitou a inclusão de uma varanda em forma de L. A figura apresenta a planta baixa desenhada pela empresa, já com a varanda incluída, cujas medidas, indicadas em centímetro, representam os valores das dimensões da varanda na escala de 1 : 50.\n\n[[figura 1]]\n\nA medida real da área da varanda, em metro quadrado, é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "33,40.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "B",
+        "texto": "66,80.",
+        "engano_provavel": "Aplicou a escala de forma errada na área, chegando ao dobro da área real."
+      },
+      {
+        "letra": "C",
+        "texto": "89,24.",
+        "engano_provavel": "Montou a área do L de outro jeito e errou a conta, contando parte do retângulo da casa como varanda."
+      },
+      {
+        "letra": "D",
+        "texto": "133,60.",
+        "engano_provavel": "Ficou com a área do desenho (133,6 cm²) e não aplicou a escala ao quadrado nem converteu para metro quadrado."
+      },
+      {
+        "letra": "E",
+        "texto": "534,40.",
+        "engano_provavel": "Errou a conversão da escala e da unidade, chegando a 16 vezes a área real."
+      }
+    ],
+    "gabarito": "A",
+    "resolucao": "Área da varanda no desenho: faixa de cima $16 \\times 5 = 80$ cm² mais faixa da esquerda $4 \\times (18{,}4 - 5) = 53{,}6$ cm², total $133{,}6$ cm².\nNa escala 1 : 50, cada medida de comprimento é multiplicada por 50, e a área por $50^2 = 2\\,500$: $133{,}6 \\times 2\\,500 = 334\\,000$ cm².\nComo 1 m² = 10 000 cm², a área real é $33{,}4$ m². Alternativa A.",
+    "habilidade": {
+      "codigo": "H11",
+      "descricao": "Utilizar a noção de escalas na leitura de representação de situação do cotidiano."
+    },
+    "competencia": {
+      "codigo": "C3",
+      "descricao": "Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "escala",
+      "área de figuras planas",
+      "conversão de unidades de área"
+    ],
+    "dificuldade_tri": 2.33341,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 155",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "28683"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-155-1.png",
+        "descricao": "Planta baixa de uma casa retangular com uma varanda em forma de L, em cinza, ocupando a faixa de cima e a faixa da esquerda. Medidas no desenho: largura total de 16 cm, altura total de 18,4 cm, faixa de cima da varanda com 5 cm de altura e faixa da esquerda com 4 cm de largura. Escala 1 : 50. Os outros cômodos são cozinha, banheiro social, banheiro da suíte, suíte, sala e dois quartos."
+      }
+    ]
+  },
+  {
+    "id": "2022-156",
+    "ano": 2022,
+    "numero": 156,
+    "area": "matematica",
+    "enunciado": "Uma loja de roupas fixou uma meta de vendas de 77 000 reais para um determinado mês de 30 dias. O gráfico mostra o volume de vendas dessa loja, em real, nos dez primeiros dias do mês e entre o dia dez e o dia vinte desse mês, nos seus dois únicos setores (infantil e adulto). Suponha que a variação no volume de vendas, para o período registrado, tenha se dado de forma linear, como mostrado no gráfico, e que essa tendência se mantenha a mesma para os próximos dez dias.\n\n[[figura 1]]\n\nAo final do trigésimo dia, quanto faltará no volume de vendas, em real, para que a meta fixada para o mês seja alcançada?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "5 000",
+        "engano_provavel": "Errou o sentido da tendência e previu vendas maiores para os últimos dez dias."
+      },
+      {
+        "letra": "B",
+        "texto": "7 000",
+        "engano_provavel": "Supôs que os últimos dez dias venderiam o mesmo que o período anterior (22 000), sem manter a queda."
+      },
+      {
+        "letra": "C",
+        "texto": "11 000",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "18 000",
+        "engano_provavel": "Respondeu o volume previsto para os últimos dez dias (12 000 + 6 000), e não o que falta para a meta."
+      },
+      {
+        "letra": "E",
+        "texto": "29 000",
+        "engano_provavel": "Tirou da meta só os dois primeiros períodos ($77\\,000 - 48\\,000$), esquecendo das vendas dos últimos dez dias."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "A cada dez dias, o adulto cai 3 000 e o infantil cai 1 000.\nPrimeiros dez dias: $18\\,000 + 8\\,000 = 26\\,000$. Do dia 10 ao 20: $15\\,000 + 7\\,000 = 22\\,000$. Do dia 20 ao 30, mantendo a tendência: $12\\,000 + 6\\,000 = 18\\,000$.\nTotal do mês: $26\\,000 + 22\\,000 + 18\\,000 = 66\\,000$. Faltam $77\\,000 - 66\\,000 = 11\\,000$. Alternativa C.",
+    "habilidade": {
+      "codigo": "H24",
+      "descricao": "Utilizar informações expressas em gráficos ou tabelas para fazer inferências."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "variação linear",
+      "leitura de gráfico de linhas",
+      "operações com números naturais"
+    ],
+    "dificuldade_tri": 1.38103,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 156",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "111516"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-156-1.png",
+        "descricao": "Gráfico de linhas com o eixo horizontal em dias (10, 20 e 30). A linha contínua do setor adulto vai de 18 000 no dia 10 a 15 000 no dia 20. A linha tracejada do setor infantil vai de 8 000 no dia 10 a 7 000 no dia 20."
+      }
+    ]
   },
   {
     "id": "2022-158",
@@ -1005,6 +1377,72 @@
     }
   },
   {
+    "id": "2022-165",
+    "ano": 2022,
+    "numero": 165,
+    "area": "matematica",
+    "enunciado": "Em uma sala de cinema, para garantir que os espectadores vejam toda a imagem projetada na tela, a disposição das poltronas deve obedecer à norma técnica da Associação Brasileira de Normas Técnicas (ABNT), que faz as seguintes indicações:\n\n- Distância mínima ($D_{\\min}$) entre a tela de projeção e o encosto da poltrona da primeira fileira deve ser de, pelo menos, 60% da largura ($L$) da tela.\n- Distância máxima ($D_{\\max}$) entre a tela de projeção e o encosto da poltrona da última fileira deve ser o dobro da largura ($L$) da tela, sendo aceitável uma distância de até 2,9 vezes a largura ($L$) da tela.\n\nPara o espaçamento entre as fileiras de poltronas, é considerada a distância de 1 metro entre os encostos de poltronas em duas fileiras consecutivas.\n\nUma sala de cinema, cuja largura da tela mede 12 m, está montada em conformidade com as normas da ABNT e tem suas dimensões especificadas na figura.\n\n[[figura 1]]\n\n[[figura 2]]\n\nPretende-se ampliar essa sala, mantendo-se na mesma posição a tela e todas as poltronas já instaladas, ampliando-se ao máximo a sala para os fundos (área de instalação de novas poltronas), respeitando-se o limite aceitável da norma da ABNT. A intenção é aumentar, ao máximo, a quantidade de poltronas da sala, instalando-se novas unidades, iguais às já instaladas.\n\nQuantas fileiras de poltronas a sala comportará após essa ampliação?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "26",
+        "engano_provavel": "Errou duas vezes na contagem dos intervalos, por exemplo, arredondando 27,6 para baixo e ainda tirando uma fileira."
+      },
+      {
+        "letra": "B",
+        "texto": "27",
+        "engano_provavel": "Contou os intervalos de 1 m (27) e esqueceu de somar a primeira fileira."
+      },
+      {
+        "letra": "C",
+        "texto": "28",
+        "engano_provavel": null
+      },
+      {
+        "letra": "D",
+        "texto": "29",
+        "engano_provavel": "Arredondou 27,6 para cima, colocando uma fileira além do limite aceitável."
+      },
+      {
+        "letra": "E",
+        "texto": "35",
+        "engano_provavel": "Dividiu os 34,8 m inteiros por 1 m, esquecendo que a primeira fileira só começa a 7,2 m da tela."
+      }
+    ],
+    "gabarito": "C",
+    "resolucao": "Com $L = 12$ m: a primeira fileira fica a $0{,}6 \\times 12 = 7{,}2$ m da tela e o limite aceitável é $2{,}9 \\times 12 = 34{,}8$ m.\nAs fileiras ficam a 7,2 m, 8,2 m, 9,2 m, ..., de 1 em 1 metro. A última que cabe é a que não passa de 34,8 m: $7{,}2 + k \\le 34{,}8$, então $k \\le 27{,}6$, ou seja, $k = 27$.\nDe $k = 0$ a $k = 27$ são 28 fileiras. Alternativa C.",
+    "habilidade": {
+      "codigo": "H18",
+      "descricao": "Avaliar propostas de intervenção na realidade envolvendo variação de grandezas."
+    },
+    "competencia": {
+      "codigo": "C4",
+      "descricao": "Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano."
+    },
+    "conceitos": [
+      "porcentagem",
+      "sequência com passo constante",
+      "contagem de intervalos"
+    ],
+    "dificuldade_tri": 3.73781,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 165",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "85228"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-165-1.png",
+        "descricao": "Planta da sala de cinema vista de cima, em forma de trapézio que se abre a partir da tela, de largura L, até os fundos. A primeira fileira fica a $D_{\\min} = 0{,}6L$ da tela e a última a $D_{\\max} = 2L$. Atrás dela, até $D_{\\text{aceitável}} = 2{,}9L$, fica a área de instalação de novas poltronas, em cinza."
+      },
+      {
+        "arquivo": "2022-165-2.png",
+        "descricao": "Detalhe de três fileiras de poltronas, com 1 m de distância entre os encostos de fileiras consecutivas."
+      }
+    ]
+  },
+  {
     "id": "2022-166",
     "ano": 2022,
     "numero": 166,
@@ -1114,6 +1552,68 @@
       "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
       "item_inep": "111738"
     }
+  },
+  {
+    "id": "2022-168",
+    "ano": 2022,
+    "numero": 168,
+    "area": "matematica",
+    "enunciado": "Em jogos de voleibol, um saque é invalidado se a bola atingir o teto do ginásio onde ocorre o jogo. Um jogador de uma equipe tem um saque que atinge uma grande altura. Seu recorde foi quando a batida do saque se iniciou a uma altura de 1,5 m do piso da quadra, e a trajetória da bola foi descrita pela parábola $y = -\\frac{x^2}{6} - \\frac{7x}{3} + 12$, em que $y$ representa a altura da bola em relação ao eixo $x$ (das abscissas) que está localizado a 1,5 m do piso da quadra, como representado na figura. Suponha que em todas as partidas algum saque desse jogador atinja a mesma altura do seu recorde.\n\n[[figura 1]]\n\nA equipe desse jogador participou de um torneio de voleibol no qual jogou cinco partidas, cada uma delas em um ginásio diferente. As alturas dos tetos desses ginásios, em relação aos pisos das quadras, são:\n\n- ginásio I: 17 m;\n- ginásio II: 18 m;\n- ginásio III: 19 m;\n- ginásio IV: 21 m;\n- ginásio V: 40 m.\n\nO saque desse atleta foi invalidado",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "apenas no ginásio I.",
+        "engano_provavel": "Errou o cálculo do vértice e achou uma altura máxima entre 17 m e 18 m."
+      },
+      {
+        "letra": "B",
+        "texto": "apenas nos ginásios I e II.",
+        "engano_provavel": "Errou o cálculo do vértice e achou uma altura máxima entre 18 m e 19 m."
+      },
+      {
+        "letra": "C",
+        "texto": "apenas nos ginásios I, II e III.",
+        "engano_provavel": "Calculou a altura máxima em relação ao eixo $x$ (cerca de 20,17 m) e esqueceu de somar o 1,5 m até o piso."
+      },
+      {
+        "letra": "D",
+        "texto": "apenas nos ginásios I, II, III e IV.",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "em todos os ginásios.",
+        "engano_provavel": "Achou uma altura máxima acima de 40 m, por exemplo errando os sinais dos termos da parábola."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "A altura máxima está no vértice: $x_v = -\\frac{b}{2a} = -\\frac{-7/3}{2 \\cdot (-1/6)} = -7$.\n$y_v = -\\frac{49}{6} + \\frac{49}{3} + 12 = \\frac{49}{6} + 12 \\approx 20{,}17$ m acima do eixo $x$.\nComo o eixo fica 1,5 m acima do piso, a altura máxima é $20{,}17 + 1{,}5 \\approx 21{,}67$ m.\nO saque bate no teto dos ginásios com teto menor que isso: I (17 m), II (18 m), III (19 m) e IV (21 m). Alternativa D.",
+    "habilidade": {
+      "codigo": "H22",
+      "descricao": "Utilizar conhecimentos algébricos/geométricos como recurso para a construção de argumentação."
+    },
+    "competencia": {
+      "codigo": "C5",
+      "descricao": "Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas."
+    },
+    "conceitos": [
+      "função quadrática",
+      "vértice da parábola",
+      "valor máximo"
+    ],
+    "dificuldade_tri": 3.22198,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 168",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "85343"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-168-1.png",
+        "descricao": "Desenho de uma quadra de vôlei com a rede no meio e a trajetória da bola em forma de parábola tracejada, saindo da mão do jogador. O eixo y é vertical e o eixo x fica 1,5 m acima do piso da quadra, como indicam as marcas de 1,5 m."
+      }
+    ]
   },
   {
     "id": "2022-170",
@@ -1451,6 +1951,134 @@
     }
   },
   {
+    "id": "2022-177",
+    "ano": 2022,
+    "numero": 177,
+    "area": "matematica",
+    "enunciado": "Em um jogo de bingo, as cartelas contêm 16 quadrículas dispostas em linhas e colunas. Cada quadrícula tem impresso um número, dentre os inteiros de 1 a 50, sem repetição de número. Na primeira rodada, um número é sorteado, aleatoriamente, dentre os 50 possíveis. Em todas as rodadas, o número sorteado é descartado e não participa dos sorteios das rodadas seguintes. Caso o jogador tenha em sua cartela o número sorteado, ele o assinala na cartela. Ganha o jogador que primeiro conseguir preencher quatro quadrículas que formam uma linha, uma coluna ou uma diagonal, conforme os tipos de situações ilustradas na Figura 1.\n\n[[figura 1]]\n\nO jogo inicia e, nas quatro primeiras rodadas, foram sorteados os seguintes números: 03, 27, 07 e 48. Ao final da quarta rodada, somente Pedro possuía uma cartela que continha esses quatro números sorteados, sendo que todos os demais jogadores conseguiram assinalar, no máximo, um desses números em suas cartelas. Observe na Figura 2 o cartão de Pedro após as quatro primeiras rodadas.\n\n[[figura 2]]\n\nA probabilidade de Pedro ganhar o jogo em uma das duas próximas rodadas é",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "$\\frac{1}{46} + \\frac{1}{45}$",
+        "engano_provavel": "Somou a chance de sair o 12 em cada rodada como se fossem independentes, sem considerar que a 6ª rodada só conta se a 5ª não deu o 12, e esqueceu a diagonal e a coluna."
+      },
+      {
+        "letra": "B",
+        "texto": "$\\frac{1}{46} + \\frac{2}{46 \\times 45}$",
+        "engano_provavel": "Na 6ª rodada, contou só os casos da diagonal (11 e 19 em qualquer ordem) e esqueceu o 12 e a coluna."
+      },
+      {
+        "letra": "C",
+        "texto": "$\\frac{1}{46} + \\frac{8}{46 \\times 45}$",
+        "engano_provavel": "Na 6ª rodada, contou só os pares da diagonal e da coluna, em dobro, e esqueceu o caso de sair o 12."
+      },
+      {
+        "letra": "D",
+        "texto": "$\\frac{1}{46} + \\frac{43}{46 \\times 45}$",
+        "engano_provavel": "Na 6ª rodada, contou o 12 depois de um número qualquer, mas tirou casos demais e esqueceu os pares da diagonal e da coluna."
+      },
+      {
+        "letra": "E",
+        "texto": "$\\frac{1}{46} + \\frac{49}{46 \\times 45}$",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "Restam 46 números. Pedro ganha com uma linha completa se sair o 12 (primeira linha); com a diagonal principal se saírem 11 e 19; com a quarta coluna se saírem 05 e 45. Os outros jogadores não conseguem ganhar em duas rodadas.\nNa 5ª rodada, ele ganha só se sair o 12: $\\frac{1}{46}$.\nNa 6ª rodada (sem ter ganhado na 5ª), há dois jeitos: sai qualquer um dos outros 45 números na 5ª e o 12 na 6ª, que são 45 casos; ou sai 11, 19, 05 ou 45 na 5ª e o par dele na 6ª, que são 4 casos. Total: $\\frac{45 + 4}{46 \\times 45} = \\frac{49}{46 \\times 45}$.\nResposta: $\\frac{1}{46} + \\frac{49}{46 \\times 45}$. Alternativa E.",
+    "habilidade": {
+      "codigo": "H28",
+      "descricao": "Resolver situação-problema que envolva conhecimentos de estatística e probabilidade."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "probabilidade",
+      "eventos sucessivos sem reposição",
+      "princípio da contagem"
+    ],
+    "dificuldade_tri": null,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 177",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "89637"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-177-1.png",
+        "descricao": "Figura 1: três cartelas 4 × 4 mostrando os tipos de preenchimento vencedor: em linha (quatro marcas na mesma linha), em coluna (quatro marcas na mesma coluna) e em diagonal (quatro marcas na diagonal)."
+      },
+      {
+        "arquivo": "2022-177-2.png",
+        "descricao": "Figura 2: cartela de Pedro, 4 × 4. Linha 1: 03, 48, 12, 27. Linha 2: 49, 11, 22, 05. Linha 3: 29, 50, 19, 45. Linha 4: 33, 23, 38, 07. Estão assinalados o 03, o 48 e o 27, na primeira linha, e o 07, no canto inferior direito."
+      }
+    ]
+  },
+  {
+    "id": "2022-178",
+    "ano": 2022,
+    "numero": 178,
+    "area": "matematica",
+    "enunciado": "Uma máquina em operação tem sua temperatura $T$ monitorada por meio de um registro gráfico, ao longo do tempo $t$. Essa máquina possui um pistão cuja velocidade $V$ varia com a temperatura $T$ da máquina, de acordo com a expressão $V = T^2 - 4$. Após a máquina funcionar durante o intervalo de tempo de 10 horas, o seu operador analisa o registro gráfico, apresentado na figura, para avaliar a necessidade de eventuais ajustes, sabendo que a máquina apresenta falhas de funcionamento quando a velocidade do pistão se anula.\n\n[[figura 1]]\n\nQuantas vezes a velocidade do pistão se anulou durante as 10 horas de funcionamento?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1",
+        "engano_provavel": "Contou só um dos momentos em que a temperatura chega a 2 °C."
+      },
+      {
+        "letra": "B",
+        "texto": "2",
+        "engano_provavel": "Resolveu só $T = 2$ e esqueceu a raiz negativa $T = -2$."
+      },
+      {
+        "letra": "C",
+        "texto": "3",
+        "engano_provavel": "Resolveu só $T = -2$, contando os três vales, e esqueceu $T = 2$."
+      },
+      {
+        "letra": "D",
+        "texto": "4",
+        "engano_provavel": "Achou as duas raízes, mas deixou de contar um dos pontos no gráfico."
+      },
+      {
+        "letra": "E",
+        "texto": "5",
+        "engano_provavel": null
+      }
+    ],
+    "gabarito": "E",
+    "resolucao": "$V = 0$ quando $T^2 = 4$, ou seja, $T = 2$ ou $T = -2$.\nNo gráfico, a curva passa por $T = 2$ duas vezes (descendo, no começo, e subindo, no fim) e encosta em $T = -2$ três vezes (nos três vales).\nTotal: $2 + 3 = 5$ vezes. Alternativa E.",
+    "habilidade": {
+      "codigo": "H25",
+      "descricao": "Resolver problema com dados apresentados em tabelas ou gráficos."
+    },
+    "competencia": {
+      "codigo": "C6",
+      "descricao": "Interpretar informações de natureza científica e social obtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação."
+    },
+    "conceitos": [
+      "raízes de equação do 2º grau",
+      "leitura de gráfico",
+      "função composta"
+    ],
+    "dificuldade_tri": 2.40899,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 178",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "97590"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-178-1.png",
+        "descricao": "Gráfico da temperatura T (°C) em função do tempo t (h), de 0 a 10 horas, com linhas tracejadas em T = 4, T = 2 e T = −2. A curva começa perto de 3, sobe até 4, desce cruzando T = 2 e T = 0 e encosta em T = −2 três vezes, formando três vales. Depois sobe, cruza T = 0 e T = 2 e termina perto de 3,5 em t = 10."
+      }
+    ]
+  },
+  {
     "id": "2022-179",
     "ano": 2022,
     "numero": 179,
@@ -1505,6 +2133,68 @@
       "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
       "item_inep": "86840"
     }
+  },
+  {
+    "id": "2022-180",
+    "ano": 2022,
+    "numero": 180,
+    "area": "matematica",
+    "enunciado": "O gráfico apresenta os totais de receitas e despesas de uma empresa, expressos em milhão de reais, no decorrer dos meses de um determinado ano. A empresa obtém lucro quando a diferença entre receita e despesa é positiva e tem prejuízo quando essa diferença é negativa.\n\n[[figura 1]]\n\nQual é a mediana, em milhão de reais, dos valores dos lucros apurados pela empresa nesse ano?",
+    "alternativas": [
+      {
+        "letra": "A",
+        "texto": "1,5",
+        "engano_provavel": "Incluiu os meses de prejuízo (diferenças negativas) no cálculo da mediana."
+      },
+      {
+        "letra": "B",
+        "texto": "2,0",
+        "engano_provavel": "Pegou um valor do meio sem colocar os lucros em ordem."
+      },
+      {
+        "letra": "C",
+        "texto": "2,9",
+        "engano_provavel": "Calculou a média dos lucros ($23 \\div 8 \\approx 2{,}9$) em vez da mediana."
+      },
+      {
+        "letra": "D",
+        "texto": "3,0",
+        "engano_provavel": null
+      },
+      {
+        "letra": "E",
+        "texto": "5,5",
+        "engano_provavel": "Calculou a mediana das receitas, e não a dos lucros."
+      }
+    ],
+    "gabarito": "D",
+    "resolucao": "Diferença receita − despesa em cada mês: jan 3, fev −1, mar 1, abr −1, mai 5, jun 3, jul 2, ago −2, set 4, out −2, nov 1, dez 4.\nLucros são só as diferenças positivas: 3, 1, 5, 3, 2, 4, 1, 4. Em ordem: 1, 1, 2, 3, 3, 4, 4, 5.\nSão 8 valores; a mediana é a média dos dois do meio: $\\frac{3 + 3}{2} = 3{,}0$. Alternativa D.",
+    "habilidade": {
+      "codigo": "H27",
+      "descricao": "Calcular medidas de tendência central ou de dispersão de um conjunto de dados expressos em uma tabela de frequências de dados agrupados (não em classes) ou em gráficos."
+    },
+    "competencia": {
+      "codigo": "C7",
+      "descricao": "Compreender o caráter aleatório e não determinístico dos fenômenos naturais e sociais, e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística."
+    },
+    "conceitos": [
+      "mediana",
+      "leitura de gráfico de barras",
+      "números inteiros"
+    ],
+    "dificuldade_tri": 2.27556,
+    "fonte": {
+      "orgao": "Inep",
+      "prova": "ENEM 2022, 2º dia, caderno 6 (cinza), questão 180",
+      "url": "https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf",
+      "item_inep": "30493"
+    },
+    "figuras": [
+      {
+        "arquivo": "2022-180-1.png",
+        "descricao": "Gráfico de barras com receitas (barras pretas) e despesas (barras cinza), em milhões de reais, de janeiro a dezembro. Receitas: jan 6, fev 4, mar 3, abr 5, mai 6, jun 5, jul 6, ago 2, set 7, out 2, nov 8, dez 6. Despesas: jan 3, fev 5, mar 2, abr 6, mai 1, jun 2, jul 4, ago 4, set 3, out 4, nov 7, dez 2."
+      }
+    ]
   },
   {
     "id": "2023-137",

@@ -26,6 +26,7 @@ describe('PaginaQuestao', () => {
     expect(tela.container.querySelector('.katex')).not.toBeNull()
     expect(screen.getByRole('table')).toBeInTheDocument()
     const figura = screen.getByRole('img', { name: /Dois docinhos lado a lado/ })
+    expect(screen.queryByText(/\[\[figura/)).not.toBeInTheDocument()
     expect(figura).toHaveAttribute('src', expect.stringMatching(/\/questoes\/2022-141\/figuras\/1$/))
     expect(screen.getByRole('link', { name: /Prova oficial/ })).toHaveAttribute('href', expect.stringContaining('inep.gov.br'))
     expect(screen.getAllByRole('radio')).toHaveLength(5)

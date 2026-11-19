@@ -59,6 +59,7 @@ def _formula_em_texto(formula: str) -> str:
 
 def texto_simples(markdown: str, limite: int = 140) -> str:
     """Prévia em texto puro: sem tabelas, sem LaTeX e sem marcação, cortada numa palavra inteira."""
+    markdown = re.sub(r"\[\[figura \d+\]\]", " ", markdown)
     linhas = [linha for linha in markdown.splitlines() if not linha.lstrip().startswith("|")]
     texto = " ".join(linhas).replace("\\$", "\0")
     texto = re.sub(r"\$([^$]+)\$", lambda achado: _formula_em_texto(achado.group(1)), texto)

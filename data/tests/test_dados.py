@@ -80,10 +80,15 @@ def test_mvp_cinco_alternativas_com_engano_nas_erradas(mvp):
                 assert alternativa["engano_provavel"].strip(), questao["id"]
 
 
-def test_mvp_sem_imagem_e_sem_anuladas(mvp, todas):
+def test_mvp_sem_anuladas_e_figuras_so_com_recorte_revisado(mvp, todas):
+    pasta = Path(__file__).resolve().parents[1] / "imagens"
     for questao in mvp:
-        assert not todas[questao["id"]]["tem_imagem"]
         assert not todas[questao["id"]]["anulada"]
+        if todas[questao["id"]]["tem_imagem"]:
+            assert questao.get("figuras"), f"{questao['id']} tem figura sem recorte revisado"
+        for figura in questao.get("figuras", []):
+            assert (pasta / figura["arquivo"]).is_file()
+            assert figura["descricao"].strip()
 
 
 def test_mvp_habilidade_e_competencia_da_matriz_da_area(mvp, todas):

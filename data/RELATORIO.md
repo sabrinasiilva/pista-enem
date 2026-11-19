@@ -6,43 +6,54 @@ Gerado por `data/selecionar.py`. Não edite à mão.
 
 | Área | Extraídas | Revisadas | No tutor |
 |---|---|---|---|
-| Matemática (2022 a 2025) | 180 | 118 | 102 |
+| Matemática (2022 a 2025) | 180 | 129 | 113 |
 | Ciências da Natureza (2022 a 2024) | 135 | 77 | 77 |
 
-Gabaritos conferidos com os microdados do Inep: 179 de 179.
+Gabaritos conferidos com os microdados do Inep: 190 de 190.
 Revisadas são as que não são anuladas, não têm figura conhecida e são iguais em todos os cadernos regulares; todas foram transcritas de novo a partir da prova oficial e resolvidas sem ver o gabarito.
 
 ## Matemática
 
 | Questão | Habilidade | Dificuldade (TRI) | Transcrição × PDF |
 |---|---|---|---|
+| 2022-136 | H24 | 0.47 | 88% |
 | 2022-138 | H1 | -0.02 | 100% |
+| 2022-139 | H9 | 6.28 | 94% |
 | 2022-140 | H26 | 0.65 | 100% |
 | 2022-141 | H12 | 2.57 | 100% |
 | 2022-142 | H29 | 0.87 | 100% |
 | 2022-143 | H13 | 2.59 | 92% |
 | 2022-144 | H25 | 0.64 | 100% |
 | 2022-145 | H8 | 2.58 | 100% |
+| 2022-146 | H6 | 0.95 | 100% |
 | 2022-147 | H9 | 1.89 | 84% |
+| 2022-148 | H26 | 1.33 | 85% |
 | 2022-149 | H30 | 2.40 | 100% |
 | 2022-150 | H12 | 1.64 | 100% |
 | 2022-151 | H10 | 2.30 | 100% |
 | 2022-153 | H4 | 1.59 | 100% |
+| 2022-155 | H11 | 2.33 | 89% |
+| 2022-156 | H24 | 1.38 | 96% |
 | 2022-158 | H23 | 2.37 | 98% |
 | 2022-159 | H2 | 2.54 | 94% |
 | 2022-161 | H14 | 2.45 | 99% |
 | 2022-162 | H3 | 1.57 | 100% |
 | 2022-163 | H2 | 2.17 | 92% |
 | 2022-164 | H17 | 2.02 | 100% |
+| 2022-165 | H18 | 3.74 | 85% |
 | 2022-166 | H15 | 2.25 | 100% |
 | 2022-167 | H27 | 2.21 | 100% |
+| 2022-168 | H22 | 3.22 | 94% |
 | 2022-170 | H21 | 2.42 | 100% |
 | 2022-171 | H17 | 4.49 | 95% |
 | 2022-172 | H5 | 3.34 | 100% |
 | 2022-174 | H1 | 1.92 | 100% |
 | 2022-175 | H11 | 2.86 | 100% |
 | 2022-176 | H3 | 3.30 | 100% |
+| 2022-177 | H28 | — | 94% |
+| 2022-178 | H25 | 2.41 | 99% |
 | 2022-179 | H28 | 4.65 | 100% |
+| 2022-180 | H27 | 2.28 | 90% |
 | 2023-137 | H21 | 1.83 | 100% |
 | 2023-140 | H17 | 0.14 | 82% |
 | 2023-144 | H17 | — | 100% |
@@ -119,7 +130,7 @@ Revisadas são as que não são anuladas, não têm figura conhecida e são igua
 | 2025-179 | H10 | 0.46 | 100% |
 | 2025-180 | H2 | 2.27 | 81% |
 
-28 das 30 habilidades da matriz aparecem.
+29 das 30 habilidades da matriz aparecem.
 
 | Habilidade | Questões |
 |---|---|
@@ -128,27 +139,28 @@ Revisadas são as que não são anuladas, não têm figura conhecida e são igua
 | H3 | 5 |
 | H4 | 4 |
 | H5 | 5 |
+| H6 | 1 |
 | H7 | 1 |
 | H8 | 2 |
-| H9 | 3 |
+| H9 | 4 |
 | H10 | 4 |
-| H11 | 3 |
+| H11 | 4 |
 | H12 | 3 |
 | H13 | 1 |
 | H14 | 4 |
 | H15 | 1 |
 | H16 | 5 |
 | H17 | 4 |
-| H18 | 4 |
+| H18 | 5 |
 | H19 | 5 |
 | H21 | 3 |
-| H22 | 4 |
+| H22 | 5 |
 | H23 | 4 |
-| H24 | 2 |
-| H25 | 2 |
-| H26 | 3 |
-| H27 | 5 |
-| H28 | 6 |
+| H24 | 4 |
+| H25 | 3 |
+| H26 | 4 |
+| H27 | 6 |
+| H28 | 7 |
 | H29 | 4 |
 | H30 | 5 |
 
@@ -274,27 +286,27 @@ Revisadas são as que não são anuladas, não têm figura conhecida e são igua
 | Questão | Motivo |
 |---|---|
 | 2022-169 | resolução chegou em D, gabarito oficial é E |
-| 2025-138 | depende de figura |
+| 2025-138 | depende de figura (ainda sem recorte revisado) |
 | 2025-143 | transcrição só 65% parecida com o PDF |
-| 2025-145 | depende de figura |
-| 2025-149 | depende de figura; transcrição só 79% parecida com o PDF |
-| 2025-153 | depende de figura |
-| 2025-154 | depende de figura |
-| 2025-156 | depende de figura |
-| 2025-160 | depende de figura |
-| 2025-161 | depende de figura |
-| 2025-163 | depende de figura |
-| 2025-164 | depende de figura |
-| 2025-167 | depende de figura |
-| 2025-169 | depende de figura |
-| 2025-173 | depende de figura |
-| 2025-177 | depende de figura |
+| 2025-145 | depende de figura (ainda sem recorte revisado) |
+| 2025-149 | depende de figura (ainda sem recorte revisado); transcrição só 79% parecida com o PDF |
+| 2025-153 | depende de figura (ainda sem recorte revisado) |
+| 2025-154 | depende de figura (ainda sem recorte revisado) |
+| 2025-156 | depende de figura (ainda sem recorte revisado) |
+| 2025-160 | depende de figura (ainda sem recorte revisado) |
+| 2025-161 | depende de figura (ainda sem recorte revisado) |
+| 2025-163 | depende de figura (ainda sem recorte revisado) |
+| 2025-164 | depende de figura (ainda sem recorte revisado) |
+| 2025-167 | depende de figura (ainda sem recorte revisado) |
+| 2025-169 | depende de figura (ainda sem recorte revisado) |
+| 2025-173 | depende de figura (ainda sem recorte revisado) |
+| 2025-177 | depende de figura (ainda sem recorte revisado) |
 
 ## Não revisadas
 
-120 questões ficaram de fora antes da revisão:
+109 questões ficaram de fora antes da revisão:
 
-- **dependem de figura (o tutor é só texto)** (104): 2022-92, 2022-93, 2022-94, 2022-99, 2022-104, 2022-110, 2022-112, 2022-117, 2022-118, 2022-119, 2022-122, 2022-123, 2022-128, 2022-131, 2022-132, 2022-136, 2022-137, 2022-139, 2022-146, 2022-148, 2022-155, 2022-156, 2022-165, 2022-168, 2022-177, 2022-178, 2022-180, 2023-92, 2023-95, 2023-97, 2023-98, 2023-100, 2023-101, 2023-104, 2023-108, 2023-109, 2023-111, 2023-113, 2023-114, 2023-120, 2023-136, 2023-139, 2023-141, 2023-142, 2023-143, 2023-147, 2023-148, 2023-150, 2023-154, 2023-157, 2023-159, 2023-164, 2023-168, 2023-169, 2023-170, 2023-172, 2023-176, 2023-177, 2023-179, 2024-91, 2024-93, 2024-99, 2024-101, 2024-102, 2024-103, 2024-104, 2024-105, 2024-106, 2024-108, 2024-110, 2024-111, 2024-113, 2024-116, 2024-118, 2024-120, 2024-122, 2024-123, 2024-125, 2024-126, 2024-128, 2024-129, 2024-130, 2024-131, 2024-132, 2024-133, 2024-135, 2024-137, 2024-139, 2024-141, 2024-144, 2024-145, 2024-149, 2024-153, 2024-154, 2024-156, 2024-157, 2024-165, 2024-166, 2024-167, 2024-170, 2024-171, 2024-176, 2024-179, 2024-180
+- **dependem de figura (o tutor é só texto)** (93): 2022-92, 2022-93, 2022-94, 2022-99, 2022-104, 2022-110, 2022-112, 2022-117, 2022-118, 2022-119, 2022-122, 2022-123, 2022-128, 2022-131, 2022-132, 2022-137, 2023-92, 2023-95, 2023-97, 2023-98, 2023-100, 2023-101, 2023-104, 2023-108, 2023-109, 2023-111, 2023-113, 2023-114, 2023-120, 2023-136, 2023-139, 2023-141, 2023-142, 2023-143, 2023-147, 2023-148, 2023-150, 2023-154, 2023-157, 2023-159, 2023-164, 2023-168, 2023-169, 2023-170, 2023-172, 2023-176, 2023-177, 2023-179, 2024-91, 2024-93, 2024-99, 2024-101, 2024-102, 2024-103, 2024-104, 2024-105, 2024-106, 2024-108, 2024-110, 2024-111, 2024-113, 2024-116, 2024-118, 2024-120, 2024-122, 2024-123, 2024-125, 2024-126, 2024-128, 2024-129, 2024-130, 2024-131, 2024-132, 2024-133, 2024-135, 2024-137, 2024-139, 2024-141, 2024-144, 2024-145, 2024-149, 2024-153, 2024-154, 2024-156, 2024-157, 2024-165, 2024-166, 2024-167, 2024-170, 2024-171, 2024-176, 2024-179, 2024-180
 - **o conjunto da Maritaca traz a questão substituta do caderno adaptado, não a da prova regular** (11): 2022-152, 2022-154, 2022-160, 2022-173, 2023-102, 2023-146, 2023-163, 2024-115, 2024-168, 2024-173, 2024-178
 - **anuladas pelo Inep** (4): 2022-157, 2023-138, 2024-124, 2025-174
 - **item diferente entre cadernos regulares** (1): 2023-155
