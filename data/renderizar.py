@@ -9,9 +9,8 @@ que diz em quais imagens está cada questão.
 import json
 import re
 
-import pymupdf
-
 import fontes
+import pymupdf
 
 RESOLUCAO = 150
 

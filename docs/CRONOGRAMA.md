@@ -232,12 +232,12 @@ Total estimado: **cerca de 110 horas**.
 
 **Objetivo:** deixar o produto acessível e mais completo.
 
-- [ ] Acessibilidade WCAG AA: teclado, leitor de tela, contraste e foco visível
-- [ ] Fórmulas acessíveis para leitores de tela
-- [ ] Questões com imagem, usando a leitura de imagens do Gemini
-- [ ] Testes de ponta a ponta com Playwright (fluxo completo no celular e no computador)
+- [x] Acessibilidade WCAG AA: teclado, leitor de tela, contraste e foco visível (#50, #51)
+- [x] Fórmulas acessíveis para leitores de tela (MathML do KaTeX, testado no #51)
+- [x] Questões com imagem, usando a leitura de imagens do Gemini (estrutura no #55; primeiro lote, 11 questões de Matemática 2022, com figuras recortadas da prova e descritas para leitor de tela)
+- [x] Testes de ponta a ponta com Playwright (fluxo completo no celular e no computador) (#51)
 - [x] Tema claro e escuro (feito na Fase 4.5)
-- [ ] Revisão de desempenho do front-end (Lighthouse ≥ 90)
+- [x] Revisão de desempenho do front-end (Lighthouse ≥ 90): desempenho 100 na inicial e 96 na questão
 
 **Entregável:** front-end acessível e questões com imagem disponíveis.
 **Pronto quando:** Lighthouse ≥ 90 em acessibilidade e desempenho, e testes de ponta a ponta passando no CI.
