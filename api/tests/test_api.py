@@ -321,3 +321,12 @@ def test_conversa_em_streaming_continua_funcionando_com_os_cabecalhos(montar):
     assert resposta.status_code == 200
     assert resposta.headers["x-content-type-options"] == "nosniff"
     assert "event: fim" in resposta.text
+
+
+def test_log_de_requisicao_nao_tem_ip_nem_query(montar, caplog):
+    cliente, _ = montar()
+    with caplog.at_level("INFO", logger="pista.requisicoes"):
+        cliente.get("/questoes?area=matematica", headers={"True-Client-IP": "203.0.113.9"})
+    linhas = [r.getMessage() for r in caplog.records if r.name == "pista.requisicoes"]
+    assert linhas and linhas[0].startswith("GET /questoes 200 ")
+    assert "203.0.113.9" not in caplog.text and "matematica" not in caplog.text

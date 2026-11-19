@@ -284,3 +284,18 @@ def test_recomendacoes_priorizam_revisao_e_foco(cliente):
 def test_recomendacoes_sem_conta_filtram_por_habilidade(cliente):
     ids = [q["id"] for q in cliente.get("/recomendacoes", params={"quantidade": 1, "habilidades": "H16"}).json()]
     assert ids == ["2099-141"]
+
+
+def test_limpeza_apaga_so_os_acessos_vencidos(cliente, motor):
+    from app.contas import limpar_acessos_vencidos
+
+    valido = cadastrar(cliente, "estudante_a")["token"]
+    cadastrar(cliente, "estudante_b")
+    with Session(motor) as banco:
+        acessos = banco.scalars(select(Acesso)).all()
+        assert len(acessos) == 2
+        acessos[1].expira_em = acessos[1].expira_em - timedelta(days=60)
+        banco.commit()
+        assert limpar_acessos_vencidos(banco) == 1
+        assert banco.scalar(select(func.count()).select_from(Acesso)) == 1
+    assert cliente.get("/eu/progresso", headers=autorizacao(valido)).status_code == 200

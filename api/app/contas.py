@@ -147,6 +147,13 @@ def usuario_do_token(banco: Session, token: str) -> Usuario | None:
     return banco.get(Usuario, acesso.usuario_id)
 
 
+def limpar_acessos_vencidos(banco: Session) -> int:
+    """Apaga os tokens que já venceram, para não guardar nada além do necessário."""
+    apagados = banco.execute(delete(Acesso).where(Acesso.expira_em < agora())).rowcount
+    banco.commit()
+    return apagados or 0
+
+
 def sair(banco: Session, token: str) -> None:
     banco.execute(delete(Acesso).where(Acesso.token_hash == seguranca.hash_do_token(token)))
     banco.commit()

@@ -7,6 +7,7 @@ Documentação: http://localhost:8000/docs
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from contextlib import asynccontextmanager
 
@@ -18,13 +19,17 @@ from . import __version__
 from .banco import criar_motor, fabrica_de_sessoes
 from .cabecalhos import CabecalhosDeSeguranca
 from .config import PASTA_API, Configuracoes, configuracoes
+from .contas import limpar_acessos_vencidos
 from .erros import registrar_tratadores
 from .esquemas import Saude
 from .limites import IAComCota, LimiteDeRequisicoes, LimiteDeTentativas
+from .registro import RegistroDeRequisicoes
 from .rotas import contas, eu, questoes, sessoes
 from .sessoes import RepositorioDeSessoes
 from .tutor.fabrica import criar_tutor
 from .tutor.motor import Tutor
+
+logger = logging.getLogger(__name__)
 
 DESCRICAO = """
 Tutor socrático com IA para o ENEM: dá pistas, não respostas.
@@ -70,7 +75,9 @@ def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, m
             migrar(config.url_das_migracoes)
         motor_em_uso = motor or criar_motor(config.database_url)
         app.state.fabrica_de_sessoes = fabrica_de_sessoes(motor_em_uso)
+        limpeza = asyncio.create_task(limpar_todo_dia(app.state.fabrica_de_sessoes))
         yield
+        limpeza.cancel()
         if motor is None:
             motor_em_uso.dispose()
 
@@ -94,6 +101,7 @@ def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, m
         allow_headers=["Content-Type", "Authorization"],
     )
     app.add_middleware(CabecalhosDeSeguranca)
+    app.add_middleware(RegistroDeRequisicoes)
     registrar_tratadores(app)
     app.include_router(questoes.rotas)
     app.include_router(sessoes.rotas)
@@ -118,6 +126,18 @@ def criar_app(config: Configuracoes | None = None, tutor: Tutor | None = None, m
         )
 
     return app
+
+
+async def limpar_todo_dia(fabrica) -> None:
+    """Retenção: apaga os acessos vencidos ao iniciar e depois uma vez por dia."""
+    while True:
+        try:
+            with fabrica() as banco:
+                apagados = limpar_acessos_vencidos(banco)
+            logger.info("limpeza: %d acessos vencidos apagados", apagados)
+        except Exception:  # noqa: BLE001 - a limpeza falhar não pode derrubar a API
+            logger.exception("falha na limpeza dos dados vencidos")
+        await asyncio.sleep(24 * 60 * 60)
 
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
