@@ -75,7 +75,7 @@ export function PaginaProgresso() {
           </Cartao>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <Numero icone={<Flame className="size-5 text-amber-500" />} valor={progresso.sequencia_de_dias} rotulo="dias seguidos" />
+            <Numero icone={<Flame className="size-5 text-amber-500" aria-hidden />} valor={progresso.sequencia_de_dias} rotulo="dias seguidos" />
             <Numero icone={<ListChecks className="size-5" />} valor={progresso.total_de_questoes} rotulo="questões resolvidas" />
             <Numero
               icone={<CheckCircle2 className="size-5 text-emerald-500" />}
@@ -108,7 +108,7 @@ export function PaginaProgresso() {
                     <div className="flex items-baseline justify-between gap-3 text-sm">
                       <span className="font-medium">
                         {areaDaHabilidade(habilidade.codigo)?.nome ?? 'Outro assunto'}{' '}
-                        <span className="text-stone-400">· {habilidade.codigo}</span>
+                        <span className="text-stone-500">· {habilidade.codigo}</span>
                       </span>
                       <span className="shrink-0 text-stone-500">
                         {habilidade.acertos_de_primeira}/{habilidade.feitas} de primeira
