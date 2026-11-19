@@ -99,3 +99,16 @@ test('dá para chegar numa questão só com o teclado, vendo onde está o foco',
   await page.keyboard.press('Enter')
   await expect(page).toHaveURL(/#\/questao\//)
 })
+
+test('o site pode ser instalado como app (manifesto e ícones)', async ({ page, request }) => {
+  await page.goto('./')
+  const endereco = await page.locator('link[rel="manifest"]').getAttribute('href')
+  const resposta = await request.get(new URL(endereco!, page.url()).href)
+  expect(resposta.ok()).toBe(true)
+  const manifesto = await resposta.json()
+  expect(manifesto.display).toBe('standalone')
+  for (const icone of manifesto.icons) {
+    const imagem = await request.get(new URL(icone.src, new URL(endereco!, page.url())).href)
+    expect(imagem.ok(), icone.src).toBe(true)
+  }
+})

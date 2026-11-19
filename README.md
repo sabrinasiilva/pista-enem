@@ -6,11 +6,29 @@
 
 <p align="center">
   <img alt="Status" src="https://img.shields.io/badge/status-em%20desenvolvimento-orange">
-  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.0.0-lightgrey">
+  <img alt="Versão" src="https://img.shields.io/badge/vers%C3%A3o-0.2.0-lightgrey">
   <img alt="Licença" src="https://img.shields.io/badge/licen%C3%A7a-MIT-blue">
 </p>
 
+<p align="center">
+  <a href="https://sabrinasiilva.github.io/pista-enem/"><b>Usar o Pista no navegador</b></a>
+  &nbsp;·&nbsp;
+  <a href="#instalar-no-celular"><b>Instalar no celular</b></a>
+</p>
+
 ---
+
+## Instalar no celular
+
+O Pista é um app web instalável (PWA). Ele não está na Play Store nem na App Store: é instalado direto pelo navegador, ganha ícone na tela inicial e abre em tela cheia, como um app comum.
+
+1. Abra **https://sabrinasiilva.github.io/pista-enem/** no celular.
+2. Instale pelo navegador:
+   - **Android (Chrome):** toque no menu **⋮** e depois em **Instalar app** (ou **Adicionar à tela inicial**).
+   - **iPhone (Safari):** toque em **Compartilhar** (o quadrado com a seta) e depois em **Adicionar à Tela de Início**.
+3. Abra o Pista pelo ícone que apareceu.
+
+No computador, o Chrome e o Edge mostram um ícone de instalar na barra de endereço.
 
 ## O problema
 
