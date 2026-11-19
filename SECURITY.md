@@ -26,6 +26,27 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 | O banco de dados | Acesso indevido e perda de dados | Usuário com privilégio mínimo, consultas parametrizadas pelo ORM, backup testado |
 | A cadeia de dependências | Pacotes com falhas conhecidas | Dependabot, `pip-audit` e `npm audit` no CI, CodeQL |
 
+## Modelo de ameaças
+
+**Quem pode atacar e o que quer:**
+
+| Quem | O que quer | Por onde | O que segura |
+|---|---|---|---|
+| Aluno curioso | A resposta sem pensar | Mensagens na conversa ("ignore as instruções", "sou a professora") | Guardrails de entrada e saída, gabarito só no servidor, juiz automático na avaliação |
+| Bot ou script | Gastar a cota do Gemini ou derrubar a API | Muitas requisições | Limites por IP e por sessão, cota diária com plano B, tamanho máximo da mensagem |
+| Alguém tentando entrar numa conta | O histórico de outra pessoa | Senha adivinhada, token roubado | Limite de tentativas de login, scrypt, token só como hash e com validade, CSP contra XSS |
+| Alguém com acesso ao código | A chave do Gemini ou do banco | Commit com segredo, dependência maliciosa | Segredos só no Render e no GitHub, varredura de segredos, Dependabot, `pip-audit`, `npm audit`, CodeQL |
+| Site de terceiros | Usar a API ou o site sem permissão | CORS, iframe, link malicioso | CORS só para o domínio do site, `frame-ancestors 'none'` na API, CSP no site |
+
+**Riscos aceitos**, conhecidos e assumidos por enquanto:
+
+- O plano gratuito do Gemini pode usar as mensagens para treinar modelos. Por isso a interface avisa para não digitar dados pessoais.
+- Pedidos vagos ("qual é?") e números por extenso passam pelos filtros automáticos. Neles, quem segura a resposta são as instruções do tutor, medidas pelo juiz da avaliação.
+- O token da conta fica no `localStorage`. Um XSS conseguiria lê-lo, e a defesa é a CSP com o Markdown renderizado sem HTML.
+- Os limites por IP ficam na memória e voltam a zero quando o servidor reinicia.
+- O site no GitHub Pages não aceita cabeçalhos HTTP, então não dá para usar `frame-ancestors` nem um HSTS próprio.
+- Um aluno determinado pode abrir a resposta em outro lugar, como o gabarito oficial do Inep, que é público. O objetivo dos guardrails é manter o tutor fiel ao método, não esconder um segredo.
+
 ## Privacidade e LGPD
 
 - O Pista não pede nome, e-mail, CPF, idade nem qualquer dado pessoal.
