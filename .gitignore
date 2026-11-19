@@ -34,3 +34,7 @@ evals/relatorios/
 Thumbs.db
 .vscode/
 .idea/
+
+# Playwright
+web/test-results/
+web/playwright-report/

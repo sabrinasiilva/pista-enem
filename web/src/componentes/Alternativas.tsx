@@ -23,7 +23,7 @@ export function Alternativas({ alternativas, tentativas, gabarito, selecionada, 
 
         let estilo = 'border-stone-200 bg-white hover:border-stone-400'
         if (marcada) estilo = 'border-stone-900 bg-stone-50 ring-1 ring-stone-900'
-        if (tentada && !correta) estilo = 'border-red-200 bg-red-50 text-stone-500'
+        if (tentada && !correta) estilo = 'border-red-200 bg-red-50 text-stone-600'
         if (correta) estilo = 'border-emerald-500 bg-emerald-50 ring-1 ring-emerald-500'
 
         return (
