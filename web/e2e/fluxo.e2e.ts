@@ -19,6 +19,13 @@ async function responder(page: Page, letra: string) {
   await page.getByRole('button', { name: 'Responder' }).press('Enter')
 }
 
+// a apresentação da primeira visita tem um teste só dela; nos outros, já foi vista
+test.beforeEach(async ({ page }, info) => {
+  if (!info.title.includes('apresentação')) {
+    await page.addInitScript(() => localStorage.setItem('pista:apresentacao', 'vista'))
+  }
+})
+
 for (const tema of ['light', 'dark'] as const) {
   test.describe(`tema ${tema === 'light' ? 'claro' : 'escuro'}`, () => {
     test.use({ colorScheme: tema })
@@ -28,6 +35,23 @@ for (const tema of ['light', 'dark'] as const) {
       await expect(page.getByRole('tab', { name: 'Matemática' })).toBeVisible()
       await expect(page.locator('a[href^="#/questao/"]').first()).toBeVisible()
       await semProblemasDeAcessibilidade(page)
+    })
+
+    test('apresentação da primeira visita passa pelas telas e fecha', async ({ page }) => {
+      await page.goto('./')
+      await expect(page.getByText('Seu tutor para o ENEM')).toBeVisible()
+      await semProblemasDeAcessibilidade(page)
+      const dialogo = page.getByRole('dialog')
+      await expect(page.getByRole('heading', { name: 'Aprenda a resolver, não a decorar' })).toBeVisible()
+      await semProblemasDeAcessibilidade(page)
+      for (let i = 0; i < 3; i++) await page.getByRole('button', { name: 'Continuar' }).click()
+      await expect(page.getByRole('heading', { name: 'No seu ritmo, sem dados pessoais' })).toBeVisible()
+      await semProblemasDeAcessibilidade(page)
+      await page.getByRole('button', { name: 'Começar a praticar' }).click()
+      await expect(dialogo).toBeHidden()
+      await page.reload()
+      await expect(page.locator('a[href^="#/questao/"]').first()).toBeVisible()
+      await expect(dialogo).toBeHidden()
     })
 
     test('resolve uma questão: erra, recebe a pista e acerta', async ({ page }) => {
