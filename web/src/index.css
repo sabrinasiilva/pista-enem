@@ -6,6 +6,39 @@
   --color-pista: #d97706;
 }
 
+/* Apresentação (primeira visita) */
+@keyframes flutuar {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -6px;
+  }
+}
+@keyframes pingar {
+  from {
+    scale: 0;
+  }
+}
+@keyframes pulsar {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes surgir {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }

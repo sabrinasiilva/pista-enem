@@ -1,4 +1,5 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useState } from 'react'
+import { Apresentacao, apresentacaoJaVista } from './componentes/Apresentacao'
 import { Carregando } from './componentes/Avisos'
 import { Moldura } from './componentes/Moldura'
 import { ProvedorDaConta } from './conta'
@@ -44,6 +45,9 @@ function Conteudo({ rota }: { rota: Rota }) {
 
 export function App() {
   const rota = useRota()
+  // a apresentação abre só na primeira visita e só na página inicial: um link direto para
+  // uma questão (compartilhado por alguém) vai direto para ela
+  const [apresentar, setApresentar] = useState(() => rota.pagina === 'inicio' && !apresentacaoJaVista())
   return (
     <ProvedorDoTema>
       <ProvedorDaConta>
@@ -52,6 +56,14 @@ export function App() {
             <Conteudo rota={rota} />
           </Suspense>
         </Moldura>
+        {apresentar && (
+          <Apresentacao
+            aoTerminar={(destino) => {
+              setApresentar(false)
+              if (destino) window.location.hash = destino
+            }}
+          />
+        )}
       </ProvedorDaConta>
     </ProvedorDoTema>
   )
