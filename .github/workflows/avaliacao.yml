@@ -20,10 +20,10 @@ on:
       julgar_execucao:
         description: "Só o juiz: número de uma execução anterior (o tutor não roda de novo)"
         default: ""
-  # Agendamento único: 19/11 às 6h de Brasília (9h UTC), depois de a cota diária do Gemini renovar,
-  # para julgar os 120 casos da execução 44326297246. Remover depois dessa rodada.
+  # Agendamento único: 20/11 às 5h30 de Brasília (8h30 UTC), logo depois de a cota diária do Gemini
+  # renovar, para julgar os 120 casos da execução 44326297246. Remover depois dessa rodada.
   schedule:
-    - cron: "0 9 19 11 *"
+    - cron: "30 8 20 11 *"
 
 permissions:
   contents: read
@@ -78,18 +78,31 @@ jobs:
             arquivo=$(ls evals/relatorios/*.json 2>/dev/null | grep -v -- '-juiz' | head -n 1)
             echo "relatorio=$arquivo" >> "$GITHUB_OUTPUT"
           fi
+      # O juiz leve (mais cota) julga todas as mensagens; o forte julga uma amostra de 40, e a
+      # concordância entre os dois diz se dá para confiar nas métricas do leve.
+      # Se um juiz falhar em mais de 20% dos julgamentos, o script sai com erro e o workflow fica vermelho.
       - name: Juiz automático
         id: juiz
         if: env.RODAR_JUIZ == 'true' && steps.rel.outputs.relatorio != ''
         timeout-minutes: 120
-        # se falhar em mais de 20% dos julgamentos, o script sai com erro e o workflow fica vermelho
-        run: python evals/juiz.py "${{ steps.rel.outputs.relatorio }}" --paralelas 3 --intervalo 2
+        run: python evals/juiz.py "${{ steps.rel.outputs.relatorio }}" --modelo gemini-3.5-flash-lite --paralelas 3 --intervalo 2
+      - name: Juiz de conferência (amostra)
+        id: conferencia
+        if: always() && steps.juiz.outcome == 'success'
+        timeout-minutes: 60
+        run: python evals/juiz.py "${{ steps.rel.outputs.relatorio }}" --modelo gemini-3.8-flash --limite 40 --nome juiz-flash --paralelas 2 --intervalo 4
+      - name: Concordância entre os juízes
+        if: always() && steps.conferencia.outcome == 'success'
+        run: |
+          base="${{ steps.rel.outputs.relatorio }}"
+          python evals/concordancia.py "${base%.json}-juiz.json" "${base%.json}-juiz-flash.json"
       - name: Resumo
         if: always() && steps.rel.outputs.relatorio != ''
         run: |
           base="${{ steps.rel.outputs.relatorio }}"
           head -n 16 "${base%.json}.md" >> "$GITHUB_STEP_SUMMARY"
           if [ -f "${base%.json}-juiz.md" ]; then echo >> "$GITHUB_STEP_SUMMARY"; head -n 10 "${base%.json}-juiz.md" >> "$GITHUB_STEP_SUMMARY"; fi
+          if [ -f "${base%.json}-juiz-flash-concordancia.md" ]; then echo >> "$GITHUB_STEP_SUMMARY"; head -n 12 "${base%.json}-juiz-flash-concordancia.md" >> "$GITHUB_STEP_SUMMARY"; fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
