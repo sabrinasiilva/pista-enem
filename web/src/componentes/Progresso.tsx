@@ -29,10 +29,10 @@ export function Progresso({ estado }: { estado: Estado }) {
               aria-current={agora ? 'step' : undefined}
               className={`flex-1 rounded-full py-1 text-center text-xs font-medium ${
                 agora
-                  ? 'bg-amber-500 text-white'
+                  ? 'bg-amber-700 text-white'
                   : feita
                     ? 'bg-amber-100 text-amber-800'
-                    : 'bg-stone-100 text-stone-400'
+                    : 'bg-stone-100 text-stone-600'
               } ${estado === 'concluida' ? '!bg-emerald-100 !text-emerald-800' : ''}`}
             >
               {etapa.rotulo}

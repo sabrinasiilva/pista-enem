@@ -40,7 +40,7 @@ export function SeletorDeAreas({
               <span
                 aria-hidden
                 className={`mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-md border ${
-                  marcada ? 'border-amber-500 bg-amber-500 text-white' : 'border-stone-300'
+                  marcada ? 'border-amber-700 bg-amber-700 text-white' : 'border-stone-300'
                 }`}
               >
                 {marcada && <Check className="size-3.5" />}

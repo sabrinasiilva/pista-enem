@@ -70,7 +70,7 @@ export function PaginaInicial() {
       <section className="border-b border-stone-200 bg-white">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-10 sm:py-16 lg:grid-cols-[1.1fr_1fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-700">
               Matemática e Ciências da Natureza do ENEM
             </p>
             <h1 className="mt-3 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
@@ -114,7 +114,7 @@ export function PaginaInicial() {
                 <span className="flex size-9 items-center justify-center rounded-lg bg-amber-100 text-amber-700">
                   <Icone className="size-5" aria-hidden />
                 </span>
-                <span className="text-sm font-semibold text-stone-400">{indice + 1}</span>
+                <span className="text-sm font-semibold text-stone-500">{indice + 1}</span>
               </div>
               <h3 className="mt-4 font-semibold">{titulo}</h3>
               <p className="mt-1 text-sm text-stone-600">{texto}</p>
@@ -181,21 +181,22 @@ export function PaginaInicial() {
         </div>
 
         {doAno.length > 0 && (
-          <ul
-            role="tabpanel"
-            aria-label={`Questões de ${materiaAtual?.nome} do ENEM ${anoAtual}`}
-            className="mt-2 grid gap-3 sm:grid-cols-2"
-          >
+          <div role="tabpanel" aria-label={`Questões de ${materiaAtual?.nome} do ENEM ${anoAtual}`}>
+          <ul className="mt-2 grid gap-3 sm:grid-cols-2">
             {doAno.map((questao) => (
               <li key={questao.id}>
                 <a
                   href={`#/questao/${questao.id}`}
-                  aria-label={`Questão ${questao.numero} do ENEM ${questao.ano}, ${materiaAtual?.nome}`}
                   className="group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-stone-300 hover:shadow-md"
                 >
                   <span className="flex items-center justify-between">
-                    <span className="font-semibold">Questão {questao.numero}</span>
-                    <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-500">
+                    <span className="font-semibold">
+                      Questão {questao.numero}
+                      <span className="sr-only">
+                        , ENEM {questao.ano}, {materiaAtual?.nome}.
+                      </span>
+                    </span>
+                    <span className="rounded-full bg-stone-100 px-2 py-0.5 text-xs font-medium text-stone-600">
                       {questao.habilidade}
                     </span>
                   </span>
@@ -208,6 +209,7 @@ export function PaginaInicial() {
               </li>
             ))}
           </ul>
+          </div>
         )}
       </section>
 
