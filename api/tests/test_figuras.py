@@ -55,3 +55,22 @@ def test_imagens_vao_no_primeiro_turno_do_aluno():
     assert conteudos[1]["parts"][0] == {"inline_data": {"mime_type": "image/png", "data": PNG}}
     assert conteudos[1]["parts"][1] == {"text": "marquei B"}
     assert len(conteudos[2]["parts"]) == 1
+
+
+def test_figura_entra_no_lugar_marcado_no_enunciado(prompts):
+    from app.tutor.sessao import Sessao
+
+    questao = questao_exemplo(
+        enunciado="Veja o gráfico.\n\n[[figura 1]]\n\nQuanto ele recebe?", figuras=(Figura("x.png", DESCRICAO),)
+    )
+    sistema = prompts.sistema(questao, Sessao(questao_id=questao.id, versao_prompt=prompts.versao), "pista_1")
+    assert f"Veja o gráfico.\n\n[Figura 1: {DESCRICAO}]\n\nQuanto ele recebe?" in sistema
+    assert "[[figura" not in sistema
+
+
+def test_resumo_da_lista_nao_mostra_a_marca_da_figura():
+    from app.esquemas import texto_simples
+
+    assert (
+        texto_simples("Veja o gráfico.\n\n[[figura 1]]\n\nQuanto ele recebe?") == "Veja o gráfico. Quanto ele recebe?"
+    )

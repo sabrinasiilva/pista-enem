@@ -40,6 +40,7 @@ def ler_revisoes() -> dict[str, dict]:
 
 def sem_latex(texto: str) -> str:
     """Remove comandos LaTeX e marcação Markdown para comparar com o texto do PDF."""
+    texto = re.sub(r"\[\[figura \d+\]\]", " ", texto)
     texto = re.sub(r"\\[a-zA-Z]+", " ", texto)
     return re.sub(r"[$|{}^_*:-]", " ", texto)
 
@@ -65,8 +66,8 @@ def motivos_de_exclusao(questao: dict, revisao: dict, similaridade: float | None
     motivos = []
     if questao["anulada"]:
         motivos.append("anulada pelo Inep")
-    if questao["tem_imagem"] or revisao["depende_de_figura"]:
-        motivos.append("depende de figura")
+    if (questao["tem_imagem"] or revisao["depende_de_figura"]) and not revisao.get("figuras"):
+        motivos.append("depende de figura (ainda sem recorte revisado)")
     if not questao["conferencia"]["item_igual_nos_cadernos_regulares"]:
         motivos.append("item diferente entre cadernos regulares")
     if revisao["gabarito_calculado"] != questao["gabarito"]:
@@ -105,6 +106,7 @@ def montar(questao: dict, revisao: dict, matriz: dict) -> dict:
         "conceitos": revisao["conceitos"],
         "dificuldade_tri": questao["dificuldade_tri"],
         "fonte": questao["fonte"],
+        **({"figuras": revisao["figuras"]} if revisao.get("figuras") else {}),
     }
 
 

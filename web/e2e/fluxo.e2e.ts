@@ -112,3 +112,13 @@ test('o site pode ser instalado como app (manifesto e ícones)', async ({ page, 
     expect(imagem.ok(), icone.src).toBe(true)
   }
 })
+
+test('questão com figura mostra a imagem da prova, com descrição, no lugar certo', async ({ page }) => {
+  await page.goto('./#/questao/2022-136')
+  const figura = page.getByRole('img', { name: /Esperança de vida ao nascer/ })
+  await expect(figura).toBeVisible()
+  // a imagem carregou de verdade (não é só o texto alternativo)
+  expect(await figura.evaluate((img: HTMLImageElement) => img.naturalWidth)).toBeGreaterThan(100)
+  await expect(page.getByText('[[figura')).toHaveCount(0)
+  await semProblemasDeAcessibilidade(page)
+})

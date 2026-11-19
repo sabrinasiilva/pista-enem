@@ -92,5 +92,14 @@ def _enunciado_com_figuras(questao: Questao) -> str:
     descrição revisada garante que o tutor saiba o que ela mostra, mesmo se a imagem falhar."""
     if not questao.figuras:
         return questao.enunciado
-    descricoes = "\n".join(f"[Figura {i}: {f.descricao}]" for i, f in enumerate(questao.figuras, 1))
-    return f"{questao.enunciado}\n\n{descricoes}"
+    texto = questao.enunciado
+    sobrando = []
+    for i, figura in enumerate(questao.figuras, 1):
+        descricao = f"[Figura {i}: {figura.descricao}]"
+        marca = f"[[figura {i}]]"
+        # a figura entra no lugar marcado no enunciado; sem marca, vai no fim
+        if marca in texto:
+            texto = texto.replace(marca, descricao)
+        else:
+            sobrando.append(descricao)
+    return "\n\n".join([texto, *sobrando]) if sobrando else texto
