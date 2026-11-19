@@ -62,7 +62,7 @@ class Prompts:
                 "regra_da_resposta": regra,
                 "area": questao.area_nome,
                 "fonte": questao.fonte,
-                "enunciado": questao.enunciado,
+                "enunciado": _enunciado_com_figuras(questao),
                 "alternativas": "\n".join(f"{a.letra}) {a.texto}" for a in questao.alternativas),
                 "gabarito": questao.gabarito,
                 "resolucao": questao.resolucao,
@@ -85,3 +85,12 @@ def _tentativas(questao: Questao, sessao: Sessao) -> str:
         engano = questao.alternativa(letra).engano_provavel
         linhas.append(f"- {letra}: {engano}" if engano else f"- {letra}: (alternativa correta)")
     return "\n".join(linhas)
+
+
+def _enunciado_com_figuras(questao: Questao) -> str:
+    """O enunciado com a descrição de cada figura. A imagem também vai para a IA, mas a
+    descrição revisada garante que o tutor saiba o que ela mostra, mesmo se a imagem falhar."""
+    if not questao.figuras:
+        return questao.enunciado
+    descricoes = "\n".join(f"[Figura {i}: {f.descricao}]" for i, f in enumerate(questao.figuras, 1))
+    return f"{questao.enunciado}\n\n{descricoes}"

@@ -6,5 +6,6 @@
 !api/app/**
 !prompts/**
 !data/questoes-mvp.json
+!data/imagens/**
 **/__pycache__
 **/*.pyc

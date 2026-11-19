@@ -31,13 +31,23 @@ class RespostaDaIA:
 
 
 class ClienteDeIA(Protocol):
-    async def gerar(self, sistema: str, conversa: Sequence[Turno]) -> RespostaDaIA: ...
+    async def gerar(self, sistema: str, conversa: Sequence[Turno], imagens: Sequence[bytes] = ()) -> RespostaDaIA: ...
 
-    def gerar_em_trechos(self, sistema: str, conversa: Sequence[Turno]) -> AsyncIterator[str]: ...
+    def gerar_em_trechos(
+        self, sistema: str, conversa: Sequence[Turno], imagens: Sequence[bytes] = ()
+    ) -> AsyncIterator[str]: ...
 
 
-def _conteudos(conversa: Sequence[Turno]) -> list[dict[str, Any]]:
-    return [{"role": "user" if papel == "aluno" else "model", "parts": [{"text": texto}]} for papel, texto in conversa]
+def _conteudos(conversa: Sequence[Turno], imagens: Sequence[bytes] = ()) -> list[dict[str, Any]]:
+    """Turnos no formato do Gemini. As figuras da questão (PNG) vão no primeiro turno do aluno."""
+    conteudos = [
+        {"role": "user" if papel == "aluno" else "model", "parts": [{"text": texto}]} for papel, texto in conversa
+    ]
+    primeiro_do_aluno = next((c for c in conteudos if c["role"] == "user"), None)
+    if imagens and primeiro_do_aluno is not None:
+        figuras = [{"inline_data": {"mime_type": "image/png", "data": imagem}} for imagem in imagens]
+        primeiro_do_aluno["parts"] = figuras + primeiro_do_aluno["parts"]
+    return conteudos
 
 
 def _erro_definitivo(erro: Exception) -> bool:
@@ -101,7 +111,7 @@ class ClienteGemini:
             "safety_settings": FILTROS_DE_SEGURANCA,
         }
 
-    async def gerar(self, sistema: str, conversa: Sequence[Turno]) -> RespostaDaIA:
+    async def gerar(self, sistema: str, conversa: Sequence[Turno], imagens: Sequence[bytes] = ()) -> RespostaDaIA:
         ultimo_erro: Exception | None = None
         for modelo, nivel in self.modelos:
             for tentativa in range(self.tentativas_por_modelo):
@@ -109,7 +119,9 @@ class ClienteGemini:
                 try:
                     resposta = await asyncio.wait_for(
                         self._cliente.aio.models.generate_content(
-                            model=modelo, contents=_conteudos(conversa), config=self._configuracao(sistema, nivel)
+                            model=modelo,
+                            contents=_conteudos(conversa, imagens),
+                            config=self._configuracao(sistema, nivel),
                         ),
                         timeout=self.tempo_limite,
                     )
@@ -135,7 +147,9 @@ class ClienteGemini:
                         await asyncio.sleep(self.espera_inicial * 2**tentativa)
         raise ErroDaIA("todos os modelos falharam") from ultimo_erro
 
-    async def gerar_em_trechos(self, sistema: str, conversa: Sequence[Turno]) -> AsyncIterator[str]:
+    async def gerar_em_trechos(
+        self, sistema: str, conversa: Sequence[Turno], imagens: Sequence[bytes] = ()
+    ) -> AsyncIterator[str]:
         """Streaming real. Só tenta outro modelo se a falha acontecer antes do primeiro trecho."""
         ultimo_erro: Exception | None = None
         for modelo, nivel in self.modelos:
@@ -143,7 +157,7 @@ class ClienteGemini:
             try:
                 fluxo = await asyncio.wait_for(
                     self._cliente.aio.models.generate_content_stream(
-                        model=modelo, contents=_conteudos(conversa), config=self._configuracao(sistema, nivel)
+                        model=modelo, contents=_conteudos(conversa, imagens), config=self._configuracao(sistema, nivel)
                     ),
                     timeout=self.tempo_limite,
                 )

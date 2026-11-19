@@ -4,35 +4,11 @@ from __future__ import annotations
 
 import json
 
-import pytest
 from fastapi.testclient import TestClient
 
-from app.config import Configuracoes
-from app.main import criar_app
-from app.tutor.motor import MENSAGEM_DE_MANIPULACAO, Tutor
-from app.tutor.questoes import BancoDeQuestoes
-from tests.auxiliares import IAFalsa, questao_exemplo
+from app.tutor.motor import MENSAGEM_DE_MANIPULACAO
 
 PISTA = "Que operação junta valores iguais repetidos?"
-
-
-@pytest.fixture
-def montar(prompts, motor):
-    """Cria um cliente HTTP com a questão de exemplo e as respostas simuladas da IA."""
-
-    abertos: list[TestClient] = []
-
-    def _montar(*respostas, banco=None) -> tuple[TestClient, IAFalsa]:
-        ia = IAFalsa(*respostas)
-        tutor = Tutor(banco or BancoDeQuestoes([questao_exemplo()]), prompts, ia)
-        cliente = TestClient(criar_app(Configuracoes(), tutor, motor), raise_server_exceptions=False)
-        cliente.__enter__()  # roda o ciclo de vida (lifespan)
-        abertos.append(cliente)
-        return cliente, ia
-
-    yield _montar
-    for cliente in abertos:
-        cliente.__exit__(None, None, None)
 
 
 def abrir_sessao(cliente: TestClient) -> str:
@@ -82,7 +58,7 @@ def test_questao_nunca_envia_gabarito_nem_enganos(montar, banco_real):
     cliente, _ = montar(banco=banco_real)
     for resumo in cliente.get("/questoes").json():
         corpo = cliente.get(f"/questoes/{resumo['id']}").json()
-        assert set(corpo) == {"id", "ano", "numero", "area", "enunciado", "alternativas", "habilidade", "fonte"}
+        assert set(corpo) == {"id", "ano", "numero", "area", "enunciado", "alternativas", "habilidade", "fonte", "figuras"}
         assert all(set(a) == {"letra", "texto"} for a in corpo["alternativas"])
 
 
@@ -329,4 +305,5 @@ def test_log_de_requisicao_nao_tem_ip_nem_query(montar, caplog):
         cliente.get("/questoes?area=matematica", headers={"True-Client-IP": "203.0.113.9"})
     linhas = [r.getMessage() for r in caplog.records if r.name == "pista.requisicoes"]
     assert linhas and linhas[0].startswith("GET /questoes 200 ")
-    assert "203.0.113.9" not in caplog.text and "matematica" not in caplog.text
+    # só o log da API: o cliente de teste (httpx) registra a URL completa por conta própria
+    assert not any("203.0.113.9" in linha or "matematica" in linha for linha in linhas)

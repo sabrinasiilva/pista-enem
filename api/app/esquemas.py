@@ -92,6 +92,11 @@ class QuestaoResumo(Esquema):
         )
 
 
+class FiguraSaida(Esquema):
+    url: str = Field(description="Caminho da imagem na API", examples=["/questoes/2023-150/figuras/1"])
+    descricao: str = Field(description="Texto alternativo, para leitor de tela")
+
+
 class QuestaoDetalhe(Esquema):
     """Questão para resolver. O gabarito, a resolução e os enganos ficam só no servidor."""
 
@@ -103,6 +108,7 @@ class QuestaoDetalhe(Esquema):
     alternativas: list[AlternativaSaida]
     habilidade: Habilidade
     fonte: Fonte
+    figuras: list[FiguraSaida] = Field(default_factory=list, description="Figuras da prova, na ordem do enunciado")
 
     @classmethod
     def de(cls, questao: Questao) -> QuestaoDetalhe:
@@ -115,6 +121,10 @@ class QuestaoDetalhe(Esquema):
             alternativas=[AlternativaSaida(letra=a.letra, texto=a.texto) for a in questao.alternativas],
             habilidade=Habilidade(codigo=questao.habilidade, descricao=questao.habilidade_descricao),
             fonte=Fonte(prova=questao.fonte, url=questao.url_fonte),
+            figuras=[
+                FiguraSaida(url=f"/questoes/{questao.id}/figuras/{i}", descricao=f.descricao)
+                for i, f in enumerate(questao.figuras, 1)
+            ],
         )
 
 

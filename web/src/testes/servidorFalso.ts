@@ -20,6 +20,7 @@ export const QUESTAO: Questao = {
     prova: 'ENEM 2022, 2º dia, caderno 6 (cinza), questão 141',
     url: 'https://download.inep.gov.br/enem/provas_e_gabaritos/2022_PV_impresso_D2_CD6.pdf',
   },
+  figuras: [{ url: '/questoes/2022-141/figuras/1', descricao: 'Dois docinhos lado a lado, um com o dobro do diâmetro do outro.' }],
 }
 
 const GABARITO: Letra = 'E'

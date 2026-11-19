@@ -32,6 +32,8 @@ export interface Questao {
   alternativas: { letra: Letra; texto: string }[]
   habilidade: { codigo: string; descricao: string }
   fonte: { prova: string; url: string }
+  /** figuras da prova; `url` é relativa à API */
+  figuras?: { url: string; descricao: string }[]
 }
 
 export interface Mensagem {

@@ -30,6 +30,7 @@ COPY api/alembic.ini ./alembic.ini
 COPY api/migrations ./migrations
 COPY prompts ./prompts
 COPY data/questoes-mvp.json ./data/questoes-mvp.json
+COPY data/imagens ./data/imagens
 
 USER pista
 EXPOSE 8000
