@@ -27,4 +27,4 @@ services:
       - key: MIGRACOES_DATABASE_URL
         sync: false
       - key: CORS_ORIGENS
-        value: https://sabrinasiilva.github.io,http://localhost:5173
+        value: https://sabrinasiilva.github.io,https://localhost,http://localhost:5173  # https://localhost é o app Android (Capacitor)

@@ -13,6 +13,8 @@
 <p align="center">
   <a href="https://sabrinasiilva.github.io/pista-enem/"><b>Usar o Pista no navegador</b></a>
   &nbsp;·&nbsp;
+  <a href="https://github.com/sabrinasiilva/pista-enem/releases/latest/download/pista.apk"><b>Baixar o APK (Android)</b></a>
+  &nbsp;·&nbsp;
   <a href="#instalar-no-celular"><b>Instalar no celular</b></a>
 </p>
 
@@ -20,7 +22,17 @@
 
 ## Instalar no celular
 
-O Pista é um app web instalável (PWA). Ele não está na Play Store nem na App Store: é instalado direto pelo navegador, ganha ícone na tela inicial e abre em tela cheia, como um app comum.
+### Android: APK
+
+1. No celular, baixe o **[pista.apk](https://github.com/sabrinasiilva/pista-enem/releases/latest/download/pista.apk)**.
+2. Abra o arquivo baixado. Se o Android pedir, permita instalar apps desta fonte (o Pista ainda não está na Play Store).
+3. Toque em **Instalar**.
+
+O APK é gerado pelo GitHub Actions a cada release ([`apk.yml`](.github/workflows/apk.yml)), a partir do mesmo código do site, com o [Capacitor](https://capacitorjs.com/).
+
+### Android ou iPhone: pelo navegador
+
+O site também pode ser instalado direto pelo navegador (PWA): ganha ícone na tela inicial e abre em tela cheia.
 
 1. Abra **https://sabrinasiilva.github.io/pista-enem/** no celular.
 2. Instale pelo navegador:
