@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "build:app": "vite build --mode app"
   },
   "dependencies": {
     "katex": "^0.19.1",
@@ -25,6 +26,9 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@capacitor/android": "8.6.2",
+    "@capacitor/cli": "8.6.2",
+    "@capacitor/core": "8.6.2",
     "@playwright/test": "1.65.1",
     "@tailwindcss/vite": "^4.3.5",
     "@testing-library/jest-dom": "^7.0.1",

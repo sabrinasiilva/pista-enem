@@ -7,7 +7,8 @@ import { politicaDeConteudo } from './csp'
 // Publicado em sabrinasiilva.github.io/pista-enem/ (Fase 5); em desenvolvimento, na raiz.
 export default defineConfig(({ command, mode, isPreview }) => ({
   // o preview serve o build, então usa o mesmo caminho do site publicado
-  base: command === 'build' || isPreview ? '/pista-enem/' : '/',
+  // o app Android (npm run build:app) é servido na raiz, dentro do próprio APK
+  base: mode === 'app' ? '/' : command === 'build' || isPreview ? '/pista-enem/' : '/',
   plugins: [
     react(),
     tailwindcss(),
