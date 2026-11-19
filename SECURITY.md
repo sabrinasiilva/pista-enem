@@ -35,7 +35,15 @@ Inclua o que você encontrou, como reproduzir e o impacto que imagina. Respondo 
 - O aluno pode apagar a conta a qualquer momento, e isso apaga também todo o histórico (direito à eliminação, LGPD art. 18).
 - O identificador da sessão é aleatório (UUID) e gerado pelo servidor.
 - O endereço IP é usado só para limitar abusos e não é salvo no banco.
-- As interações são apagadas após 30 dias. Só ficam números agregados, sem ligação com nenhuma pessoa.
+- **Retenção:**
+  - as conversas com o tutor ficam só na memória do servidor e somem em até 24 horas, ou antes, se o servidor reiniciar. Elas nunca são gravadas no banco;
+  - do que se resolve com conta, o banco guarda só o resultado de cada questão (acertou, tentativas, se pediu explicação), sem o texto das mensagens. Isso fica enquanto a conta existir, porque é o histórico de progresso do próprio aluno;
+  - os acessos (tokens de login) vencem em 30 dias e são apagados do banco ao iniciar a API e depois uma vez por dia.
+- **Logs:**
+  - a API registra uma linha por requisição, com método, caminho, status e tempo (`api/app/registro.py`). Ficam de fora o IP, a query string e o texto das mensagens;
+  - o log de acesso do uvicorn, que grava o IP, fica desligado;
+  - os logs do tutor registram só o estado da sessão e o motivo de um bloqueio, nunca o conteúdo;
+  - o Render guarda os próprios logs de HTTP por alguns dias, e esses não dependem do projeto.
 - Muitos estudantes do ENEM são menores de idade, por isso o projeto foi desenhado para não coletar dados pessoais desde o início (LGPD, art. 14).
 - **Plano gratuito do Gemini:** nesse plano, o Google pode usar o conteúdo enviado para melhorar os produtos dele. Por isso a interface vai avisar para não digitar dados pessoais nas mensagens, e o tutor não pede nem comenta dados pessoais. Se o projeto passar a ter muitos usuários, a migração para o plano pago (em que os dados não são usados) entra no planejamento.
 - Mensagens bloqueadas pelo guardrail de entrada não são guardadas, nem no histórico da sessão.
