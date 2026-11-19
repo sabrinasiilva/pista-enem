@@ -21,7 +21,7 @@ export function politicaDeConteudo(apiUrl: string | undefined): Plugin {
         "default-src 'self'",
         `script-src 'self' ${hashes.join(' ')}`.trim(),
         "style-src 'self' 'unsafe-inline'",
-        "img-src 'self' data:",
+        `img-src 'self' data: ${api}`.trim(),
         "font-src 'self' data:",
         `connect-src 'self' ${api}`.trim(),
         "object-src 'none'",

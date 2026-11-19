@@ -94,13 +94,15 @@ class IAComCota:
         self._ia = ia
         self.cota = cota
 
-    async def gerar(self, sistema: str, conversa: Sequence[Turno]) -> RespostaDaIA:
+    async def gerar(self, sistema: str, conversa: Sequence[Turno], imagens: Sequence[bytes] = ()) -> RespostaDaIA:
         if not self.cota.consumir():
             raise ErroDaIA("cota diária esgotada")
-        return await self._ia.gerar(sistema, conversa)
+        return await self._ia.gerar(sistema, conversa, imagens)
 
-    async def gerar_em_trechos(self, sistema: str, conversa: Sequence[Turno]) -> AsyncIterator[str]:
+    async def gerar_em_trechos(
+        self, sistema: str, conversa: Sequence[Turno], imagens: Sequence[bytes] = ()
+    ) -> AsyncIterator[str]:
         if not self.cota.consumir():
             raise ErroDaIA("cota diária esgotada")
-        async for trecho in self._ia.gerar_em_trechos(sistema, conversa):
+        async for trecho in self._ia.gerar_em_trechos(sistema, conversa, imagens):
             yield trecho

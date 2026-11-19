@@ -163,7 +163,7 @@ class Tutor:
         sistema = self.prompts.sistema(questao, sessao, "conversa")
         recebido: list[str] = []
         try:
-            async for trecho in self.ia.gerar_em_trechos(sistema, _conversa(sessao)):
+            async for trecho in self.ia.gerar_em_trechos(sistema, _conversa(sessao), self.banco.imagens(questao)):
                 recebido.append(trecho)
                 yield trecho
             sessao.registrar(Mensagem("tutor", "".join(recebido).strip(), sessao.estado))
@@ -187,7 +187,7 @@ class Tutor:
         for tentativa in range(TENTATIVAS_CONTRA_VAZAMENTO):
             sistema = self.prompts.sistema(questao, sessao, momento, reforco=tentativa > 0)
             try:
-                resposta = await self.ia.gerar(sistema, _conversa(sessao))
+                resposta = await self.ia.gerar(sistema, _conversa(sessao), self.banco.imagens(questao))
             except ErroDaIA:
                 logger.warning("plano B", extra={"sessao": sessao.id, "momento": momento})
                 mensagem = self._plano_b(sessao, questao, momento, "plano_b")

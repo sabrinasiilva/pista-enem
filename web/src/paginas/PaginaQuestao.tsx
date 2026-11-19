@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, BookOpen, ExternalLink, Lightbulb, PartyPopper, Shuffle } from 'lucide-react'
 import { type ReactNode, useCallback, useEffect, useRef, useState } from 'react'
-import { api, ErroDaApi } from '../api'
+import { api, ErroDaApi, urlDaApi } from '../api'
 import { nomeDaMateria } from '../areas'
 import { daAba } from '../armazenamento'
 import { Alternativas } from '../componentes/Alternativas'
@@ -196,6 +196,18 @@ export function PaginaQuestao({ id, aoTerminar, acaoFinal, semVoltar = false }: 
               </span>
             </header>
             <TextoRico texto={questao.enunciado} className="text-[1.05rem] leading-relaxed" />
+            {questao.figuras?.map((figura, indice) => (
+              <figure key={figura.url} className="mt-4 overflow-hidden rounded-xl border border-stone-200 bg-white p-2">
+                {/* fundo branco nos dois temas: a figura vem da prova, em preto sobre branco */}
+                <img
+                  src={urlDaApi(figura.url)}
+                  alt={figura.descricao}
+                  loading="lazy"
+                  className="mx-auto max-h-[28rem] w-auto max-w-full bg-[#ffffff]"
+                />
+                <figcaption className="sr-only">Figura {indice + 1}</figcaption>
+              </figure>
+            ))}
             <p className="mt-5 border-t border-stone-100 pt-3 text-xs text-stone-500">
               Fonte: Inep, {questao.fonte.prova}.{' '}
               <a

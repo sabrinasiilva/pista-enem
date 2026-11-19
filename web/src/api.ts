@@ -15,6 +15,9 @@ import type {
 
 const BASE = (import.meta.env.VITE_API_URL ?? 'http://localhost:8000').replace(/\/$/, '')
 
+/** Endereço completo de um caminho da API, como o das figuras das questões. */
+export const urlDaApi = (caminho: string) => `${BASE}${caminho}`
+
 export class ErroDaApi extends Error {
   readonly status: number
   readonly codigo: string

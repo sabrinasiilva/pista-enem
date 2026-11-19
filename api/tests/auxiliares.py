@@ -40,6 +40,7 @@ class IAFalsa:
 
     def __init__(self, *respostas: str | Exception):
         self.respostas = list(respostas)
+        self.imagens_recebidas: list[list[bytes]] = []
         self.chamadas: list[tuple[str, list[Turno]]] = []
 
     def _proxima(self, sistema: str, conversa: Sequence[Turno]) -> str:
@@ -51,10 +52,12 @@ class IAFalsa:
             raise resposta
         return resposta
 
-    async def gerar(self, sistema: str, conversa: Sequence[Turno]) -> RespostaDaIA:
+    async def gerar(self, sistema: str, conversa: Sequence[Turno], imagens=()) -> RespostaDaIA:
+        self.imagens_recebidas.append(list(imagens))
         return RespostaDaIA(self._proxima(sistema, conversa), "modelo-falso", 10)
 
-    async def gerar_em_trechos(self, sistema: str, conversa: Sequence[Turno]):
+    async def gerar_em_trechos(self, sistema: str, conversa: Sequence[Turno], imagens=()):
+        self.imagens_recebidas.append(list(imagens))
         texto = self._proxima(sistema, conversa)
         for palavra in texto.split(" "):
             yield palavra + " "

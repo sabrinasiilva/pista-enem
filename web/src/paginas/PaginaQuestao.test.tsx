@@ -25,6 +25,8 @@ describe('PaginaQuestao', () => {
     expect(await screen.findByText(/ENEM 2022 · Questão 141/)).toBeInTheDocument()
     expect(tela.container.querySelector('.katex')).not.toBeNull()
     expect(screen.getByRole('table')).toBeInTheDocument()
+    const figura = screen.getByRole('img', { name: /Dois docinhos lado a lado/ })
+    expect(figura).toHaveAttribute('src', expect.stringMatching(/\/questoes\/2022-141\/figuras\/1$/))
     expect(screen.getByRole('link', { name: /Prova oficial/ })).toHaveAttribute('href', expect.stringContaining('inep.gov.br'))
     expect(screen.getAllByRole('radio')).toHaveLength(5)
     expect(screen.getByText('Marque a alternativa que achar certa.')).toBeInTheDocument()
